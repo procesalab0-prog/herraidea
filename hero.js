@@ -25,20 +25,19 @@
   let lastFamily = -1;
 
   function updateScroll() {
-    if (innerWidth > 900 && heroTrack) {
-      const max = heroTrack.offsetHeight - innerHeight + 82;
-      const p = clamp(-heroTrack.getBoundingClientRect().top / Math.max(max, 1));
+    if (heroTrack) {
+      const mobile = innerWidth <= 900;
+      const headerHeight = mobile ? 72 : 82;
+      const max = heroTrack.offsetHeight - innerHeight + headerHeight;
+      const p = clamp((headerHeight - heroTrack.getBoundingClientRect().top) / Math.max(max, 1));
       heroCopy.style.opacity = String(clamp(1 - p * 2.4));
-      heroCopy.style.transform = `translateY(${-p * 55}px)`;
-      heroImage.style.transform = `scale(${1 + p * .08})`;
-      scrim.style.opacity = String(clamp(1 - p * 1.7));
-      dark.style.opacity = String(clamp((p - .22) * 1.8));
-      workshop.style.opacity = String(clamp((p - .48) * 2.8));
-      workshop.style.transform = `translateY(${(1 - clamp((p - .45) * 2.5)) * 38}px)`;
-      hint.style.opacity = String(clamp(1 - p * 5));
-    } else if (heroCopy) {
-      heroCopy.removeAttribute('style'); heroImage.removeAttribute('style');
-      scrim.removeAttribute('style'); dark.removeAttribute('style');
+      heroCopy.style.transform = `translateY(${-p * (mobile ? 34 : 55)}px)`;
+      heroImage.style.transform = `translateY(${-p * (mobile ? 22 : 0)}px) scale(${1 + p * (mobile ? .11 : .08)})`;
+      scrim.style.opacity = String(clamp(1 - p * (mobile ? 1.45 : 1.7)));
+      dark.style.opacity = String(clamp((p - (mobile ? .18 : .22)) * (mobile ? 2.1 : 1.8)));
+      workshop.style.opacity = String(clamp((p - (mobile ? .42 : .48)) * (mobile ? 3.2 : 2.8)));
+      workshop.style.transform = `translateY(${(1 - clamp((p - (mobile ? .4 : .45)) * 2.5)) * (mobile ? 28 : 38)}px)`;
+      if (hint) hint.style.opacity = String(clamp(1 - p * 5));
     }
     if (engineering) {
       const rect = engineering.getBoundingClientRect();
