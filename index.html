@@ -1,67 +1,83 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Herrajes de acero inoxidable para cristal templado, diseñados y maquinados en León, Guanajuato." />
-    <title>Herraidea | Herrajes para cristal templado</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Archivo+Narrow:wght@500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <a class="logo" href="#inicio" aria-label="Herraidea, inicio">
-        <img src="/assets/logo-dark-nodot.png" alt="Herraidea" />
-        <i aria-hidden="true"></i>
-      </a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" aria-label="Abrir menú"><span></span><span></span><span></span></button>
-      <nav id="navigation" aria-label="Navegación principal">
-        <a class="active" href="#inicio">Inicio</a>
-        <a href="#proximamente">Quiénes somos</a>
-        <a href="#proximamente">Catálogo</a>
-        <a href="#proximamente">Galería</a>
-        <a class="contact" href="https://wa.me/524772561695" target="_blank" rel="noreferrer">Contacto</a>
-      </nav>
-    </header>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="description" content="Herraidea fabrica herrajes de acero inoxidable para vidrio templado en León, Guanajuato.">
+  <title>Herraidea | Herrajes para vidrio templado</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Archivo+Narrow:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Herraidea, inicio"><img src="/assets/logo-dark-nodot.png" alt="Herraidea"><i></i></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span><b>Menú</b></button>
+    <nav id="main-nav" class="main-nav">
+      <a href="#inicio">Inicio</a><a href="#nosotros">Quiénes somos</a><a href="#catalogo">Catálogo</a><a href="#galeria">Galería</a><a class="nav-contact" href="#contacto">Contacto</a>
+    </nav>
+  </header>
 
-    <main id="inicio">
-      <div class="hero-stage" id="heroStage">
-        <section class="hero">
-          <div class="hero-image" id="heroImage"><img src="/assets/hero-barandal.png" alt="Barandal de cristal templado con postes de acero inoxidable" /></div>
-          <div class="light-scrim" id="lightScrim"></div>
-          <div class="dark-scrim" id="darkScrim"></div>
-
-          <div class="hero-copy" id="heroCopy">
-            <span class="eyebrow">Herrajes T-304 · T-316</span>
-            <h1><span>El detalle que</span><span>sostiene</span><span class="underlined">el cristal.<b></b></span></h1>
-            <p>Diseñamos y maquinamos en León, Guanajuato la herrajería que la industria del vidrio templado instala todos los días.</p>
-            <a class="hero-cta" href="#proximamente">Explorar catálogo <span>→</span></a>
-          </div>
-
-          <div class="scroll-hint" id="scrollHint"><span>Desliza</span><b>↓</b></div>
-
-          <div class="workshop-panel" id="workshopPanel">
-            <span class="eyebrow">Fabricación propia</span>
-            <h2>Cada pieza sale de nuestro torno.</h2>
-            <div class="metrics">
-              <p><b>+25</b><span>Años de taller</span></p>
-              <p><b>T-316</b><span>Grado marino</span></p>
-              <p><b>CNC</b><span>Maquinado propio</span></p>
-            </div>
-          </div>
-        </section>
-      </div>
-
-      <div class="marquee" aria-label="Características de Herraidea">
-        <div class="marquee-track">
-          <div><span>Acero T-304</span><b>◆</b><span>Acero T-316 grado marino</span><b>◆</b><span>Torno CNC</span><b>◆</b><span>Envíos a toda la República</span><b>◆</b><span>Diseño propio</span><b>◆</b></div>
-          <div aria-hidden="true"><span>Acero T-304</span><b>◆</b><span>Acero T-316 grado marino</span><b>◆</b><span>Torno CNC</span><b>◆</b><span>Envíos a toda la República</span><b>◆</b><span>Diseño propio</span><b>◆</b></div>
+  <main>
+    <div class="hero-track" id="inicio">
+      <section class="hero">
+        <div class="hero-image"><img src="/assets/hero-barandal.png" alt="Barandal de cristal templado con postes de acero inoxidable"></div>
+        <div class="hero-scrim"></div><div class="hero-dark"></div>
+        <div class="hero-copy">
+          <span class="eyebrow">Herrajes T-304 · T-316</span>
+          <h1>El detalle que<br>sostiene<br><em>el cristal.</em></h1>
+          <p>Diseñamos y maquinamos en León, Guanajuato la herrajería que la industria del vidrio templado instala todos los días.</p>
+          <a class="button" href="#catalogo">Explorar catálogo <span>→</span></a>
         </div>
+        <div class="scroll-hint">Desliza <span>↓</span></div>
+        <div class="workshop-panel">
+          <span class="eyebrow">Fabricación propia</span><h2>Cada pieza sale de nuestro torno.</h2>
+          <div class="metrics"><div><b>+25</b><span>Años de taller</span></div><div><b>T-316</b><span>Grado marino</span></div><div><b>CNC</b><span>Maquinado propio</span></div></div>
+        </div>
+      </section>
+    </div>
+
+    <div class="marquee" aria-hidden="true"><div><span>Acero T-304 ◆ Acero T-316 grado marino ◆ Torno CNC ◆ Envíos a toda la República ◆ Diseño propio ◆ </span><span>Acero T-304 ◆ Acero T-316 grado marino ◆ Torno CNC ◆ Envíos a toda la República ◆ Diseño propio ◆ </span></div></div>
+
+    <section class="engineering-track" id="ingenieria" data-3d-track>
+      <div class="engineering-sticky"><div class="section-inner engineering-inner">
+        <div class="technical-label"><span>● Geometría de hoja técnica</span><span>Desliza para recorrer</span></div>
+        <div class="engineering-card">
+          <a class="model-stage" id="model-link" href="#pipetas"><hrd-scroll-3d></hrd-scroll-3d><span class="model-cta">Toca para ver la familia</span><span class="model-dots"><i class="active"></i><i></i><i></i></span></a>
+          <div class="spec-wrap">
+            <article class="spec-panel active" data-family="pipetas"><span class="eyebrow">Familia 01 / 04 · Pipetas</span><h3>Pipeta Chapetón</h3><small>HRD 1101</small><p>Conector vidrio-muro de cuerpo cilíndrico. El brazo sale 28 mm del muro y remata en el chapetón que aprisiona el cristal.</p><dl><div><dt>Salida al vidrio</dt><dd>28 mm</dd></div><div><dt>Cuerpo</dt><dd>53 mm</dd></div><div><dt>Barreno</dt><dd>⌀ 15 mm</dd></div></dl><div class="tags"><span>Acero T-304</span><span>Vidrio 8–12 mm</span><span>Acabado satín</span></div><a href="#pipetas">Ver las 13 pipetas →</a></article>
+            <article class="spec-panel" data-family="conectores"><span class="eyebrow">Familia 02 / 04 · Conectores</span><h3>Conector 44 × 40 mm</h3><small>HRD 1303</small><p>Botón conector vidrio-muro. Cuerpo de 40 mm que da separación al muro, empaque integrado y tapa con allen central.</p><dl><div><dt>Diámetro</dt><dd>44 mm</dd></div><div><dt>Cuerpo al muro</dt><dd>40 mm</dd></div><div><dt>Tapa</dt><dd>10 mm</dd></div></dl><div class="tags"><span>Acero T-304</span><span>Vidrio 8–12 mm</span><span>Empaque incluido</span></div><a href="#conectores">Ver los 29 conectores →</a></article>
+            <article class="spec-panel" data-family="postes"><span class="eyebrow">Familia 03 / 04 · Postes</span><h3>Mini Poste con tope</h3><small>HRD 1206 × 450</small><p>Poste rectangular de sección 25 × 50 mm. La ranura corre 300 mm y la cara trasera sube a 450 formando el tope.</p><dl><div><dt>Altura total</dt><dd>450 mm</dd></div><div><dt>Longitud de ranura</dt><dd>300 mm</dd></div><div><dt>Placa base</dt><dd>100 × 100 mm</dd></div></dl><div class="tags"><span>Acero T-304</span><span>Sección 25 × 50</span><span>Cara a 380 mm</span></div><a href="#postes">Ver los 22 postes →</a></article>
+          </div>
+        </div>
+      </div></div>
+    </section>
+
+    <section class="catalog-section" id="catalogo"><div class="section-inner">
+      <div class="section-head"><div><span class="eyebrow">Catálogo</span><h2>66 herrajes en cuatro familias.</h2></div><nav><a href="#pipetas">Pipetas</a><a href="#postes">Postes</a><a href="#conectores">Conectores</a><a href="#jaladeras">Jaladeras</a></nav></div>
+      <div id="catalog-families" class="catalog-families"><p>Cargando catálogo…</p></div>
+    </div></section>
+
+    <section class="about-section" id="nosotros"><div class="section-inner about-grid">
+      <div><span class="eyebrow">Quiénes somos</span><h2>Del aluminio al inoxidable, en León desde 2013.</h2><p class="lead">Diseñamos, fabricamos y distribuimos soluciones confiables para instaladores de vidrio templado en todo México.</p></div>
+      <div class="timeline">
+        <article><b>2013</b><p>Herraidea nace el 8 de octubre en León, Guanajuato, respaldada por 14 años de experiencia de Display Depot en aluminio y señalización.</p></article>
+        <article><b>2014</b><p>Nos especializamos en acero inoxidable T-304 y T-316 para vidrio templado, logrando cobertura de servicio en el centro y sur del país.</p></article>
+        <article><b>2017 →</b><p>Consolidamos el liderazgo en diseño y desarrollo de nuevos productos, manteniendo el maquinado y control de calidad en nuestro propio taller.</p></article>
       </div>
-      <section class="placeholder" id="proximamente"><span>Herraidea</span><p>Próximamente, el resto de la experiencia.</p></section>
-    </main>
-    <script src="/hero.js"></script>
-  </body>
+    </div><div class="section-inner values"><article><span>01</span><h3>Misión</h3><p>Resolver cada instalación con herrajes precisos, resistentes y disponibles.</p></article><article><span>02</span><h3>Producción</h3><p>Diseño, torno y maquinado CNC propios para controlar cada detalle.</p></article><article><span>03</span><h3>Materiales</h3><p>Acero inoxidable T-304 y T-316 grado marino para máxima durabilidad.</p></article></div></section>
+
+    <section class="gallery-section" id="galeria"><div class="section-inner"><span class="eyebrow">Galería</span><h2>Instalado y trabajando.</h2><div class="gallery-grid"><figure><img src="/assets/gal/obra-1.jpg" alt="Herrajes Herraidea instalados en cristal" loading="lazy"></figure><figure><img src="/assets/gal/obra-2.jpg" alt="Detalle de instalación en acero inoxidable" loading="lazy"></figure><figure><img src="/assets/gal/obra-3.jpg" alt="Proyecto con vidrio templado" loading="lazy"></figure><figure><img src="/assets/gal/obra-4.jpg" alt="Barandal terminado con herrajes Herraidea" loading="lazy"></figure></div></div></section>
+
+    <section class="contact-section" id="contacto"><div class="section-inner contact-grid">
+      <div><span class="eyebrow">Contacto</span><h2>Hablemos de tu proyecto.</h2><p class="lead">Cuéntanos qué necesitas y te ayudamos a seleccionar los modelos adecuados.</p><div class="contact-details"><a href="tel:+524777907594"><small>Oficina</small>+52 (477) 790 7594</a><a href="https://wa.me/524772561695" target="_blank" rel="noopener"><small>WhatsApp</small>477 256 1695</a><address><small>Planta</small>Murales 212-A, Industrial la Capilla<br>C.P. 37297 · León, Guanajuato</address></div></div>
+      <form id="contact-form"><label>Nombre<input name="nombre" autocomplete="name" required></label><label>Correo<input name="email" type="email" autocomplete="email"></label><label>WhatsApp<input name="whatsapp" type="tel" autocomplete="tel"></label><label>Tipo de proyecto<select name="tipo"><option>Barandal</option><option>Cancel de baño</option><option>Fachada</option><option>Otro</option></select></label><label class="wide">Modelos de interés<input name="modelos" placeholder="Ej. HRD 1101, HRD 1303"></label><label class="wide">Mensaje<textarea name="mensaje" rows="4" required></textarea></label><button class="button wide" type="submit">Enviar por WhatsApp <span>→</span></button></form>
+    </div></section>
+  </main>
+
+  <footer><div class="section-inner"><img src="/assets/logo-light-nodot.png" alt="Herraidea"><nav><a href="#catalogo">Catálogo</a><a href="#nosotros">Nosotros</a><a href="#contacto">Contacto</a></nav><span>León, Gto. · Desde 2013</span></div></footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="/hrd-3d.js"></script><script src="/hero.js"></script>
+</body>
 </html>
