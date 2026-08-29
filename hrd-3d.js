@@ -256,7 +256,11 @@
       const lift = ar < 1 ? lerp(0.24, 0.06, clamp((ar - 0.45) / 0.55, 0, 1)) : 0;
       const mix3 = (v1, v2, v3) => lerp(lerp(v1, v2, t1), v3, t2);
       const dist = mix3(lerp(232, 178, a), lerp(268, 214, m), lerp(830, 650, b)) * zoomOut;
-      const ty = mix3(34, 44, 232) - dist * lift;
+      // The full-screen mobile composition reserves its upper area for the
+      // technical heading. Aim the camera higher so the part sits visually
+      // in the remaining center, instead of crowding the title.
+      const mobileCentering = window.innerWidth <= 900 ? dist * 0.18 : 0;
+      const ty = mix3(34, 44, 232) - dist * lift + mobileCentering;
       const tx = mix3(14, -8, 0);
       const phi = mix3(lerp(1.28, 1.12, a), lerp(1.34, 1.18, m), lerp(1.36, 1.18, b));
       const theta = 0.72 + p * 0.55;
