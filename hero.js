@@ -13,6 +13,7 @@
   const heroTrack = document.querySelector('.hero-track');
   const heroCopy = document.querySelector('.hero-copy');
   const heroImage = document.querySelector('.hero-image');
+  const heroNight = document.querySelector('.hero-night');
   const scrim = document.querySelector('.hero-scrim');
   const dark = document.querySelector('.hero-dark');
   const workshop = document.querySelector('.workshop-panel');
@@ -38,8 +39,9 @@
       heroCopy.style.opacity = String(clamp(1 - p * 2.4));
       heroCopy.style.transform = `translateY(${-p * (mobile ? 34 : 55)}px)`;
       heroImage.style.transform = `translateY(${-p * (mobile ? 22 : 0)}px) scale(${1 + p * (mobile ? .11 : .08)})`;
+      if (heroNight) heroNight.style.opacity = String(clamp((p - .16) * 1.75));
       scrim.style.opacity = String(clamp(1 - p * (mobile ? 1.45 : 1.7)));
-      dark.style.opacity = String(clamp((p - (mobile ? .18 : .22)) * (mobile ? 2.1 : 1.8)));
+      dark.style.opacity = String(clamp((p - (mobile ? .18 : .22)) * (mobile ? 2.1 : 1.8)) * (mobile ? .44 : .5));
       workshop.style.opacity = String(clamp((p - (mobile ? .42 : .48)) * (mobile ? 3.2 : 2.8)));
       workshop.style.transform = `translateY(${(1 - clamp((p - (mobile ? .4 : .45)) * 2.5)) * (mobile ? 28 : 38)}px)`;
       if (hint) hint.style.opacity = String(clamp(1 - p * 5));
