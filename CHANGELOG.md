@@ -1,5 +1,10 @@
 # Historial de versiones — Herraidea
 
+## 1.8.1 — 2026-08-29
+
+- Logotipo institucional gris con chevrón rojo en el encabezado.
+- Punto animado de la “i” en proporción del logotipo, alineado en todos los tamaños.
+
 ## 1.8.0 — 2026-08-29
 
 - Acero inoxidable 3D con reflejos de estudio, acabado satinado y luces de borde.
