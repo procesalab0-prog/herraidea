@@ -61,10 +61,42 @@
     jaladeras: ['Jaladeras', 'Jaladeras tubulares de acero inoxidable para puertas de cristal templado.']
   };
   const escapeHTML = value => String(value ?? '').replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
-  fetch('/content/catalog/products.json').then(r => {
+  const productDialog = document.querySelector('#product-dialog');
+  let catalogDetails = [];
+  const productSlug = code => String(code).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+  const openProduct = product => {
+    if (!product || !productDialog) return;
+    document.querySelector('#dialog-category').textContent = `${product.category} · ${product.code}`;
+    document.querySelector('#product-dialog-title').textContent = product.name;
+    document.querySelector('#dialog-description').textContent = product.description;
+    document.querySelector('#dialog-specs').innerHTML = product.specifications.map(spec => `<li>${escapeHTML(spec)}</li>`).join('');
+    const images = product.detailImages.length ? product.detailImages : [`/content/catalog/${product.image}`];
+    document.querySelector('#dialog-gallery').innerHTML = images.map((src, index) => `<figure class="${index === 0 ? 'primary' : ''}"><img src="${escapeHTML(src)}" alt="${escapeHTML(product.name)} ${index ? 'plano o detalle técnico' : ''}" loading="eager"></figure>`).join('');
+    const message = encodeURIComponent(`Hola Herraidea, me interesa cotizar ${product.code} — ${product.name}.`);
+    document.querySelector('#dialog-whatsapp').href = `https://wa.me/524772561695?text=${message}`;
+    const url = new URL(location.href); url.searchParams.set('producto', productSlug(product.code));
+    history.pushState({ product: product.code }, '', url);
+    productDialog.showModal(); document.body.classList.add('dialog-open');
+  };
+  const closeProduct = (updateUrl = true) => {
+    if (!productDialog?.open) return;
+    productDialog.close(); document.body.classList.remove('dialog-open');
+    if (updateUrl) { const url = new URL(location.href); url.searchParams.delete('producto'); history.pushState({}, '', url); }
+  };
+  document.querySelector('.dialog-close')?.addEventListener('click', () => closeProduct());
+  productDialog?.addEventListener('click', event => { if (event.target === productDialog) closeProduct(); });
+  productDialog?.addEventListener('cancel', event => { event.preventDefault(); closeProduct(); });
+  document.querySelector('#dialog-share')?.addEventListener('click', async event => {
+    try { await navigator.clipboard.writeText(location.href); event.currentTarget.textContent = 'Enlace copiado'; }
+    catch { event.currentTarget.textContent = 'Copia la URL del navegador'; }
+  });
+  addEventListener('popstate', () => closeProduct(false));
+
+  fetch('/content/catalog/details.json').then(r => {
     if (!r.ok) throw new Error('No se pudo cargar el catálogo');
     return r.json();
   }).then(products => {
+    catalogDetails = products;
     const host = document.querySelector('#catalog-families');
     const order = ['pipetas', 'postes', 'conectores', 'jaladeras'];
     host.innerHTML = order.map(key => {
@@ -73,10 +105,12 @@
       return `<section class="family" id="${key}"><div class="family-header"><div><span class="eyebrow">${items.length} modelos</span><h3>${title}</h3></div><p>${description}</p></div><div class="product-grid">${items.map(p => {
         const code = escapeHTML(p.code || p.model || '');
         const name = escapeHTML(p.name);
-        const message = encodeURIComponent(`Hola Herraidea, me interesa cotizar ${code} — ${p.name}.`);
-        return `<a class="product-card" href="https://wa.me/524772561695?text=${message}" target="_blank" rel="noopener"><figure><img src="/content/catalog/${escapeHTML(p.image)}" alt="${name} ${code}" loading="lazy"></figure><div class="product-info"><b>${code}</b><span>${name}</span></div></a>`;
+        return `<button class="product-card" type="button" data-product="${escapeHTML(p.code)}" aria-label="Ver ficha de ${name} ${code}"><figure><img src="/content/catalog/${escapeHTML(p.image)}" alt="${name} ${code}" loading="lazy"></figure><div class="product-info"><b>${code}</b><span>${name}</span><em>Ver ficha técnica →</em></div></button>`;
       }).join('')}</div></section>`;
     }).join('');
+    host.querySelectorAll('[data-product]').forEach(card => card.addEventListener('click', () => openProduct(catalogDetails.find(p => p.code === card.dataset.product))));
+    const requested = new URL(location.href).searchParams.get('producto');
+    if (requested) openProduct(catalogDetails.find(p => productSlug(p.code) === requested));
   }).catch(err => {
     document.querySelector('#catalog-families').innerHTML = `<p>${escapeHTML(err.message)}. Escríbenos por WhatsApp para recibirlo.</p>`;
   });
