@@ -10,6 +10,27 @@
     menu.classList.remove('open'); menuButton?.setAttribute('aria-expanded', 'false');
   }));
 
+  const brand = document.querySelector('.brand');
+  const creditsDialog = document.querySelector('#credits-dialog');
+  let logoTaps = 0, logoTimer;
+  const openCredits = async () => {
+    try {
+      const data = await fetch('/content/version-history.json').then(r => r.json());
+      document.querySelector('#credits-version').textContent = data.current;
+      document.querySelector('#version-list').innerHTML = data.versions.map((item, index) => `<article class="${index === 0 ? 'current' : ''}"><b>v${item.version}</b><div><strong>${item.title}</strong><p>${item.summary}</p></div><time>${item.date}</time></article>`).join('');
+    } catch {}
+    creditsDialog?.showModal(); document.body.classList.add('dialog-open');
+  };
+  brand?.addEventListener('click', event => {
+    event.preventDefault(); logoTaps += 1;
+    brand.classList.remove('secret-tap'); void brand.offsetWidth; brand.classList.add('secret-tap');
+    clearTimeout(logoTimer);
+    if (logoTaps >= 6) { logoTaps = 0; openCredits(); return; }
+    logoTimer = setTimeout(() => { if (logoTaps === 1) location.hash = 'inicio'; logoTaps = 0; }, 3000);
+  });
+  document.querySelector('.credits-close')?.addEventListener('click', () => { creditsDialog?.close(); document.body.classList.remove('dialog-open'); });
+  creditsDialog?.addEventListener('click', event => { if (event.target === creditsDialog) { creditsDialog.close(); document.body.classList.remove('dialog-open'); } });
+
   const heroTrack = document.querySelector('.hero-track');
   const heroCopy = document.querySelector('.hero-copy');
   const heroImage = document.querySelector('.hero-image');

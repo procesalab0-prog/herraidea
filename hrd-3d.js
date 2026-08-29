@@ -32,12 +32,40 @@
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
       if (T.sRGBEncoding) renderer.outputEncoding = T.sRGBEncoding;
       renderer.toneMapping = T.ACESFilmicToneMapping;
-      renderer.toneMappingExposure = 1.05;
+      renderer.toneMappingExposure = 1.03;
       this.renderer = renderer;
 
       const scene = new T.Scene();
       scene.background = new T.Color(0xf1f3f4);
       this.scene = scene;
+
+      // Soft studio environment: broad light bands create controlled,
+      // elongated reflections like brushed stainless steel without chrome.
+      const envFaces = Array.from({ length: 6 }, (_, face) => {
+        const canvas = document.createElement('canvas');
+        canvas.width = canvas.height = 256;
+        const ctx = canvas.getContext('2d');
+        const base = ctx.createLinearGradient(0, 0, 256, 256);
+        base.addColorStop(0, face % 2 ? '#39444c' : '#79838a');
+        base.addColorStop(.28, '#b6bec3');
+        base.addColorStop(.43, '#303a42');
+        base.addColorStop(.62, '#d8dde0');
+        base.addColorStop(.78, '#4e5961');
+        base.addColorStop(1, face % 2 ? '#929ba1' : '#323d45');
+        ctx.fillStyle = base; ctx.fillRect(0, 0, 256, 256);
+        const strip = ctx.createLinearGradient(0, 0, 256, 0);
+        strip.addColorStop(0, 'rgba(255,255,255,0)');
+        strip.addColorStop(.46, 'rgba(255,255,255,.1)');
+        strip.addColorStop(.5, 'rgba(255,255,255,.68)');
+        strip.addColorStop(.55, 'rgba(255,255,255,.08)');
+        strip.addColorStop(1, 'rgba(255,255,255,0)');
+        ctx.fillStyle = strip; ctx.fillRect(0, 0, 256, 256);
+        return canvas;
+      });
+      const studioEnvironment = new T.CubeTexture(envFaces);
+      studioEnvironment.needsUpdate = true;
+      scene.environment = studioEnvironment;
+      this.environment = studioEnvironment;
 
       const camera = new T.PerspectiveCamera(36, 1, 0.5, 8000);
       this.camera = camera;
@@ -53,6 +81,10 @@
       rimA.position.set(-120, 260, -340); scene.add(rimA);
       const rimB = new T.DirectionalLight(0xdde3ea, 0.34);
       rimB.position.set(300, 60, -260); scene.add(rimB);
+      const warmRim = new T.DirectionalLight(0xffe4c2, 0.28);
+      warmRim.position.set(420, 180, 120); scene.add(warmRim);
+      const coolRim = new T.DirectionalLight(0xc8e2ff, 0.34);
+      coolRim.position.set(-380, 80, -180); scene.add(coolRim);
 
       const floor = new T.Mesh(
         new T.CircleGeometry(1400, 64),
@@ -78,8 +110,9 @@
     }
 
     _steel(T, tint) {
-      const m = new T.MeshStandardMaterial({
-        color: tint || 0xc4c9ce, metalness: 0.95, roughness: tint ? 0.38 : 0.26,
+      const m = new T.MeshPhysicalMaterial({
+        color: tint || 0xaeb5ba, metalness: 1, roughness: tint ? 0.36 : 0.27,
+        clearcoat: 0.14, clearcoatRoughness: 0.34, envMapIntensity: tint ? 0.58 : 0.76,
         transparent: true, opacity: 1
       });
       this.mats.push(m);
@@ -289,6 +322,7 @@
       window.removeEventListener('resize', this.onScroll);
       if (this._rafLoop) cancelAnimationFrame(this._rafLoop);
       if (this.renderer) this.renderer.dispose();
+      if (this.environment) this.environment.dispose();
     }
   }
 

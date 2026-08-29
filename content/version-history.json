@@ -1,0 +1,15 @@
+{
+  "current": "1.8.0",
+  "studio": "ProcesaLab",
+  "versions": [
+    {"version":"1.8.0","date":"2026-08-29","title":"Acero realista y easter egg","summary":"Reflejos satinados para las piezas 3D, créditos ocultos y sistema persistente de versiones."},
+    {"version":"1.7.0","date":"2026-08-29","title":"Hero de día a noche","summary":"Transición fotográfica progresiva alineada con el scroll."},
+    {"version":"1.6.0","date":"2026-08-29","title":"Geometría inmersiva","summary":"Recorrido 3D a pantalla completa con llamadas técnicas y progreso en móvil y escritorio."},
+    {"version":"1.5.0","date":"2026-08-29","title":"Catálogo técnico completo","summary":"66 productos, 159 imágenes técnicas y contenido institucional migrado desde Jimdo."},
+    {"version":"1.4.0","date":"2026-08-29","title":"PWA y vista social","summary":"Instalación en inicio, iconos y tarjeta para compartir por WhatsApp."},
+    {"version":"1.3.0","date":"2026-08-29","title":"Landing completa","summary":"Catálogo, historia, contacto y experiencia responsive."},
+    {"version":"1.2.0","date":"2026-08-29","title":"Hero animado","summary":"Primera experiencia visual desplegada en Vercel."},
+    {"version":"1.1.0","date":"2026-08-29","title":"Migración Jimdo","summary":"Respaldo público del catálogo, textos e imágenes."},
+    {"version":"1.0.0","date":"2026-08-29","title":"Inicio","summary":"Creación del repositorio Herraidea."}
+  ]
+}
