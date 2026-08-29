@@ -23,9 +23,9 @@
   const modelLink = document.querySelector('#model-link');
   const families = ['pipetas', 'conectores', 'postes'];
   const mobileModels = [
-    { family: 'Familia 01 · Pipetas', name: 'Pipeta Chapetón', code: 'HRD 1101', labels: ['Vidrio 8–12 mm', 'Acero T-304', 'Salida 28 mm'] },
-    { family: 'Familia 02 · Conectores', name: 'Conector 44 × 40 mm', code: 'HRD 1303', labels: ['Diámetro 44 mm', 'Cuerpo 40 mm', 'Tapa 10 mm'] },
-    { family: 'Familia 03 · Postes', name: 'Mini Poste con tope', code: 'HRD 1206 × 450', labels: ['Altura 450 mm', 'Ranura 300 mm', 'Base 100 × 100 mm'] }
+    { family: 'Familia 01 · Pipetas', name: 'Pipeta Chapetón', code: 'HRD 1101', labels: ['Vidrio 8–12 mm', 'Acero T-304', 'Salida 28 mm'], summary: 'Conector vidrio–muro para cristal templado. Acero inoxidable con acabado satín.' },
+    { family: 'Familia 02 · Conectores', name: 'Conector 44 × 40 mm', code: 'HRD 1303', labels: ['Diámetro 44 mm', 'Cuerpo 40 mm', 'Tapa 10 mm'], summary: 'Botón vidrio–muro con empaque integrado y fijación Allen central. Para vidrio de 8–12 mm.' },
+    { family: 'Familia 03 · Postes', name: 'Mini Poste con tope', code: 'HRD 1206 × 450', labels: ['Altura 450 mm', 'Ranura 300 mm', 'Base 100 × 100 mm'], summary: 'Poste rectangular con ranura de 300 mm y placa base. Fabricado en acero inoxidable T-304.' }
   ];
   let lastFamily = -1;
 
@@ -51,6 +51,8 @@
       document.documentElement.style.setProperty('--technical-progress', `${p * 100}%`);
       const mobileHint = document.querySelector('#mobile-scroll-hint');
       if (mobileHint) mobileHint.style.opacity = String(clamp(1 - p * 10));
+      const mobileSummary = document.querySelector('#mobile-tech-summary');
+      if (mobileSummary) mobileSummary.style.opacity = String(clamp((p - .025) * 14));
       if (idx !== lastFamily) {
         panels.forEach((el, i) => el.classList.toggle('active', i === idx));
         dots.forEach((el, i) => el.classList.toggle('active', i === idx));
@@ -61,6 +63,7 @@
           document.querySelector('#mobile-family').textContent = model.family;
           document.querySelector('#mobile-model').textContent = model.name;
           document.querySelector('#mobile-code').textContent = model.code;
+          document.querySelector('#mobile-tech-summary').textContent = model.summary;
           document.querySelector('#mobile-step').textContent = `0${idx + 1}`;
           model.labels.forEach((label, i) => { document.querySelector(`#callout-${['one','two','three'][i]}`).textContent = label; });
           techUI.classList.remove('tech-enter'); void techUI.offsetWidth; techUI.classList.add('tech-enter');
