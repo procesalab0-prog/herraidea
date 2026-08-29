@@ -1,0 +1,286 @@
+[
+  {
+    "url": "https://www.herraidea.com/",
+    "file": "pages/inicio.html"
+  },
+  {
+    "url": "https://www.herraidea.com/about/",
+    "file": "pages/about.html"
+  },
+  {
+    "url": "https://www.herraidea.com/catálogo-1/",
+    "file": "pages/cat-logo-1.html"
+  },
+  {
+    "url": "https://www.herraidea.com/catálogo-1/conectores/",
+    "file": "pages/cat-logo-1-conectores.html"
+  },
+  {
+    "url": "https://www.herraidea.com/catálogo-1/jaladeras/",
+    "file": "pages/cat-logo-1-jaladeras.html"
+  },
+  {
+    "url": "https://www.herraidea.com/catálogo-1/pipetas/",
+    "file": "pages/cat-logo-1-pipetas.html"
+  },
+  {
+    "url": "https://www.herraidea.com/catálogo-1/postes/",
+    "file": "pages/cat-logo-1-postes.html"
+  },
+  {
+    "url": "https://www.herraidea.com/conector-hrd-1301/",
+    "file": "pages/conector-hrd-1301.html"
+  },
+  {
+    "url": "https://www.herraidea.com/conector-hrd-1301/brida-hrd-1409/",
+    "file": "pages/conector-hrd-1301-brida-hrd-1409.html"
+  },
+  {
+    "url": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1302/",
+    "file": "pages/conector-hrd-1301-conector-hrd-1302.html"
+  },
+  {
+    "url": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1303/",
+    "file": "pages/conector-hrd-1301-conector-hrd-1303.html"
+  },
+  {
+    "url": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1304/",
+    "file": "pages/conector-hrd-1301-conector-hrd-1304.html"
+  },
+  {
+    "url": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1305/",
+    "file": "pages/conector-hrd-1301-conector-hrd-1305.html"
+  },
+  {
+    "url": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1306/",
+    "file": "pages/conector-hrd-1301-conector-hrd-1306.html"
+  },
+  {
+    "url": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1307/",
+    "file": "pages/conector-hrd-1301-conector-hrd-1307.html"
+  },
+  {
+    "url": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1308/",
+    "file": "pages/conector-hrd-1301-conector-hrd-1308.html"
+  },
+  {
+    "url": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1309/",
+    "file": "pages/conector-hrd-1301-conector-hrd-1309.html"
+  },
+  {
+    "url": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1310/",
+    "file": "pages/conector-hrd-1301-conector-hrd-1310.html"
+  },
+  {
+    "url": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1311/",
+    "file": "pages/conector-hrd-1301-conector-hrd-1311.html"
+  },
+  {
+    "url": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1312/",
+    "file": "pages/conector-hrd-1301-conector-hrd-1312.html"
+  },
+  {
+    "url": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1313/",
+    "file": "pages/conector-hrd-1301-conector-hrd-1313.html"
+  },
+  {
+    "url": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1404/",
+    "file": "pages/conector-hrd-1301-conector-hrd-1404.html"
+  },
+  {
+    "url": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1405/",
+    "file": "pages/conector-hrd-1301-conector-hrd-1405.html"
+  },
+  {
+    "url": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1406/",
+    "file": "pages/conector-hrd-1301-conector-hrd-1406.html"
+  },
+  {
+    "url": "https://www.herraidea.com/conector-hrd-1301/vela-hrd-1407/",
+    "file": "pages/conector-hrd-1301-vela-hrd-1407.html"
+  },
+  {
+    "url": "https://www.herraidea.com/conector-hrd-1301/vela-hrd-1408/",
+    "file": "pages/conector-hrd-1301-vela-hrd-1408.html"
+  },
+  {
+    "url": "https://www.herraidea.com/contacto/herrajes-leon/",
+    "file": "pages/contacto-herrajes-leon.html"
+  },
+  {
+    "url": "https://www.herraidea.com/galeria/",
+    "file": "pages/galeria.html"
+  },
+  {
+    "url": "https://www.herraidea.com/j/privacy",
+    "file": "pages/j-privacy.html"
+  },
+  {
+    "url": "https://www.herraidea.com/jaladera-jh25/",
+    "file": "pages/jaladera-jh25.html"
+  },
+  {
+    "url": "https://www.herraidea.com/jaladera-jh25/bisagra-2020/",
+    "file": "pages/jaladera-jh25-bisagra-2020.html"
+  },
+  {
+    "url": "https://www.herraidea.com/jaladera-jh25/jaladera-para-puerta/",
+    "file": "pages/jaladera-jh25-jaladera-para-puerta.html"
+  },
+  {
+    "url": "https://www.herraidea.com/pasamanos-hrd-1401/",
+    "file": "pages/pasamanos-hrd-1401.html"
+  },
+  {
+    "url": "https://www.herraidea.com/pasamanos-hrd-1401/tapon-1402/",
+    "file": "pages/pasamanos-hrd-1401-tapon-1402.html"
+  },
+  {
+    "url": "https://www.herraidea.com/pasamanos-hrd-1401/tapon-1403/",
+    "file": "pages/pasamanos-hrd-1401-tapon-1403.html"
+  },
+  {
+    "url": "https://www.herraidea.com/pipeta-hrd-1101/",
+    "file": "pages/pipeta-hrd-1101.html"
+  },
+  {
+    "url": "https://www.herraidea.com/pipeta-hrd-1101/pipeta-ajustable-roscada/",
+    "file": "pages/pipeta-hrd-1101-pipeta-ajustable-roscada.html"
+  },
+  {
+    "url": "https://www.herraidea.com/pipeta-hrd-1101/pipeta-allen/",
+    "file": "pages/pipeta-hrd-1101-pipeta-allen.html"
+  },
+  {
+    "url": "https://www.herraidea.com/pipeta-hrd-1101/pipeta-avellanado/",
+    "file": "pages/pipeta-hrd-1101-pipeta-avellanado.html"
+  },
+  {
+    "url": "https://www.herraidea.com/pipeta-hrd-1101/pipeta-deslizable/",
+    "file": "pages/pipeta-hrd-1101-pipeta-deslizable.html"
+  },
+  {
+    "url": "https://www.herraidea.com/pipeta-hrd-1101/pipeta-doble-chapeton/",
+    "file": "pages/pipeta-hrd-1101-pipeta-doble-chapeton.html"
+  },
+  {
+    "url": "https://www.herraidea.com/pipeta-hrd-1101/pipeta-hrd-1105/",
+    "file": "pages/pipeta-hrd-1101-pipeta-hrd-1105.html"
+  },
+  {
+    "url": "https://www.herraidea.com/pipeta-hrd-1101/pipeta-hrd-1106/",
+    "file": "pages/pipeta-hrd-1101-pipeta-hrd-1106.html"
+  },
+  {
+    "url": "https://www.herraidea.com/pipeta-hrd-1101/pipeta-hrd-1108/",
+    "file": "pages/pipeta-hrd-1101-pipeta-hrd-1108.html"
+  },
+  {
+    "url": "https://www.herraidea.com/pipeta-hrd-1101/pipeta-hrd-1112/",
+    "file": "pages/pipeta-hrd-1101-pipeta-hrd-1112.html"
+  },
+  {
+    "url": "https://www.herraidea.com/pipeta-hrd-1101/pipeta-hrd-1113/",
+    "file": "pages/pipeta-hrd-1101-pipeta-hrd-1113.html"
+  },
+  {
+    "url": "https://www.herraidea.com/pipeta-hrd-1101/pipeta-hrd-1114/",
+    "file": "pages/pipeta-hrd-1101-pipeta-hrd-1114.html"
+  },
+  {
+    "url": "https://www.herraidea.com/pipeta-hrd-1101/pipeta/",
+    "file": "pages/pipeta-hrd-1101-pipeta.html"
+  },
+  {
+    "url": "https://www.herraidea.com/pomo-hrd-1501/",
+    "file": "pages/pomo-hrd-1501.html"
+  },
+  {
+    "url": "https://www.herraidea.com/poste-hrd-1201/",
+    "file": "pages/poste-hrd-1201.html"
+  },
+  {
+    "url": "https://www.herraidea.com/poste-hrd-1201/mini-poste/",
+    "file": "pages/poste-hrd-1201-mini-poste.html"
+  },
+  {
+    "url": "https://www.herraidea.com/poste-hrd-1201/poste-1206x450-tope/",
+    "file": "pages/poste-hrd-1201-poste-1206x450-tope.html"
+  },
+  {
+    "url": "https://www.herraidea.com/poste-hrd-1201/poste-1206x900/",
+    "file": "pages/poste-hrd-1201-poste-1206x900.html"
+  },
+  {
+    "url": "https://www.herraidea.com/poste-hrd-1201/poste-1515-1518/",
+    "file": "pages/poste-hrd-1201-poste-1515-1518.html"
+  },
+  {
+    "url": "https://www.herraidea.com/poste-hrd-1201/poste-1615-1616/",
+    "file": "pages/poste-hrd-1201-poste-1615-1616.html"
+  },
+  {
+    "url": "https://www.herraidea.com/poste-hrd-1201/poste-1715/",
+    "file": "pages/poste-hrd-1201-poste-1715.html"
+  },
+  {
+    "url": "https://www.herraidea.com/poste-hrd-1201/poste-1716/",
+    "file": "pages/poste-hrd-1201-poste-1716.html"
+  },
+  {
+    "url": "https://www.herraidea.com/poste-hrd-1201/poste-1717/",
+    "file": "pages/poste-hrd-1201-poste-1717.html"
+  },
+  {
+    "url": "https://www.herraidea.com/poste-hrd-1201/poste-1815/",
+    "file": "pages/poste-hrd-1201-poste-1815.html"
+  },
+  {
+    "url": "https://www.herraidea.com/poste-hrd-1201/poste-ajustable/",
+    "file": "pages/poste-hrd-1201-poste-ajustable.html"
+  },
+  {
+    "url": "https://www.herraidea.com/poste-hrd-1201/poste-hrd-1206x185/",
+    "file": "pages/poste-hrd-1201-poste-hrd-1206x185.html"
+  },
+  {
+    "url": "https://www.herraidea.com/poste-hrd-1201/poste-hrd-1206x250/",
+    "file": "pages/poste-hrd-1201-poste-hrd-1206x250.html"
+  },
+  {
+    "url": "https://www.herraidea.com/poste-hrd-1201/poste-hrd-1206x350/",
+    "file": "pages/poste-hrd-1201-poste-hrd-1206x350.html"
+  },
+  {
+    "url": "https://www.herraidea.com/poste-hrd-1201/poste-hrd-1206x450/",
+    "file": "pages/poste-hrd-1201-poste-hrd-1206x450.html"
+  },
+  {
+    "url": "https://www.herraidea.com/poste-hrd-1201/poste-hueco/",
+    "file": "pages/poste-hrd-1201-poste-hueco.html"
+  },
+  {
+    "url": "https://www.herraidea.com/quienes-somos-1/",
+    "file": "pages/quienes-somos-1.html"
+  },
+  {
+    "url": "https://www.herraidea.com/sitemap/",
+    "file": "pages/sitemap.html"
+  },
+  {
+    "url": "https://www.herraidea.com/soporte-1410/",
+    "file": "pages/soporte-1410.html"
+  },
+  {
+    "url": "https://www.herraidea.com/soporte-1410/soporte-1216/",
+    "file": "pages/soporte-1410-soporte-1216.html"
+  },
+  {
+    "url": "https://www.herraidea.com/soporte-1410/soporte-1411/",
+    "file": "pages/soporte-1410-soporte-1411.html"
+  },
+  {
+    "url": "https://www.herraidea.com/soporte-1410/soporte-1418/",
+    "file": "pages/soporte-1410-soporte-1418.html"
+  }
+]

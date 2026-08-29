@@ -1,0 +1,464 @@
+[
+  {
+    "category": "Pipetas",
+    "code": "HRD 1101",
+    "name": "Pipeta Chapetón",
+    "image": "images/pipetas-hrd-1101.jpg",
+    "source": "https://www.herraidea.com/pipeta-hrd-1101/"
+  },
+  {
+    "category": "Pipetas",
+    "code": "HRD 1102",
+    "name": "Pipeta Avellanado",
+    "image": "images/pipetas-hrd-1102.jpg",
+    "source": "https://www.herraidea.com/pipeta-hrd-1101/pipeta-avellanado/"
+  },
+  {
+    "category": "Pipetas",
+    "code": "HRD 1103",
+    "name": "Pipeta Allen",
+    "image": "images/pipetas-hrd-1103.jpg",
+    "source": "https://www.herraidea.com/pipeta-hrd-1101/pipeta-allen/"
+  },
+  {
+    "category": "Pipetas",
+    "code": "HRD 1104",
+    "name": "Pipeta Avellanado",
+    "image": "images/pipetas-hrd-1104.jpg",
+    "source": "https://www.herraidea.com/pipeta-hrd-1101/pipeta/"
+  },
+  {
+    "category": "Pipetas",
+    "code": "HRD 1105",
+    "name": "Pipeta Chapetón 90",
+    "image": "images/pipetas-hrd-1105.jpg",
+    "source": "https://www.herraidea.com/pipeta-hrd-1101/pipeta-hrd-1105/"
+  },
+  {
+    "category": "Pipetas",
+    "code": "HRD 1106",
+    "name": "Pipeta Avellanado 90",
+    "image": "images/pipetas-hrd-1106.jpg",
+    "source": "https://www.herraidea.com/pipeta-hrd-1101/pipeta-hrd-1106/"
+  },
+  {
+    "category": "Pipetas",
+    "code": "HRD 1107",
+    "name": "Pipeta Doble Chapetón",
+    "image": "images/pipetas-hrd-1107.jpg",
+    "source": "https://www.herraidea.com/pipeta-hrd-1101/pipeta-doble-chapeton/"
+  },
+  {
+    "category": "Pipetas",
+    "code": "HRD 1108",
+    "name": "Pipeta Doble Avellanado",
+    "image": "images/pipetas-hrd-1108.jpg",
+    "source": "https://www.herraidea.com/pipeta-hrd-1101/pipeta-hrd-1108/"
+  },
+  {
+    "category": "Pipetas",
+    "code": "HRD 1110",
+    "name": "Pipeta Ajustable.",
+    "image": "images/pipetas-hrd-1110.jpg",
+    "source": "https://www.herraidea.com/pipeta-hrd-1101/pipeta-deslizable/"
+  },
+  {
+    "category": "Pipetas",
+    "code": "HRD 1111",
+    "name": "HRD 1111",
+    "image": "images/pipetas-hrd-1111.jpg",
+    "source": "https://www.herraidea.com/pipeta-hrd-1101/pipeta-ajustable-roscada/"
+  },
+  {
+    "category": "Pipetas",
+    "code": "HRD 1112",
+    "name": "Pipeta Ajustable Roscada",
+    "image": "images/pipetas-hrd-1112.jpg",
+    "source": "https://www.herraidea.com/pipeta-hrd-1101/pipeta-hrd-1112/"
+  },
+  {
+    "category": "Pipetas",
+    "code": "HRD 1113",
+    "name": "Pipeta Ajustable",
+    "image": "images/pipetas-hrd-1113.jpg",
+    "source": "https://www.herraidea.com/pipeta-hrd-1101/pipeta-hrd-1113/"
+  },
+  {
+    "category": "Pipetas",
+    "code": "HRD 1114",
+    "name": "Pipeta Ajustable",
+    "image": "images/pipetas-hrd-1114.jpg",
+    "source": "https://www.herraidea.com/pipeta-hrd-1101/pipeta-hrd-1114/"
+  },
+  {
+    "category": "Postes",
+    "code": "HRD 1201",
+    "name": "MiniPoste Sólido 25",
+    "image": "images/postes-hrd-1201.jpg",
+    "source": "https://www.herraidea.com/poste-hrd-1201/"
+  },
+  {
+    "category": "Postes",
+    "code": "HRD 1202",
+    "name": "HRD 1202",
+    "image": "images/postes-hrd-1202.jpg",
+    "source": "https://www.herraidea.com/poste-hrd-1201/mini-poste/"
+  },
+  {
+    "category": "Postes",
+    "code": "HRD 1203",
+    "name": "MiniPoste Hueco 25",
+    "image": "images/postes-hrd-1203.jpg",
+    "source": "https://www.herraidea.com/poste-hrd-1201/poste-hueco/"
+  },
+  {
+    "category": "Postes",
+    "code": "HRD 1204",
+    "name": "MiniPoste Sólido 25 ajustable.",
+    "image": "images/postes-hrd-1204.jpg",
+    "source": "https://www.herraidea.com/poste-hrd-1201/poste-ajustable/"
+  },
+  {
+    "category": "Postes",
+    "code": "HRD 1206 x 185",
+    "name": "MiniPoste Rectangular con tope.",
+    "image": "images/postes-hrd-1206-x-185.jpg",
+    "source": "https://www.herraidea.com/poste-hrd-1201/poste-hrd-1206x185/"
+  },
+  {
+    "category": "Postes",
+    "code": "HRD 1206 x 250",
+    "name": "MiniPoste Rectangular",
+    "image": "images/postes-hrd-1206-x-250.jpg",
+    "source": "https://www.herraidea.com/poste-hrd-1201/poste-hrd-1206x250/"
+  },
+  {
+    "category": "Postes",
+    "code": "HRD 1206 x 350",
+    "name": "HRD 1206 x 350",
+    "image": "images/postes-hrd-1206-x-350.jpg",
+    "source": "https://www.herraidea.com/poste-hrd-1201/poste-hrd-1206x350/"
+  },
+  {
+    "category": "Postes",
+    "code": "HRD 1206 x 450",
+    "name": "MiniPoste Rectangular",
+    "image": "images/postes-hrd-1206-x-450.jpg",
+    "source": "https://www.herraidea.com/poste-hrd-1201/poste-hrd-1206x450/"
+  },
+  {
+    "category": "Postes",
+    "code": "HRD 1206 x 450",
+    "name": "MiniPoste Rectangular",
+    "image": "images/postes-hrd-1206-x-450.jpg",
+    "source": "https://www.herraidea.com/poste-hrd-1201/poste-hrd-1206x450/"
+  },
+  {
+    "category": "Postes",
+    "code": "HRD 1206 x 450 TOPE",
+    "name": "MiniPoste Rectangular con tope.",
+    "image": "images/postes-hrd-1206-x-450-tope.jpg",
+    "source": "https://www.herraidea.com/poste-hrd-1201/poste-1206x450-tope/"
+  },
+  {
+    "category": "Postes",
+    "code": "HRD 1206 x 900",
+    "name": "MiniPoste Rectangular",
+    "image": "images/postes-hrd-1206-x-900.jpg",
+    "source": "https://www.herraidea.com/poste-hrd-1201/poste-1206x900/"
+  },
+  {
+    "category": "Postes",
+    "code": "HRD 1515",
+    "name": "Poste",
+    "image": "images/postes-hrd-1515.jpg",
+    "source": "https://www.herraidea.com/poste-hrd-1201/poste-1515-1518/"
+  },
+  {
+    "category": "Postes",
+    "code": "HRD 1516",
+    "name": "HRD 1516",
+    "image": "images/postes-hrd-1516.jpg",
+    "source": "https://www.herraidea.com/poste-hrd-1201/poste-1515-1518/"
+  },
+  {
+    "category": "Postes",
+    "code": "HRD 1517",
+    "name": "Poste",
+    "image": "images/postes-hrd-1517.jpg",
+    "source": "https://www.herraidea.com/poste-hrd-1201/poste-1515-1518/"
+  },
+  {
+    "category": "Postes",
+    "code": "HRD 1518",
+    "name": "Poste",
+    "image": "images/postes-hrd-1518.jpg",
+    "source": "https://www.herraidea.com/poste-hrd-1201/poste-1515-1518/"
+  },
+  {
+    "category": "Postes",
+    "code": "HRD 1615",
+    "name": "Poste Rectangular",
+    "image": "images/postes-hrd-1615.jpg",
+    "source": "https://www.herraidea.com/poste-hrd-1201/poste-1615-1616/"
+  },
+  {
+    "category": "Postes",
+    "code": "HRD 1616",
+    "name": "Poste Rectangular",
+    "image": "images/postes-hrd-1616.jpg",
+    "source": "https://www.herraidea.com/poste-hrd-1201/poste-1615-1616/"
+  },
+  {
+    "category": "Postes",
+    "code": "HRD 1715",
+    "name": "Poste Solera",
+    "image": "images/postes-hrd-1715.jpg",
+    "source": "https://www.herraidea.com/poste-hrd-1201/poste-1715/"
+  },
+  {
+    "category": "Postes",
+    "code": "HRD 1716",
+    "name": "Poste Solera",
+    "image": "images/postes-hrd-1716.jpg",
+    "source": "https://www.herraidea.com/poste-hrd-1201/poste-1716/"
+  },
+  {
+    "category": "Postes",
+    "code": "HRD 1717",
+    "name": "Poste Solera",
+    "image": "images/postes-hrd-1717.jpg",
+    "source": "https://www.herraidea.com/poste-hrd-1201/poste-1717/"
+  },
+  {
+    "category": "Postes",
+    "code": "HRD 1815",
+    "name": "Poste Rectangular",
+    "image": "images/postes-hrd-1815.jpg",
+    "source": "https://www.herraidea.com/poste-hrd-1201/poste-1815/"
+  },
+  {
+    "category": "Postes",
+    "code": "HRD 1216",
+    "name": "Soporte para poste",
+    "image": "images/postes-hrd-1216.jpg",
+    "source": "https://www.herraidea.com/soporte-1410/soporte-1216/"
+  },
+  {
+    "category": "Conectores",
+    "code": "HRD 1301",
+    "name": "Botón conector vidrio-vidrio 44mm.",
+    "image": "images/conectores-hrd-1301.jpg",
+    "source": "https://www.herraidea.com/conector-hrd-1301/"
+  },
+  {
+    "category": "Conectores",
+    "code": "HRD 1302",
+    "name": "Botón 44mm. conector vidrio-muro.",
+    "image": "images/conectores-hrd-1302.jpg",
+    "source": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1302/"
+  },
+  {
+    "category": "Conectores",
+    "code": "HRD 1303",
+    "name": "Conectar 44 x 40mm. para vidrio muro.",
+    "image": "images/conectores-hrd-1303.jpg",
+    "source": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1303/"
+  },
+  {
+    "category": "Conectores",
+    "code": "HRD 1304",
+    "name": "Conector 32 x 25mm. para vidrio-muro.",
+    "image": "images/conectores-hrd-1304.jpg",
+    "source": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1304/"
+  },
+  {
+    "category": "Conectores",
+    "code": "HRD 1305",
+    "name": "Conector 32 x 50mm. para vidrio-muro.",
+    "image": "images/conectores-hrd-1305.jpg",
+    "source": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1305/"
+  },
+  {
+    "category": "Conectores",
+    "code": "HRD 1306",
+    "name": "Conector 32 x 40mm. para vidrio-muro.",
+    "image": "images/conectores-hrd-1306.jpg",
+    "source": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1306/"
+  },
+  {
+    "category": "Conectores",
+    "code": "HRD 1307",
+    "name": "Conector 32 x 25mm. para vidrio-muro.",
+    "image": "images/conectores-hrd-1307.jpg",
+    "source": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1307/"
+  },
+  {
+    "category": "Conectores",
+    "code": "HRD 1308",
+    "name": "Conector 32 x 50mm. para vidrio-muro.",
+    "image": "images/conectores-hrd-1308.jpg",
+    "source": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1308/"
+  },
+  {
+    "category": "Conectores",
+    "code": "HRD 1309",
+    "name": "Conector Avellanado 32 x 46mm. para vidrio-muro.",
+    "image": "images/conectores-hrd-1309.jpg",
+    "source": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1309/"
+  },
+  {
+    "category": "Conectores",
+    "code": "HRD 1310",
+    "name": "Conector 32 x 46mm. para vidrio-muro.",
+    "image": "images/conectores-hrd-1310.jpg",
+    "source": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1310/"
+  },
+  {
+    "category": "Conectores",
+    "code": "HRD 1311",
+    "name": "Conector 40x67 mm para vidrio muro.",
+    "image": "images/conectores-hrd-1311.jpg",
+    "source": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1311/"
+  },
+  {
+    "category": "Conectores",
+    "code": "HRD 1312",
+    "name": "Conector para tubo barandal cacheteado",
+    "image": "images/conectores-hrd-1312.jpg",
+    "source": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1312/"
+  },
+  {
+    "category": "Conectores",
+    "code": "HRD 1313",
+    "name": "Conector hueco 32 x 38 para pija del #10",
+    "image": "images/conectores-hrd-1313.jpg",
+    "source": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1313/"
+  },
+  {
+    "category": "Conectores",
+    "code": "HRD 1401",
+    "name": "Soporte Pasamanos",
+    "image": "images/conectores-hrd-1401.jpg",
+    "source": "https://www.herraidea.com/pasamanos-hrd-1401/"
+  },
+  {
+    "category": "Conectores",
+    "code": "HRD 1402",
+    "name": "HRD 1402",
+    "image": "images/conectores-hrd-1402.jpg",
+    "source": "https://www.herraidea.com/pasamanos-hrd-1401/tapon-1402/"
+  },
+  {
+    "category": "Conectores",
+    "code": "HRD 1403",
+    "name": "Tapon 2\" para tubo roscada 3/8\"",
+    "image": "images/conectores-hrd-1403.jpg",
+    "source": "https://www.herraidea.com/pasamanos-hrd-1401/tapon-1403/"
+  },
+  {
+    "category": "Conectores",
+    "code": "HRD 1404",
+    "name": "Conector intermedio para tubo 2\"",
+    "image": "images/conectores-hrd-1404.jpg",
+    "source": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1404/"
+  },
+  {
+    "category": "Conectores",
+    "code": "HRD 1405",
+    "name": "Conector intermedio izquierdo para tubo 2\"",
+    "image": "images/conectores-hrd-1405.jpg",
+    "source": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1405/"
+  },
+  {
+    "category": "Conectores",
+    "code": "HRD 1406",
+    "name": "Conector intermedio derecho para tubo 2\"",
+    "image": "images/conectores-hrd-1406.jpg",
+    "source": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1406/"
+  },
+  {
+    "category": "Conectores",
+    "code": "HRD 1407",
+    "name": "HRD 1407",
+    "image": "images/conectores-hrd-1407.jpg",
+    "source": "https://www.herraidea.com/conector-hrd-1301/vela-hrd-1407/"
+  },
+  {
+    "category": "Conectores",
+    "code": "HRD 1408",
+    "name": "Vela articulada para tubo de 2\"",
+    "image": "images/conectores-hrd-1408.jpg",
+    "source": "https://www.herraidea.com/conector-hrd-1301/vela-hrd-1408/"
+  },
+  {
+    "category": "Conectores",
+    "code": "HRD 1409",
+    "name": "Brida para tubo de 2\"",
+    "image": "images/conectores-hrd-1409.jpg",
+    "source": "https://www.herraidea.com/conector-hrd-1301/brida-hrd-1409/"
+  },
+  {
+    "category": "Conectores",
+    "code": "HRD 1410",
+    "name": "Soporte barandal ajustable",
+    "image": "images/conectores-hrd-1410.jpg",
+    "source": "https://www.herraidea.com/soporte-1410/"
+  },
+  {
+    "category": "Conectores",
+    "code": "HRD 1411",
+    "name": "Soporte barandal ajustable",
+    "image": "images/conectores-hrd-1411.jpg",
+    "source": "https://www.herraidea.com/soporte-1410/soporte-1411/"
+  },
+  {
+    "category": "Conectores",
+    "code": "HRD 1417",
+    "name": "HRD 1417",
+    "image": "images/conectores-hrd-1417.jpg",
+    "source": "https://www.herraidea.com/conector-hrd-1301/vela-hrd-1407/"
+  },
+  {
+    "category": "Conectores",
+    "code": "HRD 1418",
+    "name": "Soporte barandal a vidrio",
+    "image": "images/conectores-hrd-1418.jpg",
+    "source": "https://www.herraidea.com/soporte-1410/soporte-1418/"
+  },
+  {
+    "category": "Conectores",
+    "code": "HRD 1501 Aluminio",
+    "name": "Pomo conector para vidrio",
+    "image": "images/conectores-hrd-1501-aluminio.jpg",
+    "source": "https://www.herraidea.com/pomo-hrd-1501/"
+  },
+  {
+    "category": "Conectores",
+    "code": "HRD 1502 Acero Inox",
+    "name": "Pomo conector para vidrio",
+    "image": "images/conectores-hrd-1502-acero-inox.jpg",
+    "source": "https://www.herraidea.com/pomo-hrd-1501/"
+  },
+  {
+    "category": "Conectores",
+    "code": "HRD 2020",
+    "name": "Bisagra muro-vidrio sin bisel",
+    "image": "images/conectores-hrd-2020.jpg",
+    "source": "https://www.herraidea.com/jaladera-jh25/bisagra-2020/"
+  },
+  {
+    "category": "Jaladeras",
+    "code": "HRD JH25",
+    "name": "Jaladera Tipo H Calibre 18 Tubo 1\" (25mm).",
+    "image": "images/jaladeras-hrd-jh25.jpg",
+    "source": "https://www.herraidea.com/jaladera-jh25/"
+  },
+  {
+    "category": "Jaladeras",
+    "code": "HRD JH32",
+    "name": "Jaladera Tipo H Calibre 18 Tubo 1 1/4\" (32mm).",
+    "image": "images/jaladeras-hrd-jh32.jpg",
+    "source": "https://www.herraidea.com/jaladera-jh25/jaladera-para-puerta/"
+  }
+]
