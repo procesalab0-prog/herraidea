@@ -22,6 +22,11 @@
   const dots = [...document.querySelectorAll('.model-dots i')];
   const modelLink = document.querySelector('#model-link');
   const families = ['pipetas', 'conectores', 'postes'];
+  const mobileModels = [
+    { family: 'Familia 01 · Pipetas', name: 'Pipeta Chapetón', code: 'HRD 1101', labels: ['Vidrio 8–12 mm', 'Acero T-304', 'Salida 28 mm'] },
+    { family: 'Familia 02 · Conectores', name: 'Conector 44 × 40 mm', code: 'HRD 1303', labels: ['Diámetro 44 mm', 'Cuerpo 40 mm', 'Tapa 10 mm'] },
+    { family: 'Familia 03 · Postes', name: 'Mini Poste con tope', code: 'HRD 1206 × 450', labels: ['Altura 450 mm', 'Ranura 300 mm', 'Base 100 × 100 mm'] }
+  ];
   let lastFamily = -1;
 
   function updateScroll() {
@@ -43,10 +48,23 @@
       const rect = engineering.getBoundingClientRect();
       const p = clamp(-rect.top / Math.max(engineering.offsetHeight - innerHeight, 1));
       const idx = Math.min(2, Math.floor(p * 3));
+      document.documentElement.style.setProperty('--technical-progress', `${p * 100}%`);
+      const mobileHint = document.querySelector('#mobile-scroll-hint');
+      if (mobileHint) mobileHint.style.opacity = String(clamp(1 - p * 10));
       if (idx !== lastFamily) {
         panels.forEach((el, i) => el.classList.toggle('active', i === idx));
         dots.forEach((el, i) => el.classList.toggle('active', i === idx));
         if (modelLink) modelLink.href = `#${families[idx]}`;
+        const model = mobileModels[idx];
+        const techUI = document.querySelector('.mobile-tech-ui');
+        if (techUI && model) {
+          document.querySelector('#mobile-family').textContent = model.family;
+          document.querySelector('#mobile-model').textContent = model.name;
+          document.querySelector('#mobile-code').textContent = model.code;
+          document.querySelector('#mobile-step').textContent = `0${idx + 1}`;
+          model.labels.forEach((label, i) => { document.querySelector(`#callout-${['one','two','three'][i]}`).textContent = label; });
+          techUI.classList.remove('tech-enter'); void techUI.offsetWidth; techUI.classList.add('tech-enter');
+        }
         lastFamily = idx;
       }
     }
