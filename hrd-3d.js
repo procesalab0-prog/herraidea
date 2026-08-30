@@ -127,8 +127,9 @@
 
     _glass(T) {
       const m = new T.MeshPhysicalMaterial({
-        color: 0x9fd0de, transparent: true, opacity: 0.24, roughness: 0.05,
-        metalness: 0, side: T.DoubleSide
+        color: 0x58b9d8, transparent: true, opacity: 0.31, roughness: 0.045,
+        metalness: 0, clearcoat: 0.12, clearcoatRoughness: 0.08,
+        envMapIntensity: 0.72, side: T.DoubleSide
       });
       this.mats.push(m);
       return m;

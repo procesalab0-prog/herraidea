@@ -1,5 +1,11 @@
 # Historial de versiones — Herraidea
 
+## 1.10.2 — 2026-08-30
+
+- Cristal de los modelos 3D con un azul más definido y mayor presencia visual.
+- Transparencia, brillo superficial y reflejos calibrados para conservar apariencia de vidrio real.
+- Punto rojo animado en la “i” del logotipo inferior, alineado con la identidad del encabezado.
+
 ## 1.10.1 — 2026-08-30
 
 - El sonido de cobertura nacional solo se reproduce cuando al menos 35% de la sección de envíos está visible.
