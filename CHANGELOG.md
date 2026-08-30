@@ -1,5 +1,12 @@
 # Historial de versiones — Herraidea
 
+## 1.9.0 — 2026-08-30
+
+- Diseño sonoro opcional generado con Web Audio API, sin archivos pesados.
+- Control visible para activar o silenciar y preferencia persistente.
+- Ambiente de transición día–noche, cambios metálicos 3D, etiquetas, botones y easter egg con identidad sonora propia.
+- Respeto a las restricciones de reproducción de Safari, iPhone y Chrome.
+
 ## 1.8.0 — 2026-08-29
 
 - Acero inoxidable 3D con reflejos de estudio, acabado satinado y luces de borde.

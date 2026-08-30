@@ -31,10 +31,9 @@
 <body>
   <header class="site-header">
     <a class="brand" href="#inicio" aria-label="Herraidea, inicio"><img src="/assets/logo-dark-nodot.png" alt="Herraidea"><i></i></a>
-    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span><b>Menú</b></button>
-    <nav id="main-nav" class="main-nav">
-      <a href="#inicio">Inicio</a><a href="#nosotros">Quiénes somos</a><a href="#catalogo">Catálogo</a><a class="nav-contact" href="#contacto">Contacto</a>
-    </nav>
+    <div class="header-controls"><button class="sound-toggle" id="sound-toggle" type="button" aria-pressed="false" aria-label="Activar sonido"><span aria-hidden="true">♩</span><b>Sonido</b></button><button class="menu-toggle" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span><b>Menú</b></button>
+      <nav id="main-nav" class="main-nav"><a href="#inicio">Inicio</a><a href="#nosotros">Quiénes somos</a><a href="#catalogo">Catálogo</a><a class="nav-contact" href="#contacto">Contacto</a></nav>
+    </div>
   </header>
 
   <main>
@@ -99,12 +98,12 @@
 
   <dialog class="credits-dialog" id="credits-dialog" aria-labelledby="credits-title">
     <button class="credits-close" type="button" aria-label="Cerrar créditos">×</button>
-    <div class="credits-hero"><span class="credits-kicker">Seis toques desbloquearon</span><img class="procesalab-logo" src="/assets/brand/procesalab-horizontal.png" alt="ProcesaLab"><p>Diseño, desarrollo y evolución digital.</p><span class="current-version">Herraidea · v<span id="credits-version">1.8.0</span></span></div>
+    <div class="credits-hero"><span class="credits-kicker">Seis toques desbloquearon</span><img class="procesalab-logo" src="/assets/brand/procesalab-horizontal.png" alt="ProcesaLab"><p>Diseño, desarrollo y evolución digital.</p><span class="current-version">Herraidea · v<span id="credits-version">1.9.0</span></span></div>
     <div class="credits-content"><h2 id="credits-title">Construido versión a versión.</h2><p>Cada actualización queda documentada para que el proyecto conserve contexto, decisiones y continuidad.</p><div class="version-list" id="version-list"></div></div>
   </dialog>
 
   <footer><div class="section-inner"><img src="/assets/logo-light-nodot.png" alt="Herraidea"><nav><a href="#catalogo">Catálogo</a><a href="#nosotros">Nosotros</a><a href="#contacto">Contacto</a></nav><span>León, Gto. · Desde 2013</span></div></footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="/hrd-3d.js?v=steel-1-8"></script><script src="/hero.js?v=credits-1-8"></script>
+  <script src="/hrd-3d.js?v=steel-1-8"></script><script src="/sound.js?v=1-9"></script><script src="/hero.js?v=sound-1-9"></script>
 </body>
 </html>

@@ -1,7 +1,8 @@
 {
-  "current": "1.8.0",
+  "current": "1.9.0",
   "studio": "ProcesaLab",
   "versions": [
+    {"version":"1.9.0","date":"2026-08-30","title":"Diseño sonoro interactivo","summary":"Sonido opcional para el hero, recorrido 3D, etiquetas, botones y easter egg, con preferencia persistente."},
     {"version":"1.8.0","date":"2026-08-29","title":"Acero realista y easter egg","summary":"Reflejos satinados para las piezas 3D, créditos ocultos y sistema persistente de versiones."},
     {"version":"1.7.0","date":"2026-08-29","title":"Hero de día a noche","summary":"Transición fotográfica progresiva alineada con el scroll."},
     {"version":"1.6.0","date":"2026-08-29","title":"Geometría inmersiva","summary":"Recorrido 3D a pantalla completa con llamadas técnicas y progreso en móvil y escritorio."},
