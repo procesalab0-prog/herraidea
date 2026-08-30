@@ -1,7 +1,8 @@
 {
-  "current": "1.9.0",
+  "current": "1.10.0",
   "studio": "ProcesaLab",
   "versions": [
+    {"version":"1.10.0","date":"2026-08-30","title":"Catálogo y cobertura interactivos","summary":"Catálogo desplegable, mapa animado de envíos nacionales y señales sonoras más discretas."},
     {"version":"1.9.0","date":"2026-08-30","title":"Diseño sonoro interactivo","summary":"Sonido opcional para el hero, recorrido 3D, etiquetas, botones y easter egg, con preferencia persistente."},
     {"version":"1.8.1","date":"2026-08-29","title":"Logotipo institucional","summary":"Wordmark gris con chevrón rojo y punto animado proporcional en la letra i."},
     {"version":"1.8.0","date":"2026-08-29","title":"Acero realista y easter egg","summary":"Reflejos satinados para las piezas 3D, créditos ocultos y sistema persistente de versiones."},

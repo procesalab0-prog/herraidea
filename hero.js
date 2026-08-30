@@ -80,7 +80,7 @@
       const mobileSummary = document.querySelector('#mobile-tech-summary');
       if (mobileSummary) mobileSummary.style.opacity = String(clamp((p - .025) * 14));
       if (idx !== lastFamily) {
-        if (lastFamily >= 0) { window.herraideaSound?.play('metal'); window.herraideaSound?.play('tags'); }
+        if (lastFamily >= 0) window.herraideaSound?.play('metal');
         panels.forEach((el, i) => el.classList.toggle('active', i === idx));
         dots.forEach((el, i) => el.classList.toggle('active', i === idx));
         if (modelLink) modelLink.href = `#${families[idx]}`;
@@ -147,20 +147,50 @@
     catalogDetails = products;
     const host = document.querySelector('#catalog-families');
     const order = ['pipetas', 'postes', 'conectores', 'jaladeras'];
-    host.innerHTML = order.map(key => {
+    host.innerHTML = order.map((key, familyIndex) => {
       const items = products.filter(p => String(p.category).toLowerCase() === key);
       const [title, description] = labels[key];
-      return `<section class="family" id="${key}"><div class="family-header"><div><span class="eyebrow">${items.length} modelos</span><h3>${title}</h3></div><p>${description}</p></div><div class="product-grid">${items.map(p => {
+      return `<section class="family" id="${key}"><button class="family-toggle" type="button" aria-expanded="false"><span class="family-bar"></span><span class="family-number">0${familyIndex + 1}</span><span class="family-title"><h3>${title}</h3><small>${items.length} modelos</small></span><p>${description}</p><span class="family-mark" aria-hidden="true"></span></button><div class="family-products">${items.map((p, productIndex) => {
         const code = escapeHTML(p.code || p.model || '');
         const name = escapeHTML(p.name);
-        return `<button class="product-card" type="button" data-product="${escapeHTML(p.code)}" aria-label="Ver ficha de ${name} ${code}"><figure><img src="/content/catalog/${escapeHTML(p.image)}" alt="${name} ${code}" loading="lazy"></figure><div class="product-info"><b>${code}</b><span>${name}</span><em>Ver ficha técnica →</em></div></button>`;
+        return `<button class="product-card" type="button" data-product="${escapeHTML(p.code)}" aria-label="Ver ficha de ${name} ${code}" style="animation-delay:${Math.min(productIndex,16)*.035}s"><figure><img src="/content/catalog/${escapeHTML(p.image)}" alt="${name} ${code}" loading="lazy"></figure><div class="product-info"><b>${code}</b><span>${name}</span><em>Ver ficha técnica →</em></div></button>`;
       }).join('')}</div></section>`;
     }).join('');
+    const familyEls = [...host.querySelectorAll('.family')];
+    let activeCatalogFamily = '';
+    const setHotFamily = (family, sound = true) => {
+      if (!family || activeCatalogFamily === family.id) return;
+      activeCatalogFamily = family.id;
+      familyEls.forEach(el => el.classList.toggle('hot', el === family || el.classList.contains('open')));
+      if (sound) window.herraideaSound?.play('roulette');
+    };
+    const toggleFamily = (family, forceOpen = false) => {
+      const shouldOpen = forceOpen || !family.classList.contains('open');
+      familyEls.forEach(el => { const open = el === family && shouldOpen; el.classList.toggle('open', open); el.querySelector('.family-toggle').setAttribute('aria-expanded', String(open)); });
+      setHotFamily(family);
+    };
+    familyEls.forEach(family => family.querySelector('.family-toggle').addEventListener('click', () => toggleFamily(family)));
+    document.querySelectorAll('[data-open-family]').forEach(button => button.addEventListener('click', () => {
+      const family = document.querySelector(`#${button.dataset.openFamily}`); if (!family) return;
+      toggleFamily(family, true); family.scrollIntoView({behavior:'smooth',block:'start'});
+    }));
+    const updateCatalogFocus = () => {
+      let best = null, distance = Infinity;
+      familyEls.forEach(family => { const rect = family.getBoundingClientRect(); if (rect.bottom < 82 || rect.top > innerHeight) return; const d = Math.abs(rect.top - innerHeight*.42); if (d < distance) { best = family; distance = d; } });
+      if (best) setHotFamily(best);
+    };
+    addEventListener('scroll', updateCatalogFocus, {passive:true}); updateCatalogFocus();
     host.querySelectorAll('[data-product]').forEach(card => card.addEventListener('click', () => openProduct(catalogDetails.find(p => p.code === card.dataset.product))));
     const requested = new URL(location.href).searchParams.get('producto');
     if (requested) openProduct(catalogDetails.find(p => productSlug(p.code) === requested));
   }).catch(err => {
     document.querySelector('#catalog-families').innerHTML = `<p>${escapeHTML(err.message)}. Escríbenos por WhatsApp para recibirlo.</p>`;
+  });
+
+  let lastShippingTone = 0;
+  document.addEventListener('hrd-city', event => {
+    const label = document.querySelector('#shipping-city'); if (label) label.textContent = `Cobertura · ${event.detail}`;
+    const now = performance.now(); if (now - lastShippingTone > 520) { window.herraideaSound?.play('shipping'); lastShippingTone = now; }
   });
 
   document.querySelector('#contact-form')?.addEventListener('submit', event => {

@@ -9,6 +9,7 @@
       this.button?.addEventListener('click', event => { event.stopPropagation(); this.toggle(); });
       document.addEventListener('click', event => {
         if (!this.enabled || event.target.closest('#sound-toggle,.brand')) return;
+        if (event.target.closest('.family-toggle,[data-open-family]')) return;
         if (event.target.closest('button,.button,.product-card,.main-nav a,.section-head a')) this.play('button');
       }, true);
     }
@@ -65,8 +66,10 @@
       if (name === 'unlock') { this.tone(440,.2,.12,'sine'); this.tone(660,.28,.1,'sine',.1); }
       if (name === 'button') { this.tone(760,.055,.055,'triangle',0,520); }
       if (name === 'night') { this.noise(.9,.1,380); this.tone(82,1.15,.1,'sine',0,55); this.tone(164,.7,.045,'sine',.12,110); }
-      if (name === 'metal') { this.noise(.24,.09,1800); this.tone(210,.42,.13,'triangle'); this.tone(590,.55,.075,'sine',.025,430); this.tone(1180,.7,.035,'sine',.06,760); }
+      if (name === 'metal') { this.tone(690,.075,.042,'triangle',0,510); this.tone(920,.055,.018,'sine',.018,720); }
       if (name === 'tags') { [0,.09,.18].forEach((d,i) => this.tone(880+i*110,.07,.04,'triangle',d,650+i*80)); }
+      if (name === 'roulette') { [0,.045,.09].forEach((d,i) => this.tone(660+i*85,.038,.025-i*.004,'triangle',d,520+i*55)); }
+      if (name === 'shipping') { this.tone(820,.065,.018,'sine',0,680); }
       if (name === 'easter') { [392,523,659,784].forEach((f,i) => this.tone(f,.34,.085,'sine',i*.11,f*1.01)); this.noise(.5,.045,2200,.25); }
     }
   }

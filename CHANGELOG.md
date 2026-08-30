@@ -1,5 +1,13 @@
 # Historial de versiones — Herraidea
 
+## 1.10.0 — 2026-08-30
+
+- Catálogo rediseñado como acordeón animado, conservando las 66 fichas técnicas.
+- Familia activa destacada en rojo con sonido de ruleta discreto.
+- Nueva sección animada de cobertura y envíos a todo México.
+- Señales de cobertura sutiles y sonido de cambio 3D simplificado, similar a un toque.
+- Adaptación específica para escritorio y teléfono basada en el handoff de Claude Design.
+
 ## 1.9.0 — 2026-08-30
 
 - Diseño sonoro opcional generado con Web Audio API, sin archivos pesados.
