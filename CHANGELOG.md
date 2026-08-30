@@ -1,5 +1,10 @@
 # Historial de versiones — Herraidea
 
+## 1.10.1 — 2026-08-30
+
+- El sonido de cobertura nacional solo se reproduce cuando al menos 35% de la sección de envíos está visible.
+- Se silencia automáticamente al cambiar de sección o dejar la página en segundo plano.
+
 ## 1.10.0 — 2026-08-30
 
 - Catálogo rediseñado como acordeón animado, conservando las 66 fichas técnicas.

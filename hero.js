@@ -190,6 +190,12 @@
   let lastShippingTone = 0;
   document.addEventListener('hrd-city', event => {
     const label = document.querySelector('#shipping-city'); if (label) label.textContent = `Cobertura · ${event.detail}`;
+    const section = document.querySelector('#envios');
+    if (!section || document.visibilityState !== 'visible') return;
+    const rect = section.getBoundingClientRect();
+    const visiblePixels = Math.max(0, Math.min(rect.bottom, innerHeight) - Math.max(rect.top, 0));
+    const visibleRatio = visiblePixels / Math.min(rect.height, innerHeight);
+    if (visibleRatio < .35) return;
     const now = performance.now(); if (now - lastShippingTone > 520) { window.herraideaSound?.play('shipping'); lastShippingTone = now; }
   });
 
