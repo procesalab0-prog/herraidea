@@ -30,6 +30,12 @@ Herraidea cuenta con centros de maquinado y capacidad de fabricación propia, po
 - Atención cercana para arquitectos, constructoras, vidrieros e instaladores.
 - Cobertura y envíos nacionales.
 
+### Experiencia en proyectos especiales — existente por documentar
+
+Herraidea también ha participado en proyectos que van más allá del herraje estándar para vidrio. Se mencionaron como ejemplos el desarrollo de una terraza o centro turístico en la zona del Expiatorio y la fabricación de racks o estructuras para camionetas.
+
+Esta experiencia puede ampliar la percepción de la empresa hacia **soluciones metálicas y fabricación de proyectos especiales**, siempre que se documente con precisión qué parte resolvió Herraidea. Antes de convertirlo en una promesa comercial general deben confirmarse materiales, procesos, dimensiones, sectores atendidos y límites reales de fabricación.
+
 ## 2. Lenguaje aprobado
 
 Usar estas expresiones como lenguaje comercial principal:
@@ -95,6 +101,7 @@ La capacidad de resolver proyectos a la medida debe convertirse en el mensaje pr
   - Divisiones
   - Vitrinas
   - Fachadas
+  - Estructuras y soluciones metálicas
   - Proyectos especiales
 - Fabricación a la medida
 - Lo que podemos fabricar
@@ -154,6 +161,7 @@ Cada ficha deberá evolucionar gradualmente para incluir:
 - Diseñadores y fabricantes de mobiliario o exhibidores.
 - Distribuidores.
 - Clientes con proyectos especiales.
+- Empresas que requieren estructuras o componentes metálicos a la medida.
 
 Más adelante pueden crearse recorridos específicos para arquitectos y distribuidores.
 
@@ -166,6 +174,14 @@ Centro de descargas con fichas, planos, CAD/DWG, catálogos, manuales y videos.
 ### Proyectos en lugar de galería
 
 Cuando existan fotografías correctas, presentar casos por aplicación, ubicación, necesidad resuelta y herrajes utilizados. La galería incorrecta permanece fuera del sitio por decisión previa.
+
+Los primeros casos candidatos son:
+
+- Terraza o centro turístico en la zona del Expiatorio.
+- Racks y estructuras para camionetas.
+- Otros desarrollos especiales fuera del catálogo tradicional.
+
+Cada caso deberá explicar la necesidad, el alcance exacto de Herraidea, los procesos utilizados y el resultado. No se publicarán nombres de clientes, ubicaciones precisas, fotografías ni atribuciones hasta contar con información comprobable y autorización.
 
 ### Estudio fotográfico privado asistido por IA — propuesta
 
@@ -324,6 +340,9 @@ No se debe presentar esta funcionalidad como parte del alcance actual ni constru
 - Acabados disponibles.
 - Sectores y aplicaciones prioritarios.
 - Casos reales que puedan mostrarse.
+- Nombre, ubicación pública autorizada y alcance exacto del proyecto turístico o terraza del Expiatorio.
+- Alcance, materiales, tipos de vehículo y capacidades de los racks o estructuras para camionetas.
+- Fotografías, planos, procesos y autorización de publicación para cada proyecto especial.
 - Fotografías del taller, centros de maquinado, procesos y piezas terminadas.
 - Estilo visual aprobado para las fotografías de producto: fondo, encuadre, sombra, escala e iluminación.
 - Vistas mínimas que Herraidea puede proporcionar de cada pieza para generar imágenes fieles.
