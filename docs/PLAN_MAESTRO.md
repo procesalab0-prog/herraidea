@@ -121,6 +121,22 @@ La capacidad de resolver proyectos a la medida debe convertirse en el mensaje pr
 - Empresa
 - Contacto / Cuéntanos qué necesitas
 
+### Dirección visual del catálogo — propuesta aprobada
+
+Incorporar **pictogramas o sellos visuales propios** para identificar rápidamente cada familia y aplicación del catálogo. La referencia recibida muestra símbolos pequeños sobre el nombre de cada categoría; se toma el principio visual, no la forma exacta ni sus iconos.
+
+Para Herraidea se propone:
+
+- Crear iconos lineales originales para pipetas, postes, conectores, jaladeras y futuras categorías.
+- Usar el mismo grosor de línea, proporción y lenguaje industrial en toda la colección.
+- Mantener negro, gris y rojo Herraidea; el rojo puede indicar la categoría activa.
+- Combinar siempre símbolo y texto para que la navegación siga siendo clara y accesible.
+- Diseñarlos como SVG ligeros y nítidos en cualquier tamaño.
+- En teléfono, usar una cuadrícula compacta o carrusel visible sin cortar nombres ni obligar a tocar elementos demasiado pequeños.
+- Conservar las animaciones y sonidos discretos actuales al cambiar de categoría.
+
+Los pictogramas deben facilitar la exploración, no competir con las fotografías ni convertirse en marcas independientes.
+
 ## 6. Flujo de captación propuesto
 
 La solicitud de cotización debe aceptar distintos niveles de información:
@@ -334,6 +350,7 @@ No se debe presentar esta funcionalidad como parte del alcance actual ni constru
 - Lista real de procesos y máquinas disponibles.
 - Límites técnicos de materiales, dimensiones y tolerancias.
 - Tipos de piezas que pueden fabricar además del catálogo actual.
+- Lista definitiva de familias y aplicaciones que necesitarán pictograma propio.
 - Proceso comercial real para revisar y cotizar un proyecto especial.
 - Tiempos habituales de desarrollo, prototipo y producción.
 - Cantidades mínimas, si existen.
