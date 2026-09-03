@@ -167,6 +167,23 @@ Centro de descargas con fichas, planos, CAD/DWG, catálogos, manuales y videos.
 
 Cuando existan fotografías correctas, presentar casos por aplicación, ubicación, necesidad resuelta y herrajes utilizados. La galería incorrecta permanece fuera del sitio por decisión previa.
 
+### Estudio fotográfico asistido por IA — propuesta
+
+Crear una herramienta o flujo interno para cargar fotografías reales de una pieza y producir imágenes consistentes con apariencia de estudio: fondo limpio, iluminación controlada, sombra suave y acabado de acero inoxidable fiel al producto.
+
+El objetivo es acelerar la creación del catálogo visual, no rediseñar la pieza. Para conservar confiabilidad técnica:
+
+- Usar varias fotografías nítidas y, cuando sea posible, vistas frontal, lateral, posterior y de detalle.
+- Mantener exactamente la geometría, proporciones, perforaciones, tornillos, uniones y acabado.
+- Evitar que el generador complete zonas ocultas como si fueran datos reales.
+- Comparar cada resultado con las fotografías originales antes de aprobarlo.
+- Conservar los originales y marcar internamente cuáles imágenes fueron asistidas por IA.
+- No utilizar una imagen generada como sustituto de planos, medidas o fichas técnicas.
+
+La primera versión puede funcionar como proceso interno supervisado y **sin base de datos**: se cargan las fotografías de forma temporal, una función segura del servidor solicita la generación, el resultado se descarga y los archivos se eliminan. Requiere un servicio de generación de imágenes, protección de la clave y controles de costo, pero no cuentas ni historial.
+
+Una versión posterior con biblioteca de imágenes, proyectos guardados, versiones, aprobaciones o acceso por usuario sí requeriría base de datos y almacenamiento persistente.
+
 ### Configurador
 
 Herramienta futura para orientar al visitante según:
@@ -254,6 +271,7 @@ No se debe presentar esta funcionalidad como parte del alcance actual ni constru
 
 - Recursos técnicos descargables.
 - Fichas de producto ampliadas.
+- Flujo interno supervisado para crear fotografías de estudio a partir de fotos reales.
 - Páginas por aplicación.
 - Proyectos reales.
 - Recorridos para arquitectos y distribuidores.
@@ -290,6 +308,8 @@ No se debe presentar esta funcionalidad como parte del alcance actual ni constru
 - Sectores y aplicaciones prioritarios.
 - Casos reales que puedan mostrarse.
 - Fotografías del taller, centros de maquinado, procesos y piezas terminadas.
+- Estilo visual aprobado para las fotografías de producto: fondo, encuadre, sombra, escala e iluminación.
+- Vistas mínimas que Herraidea puede proporcionar de cada pieza para generar imágenes fieles.
 - Archivos técnicos disponibles: PDF, CAD, DWG y manuales.
 - Beneficios autorizados para arquitectos y distribuidores.
 - Testimonios, certificaciones y datos comprobables.
