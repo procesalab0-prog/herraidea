@@ -207,6 +207,22 @@ Un portal B2B real queda fuera del primer proyecto. En una etapa posterior, con 
 - Seguimiento de fabricación y envío.
 - Administración de usuarios y permisos.
 
+#### Código de cliente y descuentos por nivel — propuesta
+
+Se propone estudiar un esquema similar al utilizado por cadenas de autopartes: cada distribuidor o cliente profesional recibe un código que identifica su cuenta y determina las condiciones comerciales que le corresponden.
+
+El sistema futuro podría contemplar:
+
+- Código único de cliente o distribuidor.
+- Clasificación por nivel comercial según criterios definidos por Herraidea.
+- Descuento asignado automáticamente al identificarse.
+- Precios personalizados dentro del portal B2B.
+- Historial y actualización controlada de las condiciones comerciales.
+
+Como referencia inicial se mencionaron descuentos cercanos al **5% para talleres o clientes pequeños** y de **10% a 15% para clientes de mayor volumen**. Estos porcentajes son solamente una idea recibida y no deben publicarse ni implementarse hasta que Herraidea defina formalmente los niveles, requisitos, vigencia, productos participantes y autorizaciones.
+
+Esta función requiere base de datos, autenticación y administración segura; por lo tanto, pertenece a una fase posterior y no al primer sitio estático.
+
 No se debe presentar esta funcionalidad como parte del alcance actual ni construir una simulación que parezca operar con datos reales.
 
 ## 10. Fases preliminares
