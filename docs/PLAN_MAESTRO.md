@@ -167,9 +167,9 @@ Centro de descargas con fichas, planos, CAD/DWG, catálogos, manuales y videos.
 
 Cuando existan fotografías correctas, presentar casos por aplicación, ubicación, necesidad resuelta y herrajes utilizados. La galería incorrecta permanece fuera del sitio por decisión previa.
 
-### Estudio fotográfico asistido por IA — propuesta
+### Estudio fotográfico privado asistido por IA — propuesta
 
-Crear una herramienta o flujo interno para cargar fotografías reales de una pieza y producir imágenes consistentes con apariencia de estudio: fondo limpio, iluminación controlada, sombra suave y acabado de acero inoxidable fiel al producto.
+Crear una herramienta interna y privada, accesible únicamente para personal autorizado de Herraidea, para cargar fotografías reales de una pieza y producir imágenes consistentes con apariencia de estudio: fondo limpio, iluminación controlada, sombra suave y acabado de acero inoxidable fiel al producto. No debe mostrarse ni ofrecerse a clientes.
 
 El objetivo es acelerar la creación del catálogo visual, no rediseñar la pieza. Para conservar confiabilidad técnica:
 
@@ -180,9 +180,11 @@ El objetivo es acelerar la creación del catálogo visual, no rediseñar la piez
 - Conservar los originales y marcar internamente cuáles imágenes fueron asistidas por IA.
 - No utilizar una imagen generada como sustituto de planos, medidas o fichas técnicas.
 
-La primera versión puede funcionar como proceso interno supervisado y **sin base de datos**: se cargan las fotografías de forma temporal, una función segura del servidor solicita la generación, el resultado se descarga y los archivos se eliminan. Requiere un servicio de generación de imágenes, protección de la clave y controles de costo, pero no cuentas ni historial.
+La primera versión puede funcionar como proceso interno supervisado y **sin base de datos**: se cargan las fotografías de forma temporal, una función segura del servidor solicita la generación, el resultado se descarga y los archivos se eliminan. Requiere control de acceso privado, un servicio de generación de imágenes, protección de la clave y controles de costo, pero no cuentas propias, historial ni biblioteca persistente. La protección puede resolverse mediante autenticación externa o restricción de acceso en la plataforma, sin guardar usuarios en la aplicación.
 
 Una versión posterior con biblioteca de imágenes, proyectos guardados, versiones, aprobaciones o acceso por usuario sí requeriría base de datos y almacenamiento persistente.
+
+Tanto Gemini como OpenAI ofrecen edición de imágenes a partir de fotografías. Antes de elegir proveedor se propone probar las mismas piezas con ambos y comparar fidelidad geométrica, consistencia del acero, velocidad y costo. La documentación oficial consultada contempla [edición de imágenes con Gemini](https://ai.google.dev/gemini-api/docs/image-generation) y [generación y edición con GPT Image](https://developers.openai.com/api/docs/models/gpt-image-2).
 
 ### Configurador
 
