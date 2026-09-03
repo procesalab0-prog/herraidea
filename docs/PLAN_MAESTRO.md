@@ -36,6 +36,12 @@ Herraidea también ha participado en proyectos que van más allá del herraje es
 
 Esta experiencia puede ampliar la percepción de la empresa hacia **soluciones metálicas y fabricación de proyectos especiales**, siempre que se documente con precisión qué parte resolvió Herraidea. Antes de convertirlo en una promesa comercial general deben confirmarse materiales, procesos, dimensiones, sectores atendidos y límites reales de fabricación.
 
+### Participación en exposiciones — existente por documentar
+
+Herraidea ha participado en diferentes exposiciones. Esta presencia puede utilizarse como evidencia de trayectoria, cercanía con la industria y presentación pública de sus soluciones.
+
+Cuando exista material suficiente, puede mostrarse como una línea de tiempo breve o un bloque de confianza con nombre del evento, ciudad, año, tipo de participación y fotografías. Solo se incluirán eventos y logotipos cuya información y uso estén autorizados.
+
 ## 2. Lenguaje aprobado
 
 Usar estas expresiones como lenguaje comercial principal:
@@ -119,6 +125,7 @@ La capacidad de resolver proyectos a la medida debe convertirse en el mensaje pr
   - Videos
 - Proyectos
 - Empresa
+  - Trayectoria y exposiciones
 - Contacto / Cuéntanos qué necesitas
 
 ### Dirección visual del catálogo — propuesta aprobada
@@ -360,6 +367,8 @@ No se debe presentar esta funcionalidad como parte del alcance actual ni constru
 - Nombre, ubicación pública autorizada y alcance exacto del proyecto turístico o terraza del Expiatorio.
 - Alcance, materiales, tipos de vehículo y capacidades de los racks o estructuras para camionetas.
 - Fotografías, planos, procesos y autorización de publicación para cada proyecto especial.
+- Lista de exposiciones: nombre oficial, ciudad, fecha y tipo de participación.
+- Fotografías, reconocimientos, notas, logotipos y permisos disponibles de cada exposición.
 - Fotografías del taller, centros de maquinado, procesos y piezas terminadas.
 - Estilo visual aprobado para las fotografías de producto: fondo, encuadre, sombra, escala e iluminación.
 - Vistas mínimas que Herraidea puede proporcionar de cada pieza para generar imágenes fieles.
