@@ -186,15 +186,29 @@ Una versión posterior con biblioteca de imágenes, proyectos guardados, version
 
 Tanto Gemini como OpenAI ofrecen edición de imágenes a partir de fotografías. Antes de elegir proveedor se propone probar las mismas piezas con ambos y comparar fidelidad geométrica, consistencia del acero, velocidad y costo. La documentación oficial consultada contempla [edición de imágenes con Gemini](https://ai.google.dev/gemini-api/docs/image-generation) y [generación y edición con GPT Image](https://developers.openai.com/api/docs/models/gpt-image-2).
 
-### Configurador
+### Canalizador de proyectos — propuesta
 
-Herramienta futura para orientar al visitante según:
+Crear una sección pública y amigable llamada provisionalmente **“Encuentra la solución para tu proyecto”**. Mediante una serie breve de preguntas, ayudará al cliente a identificar qué aplicación, familia de productos o tipo de asesoría se adapta mejor a su necesidad.
 
-1. Qué está fabricando.
-2. Qué necesita conectar.
-3. Espesor del vidrio.
-4. Material, acabado y medidas.
-5. Productos o solución recomendada.
+Ejemplo de recorrido recibido:
+
+1. **Tipo de proyecto:** residencial, ejecutivo o comercial.
+2. **Ubicación:** interior o exterior.
+3. **Base de montaje:** concreto, aluminio o herrería.
+4. **Aplicación:** barandal, puerta, división, escalera, fachada u otra por definir.
+5. **Datos técnicos disponibles:** medidas, espesor del vidrio, fotografía, plano o muestra.
+
+Cada respuesta debe conducir únicamente a preguntas relevantes. Al finalizar, el canalizador puede:
+
+- Recomendar una sección, aplicación o familia de productos como punto de partida.
+- Mostrar soluciones estándar relacionadas.
+- Señalar cuándo el proyecto requiere fabricación a la medida.
+- Preparar un mensaje de WhatsApp con las respuestas para que Herraidea continúe la asesoría.
+- Permitir adjuntar o enviar posteriormente fotografías y planos.
+
+La versión inicial puede construirse como un árbol de decisiones **sin base de datos** y funcionar completamente en el navegador. No debe presentarse como cálculo estructural, dictamen técnico ni selección definitiva de herraje; la recomendación final debe validarla Herraidea con medidas, cargas, espesores y condiciones reales del proyecto.
+
+Antes de diseñarlo se necesita definir con Herraidea todas las rutas, preguntas, respuestas permitidas y resultados recomendados. Una versión futura podría evolucionar hacia un configurador más técnico con reglas administrables.
 
 ### SEO
 
@@ -266,6 +280,7 @@ No se debe presentar esta funcionalidad como parte del alcance actual ni constru
 - Fabricación a la medida como protagonista.
 - Navegación reorganizada.
 - Sección “Lo que podemos fabricar”.
+- Canalizador básico de proyectos sin base de datos.
 - Solicitud de proyecto mediante WhatsApp.
 - Reutilización cuidadosa de la experiencia visual actual.
 
@@ -281,7 +296,7 @@ No se debe presentar esta funcionalidad como parte del alcance actual ni constru
 
 ### Fase 3 — Herramientas comerciales
 
-- Configurador de soluciones.
+- Evolución del canalizador hacia un configurador técnico con reglas administrables.
 - Cotización guiada o automática.
 - Portal B2B para distribuidores, condicionado a una futura base de datos, autenticación y reglas comerciales.
 - Inventario o comercio electrónico, únicamente si el modelo comercial lo requiere.
