@@ -19,6 +19,7 @@ Landing estática para Herraidea, fabricante de herrajes para vidrio templado. I
 - `content/catalog/details.json`: 66 fichas y 159 referencias a imágenes técnicas.
 - `content/jimdo-backup/`: respaldo original de páginas y recursos públicos de Jimdo.
 - `content/version-history.json`: versiones mostradas en el easter egg.
+- `docs/PLAN_MAESTRO.md`: estrategia viva, decisiones aprobadas e información pendiente para la siguiente etapa.
 - `CHANGELOG.md`: historial humano completo.
 - `VERSION`: versión semántica actual.
 
