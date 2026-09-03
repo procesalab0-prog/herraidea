@@ -223,6 +223,20 @@ Como referencia inicial se mencionaron descuentos cercanos al **5% para talleres
 
 Esta función requiere base de datos, autenticación y administración segura; por lo tanto, pertenece a una fase posterior y no al primer sitio estático.
 
+#### Pertenencia y recompra — propuesta
+
+El código de cliente no debe plantearse únicamente como un mecanismo de descuento. La sesión personal, el reconocimiento del nivel y la conservación de beneficios pueden fortalecer la relación con Herraidea y dar al cliente profesional una razón clara para regresar.
+
+El diseño futuro podría mostrar, sin recurrir a dinámicas invasivas:
+
+- Nombre o empresa del cliente al iniciar sesión.
+- Nivel comercial y beneficios vigentes explicados con claridad.
+- Historial de compras, cotizaciones y proyectos.
+- Acceso rápido a productos frecuentes y pedidos anteriores.
+- Condiciones necesarias para conservar o avanzar de nivel.
+
+La permanencia debe depender de servicio, utilidad y beneficios reales. No se recomienda crear penalizaciones artificiales ni mensajes que presionen al cliente con la pérdida de beneficios.
+
 No se debe presentar esta funcionalidad como parte del alcance actual ni construir una simulación que parezca operar con datos reales.
 
 ## 10. Fases preliminares
@@ -279,6 +293,9 @@ No se debe presentar esta funcionalidad como parte del alcance actual ni constru
 - Archivos técnicos disponibles: PDF, CAD, DWG y manuales.
 - Beneficios autorizados para arquitectos y distribuidores.
 - Testimonios, certificaciones y datos comprobables.
+- Porcentaje real de piezas rechazadas o defectuosas, si existe, y en qué etapa se detectan.
+- Proceso actual de Herraidea para clasificar, retrabajar, reciclar o desechar merma.
+- Posibilidad técnica y comercial de recuperar material sin comprometer calidad, seguridad ni trazabilidad.
 
 ## 13. Referencias recibidas
 
