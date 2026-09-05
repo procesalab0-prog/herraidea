@@ -165,16 +165,34 @@ Cada ficha deberá evolucionar gradualmente para incluir:
 
 - Código y nombre.
 - Aplicación.
-- Medidas y espesores compatibles.
+- Medidas, espesores y tipos de vidrio compatibles.
+- Compatibilidad con vidrio laminado cuando esté validada para ese producto y aplicación.
 - Material y acabado.
 - Fotografías del producto.
 - Plano dimensional.
-- Ficha técnica descargable.
+- Ficha técnica descargable en PDF con formato de manual.
 - Archivos CAD/DWG cuando estén disponibles.
 - Recomendaciones de instalación.
 - Productos relacionados.
 - Variantes a la medida.
 - Botón para cotizar una cantidad o solicitar una modificación.
+
+### Fichas de soluciones y sistemas armados — propuesta
+
+Además de las fichas individuales, crear documentos para soluciones completas —por ejemplo, un barandal— con un render del sistema armado y un despiece visual de todos sus componentes pequeños.
+
+La referencia recibida propone combinar en un solo PDF:
+
+- Concepto, uso y descripción de la solución.
+- Render general del sistema armado.
+- Vistas frontal, lateral o superior cuando aporten claridad.
+- Detalles de postes, fijaciones y conexiones.
+- Lista de piezas y productos relacionados con sus códigos.
+- Materiales, acabados y vidrios compatibles.
+- Recomendaciones generales de instalación.
+- Advertencia para validar medidas y condiciones reales antes de fabricar o instalar.
+
+Este formato puede funcionar como manual descargable y como apoyo para cotización. Los renders, códigos, medidas, marcas y especificaciones de la imagen de referencia no se consideran información aprobada; deben sustituirse por datos técnicos validados por Herraidea.
 
 ## 8. Públicos principales
 
@@ -249,6 +267,16 @@ La versión inicial puede construirse como un árbol de decisiones **sin base de
 
 Antes de diseñarlo se necesita definir con Herraidea todas las rutas, preguntas, respuestas permitidas y resultados recomendados. Una versión futura podría evolucionar hacia un configurador más técnico con reglas administrables.
 
+### Calculadora por múltiplos — propuesta
+
+Incorporar una calculadora sencilla que convierta las medidas o módulos de un proyecto en cantidades estimadas de piezas, juegos o empaques. Puede funcionar sin base de datos si las reglas se definen previamente en el sitio.
+
+Antes de desarrollarla, Herraidea debe especificar para cada solución qué se calcula, el múltiplo aplicable, unidad de venta, mínimo, redondeo, desperdicio recomendado y excepciones. El resultado será orientativo y deberá poder enviarse a un vendedor para revisión antes de cotizar.
+
+### Cobertura internacional — propuesta por validar
+
+Se mencionó interés o alcance hacia **Guatemala, Honduras y el sur de Estados Unidos**. Puede incorporarse posteriormente como expansión de cobertura, pero no debe anunciarse como servicio disponible hasta confirmar logística, tiempos, costos, agentes comerciales, documentación de exportación, moneda, garantías y requisitos técnicos de cada mercado.
+
 ### SEO
 
 Crear páginas independientes por aplicaciones, familias y productos cuando la arquitectura esté aprobada, con URLs descriptivas y contenido técnico útil.
@@ -320,6 +348,7 @@ No se debe presentar esta funcionalidad como parte del alcance actual ni constru
 - Navegación reorganizada.
 - Sección “Lo que podemos fabricar”.
 - Canalizador básico de proyectos sin base de datos.
+- Calculadora básica por múltiplos con reglas previamente validadas.
 - Solicitud de proyecto mediante WhatsApp.
 - Reutilización cuidadosa de la experiencia visual actual.
 
@@ -359,9 +388,12 @@ No se debe presentar esta funcionalidad como parte del alcance actual ni constru
 - Tipos de piezas que pueden fabricar además del catálogo actual.
 - Lista definitiva de familias y aplicaciones que necesitarán pictograma propio.
 - Proceso comercial real para revisar y cotizar un proyecto especial.
+- Número de vendedores y forma correcta de asignar consultas por zona, especialidad o tipo de cliente.
+- Reglas de la calculadora: múltiplos, unidades de venta, mínimos, redondeos, desperdicio y excepciones.
 - Tiempos habituales de desarrollo, prototipo y producción.
 - Cantidades mínimas, si existen.
 - Acabados disponibles.
+- Matriz validada de compatibilidad por producto: vidrio templado, laminado, espesores y restricciones.
 - Sectores y aplicaciones prioritarios.
 - Casos reales que puedan mostrarse.
 - Nombre, ubicación pública autorizada y alcance exacto del proyecto turístico o terraza del Expiatorio.
@@ -374,6 +406,7 @@ No se debe presentar esta funcionalidad como parte del alcance actual ni constru
 - Vistas mínimas que Herraidea puede proporcionar de cada pieza para generar imágenes fieles.
 - Archivos técnicos disponibles: PDF, CAD, DWG y manuales.
 - Beneficios autorizados para arquitectos y distribuidores.
+- Alcance comercial y logístico real en Guatemala, Honduras y el sur de Estados Unidos.
 - Testimonios, certificaciones y datos comprobables.
 - Porcentaje real de piezas rechazadas o defectuosas, si existe, y en qué etapa se detectan.
 - Proceso actual de Herraidea para clasificar, retrabajar, reciclar o desechar merma.
