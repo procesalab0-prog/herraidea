@@ -75,11 +75,8 @@ La landing publicada no se modifica durante esta fase.
 
 ## 4. Información crítica que debe entregar Herraidea
 
-### A. Responsables y aprobación
+### A. Coordinación comercial
 
-- [ ] Nombre del responsable principal del proyecto.
-- [ ] Persona que aprueba textos y comunicación comercial.
-- [ ] Persona que valida especificaciones técnicas.
 - [ ] Persona responsable de ventas y asignación de contactos.
 
 ### B. Capacidad técnica
@@ -167,12 +164,11 @@ La landing publicada no se modifica durante esta fase.
 2. ¿Qué capacidad o proceso diferencia realmente a Herraidea de sus competidores?
 3. ¿Qué soluciones dejan mayor valor y cuáles no desean promover?
 4. ¿Qué puede prometerse públicamente sobre fabricación a la medida?
-5. ¿Quién valida que una recomendación de producto sea técnicamente correcta?
-6. ¿Qué información mínima necesitan para cotizar?
-7. ¿Cómo se reparte actualmente una oportunidad entre vendedores?
-8. ¿Qué productos se venden juntos y bajo qué múltiplos?
-9. ¿Qué proyectos y exposiciones pueden publicarse inmediatamente?
-10. ¿Qué países atienden hoy y cuáles son solamente una meta comercial?
+5. ¿Qué información mínima necesitan para cotizar?
+6. ¿Cómo se reparte actualmente una oportunidad entre vendedores?
+7. ¿Qué productos se venden juntos y bajo qué múltiplos?
+8. ¿Qué proyectos y exposiciones pueden publicarse inmediatamente?
+9. ¿Qué países atienden hoy y cuáles son solamente una meta comercial?
 
 ## 6. Entregable y criterio de cierre
 
