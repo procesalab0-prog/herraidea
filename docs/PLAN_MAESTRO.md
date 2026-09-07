@@ -2,7 +2,7 @@
 
 Documento vivo para consolidar el nuevo posicionamiento, la estructura futura del sitio y las decisiones aprobadas. Las ideas anotadas aquí no deben implementarse automáticamente: primero se convierten en alcance y se aprueban.
 
-Última actualización: 2026-09-03
+Última actualización: 2026-09-07
 
 ## 1. Objetivo principal
 
@@ -29,6 +29,49 @@ Herraidea cuenta con centros de maquinado y capacidad de fabricación propia, po
 - Fabricación mexicana en León, Guanajuato.
 - Atención cercana para arquitectos, constructoras, vidrieros e instaladores.
 - Cobertura y envíos nacionales.
+
+### Capacidades generales de fabricación — confirmado
+
+- Cuatro tornos CNC Haas.
+- Centros de maquinado Haas VF-10; cantidad pendiente de confirmar.
+- Soldadura robotizada.
+- Corte láser.
+- Pulido de piezas redondas y planas.
+
+Estas capacidades deben mostrarse con fotografías o video de los equipos y procesos reales. Todavía falta documentar dimensiones de trabajo, tolerancias, materiales, volúmenes y límites técnicos.
+
+### Visión comercial recibida — redacción por depurar
+
+Ser referentes en producción y diseño de sistemas para barandales de acero inoxidable, atendiendo a arquitectos, vidrieros y constructores de obra residencial y turística en México, Centroamérica y el sur de Estados Unidos.
+
+La idea proviene de la visión manuscrita recibida. Antes de publicarla se deberá aprobar la redacción definitiva y sustituir expresiones absolutas como “ser los mejores” por una promesa demostrable.
+
+### Soluciones principales recibidas — nombres por validar
+
+- Postes con clips en zamak y acero inoxidable.
+- Sistema de tubo de 1/2 pulgada.
+- Sistema de cable de acero.
+- Sistema de vidrio a presión.
+- Herrajes para conectar vidrio a muro.
+- Minipostes.
+- Accesorios de baño en acero inoxidable.
+- Accesorios para pasamanos.
+- Postes Soleva.
+
+### Familias y productos vigentes recibidos — clasificación por validar
+
+- Poste de acero inoxidable con clips para vidrio templado.
+- Poste de acero inoxidable con brazos Soleva.
+- Poste de acero inoxidable con brazos ajustables.
+- Poste de acero inoxidable con pines para tubo de 1/2 pulgada.
+- Poste doble Soleva para tubo de 1/2 pulgada.
+- Poste doble Soleva para vidrio.
+- Poste cuadrado para vidrio a presión.
+- Poste cuadrado para cable de acero.
+- Minipostes redondos, cuadrados, rectangulares y ajustables.
+- Poste Soleva con brazo ajustable para vidrio.
+
+Esta lista se incorporará al catálogo únicamente después de confirmar nomenclatura, códigos, fotografías, especificaciones y relación con las familias actuales.
 
 ### Experiencia en proyectos especiales — existente por documentar
 
@@ -383,9 +426,10 @@ No se debe presentar esta funcionalidad como parte del alcance actual ni constru
 
 ## 12. Información pendiente por recopilar
 
-- Lista real de procesos y máquinas disponibles.
+- Inventario completo de máquinas y procesos; confirmar cantidad de centros de maquinado Haas VF-10.
 - Límites técnicos de materiales, dimensiones y tolerancias.
 - Tipos de piezas que pueden fabricar además del catálogo actual.
+- Escritura y uso comercial correctos de “zamak” y “Soleva”, además de la clasificación definitiva de las soluciones recibidas.
 - Lista definitiva de familias y aplicaciones que necesitarán pictograma propio.
 - Proceso comercial real para revisar y cotizar un proyecto especial.
 - Número de vendedores y forma correcta de asignar consultas por zona, especialidad o tipo de cliente.
