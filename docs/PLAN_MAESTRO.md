@@ -10,6 +10,8 @@ Reposicionar a Herraidea como una empresa enfocada en **soluciones para cada pro
 
 Herraidea cuenta con centros de maquinado y capacidad de fabricación propia, por lo que puede diseñar y fabricar herrajes en medidas especiales de acuerdo con planos, fotografías, dibujos, muestras o necesidades específicas.
 
+La prioridad comercial inicial será **barandales y fabricación a la medida**. La recepción de proyectos no se limitará a lo que pueda hacerse directamente con la maquinaria instalada: cuando un proceso no esté disponible en fábrica, Herraidea investigará cómo resolverlo.
+
 ### Idea rectora
 
 > Si el herraje no existe, lo hacemos para ti.
@@ -38,7 +40,7 @@ Herraidea cuenta con centros de maquinado y capacidad de fabricación propia, po
 - Corte láser.
 - Pulido de piezas redondas y planas.
 
-Estas capacidades deben mostrarse con fotografías o video de los equipos y procesos reales. Todavía falta documentar dimensiones de trabajo, tolerancias, materiales, volúmenes y límites técnicos.
+Estas capacidades deben mostrarse con fotografías o video de los equipos y procesos reales. Las dimensiones de trabajo, tolerancias, materiales, volúmenes y límites técnicos pueden documentarse progresivamente, pero no bloquean el inicio: cuando una solución no pueda realizarse directamente en fábrica, Herraidea investigará cómo resolverla.
 
 ### Visión comercial recibida — redacción por depurar
 
@@ -306,7 +308,7 @@ Cada respuesta debe conducir únicamente a preguntas relevantes. Al finalizar, e
 - Preparar un mensaje de WhatsApp con las respuestas para que Herraidea continúe la asesoría.
 - Permitir adjuntar o enviar posteriormente fotografías y planos.
 
-La versión inicial puede construirse como un árbol de decisiones **sin base de datos** y funcionar completamente en el navegador. No debe presentarse como cálculo estructural, dictamen técnico ni selección definitiva de herraje; la recomendación final debe validarla Herraidea con medidas, cargas, espesores y condiciones reales del proyecto.
+La versión inicial puede construirse como un árbol de decisiones **sin base de datos**, comenzar con los casos más comunes y ampliarse después conforme se valide su uso. No debe presentarse como cálculo estructural, dictamen técnico ni selección definitiva de herraje; la recomendación final debe revisarse con las medidas, cargas, espesores y condiciones reales del proyecto.
 
 Antes de diseñarlo se necesita definir con Herraidea todas las rutas, preguntas, respuestas permitidas y resultados recomendados. Una versión futura podría evolucionar hacia un configurador más técnico con reglas administrables.
 
@@ -316,9 +318,9 @@ Incorporar una calculadora sencilla que convierta las medidas o módulos de un p
 
 Antes de desarrollarla, Herraidea debe especificar para cada solución qué se calcula, el múltiplo aplicable, unidad de venta, mínimo, redondeo, desperdicio recomendado y excepciones. El resultado será orientativo y deberá poder enviarse a un vendedor para revisión antes de cotizar.
 
-### Cobertura internacional — propuesta por validar
+### Cobertura internacional — confirmada
 
-Se mencionó interés o alcance hacia **Guatemala, Honduras y el sur de Estados Unidos**. Puede incorporarse posteriormente como expansión de cobertura, pero no debe anunciarse como servicio disponible hasta confirmar logística, tiempos, costos, agentes comerciales, documentación de exportación, moneda, garantías y requisitos técnicos de cada mercado.
+Herraidea confirmó cobertura actual en **México, Guatemala, Honduras y el sur de Estados Unidos**. Antes de comunicar los detalles en la web todavía deben precisarse las zonas atendidas, logística, tiempos, costos, documentación de exportación, moneda, garantías y requisitos técnicos de cada mercado.
 
 ### SEO
 
@@ -426,13 +428,15 @@ No se debe presentar esta funcionalidad como parte del alcance actual ni constru
 
 ## 12. Información pendiente por recopilar
 
+Los datos técnicos de capacidad son complementarios y pueden incorporarse progresivamente; no condicionan el inicio del proyecto.
+
 - Inventario completo de máquinas y procesos; confirmar cantidad de centros de maquinado Haas VF-10.
 - Límites técnicos de materiales, dimensiones y tolerancias.
 - Tipos de piezas que pueden fabricar además del catálogo actual.
 - Escritura y uso comercial correctos de “zamak” y “Soleva”, además de la clasificación definitiva de las soluciones recibidas.
 - Lista definitiva de familias y aplicaciones que necesitarán pictograma propio.
 - Proceso comercial real para revisar y cotizar un proyecto especial.
-- Número de vendedores y forma correcta de asignar consultas por zona, especialidad o tipo de cliente.
+- Herraidea cuenta con dos vendedores, dato que será interno; falta recibir el segundo número y definir cómo asignar consultas por zona, especialidad o tipo de cliente.
 - Reglas de la calculadora: múltiplos, unidades de venta, mínimos, redondeos, desperdicio y excepciones.
 - Tiempos habituales de desarrollo, prototipo y producción.
 - Cantidades mínimas, si existen.
@@ -450,7 +454,7 @@ No se debe presentar esta funcionalidad como parte del alcance actual ni constru
 - Vistas mínimas que Herraidea puede proporcionar de cada pieza para generar imágenes fieles.
 - Archivos técnicos disponibles: PDF, CAD, DWG y manuales.
 - Beneficios autorizados para arquitectos y distribuidores.
-- Alcance comercial y logístico real en Guatemala, Honduras y el sur de Estados Unidos.
+- Zonas, condiciones y alcance logístico específico dentro de Guatemala, Honduras y el sur de Estados Unidos, cuya cobertura actual ya fue confirmada.
 - Testimonios, certificaciones y datos comprobables.
 - Porcentaje real de piezas rechazadas o defectuosas, si existe, y en qué etapa se detectan.
 - Proceso actual de Herraidea para clasificar, retrabajar, reciclar o desechar merma.
