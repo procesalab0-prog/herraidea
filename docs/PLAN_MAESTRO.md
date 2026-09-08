@@ -174,6 +174,14 @@ La capacidad de resolver proyectos a la medida debe convertirse en el mensaje pr
   - Trayectoria y exposiciones
 - Contacto / Cuéntanos qué necesitas
 
+### Dirección visual general — inspiración recibida
+
+La evolución del sitio buscará una **elegancia industrial y editorial**: titulares de gran escala, contraste entre pesos tipográficos, composiciones asimétricas, mucho espacio limpio y bloques negros para enfatizar mensajes o cifras.
+
+La presentación de producto tomará como referencia fotografías macro de hardware con acero cepillado o pulido, fondos blancos o gris cálido, reflejos controlados, mecanismos visibles y organización modular. Esto se aplicará a fotografías reales, modelos 3D, sistemas armados, despieces y productos relacionados, siempre respetando la geometría y el acabado verdadero de cada pieza.
+
+Se mantienen los colores actuales de la landing: negro grafito, blanco, grises de acero y rojo Herraidea como acento. Las referencias orientan el lenguaje visual, pero no se copiarán sus marcas, productos, textos ni composición exacta. La especificación completa se encuentra en `docs/DIRECCION_VISUAL.md` y las imágenes recibidas en `content/design-references/`.
+
 ### Dirección visual del catálogo — propuesta aprobada
 
 Incorporar **pictogramas o sellos visuales propios** para identificar rápidamente cada familia y aplicación del catálogo. La referencia recibida muestra símbolos pequeños sobre el nombre de cada categoría; se toma el principio visual, no la forma exacta ni sus iconos.
