@@ -63,6 +63,7 @@ La landing publicada no se modifica durante esta fase.
 - Landing publicada con animaciones, modelos 3D, sonido y adaptación móvil.
 - Catálogo de 66 productos y respaldo público recuperado de Jimdo.
 - Catálogo Herraidea 2023 completo de 12 páginas, conservado como fuente documental y pendiente de conciliación con Jimdo.
+- Cuatro referencias visuales archivadas para definir tipografía editorial, interfaz modular y tratamiento elegante del acero inoxidable.
 - Fotografías, planos y especificaciones parciales.
 - Contacto mediante WhatsApp.
 
@@ -77,6 +78,7 @@ La landing publicada no se modifica durante esta fase.
 - El canalizador comenzará con los casos más comunes y se ampliará conforme se valide su uso.
 - Las fotografías y demás activos visuales se recibirán e integrarán progresivamente.
 - Herraidea cuenta con dos vendedores; esta cantidad es información interna y no se mostrará en la web.
+- La dirección visual conservará negro, blanco, grises metálicos y rojo Herraidea, con tipografía protagonista, composición editorial y fotografía macro de producto.
 
 ## 4. Información crítica que debe entregar Herraidea
 
