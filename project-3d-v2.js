@@ -7,22 +7,31 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
 const profiles = {
   clips: { target: [0, .48, 0], camera: [1.3, 1, 2.1], min: .7, detailTarget: [-.413, .695, 0], detailCamera: [-.163, .845, .48] },
+  hrd1518: { target: [0, .48, 0], camera: [1.3, 1, 2.1], min: .3, detailTarget: [0, .78, .05], detailCamera: [.23, .89, .39] },
   futbolito: { target: [0, .5, 0], camera: [2.1, 1.65, 2.15], min: 1.3, detailTarget: [0, .5, .406], detailCamera: [.85, 1.1, 2.6] }
 };
 
 const projects = {
   clips: {
     src: '/assets/projects/clip-system/herraje-cristal.glb', profile: 'clips', kicker: 'Solución interactiva 01',
-    title: 'Postes con clips + vidrio', number: '01 / Barandal con clips',
+    title: 'Postes con clips + vidrio', number: '01 / HRD 1525 · Barandal con clips',
     heading: 'Mira cómo cada herraje sostiene la solución.',
     description: 'Recorre el sistema completo y acércate a la unión entre poste, pinza y cristal.',
     content: '46 piezas y conjuntos', detail: 'Ver pinza',
-    aria: 'Modelo tridimensional interactivo de postes con clips y vidrio',
-    caveat: 'Modelo conceptual reconstruido a partir de fotografías. Las medidas, espesores y fijaciones están por confirmar.'
+    aria: 'Modelo tridimensional interactivo de postes con clips y vidrio', caveat: ''
+  },
+  hrd1518: {
+    src: '/assets/projects/hrd-1518/hrd-1518.glb', profile: 'hrd1518', kicker: 'Pieza interactiva 02',
+    title: 'Poste HRD 1518', number: '02 / HRD 1518',
+    heading: 'Del poste completo a cada unión.',
+    description: 'Gira el sistema, acércate a sus soportes y controla la separación de cada componente.',
+    content: '23 componentes y conjuntos', detail: 'Ver unión',
+    aria: 'Modelo tridimensional interactivo del poste HRD 1518 con pasamanos y tres barras',
+    caveat: 'Las barras y el pasamanos muestran el sistema instalado y no indican por sí solos el contenido comercial del kit.'
   },
   futbolito: {
-    src: '/assets/projects/futbolito/futbolito-herraidea.glb', profile: 'futbolito', kicker: 'Proyecto interactivo 02',
-    title: 'Futbolito Herraidea', number: '02 / Proyecto especial',
+    src: '/assets/projects/futbolito/futbolito-herraidea.glb', profile: 'futbolito', kicker: 'Proyecto interactivo 03',
+    title: 'Futbolito Herraidea', number: '03 / Proyecto especial',
     heading: 'Observa cómo cada parte forma el proyecto.',
     description: 'Gira el modelo, acércate a sus uniones y controla la separación de todos sus componentes.',
     content: '190 piezas y conjuntos', detail: 'Ver costado',
@@ -283,7 +292,9 @@ const openProject = (key) => {
   document.querySelector('#project-description').textContent = project.description;
   document.querySelector('#project-content').textContent = project.content;
   document.querySelector('#project-detail-label').textContent = project.detail;
-  document.querySelector('#project-caveat').textContent = project.caveat;
+  const caveat = document.querySelector('#project-caveat');
+  caveat.textContent = project.caveat;
+  caveat.hidden = !project.caveat;
   range.value = 0;
   range.disabled = true;
   range.style.setProperty('--project-range', '0%');

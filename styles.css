@@ -166,6 +166,7 @@ body.project-open{overflow:hidden}
 .project-range input:disabled{opacity:.35;cursor:wait}
 .project-status{display:block;color:#737980;line-height:1.45;margin-bottom:16px}
 .project-caveat{display:block;padding-top:16px;border-top:1px solid var(--line);color:#8a9096;font-size:10px;line-height:1.5}
+.project-caveat[hidden]{display:none}
 
 @media(max-width:900px){
   .projects-heading>div{grid-template-columns:1fr;gap:24px}

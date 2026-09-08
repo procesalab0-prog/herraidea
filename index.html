@@ -26,7 +26,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Archivo+Narrow:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/styles.css?v=1-15">
 </head>
 <body>
   <header class="site-header">
@@ -77,17 +77,22 @@
       <div class="projects-rail" id="projects-rail" aria-label="Soluciones y proyectos destacados">
         <article class="project-card project-card-clips" data-project="clips">
           <figure class="project-card-photo"><img src="/assets/projects/clip-system/portada-estudio.jpg" alt="Sistema de barandal Herraidea con postes, clips, vidrio y pasamanos" loading="lazy"></figure>
-          <div class="project-card-copy"><span>01 · Solución de barandal</span><h3>Postes con clips<br>+ vidrio.</h3><p>Un sistema completo de acero inoxidable: postes, pinzas laterales, cristal y pasamanos trabajando como una sola solución.</p></div>
+          <div class="project-card-copy"><span>01 · HRD 1525 · Solución de barandal</span><h3>Postes con clips<br>+ vidrio.</h3><p>Un sistema completo de acero inoxidable: postes, pinzas laterales, cristal y pasamanos trabajando como una sola solución.</p></div>
           <button class="project-open" type="button" data-open-project="clips" aria-haspopup="dialog"><span>Explorar solución</span><b aria-hidden="true"><i></i></b></button>
         </article>
+        <article class="project-card project-card-hrd1518" data-project="hrd1518">
+          <figure class="project-card-photo"><img src="/assets/projects/hrd-1518/portada-estudio.png" alt="Sistema HRD 1518 de acero inoxidable con pasamanos y tres barras" loading="lazy"></figure>
+          <div class="project-card-copy"><span>02 · HRD 1518 · Sistema de cable</span><h3>Poste<br>HRD 1518.</h3><p>Poste de acero inoxidable, pasamanos y tres barras unidos en una solución que puedes explorar pieza por pieza.</p></div>
+          <button class="project-open" type="button" data-open-project="hrd1518" aria-haspopup="dialog"><span>Explorar pieza</span><b aria-hidden="true"><i></i></b></button>
+        </article>
         <article class="project-card project-card-featured" data-project="futbolito">
-          <div class="project-card-model" aria-hidden="true"><hrd-project-3d src="/assets/projects/futbolito/futbolito-herraidea.glb" profile="futbolito" preview></hrd-project-3d></div>
-          <div class="project-card-copy"><span>02 · Proyecto especial</span><h3>Futbolito<br>Herraidea.</h3><p>190 piezas y conjuntos en una experiencia que puedes separar, girar y volver a armar.</p></div>
+          <figure class="project-card-photo"><img src="/assets/projects/futbolito/portada-estudio.png" alt="Futbolito Herraidea de cristal y acero inoxidable en estudio" loading="lazy"></figure>
+          <div class="project-card-copy"><span>03 · Proyecto especial</span><h3>Futbolito<br>Herraidea.</h3><p>190 piezas y conjuntos en una experiencia que puedes separar, girar y volver a armar.</p></div>
           <button class="project-open" type="button" data-open-project="futbolito" aria-haspopup="dialog"><span>Abrir proyecto 3D</span><b aria-hidden="true"><i></i></b></button>
         </article>
       </div>
       <div class="section-inner projects-controls">
-        <div class="projects-pagination" aria-label="Elegir solución"><button class="active" type="button" data-project-slide="0" aria-label="Ver postes con clips"><i></i></button><button type="button" data-project-slide="1" aria-label="Ver Futbolito"><i></i></button></div>
+        <div class="projects-pagination" aria-label="Elegir solución"><button class="active" type="button" data-project-slide="0" aria-label="Ver postes con clips"><i></i></button><button type="button" data-project-slide="1" aria-label="Ver poste HRD 1518"><i></i></button><button type="button" data-project-slide="2" aria-label="Ver Futbolito"><i></i></button></div>
         <button class="projects-next" type="button" aria-label="Ver siguiente solución"><i aria-hidden="true"></i></button>
       </div>
     </section>
@@ -134,14 +139,14 @@
           <div class="project-viewer-hint"><span>Arrastra para girar</span><span>Pellizca para acercar</span></div>
         </div>
         <aside class="project-panel">
-          <span class="project-number" id="project-number">01 / Barandal con clips</span>
+          <span class="project-number" id="project-number">01 / HRD 1525 · Barandal con clips</span>
           <h3 id="project-heading">Mira cómo cada herraje sostiene la solución.</h3>
           <p id="project-description">Recorre el sistema completo y acércate a la unión entre poste, pinza y cristal.</p>
           <dl><div><dt>Contenido</dt><dd id="project-content">46 piezas y conjuntos</dd></div><div><dt>Experiencia</dt><dd>Despiece interactivo</dd></div></dl>
           <div class="project-actions" aria-label="Controles del modelo"><button type="button" data-project-explode disabled>Desarmar</button><button type="button" data-project-assemble disabled>Armar</button><button type="button" data-project-corner disabled id="project-detail-label">Ver pinza</button></div>
           <label class="project-range">Separación <output id="project-range-value">0 %</output><input id="project-range" type="range" min="0" max="100" value="0" disabled></label>
           <small class="project-status" id="project-status">El modelo se cargará al abrir esta experiencia.</small>
-          <small class="project-caveat" id="project-caveat">Modelo conceptual reconstruido a partir de fotografías. Las medidas, espesores y fijaciones están por confirmar.</small>
+          <small class="project-caveat" id="project-caveat" hidden></small>
         </aside>
       </div>
     </div>
@@ -149,12 +154,12 @@
 
   <dialog class="credits-dialog" id="credits-dialog" aria-labelledby="credits-title">
     <button class="credits-close" type="button" aria-label="Cerrar créditos">×</button>
-    <div class="credits-hero"><span class="credits-kicker">Seis toques desbloquearon</span><img class="procesalab-logo" src="/assets/brand/procesalab-horizontal.png" alt="ProcesaLab"><p>Diseño, desarrollo y evolución digital.</p><span class="current-version">Herraidea · v<span id="credits-version">1.14.0</span></span></div>
+    <div class="credits-hero"><span class="credits-kicker">Seis toques desbloquearon</span><img class="procesalab-logo" src="/assets/brand/procesalab-horizontal.png" alt="ProcesaLab"><p>Diseño, desarrollo y evolución digital.</p><span class="current-version">Herraidea · v<span id="credits-version">1.15.0</span></span></div>
     <div class="credits-content"><h2 id="credits-title">Construido versión a versión.</h2><p>Cada actualización queda documentada para que el proyecto conserve contexto, decisiones y continuidad.</p><div class="version-list" id="version-list"></div></div>
   </dialog>
 
   <footer><div class="section-inner"><a class="footer-brand" href="#inicio" aria-label="Herraidea, volver al inicio"><img src="/assets/logo-light-nodot.png" alt="Herraidea"><i aria-hidden="true"></i></a><nav><a href="#catalogo">Catálogo</a><a href="#nosotros">Nosotros</a><a href="#envios">Envíos</a><a href="#contacto">Contacto</a></nav><span>León, Gto. · Desde 2013</span></div></footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="/hrd-map.js?v=1-10"></script><script src="/sound.js?v=1-10"></script><script src="/hero.js?v=1-14"></script><script type="module" src="/project-3d-v2.js?v=1-13"></script>
+  <script src="/hrd-map.js?v=1-10"></script><script src="/sound.js?v=1-10"></script><script src="/hero.js?v=1-15"></script><script type="module" src="/project-3d-v2.js?v=1-15"></script>
 </body>
 </html>

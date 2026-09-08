@@ -200,7 +200,7 @@ Los pictogramas deben facilitar la exploración, no competir con las fotografía
 
 ### Evolución del recorrido 3D — carrusel de soluciones en implementación
 
-La sección anterior de tres piezas aisladas se sustituye por un carrusel de **soluciones completas** con tarjetas grandes y ampliables. La primera solución es un barandal de postes con clips, vidrio y pasamanos, con 46 piezas y conjuntos, despiece reversible y acercamiento a una pinza. El Futbolito Herraidea se conserva como segundo elemento y demuestra la capacidad para proyectos especiales con 190 piezas y conjuntos.
+La sección anterior de tres piezas aisladas se sustituye por un carrusel de **soluciones completas** con tarjetas grandes y ampliables. La primera solución es un barandal de postes con clips, vidrio y pasamanos, con 46 piezas y conjuntos, despiece reversible y acercamiento a una pinza. El poste HRD 1518 ocupa la segunda posición con su sistema de pasamanos y tres barras; el Futbolito Herraidea queda como tercer elemento y demuestra la capacidad para proyectos especiales con 190 piezas y conjuntos.
 
 Los modelos existentes se conservarán dentro de recuadros técnicos como acercamientos a componentes del sistema. Durante el desplazamiento, las piezas podrán crecer dentro de esos recuadros, conectarse con su posición real y regresar al conjunto.
 
@@ -306,6 +306,8 @@ La primera versión puede funcionar como proceso interno supervisado y **sin bas
 Una versión posterior con biblioteca de imágenes, proyectos guardados, versiones, aprobaciones o acceso por usuario sí requeriría base de datos y almacenamiento persistente.
 
 Tanto Gemini como OpenAI ofrecen edición de imágenes a partir de fotografías. Antes de elegir proveedor se propone probar las mismas piezas con ambos y comparar fidelidad geométrica, consistencia del acero, velocidad y costo. La documentación oficial consultada contempla [edición de imágenes con Gemini](https://ai.google.dev/gemini-api/docs/image-generation) y [generación y edición con GPT Image](https://developers.openai.com/api/docs/models/gpt-image-2).
+
+Como parte de la profesionalización visual, las imágenes incorporadas provisionalmente desde catálogos deberán regenerarse o retocarse en una fase posterior hasta igualar el estilo limpio de las primeras fichas: encuadre consistente, fondo de estudio, escala comparable, sombra suave y acero fiel. Cada resultado se aprobará contra la fotografía y el modelo real antes de sustituir el recorte temporal; no se publicarán alteraciones de geometría ni componentes inventados.
 
 ### Canalizador de proyectos — propuesta
 

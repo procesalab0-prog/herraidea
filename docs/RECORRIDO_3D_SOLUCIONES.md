@@ -5,7 +5,9 @@ Especificación conceptual para evolucionar la sección 3D actual de piezas indi
 Estado: **carrusel de soluciones en implementación**
 Fecha: 2026-09-08
 
-La versión 1.13.0 sustituye la presentación de piezas aisladas por un carrusel grande. El sistema de postes con clips, vidrio y pasamanos ocupa la primera posición por representar la solución principal de Herraidea; el Futbolito conserva la segunda posición como proyecto especial. Las dos tarjetas abren un visor ampliado con giro, acercamiento táctil, vista de detalle y despiece reversible.
+La versión 1.15.0 presenta tres tarjetas grandes. El sistema de postes con clips, vidrio y pasamanos ocupa la primera posición y se identifica con HRD 1525; el poste HRD 1518 ocupa la segunda posición con su sistema de tres barras; el Futbolito queda en la tercera como proyecto especial. Las tres tarjetas abren un visor ampliado con giro, acercamiento táctil, vista de detalle y despiece reversible.
+
+Las portadas del HRD 1518 y el Futbolito comparten un estudio gris claro, acero con reflejos controlados y un acento rojo ambiental. La portada final proporcionada para el HRD 1518 muestra los pines al exterior y las barras delgadas atravesándolos; se usa sin alteraciones. El modelo GLB se conserva como referencia geométrica principal.
 
 El modelo del futbolito es una reconstrucción visual aproximada basada en fotografías. No representa todavía medidas verificadas, un modelo de fabricación ni una secuencia física de ensamble.
 

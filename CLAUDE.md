@@ -1,6 +1,6 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.14.0**
+Versión actual: **1.15.0**
 
 Sitio de producción: `https://herraidea-landing.vercel.app/`
 
@@ -18,15 +18,19 @@ Landing estática para Herraidea, enfocada en barandales, soluciones y fabricaci
 - `hrd-map.js`: mapa animado de cobertura nacional desde León.
 - `project-3d-v2.js`: carrusel, visor reutilizable para diferentes soluciones, interacción táctil y control de sus animaciones de despiece.
 - `assets/fabricacion/`: imágenes optimizadas de maquinaria, producción y empaque recibidas para la primera etapa.
-- `assets/projects/futbolito/`: modelo GLB usado por la experiencia del primer proyecto.
+- `assets/projects/futbolito/`: modelo GLB y portada de estudio del Futbolito Herraidea.
 - `assets/projects/clip-system/`: modelo GLB y portada de estudio de la solución de postes con clips y vidrio.
+- `assets/projects/hrd-1518/`: modelos GLB principal y lateral, más la portada de estudio del poste HRD 1518.
 - `content/catalog/details.json`: 82 fichas de herrajes y configuraciones, incluidas 38 opciones de postes.
 - `content/source-documents/catalogo-herraidea-2023.pdf`: catálogo original completo recibido como fuente documental.
 - `content/source-documents/Futbolito-Herraidea-3D.zip`: paquete original del primer proyecto interactivo.
 - `content/source-documents/Herraidea-Pinza-Despiece.zip`: paquete fuente del sistema de postes, pinzas, vidrio y pasamanos.
+- `content/source-documents/Herraidea-HRD-1518-3D.zip`: paquete fuente del poste HRD 1518 con sus dos variantes.
+- `content/source-documents/hrd-1518/`: fotografía original usada como referencia del poste HRD 1518.
 - `content/source-documents/catalogo-postes-2026/`: tres páginas originales del catálogo de postes recibido el 8 de septiembre de 2026; se conservan como respaldo interno y sus precios no se publican.
 - `content/projects/futbolito/README.md`: alcance, integridad y restricciones del modelo del futbolito.
 - `content/projects/clip-system/README.md`: alcance y restricciones de la solución de barandal con clips.
+- `content/projects/hrd-1518/README.md`: fuente, integridad, alcance y restricciones del modelo HRD 1518.
 - `content/design-references/`: inspiración visual recibida para tipografía, UI industrial y presentación de producto.
 - `content/jimdo-backup/`: respaldo original de páginas y recursos públicos de Jimdo.
 - `content/version-history.json`: versiones mostradas en el easter egg.

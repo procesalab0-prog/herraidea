@@ -102,3 +102,9 @@ Las referencias originales están archivadas en `content/design-references/` par
 ## 9. Evolución 3D acordada
 
 El recorrido 3D deberá dejar de presentar las piezas aisladas como mensaje principal y explicar un barandal o proyecto completo. Se propone un despiece animado, recuadros técnicos para los modelos existentes, crecimiento del sistema para representar fabricación a la medida y una transición material hacia acero inoxidable satinado. Esta evolución se implementará posteriormente conforme a `docs/RECORRIDO_3D_SOLUCIONES.md`.
+
+## 10. Normalización futura del catálogo
+
+Las imágenes recortadas del catálogo nuevo se conservan de manera provisional para no frenar la incorporación de productos. En una fase posterior se sustituirán por fotografías o renders de estudio con el mismo lenguaje de las fichas originales y las portadas de soluciones: fondo uniforme, escala coherente, sombras suaves, acero realista y producto completo sin precios ni elementos gráficos heredados del catálogo impreso.
+
+Cada imagen nueva deberá compararse con fotografías, planos o modelos 3D disponibles. La limpieza visual nunca autoriza cambiar perforaciones, uniones, proporciones, cantidad de accesorios ni acabado real.

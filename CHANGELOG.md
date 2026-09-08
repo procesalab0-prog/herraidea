@@ -1,5 +1,14 @@
 # Historial de versiones — Herraidea
 
+## 1.15.0 — 2026-09-08
+
+- El carrusel creció a tres experiencias: Postes con clips, poste HRD 1518 y Futbolito Herraidea.
+- El HRD 1518 se integró después de Postes con clips con la portada de estudio final proporcionada, modelo 3D, giro, acercamiento y despiece de 23 componentes o conjuntos.
+- El Futbolito recibió una portada fotográfica de estudio coherente con el lenguaje visual de la primera solución.
+- Postes con clips ahora muestra el código HRD 1525 y dejó de presentar la leyenda de modelo conceptual.
+- Se conservaron el paquete fuente, la variante lateral y la fotografía original del HRD 1518 para continuidad técnica.
+- La normalización de todas las imágenes del catálogo al mismo estilo de estudio quedó registrada como trabajo de una fase posterior.
+
 ## 1.14.0 — 2026-09-08
 
 - Las tres páginas nuevas de postes se compararon con el catálogo vigente y quedaron archivadas como respaldo interno, excluidas del despliegue público.
