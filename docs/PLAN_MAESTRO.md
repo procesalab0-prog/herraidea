@@ -2,7 +2,7 @@
 
 Documento vivo para consolidar el nuevo posicionamiento, la estructura futura del sitio y las decisiones aprobadas. Las ideas anotadas aquí no deben implementarse automáticamente: primero se convierten en alcance y se aprueban.
 
-Última actualización: 2026-09-07
+Última actualización: 2026-09-08
 
 ## 1. Objetivo principal
 
