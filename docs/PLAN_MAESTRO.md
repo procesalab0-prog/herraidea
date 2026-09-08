@@ -198,6 +198,16 @@ Para Herraidea se propone:
 
 Los pictogramas deben facilitar la exploración, no competir con las fotografías ni convertirse en marcas independientes.
 
+### Evolución del recorrido 3D — propuesta aprobada para después
+
+La sección actual de tres piezas 3D evolucionará hacia una explicación de una **solución completa**. El protagonista será un barandal o proyecto armado que pueda descomponerse visualmente en vidrios, postes, conectores, pasamanos, tornillos y fijaciones.
+
+Los modelos existentes se conservarán dentro de recuadros técnicos como acercamientos a componentes del sistema. Durante el desplazamiento, las piezas podrán crecer dentro de esos recuadros, conectarse con su posición real y regresar al conjunto.
+
+La animación deberá demostrar fabricación a la medida: el barandal cambiará de ancho, altura o separación entre postes mediante cotas visibles y reposicionamiento lógico de componentes. Las piezas de tamaño fijo no se deformarán artificialmente. El cierre mostrará una transición realista hacia acero inoxidable satinado mediante textura, rugosidad, iluminación y reflejos controlados.
+
+La experiencia se diseñará para escritorio y teléfono, manteniendo el modelo centrado, textos legibles, progreso por capítulos, sonido opcional y una alternativa con movimiento reducido. La especificación completa queda en `docs/RECORRIDO_3D_SOLUCIONES.md`.
+
 ## 6. Flujo de captación propuesto
 
 La solicitud de cotización debe aceptar distintos niveles de información:
