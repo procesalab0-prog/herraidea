@@ -16,6 +16,7 @@ La landing publicada no se modifica durante esta fase.
 ### Posicionamiento
 
 - Herraidea quiere enfocarse en soluciones, no solamente en venta de herrajes.
+- La prioridad comercial inicial será barandales y fabricación a la medida.
 - La fabricación a la medida será el diferenciador principal.
 - Mensaje rector: “Si el herraje no existe, lo hacemos para ti”.
 - Lenguaje aprobado: “Diseño y fabricación”, “Lo que podemos fabricar”, “Soluciones para cada proyecto”, “Cuéntanos qué necesitas” y “Fabricación a la medida”.
@@ -36,6 +37,7 @@ La landing publicada no se modifica durante esta fase.
 - Corte láser.
 - Pulido de piezas redondas y planas.
 - Fabricación en acero inoxidable T-304 y T-316, pendiente de validar por producto y proceso.
+- La propuesta de soluciones no se limitará a los procesos instalados: cuando algo no pueda producirse directamente en fábrica, Herraidea investigará cómo resolverlo.
 
 ### Soluciones recibidas
 
@@ -54,8 +56,7 @@ La landing publicada no se modifica durante esta fase.
 - Terraza o centro turístico en la zona del Expiatorio.
 - Racks y estructuras para camionetas.
 - Participación en diferentes exposiciones.
-- Cobertura nacional existente.
-- Centroamérica y sur de Estados Unidos como mercado u objetivo por precisar.
+- Cobertura actual en México, Guatemala, Honduras y el sur de Estados Unidos.
 
 ### Activos existentes
 
@@ -72,6 +73,9 @@ La landing publicada no se modifica durante esta fase.
 - El catálogo se conserva, pero no dominará el posicionamiento.
 - El canalizador y la calculadora iniciales pueden funcionar sin base de datos.
 - La herramienta fotográfica con IA será privada y exclusiva de Herraidea.
+- El canalizador comenzará con los casos más comunes y se ampliará conforme se valide su uso.
+- Las fotografías y demás activos visuales se recibirán e integrarán progresivamente.
+- Herraidea cuenta con dos vendedores; esta cantidad es información interna y no se mostrará en la web.
 
 ## 4. Información crítica que debe entregar Herraidea
 
@@ -79,17 +83,11 @@ La landing publicada no se modifica durante esta fase.
 
 - [ ] Persona responsable de ventas y asignación de contactos.
 
-### B. Capacidad técnica
+### B. Capacidad técnica — información complementaria, no bloquea el inicio
 
-- [ ] Cantidad y modelos exactos de centros de maquinado.
-- [ ] Confirmar que VF-10 es el modelo correcto.
-- [ ] Materiales trabajados en cada proceso.
-- [ ] Dimensiones mínimas y máximas.
-- [ ] Tolerancias que pueden comunicarse.
-- [ ] Volúmenes y cantidades mínimas.
-- [ ] Tiempos habituales de prototipo y producción.
-- [ ] Procesos internos y procesos subcontratados.
+- [ ] Confirmar equipos y procesos exactos únicamente para las afirmaciones que se publicarán.
 - [ ] Fotografías y videos reales de máquinas y procesos.
+- [x] La capacidad instalada no limita la recepción de proyectos; las soluciones no disponibles directamente se investigarán caso por caso.
 
 ### C. Productos y catálogo
 
@@ -106,6 +104,7 @@ La landing publicada no se modifica durante esta fase.
 
 ### D. Canalizador de proyectos
 
+- [x] Iniciar con los casos más comunes y ampliar las rutas después.
 - [ ] Tipos de proyecto que pueden elegirse.
 - [ ] Aplicaciones disponibles.
 - [ ] Bases y condiciones de montaje.
@@ -126,15 +125,17 @@ La landing publicada no se modifica durante esta fase.
 
 ### F. Ventas y contacto
 
-- [ ] Número de vendedores.
+- [x] Dos vendedores; dato interno que no se publicará.
 - [ ] Zonas o especialidades de cada vendedor.
-- [ ] WhatsApp, teléfono y correo autorizados.
+- [ ] Conservar el número de contacto actual y agregar el segundo número cuando sea entregado.
+- [ ] Correo autorizado, si se mostrará públicamente.
 - [ ] Horarios de atención.
 - [ ] Regla de asignación de solicitudes.
 - [ ] Contacto alterno si el vendedor no responde.
 
 ### G. Proyectos, exposiciones y confianza
 
+- [x] El material visual se entregará progresivamente.
 - [ ] Alcance exacto de Herraidea en el proyecto del Expiatorio.
 - [ ] Información técnica de racks y estructuras para camionetas.
 - [ ] Fotografías, planos y permisos de publicación.
@@ -143,10 +144,9 @@ La landing publicada no se modifica durante esta fase.
 
 ### H. Cobertura
 
-- [ ] Estados de México atendidos actualmente.
+- [x] Cobertura actual confirmada en México, Guatemala, Honduras y el sur de Estados Unidos.
+- [ ] Estados y zonas específicas atendidas actualmente.
 - [ ] Métodos, condiciones y tiempos de envío.
-- [ ] Confirmar si Guatemala y Honduras son cobertura actual u objetivo.
-- [ ] Confirmar si el sur de Estados Unidos es cobertura actual u objetivo.
 - [ ] Requisitos, garantías y condiciones para exportación.
 
 ### I. Institucional y legal
@@ -160,15 +160,12 @@ La landing publicada no se modifica durante esta fase.
 
 ## 5. Preguntas para la primera reunión
 
-1. ¿Cuál es el tipo de proyecto que más quieren recibir durante el próximo año?
-2. ¿Qué capacidad o proceso diferencia realmente a Herraidea de sus competidores?
-3. ¿Qué soluciones dejan mayor valor y cuáles no desean promover?
-4. ¿Qué puede prometerse públicamente sobre fabricación a la medida?
-5. ¿Qué información mínima necesitan para cotizar?
-6. ¿Cómo se reparte actualmente una oportunidad entre vendedores?
-7. ¿Qué productos se venden juntos y bajo qué múltiplos?
-8. ¿Qué proyectos y exposiciones pueden publicarse inmediatamente?
-9. ¿Qué países atienden hoy y cuáles son solamente una meta comercial?
+1. ¿Qué soluciones dejan mayor valor y cuáles no desean promover?
+2. ¿Qué puede prometerse públicamente sobre fabricación a la medida?
+3. ¿Qué información mínima necesitan para cotizar?
+4. ¿Cómo se reparte actualmente una oportunidad entre los dos vendedores?
+5. ¿Qué productos se venden juntos y bajo qué múltiplos?
+6. ¿Qué proyectos y exposiciones pueden publicarse inmediatamente?
 
 ## 6. Entregable y criterio de cierre
 
