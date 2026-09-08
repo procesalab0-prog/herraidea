@@ -18,11 +18,13 @@ Landing estática para Herraidea, fabricante de herrajes para vidrio templado. I
 - `hrd-map.js`: mapa animado de cobertura nacional desde León.
 - `content/catalog/details.json`: 66 fichas y 159 referencias a imágenes técnicas.
 - `content/source-documents/catalogo-herraidea-2023.pdf`: catálogo original completo recibido como fuente documental.
+- `content/design-references/`: inspiración visual recibida para tipografía, UI industrial y presentación de producto.
 - `content/jimdo-backup/`: respaldo original de páginas y recursos públicos de Jimdo.
 - `content/version-history.json`: versiones mostradas en el easter egg.
 - `docs/PLAN_MAESTRO.md`: estrategia viva, decisiones aprobadas e información pendiente para la siguiente etapa.
 - `docs/FASE_1_DEFINICION.md`: estado de la primera fase, información confirmada y cuestionario de validación para Herraidea.
 - `docs/FUENTE_CATALOGO_2023.md`: inventario preliminar, mapa de páginas y reglas para conciliar el PDF con Jimdo.
+- `docs/DIRECCION_VISUAL.md`: principios aprobados para trasladar las referencias visuales a una identidad propia de Herraidea.
 - `CHANGELOG.md`: historial humano completo.
 - `VERSION`: versión semántica actual.
 
