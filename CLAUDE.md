@@ -25,6 +25,7 @@ Landing estática para Herraidea, fabricante de herrajes para vidrio templado. I
 - `docs/FASE_1_DEFINICION.md`: estado de la primera fase, información confirmada y cuestionario de validación para Herraidea.
 - `docs/FUENTE_CATALOGO_2023.md`: inventario preliminar, mapa de páginas y reglas para conciliar el PDF con Jimdo.
 - `docs/DIRECCION_VISUAL.md`: principios aprobados para trasladar las referencias visuales a una identidad propia de Herraidea.
+- `docs/RECORRIDO_3D_SOLUCIONES.md`: concepto futuro para sustituir las piezas aisladas por un barandal completo, despiece animado y adaptación a la medida.
 - `CHANGELOG.md`: historial humano completo.
 - `VERSION`: versión semántica actual.
 
