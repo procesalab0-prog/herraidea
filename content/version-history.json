@@ -1,7 +1,8 @@
 {
-  "current": "1.11.0",
+  "current": "1.11.1",
   "studio": "ProcesaLab",
   "versions": [
+    {"version":"1.11.1","date":"2026-09-08","title":"Empaque junto a cobertura","summary":"La fotografía de cajas ahora acompaña al mapa animado de cobertura con una composición adaptada a escritorio y teléfono."},
     {"version":"1.11.0","date":"2026-09-08","title":"Soluciones a la medida","summary":"Nuevo posicionamiento, presentación editorial de capacidades y fotografías de fabricación, producción y cobertura."},
     {"version":"1.10.2","date":"2026-08-30","title":"Cristal 3D azul y logotipo animado","summary":"Tono azul más visible y punto rojo animado en la i del logotipo inferior."},
     {"version":"1.10.1","date":"2026-08-30","title":"Audio contextual de cobertura","summary":"Los sonidos del mapa nacional se escuchan únicamente mientras la sección de envíos está visible."},

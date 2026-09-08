@@ -53,10 +53,6 @@
 .machine-card img{object-position:center 55%}
 .posts-card{grid-column:span 5;min-height:720px}
 .posts-card img{object-position:center 48%}
-.shipping-card{grid-column:1/-1;min-height:500px}
-.shipping-card img{object-position:center 48%}
-.shipping-card figure:after{background:linear-gradient(90deg,rgba(7,8,10,.9),rgba(7,8,10,.2) 68%,transparent)}
-.shipping-card>div{top:50%;bottom:auto;transform:translateY(-50%);max-width:520px}
 .capabilities{margin-top:clamp(12px,1.5vw,20px);display:grid;grid-template-columns:repeat(4,1fr);background:var(--ink);color:#fff}
 .capabilities span{min-height:112px;padding:24px;display:flex;align-items:flex-end;border-right:1px solid #ffffff24;font:600 13px 'Archivo Narrow';letter-spacing:.13em;line-height:1.4;text-transform:uppercase}
 .capabilities span:before{content:"";width:8px;height:8px;flex:0 0 8px;margin:0 12px 4px 0;background:var(--red);border-radius:50%}
@@ -84,15 +80,26 @@
   .solutions-title h2{font-size:clamp(50px,15vw,68px);line-height:.84}
   .solutions-title p{font-size:16px;line-height:1.6}
   .manufacturing-grid{display:grid;grid-template-columns:1fr;gap:10px;width:100%}
-  .manufacturing-card,.machine-card,.posts-card,.shipping-card{grid-column:1;min-height:78svh}
+  .manufacturing-card,.machine-card,.posts-card{grid-column:1;min-height:78svh}
   .manufacturing-card h3{font-size:clamp(38px,11vw,50px)}
   .manufacturing-card p{font-size:14px}
   .machine-card img{object-position:center}
   .posts-card img{object-position:center 48%}
-  .shipping-card{min-height:62svh}
-  .shipping-card img{object-position:center}
-  .shipping-card figure:after{background:linear-gradient(180deg,transparent 28%,rgba(7,8,10,.9) 100%)}
-  .shipping-card>div{top:auto;bottom:24px;transform:none}
   .capabilities{width:100%;margin-top:10px;grid-template-columns:1fr 1fr}
   .capabilities span{min-height:104px;padding:18px 14px;font-size:11px;letter-spacing:.1em}
 }
+
+/* v1.11.1 · fotografía de empaque integrada a cobertura */
+.shipping-visuals{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(16px,2vw,28px);margin-top:clamp(30px,4vw,52px);align-items:stretch}
+.shipping-photo{position:relative;min-height:470px;margin:0;overflow:hidden;background:var(--ink);color:#fff}
+.shipping-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(5,6,7,.85))}
+.shipping-photo img{width:100%;height:100%;object-fit:cover;object-position:center;transition:transform 1s cubic-bezier(.2,.8,.2,1)}
+.shipping-photo:hover img{transform:scale(1.025)}
+.shipping-photo figcaption{position:absolute;z-index:1;left:clamp(20px,3vw,36px);right:clamp(20px,3vw,36px);bottom:clamp(20px,3vw,34px);display:grid;gap:10px}
+.shipping-photo figcaption small{color:#ffffffa0;font:600 11px 'Archivo Narrow';letter-spacing:.22em;text-transform:uppercase}
+.shipping-photo figcaption strong{font-size:clamp(26px,3vw,42px);line-height:1;letter-spacing:-.035em;max-width:12ch}
+.shipping-map-column{min-width:0;display:flex;flex-direction:column;justify-content:space-between;border:1px solid var(--line);padding:clamp(16px,2vw,26px)}
+.shipping-map-column .shipping-map{flex:1;min-height:390px}
+.shipping-map-column .shipping-legend{padding-top:16px;border-top:1px solid var(--line)}
+@media(max-width:900px){.shipping-visuals{grid-template-columns:1fr}.shipping-photo{min-height:52svh}.shipping-map-column .shipping-map{min-height:340px}}
+@media(max-width:640px){.shipping-visuals{width:100%;gap:10px}.shipping-photo{min-height:58svh}.shipping-map-column{padding:12px}.shipping-map-column .shipping-map{min-height:300px}.shipping-map-column .shipping-legend{padding-top:12px}}

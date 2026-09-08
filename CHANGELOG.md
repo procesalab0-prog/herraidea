@@ -1,5 +1,10 @@
 # Historial de versiones — Herraidea
 
+## 1.11.1 — 2026-09-08
+
+- La fotografía de cajas y empaque se trasladó desde la presentación de fabricación hacia la sección de cobertura.
+- La imagen ahora acompaña directamente al mapa animado en escritorio y se apila sin cortes en teléfono.
+
 ## 1.11.0 — 2026-09-08
 
 - Inicio de la primera etapa de reposicionamiento hacia barandales, soluciones y fabricación a la medida.
