@@ -39,6 +39,11 @@
   const dark = document.querySelector('.hero-dark');
   const workshop = document.querySelector('.workshop-panel');
   const hint = document.querySelector('.scroll-hint');
+  const aboutSection = document.querySelector('.about-section');
+  const aboutOrigin = document.querySelector('.about-origin');
+  const aboutOriginCopy = document.querySelector('.about-origin-copy');
+  const valueCards = [...document.querySelectorAll('.values article')];
+  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
   const engineering = document.querySelector('.engineering-track');
   const panels = [...document.querySelectorAll('.spec-panel')];
   const dots = [...document.querySelectorAll('.model-dots i')];
@@ -69,6 +74,27 @@
       workshop.style.opacity = String(clamp((p - (mobile ? .42 : .48)) * (mobile ? 3.2 : 2.8)));
       workshop.style.transform = `translateY(${(1 - clamp((p - (mobile ? .4 : .45)) * 2.5)) * (mobile ? 28 : 38)}px)`;
       if (hint) hint.style.opacity = String(clamp(1 - p * 5));
+    }
+    if (aboutSection && aboutOrigin) {
+      const rect = aboutOrigin.getBoundingClientRect();
+      const p = clamp((innerHeight * .86 - rect.top) / Math.max(innerHeight * .9, 1));
+      const night = reduceMotion.matches ? 0 : clamp((p - .25) * 1.65);
+      aboutSection.style.setProperty('--evolution-progress', String(reduceMotion.matches ? 0 : p));
+      aboutSection.style.setProperty('--evolution-night', String(night));
+      if (aboutOriginCopy) {
+        const copyProgress = reduceMotion.matches ? 1 : clamp(p * 1.9);
+        aboutOriginCopy.style.opacity = String(.56 + copyProgress * .44);
+        aboutOriginCopy.style.transform = `translateY(${(1 - copyProgress) * 24}px)`;
+      }
+      const valuesRect = document.querySelector('.values')?.getBoundingClientRect();
+      if (valuesRect) {
+        const valuesProgress = reduceMotion.matches ? 1 : clamp((innerHeight * .9 - valuesRect.top) / Math.max(innerHeight * .42, 1));
+        valueCards.forEach((card, index) => {
+          const cardProgress = clamp(valuesProgress * 1.45 - index * .16);
+          card.style.opacity = String(.5 + cardProgress * .5);
+          card.style.transform = `translateY(${(1 - cardProgress) * 26}px)`;
+        });
+      }
     }
     if (engineering) {
       const rect = engineering.getBoundingClientRect();

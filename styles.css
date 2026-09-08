@@ -252,3 +252,32 @@ body.project-open{overflow:hidden}
   .projects-controls{margin-top:22px}
   .projects-next{width:52px;height:52px}
 }
+
+/* v1.16 · nuevo hero de producto y evolución institucional animada */
+.about-evolution-scene{position:relative;isolation:isolate;aspect-ratio:4/3;margin:0!important;padding:0!important;max-height:420px!important;overflow:hidden;background:#14171b!important;border:1px solid #ffffff1c}
+.about-evolution-images{position:absolute;inset:0;overflow:hidden}
+.about-evolution-scene img{position:absolute;inset:-2%;width:104%!important;height:104%!important;max-width:none;object-fit:cover!important;object-position:center!important;transform:scale(calc(1.01 + var(--evolution-progress,0) * .035));will-change:transform,opacity}
+.about-evolution-night{opacity:var(--evolution-night,0)}
+.about-evolution-scene:after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,transparent 48%,#080a0de8 100%);pointer-events:none}
+.about-evolution-scene figcaption{position:absolute;z-index:2;left:clamp(18px,3vw,30px);right:clamp(18px,3vw,30px);bottom:clamp(18px,3vw,28px);display:grid;gap:7px;color:#fff}
+.about-evolution-scene figcaption:before{content:"";height:2px;width:calc(18% + var(--evolution-progress,0) * 82%);max-width:100%;margin-bottom:7px;background:var(--red);transition:width .12s linear}
+.about-evolution-scene figcaption small{font:600 10px 'Archivo Narrow',sans-serif;letter-spacing:.24em;text-transform:uppercase;color:#ffffffa8}
+.about-evolution-scene figcaption strong{max-width:18ch;font-size:clamp(18px,2vw,26px);line-height:1.08;letter-spacing:-.025em}
+.about-origin-copy{will-change:transform,opacity}
+.values article{will-change:transform,opacity}
+
+@media(max-width:900px){
+  .about-evolution-scene{width:min(100%,620px);max-height:none!important;aspect-ratio:16/11}
+  .about-origin-copy{max-width:680px}
+}
+
+@media(max-width:640px){
+  .about-origin{margin-top:54px;padding-top:54px}
+  .about-evolution-scene{aspect-ratio:4/3}
+  .about-evolution-scene figcaption strong{font-size:18px}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .about-evolution-scene img,.about-origin-copy,.values article{transform:none!important;transition:none!important}
+  .about-evolution-night{opacity:0!important}
+}

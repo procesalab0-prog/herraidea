@@ -1,5 +1,13 @@
 # Historial de versiones — Herraidea
 
+## 1.16.0 — 2026-09-08
+
+- El hero presenta ahora el barandal con postes y clips en dos escenas fieles al producto: atardecer y noche.
+- Se conservaron sin cambios el mensaje, las llamadas a la acción y la transición progresiva de día a noche.
+- Las imágenes anteriores del hero se reutilizaron en “Nuestra evolución” dentro de una composición más compacta que no invade los textos.
+- La sección institucional suma una transición propia de día a noche y una entrada sutil y escalonada para Misión, Visión y Valores.
+- Las animaciones institucionales respetan la preferencia del sistema para reducir movimiento.
+
 ## 1.15.0 — 2026-09-08
 
 - El carrusel creció a tres experiencias: Postes con clips, poste HRD 1518 y Futbolito Herraidea.
