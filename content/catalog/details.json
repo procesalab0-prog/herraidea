@@ -905,73 +905,361 @@
   {
     "category": "Postes",
     "code": "HRD 1517",
-    "name": "Poste",
-    "image": "images/postes-hrd-1517.jpg",
-    "source": "https://www.herraidea.com/poste-hrd-1201/poste-1515-1518/",
-    "sourcePage": "/content/jimdo-backup/pages/poste-hrd-1201-poste-1515-1518.html",
-    "description": "Acero inoxidable 304",
+    "name": "Poste inicio / final",
+    "image": "images/postes-hrd-1517-nuevo.jpg",
+    "source": "Catálogo de postes recibido el 8 de septiembre de 2026",
+    "sourcePage": "/content/source-documents/catalogo-postes-2026/pagina-01.jpeg",
+    "description": "Poste de 2 pulgadas x 86.50 cm con vela articulada y embellecedor.",
     "specifications": [
-      "Acabado Satín",
-      "Acotaciones en mm",
-      "Verificar físicamente previo a instalación y perforación"
+      "Poste de 2 pulgadas x 86.50 cm",
+      "Vela articulada y embellecedor",
+      "Acabado Satín"
     ],
     "detailImages": [
-      "/content/jimdo-backup/assets/a35ca0e476cdd586fab9.jpg",
-      "/content/jimdo-backup/assets/7f10dc892dceb3df7971.jpg",
-      "/content/jimdo-backup/assets/dc4a49aff42b4b71c7db.jpg",
-      "/content/jimdo-backup/assets/e20756215fe11ae8809c.jpg",
-      "/content/jimdo-backup/assets/ede10fe030b6697b80d4.png"
+      "/content/catalog/images/postes-hrd-1517-nuevo.jpg"
     ],
     "originalText": [
-      "Postes > HRD 1515, 1516,",
-      "1517, 1518",
-      "Poste",
-      "> Acero inoxidable 304",
-      "> Acabado Satín",
-      "* Acotaciones en mm",
-      "* Verificar físicamente previo a instalación y perforación",
-      "HRD 1515",
-      "HRD 1516",
-      "HRD 1417",
-      "HRD 1418",
-      "Solicitar más información",
-      "Volver a Catálogo"
+      "HRD 1517",
+      "POSTE 2\" X 86.50 CM + VELA ART + EMBELLECEDOR"
     ]
   },
   {
     "category": "Postes",
-    "code": "HRD 1518",
-    "name": "Poste",
-    "image": "images/postes-hrd-1518.jpg",
-    "source": "https://www.herraidea.com/poste-hrd-1201/poste-1515-1518/",
-    "sourcePage": "/content/jimdo-backup/pages/poste-hrd-1201-poste-1515-1518.html",
-    "description": "Acero inoxidable 304",
+    "code": "HRD 1518 INTERMEDIO 3 PINES",
+    "name": "Poste intermedio con 3 pines",
+    "image": "images/postes-hrd-1518-intermedio-3-pines.jpg",
+    "source": "Catálogo de postes recibido el 8 de septiembre de 2026",
+    "sourcePage": "/content/source-documents/catalogo-postes-2026/pagina-01.jpeg",
+    "description": "Poste de 2 pulgadas x 86.50 cm con vela articulada, embellecedor y 3 pines intermedios.",
     "specifications": [
-      "Acabado Satín",
-      "Acotaciones en mm",
-      "Verificar físicamente previo a instalación y perforación"
+      "Poste de 2 pulgadas x 86.50 cm",
+      "Vela articulada, embellecedor y 3 pines intermedios"
     ],
     "detailImages": [
-      "/content/jimdo-backup/assets/a35ca0e476cdd586fab9.jpg",
-      "/content/jimdo-backup/assets/7f10dc892dceb3df7971.jpg",
-      "/content/jimdo-backup/assets/dc4a49aff42b4b71c7db.jpg",
-      "/content/jimdo-backup/assets/e20756215fe11ae8809c.jpg",
-      "/content/jimdo-backup/assets/ede10fe030b6697b80d4.png"
+      "/content/catalog/images/postes-hrd-1518-intermedio-3-pines.jpg"
     ],
     "originalText": [
-      "Postes > HRD 1515, 1516,",
-      "1517, 1518",
-      "Poste",
-      "> Acero inoxidable 304",
-      "> Acabado Satín",
-      "* Acotaciones en mm",
-      "* Verificar físicamente previo a instalación y perforación",
-      "HRD 1515",
-      "HRD 1516",
-      "HRD 1417",
-      "HRD 1418",
-      "Solicitar más información",
-      "Volver a Catálogo"
+      "HRD 1518 INTERMEDIO 3 PINES",
+      "POSTE 2\" X 86.5 CM + VELA ART + EMBELLECEDOR + 3 PINES INTER"
+    ]
+  },
+  {
+    "category": "Postes",
+    "code": "HRD 1518 IZQ / DER 3 PINES",
+    "name": "Poste lateral con 3 pines",
+    "image": "images/postes-hrd-1518-lateral-3-pines.jpg",
+    "source": "Catálogo de postes recibido el 8 de septiembre de 2026",
+    "sourcePage": "/content/source-documents/catalogo-postes-2026/pagina-01.jpeg",
+    "description": "Poste de 2 pulgadas x 86.50 cm con vela articulada, embellecedor y 3 pines izquierdos o derechos.",
+    "specifications": [
+      "Poste de 2 pulgadas x 86.50 cm",
+      "Configuración izquierda o derecha con 3 pines"
+    ],
+    "detailImages": [
+      "/content/catalog/images/postes-hrd-1518-lateral-3-pines.jpg"
+    ],
+    "originalText": [
+      "HRD 1518 IZQ / DER",
+      "POSTE 2\" X 86.5 CM + VELA ART + EMBELLECEDOR + 3 PINES IZQ / DER"
+    ]
+  },
+  {
+    "category": "Postes",
+    "code": "HRD 1518 INTERMEDIO 4 PINES",
+    "name": "Poste intermedio con 4 pines",
+    "image": "images/postes-hrd-1518-intermedio-4-pines.jpg",
+    "source": "Catálogo de postes recibido el 8 de septiembre de 2026",
+    "sourcePage": "/content/source-documents/catalogo-postes-2026/pagina-01.jpeg",
+    "description": "Poste de 2 pulgadas x 86.50 cm con vela articulada, embellecedor y 4 pines intermedios.",
+    "specifications": [
+      "Poste de 2 pulgadas x 86.50 cm",
+      "Vela articulada, embellecedor y 4 pines intermedios"
+    ],
+    "detailImages": [
+      "/content/catalog/images/postes-hrd-1518-intermedio-4-pines.jpg"
+    ],
+    "originalText": [
+      "HRD 1518 INTERMEDIO 4 PINES",
+      "POSTE 2\" X 86.5 CM + VELA ART + EMBELLECEDOR + 4 PINES INTER"
+    ]
+  },
+  {
+    "category": "Postes",
+    "code": "HRD 1518 IZQ / DER 4 PINES",
+    "name": "Poste lateral con 4 pines",
+    "image": "images/postes-hrd-1518-lateral-4-pines.jpg",
+    "source": "Catálogo de postes recibido el 8 de septiembre de 2026",
+    "sourcePage": "/content/source-documents/catalogo-postes-2026/pagina-01.jpeg",
+    "description": "Poste de 2 pulgadas x 86.50 cm con vela articulada, embellecedor y 4 pines izquierdos o derechos.",
+    "specifications": [
+      "Poste de 2 pulgadas x 86.50 cm",
+      "Configuración izquierda o derecha con 4 pines"
+    ],
+    "detailImages": [
+      "/content/catalog/images/postes-hrd-1518-lateral-4-pines.jpg"
+    ],
+    "originalText": [
+      "HRD 1518 IZQ / DER",
+      "POSTE 2\" X 86.5 CM + VELA ART + EMBELLECEDOR + 4 PINES IZQ / DER"
+    ]
+  },
+  {
+    "category": "Postes",
+    "code": "HRD 1517 CACHETEADO",
+    "name": "Poste cacheteado o lateral",
+    "image": "images/postes-hrd-1517-cacheteado.jpg",
+    "source": "Catálogo de postes recibido el 8 de septiembre de 2026",
+    "sourcePage": "/content/source-documents/catalogo-postes-2026/pagina-01.jpeg",
+    "description": "Poste de 2 pulgadas x 95 cm con vela articulada cacheteada o lateral.",
+    "specifications": [
+      "Poste de 2 pulgadas x 95 cm",
+      "Vela articulada cacheteada o lateral"
+    ],
+    "detailImages": [
+      "/content/catalog/images/postes-hrd-1517-cacheteado.jpg"
+    ],
+    "originalText": [
+      "HRD 1517 CACHETEADO",
+      "POSTE 2\" X 95 CM + VELA ART CACHETEADO O LATERAL"
+    ]
+  },
+  {
+    "category": "Postes",
+    "code": "HRD 1518 INTERMEDIO 3 PINES CACHETEADO",
+    "name": "Poste cacheteado intermedio con 3 pines",
+    "image": "images/postes-hrd-1518-intermedio-3-pines-cacheteado.jpg",
+    "source": "Catálogo de postes recibido el 8 de septiembre de 2026",
+    "sourcePage": "/content/source-documents/catalogo-postes-2026/pagina-02.jpeg",
+    "description": "Poste de 2 pulgadas x 95 cm con vela articulada cacheteada o lateral y 3 pines intermedios.",
+    "specifications": [
+      "Poste de 2 pulgadas x 95 cm",
+      "Configuración cacheteada o lateral con 3 pines intermedios"
+    ],
+    "detailImages": [
+      "/content/catalog/images/postes-hrd-1518-intermedio-3-pines-cacheteado.jpg"
+    ],
+    "originalText": [
+      "HRD 1518 INTERMEDIO 3 PINES CACHETEADO",
+      "POSTE 2\" X 95 CM + VELA ART CACHETEADO O LATERAL + 3 PINES INTER"
+    ]
+  },
+  {
+    "category": "Postes",
+    "code": "HRD 1518 IZQ / DER 3 PINES CACHETEADO",
+    "name": "Poste cacheteado lateral con 3 pines",
+    "image": "images/postes-hrd-1518-lateral-3-pines-cacheteado.jpg",
+    "source": "Catálogo de postes recibido el 8 de septiembre de 2026",
+    "sourcePage": "/content/source-documents/catalogo-postes-2026/pagina-02.jpeg",
+    "description": "Poste de 2 pulgadas x 95 cm con vela articulada cacheteada o lateral y 3 pines izquierdos o derechos.",
+    "specifications": [
+      "Poste de 2 pulgadas x 95 cm",
+      "Configuración cacheteada izquierda o derecha con 3 pines"
+    ],
+    "detailImages": [
+      "/content/catalog/images/postes-hrd-1518-lateral-3-pines-cacheteado.jpg"
+    ],
+    "originalText": [
+      "HRD 1518 IZQ / DER 3 PINES CACHETEADO",
+      "POSTE 2\" X 95 CM + VELA ART CACHETEADO O LATERAL + 3 PINES IZQ / DER"
+    ]
+  },
+  {
+    "category": "Postes",
+    "code": "HRD 1518 INTERMEDIO 4 PINES CACHETEADO",
+    "name": "Poste cacheteado intermedio con 4 pines",
+    "image": "images/postes-hrd-1518-intermedio-4-pines-cacheteado.jpg",
+    "source": "Catálogo de postes recibido el 8 de septiembre de 2026",
+    "sourcePage": "/content/source-documents/catalogo-postes-2026/pagina-02.jpeg",
+    "description": "Poste de 2 pulgadas x 1.10 m con vela articulada cacheteada o lateral y 4 pines intermedios.",
+    "specifications": [
+      "Poste de 2 pulgadas x 1.10 m",
+      "Configuración cacheteada o lateral con 4 pines intermedios"
+    ],
+    "detailImages": [
+      "/content/catalog/images/postes-hrd-1518-intermedio-4-pines-cacheteado.jpg"
+    ],
+    "originalText": [
+      "HRD 1518 INTERMEDIO 4 PINES CACHETEADO",
+      "POSTE 2\" X 1.10 MT + VELA ART CACHETEADO O LATERAL + 4 PINES INTER"
+    ]
+  },
+  {
+    "category": "Postes",
+    "code": "HRD 1518 IZQ / DER 4 PINES CACHETEADO",
+    "name": "Poste cacheteado lateral con 4 pines",
+    "image": "images/postes-hrd-1518-lateral-4-pines-cacheteado.jpg",
+    "source": "Catálogo de postes recibido el 8 de septiembre de 2026",
+    "sourcePage": "/content/source-documents/catalogo-postes-2026/pagina-02.jpeg",
+    "description": "Poste de 2 pulgadas x 1.10 m con vela articulada cacheteada o lateral y 4 pines izquierdos o derechos.",
+    "specifications": [
+      "Poste de 2 pulgadas x 1.10 m",
+      "Configuración cacheteada izquierda o derecha con 4 pines"
+    ],
+    "detailImages": [
+      "/content/catalog/images/postes-hrd-1518-lateral-4-pines-cacheteado.jpg"
+    ],
+    "originalText": [
+      "HRD 1518 IZQ / DER 4 PINES CACHETEADO",
+      "POSTE 2\" X 1.10 MT + VELA ART CACHETEADO O LATERAL + 4 PINES IZQ / DER"
+    ]
+  },
+  {
+    "category": "Postes",
+    "code": "HRD 1525 INICIO / FINAL",
+    "name": "Poste con 2 clips inox",
+    "image": "images/postes-hrd-1525-inicio-final.jpg",
+    "source": "Catálogo de postes recibido el 8 de septiembre de 2026",
+    "sourcePage": "/content/source-documents/catalogo-postes-2026/pagina-02.jpeg",
+    "description": "Poste de 2 pulgadas x 86.50 cm con vela articulada, 2 clips de acero inoxidable y embellecedor.",
+    "specifications": [
+      "Poste de 2 pulgadas x 86.50 cm",
+      "2 clips de acero inoxidable"
+    ],
+    "detailImages": [
+      "/content/catalog/images/postes-hrd-1525-inicio-final.jpg"
+    ],
+    "originalText": [
+      "HRD 1525 INICIO / FINAL",
+      "POSTE 2\" X 86.50 CM + VELA ART + 2 CLIPS INOX + EMBELLECEDOR"
+    ]
+  },
+  {
+    "category": "Postes",
+    "code": "HRD 1526 INTERMEDIO",
+    "name": "Poste con 4 clips inox",
+    "image": "images/postes-hrd-1526-intermedio.jpg",
+    "source": "Catálogo de postes recibido el 8 de septiembre de 2026",
+    "sourcePage": "/content/source-documents/catalogo-postes-2026/pagina-02.jpeg",
+    "description": "Poste de 2 pulgadas x 86.50 cm con vela articulada, 4 clips de acero inoxidable y embellecedor.",
+    "specifications": [
+      "Poste de 2 pulgadas x 86.50 cm",
+      "4 clips de acero inoxidable"
+    ],
+    "detailImages": [
+      "/content/catalog/images/postes-hrd-1526-intermedio.jpg"
+    ],
+    "originalText": [
+      "HRD 1526 INTERMEDIO",
+      "POSTE 2\" X 86.50 CM + VELA ART + 4 CLIPS INOX + EMBELLECEDOR"
+    ]
+  },
+  {
+    "category": "Postes",
+    "code": "HRD 1519 INICIO / FINAL",
+    "name": "Poste con 2 clips Zamak",
+    "image": "images/postes-hrd-1519-inicio-final.jpg",
+    "source": "Catálogo de postes recibido el 8 de septiembre de 2026",
+    "sourcePage": "/content/source-documents/catalogo-postes-2026/pagina-03.jpeg",
+    "description": "Poste de 2 pulgadas x 86.50 cm con vela articulada, 2 clips Zamak y embellecedor.",
+    "specifications": [
+      "Poste de 2 pulgadas x 86.50 cm",
+      "2 clips Zamak"
+    ],
+    "detailImages": [
+      "/content/catalog/images/postes-hrd-1519-inicio-final.jpg"
+    ],
+    "originalText": [
+      "HRD 1519 INICIO / FINAL",
+      "POSTE 2\" X 86.50 CM + VELA ART + 2 CLIPS ZAMAK + EMBELLECEDOR"
+    ]
+  },
+  {
+    "category": "Postes",
+    "code": "HRD 1520 INTERMEDIO",
+    "name": "Poste con 4 clips Zamak",
+    "image": "images/postes-hrd-1520-intermedio.jpg",
+    "source": "Catálogo de postes recibido el 8 de septiembre de 2026",
+    "sourcePage": "/content/source-documents/catalogo-postes-2026/pagina-03.jpeg",
+    "description": "Poste de 2 pulgadas x 86.50 cm con vela articulada, 4 clips Zamak y embellecedor.",
+    "specifications": [
+      "Poste de 2 pulgadas x 86.50 cm",
+      "4 clips Zamak"
+    ],
+    "detailImages": [
+      "/content/catalog/images/postes-hrd-1520-intermedio.jpg"
+    ],
+    "originalText": [
+      "HRD 1520 INTERMEDIO",
+      "POSTE 2\" X 86.50 CM + VELA ART + 4 CLIPS ZAMAK + EMBELLECEDOR"
+    ]
+  },
+  {
+    "category": "Postes",
+    "code": "HRD 1220",
+    "name": "Poste rectangular 18.50 cm",
+    "image": "images/postes-hrd-1220.jpg",
+    "source": "Catálogo de postes recibido el 8 de septiembre de 2026",
+    "sourcePage": "/content/source-documents/catalogo-postes-2026/pagina-03.jpeg",
+    "description": "Poste rectangular de 18.50 cm.",
+    "specifications": [
+      "Poste rectangular de 18.50 cm"
+    ],
+    "detailImages": [
+      "/content/catalog/images/postes-hrd-1220.jpg"
+    ],
+    "originalText": [
+      "HRD 1220",
+      "POSTE RECTANGULAR 18.50 CM"
+    ]
+  },
+  {
+    "category": "Postes",
+    "code": "HRD 1221 INICIO / FINAL",
+    "name": "Poste con 2 brazos de solera",
+    "image": "images/postes-hrd-1221-inicio-final.jpg",
+    "source": "Catálogo de postes recibido el 8 de septiembre de 2026",
+    "sourcePage": "/content/source-documents/catalogo-postes-2026/pagina-03.jpeg",
+    "description": "Poste de 2 pulgadas x 86.50 cm con 2 brazos de solera, vela y embellecedor.",
+    "specifications": [
+      "Poste de 2 pulgadas x 86.50 cm",
+      "2 brazos de solera, vela y embellecedor"
+    ],
+    "detailImages": [
+      "/content/catalog/images/postes-hrd-1221-inicio-final.jpg"
+    ],
+    "originalText": [
+      "HRD 1221 INICIO / FINAL",
+      "POSTE 2\" X 86.50 CM + 2 BRAZOS SOLERA + VELA + EMBELLECEDOR"
+    ]
+  },
+  {
+    "category": "Postes",
+    "code": "HRD 1221 INTERMEDIO",
+    "name": "Poste con 4 brazos de solera",
+    "image": "images/postes-hrd-1221-intermedio.jpg",
+    "source": "Catálogo de postes recibido el 8 de septiembre de 2026",
+    "sourcePage": "/content/source-documents/catalogo-postes-2026/pagina-03.jpeg",
+    "description": "Poste de 2 pulgadas x 86.50 cm con 4 brazos de solera, vela y embellecedor.",
+    "specifications": [
+      "Poste de 2 pulgadas x 86.50 cm",
+      "4 brazos de solera, vela y embellecedor"
+    ],
+    "detailImages": [
+      "/content/catalog/images/postes-hrd-1221-intermedio.jpg"
+    ],
+    "originalText": [
+      "HRD 1221 INTERMEDIO",
+      "POSTE 2\" X 86.50 CM + 4 BRAZOS SOLERA + VELA + EMBELLECEDOR"
+    ]
+  },
+  {
+    "category": "Postes",
+    "code": "HRD 1223 INICIO",
+    "name": "Poste con 2 brazos ajustables",
+    "image": "images/postes-hrd-1223-inicio.jpg",
+    "source": "Catálogo de postes recibido el 8 de septiembre de 2026",
+    "sourcePage": "/content/source-documents/catalogo-postes-2026/pagina-03.jpeg",
+    "description": "Poste de 2 pulgadas x 86.50 cm con 2 brazos ajustables, vela y embellecedor.",
+    "specifications": [
+      "Poste de 2 pulgadas x 86.50 cm",
+      "2 brazos ajustables, vela y embellecedor"
+    ],
+    "detailImages": [
+      "/content/catalog/images/postes-hrd-1223-inicio.jpg"
+    ],
+    "originalText": [
+      "HRD 1223 INICIO",
+      "POSTE 2\" X 86.50 CM + 2 BRAZOS AJUSTABLE + VELA + EMBELLECEDOR"
     ]
   },
   {

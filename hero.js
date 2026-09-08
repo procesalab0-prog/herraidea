@@ -140,7 +140,7 @@
   });
   addEventListener('popstate', () => closeProduct(false));
 
-  fetch('/content/catalog/details.json').then(r => {
+  fetch('/content/catalog/details.json?v=1-14').then(r => {
     if (!r.ok) throw new Error('No se pudo cargar el catálogo');
     return r.json();
   }).then(products => {

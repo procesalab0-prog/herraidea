@@ -1,5 +1,13 @@
 # Historial de versiones — Herraidea
 
+## 1.14.0 — 2026-09-08
+
+- Las tres páginas nuevas de postes se compararon con el catálogo vigente y quedaron archivadas como respaldo interno, excluidas del despliegue público.
+- Los registros genéricos HRD 1517 y HRD 1518 se detallaron, y se incorporaron 16 configuraciones adicionales de las series HRD 1220, 1221, 1223, 1517, 1518, 1519, 1520, 1525 y 1526.
+- El catálogo creció de 66 a 82 fichas; la familia Postes pasó de 22 a 38 configuraciones.
+- Los nuevos postes conservan exactamente el formato de tarjetas y fichas técnicas existente, con recortes individuales limpios de cada producto.
+- No se publican precios ni dentro de las tarjetas, ni en las fichas, ni en los datos que consume la web.
+
 ## 1.13.0 — 2026-09-08
 
 - La antigua presentación de modelos por familia se sustituyó por un carrusel grande de soluciones interactivas inspirado en la navegación por tarjetas.
