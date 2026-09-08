@@ -98,3 +98,7 @@ Esta dirección puede utilizarse en:
 6. Contenido para arquitectos, constructores y vidrieros.
 
 Las referencias originales están archivadas en `content/design-references/` para que Codex, Claude y futuros colaboradores compartan el mismo contexto visual.
+
+## 9. Evolución 3D acordada
+
+El recorrido 3D deberá dejar de presentar las piezas aisladas como mensaje principal y explicar un barandal o proyecto completo. Se propone un despiece animado, recuadros técnicos para los modelos existentes, crecimiento del sistema para representar fabricación a la medida y una transición material hacia acero inoxidable satinado. Esta evolución se implementará posteriormente conforme a `docs/RECORRIDO_3D_SOLUCIONES.md`.
