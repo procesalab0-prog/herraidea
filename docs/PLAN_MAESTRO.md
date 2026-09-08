@@ -118,6 +118,7 @@ La palabra “ingeniería” puede aparecer cuando el contexto técnico la requi
 - Recorrido técnico con modelos 3D y geometría de tres piezas.
 - Materiales de acero y cristal azul en los modelos 3D.
 - Catálogo desplegable con 66 productos en cuatro familias.
+- Catálogo Herraidea 2023 de 12 páginas conservado como fuente adicional; debe conciliarse con el respaldo de Jimdo antes de definir el inventario vigente.
 - Fichas con fotografías, planos y especificaciones disponibles.
 - Información institucional: historia, misión, visión y valores.
 - Cobertura nacional animada desde León, Guanajuato.
