@@ -62,6 +62,7 @@ La landing publicada no se modifica durante esta fase.
 
 - Landing publicada con animaciones, modelos 3D, sonido y adaptación móvil.
 - Catálogo de 66 productos y respaldo público recuperado de Jimdo.
+- Catálogo Herraidea 2023 completo de 12 páginas, conservado como fuente documental y pendiente de conciliación con Jimdo.
 - Fotografías, planos y especificaciones parciales.
 - Contacto mediante WhatsApp.
 
@@ -91,6 +92,8 @@ La landing publicada no se modifica durante esta fase.
 
 ### C. Productos y catálogo
 
+- [x] Catálogo Herraidea 2023 recibido y resguardado completo.
+- [ ] Conciliar productos, variantes y códigos del PDF de 2023 con el catálogo recuperado de Jimdo.
 - [ ] Confirmar cuáles de los 66 productos siguen vigentes.
 - [ ] Lista definitiva de familias.
 - [ ] Códigos y nombres comerciales correctos.
