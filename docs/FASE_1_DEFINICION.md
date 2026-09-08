@@ -2,7 +2,7 @@
 
 Documento de trabajo para convertir la información de Herraidea en un alcance aprobado antes de diseñar o modificar la web.
 
-Estado: **en proceso**  
+Estado: **en implementación progresiva**
 Inicio: 2026-09-07
 
 ## 1. Objetivo de esta fase
@@ -80,6 +80,7 @@ La landing publicada no se modifica durante esta fase.
 - Herraidea cuenta con dos vendedores; esta cantidad es información interna y no se mostrará en la web.
 - La dirección visual conservará negro, blanco, grises metálicos y rojo Herraidea, con tipografía protagonista, composición editorial y fotografía macro de producto.
 - La futura sección 3D mostrará una solución completa: barandal armado, despiece de componentes, adaptación visual a la medida y transición a acabado satín.
+- La implementación visible comenzó con el reposicionamiento del hero y una sección editorial de soluciones y capacidades; las fotografías recibidas se integrarán progresivamente.
 
 ## 4. Información crítica que debe entregar Herraidea
 

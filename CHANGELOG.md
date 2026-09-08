@@ -1,5 +1,14 @@
 # Historial de versiones — Herraidea
 
+## 1.11.0 — 2026-09-08
+
+- Inicio de la primera etapa de reposicionamiento hacia barandales, soluciones y fabricación a la medida.
+- Nuevo mensaje principal “Tu proyecto no termina en el catálogo” y llamada a conocer las capacidades.
+- Nueva sección editorial “Lo hacemos a tu medida” con fotografías de maquinado CNC, producción de postes y empaque.
+- Capacidades confirmadas presentadas de forma clara: tornos CNC Haas, centro de maquinado VF-10, soldadura robotizada, corte láser y pulido.
+- Cobertura actual ampliada en la comunicación a México, Guatemala, Honduras y el sur de Estados Unidos.
+- Textos de contacto orientados a recibir medidas, fotografías, dibujos, muestras o ideas de proyecto.
+
 ## 1.10.2 — 2026-08-30
 
 - Cristal de los modelos 3D con un azul más definido y mayor presencia visual.
