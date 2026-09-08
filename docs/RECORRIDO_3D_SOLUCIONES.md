@@ -2,10 +2,10 @@
 
 Especificación conceptual para evolucionar la sección 3D actual de piezas individuales hacia una experiencia centrada en soluciones, barandales y proyectos completos.
 
-Estado: **piloto en implementación con Futbolito Herraidea**
+Estado: **carrusel de soluciones en implementación**
 Fecha: 2026-09-08
 
-La versión 1.12.0 incorpora el primer proyecto interactivo. El Futbolito Herraidea valida el patrón de tarjeta ampliable, giro y acercamiento táctil, vista de costado y despiece reversible. La evolución futura hacia un barandal dimensional conserva los requisitos descritos en este documento.
+La versión 1.13.0 sustituye la presentación de piezas aisladas por un carrusel grande. El sistema de postes con clips, vidrio y pasamanos ocupa la primera posición por representar la solución principal de Herraidea; el Futbolito conserva la segunda posición como proyecto especial. Las dos tarjetas abren un visor ampliado con giro, acercamiento táctil, vista de detalle y despiece reversible.
 
 El modelo del futbolito es una reconstrucción visual aproximada basada en fotografías. No representa todavía medidas verificadas, un modelo de fabricación ni una secuencia física de ensamble.
 

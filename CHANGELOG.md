@@ -1,5 +1,14 @@
 # Historial de versiones — Herraidea
 
+## 1.13.0 — 2026-09-08
+
+- La antigua presentación de modelos por familia se sustituyó por un carrusel grande de soluciones interactivas inspirado en la navegación por tarjetas.
+- “Postes con clips + vidrio” aparece primero como solución principal, con portada de estudio propia y experiencia 3D ampliable.
+- El Futbolito Herraidea se conserva con la misma escala visual como segundo elemento del carrusel, identificado como proyecto especial.
+- Un mismo visor ampliado adapta textos, encuadre y vista de detalle a cada modelo, con acciones para armar, desarmar y controlar la separación.
+- Flechas dibujadas con CSS para mantener la misma apariencia en Safari móvil y computadora, sin sustitución por emojis.
+- Paquete fuente del sistema de pinzas, modelo GLB, portada y restricciones técnicas guardados en el repositorio.
+
 ## 1.12.0 — 2026-09-08
 
 - Primera sección de proyectos interactivos, preparada para crecer como un recorrido horizontal de casos.

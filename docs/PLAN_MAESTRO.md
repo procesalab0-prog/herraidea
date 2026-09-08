@@ -115,7 +115,7 @@ La palabra “ingeniería” puede aparecer cuando el contexto técnico la requi
 
 - Hero animado con transición de día a noche.
 - Mensaje de fabricación propia y torno CNC.
-- Recorrido técnico con modelos 3D y geometría de tres piezas.
+- Carrusel grande de soluciones y proyectos con experiencias 3D ampliables.
 - Materiales de acero y cristal azul en los modelos 3D.
 - Catálogo desplegable con 66 productos en cuatro familias.
 - Catálogo Herraidea 2023 de 12 páginas conservado como fuente adicional; debe conciliarse con el respaldo de Jimdo antes de definir el inventario vigente.
@@ -198,9 +198,9 @@ Para Herraidea se propone:
 
 Los pictogramas deben facilitar la exploración, no competir con las fotografías ni convertirse en marcas independientes.
 
-### Evolución del recorrido 3D — piloto iniciado
+### Evolución del recorrido 3D — carrusel de soluciones en implementación
 
-La sección actual de tres piezas 3D evolucionará hacia una explicación de una **solución completa**. El primer piloto es el Futbolito Herraidea, cuyo modelo final permite separar, girar y volver a ensamblar 190 piezas y conjuntos. Después, el protagonista será un barandal o proyecto armado que pueda descomponerse visualmente en vidrios, postes, conectores, pasamanos, tornillos y fijaciones.
+La sección anterior de tres piezas aisladas se sustituye por un carrusel de **soluciones completas** con tarjetas grandes y ampliables. La primera solución es un barandal de postes con clips, vidrio y pasamanos, con 46 piezas y conjuntos, despiece reversible y acercamiento a una pinza. El Futbolito Herraidea se conserva como segundo elemento y demuestra la capacidad para proyectos especiales con 190 piezas y conjuntos.
 
 Los modelos existentes se conservarán dentro de recuadros técnicos como acercamientos a componentes del sistema. Durante el desplazamiento, las piezas podrán crecer dentro de esos recuadros, conectarse con su posición real y regresar al conjunto.
 
