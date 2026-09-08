@@ -2,9 +2,12 @@
 
 Especificación conceptual para evolucionar la sección 3D actual de piezas individuales hacia una experiencia centrada en soluciones, barandales y proyectos completos.
 
-Estado: **idea aprobada para una implementación posterior**  
-Fecha: 2026-09-08  
-La landing y los modelos actuales no se modifican durante esta etapa de documentación.
+Estado: **piloto en implementación con Futbolito Herraidea**
+Fecha: 2026-09-08
+
+La versión 1.12.0 incorpora el primer proyecto interactivo. El Futbolito Herraidea valida el patrón de tarjeta ampliable, giro y acercamiento táctil, vista de costado y despiece reversible. La evolución futura hacia un barandal dimensional conserva los requisitos descritos en este documento.
+
+El modelo del futbolito es una reconstrucción visual aproximada basada en fotografías. No representa todavía medidas verificadas, un modelo de fabricación ni una secuencia física de ensamble.
 
 ## 1. Objetivo narrativo
 

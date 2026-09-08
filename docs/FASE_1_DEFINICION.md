@@ -9,7 +9,7 @@ Inicio: 2026-09-07
 
 Definir qué debe comunicar la nueva web, a quién se dirige, cuáles capacidades y productos se pueden afirmar públicamente y qué información técnica hace falta para construir el catálogo, el canalizador y la calculadora.
 
-La landing publicada no se modifica durante esta fase.
+La landing se actualiza progresivamente con la información y los recursos ya confirmados, sin esperar al cierre documental completo de la fase.
 
 ## 2. Información confirmada
 
@@ -61,6 +61,7 @@ La landing publicada no se modifica durante esta fase.
 ### Activos existentes
 
 - Landing publicada con animaciones, modelos 3D, sonido y adaptación móvil.
+- Primer proyecto interactivo recibido: Futbolito Herraidea, con modelo GLB final de 190 piezas y conjuntos y animación de despiece.
 - Catálogo de 66 productos y respaldo público recuperado de Jimdo.
 - Catálogo Herraidea 2023 completo de 12 páginas, conservado como fuente documental y pendiente de conciliación con Jimdo.
 - Cuatro referencias visuales archivadas para definir tipografía editorial, interfaz modular y tratamiento elegante del acero inoxidable.
@@ -79,7 +80,7 @@ La landing publicada no se modifica durante esta fase.
 - Las fotografías y demás activos visuales se recibirán e integrarán progresivamente.
 - Herraidea cuenta con dos vendedores; esta cantidad es información interna y no se mostrará en la web.
 - La dirección visual conservará negro, blanco, grises metálicos y rojo Herraidea, con tipografía protagonista, composición editorial y fotografía macro de producto.
-- La futura sección 3D mostrará una solución completa: barandal armado, despiece de componentes, adaptación visual a la medida y transición a acabado satín.
+- La sección de proyectos 3D comienza con el Futbolito Herraidea como piloto interactivo. La evolución posterior mostrará un barandal armado, despiece de componentes, adaptación visual a la medida y transición a acabado satín.
 - La implementación visible comenzó con el reposicionamiento del hero y una sección editorial de soluciones y capacidades; las fotografías recibidas se integrarán progresivamente.
 
 ## 4. Información crítica que debe entregar Herraidea

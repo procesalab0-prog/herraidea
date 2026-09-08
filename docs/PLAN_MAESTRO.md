@@ -198,9 +198,9 @@ Para Herraidea se propone:
 
 Los pictogramas deben facilitar la exploración, no competir con las fotografías ni convertirse en marcas independientes.
 
-### Evolución del recorrido 3D — propuesta aprobada para después
+### Evolución del recorrido 3D — piloto iniciado
 
-La sección actual de tres piezas 3D evolucionará hacia una explicación de una **solución completa**. El protagonista será un barandal o proyecto armado que pueda descomponerse visualmente en vidrios, postes, conectores, pasamanos, tornillos y fijaciones.
+La sección actual de tres piezas 3D evolucionará hacia una explicación de una **solución completa**. El primer piloto es el Futbolito Herraidea, cuyo modelo final permite separar, girar y volver a ensamblar 190 piezas y conjuntos. Después, el protagonista será un barandal o proyecto armado que pueda descomponerse visualmente en vidrios, postes, conectores, pasamanos, tornillos y fijaciones.
 
 Los modelos existentes se conservarán dentro de recuadros técnicos como acercamientos a componentes del sistema. Durante el desplazamiento, las piezas podrán crecer dentro de esos recuadros, conectarse con su posición real y regresar al conjunto.
 

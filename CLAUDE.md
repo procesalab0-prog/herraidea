@@ -1,12 +1,12 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.11.1**
+Versión actual: **1.12.0**
 
 Sitio de producción: `https://herraidea-landing.vercel.app/`
 
 ## Estado actual
 
-Landing estática para Herraidea, enfocada en barandales, soluciones y fabricación a la medida. Incluye hero de día a noche, presentación editorial de capacidades, recorrido técnico Three.js, diseño sonoro opcional, catálogo desplegable de 66 productos, cobertura animada, ventanas con planos y especificaciones, historia institucional, contacto por WhatsApp y PWA.
+Landing estática para Herraidea, enfocada en barandales, soluciones y fabricación a la medida. Incluye hero de día a noche, presentación editorial de capacidades, recorrido técnico Three.js, primer proyecto interactivo con despiece 3D, diseño sonoro opcional, catálogo desplegable de 66 productos, cobertura animada, ventanas con planos y especificaciones, historia institucional, contacto por WhatsApp y PWA.
 
 ## Archivos principales
 
@@ -16,9 +16,13 @@ Landing estática para Herraidea, enfocada en barandales, soluciones y fabricaci
 - `sound.js`: motor Web Audio, preferencia del usuario y señales sonoras.
 - `hrd-3d.js`: geometría, materiales, iluminación y animación Three.js.
 - `hrd-map.js`: mapa animado de cobertura nacional desde León.
+- `project-3d.js`: visor del futbolito, interacción táctil y control de la animación de despiece.
 - `assets/fabricacion/`: imágenes optimizadas de maquinaria, producción y empaque recibidas para la primera etapa.
+- `assets/projects/futbolito/`: modelo GLB usado por la experiencia del primer proyecto.
 - `content/catalog/details.json`: 66 fichas y 159 referencias a imágenes técnicas.
 - `content/source-documents/catalogo-herraidea-2023.pdf`: catálogo original completo recibido como fuente documental.
+- `content/source-documents/Futbolito-Herraidea-3D.zip`: paquete original del primer proyecto interactivo.
+- `content/projects/futbolito/README.md`: alcance, integridad y restricciones del modelo del futbolito.
 - `content/design-references/`: inspiración visual recibida para tipografía, UI industrial y presentación de producto.
 - `content/jimdo-backup/`: respaldo original de páginas y recursos públicos de Jimdo.
 - `content/version-history.json`: versiones mostradas en el easter egg.
@@ -26,7 +30,7 @@ Landing estática para Herraidea, enfocada en barandales, soluciones y fabricaci
 - `docs/FASE_1_DEFINICION.md`: estado de la primera fase, información confirmada y cuestionario de validación para Herraidea.
 - `docs/FUENTE_CATALOGO_2023.md`: inventario preliminar, mapa de páginas y reglas para conciliar el PDF con Jimdo.
 - `docs/DIRECCION_VISUAL.md`: principios aprobados para trasladar las referencias visuales a una identidad propia de Herraidea.
-- `docs/RECORRIDO_3D_SOLUCIONES.md`: concepto futuro para sustituir las piezas aisladas por un barandal completo, despiece animado y adaptación a la medida.
+- `docs/RECORRIDO_3D_SOLUCIONES.md`: estado del piloto interactivo y especificación futura para un barandal completo, despiece animado y adaptación a la medida.
 - `CHANGELOG.md`: historial humano completo.
 - `VERSION`: versión semántica actual.
 

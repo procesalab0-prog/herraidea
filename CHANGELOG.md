@@ -1,5 +1,13 @@
 # Historial de versiones — Herraidea
 
+## 1.12.0 — 2026-09-08
+
+- Primera sección de proyectos interactivos, preparada para crecer como un recorrido horizontal de casos.
+- Futbolito Herraidea integrado como modelo 3D manipulable en computadora y teléfono.
+- Experiencia casi a pantalla completa con giro, acercamiento, vista de detalle y control continuo del despiece.
+- Acciones para desarmar y volver a armar los 190 componentes y conjuntos del modelo final con transición suave.
+- Paquete fuente y modelo GLB conservados en el repositorio, con alcance y restricciones documentados.
+
 ## 1.11.1 — 2026-09-08
 
 - La fotografía de cajas y empaque se trasladó desde la presentación de fabricación hacia la sección de cobertura.
