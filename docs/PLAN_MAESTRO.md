@@ -327,7 +327,7 @@ Crear una sección pública y amigable llamada provisionalmente **“Encuentra l
 
 Ejemplo de recorrido recibido:
 
-1. **Tipo de proyecto:** residencial, ejecutivo o comercial.
+1. **Tipo de proyecto:** residencial, turístico o comercial; turístico contempla hoteles, Airbnb y desarrollos turísticos.
 2. **Ubicación:** interior o exterior.
 3. **Base de montaje:** concreto, aluminio o herrería.
 4. **Aplicación:** barandal, puerta, división, escalera, fachada u otra por definir.
