@@ -89,6 +89,18 @@ El crecimiento debe comunicar capacidad de adaptación. Para evitar una lectura 
 - Los textos y etiquetas cambiarán junto con la animación, sin tapar la pieza principal.
 - Las transiciones tendrán inercia suave, pero cada capítulo deberá llegar a una posición estable y legible.
 
+### Alternativa opcional de controles simples
+
+Se conserva como referencia opcional el escaparate interactivo de Apple compartido el 9 de septiembre de 2026. El aspecto relevante es la simplicidad de los botones, no su composición completa:
+
+- Controles pequeños con forma de cápsula y esquinas completamente redondeadas.
+- Fondo gris claro o transparente, borde mínimo y contraste discreto.
+- Etiquetas muy breves acompañadas, cuando sea útil, por un signo de suma o indicador sencillo.
+- Un solo control activo a la vez, con su explicación desplegada cerca del botón.
+- El modelo 3D mantiene el protagonismo y los controles no invaden la escena.
+
+Esta navegación podría emplearse para **Armado**, **Despiece**, **Componentes**, **Fijación** y **Acabado**. Queda registrada únicamente como opción para comparar posteriormente con la navegación por desplazamiento y no constituye todavía una decisión de implementación.
+
 ## 6. Escritorio y teléfono
 
 ### Escritorio
