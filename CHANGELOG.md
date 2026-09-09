@@ -1,5 +1,12 @@
 # Historial de versiones — Herraidea
 
+## 1.18.0 — 2026-09-09
+
+- El canalizador suma una cuarta pregunta para distinguir barandales, escaleras, balcones, divisiones y proyectos especiales.
+- Cada recorrido termina con un punto de partida visual: sistema HRD 1525, conectores para vidrio o fabricación a la medida, con acceso a la experiencia 3D o familia correspondiente.
+- Una nueva sección permite describir por WhatsApp piezas, estructuras e ideas que todavía no aparecen en el catálogo.
+- Las sugerencias son orientativas, no guardan datos y mantienen explícita la revisión técnica humana.
+
 ## 1.17.0 — 2026-09-09
 
 - Primera versión del canalizador “Encuentra la solución para tu proyecto”, integrada dentro de la Fase 1.
