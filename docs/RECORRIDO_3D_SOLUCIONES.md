@@ -101,6 +101,18 @@ Se conserva como referencia opcional el escaparate interactivo de Apple comparti
 
 Esta navegación podría emplearse para **Armado**, **Despiece**, **Componentes**, **Fijación** y **Acabado**. Queda registrada únicamente como opción para comparar posteriormente con la navegación por desplazamiento y no constituye todavía una decisión de implementación.
 
+#### Diseño opcional del visor
+
+- Abrir la experiencia en un panel amplio, limpio y cercano a pantalla completa.
+- Reservar aproximadamente un tercio del ancho para controles y texto, y dos tercios para el modelo 3D.
+- Presentar los controles en una columna vertical a la izquierda y mantener el objeto grande, centrado y libre de elementos superpuestos a la derecha.
+- Expandir únicamente el control activo para mostrar una explicación breve; el resto conserva su forma compacta.
+- Hacer que cada selección lleve el modelo a un estado estable y reconocible: armado, despiece, acercamiento a componentes, fijación o acabado.
+- Incluir un cierre sencillo en la esquina superior y evitar barras, marcos o decoración que resten espacio al producto.
+- En teléfono, colocar primero el modelo y después una fila desplazable o lista compacta de controles; la explicación activa aparece debajo sin tapar la interacción.
+
+Este diseño completo se guarda como **una opción**, no como reemplazo aprobado del visor actual.
+
 ## 6. Escritorio y teléfono
 
 ### Escritorio
