@@ -302,7 +302,7 @@
   {
     "category": "Pipetas",
     "code": "HRD 1111",
-    "name": "HRD 1111",
+    "name": "Pipeta Ajustable Roscada",
     "image": "images/pipetas-hrd-1111.jpg",
     "source": "https://www.herraidea.com/pipeta-hrd-1101/pipeta-ajustable-roscada/",
     "sourcePage": "/content/jimdo-backup/pages/pipeta-hrd-1101-pipeta-ajustable-roscada.html",
@@ -440,7 +440,7 @@
     "image": "images/postes-hrd-1201.jpg",
     "source": "https://www.herraidea.com/poste-hrd-1201/",
     "sourcePage": "/content/jimdo-backup/pages/poste-hrd-1201.html",
-    "description": "Postes >",
+    "description": "Mini Poste 25 x 250mm · Para vidrio-muro",
     "specifications": [
       "Mini Poste Sólido 25",
       "Mini Poste 25 x 250mm",
@@ -473,11 +473,11 @@
   {
     "category": "Postes",
     "code": "HRD 1202",
-    "name": "HRD 1202",
+    "name": "Mini Poste Sólido 50",
     "image": "images/postes-hrd-1202.jpg",
     "source": "https://www.herraidea.com/poste-hrd-1201/mini-poste/",
     "sourcePage": "/content/jimdo-backup/pages/poste-hrd-1201-mini-poste.html",
-    "description": "Postes >",
+    "description": "Mini Poste 25 x 500mm · Para vidrio-muro",
     "specifications": [
       "Mini Poste Sólido 50",
       "Mini Poste 25 x 500mm",
@@ -514,7 +514,7 @@
     "image": "images/postes-hrd-1203.jpg",
     "source": "https://www.herraidea.com/poste-hrd-1201/poste-hueco/",
     "sourcePage": "/content/jimdo-backup/pages/poste-hrd-1201-poste-hueco.html",
-    "description": "Postes >",
+    "description": "Mini Poste 32 x 250mm · Para vidrio-muro",
     "specifications": [
       "Mini Poste Hueco 25",
       "Mini Poste 32 x 250mm",
@@ -552,7 +552,7 @@
     "image": "images/postes-hrd-1204.jpg",
     "source": "https://www.herraidea.com/poste-hrd-1201/poste-ajustable/",
     "sourcePage": "/content/jimdo-backup/pages/poste-hrd-1201-poste-ajustable.html",
-    "description": "Postes >",
+    "description": "Mini Poste 25 x 250mm · Para vidrio-muro",
     "specifications": [
       "Mini Poste Sólido 25 Ajustable",
       "Mini Poste 25 x 250mm",
@@ -655,7 +655,7 @@
   {
     "category": "Postes",
     "code": "HRD 1206 x 350",
-    "name": "HRD 1206 x 350",
+    "name": "Mini Poste Rectangular",
     "image": "images/postes-hrd-1206-x-350.jpg",
     "source": "https://www.herraidea.com/poste-hrd-1201/poste-hrd-1206x350/",
     "sourcePage": "/content/jimdo-backup/pages/poste-hrd-1201-poste-hrd-1206x350.html",
@@ -868,7 +868,7 @@
   {
     "category": "Postes",
     "code": "HRD 1516",
-    "name": "HRD 1516",
+    "name": "Poste",
     "image": "images/postes-hrd-1516.jpg",
     "source": "https://www.herraidea.com/poste-hrd-1201/poste-1515-1518/",
     "sourcePage": "/content/jimdo-backup/pages/poste-hrd-1201-poste-1515-1518.html",
@@ -1331,7 +1331,7 @@
     "image": "images/postes-hrd-1715.jpg",
     "source": "https://www.herraidea.com/poste-hrd-1201/poste-1715/",
     "sourcePage": "/content/jimdo-backup/pages/poste-hrd-1201-poste-1715.html",
-    "description": "Postes >",
+    "description": "Poste solera 10x50x1000mm. conectores a 180",
     "specifications": [
       "Poste solera 10x50x1000mm. conectores a 180",
       "Acero inoxidable 304",
@@ -1362,7 +1362,7 @@
     "image": "images/postes-hrd-1716.jpg",
     "source": "https://www.herraidea.com/poste-hrd-1201/poste-1716/",
     "sourcePage": "/content/jimdo-backup/pages/poste-hrd-1201-poste-1716.html",
-    "description": "Postes >",
+    "description": "Poste solera 10x50x1000mm conectores a 180",
     "specifications": [
       "Poste solera 10x50x1000mm conectores a 180",
       "Acero inoxidable 304",
@@ -1393,7 +1393,7 @@
     "image": "images/postes-hrd-1717.jpg",
     "source": "https://www.herraidea.com/poste-hrd-1201/poste-1717/",
     "sourcePage": "/content/jimdo-backup/pages/poste-hrd-1201-poste-1717.html",
-    "description": "Postes >",
+    "description": "Poste solera 10x50x1000mm · Conectores a 180",
     "specifications": [
       "Poste solera 10x50x1000mm",
       "Conectores a 180",
@@ -1486,7 +1486,7 @@
     "image": "images/conectores-hrd-1301.jpg",
     "source": "https://www.herraidea.com/conector-hrd-1301/",
     "sourcePage": "/content/jimdo-backup/pages/conector-hrd-1301.html",
-    "description": "Conectores >",
+    "description": "Botón Conector · Para vidrio-vidrio 44mm",
     "specifications": [
       "Botón Conector",
       "Para vidrio-vidrio 44mm",
@@ -1522,7 +1522,7 @@
     "image": "images/conectores-hrd-1302.jpg",
     "source": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1302/",
     "sourcePage": "/content/jimdo-backup/pages/conector-hrd-1301-conector-hrd-1302.html",
-    "description": "Conectores >",
+    "description": "Botón 44mm · Conector vidrio-muro",
     "specifications": [
       "Conector vidrio-muro",
       "Vidrio templado 8-12mm",
@@ -1557,7 +1557,7 @@
     "image": "images/conectores-hrd-1303.jpg",
     "source": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1303/",
     "sourcePage": "/content/jimdo-backup/pages/conector-hrd-1301-conector-hrd-1303.html",
-    "description": "Conectores >",
+    "description": "Conector 44 x 40mm · Para vidrio-muro",
     "specifications": [
       "Conector 44 x 40mm",
       "Para vidrio-muro",
@@ -1592,7 +1592,7 @@
     "image": "images/conectores-hrd-1304.jpg",
     "source": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1304/",
     "sourcePage": "/content/jimdo-backup/pages/conector-hrd-1301-conector-hrd-1304.html",
-    "description": "Conectores >",
+    "description": "Conector 32 x 25mm · Para vidrio-muro",
     "specifications": [
       "Conector 32 x 25mm",
       "Para vidrio-muro",
@@ -1627,7 +1627,7 @@
     "image": "images/conectores-hrd-1305.jpg",
     "source": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1305/",
     "sourcePage": "/content/jimdo-backup/pages/conector-hrd-1301-conector-hrd-1305.html",
-    "description": "Conectores >",
+    "description": "Conector 32 x 50mm · Para vidrio-muro",
     "specifications": [
       "Conector 32 x 50mm",
       "Para vidrio-muro",
@@ -1662,7 +1662,7 @@
     "image": "images/conectores-hrd-1306.jpg",
     "source": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1306/",
     "sourcePage": "/content/jimdo-backup/pages/conector-hrd-1301-conector-hrd-1306.html",
-    "description": "Conectores >",
+    "description": "Conector 32 x 40mm · Para vidrio-muro",
     "specifications": [
       "Conector 32 x 40mm",
       "Para vidrio-muro",
@@ -1697,7 +1697,7 @@
     "image": "images/conectores-hrd-1307.jpg",
     "source": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1307/",
     "sourcePage": "/content/jimdo-backup/pages/conector-hrd-1301-conector-hrd-1307.html",
-    "description": "Conectores >",
+    "description": "Conector 32 x 25mm · Para vidrio-muro",
     "specifications": [
       "Conector 32 x 25mm",
       "Para vidrio-muro",
@@ -1733,7 +1733,7 @@
     "image": "images/conectores-hrd-1308.jpg",
     "source": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1308/",
     "sourcePage": "/content/jimdo-backup/pages/conector-hrd-1301-conector-hrd-1308.html",
-    "description": "Conectores >",
+    "description": "Conector 32 x 50mm · Para vidrio-muro",
     "specifications": [
       "Conector 32 x 50mm",
       "Para vidrio-muro",
@@ -1768,7 +1768,7 @@
     "image": "images/conectores-hrd-1309.jpg",
     "source": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1309/",
     "sourcePage": "/content/jimdo-backup/pages/conector-hrd-1301-conector-hrd-1309.html",
-    "description": "Conectores >",
+    "description": "Conector Avellanado 32 x 46mm · Para vidrio-muro",
     "specifications": [
       "Conector Avellanado 32 x 46mm",
       "Para vidrio-muro",
@@ -1803,7 +1803,7 @@
     "image": "images/conectores-hrd-1310.jpg",
     "source": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1310/",
     "sourcePage": "/content/jimdo-backup/pages/conector-hrd-1301-conector-hrd-1310.html",
-    "description": "Conectores >",
+    "description": "Conector 32 x 46mm · Para vidrio-muro",
     "specifications": [
       "Conector 32 x 46mm",
       "Para vidrio-muro",
@@ -1838,7 +1838,7 @@
     "image": "images/conectores-hrd-1311.jpg",
     "source": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1311/",
     "sourcePage": "/content/jimdo-backup/pages/conector-hrd-1301-conector-hrd-1311.html",
-    "description": "Conectores >",
+    "description": "Conector 40 x 67mm · Para vidrio-muro",
     "specifications": [
       "Conector 40 x 67mm",
       "Para vidrio-muro",
@@ -1873,7 +1873,7 @@
     "image": "images/conectores-hrd-1312.jpg",
     "source": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1312/",
     "sourcePage": "/content/jimdo-backup/pages/conector-hrd-1301-conector-hrd-1312.html",
-    "description": "Conectores >",
+    "description": "Para vidrio-muro",
     "specifications": [
       "Para vidrio-muro",
       "Vidrio templado 8-12mm",
@@ -1908,7 +1908,7 @@
     "image": "images/conectores-hrd-1313.jpg",
     "source": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1313/",
     "sourcePage": "/content/jimdo-backup/pages/conector-hrd-1301-conector-hrd-1313.html",
-    "description": "Conectores >",
+    "description": "Para vidrio-muro",
     "specifications": [
       "Para vidrio-muro",
       "Vidrio templado 8-12mm",
@@ -1942,7 +1942,7 @@
     "image": "images/conectores-hrd-1401.jpg",
     "source": "https://www.herraidea.com/pasamanos-hrd-1401/",
     "sourcePage": "/content/jimdo-backup/pages/pasamanos-hrd-1401.html",
-    "description": "Conectores >",
+    "description": "Conector vidrio-pasamanos de tubo",
     "specifications": [
       "Conector vidrio-pasamanos de tubo",
       "Vidrio templado 8-12mm",
@@ -1972,11 +1972,11 @@
   {
     "category": "Conectores",
     "code": "HRD 1402",
-    "name": "HRD 1402",
+    "name": "Tapón 2\"",
     "image": "images/conectores-hrd-1402.jpg",
     "source": "https://www.herraidea.com/pasamanos-hrd-1401/tapon-1402/",
     "sourcePage": "/content/jimdo-backup/pages/pasamanos-hrd-1401-tapon-1402.html",
-    "description": "Conectores >",
+    "description": "Acero inoxidable 304",
     "specifications": [
       "Vidrio templado 8-12mm",
       "Acero inoxidable 304",
@@ -2008,7 +2008,7 @@
     "image": "images/conectores-hrd-1403.jpg",
     "source": "https://www.herraidea.com/pasamanos-hrd-1401/tapon-1403/",
     "sourcePage": "/content/jimdo-backup/pages/pasamanos-hrd-1401-tapon-1403.html",
-    "description": "Conectores >",
+    "description": "Acero inoxidable 304",
     "specifications": [
       "Vidrio templado 8-12mm",
       "Acero inoxidable 304",
@@ -2041,7 +2041,7 @@
     "image": "images/conectores-hrd-1404.jpg",
     "source": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1404/",
     "sourcePage": "/content/jimdo-backup/pages/conector-hrd-1301-conector-hrd-1404.html",
-    "description": "Conectores >",
+    "description": "Acero inoxidable 304",
     "specifications": [
       "Conector intermedio para tubo de 2\"",
       "Vidrio templado 8-12mm",
@@ -2075,7 +2075,7 @@
     "image": "images/conectores-hrd-1405.jpg",
     "source": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1405/",
     "sourcePage": "/content/jimdo-backup/pages/conector-hrd-1301-conector-hrd-1405.html",
-    "description": "Conectores >",
+    "description": "Acero inoxidable 304",
     "specifications": [
       "Conector intermedio izquierdo para tubo de 2\"",
       "Vidrio templado 8-12mm",
@@ -2108,7 +2108,7 @@
     "image": "images/conectores-hrd-1406.jpg",
     "source": "https://www.herraidea.com/conector-hrd-1301/conector-hrd-1406/",
     "sourcePage": "/content/jimdo-backup/pages/conector-hrd-1301-conector-hrd-1406.html",
-    "description": "Conectores >",
+    "description": "Acero inoxidable 304",
     "specifications": [
       "Conector intermedio derecho para tubo de 2\"",
       "Vidrio templado 8-12mm",
@@ -2137,11 +2137,11 @@
   {
     "category": "Conectores",
     "code": "HRD 1407",
-    "name": "HRD 1407",
+    "name": "Vela fija para tubo 2\"",
     "image": "images/conectores-hrd-1407.jpg",
     "source": "https://www.herraidea.com/conector-hrd-1301/vela-hrd-1407/",
     "sourcePage": "/content/jimdo-backup/pages/conector-hrd-1301-vela-hrd-1407.html",
-    "description": "Conectores >",
+    "description": "Acero inoxidable 304",
     "specifications": [
       "Vidrio templado 8-12mm",
       "Acero inoxidable 304",
@@ -2173,7 +2173,7 @@
     "image": "images/conectores-hrd-1408.jpg",
     "source": "https://www.herraidea.com/conector-hrd-1301/vela-hrd-1408/",
     "sourcePage": "/content/jimdo-backup/pages/conector-hrd-1301-vela-hrd-1408.html",
-    "description": "Conectores >",
+    "description": "Acero inoxidable 304",
     "specifications": [
       "Vidrio templado 8-12mm",
       "Acero inoxidable 304",
@@ -2206,7 +2206,7 @@
     "image": "images/conectores-hrd-1409.jpg",
     "source": "https://www.herraidea.com/conector-hrd-1301/brida-hrd-1409/",
     "sourcePage": "/content/jimdo-backup/pages/conector-hrd-1301-brida-hrd-1409.html",
-    "description": "Conectores >",
+    "description": "Acero inoxidable 304",
     "specifications": [
       "Vidrio templado 8-12mm",
       "Acero inoxidable 304",
@@ -2303,7 +2303,7 @@
     "image": "images/conectores-hrd-1417.jpg",
     "source": "https://www.herraidea.com/conector-hrd-1301/vela-hrd-1407/",
     "sourcePage": "/content/jimdo-backup/pages/conector-hrd-1301-vela-hrd-1407.html",
-    "description": "Conectores >",
+    "description": "Acero inoxidable 304",
     "specifications": [
       "Vidrio templado 8-12mm",
       "Acero inoxidable 304",

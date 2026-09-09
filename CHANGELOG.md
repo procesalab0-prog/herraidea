@@ -1,5 +1,11 @@
 # Historial de versiones — Herraidea
 
+## 1.16.2 — 2026-09-09
+
+- La solución 02 del carrusel se identifica como sistema de tubo de 1/2 pulgada; antes decía “Sistema de cable”, que corresponde a otra familia de Herraidea.
+- Se repararon 33 fichas migradas desde Jimdo: 30 mostraban el rastro del menú (“Postes >”, “Conectores >”) como descripción y 6 usaban el código como nombre.
+- Las descripciones recuperadas provienen del texto original de cada página respaldada, sin redacción inventada.
+
 ## 1.16.1 — 2026-09-08
 
 - Se corrigió la integridad de los dos archivos PNG del hero que impedía que el navegador los decodificara en producción.

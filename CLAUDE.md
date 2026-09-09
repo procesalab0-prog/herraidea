@@ -1,6 +1,6 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.16.1**
+Versión actual: **1.16.2**
 
 Sitio de producción: `https://herraidea-landing.vercel.app/`
 
