@@ -425,7 +425,7 @@ No se debe presentar esta funcionalidad como parte del alcance actual ni constru
 - Fabricación a la medida como protagonista.
 - Navegación reorganizada.
 - Sección “Lo que podemos fabricar”.
-- Canalizador básico de proyectos sin base de datos; primera versión implementada con tipo de proyecto, ubicación y base de montaje, seguida de revisión humana por WhatsApp.
+- Canalizador de proyectos sin base de datos; primera versión implementada con tipo de proyecto, ubicación, base de montaje y necesidad, seguida de una sugerencia visual orientativa y revisión humana por WhatsApp. Incluye una entrada separada para piezas, estructuras e ideas fuera del catálogo.
 - Calculadora básica por múltiplos con reglas previamente validadas.
 - Solicitud de proyecto mediante WhatsApp.
 - Reutilización cuidadosa de la experiencia visual actual.
