@@ -246,7 +246,8 @@
     const progressBar = document.querySelector('#guide-progress-bar');
     let currentStep = 0;
 
-    const selectedValue = step => guide.querySelector(`input[name="${['proyecto', 'ubicacion', 'base'][step]}"]:checked`)?.value || '';
+    const fieldNames = ['proyecto', 'ubicacion', 'base', 'aplicacion'];
+    const selectedValue = step => guide.querySelector(`input[name="${fieldNames[step]}"]:checked`)?.value || '';
     const renderGuide = () => {
       steps.forEach((step, index) => {
         const active = index === currentStep;
@@ -258,7 +259,7 @@
       back.disabled = currentStep === 0;
       next.disabled = !selectedValue(currentStep);
       next.innerHTML = currentStep === steps.length - 1 ? 'Ver resumen <span>→</span>' : 'Siguiente <span>→</span>';
-      progressLabel.textContent = `0${currentStep + 1} / 03`;
+      progressLabel.textContent = `0${currentStep + 1} / 04`;
       progressBar.style.width = `${((currentStep + 1) / steps.length) * 100}%`;
     };
 
@@ -273,7 +274,8 @@
       const values = {
         proyecto: selectedValue(0),
         ubicacion: selectedValue(1),
-        base: selectedValue(2)
+        base: selectedValue(2),
+        aplicacion: selectedValue(3)
       };
       steps.forEach(step => { step.hidden = true; step.classList.remove('active'); });
       actions.hidden = true;
@@ -281,9 +283,46 @@
       document.querySelector('#guide-project').textContent = values.proyecto;
       document.querySelector('#guide-location').textContent = values.ubicacion;
       document.querySelector('#guide-base').textContent = values.base;
-      progressLabel.textContent = '03 / 03';
+      document.querySelector('#guide-application').textContent = values.aplicacion;
+      progressLabel.textContent = '04 / 04';
       progressBar.style.width = '100%';
-      const message = ['Hola Herraidea, quiero asesoría para un proyecto:', `Tipo: ${values.proyecto}`, `Ubicación: ${values.ubicacion}`, `Base de montaje: ${values.base}`, 'Quiero revisar qué solución se adapta mejor.'].join('\n');
+      const railingApplications = ['Barandal', 'Escalera', 'Balcón o terraza'];
+      const suggestion = railingApplications.includes(values.aplicacion) ? {
+        kicker: 'Punto de partida · HRD 1525',
+        title: 'Postes con clips + vidrio',
+        description: 'Un sistema completo que reúne postes, pinzas, cristal y pasamanos.',
+        parts: ['Postes', 'Clips o pinzas', 'Pasamanos y fijaciones'],
+        image: '/assets/projects/clip-system/portada-estudio.jpg',
+        alt: 'Sistema de barandal con postes, clips y vidrio',
+        href: '#proyectos', label: 'Explorar solución 3D', project: 'clips'
+      } : values.aplicacion === 'Cancel o división' ? {
+        kicker: 'Punto de partida · Familia de producto',
+        title: 'Conectores para vidrio',
+        description: 'Herrajes para unir, soportar y resolver encuentros entre paneles de vidrio.',
+        parts: ['Conectores', 'Pipetas', 'Fijaciones compatibles'],
+        image: '/content/catalog/images/conectores-hrd-1301.jpg',
+        alt: 'Conectores Herraidea para soluciones con vidrio',
+        href: '#conectores', label: 'Ver familia de conectores', project: ''
+      } : {
+        kicker: 'Punto de partida · Fabricación especial',
+        title: 'Una solución a la medida',
+        description: 'Partimos de una idea, fotografía, muestra o medida para revisar cómo fabricarla.',
+        parts: ['Idea o muestra', 'Medidas del proyecto', 'Revisión de fabricación'],
+        image: '/assets/fabricacion/torno-cnc-haas.jpg',
+        alt: 'Fabricación a la medida en Herraidea',
+        href: '#soluciones', label: 'Conocer capacidades', project: ''
+      };
+      document.querySelector('#guide-solution-kicker').textContent = suggestion.kicker;
+      document.querySelector('#guide-solution-title').textContent = suggestion.title;
+      document.querySelector('#guide-solution-description').textContent = suggestion.description;
+      const solutionImage = document.querySelector('#guide-solution-image');
+      solutionImage.src = suggestion.image; solutionImage.alt = suggestion.alt;
+      document.querySelector('#guide-solution-parts').innerHTML = suggestion.parts.map(part => `<li>${escapeHTML(part)}</li>`).join('');
+      const solutionLink = document.querySelector('#guide-solution-link');
+      solutionLink.href = suggestion.href;
+      solutionLink.dataset.guideProject = suggestion.project;
+      solutionLink.innerHTML = `${suggestion.label} <span>→</span>`;
+      const message = ['Hola Herraidea, quiero asesoría para un proyecto:', `Tipo: ${values.proyecto}`, `Ubicación: ${values.ubicacion}`, `Base de montaje: ${values.base}`, `Necesito resolver: ${values.aplicacion}`, `Punto de partida sugerido: ${suggestion.title}`, 'Quiero revisar qué solución se adapta mejor.'].join('\n');
       document.querySelector('#guide-whatsapp').href = `https://wa.me/524772561695?text=${encodeURIComponent(message)}`;
       result.querySelector('h3')?.focus?.();
     });
@@ -292,4 +331,19 @@
     });
     renderGuide();
   }
+
+  document.querySelector('#guide-solution-link')?.addEventListener('click', event => {
+    const project = event.currentTarget.dataset.guideProject;
+    if (!project) return;
+    event.preventDefault();
+    document.querySelector(`.project-card [data-open-project="${project}"]`)?.click();
+  });
+
+  document.querySelector('#new-project-form')?.addEventListener('submit', event => {
+    event.preventDefault();
+    const idea = String(new FormData(event.currentTarget).get('proyecto-nuevo') || '').trim();
+    if (!idea) return;
+    const message = ['Hola Herraidea, tengo otro proyecto en mente:', idea, 'Quiero revisar si pueden ayudarme a desarrollarlo.'].join('\n');
+    window.open(`https://wa.me/524772561695?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
+  });
 })();
