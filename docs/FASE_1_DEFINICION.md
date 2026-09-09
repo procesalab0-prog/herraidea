@@ -117,9 +117,11 @@ La landing se actualiza progresivamente con la información y los recursos ya co
 - [x] Primera clasificación por ubicación: interior o exterior.
 - [x] Bases iniciales: concreto, aluminio y herrería.
 - [x] Preguntas iniciales definidas para la primera versión.
-- [ ] Recomendación correspondiente a cada combinación.
+- [x] Aplicaciones iniciales: barandal, escalera, balcón o terraza, cancel o división, proyecto especial y casos sin definir.
+- [x] Primera sugerencia visual por necesidad: HRD 1525, conectores para vidrio o fabricación a la medida.
 - [ ] Casos que requieren revisión técnica obligatoria.
-- [x] Datos iniciales enviados por WhatsApp: tipo de proyecto, ubicación y base de montaje.
+- [x] Datos iniciales enviados por WhatsApp: tipo de proyecto, ubicación, base de montaje y necesidad.
+- [x] Entrada separada por WhatsApp para piezas, estructuras e ideas que no existen en el catálogo.
 
 ### E. Calculadora por múltiplos
 
