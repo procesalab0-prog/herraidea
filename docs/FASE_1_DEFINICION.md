@@ -113,7 +113,7 @@ La landing se actualiza progresivamente con la información y los recursos ya co
 ### D. Canalizador de proyectos
 
 - [x] Iniciar con los casos más comunes y ampliar las rutas después.
-- [x] Tipos iniciales: residencial, ejecutivo y comercial.
+- [x] Tipos iniciales: residencial, turístico y comercial; turístico contempla hoteles, Airbnb y desarrollos turísticos.
 - [x] Primera clasificación por ubicación: interior o exterior.
 - [x] Bases iniciales: concreto, aluminio y herrería.
 - [x] Preguntas iniciales definidas para la primera versión.
