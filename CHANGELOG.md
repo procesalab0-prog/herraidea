@@ -1,5 +1,12 @@
 # Historial de versiones — Herraidea
 
+## 1.17.0 — 2026-09-09
+
+- Primera versión del canalizador “Encuentra la solución para tu proyecto”, integrada dentro de la Fase 1.
+- Tres preguntas recaban el tipo de proyecto, su ubicación interior o exterior y la base de montaje.
+- El resumen prepara un mensaje de WhatsApp para revisión humana, sin guardar datos ni emitir una recomendación técnica automática.
+- La experiencia se adapta a computadora y teléfono, incluye navegación anterior/siguiente y respeta la preferencia de movimiento reducido.
+
 ## 1.16.2 — 2026-09-09
 
 - La solución 02 del carrusel se identifica como sistema de tubo de 1/2 pulgada; antes decía “Sistema de cable”, que corresponde a otra familia de Herraidea.

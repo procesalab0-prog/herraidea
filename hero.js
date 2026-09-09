@@ -234,4 +234,62 @@
     }
     window.open(`https://wa.me/524772561695?text=${encodeURIComponent(lines.join('\n'))}`, '_blank', 'noopener');
   });
+
+  const guide = document.querySelector('#project-guide');
+  if (guide) {
+    const steps = [...guide.querySelectorAll('.guide-step')];
+    const result = guide.querySelector('#guide-result');
+    const actions = guide.querySelector('#guide-actions');
+    const back = guide.querySelector('#guide-back');
+    const next = guide.querySelector('#guide-next');
+    const progressLabel = document.querySelector('#guide-progress-label');
+    const progressBar = document.querySelector('#guide-progress-bar');
+    let currentStep = 0;
+
+    const selectedValue = step => guide.querySelector(`input[name="${['proyecto', 'ubicacion', 'base'][step]}"]:checked`)?.value || '';
+    const renderGuide = () => {
+      steps.forEach((step, index) => {
+        const active = index === currentStep;
+        step.hidden = !active;
+        step.classList.toggle('active', active);
+      });
+      result.hidden = true;
+      actions.hidden = false;
+      back.disabled = currentStep === 0;
+      next.disabled = !selectedValue(currentStep);
+      next.innerHTML = currentStep === steps.length - 1 ? 'Ver resumen <span>→</span>' : 'Siguiente <span>→</span>';
+      progressLabel.textContent = `0${currentStep + 1} / 03`;
+      progressBar.style.width = `${((currentStep + 1) / steps.length) * 100}%`;
+    };
+
+    guide.addEventListener('change', event => {
+      if (!event.target.matches('input[type="radio"]')) return;
+      next.disabled = false;
+    });
+    back.addEventListener('click', () => { if (currentStep > 0) { currentStep -= 1; renderGuide(); } });
+    next.addEventListener('click', () => {
+      if (!selectedValue(currentStep)) return;
+      if (currentStep < steps.length - 1) { currentStep += 1; renderGuide(); return; }
+      const values = {
+        proyecto: selectedValue(0),
+        ubicacion: selectedValue(1),
+        base: selectedValue(2)
+      };
+      steps.forEach(step => { step.hidden = true; step.classList.remove('active'); });
+      actions.hidden = true;
+      result.hidden = false;
+      document.querySelector('#guide-project').textContent = values.proyecto;
+      document.querySelector('#guide-location').textContent = values.ubicacion;
+      document.querySelector('#guide-base').textContent = values.base;
+      progressLabel.textContent = '03 / 03';
+      progressBar.style.width = '100%';
+      const message = ['Hola Herraidea, quiero asesoría para un proyecto:', `Tipo: ${values.proyecto}`, `Ubicación: ${values.ubicacion}`, `Base de montaje: ${values.base}`, 'Quiero revisar qué solución se adapta mejor.'].join('\n');
+      document.querySelector('#guide-whatsapp').href = `https://wa.me/524772561695?text=${encodeURIComponent(message)}`;
+      result.querySelector('h3')?.focus?.();
+    });
+    document.querySelector('#guide-restart')?.addEventListener('click', () => {
+      guide.reset(); currentStep = 0; renderGuide();
+    });
+    renderGuide();
+  }
 })();

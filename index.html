@@ -26,13 +26,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Archivo+Narrow:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=1-16">
+  <link rel="stylesheet" href="/styles.css?v=1-17">
 </head>
 <body>
   <header class="site-header">
     <a class="brand" href="#inicio" aria-label="Herraidea, inicio"><img src="/assets/logo-gray-nodot.png" alt="Herraidea"><i></i></a>
     <div class="header-controls"><button class="sound-toggle" id="sound-toggle" type="button" aria-pressed="false" aria-label="Activar sonido"><span aria-hidden="true">♩</span><b>Sonido</b></button><button class="menu-toggle" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span><b>Menú</b></button>
-      <nav id="main-nav" class="main-nav"><a href="#soluciones">Soluciones</a><a href="#proyectos">Proyectos</a><a href="#catalogo">Catálogo</a><a class="nav-contact" href="#contacto">Cuéntanos tu proyecto</a></nav>
+      <nav id="main-nav" class="main-nav"><a href="#soluciones">Soluciones</a><a href="#asesoria">Asesoría</a><a href="#proyectos">Proyectos</a><a href="#catalogo">Catálogo</a><a class="nav-contact" href="#contacto">Cuéntanos tu proyecto</a></nav>
     </div>
   </header>
 
@@ -67,6 +67,55 @@
         <article class="manufacturing-card posts-card"><figure><img src="/assets/fabricacion/produccion-postes.jpg" alt="Producción de postes de acero inoxidable para sistemas de barandal" loading="lazy"></figure><div><span>02 · Barandales</span><h3>Un sistema, no piezas aisladas.</h3><p>Postes, conectores, vidrio y fijaciones pensados como una solución completa.</p></div></article>
       </div>
       <div class="section-inner capabilities" aria-label="Capacidades de fabricación"><span>4 tornos CNC Haas</span><span>Centro de maquinado Haas VF-10</span><span>Soldadura robotizada</span><span>Corte láser y pulido</span></div>
+    </section>
+
+    <section class="guide-section" id="asesoria">
+      <div class="section-inner guide-heading">
+        <span class="eyebrow">Encuentra la solución para tu proyecto</span>
+        <div><h2>Cuéntanos dónde<br><em>va a comenzar.</em></h2><p>Responde tres preguntas sencillas. Al terminar prepararemos la información para que un asesor de Herraidea revise tu proyecto contigo.</p></div>
+      </div>
+      <div class="section-inner guide-shell">
+        <aside class="guide-context">
+          <span>Asesoría inicial</span>
+          <strong id="guide-progress-label">01 / 03</strong>
+          <div class="guide-progress" aria-hidden="true"><i id="guide-progress-bar"></i></div>
+          <p>No necesitas conocer códigos ni nombres de piezas. Esta guía no sustituye la revisión técnica.</p>
+        </aside>
+        <form class="project-guide" id="project-guide">
+          <fieldset class="guide-step active" data-guide-step="0">
+            <legend><small>Primero</small>¿Qué tipo de proyecto tienes?</legend>
+            <div class="guide-options">
+              <label><input type="radio" name="proyecto" value="Residencial"><span><b>Residencial</b><small>Casa, departamento o área privada</small></span></label>
+              <label><input type="radio" name="proyecto" value="Ejecutivo"><span><b>Ejecutivo</b><small>Oficina, corporativo o espacio de trabajo</small></span></label>
+              <label><input type="radio" name="proyecto" value="Comercial"><span><b>Comercial</b><small>Local, desarrollo o espacio de atención</small></span></label>
+            </div>
+          </fieldset>
+          <fieldset class="guide-step" data-guide-step="1" hidden>
+            <legend><small>Ubicación</small>¿El proyecto está en interior o exterior?</legend>
+            <div class="guide-options guide-options-two">
+              <label><input type="radio" name="ubicacion" value="Interior"><span><b>Interior</b><small>Dentro de una construcción</small></span></label>
+              <label><input type="radio" name="ubicacion" value="Exterior"><span><b>Exterior</b><small>Expuesto al ambiente</small></span></label>
+            </div>
+          </fieldset>
+          <fieldset class="guide-step" data-guide-step="2" hidden>
+            <legend><small>Montaje</small>¿Sobre qué base se instalará?</legend>
+            <div class="guide-options">
+              <label><input type="radio" name="base" value="Concreto"><span><b>Concreto</b><small>Losa, escalón o pretil</small></span></label>
+              <label><input type="radio" name="base" value="Aluminio"><span><b>Aluminio</b><small>Perfil o estructura de aluminio</small></span></label>
+              <label><input type="radio" name="base" value="Herrería"><span><b>Herrería</b><small>Estructura o bastidor metálico</small></span></label>
+            </div>
+          </fieldset>
+          <section class="guide-result" id="guide-result" hidden aria-live="polite">
+            <span class="eyebrow">Listo para revisar</span>
+            <h3>Ya tenemos un buen punto de partida.</h3>
+            <p>Un asesor puede ayudarte a definir el sistema, las medidas y las piezas adecuadas.</p>
+            <dl><div><dt>Proyecto</dt><dd id="guide-project"></dd></div><div><dt>Ubicación</dt><dd id="guide-location"></dd></div><div><dt>Base</dt><dd id="guide-base"></dd></div></dl>
+            <a class="button" id="guide-whatsapp" href="https://wa.me/524772561695" target="_blank" rel="noopener">Continuar por WhatsApp <span>→</span></a>
+            <button class="guide-restart" id="guide-restart" type="button">Empezar de nuevo</button>
+          </section>
+          <div class="guide-actions" id="guide-actions"><button id="guide-back" type="button" disabled>Anterior</button><button id="guide-next" type="button" disabled>Siguiente <span>→</span></button></div>
+        </form>
+      </div>
     </section>
 
     <section class="projects-section" id="proyectos">
@@ -154,12 +203,12 @@
 
   <dialog class="credits-dialog" id="credits-dialog" aria-labelledby="credits-title">
     <button class="credits-close" type="button" aria-label="Cerrar créditos">×</button>
-    <div class="credits-hero"><span class="credits-kicker">Seis toques desbloquearon</span><img class="procesalab-logo" src="/assets/brand/procesalab-horizontal.png" alt="ProcesaLab"><p>Diseño, desarrollo y evolución digital.</p><span class="current-version">Herraidea · v<span id="credits-version">1.16.1</span></span></div>
+    <div class="credits-hero"><span class="credits-kicker">Seis toques desbloquearon</span><img class="procesalab-logo" src="/assets/brand/procesalab-horizontal.png" alt="ProcesaLab"><p>Diseño, desarrollo y evolución digital.</p><span class="current-version">Herraidea · v<span id="credits-version">1.17.0</span></span></div>
     <div class="credits-content"><h2 id="credits-title">Construido versión a versión.</h2><p>Cada actualización queda documentada para que el proyecto conserve contexto, decisiones y continuidad.</p><div class="version-list" id="version-list"></div></div>
   </dialog>
 
-  <footer><div class="section-inner"><a class="footer-brand" href="#inicio" aria-label="Herraidea, volver al inicio"><img src="/assets/logo-light-nodot.png" alt="Herraidea"><i aria-hidden="true"></i></a><nav><a href="#catalogo">Catálogo</a><a href="#nosotros">Nosotros</a><a href="#envios">Envíos</a><a href="#contacto">Contacto</a></nav><span>León, Gto. · Desde 2013</span></div></footer>
+  <footer><div class="section-inner"><a class="footer-brand" href="#inicio" aria-label="Herraidea, volver al inicio"><img src="/assets/logo-light-nodot.png" alt="Herraidea"><i aria-hidden="true"></i></a><nav><a href="#asesoria">Asesoría</a><a href="#catalogo">Catálogo</a><a href="#nosotros">Nosotros</a><a href="#envios">Envíos</a><a href="#contacto">Contacto</a></nav><span>León, Gto. · Desde 2013</span></div></footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="/hrd-map.js?v=1-10"></script><script src="/sound.js?v=1-10"></script><script src="/hero.js?v=1-16"></script><script type="module" src="/project-3d-v2.js?v=1-15"></script>
+  <script src="/hrd-map.js?v=1-10"></script><script src="/sound.js?v=1-10"></script><script src="/hero.js?v=1-17"></script><script type="module" src="/project-3d-v2.js?v=1-15"></script>
 </body>
 </html>

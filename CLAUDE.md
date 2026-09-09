@@ -1,18 +1,18 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.16.2**
+Versión actual: **1.17.0**
 
 Sitio de producción: `https://herraidea-landing.vercel.app/`
 
 ## Estado actual
 
-Landing estática para Herraidea, enfocada en barandales, soluciones y fabricación a la medida. Incluye hero de producto con transición de día a noche, presentación editorial de capacidades, carrusel de soluciones y proyectos con experiencias 3D ampliables, diseño sonoro opcional, catálogo desplegable de 82 herrajes y configuraciones, cobertura animada, ventanas con planos y especificaciones, historia institucional animada, contacto por WhatsApp y PWA.
+Landing estática para Herraidea, enfocada en barandales, soluciones y fabricación a la medida. Incluye hero de producto con transición de día a noche, presentación editorial de capacidades, canalizador básico de proyectos sin base de datos, carrusel de soluciones y proyectos con experiencias 3D ampliables, diseño sonoro opcional, catálogo desplegable de 82 herrajes y configuraciones, cobertura animada, ventanas con planos y especificaciones, historia institucional animada, contacto por WhatsApp y PWA.
 
 ## Archivos principales
 
 - `index.html`: estructura completa del sitio y diálogos.
 - `styles.css`: estilos, responsive y animaciones.
-- `hero.js`: scroll, catálogo, ventanas, WhatsApp y easter egg.
+- `hero.js`: scroll, catálogo, canalizador, ventanas, WhatsApp y easter egg.
 - `sound.js`: motor Web Audio, preferencia del usuario y señales sonoras.
 - `hrd-3d.js`: geometría, materiales, iluminación y animación Three.js.
 - `hrd-map.js`: mapa animado de cobertura nacional desde León.

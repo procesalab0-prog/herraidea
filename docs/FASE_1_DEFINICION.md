@@ -61,8 +61,8 @@ La landing se actualiza progresivamente con la información y los recursos ya co
 ### Activos existentes
 
 - Landing publicada con animaciones, modelos 3D, sonido y adaptación móvil.
-- Dos experiencias interactivas recibidas: sistema de postes con clips, vidrio y pasamanos con 46 piezas y conjuntos; y Futbolito Herraidea con modelo GLB final de 190 piezas y conjuntos.
-- Catálogo de 66 productos y respaldo público recuperado de Jimdo.
+- Tres experiencias interactivas recibidas: sistema de postes con clips, vidrio y pasamanos; poste HRD 1518; y Futbolito Herraidea con modelo GLB final de 190 piezas y conjuntos.
+- Catálogo de 82 herrajes y configuraciones y respaldo público recuperado de Jimdo.
 - Catálogo Herraidea 2023 completo de 12 páginas, conservado como fuente documental y pendiente de conciliación con Jimdo.
 - Cuatro referencias visuales archivadas para definir tipografía editorial, interfaz modular y tratamiento elegante del acero inoxidable.
 - Fotografías, planos y especificaciones parciales.
@@ -80,7 +80,7 @@ La landing se actualiza progresivamente con la información y los recursos ya co
 - Las fotografías y demás activos visuales se recibirán e integrarán progresivamente.
 - Herraidea cuenta con dos vendedores; esta cantidad es información interna y no se mostrará en la web.
 - La dirección visual conservará negro, blanco, grises metálicos y rojo Herraidea, con tipografía protagonista, composición editorial y fotografía macro de producto.
-- La sección 3D se presenta como un carrusel grande de soluciones. Comienza con el sistema de postes con clips y vidrio por representar el negocio principal, y conserva el Futbolito Herraidea como proyecto especial. Ambos se abren en un visor ampliado con despiece, armado, giro, zoom y vista de detalle.
+- La sección 3D se presenta como un carrusel grande de soluciones. Comienza con el sistema de postes con clips y vidrio por representar el negocio principal, continúa con el poste HRD 1518 y conserva el Futbolito Herraidea como proyecto especial. Las tres experiencias se abren en un visor ampliado con despiece, armado, giro, zoom y vista de detalle.
 - La implementación visible comenzó con el reposicionamiento del hero y una sección editorial de soluciones y capacidades; las fotografías recibidas se integrarán progresivamente.
 
 ## 4. Información crítica que debe entregar Herraidea
@@ -99,7 +99,7 @@ La landing se actualiza progresivamente con la información y los recursos ya co
 
 - [x] Catálogo Herraidea 2023 recibido y resguardado completo.
 - [ ] Conciliar productos, variantes y códigos del PDF de 2023 con el catálogo recuperado de Jimdo.
-- [ ] Confirmar cuáles de los 66 productos siguen vigentes.
+- [ ] Confirmar cuáles de los 82 herrajes y configuraciones siguen vigentes.
 - [ ] Lista definitiva de familias.
 - [ ] Códigos y nombres comerciales correctos.
 - [ ] Confirmar la escritura y significado comercial de “Soleva”.
@@ -113,13 +113,13 @@ La landing se actualiza progresivamente con la información y los recursos ya co
 ### D. Canalizador de proyectos
 
 - [x] Iniciar con los casos más comunes y ampliar las rutas después.
-- [ ] Tipos de proyecto que pueden elegirse.
-- [ ] Aplicaciones disponibles.
-- [ ] Bases y condiciones de montaje.
-- [ ] Preguntas necesarias por cada ruta.
+- [x] Tipos iniciales: residencial, ejecutivo y comercial.
+- [x] Primera clasificación por ubicación: interior o exterior.
+- [x] Bases iniciales: concreto, aluminio y herrería.
+- [x] Preguntas iniciales definidas para la primera versión.
 - [ ] Recomendación correspondiente a cada combinación.
 - [ ] Casos que requieren revisión técnica obligatoria.
-- [ ] Datos que se enviarán por WhatsApp.
+- [x] Datos iniciales enviados por WhatsApp: tipo de proyecto, ubicación y base de montaje.
 
 ### E. Calculadora por múltiplos
 
