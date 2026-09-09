@@ -2,7 +2,7 @@
 
 Documento vivo para consolidar el nuevo posicionamiento, la estructura futura del sitio y las decisiones aprobadas. Las ideas anotadas aquí no deben implementarse automáticamente: primero se convierten en alcance y se aprueban.
 
-Última actualización: 2026-09-08
+Última actualización: 2026-09-09
 
 ## 1. Objetivo principal
 
@@ -101,6 +101,18 @@ Usar estas expresiones como lenguaje comercial principal:
 
 La palabra “ingeniería” puede aparecer cuando el contexto técnico la requiera, pero no será el concepto principal de comunicación.
 
+### Claridad inmediata del hero — idea por evaluar después
+
+El hero actual combina la fotografía de un barandal, el encabezado **“Tu proyecto no termina en el catálogo”**, la etiqueta **“Diseño y fabricación”** y un párrafo que explica que Herraidea diseña y fabrica barandales, herrajes y soluciones de acero inoxidable a la medida.
+
+La composición permite entender el giro general, pero la etiqueta “Diseño y fabricación” puede resultar amplia para alguien que conoce la empresa por primera vez. En una revisión posterior se evaluará si conviene hacer explícita la categoría desde los primeros segundos, sin cambiar el concepto principal ni rediseñar el hero.
+
+Texto candidato para probar:
+
+> **Barandales y soluciones en acero inoxidable**
+
+Antes de sustituir el texto actual se deberán comparar ambas versiones en computadora y teléfono, revisar su longitud y confirmar que no se pierda el lenguaje aprobado de **“Diseño y fabricación”**, que puede conservarse en otra parte de la misma sección.
+
 ### Llamada principal propuesta
 
 > **¿Necesitas una medida o pieza especial?**  
@@ -117,7 +129,7 @@ La palabra “ingeniería” puede aparecer cuando el contexto técnico la requi
 - Mensaje de fabricación propia y torno CNC.
 - Carrusel grande de soluciones y proyectos con experiencias 3D ampliables.
 - Materiales de acero y cristal azul en los modelos 3D.
-- Catálogo desplegable con 66 productos en cuatro familias.
+- Catálogo desplegable con 82 herrajes y configuraciones en cuatro familias.
 - Catálogo Herraidea 2023 de 12 páginas conservado como fuente adicional; debe conciliarse con el respaldo de Jimdo antes de definir el inventario vigente.
 - Fichas con fotografías, planos y especificaciones disponibles.
 - Información institucional: historia, misión, visión y valores.
