@@ -1,6 +1,6 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.16.0**
+Versión actual: **1.16.1**
 
 Sitio de producción: `https://herraidea-landing.vercel.app/`
 
@@ -19,6 +19,7 @@ Landing estática para Herraidea, enfocada en barandales, soluciones y fabricaci
 - `project-3d-v2.js`: carrusel, visor reutilizable para diferentes soluciones, interacción táctil y control de sus animaciones de despiece.
 - `assets/fabricacion/`: imágenes optimizadas de maquinaria, producción y empaque recibidas para la primera etapa.
 - `assets/hero-barandal-v2-day.png` y `assets/hero-barandal-v2-night.png`: escenas vigentes del hero, fieles al sistema de postes, clips y cristal.
+- `assets/brand/herraidea-social-v2.png`: tarjeta social vigente para WhatsApp y redes, alineada con el nuevo hero y el mensaje principal.
 - `assets/hero-barandal.png` y `assets/hero-night.png`: pareja anterior del hero, reutilizada en la composición animada de “Nuestra evolución”.
 - `assets/projects/futbolito/`: modelo GLB y portada de estudio del Futbolito Herraidea.
 - `assets/projects/clip-system/`: modelo GLB y portada de estudio de la solución de postes con clips y vidrio.

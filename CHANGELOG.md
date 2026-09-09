@@ -1,5 +1,12 @@
 # Historial de versiones — Herraidea
 
+## 1.16.1 — 2026-09-08
+
+- Se corrigió la integridad de los dos archivos PNG del hero que impedía que el navegador los decodificara en producción.
+- Se añadió una versión de caché a ambas escenas para que teléfonos y navegadores descarten inmediatamente los archivos defectuosos.
+- La imagen que aparece al compartir por WhatsApp y redes ahora utiliza el nuevo barandal y el mensaje “Tu proyecto no termina en el catálogo”.
+- Se actualizaron el título y la descripción visual de la tarjeta social.
+
 ## 1.16.0 — 2026-09-08
 
 - El hero presenta ahora el barandal con postes y clips en dos escenas fieles al producto: atardecer y noche.

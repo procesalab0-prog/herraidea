@@ -1,7 +1,8 @@
 {
-  "current": "1.16.0",
+  "current": "1.16.1",
   "studio": "ProcesaLab",
   "versions": [
+    {"version":"1.16.1","date":"2026-09-08","title":"Hero corregido y nueva tarjeta social","summary":"Se repararon las escenas del hero en producción y WhatsApp ahora muestra el nuevo barandal con el mensaje principal actualizado."},
     {"version":"1.16.0","date":"2026-09-08","title":"Hero de producto y evolución animada","summary":"Nuevas escenas de barandal de día y noche en el hero; las imágenes anteriores pasan a Nuestra evolución con una presentación institucional compacta y animada."},
     {"version":"1.15.0","date":"2026-09-08","title":"HRD 1518 y portadas de soluciones","summary":"El carrusel suma el HRD 1518 interactivo, portadas de estudio para la nueva pieza y el Futbolito, y el código HRD 1525 en Postes con clips."},
     {"version":"1.14.0","date":"2026-09-08","title":"Catálogo ampliado de postes","summary":"18 configuraciones de postes integradas con las mismas tarjetas y fichas técnicas, sin publicar precios."},

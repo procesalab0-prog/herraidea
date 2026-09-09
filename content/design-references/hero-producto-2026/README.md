@@ -8,3 +8,5 @@ Pareja de imágenes aprobada para el hero principal de Herraidea:
 Ambas imágenes conservan exactamente el producto y el encuadre recibidos. La transición se controla por scroll desde `hero.js`.
 
 La pareja anterior (`assets/hero-barandal.png` y `assets/hero-night.png`) se conserva y se utiliza en la sección “Nuestra evolución”.
+
+La tarjeta social `assets/brand/herraidea-social-v2.png` conserva la escena diurna, la identidad de Herraidea y el mensaje principal para su vista previa en WhatsApp y redes.
