@@ -26,7 +26,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Archivo+Narrow:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=1-17">
+  <link rel="stylesheet" href="/styles.css?v=1-18">
 </head>
 <body>
   <header class="site-header">
@@ -72,12 +72,12 @@
     <section class="guide-section" id="asesoria">
       <div class="section-inner guide-heading">
         <span class="eyebrow">Encuentra la solución para tu proyecto</span>
-        <div><h2>Cuéntanos dónde<br><em>va a comenzar.</em></h2><p>Responde tres preguntas sencillas. Al terminar prepararemos la información para que un asesor de Herraidea revise tu proyecto contigo.</p></div>
+        <div><h2>Cuéntanos dónde<br><em>va a comenzar.</em></h2><p>Responde cuatro preguntas sencillas. Al terminar te mostraremos un punto de partida para que un asesor de Herraidea revise tu proyecto contigo.</p></div>
       </div>
       <div class="section-inner guide-shell">
         <aside class="guide-context">
           <span>Asesoría inicial</span>
-          <strong id="guide-progress-label">01 / 03</strong>
+          <strong id="guide-progress-label">01 / 04</strong>
           <div class="guide-progress" aria-hidden="true"><i id="guide-progress-bar"></i></div>
           <p>No necesitas conocer códigos ni nombres de piezas. Esta guía no sustituye la revisión técnica.</p>
         </aside>
@@ -105,16 +105,36 @@
               <label><input type="radio" name="base" value="Herrería"><span><b>Herrería</b><small>Estructura o bastidor metálico</small></span></label>
             </div>
           </fieldset>
+          <fieldset class="guide-step" data-guide-step="3" hidden>
+            <legend><small>Aplicación</small>¿Qué necesitas resolver?</legend>
+            <div class="guide-options guide-options-applications">
+              <label><input type="radio" name="aplicacion" value="Barandal"><span><b>Barandal</b><small>Protección para un borde o desnivel</small></span></label>
+              <label><input type="radio" name="aplicacion" value="Escalera"><span><b>Escalera</b><small>Pasamanos y protección en recorrido</small></span></label>
+              <label><input type="radio" name="aplicacion" value="Balcón o terraza"><span><b>Balcón o terraza</b><small>Solución para un espacio abierto</small></span></label>
+              <label><input type="radio" name="aplicacion" value="Cancel o división"><span><b>Cancel o división</b><small>Unión y soporte para paneles de vidrio</small></span></label>
+              <label><input type="radio" name="aplicacion" value="Pieza o proyecto especial"><span><b>Proyecto especial</b><small>Algo que necesita fabricarse a la medida</small></span></label>
+              <label><input type="radio" name="aplicacion" value="No estoy seguro"><span><b>No estoy seguro</b><small>Quiero revisarlo con un asesor</small></span></label>
+            </div>
+          </fieldset>
           <section class="guide-result" id="guide-result" hidden aria-live="polite">
             <span class="eyebrow">Listo para revisar</span>
             <h3>Ya tenemos un buen punto de partida.</h3>
             <p>Un asesor puede ayudarte a definir el sistema, las medidas y las piezas adecuadas.</p>
-            <dl><div><dt>Proyecto</dt><dd id="guide-project"></dd></div><div><dt>Ubicación</dt><dd id="guide-location"></dd></div><div><dt>Base</dt><dd id="guide-base"></dd></div></dl>
+            <dl><div><dt>Proyecto</dt><dd id="guide-project"></dd></div><div><dt>Ubicación</dt><dd id="guide-location"></dd></div><div><dt>Base</dt><dd id="guide-base"></dd></div><div><dt>Necesidad</dt><dd id="guide-application"></dd></div></dl>
+            <article class="guide-suggestion">
+              <figure><img id="guide-solution-image" src="/assets/projects/clip-system/portada-estudio.jpg" alt="Sistema de barandal con postes, clips y vidrio"></figure>
+              <div><span id="guide-solution-kicker">Punto de partida · HRD 1525</span><h4 id="guide-solution-title">Postes con clips + vidrio</h4><p id="guide-solution-description">Un sistema completo que reúne postes, pinzas, cristal y pasamanos.</p><ul id="guide-solution-parts"><li>Postes</li><li>Clips o pinzas</li><li>Pasamanos y fijaciones</li></ul><a class="text-link" id="guide-solution-link" href="#proyectos" data-guide-project="clips">Explorar solución 3D <span>→</span></a></div>
+            </article>
+            <small class="guide-disclaimer">Esta es una sugerencia inicial. La selección final depende de medidas, tipo de vidrio y condiciones de instalación.</small>
             <a class="button" id="guide-whatsapp" href="https://wa.me/524772561695" target="_blank" rel="noopener">Continuar por WhatsApp <span>→</span></a>
             <button class="guide-restart" id="guide-restart" type="button">Empezar de nuevo</button>
           </section>
           <div class="guide-actions" id="guide-actions"><button id="guide-back" type="button" disabled>Anterior</button><button id="guide-next" type="button" disabled>Siguiente <span>→</span></button></div>
         </form>
+      </div>
+      <div class="section-inner guide-new-project">
+        <div><span class="eyebrow">Fabricación a la medida</span><h3>¿Tienes otro proyecto en mente?</h3><p>Puede ser una pieza, estructura, muestra o idea que todavía no existe en el catálogo. Cuéntanos qué quieres desarrollar y lo revisamos contigo.</p></div>
+        <form id="new-project-form"><label for="new-project-message">Describe brevemente tu idea</label><textarea id="new-project-message" name="proyecto-nuevo" rows="4" placeholder="Ej. Tengo una fotografía, una medida especial o necesito fabricar una estructura…" required></textarea><button class="button" type="submit">Cuéntanos tu idea <span>→</span></button></form>
       </div>
     </section>
 
@@ -203,12 +223,12 @@
 
   <dialog class="credits-dialog" id="credits-dialog" aria-labelledby="credits-title">
     <button class="credits-close" type="button" aria-label="Cerrar créditos">×</button>
-    <div class="credits-hero"><span class="credits-kicker">Seis toques desbloquearon</span><img class="procesalab-logo" src="/assets/brand/procesalab-horizontal.png" alt="ProcesaLab"><p>Diseño, desarrollo y evolución digital.</p><span class="current-version">Herraidea · v<span id="credits-version">1.17.0</span></span></div>
+    <div class="credits-hero"><span class="credits-kicker">Seis toques desbloquearon</span><img class="procesalab-logo" src="/assets/brand/procesalab-horizontal.png" alt="ProcesaLab"><p>Diseño, desarrollo y evolución digital.</p><span class="current-version">Herraidea · v<span id="credits-version">1.18.0</span></span></div>
     <div class="credits-content"><h2 id="credits-title">Construido versión a versión.</h2><p>Cada actualización queda documentada para que el proyecto conserve contexto, decisiones y continuidad.</p><div class="version-list" id="version-list"></div></div>
   </dialog>
 
   <footer><div class="section-inner"><a class="footer-brand" href="#inicio" aria-label="Herraidea, volver al inicio"><img src="/assets/logo-light-nodot.png" alt="Herraidea"><i aria-hidden="true"></i></a><nav><a href="#asesoria">Asesoría</a><a href="#catalogo">Catálogo</a><a href="#nosotros">Nosotros</a><a href="#envios">Envíos</a><a href="#contacto">Contacto</a></nav><span>León, Gto. · Desde 2013</span></div></footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="/hrd-map.js?v=1-10"></script><script src="/sound.js?v=1-10"></script><script src="/hero.js?v=1-17"></script><script type="module" src="/project-3d-v2.js?v=1-15"></script>
+  <script src="/hrd-map.js?v=1-10"></script><script src="/sound.js?v=1-10"></script><script src="/hero.js?v=1-18"></script><script type="module" src="/project-3d-v2.js?v=1-15"></script>
 </body>
 </html>
