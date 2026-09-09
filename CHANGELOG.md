@@ -1,5 +1,10 @@
 # Historial de versiones — Herraidea
 
+## 1.18.1 — 2026-09-09
+
+- El tipo de proyecto “Ejecutivo” del canalizador se sustituyó por “Turístico”.
+- La nueva opción contempla hoteles, Airbnb y desarrollos turísticos.
+
 ## 1.18.0 — 2026-09-09
 
 - El canalizador suma una cuarta pregunta para distinguir barandales, escaleras, balcones, divisiones y proyectos especiales.
