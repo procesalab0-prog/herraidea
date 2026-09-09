@@ -1,12 +1,12 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.17.0**
+Versión actual: **1.18.0**
 
 Sitio de producción: `https://herraidea-landing.vercel.app/`
 
 ## Estado actual
 
-Landing estática para Herraidea, enfocada en barandales, soluciones y fabricación a la medida. Incluye hero de producto con transición de día a noche, presentación editorial de capacidades, canalizador básico de proyectos sin base de datos, carrusel de soluciones y proyectos con experiencias 3D ampliables, diseño sonoro opcional, catálogo desplegable de 82 herrajes y configuraciones, cobertura animada, ventanas con planos y especificaciones, historia institucional animada, contacto por WhatsApp y PWA.
+Landing estática para Herraidea, enfocada en barandales, soluciones y fabricación a la medida. Incluye hero de producto con transición de día a noche, presentación editorial de capacidades, canalizador visual de proyectos sin base de datos con sugerencias iniciales, captación de proyectos fuera de catálogo, carrusel de soluciones y proyectos con experiencias 3D ampliables, diseño sonoro opcional, catálogo desplegable de 82 herrajes y configuraciones, cobertura animada, ventanas con planos y especificaciones, historia institucional animada, contacto por WhatsApp y PWA.
 
 ## Archivos principales
 
