@@ -220,7 +220,9 @@ La animación deberá demostrar fabricación a la medida: el barandal cambiará 
 
 La experiencia se diseñará para escritorio y teléfono, manteniendo el modelo centrado, textos legibles, progreso por capítulos, sonido opcional y una alternativa con movimiento reducido. La especificación completa queda en `docs/RECORRIDO_3D_SOLUCIONES.md`.
 
-Como **opción de interfaz**, se conserva la referencia del escaparate interactivo de Apple compartida el 9 de septiembre de 2026. Su principal valor para Herraidea no es copiar la composición ni el producto, sino la sencillez de sus controles: botones pequeños, redondeados, de bajo contraste y con etiquetas breves, que permiten cambiar de vista sin competir con el modelo principal. Esta alternativa podrá evaluarse posteriormente para navegar entre armado, despiece, componentes, fijación y acabados.
+Como **opción de interfaz**, se conserva la referencia del escaparate interactivo de Apple compartida el 9 de septiembre de 2026. Su principal valor para Herraidea no es copiar la composición ni el producto, sino la sencillez de sus controles: botones pequeños, redondeados, de bajo contraste y con etiquetas breves, que permiten cambiar de vista sin competir con el modelo principal.
+
+También se conserva como opción el diseño general del visor: una superficie amplia y limpia, cercana a pantalla completa, con una columna compacta de controles a la izquierda y el modelo 3D ocupando la mayor parte del espacio a la derecha. Solo la opción activa despliega su explicación; las demás permanecen como cápsulas discretas. Esta alternativa podrá evaluarse posteriormente para navegar entre armado, despiece, componentes, fijación y acabados, y deberá adaptarse en teléfono colocando el modelo arriba y los controles debajo sin reducir demasiado la pieza.
 
 ## 6. Flujo de captación propuesto
 
