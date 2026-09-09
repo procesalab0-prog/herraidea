@@ -4,7 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="description" content="Herraidea diseña y fabrica barandales, herrajes y soluciones de acero inoxidable a la medida desde León, Guanajuato.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="theme-color" content="#ffffff">
+  <link rel="canonical" href="https://herraidea-landing.vercel.app/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Herraidea">
   <meta property="og:title" content="Herraidea | Soluciones a la medida">
@@ -26,13 +28,32 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Archivo+Narrow:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=1-18">
+  <link rel="stylesheet" href="/styles.css?v=1-19">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Herraidea",
+      "url": "https://herraidea-landing.vercel.app/",
+      "logo": "https://herraidea-landing.vercel.app/assets/logo-gray-nodot.png",
+      "description": "Diseño y fabricación de barandales, herrajes y soluciones de acero inoxidable a la medida.",
+      "telephone": "+52 477 790 7594",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Murales 212-A, Industrial la Capilla",
+        "postalCode": "37297",
+        "addressLocality": "León",
+        "addressRegion": "Guanajuato",
+        "addressCountry": "MX"
+      }
+    }
+  </script>
 </head>
 <body>
   <header class="site-header">
     <a class="brand" href="#inicio" aria-label="Herraidea, inicio"><img src="/assets/logo-gray-nodot.png" alt="Herraidea"><i></i></a>
     <div class="header-controls"><button class="sound-toggle" id="sound-toggle" type="button" aria-pressed="false" aria-label="Activar sonido"><span aria-hidden="true">♩</span><b>Sonido</b></button><button class="menu-toggle" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span><b>Menú</b></button>
-      <nav id="main-nav" class="main-nav"><a href="#soluciones">Soluciones</a><a href="#asesoria">Asesoría</a><a href="#proyectos">Proyectos</a><a href="#catalogo">Catálogo</a><a class="nav-contact" href="#contacto">Cuéntanos tu proyecto</a></nav>
+      <nav id="main-nav" class="main-nav"><a href="#soluciones">Soluciones</a><a href="#asesoria">Asesoría</a><a href="#proyectos">Proyectos</a><a href="#catalogo">Catálogo</a><a href="#recursos">Recursos</a><a class="nav-contact" href="#contacto">Cuéntanos tu proyecto</a></nav>
     </div>
   </header>
 
@@ -171,6 +192,24 @@
       <div id="catalog-families" class="catalog-families"><p>Cargando catálogo…</p></div>
     </div></section>
 
+    <section class="resources-section" id="recursos">
+      <div class="section-inner resources-heading">
+        <span class="eyebrow">Recursos técnicos</span>
+        <div><h2>Información para<br><em>elegir mejor.</em></h2><p>Consulta el catálogo general o abre las fichas disponibles en la web para revisar fotografías, medidas y especificaciones antes de hablar con un asesor.</p></div>
+      </div>
+      <div class="section-inner resources-grid">
+        <article class="resource-card resource-download">
+          <div><span>PDF · 12 páginas · 5.1 MB</span><h3>Catálogo<br>Herraidea 2023.</h3><p>Documento general de referencia con familias, modelos e información comercial disponible al momento de su publicación.</p></div>
+          <a class="resource-action" href="/content/source-documents/catalogo-herraidea-2023.pdf" download><span>Descargar catálogo</span><b aria-hidden="true">↓</b></a>
+        </article>
+        <article class="resource-card resource-catalog">
+          <div><span>Consulta en la web</span><h3>82 fichas<br>de producto.</h3><p>Explora las familias vigentes y abre cada modelo para consultar las fotografías, planos y especificaciones que ya están disponibles.</p></div>
+          <a class="resource-action" href="#catalogo"><span>Explorar fichas</span><b aria-hidden="true">→</b></a>
+        </article>
+      </div>
+      <p class="section-inner resources-note">Las fichas descargables por producto, archivos CAD/DWG y manuales de instalación se incorporarán conforme Herraidea valide y autorice cada recurso.</p>
+    </section>
+
     <section class="about-section" id="nosotros"><div class="section-inner about-grid">
       <div><span class="eyebrow">Quiénes somos</span><h2>Del aluminio al inoxidable, en León desde 2013.</h2><p class="lead">Diseñamos, fabricamos y distribuimos soluciones confiables para instaladores de vidrio templado en todo México.</p></div>
       <div class="timeline">
@@ -223,11 +262,11 @@
 
   <dialog class="credits-dialog" id="credits-dialog" aria-labelledby="credits-title">
     <button class="credits-close" type="button" aria-label="Cerrar créditos">×</button>
-    <div class="credits-hero"><span class="credits-kicker">Seis toques desbloquearon</span><img class="procesalab-logo" src="/assets/brand/procesalab-horizontal.png" alt="ProcesaLab"><p>Diseño, desarrollo y evolución digital.</p><span class="current-version">Herraidea · v<span id="credits-version">1.18.1</span></span></div>
+    <div class="credits-hero"><span class="credits-kicker">Seis toques desbloquearon</span><img class="procesalab-logo" src="/assets/brand/procesalab-horizontal.png" alt="ProcesaLab"><p>Diseño, desarrollo y evolución digital.</p><span class="current-version">Herraidea · v<span id="credits-version">1.19.0</span></span></div>
     <div class="credits-content"><h2 id="credits-title">Construido versión a versión.</h2><p>Cada actualización queda documentada para que el proyecto conserve contexto, decisiones y continuidad.</p><div class="version-list" id="version-list"></div></div>
   </dialog>
 
-  <footer><div class="section-inner"><a class="footer-brand" href="#inicio" aria-label="Herraidea, volver al inicio"><img src="/assets/logo-light-nodot.png" alt="Herraidea"><i aria-hidden="true"></i></a><nav><a href="#asesoria">Asesoría</a><a href="#catalogo">Catálogo</a><a href="#nosotros">Nosotros</a><a href="#envios">Envíos</a><a href="#contacto">Contacto</a></nav><span>León, Gto. · Desde 2013</span></div></footer>
+  <footer><div class="section-inner"><a class="footer-brand" href="#inicio" aria-label="Herraidea, volver al inicio"><img src="/assets/logo-light-nodot.png" alt="Herraidea"><i aria-hidden="true"></i></a><nav><a href="#asesoria">Asesoría</a><a href="#catalogo">Catálogo</a><a href="#recursos">Recursos</a><a href="#nosotros">Nosotros</a><a href="#envios">Envíos</a><a href="#contacto">Contacto</a></nav><span>León, Gto. · Desde 2013</span></div></footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="/hrd-map.js?v=1-10"></script><script src="/sound.js?v=1-10"></script><script src="/hero.js?v=1-18"></script><script type="module" src="/project-3d-v2.js?v=1-15"></script>
 </body>

@@ -386,3 +386,28 @@ body.project-open{overflow:hidden}
 }
 
 @media(prefers-reduced-motion:reduce){.guide-step,.guide-result,.guide-progress i,.guide-options span{animation:none;transition:none}}
+
+/* v1.19 · primera entrega de recursos técnicos */
+.resources-section{padding:clamp(84px,11vw,150px) 0;background:#fff;scroll-margin-top:var(--header)}
+.resources-heading{display:grid;gap:28px;margin-bottom:clamp(42px,6vw,72px)}
+.resources-heading>div{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(280px,.8fr);align-items:end;gap:clamp(36px,8vw,120px)}
+.resources-heading h2{font-size:clamp(54px,7.7vw,102px);line-height:.85;letter-spacing:-.06em;margin:0;max-width:10ch}
+.resources-heading h2 em{color:var(--red);font-style:normal}
+.resources-heading p{max-width:45ch;margin:0 0 .4em;color:var(--muted);font-size:clamp(16px,1.5vw,20px);line-height:1.65}
+.resources-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(12px,1.5vw,20px)}
+.resource-card{min-height:480px;padding:clamp(28px,4vw,54px);display:flex;flex-direction:column;justify-content:space-between;border:1px solid var(--line);overflow:hidden;position:relative}
+.resource-card>div>span{display:block;margin-bottom:clamp(36px,6vw,72px);color:#8a9199;font:600 11px 'Archivo Narrow';letter-spacing:.2em;text-transform:uppercase}
+.resource-card h3{margin:0 0 20px;font-size:clamp(42px,5vw,68px);line-height:.88;letter-spacing:-.055em}
+.resource-card p{max-width:43ch;margin:0;color:var(--muted);font-size:15px;line-height:1.65}
+.resource-download{background:var(--ink);color:#fff;border-color:var(--ink)}
+.resource-download:before{content:"PDF";position:absolute;right:-.06em;top:-.2em;color:#ffffff08;font-size:clamp(150px,22vw,310px);font-weight:900;letter-spacing:-.1em;line-height:1;pointer-events:none}
+.resource-download p{color:#ffffffa8}
+.resource-download>div>span{color:#ffffff72}
+.resource-action{position:relative;z-index:1;margin-top:48px;min-height:64px;padding:0 4px 0 0;display:flex;align-items:center;justify-content:space-between;border-top:1px solid currentColor;font:700 13px 'Archivo Narrow';letter-spacing:.14em;text-transform:uppercase}
+.resource-action b{width:42px;height:42px;display:grid;place-items:center;border-radius:50%;background:var(--red);color:#fff;font-size:19px;transition:transform .25s}
+.resource-action:hover b{transform:translate(3px,-3px)}
+.resource-download .resource-action{border-color:#ffffff4a}
+.resource-catalog .resource-action{border-color:var(--line)}
+.resources-note{margin-top:24px;color:#777f86;font-size:12px;line-height:1.6}
+@media(max-width:900px){.resources-heading>div{grid-template-columns:1fr;gap:24px}.resources-heading h2{font-size:clamp(50px,12vw,76px)}.resources-grid{grid-template-columns:1fr}.resource-card{min-height:440px}}
+@media(max-width:640px){.resources-section{padding:74px 0}.resources-heading{margin-bottom:34px}.resources-heading h2{font-size:clamp(48px,14vw,64px)}.resources-grid{width:calc(100% - 32px);gap:10px}.resource-card{min-height:420px;padding:28px 22px}.resource-card>div>span{margin-bottom:54px}.resource-card h3{font-size:44px}.resources-note{width:calc(100% - 32px)}}

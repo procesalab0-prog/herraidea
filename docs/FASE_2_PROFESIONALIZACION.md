@@ -1,0 +1,37 @@
+# Fase 2 — Profesionalización
+
+Documento de seguimiento para convertir el contenido existente en recursos técnicos, páginas encontrables y evidencia comercial confiable.
+
+Estado: **iniciada**
+Inicio: 2026-09-09
+
+## 1. Primera entrega publicada
+
+- Centro de recursos técnicos integrado en la página principal.
+- Descarga directa del catálogo general Herraidea 2023 en PDF.
+- Acceso a las 82 fichas existentes con fotografías, planos y especificaciones disponibles.
+- Aviso claro sobre los recursos individuales que todavía requieren validación.
+- Primera base SEO: descripción, URL canónica, permiso de indexación y datos estructurados de la organización.
+
+## 2. Siguientes bloques que pueden avanzarse
+
+- Estructura y plantilla de fichas técnicas descargables.
+- Revisión y normalización visual de fotografías de producto.
+- Páginas independientes por aplicación y familia.
+- Casos de proyectos reales con alcance y permisos confirmados.
+- Recorrido específico para arquitectos y distribuidores.
+- Ampliación de SEO por páginas, productos y aplicaciones.
+
+## 3. Información necesaria para completar la fase
+
+- Productos vigentes y nomenclatura definitiva.
+- Datos técnicos validados por producto: medidas, material, acabado y vidrio compatible.
+- Archivos CAD, DWG, planos y manuales autorizados.
+- Productos relacionados y componentes de cada solución.
+- Fotografías correctas o vistas suficientes para normalizarlas sin alterar las piezas.
+- Proyectos y exposiciones con información comprobable y permiso de publicación.
+- Aplicaciones prioritarias para crear las primeras páginas SEO.
+
+## 4. Regla de publicación
+
+Un recurso podrá descargarse o presentarse como información técnica únicamente cuando sus datos hayan sido revisados por Herraidea. Los documentos generales anteriores se identificarán por su año y se conservarán como referencia, sin asumir que sustituyen la validación vigente de cada producto.

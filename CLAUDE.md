@@ -1,12 +1,12 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.18.1**
+Versión actual: **1.19.0**
 
 Sitio de producción: `https://herraidea-landing.vercel.app/`
 
 ## Estado actual
 
-Landing estática para Herraidea, enfocada en barandales, soluciones y fabricación a la medida. Incluye hero de producto con transición de día a noche, presentación editorial de capacidades, canalizador visual de proyectos sin base de datos con sugerencias iniciales, captación de proyectos fuera de catálogo, carrusel de soluciones y proyectos con experiencias 3D ampliables, diseño sonoro opcional, catálogo desplegable de 82 herrajes y configuraciones, cobertura animada, ventanas con planos y especificaciones, historia institucional animada, contacto por WhatsApp y PWA.
+Landing estática para Herraidea, enfocada en barandales, soluciones y fabricación a la medida. Incluye hero de producto con transición de día a noche, presentación editorial de capacidades, canalizador visual de proyectos sin base de datos con sugerencias iniciales, captación de proyectos fuera de catálogo, carrusel de soluciones y proyectos con experiencias 3D ampliables, diseño sonoro opcional, catálogo desplegable de 82 herrajes y configuraciones, primera sección de recursos técnicos, cobertura animada, ventanas con planos y especificaciones, historia institucional animada, contacto por WhatsApp y PWA.
 
 ## Archivos principales
 
@@ -39,6 +39,7 @@ Landing estática para Herraidea, enfocada en barandales, soluciones y fabricaci
 - `content/version-history.json`: versiones mostradas en el easter egg.
 - `docs/PLAN_MAESTRO.md`: estrategia viva, decisiones aprobadas e información pendiente para la siguiente etapa.
 - `docs/FASE_1_DEFINICION.md`: estado de la primera fase, información confirmada y cuestionario de validación para Herraidea.
+- `docs/FASE_2_PROFESIONALIZACION.md`: avance de recursos técnicos y SEO, próximos bloques y datos necesarios para completar la segunda fase.
 - `docs/FUENTE_CATALOGO_2023.md`: inventario preliminar, mapa de páginas y reglas para conciliar el PDF con Jimdo.
 - `docs/FUENTE_CATALOGO_POSTES_2026.md`: comparación con el catálogo vigente y detalle de las 18 configuraciones incorporadas sin precios.
 - `docs/DIRECCION_VISUAL.md`: principios aprobados para trasladar las referencias visuales a una identidad propia de Herraidea.

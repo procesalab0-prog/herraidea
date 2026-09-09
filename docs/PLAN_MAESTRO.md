@@ -436,13 +436,15 @@ No se debe presentar esta funcionalidad como parte del alcance actual ni constru
 
 ### Fase 2 — Profesionalización
 
-- Recursos técnicos descargables.
+- Recursos técnicos descargables; primera entrega publicada con el catálogo general 2023 y acceso a las 82 fichas disponibles.
 - Fichas de producto ampliadas.
 - Flujo interno supervisado para crear fotografías de estudio a partir de fotos reales.
 - Páginas por aplicación.
 - Proyectos reales.
 - Recorridos para arquitectos y distribuidores.
-- Base SEO estructurada.
+- Base SEO estructurada; primera entrega publicada con URL canónica, indexación y datos básicos de la organización.
+
+El seguimiento de esta fase queda documentado en `docs/FASE_2_PROFESIONALIZACION.md`.
 
 ### Fase 3 — Herramientas comerciales
 

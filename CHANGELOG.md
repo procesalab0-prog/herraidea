@@ -1,5 +1,13 @@
 # Historial de versiones — Herraidea
 
+## 1.19.0 — 2026-09-09
+
+- Comienza la fase de profesionalización con una sección de recursos técnicos.
+- El catálogo general Herraidea 2023 puede descargarse directamente en PDF.
+- Un segundo acceso conduce a las 82 fichas existentes con fotografías, planos y especificaciones disponibles.
+- La sección distingue los recursos publicados de los PDF individuales, CAD/DWG y manuales todavía pendientes de validación.
+- Se añadió URL canónica, directiva de indexación y datos estructurados básicos de la organización como primera base SEO.
+
 ## 1.18.1 — 2026-09-09
 
 - El tipo de proyecto “Ejecutivo” del canalizador se sustituyó por “Turístico”.
