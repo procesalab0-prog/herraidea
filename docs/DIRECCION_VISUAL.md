@@ -68,6 +68,7 @@ El acabado mostrado debe corresponder al producto real. No se convertirán pieza
 - Mostrar productos relacionados como módulos que forman un sistema completo.
 - Reservar composiciones tipo tablero o bandeja técnica para despieces, calculadora y fichas de soluciones.
 - Utilizar líneas finas, numeración, pequeñas etiquetas técnicas y movimiento suave para reforzar precisión.
+- Conservar como opción controles tipo cápsula muy sencillos: compactos, redondeados, de bajo contraste y con un signo o etiqueta breve. Deben sentirse secundarios frente al producto y evitar la apariencia de botones grandes o pesados.
 
 ## 6. Movimiento y teléfono
 
