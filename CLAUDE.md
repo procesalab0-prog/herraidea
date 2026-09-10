@@ -1,12 +1,12 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.21.1**
+Versión actual: **1.22.0**
 
 Sitio de producción: `https://herraidea-landing.vercel.app/`
 
 ## Estado actual
 
-Landing estática para Herraidea, enfocada en barandales, soluciones y fabricación a la medida. Incluye hero de producto con transición de día a noche y logotipo protagonista, presentación editorial de capacidades, carrusel de soluciones y proyectos con experiencias 3D ampliables, canalizador visual de proyectos sin base de datos con sugerencias iniciales, captación de proyectos fuera de catálogo, catálogo desplegable de 82 herrajes y configuraciones con pictogramas propios, catálogo 2026 descargable, diseño sonoro opcional, cobertura animada, ventanas con planos y especificaciones, historia institucional animada, contacto por WhatsApp y PWA.
+Landing estática para Herraidea, enfocada en barandales, soluciones y fabricación a la medida. Incluye hero de producto con transición de día a noche y logotipo protagonista, presentación editorial de capacidades, carrusel de soluciones y proyectos con experiencias 3D ampliables, calculadora visual de postes por tramos y esquinas compartidas, canalizador visual de proyectos sin base de datos con sugerencias iniciales, captación de proyectos fuera de catálogo, catálogo desplegable de 82 herrajes y configuraciones con pictogramas propios, catálogo 2026 descargable, diseño sonoro opcional, cobertura animada, ventanas con planos y especificaciones, historia institucional animada, contacto por WhatsApp y PWA.
 
 ## Archivos principales
 
@@ -17,6 +17,7 @@ Landing estática para Herraidea, enfocada en barandales, soluciones y fabricaci
 - `hrd-3d.js`: geometría, materiales, iluminación y animación Three.js.
 - `hrd-map.js`: mapa animado de cobertura nacional desde León.
 - `project-3d-v2.js`: carrusel, visor reutilizable para diferentes soluciones, interacción táctil y control de sus animaciones de despiece.
+- `calculator-3d.js`: cálculo de espacios y postes, manejo de tramos conectados y generación procedural de la vista 3D para las soluciones iniciales.
 - `assets/fabricacion/`: imágenes optimizadas de maquinaria, producción y empaque recibidas para la primera etapa.
 - `assets/hero-barandal-v2-day.png` y `assets/hero-barandal-v2-night.png`: escenas vigentes del hero, fieles al sistema de postes, clips y cristal.
 - `assets/brand/herraidea-social-v2.png`: tarjeta social vigente para WhatsApp y redes, alineada con el nuevo hero y el mensaje principal.
@@ -29,6 +30,7 @@ Landing estática para Herraidea, enfocada en barandales, soluciones y fabricaci
 - `assets/catalog/pictograms/`: recortes PNG transparentes de los pictogramas proporcionados por Herraidea para Pipetas, Postes, Conectores y Jaladeras.
 - `content/design-references/pictogramas-familias-herraidea.png`: lámina original recibida con los cuatro pictogramas, conservada sin modificaciones como fuente.
 - `content/source-documents/catalogo-herraidea-2023.pdf`: catálogo original completo recibido como fuente documental.
+- `content/source-documents/calculadora-postes/regla-separacion-postes.jpeg`: regla original recibida para separación, número de espacios, postes y ejemplo de obra real.
 - `content/source-documents/Futbolito-Herraidea-3D.zip`: paquete original del primer proyecto interactivo.
 - `content/source-documents/Herraidea-Pinza-Despiece.zip`: paquete fuente del sistema de postes, pinzas, vidrio y pasamanos.
 - `content/source-documents/Herraidea-HRD-1518-3D.zip`: paquete fuente del poste HRD 1518 con sus dos variantes.

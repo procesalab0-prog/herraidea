@@ -1,5 +1,14 @@
 # Historial de versiones — Herraidea
 
+## 1.22.0 — 2026-09-10
+
+- Se incorpora una calculadora visual para estimar postes a partir de uno o varios tramos conectados.
+- La distribución busca separaciones de 1.20 a 1.40 m, selecciona la alternativa más cercana a 1.30 m y advierte cuando un tramo requiere revisión.
+- Los postes de esquina se comparten entre el final de un tramo y el inicio del siguiente para evitar duplicarlos.
+- La vista 3D crece con las medidas y representa las cinco soluciones iniciales: clips con vidrio, tubo de 1/2 pulgada, cable, vidrio a presión y solera.
+- El resumen desglosa cada tramo y prepara la estimación para revisión por WhatsApp, sin precios ni afirmaciones estructurales.
+- La fotografía con la regla recibida se conserva como documento fuente y el plan de Fase 1 registra qué reglas ya fueron confirmadas y cuáles siguen pendientes.
+
 ## 1.21.1 — 2026-09-10
 
 - Los pictogramas experimentales se sustituyeron por los cuatro diseños proporcionados directamente por Herraidea.

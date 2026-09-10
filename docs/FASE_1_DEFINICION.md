@@ -125,13 +125,14 @@ La landing se actualiza progresivamente con la información y los recursos ya co
 
 ### E. Calculadora por múltiplos
 
-- [ ] Productos o soluciones que se podrán calcular.
-- [ ] Fórmula de cada cálculo.
-- [ ] Múltiplos y cantidades mínimas.
-- [ ] Reglas de redondeo.
-- [ ] Desperdicio recomendado.
+- [x] Soluciones iniciales: postes con clips y vidrio, tubo de 1/2", cable de acero, vidrio a presión y postes de solera; la estructura queda preparada para agregar más.
+- [x] Fórmula inicial: separación entre postes de 1.20 a 1.40 m, buscando la distribución más cercana a 1.30 m; postes = espacios + 1 en un tramo recto.
+- [x] Tramos conectados: cada esquina comparte el poste que termina un tramo y comienza el siguiente.
+- [x] Regla de redondeo inicial: elegir un número entero de espacios dentro del rango; si no existe, no superar 1.40 m y señalar revisión técnica.
+- [ ] Límites, cantidades mínimas y reglas particulares por solución.
+- [ ] Desperdicio recomendado, si aplica.
 - [ ] Productos complementarios.
-- [ ] Excepciones y advertencias.
+- [x] Advertencias iniciales: el resultado es estimado y no sustituye validación de medidas en obra, anclajes, cargas, normativa ni revisión técnica.
 
 ### F. Ventas y contacto
 

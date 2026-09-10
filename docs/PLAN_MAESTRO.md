@@ -353,11 +353,13 @@ La versión inicial puede construirse como un árbol de decisiones **sin base de
 
 Antes de diseñarlo se necesita definir con Herraidea todas las rutas, preguntas, respuestas permitidas y resultados recomendados. Una versión futura podría evolucionar hacia un configurador más técnico con reglas administrables.
 
-### Calculadora por múltiplos — propuesta
+### Calculadora visual de postes — primera versión implementada
 
-Incorporar una calculadora sencilla que convierta las medidas o módulos de un proyecto en cantidades estimadas de piezas, juegos o empaques. Puede funcionar sin base de datos si las reglas se definen previamente en el sitio.
+La regla inicial recibida por Herraidea calcula la distribución de postes por tramo. La separación buscada es de **1.20 a 1.40 m**; se elige el número entero de espacios más cercano a 1.30 m y cada tramo recto necesita un poste más que espacios. Ejemplos confirmados: 4.80 m se distribuyen en 4 espacios de 1.20 m y requieren 5 postes; 5.30 m se distribuyen en 4 espacios de 1.325 m y requieren 5 postes.
 
-Antes de desarrollarla, Herraidea debe especificar para cada solución qué se calcula, el múltiplo aplicable, unidad de venta, mínimo, redondeo, desperdicio recomendado y excepciones. El resultado será orientativo y deberá poder enviarse a un vendedor para revisión antes de cotizar.
+Cuando se agregan tramos conectados, el poste de cada esquina funciona como final del tramo anterior e inicio del siguiente, por lo que no se cuenta dos veces. La web ya permite agregar hasta ocho tramos, cambiar entre las soluciones iniciales y ver crecer una representación 3D procedural de postes, cristales, tubos o cables. El resultado puede enviarse por WhatsApp para revisión.
+
+Si ninguna división entera queda exactamente entre 1.20 y 1.40 m, la herramienta evita superar 1.40 m y muestra una advertencia para revisión técnica. La estimación no calcula estructura, anclajes, cargas, normativa, desperdicio, empaques ni precio. Esos datos y las reglas particulares de cada sistema deben validarse antes de ampliar el cálculo.
 
 ### Cobertura internacional — confirmada
 
@@ -434,7 +436,7 @@ No se debe presentar esta funcionalidad como parte del alcance actual ni constru
 - Navegación reorganizada.
 - Sección “Lo que podemos fabricar”.
 - Canalizador de proyectos sin base de datos; primera versión implementada con tipo de proyecto, ubicación, base de montaje y necesidad, seguida de una sugerencia visual orientativa y revisión humana por WhatsApp. Incluye una entrada separada para piezas, estructuras e ideas fuera del catálogo.
-- Calculadora básica por múltiplos con reglas previamente validadas.
+- Calculadora visual de postes implementada con tramos conectados, esquinas compartidas, separación objetivo de 1.20 a 1.40 m, representación 3D procedural y envío a WhatsApp para revisión.
 - Solicitud de proyecto mediante WhatsApp.
 - Reutilización cuidadosa de la experiencia visual actual.
 
@@ -480,7 +482,7 @@ Los datos técnicos de capacidad son complementarios y pueden incorporarse progr
 - Lista definitiva de familias y aplicaciones que necesitarán pictograma propio.
 - Proceso comercial real para revisar y cotizar un proyecto especial.
 - Herraidea cuenta con dos vendedores, dato que será interno; falta recibir el segundo número y definir cómo asignar consultas por zona, especialidad o tipo de cliente.
-- Reglas de la calculadora: múltiplos, unidades de venta, mínimos, redondeos, desperdicio y excepciones.
+- Reglas particulares pendientes de la calculadora: límites por solución, anclajes, cargas, normativa, desperdicio, empaques y productos complementarios. La distribución básica y la excepción de esquinas ya fueron definidas.
 - Tiempos habituales de desarrollo, prototipo y producción.
 - Cantidades mínimas, si existen.
 - Acabados disponibles.

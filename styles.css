@@ -441,3 +441,61 @@ body.project-open{overflow:hidden}
 #postes .product-info{background:#fff}
 @media(max-width:900px){.family-pictogram{order:1}.family-number{order:0}.family-title{order:2}.family-toggle>p{order:4}.family-mark{order:3}.catalog-shortcuts button{min-width:0}}
 @media(max-width:640px){.catalog-shortcuts button{grid-template-columns:30px 1fr;padding:8px 10px!important;font-size:11px}.catalog-shortcuts button img{width:30px;height:30px}.family-pictogram{flex-basis:50px;width:50px;height:50px}.family-title{flex:1}.family-toggle{gap:12px}.family-toggle>p{margin-left:0}.family-number{min-width:26px}.family-mark{width:38px;height:38px;flex-basis:38px}}
+
+/* v1.22 · calculadora visual de postes */
+.calculator-section{position:relative;overflow:hidden;padding:120px 0;background:#f3f5f6;color:var(--ink)}
+.calculator-section::before{content:"";position:absolute;top:0;left:0;width:38%;height:4px;background:var(--red)}
+.calculator-heading{display:grid;grid-template-columns:minmax(160px,.55fr) 1.45fr;gap:52px;align-items:start;margin-bottom:58px}
+.calculator-heading h2{margin:0;font-size:clamp(64px,7.4vw,116px);line-height:.82;letter-spacing:-.065em}
+.calculator-heading h2 em{color:var(--red);font-style:normal}
+.calculator-heading p{max-width:600px;margin:32px 0 0;color:#60686f;font-size:17px;line-height:1.65}
+.calculator-shell{display:grid;grid-template-columns:minmax(300px,.72fr) minmax(0,1.28fr);background:#fff;border:1px solid #dfe4e7;box-shadow:0 28px 90px #17202712}
+.calculator-controls{display:block;padding:38px;border-right:1px solid #dfe4e7}
+.calculator-control-head{display:flex;align-items:center;justify-content:space-between;padding-bottom:24px;border-bottom:1px solid #dfe4e7;text-transform:uppercase;font:700 12px 'Archivo Narrow';letter-spacing:.13em}
+.calculator-control-head strong{color:var(--red)}
+.calculator-field{display:block;margin-top:30px}
+.calculator-field>span,.calculator-segments-fieldset legend{display:block;margin-bottom:10px;color:#747c82;text-transform:uppercase;font:700 11px 'Archivo Narrow';letter-spacing:.13em}
+.calculator-field select{width:100%;height:52px;padding:0 42px 0 15px;border:1px solid #ccd2d6;border-radius:0;background:#fff;color:var(--ink);font:600 15px Archivo;appearance:none;background-image:linear-gradient(45deg,transparent 50%,#515a60 50%),linear-gradient(135deg,#515a60 50%,transparent 50%);background-position:calc(100% - 18px) 22px,calc(100% - 13px) 22px;background-size:5px 5px,5px 5px;background-repeat:no-repeat}
+.calculator-segments-fieldset{min-width:0;margin:30px 0 0;padding:0;border:0}
+.calculator-segment{display:grid;grid-template-columns:1fr 36px;gap:8px;align-items:end;margin-bottom:9px}
+.calculator-segment:first-child:last-child{grid-template-columns:1fr}
+.calculator-segment label{display:flex;align-items:center;justify-content:space-between;min-height:58px;padding:9px 10px 9px 15px;background:#f2f4f5;border-left:3px solid transparent}
+.calculator-segment label:focus-within{border-color:var(--red)}
+.calculator-segment label>span:first-child{font:700 12px 'Archivo Narrow';letter-spacing:.1em;text-transform:uppercase}
+.calculator-input-wrap{display:flex;align-items:center;gap:7px}
+.calculator-input-wrap input{width:92px;padding:8px 3px;border:0;border-bottom:1px solid #aeb5ba;background:transparent;color:var(--ink);font:700 23px Archivo;text-align:right;outline:0}
+.calculator-input-wrap b{color:#697177;font-size:13px}
+.calculator-segment>button{width:36px;height:36px;border:0;background:#e8ebed;color:#525a60;font-size:22px;cursor:pointer;transition:background .2s,color .2s}
+.calculator-segment>button:hover{background:var(--red);color:#fff}
+.calculator-add{width:100%;min-height:48px;margin-top:8px;border:1px solid #bcc3c8;background:#fff;color:var(--ink);font:700 11px 'Archivo Narrow';letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:border-color .2s,color .2s}
+.calculator-add span{color:var(--red);font-size:17px;vertical-align:-1px}
+.calculator-add:hover{border-color:var(--red);color:var(--red)}
+.calculator-add:disabled{cursor:not-allowed;opacity:.45}
+.calculator-rule{display:flex;gap:11px;margin:24px 0 0;color:#6c747a;font-size:12px;line-height:1.55}
+.calculator-rule i{flex:0 0 8px;width:8px;height:8px;margin-top:5px;border-radius:50%;background:var(--red)}
+.calculator-visual{min-width:0}
+.calculator-stage{position:relative;height:clamp(430px,50vw,650px);overflow:hidden;background:radial-gradient(circle at 56% 38%,#fff 0,#edf0f2 48%,#dce1e4 100%)}
+herraidea-post-calculator-3d{display:block;width:100%;height:100%;touch-action:none}
+herraidea-post-calculator-3d canvas{display:block;width:100%;height:100%}
+.calculator-loading{display:grid;height:100%;place-items:center;color:#687177;font:700 11px 'Archivo Narrow';letter-spacing:.14em;text-transform:uppercase}
+.calculator-orbit-hint,.calculator-model-label{position:absolute;z-index:2;pointer-events:none;text-transform:uppercase;font:700 10px 'Archivo Narrow';letter-spacing:.13em}
+.calculator-orbit-hint{right:20px;bottom:18px;color:#697177}
+.calculator-model-label{top:20px;left:22px;max-width:70%;padding:8px 10px;background:#101316;color:#fff}
+.calculator-results{display:grid;grid-template-columns:1.35fr .65fr .65fr;gap:1px;background:#dfe4e7;border-top:1px solid #dfe4e7}
+.calculator-result-main,.calculator-result-stat{min-height:135px;padding:24px;background:#fff}
+.calculator-result-main span,.calculator-result-stat span{display:block;color:#697177;text-transform:uppercase;font:700 10px 'Archivo Narrow';letter-spacing:.13em}
+.calculator-result-main strong,.calculator-result-stat strong{display:block;margin-top:5px;font-size:56px;line-height:1}
+.calculator-result-main strong{color:var(--red)}
+.calculator-result-main small{display:block;margin-top:8px;color:#737b81;font-size:11px}
+.calculator-breakdown{grid-column:1/-1;margin:0;padding:0;background:#fff;list-style:none}
+.calculator-breakdown li{display:flex;justify-content:space-between;gap:24px;padding:14px 24px;border-top:1px solid #e6eaec;font-size:12px}
+.calculator-breakdown li span{color:#777f85}
+.calculator-breakdown li strong{text-align:right}
+.calculator-status{grid-column:1/-1;margin:0;padding:17px 24px;background:#e7f0ec;color:#2c5c47;font-size:12px;line-height:1.5}
+.calculator-status.warning{background:#fff0df;color:#87551b}
+.calculator-whatsapp{grid-column:1/-1;width:auto;justify-content:space-between;margin:23px 24px 10px}
+.calculator-disclaimer{grid-column:1/-1;padding:0 24px 25px;background:#fff;color:#858c91;font-size:10px;line-height:1.55}
+@media(max-width:1120px){.calculator-shell{grid-template-columns:350px 1fr}.calculator-controls{padding:30px}.calculator-heading{grid-template-columns:1fr}.calculator-heading>.eyebrow{margin-bottom:-20px}}
+@media(max-width:760px){.calculator-section{padding:76px 0}.calculator-heading{gap:28px;margin-bottom:38px}.calculator-heading h2{font-size:clamp(54px,15vw,78px)}.calculator-heading p{margin-top:24px;font-size:15px}.calculator-shell{width:calc(100% - 24px);grid-template-columns:1fr}.calculator-controls{padding:27px 20px;border-right:0;border-bottom:1px solid #dfe4e7}.calculator-stage{height:440px}.calculator-results{grid-template-columns:1.3fr .7fr .7fr}.calculator-result-main,.calculator-result-stat{min-height:116px;padding:19px 15px}.calculator-result-main strong,.calculator-result-stat strong{font-size:44px}.calculator-breakdown li{display:block;padding:13px 17px}.calculator-breakdown li strong{display:block;margin-top:4px;text-align:left}.calculator-status{padding:16px 17px}.calculator-whatsapp{margin:20px 17px 8px}.calculator-disclaimer{padding:0 17px 22px}.calculator-orbit-hint{right:14px;bottom:13px;font-size:9px}.calculator-model-label{top:14px;left:14px}}
+@media(max-width:430px){.calculator-stage{height:390px}.calculator-result-main strong,.calculator-result-stat strong{font-size:38px}.calculator-result-main,.calculator-result-stat{padding:17px 12px}.calculator-result-main small{font-size:9px}.calculator-segment label{padding-left:11px}.calculator-input-wrap input{width:78px}}
+@media(prefers-reduced-motion:reduce){.calculator-add,.calculator-segment>button{transition:none}}

@@ -28,7 +28,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Archivo+Narrow:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=1-19">
+  <link rel="stylesheet" href="/styles.css?v=1-22">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -53,7 +53,7 @@
   <header class="site-header">
     <a class="brand" href="#inicio" aria-label="Herraidea, inicio"><img src="/assets/logo-gray-nodot.png" alt="Herraidea"><i></i></a>
     <div class="header-controls"><button class="sound-toggle" id="sound-toggle" type="button" aria-pressed="false" aria-label="Activar sonido"><span aria-hidden="true">♩</span><b>Sonido</b></button><button class="menu-toggle" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span><b>Menú</b></button>
-      <nav id="main-nav" class="main-nav"><a href="#soluciones">Soluciones</a><a href="#proyectos">Proyectos</a><a href="#asesoria">Asesoría</a><a href="#catalogo">Catálogo</a><a href="#recursos">Recursos</a><a class="nav-contact" href="#contacto">Cuéntanos tu proyecto</a></nav>
+      <nav id="main-nav" class="main-nav"><a href="#soluciones">Soluciones</a><a href="#proyectos">Proyectos</a><a href="#calculadora">Calculadora</a><a href="#asesoria">Asesoría</a><a href="#catalogo">Catálogo</a><a href="#recursos">Recursos</a><a class="nav-contact" href="#contacto">Cuéntanos tu proyecto</a></nav>
     </div>
   </header>
 
@@ -188,6 +188,37 @@
       </div>
     </section>
 
+    <section class="calculator-section" id="calculadora">
+      <div class="section-inner calculator-heading">
+        <span class="eyebrow">Calculadora visual de postes</span>
+        <div><h2>De los metros<br><em>a la solución.</em></h2><p>Agrega los tramos conectados de tu proyecto. La herramienta distribuye los postes entre 1.20 y 1.40 m y comparte el poste donde dos tramos forman una esquina.</p></div>
+      </div>
+      <div class="section-inner calculator-shell">
+        <form class="calculator-controls" id="post-calculator">
+          <div class="calculator-control-head"><span>Configura tu recorrido</span><strong id="calculator-step-count">01 tramo</strong></div>
+          <label class="calculator-field" for="calculator-system"><span>Solución</span><select id="calculator-system" name="solucion"><option value="clips">Postes con clips + vidrio</option><option value="tubo">Sistema de tubo de 1/2&quot;</option><option value="cable">Sistema de cable de acero</option><option value="presion">Sistema de vidrio a presión</option><option value="solera">Postes de solera</option></select></label>
+          <fieldset class="calculator-segments-fieldset"><legend>Medidas por tramo</legend><div id="calculator-segments"></div><button class="calculator-add" id="calculator-add-segment" type="button"><span>＋</span> Agregar tramo con esquina</button></fieldset>
+          <p class="calculator-rule"><i aria-hidden="true"></i><span>Cada tramo nuevo comparte con el anterior el poste de la esquina. Máximo 8 tramos en esta vista.</span></p>
+        </form>
+        <div class="calculator-visual">
+          <div class="calculator-stage">
+            <herraidea-post-calculator-3d id="calculator-model" aria-label="Vista tridimensional de la distribución estimada de postes"></herraidea-post-calculator-3d>
+            <span class="calculator-orbit-hint">Arrastra para girar · pellizca para acercar</span>
+            <span class="calculator-model-label" id="calculator-model-label">Postes con clips + vidrio</span>
+          </div>
+          <div class="calculator-results" aria-live="polite">
+            <div class="calculator-result-main"><span>Postes estimados</span><strong id="calculator-posts">5</strong><small id="calculator-posts-note">para 1 tramo recto</small></div>
+            <div class="calculator-result-stat"><span>Espacios</span><strong id="calculator-spaces">4</strong></div>
+            <div class="calculator-result-stat"><span>Metros</span><strong id="calculator-meters">5.30</strong></div>
+            <ol class="calculator-breakdown" id="calculator-breakdown"></ol>
+            <p class="calculator-status" id="calculator-status"></p>
+            <a class="button calculator-whatsapp" id="calculator-whatsapp" href="https://wa.me/524772561695" target="_blank" rel="noopener">Revisar cálculo por WhatsApp <span>→</span></a>
+            <small class="calculator-disclaimer">Estimación inicial de distribución. La cantidad final depende de medidas en obra, geometría, anclajes, cargas, normativa y validación técnica de Herraidea.</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="catalog-section" id="catalogo"><div class="section-inner">
       <div class="section-head"><div><span class="eyebrow">Catálogo</span><h2>82 herrajes y configuraciones en cuatro familias.</h2><p>Elige una familia para desplegar sus modelos.</p></div><nav class="catalog-shortcuts"><button type="button" data-open-family="pipetas"><img src="/assets/catalog/pictograms/pipetas.png?v=1211" alt="">Pipetas</button><button type="button" data-open-family="postes"><img src="/assets/catalog/pictograms/postes.png?v=1211" alt="">Postes</button><button type="button" data-open-family="conectores"><img src="/assets/catalog/pictograms/conectores.png?v=1211" alt="">Conectores</button><button type="button" data-open-family="jaladeras"><img src="/assets/catalog/pictograms/jaladeras.png?v=1211" alt="">Jaladeras</button></nav></div>
       <div id="catalog-families" class="catalog-families"><p>Cargando catálogo…</p></div>
@@ -263,12 +294,12 @@
 
   <dialog class="credits-dialog" id="credits-dialog" aria-labelledby="credits-title">
     <button class="credits-close" type="button" aria-label="Cerrar créditos">×</button>
-    <div class="credits-hero"><span class="credits-kicker">Seis toques desbloquearon</span><img class="procesalab-logo" src="/assets/brand/procesalab-horizontal.png" alt="ProcesaLab"><p>Diseño, desarrollo y evolución digital.</p><span class="current-version">Herraidea · v<span id="credits-version">1.21.1</span></span></div>
+    <div class="credits-hero"><span class="credits-kicker">Seis toques desbloquearon</span><img class="procesalab-logo" src="/assets/brand/procesalab-horizontal.png" alt="Creado por ProcesaLab"><p>Diseño, desarrollo y evolución digital.</p><span class="current-version">Herraidea · v<span id="credits-version">1.22.0</span></span></div>
     <div class="credits-content"><h2 id="credits-title">Construido versión a versión.</h2><p>Cada actualización queda documentada para que el proyecto conserve contexto, decisiones y continuidad.</p><div class="version-list" id="version-list"></div></div>
   </dialog>
 
   <footer><div class="section-inner"><a class="footer-brand" href="#inicio" aria-label="Herraidea, volver al inicio"><img src="/assets/logo-light-nodot.png" alt="Herraidea"><i aria-hidden="true"></i></a><nav><a href="#asesoria">Asesoría</a><a href="#catalogo">Catálogo</a><a href="#recursos">Recursos</a><a href="#nosotros">Nosotros</a><a href="#envios">Envíos</a><a href="#contacto">Contacto</a></nav><span>León, Gto. · Desde 2013</span></div></footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="/hrd-map.js?v=1-10"></script><script src="/sound.js?v=1-10"></script><script src="/hero.js?v=1-21-1"></script><script type="module" src="/project-3d-v2.js?v=1-15"></script>
+  <script src="/hrd-map.js?v=1-10"></script><script src="/sound.js?v=1-10"></script><script src="/hero.js?v=1-21-1"></script><script type="module" src="/project-3d-v2.js?v=1-15"></script><script type="module" src="/calculator-3d.js?v=1-22"></script>
 </body>
 </html>
