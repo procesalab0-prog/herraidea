@@ -132,10 +132,10 @@
   addEventListener('resize', updateScroll); updateScroll();
 
   const labels = {
-    pipetas: ['Pipetas', 'Conectores cilíndricos para vidrio-muro y vidrio-vidrio, en versiones chapetón, avellanado, allen y ajustable.'],
-    postes: ['Postes', 'Mini postes sólidos, huecos, rectangulares y de solera, con placa base barrenada y versiones con tope.'],
-    conectores: ['Conectores', 'Botones y conectores para vidrio-muro y vidrio-vidrio, fabricados para distintos espesores y configuraciones.'],
-    jaladeras: ['Jaladeras', 'Jaladeras tubulares de acero inoxidable para puertas de cristal templado.']
+    pipetas: ['Pipetas', 'Conectores cilíndricos para vidrio-muro y vidrio-vidrio, en versiones chapetón, avellanado, allen y ajustable.', '/assets/catalog/pictograms/pipetas.svg'],
+    postes: ['Postes', 'Mini postes sólidos, huecos, rectangulares y de solera, con placa base barrenada y versiones con tope.', '/assets/catalog/pictograms/postes.svg'],
+    conectores: ['Conectores', 'Botones y conectores para vidrio-muro y vidrio-vidrio, fabricados para distintos espesores y configuraciones.', '/assets/catalog/pictograms/conectores.svg'],
+    jaladeras: ['Jaladeras', 'Jaladeras tubulares de acero inoxidable para puertas de cristal templado.', '/assets/catalog/pictograms/jaladeras.svg']
   };
   const escapeHTML = value => String(value ?? '').replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
   const productDialog = document.querySelector('#product-dialog');
@@ -178,8 +178,8 @@
     const order = ['pipetas', 'postes', 'conectores', 'jaladeras'];
     host.innerHTML = order.map((key, familyIndex) => {
       const items = products.filter(p => String(p.category).toLowerCase() === key);
-      const [title, description] = labels[key];
-      return `<section class="family" id="${key}"><button class="family-toggle" type="button" aria-expanded="false"><span class="family-bar"></span><span class="family-number">0${familyIndex + 1}</span><span class="family-title"><h3>${title}</h3><small>${items.length} modelos</small></span><p>${description}</p><span class="family-mark" aria-hidden="true"></span></button><div class="family-products">${items.map((p, productIndex) => {
+      const [title, description, pictogram] = labels[key];
+      return `<section class="family" id="${key}"><button class="family-toggle" type="button" aria-expanded="false"><span class="family-bar"></span><span class="family-number">0${familyIndex + 1}</span><span class="family-pictogram" aria-hidden="true"><img src="${pictogram}" alt=""></span><span class="family-title"><h3>${title}</h3><small>${items.length} modelos</small></span><p>${description}</p><span class="family-mark" aria-hidden="true"></span></button><div class="family-products">${items.map((p, productIndex) => {
         const code = escapeHTML(p.code || p.model || '');
         const name = escapeHTML(p.name);
         return `<button class="product-card" type="button" data-product="${escapeHTML(p.code)}" aria-label="Ver ficha de ${name} ${code}" style="animation-delay:${Math.min(productIndex,16)*.035}s"><figure><img src="/content/catalog/${escapeHTML(p.image)}" alt="${name} ${code}" loading="lazy"></figure><div class="product-info"><b>${code}</b><span>${name}</span><em>Ver ficha técnica →</em></div></button>`;

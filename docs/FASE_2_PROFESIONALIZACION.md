@@ -12,6 +12,8 @@ Inicio: 2026-09-09
 - Acceso a las 82 fichas existentes con fotografías, planos y especificaciones disponibles.
 - Aviso claro sobre los recursos individuales que todavía requieren validación.
 - Primera base SEO: descripción, URL canónica, permiso de indexación y datos estructurados de la organización.
+- Primera colección de pictogramas publicada para Pipetas, Postes, Conectores y Jaladeras.
+- Primera normalización visual aplicada a la familia Postes mediante un tratamiento de estudio común que conserva intactas las imágenes técnicas disponibles.
 
 ## 2. Siguientes bloques que pueden avanzarse
 
@@ -19,7 +21,7 @@ Inicio: 2026-09-09
 - El PDF se genera con `content/catalog/details.json`, `content/catalog/images/` y las portadas de soluciones que también utiliza la web. Al aprobar una imagen nueva deberá sustituirse en esa fuente compartida y regenerarse el catálogo para mantener ambos formatos sincronizados.
 - Lista de información pendiente documentada en `docs/CATALOGO_2026_PENDIENTES.md`.
 - Estructura y plantilla de fichas técnicas descargables.
-- Revisión y normalización visual de fotografías de producto.
+- Continuar la normalización visual con fotografías de mayor resolución, comenzando por las configuraciones de Postes y después el resto de las familias.
 - Páginas independientes por aplicación y familia.
 - Casos de proyectos reales con alcance y permisos confirmados.
 - Recorrido específico para arquitectos y distribuidores.

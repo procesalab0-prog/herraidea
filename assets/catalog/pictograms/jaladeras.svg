@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Pictograma de jaladeras</title>
+  <g fill="none" stroke="#0b0d10" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M19 14v36M45 14v36M19 20h8v24h-8M45 20h-8v24h8"/>
+    <path d="M27 20c0-5 10-5 10 0v24c0 5-10 5-10 0z"/>
+    <circle cx="19" cy="20" r="3"/>
+    <circle cx="45" cy="44" r="3"/>
+  </g>
+  <circle cx="45" cy="44" r="4" fill="#f10001"/>
+</svg>

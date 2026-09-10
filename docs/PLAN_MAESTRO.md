@@ -194,7 +194,7 @@ La presentación de producto tomará como referencia fotografías macro de hardw
 
 Se mantienen los colores actuales de la landing: negro grafito, blanco, grises de acero y rojo Herraidea como acento. Las referencias orientan el lenguaje visual, pero no se copiarán sus marcas, productos, textos ni composición exacta. La especificación completa se encuentra en `docs/DIRECCION_VISUAL.md` y las imágenes recibidas en `content/design-references/`.
 
-### Dirección visual del catálogo — propuesta aprobada
+### Dirección visual del catálogo — primera entrega implementada
 
 Incorporar **pictogramas o sellos visuales propios** para identificar rápidamente cada familia y aplicación del catálogo. La referencia recibida muestra símbolos pequeños sobre el nombre de cada categoría; se toma el principio visual, no la forma exacta ni sus iconos.
 
@@ -209,6 +209,8 @@ Para Herraidea se propone:
 - Conservar las animaciones y sonidos discretos actuales al cambiar de categoría.
 
 Los pictogramas deben facilitar la exploración, no competir con las fotografías ni convertirse en marcas independientes.
+
+La primera colección ya identifica Pipetas, Postes, Conectores y Jaladeras tanto en los accesos rápidos como en los encabezados desplegables. Postes inicia además la normalización de su presentación con un fondo de estudio, escala visual, sombra y numeración comunes. Este tratamiento conserva las fotografías técnicas sin modificar la geometría; la sustitución por nuevas imágenes de estudio continuará únicamente con vistas suficientes y aprobación de Herraidea.
 
 ### Evolución del recorrido 3D — carrusel de soluciones en implementación
 

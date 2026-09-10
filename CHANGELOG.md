@@ -1,5 +1,13 @@
 # Historial de versiones — Herraidea
 
+## 1.21.0 — 2026-09-10
+
+- Las cuatro familias del catálogo estrenan pictogramas lineales propios para Pipetas, Postes, Conectores y Jaladeras.
+- Los accesos rápidos y encabezados desplegables comparten el mismo lenguaje de iconos en negro, acero y rojo Herraidea.
+- La familia Postes inicia su normalización visual con fondos de estudio uniformes, escala consistente, sombra controlada y un detalle rojo editorial.
+- Las piezas originales no se retocaron ni reinterpretaron, evitando alterar clips, pines, perforaciones o proporciones antes de recibir fotografías suficientes.
+- La navegación conserva texto junto a cada pictograma y mantiene blancos táctiles adecuados en computadora y teléfono.
+
 ## 1.20.0 — 2026-09-09
 
 - El catálogo descargable público se actualizó de la edición 2023 al adelanto Herraidea 2026 de 27 páginas, sin precios.

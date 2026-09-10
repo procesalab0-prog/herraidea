@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Pictograma de pipetas</title>
+  <g fill="none" stroke="#0b0d10" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 12h28M23 12v40M41 12v40M18 52h28"/>
+    <path d="M23 23h-8v10h8M41 31h8v10h-8"/>
+    <circle cx="19" cy="28" r="2.5"/>
+    <circle cx="45" cy="36" r="2.5"/>
+  </g>
+  <circle cx="50" cy="14" r="4" fill="#f10001"/>
+</svg>

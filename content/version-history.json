@@ -1,7 +1,8 @@
 {
-  "current": "1.20.0",
+  "current": "1.21.0",
   "studio": "ProcesaLab",
   "versions": [
+    {"version":"1.21.0","date":"2026-09-10","title":"Pictogramas y Postes normalizados","summary":"Las cuatro familias reciben pictogramas propios y Postes estrena una presentación de estudio uniforme sin alterar la geometría de las piezas."},
     {"version":"1.20.0","date":"2026-09-09","title":"Catálogo 2026 y recorrido más claro","summary":"El catálogo 2026 sustituye la descarga pública anterior con 27 páginas y más identidad roja; las soluciones 3D ahora aparecen antes de la asesoría."},
     {"version":"1.19.0","date":"2026-09-09","title":"Primeros recursos técnicos","summary":"Una nueva sección permite descargar el catálogo general y acceder a las 82 fichas disponibles; también comienza la base SEO de la página."},
     {"version":"1.18.1","date":"2026-09-09","title":"Proyectos turísticos","summary":"El canalizador sustituye la opción Ejecutivo por Turístico para contemplar hoteles, Airbnb y desarrollos turísticos."},
