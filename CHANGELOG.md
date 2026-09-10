@@ -1,5 +1,14 @@
 # Historial de versiones — Herraidea
 
+## 1.22.1 — 2026-09-10
+
+- La calculadora queda activa únicamente para Postes con clips + vidrio (HRD 1525) y Sistema de tubo de 1/2 pulgada (HRD 1518).
+- La representación procedural anterior se sustituye por las piezas de los dos modelos GLB ya validados en las experiencias interactivas.
+- Cada espacio se ensambla con postes, herrajes, vidrio, tubos y pasamanos extraídos de esos archivos; solo se ajusta la longitud útil de los elementos continuos según la medida capturada.
+- Cable de acero, vidrio a presión y postes de solera quedan registrados como pendientes hasta recibir sus modelos 3D correspondientes.
+- Se conservan el cálculo de separaciones, los postes compartidos en esquinas y la revisión por WhatsApp.
+- El logotipo grande se retira del hero para evitar repetición; su tratamiento protagonista se conserva en la portada del catálogo PDF 2026.
+
 ## 1.22.0 — 2026-09-10
 
 - Se incorpora una calculadora visual para estimar postes a partir de uno o varios tramos conectados.

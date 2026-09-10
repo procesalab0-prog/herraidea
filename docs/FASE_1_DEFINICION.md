@@ -125,7 +125,8 @@ La landing se actualiza progresivamente con la información y los recursos ya co
 
 ### E. Calculadora por múltiplos
 
-- [x] Soluciones iniciales: postes con clips y vidrio, tubo de 1/2", cable de acero, vidrio a presión y postes de solera; la estructura queda preparada para agregar más.
+- [x] Soluciones activas con modelo 3D validado: postes con clips y vidrio (HRD 1525) y tubo de 1/2" (HRD 1518).
+- [ ] Modelos 3D por recibir para activar las demás soluciones: cable de acero, vidrio a presión y postes de solera.
 - [x] Fórmula inicial: separación entre postes de 1.20 a 1.40 m, buscando la distribución más cercana a 1.30 m; postes = espacios + 1 en un tramo recto.
 - [x] Tramos conectados: cada esquina comparte el poste que termina un tramo y comienza el siguiente.
 - [x] Regla de redondeo inicial: elegir un número entero de espacios dentro del rango; si no existe, no superar 1.40 m y señalar revisión técnica.

@@ -1,41 +1,91 @@
 import * as THREE from 'https://esm.sh/three@0.160.0';
+import { GLTFLoader } from 'https://esm.sh/three@0.160.0/examples/jsm/loaders/GLTFLoader.js';
 import { OrbitControls } from 'https://esm.sh/three@0.160.0/examples/jsm/controls/OrbitControls.js';
 import { RoomEnvironment } from 'https://esm.sh/three@0.160.0/examples/jsm/environments/RoomEnvironment.js';
 
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-const systemNames = {
-  clips: 'Postes con clips + vidrio',
-  tubo: 'Sistema de tubo de 1/2"',
-  cable: 'Sistema de cable de acero',
-  presion: 'Sistema de vidrio a presión',
-  solera: 'Postes de solera'
+const systems = {
+  clips: {
+    name: 'Postes con clips + vidrio', code: 'HRD 1525',
+    src: '/assets/projects/clip-system/herraje-cristal.glb', sourceSpacing: .96,
+    spanParts: new Set(['Cristal_central', 'Pasamanos_continuo'])
+  },
+  tubo: {
+    name: 'Sistema de tubo de 1/2"', code: 'HRD 1518',
+    src: '/assets/projects/hrd-1518/hrd-1518.glb', sourceSpacing: .84,
+    spanParts: new Set(['Pasamanos_contexto', 'Barra_contexto_1', 'Barra_contexto_2', 'Barra_contexto_3'])
+  }
 };
+const loader = new GLTFLoader();
+const sourceModels = new Map();
 
 function bestDistribution(length) {
   const minSpaces = Math.max(1, Math.ceil(length / 1.4));
   const maxSpaces = Math.max(1, Math.floor(length / 1.2));
   const exact = minSpaces <= maxSpaces;
-  const candidates = exact
-    ? Array.from({ length: maxSpaces - minSpaces + 1 }, (_, index) => minSpaces + index)
-    : [minSpaces];
+  const candidates = exact ? Array.from({ length: maxSpaces - minSpaces + 1 }, (_, index) => minSpaces + index) : [minSpaces];
   const spaces = candidates.reduce((best, candidate) =>
     Math.abs(length / candidate - 1.3) < Math.abs(length / best - 1.3) ? candidate : best
   , candidates[0]);
   return { spaces, spacing: length / spaces, exact };
 }
 
-function cylinderBetween(start, end, radius, material) {
-  const direction = new THREE.Vector3().subVectors(end, start);
-  const mesh = new THREE.Mesh(new THREE.CylinderGeometry(radius, radius, direction.length(), 18), material);
-  mesh.position.copy(start).add(end).multiplyScalar(.5);
-  mesh.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), direction.clone().normalize());
-  return mesh;
+function loadSource(config) {
+  if (!sourceModels.has(config.src)) {
+    sourceModels.set(config.src, new Promise((resolve, reject) => {
+      loader.load(config.src, ({ scene }) => resolve(scene), undefined, reject);
+    }));
+  }
+  return sourceModels.get(config.src);
+}
+
+function cloneMesh(source) {
+  const copy = source.clone(true);
+  copy.traverse(object => {
+    if (!object.isMesh) return;
+    object.castShadow = true;
+    object.receiveShadow = true;
+  });
+  return copy;
+}
+
+function clipSpan(source, spacing) {
+  const span = new THREE.Group();
+  const half = spacing / 2;
+  source.children.forEach(part => {
+    const copy = cloneMesh(part);
+    if (part.name.startsWith('izquierdo_')) copy.position.x += -half + .48;
+    else if (part.name.startsWith('derecho_')) copy.position.x += half - .48;
+    else copy.scale.x *= spacing / systems.clips.sourceSpacing;
+    span.add(copy);
+  });
+  return span;
+}
+
+function tubeSpan(source, spacing) {
+  const span = new THREE.Group();
+  const config = systems.tubo;
+  const postParts = source.children.filter(part => !config.spanParts.has(part.name));
+  [-spacing / 2, spacing / 2].forEach(position => {
+    postParts.forEach(part => {
+      const copy = cloneMesh(part);
+      copy.position.x += position;
+      span.add(copy);
+    });
+  });
+  source.children.filter(part => config.spanParts.has(part.name)).forEach(part => {
+    const copy = cloneMesh(part);
+    copy.scale.x *= spacing / config.sourceSpacing;
+    span.add(copy);
+  });
+  return span;
 }
 
 class PostCalculator3D extends HTMLElement {
   connectedCallback() {
-    this.innerHTML = '<span class="calculator-loading">Preparando vista 3D…</span>';
+    this.innerHTML = '<span class="calculator-loading">Preparando modelo 3D real…</span>';
     this.pending = { segments: [{ length: 5.3, spaces: 4 }], system: 'clips' };
+    this.loadRequest = 0;
     this.observer = new IntersectionObserver(entries => {
       if (entries.some(entry => entry.isIntersecting)) {
         this.start();
@@ -46,7 +96,7 @@ class PostCalculator3D extends HTMLElement {
   }
 
   setLayout(segments, system) {
-    this.pending = { segments, system };
+    this.pending = { segments, system: systems[system] ? system : 'clips' };
     if (this.started) this.rebuild();
   }
 
@@ -71,7 +121,6 @@ class PostCalculator3D extends HTMLElement {
     this.scene.environment = pmrem.fromScene(environment, .04).texture;
     environment.dispose();
     pmrem.dispose();
-
     this.scene.add(new THREE.HemisphereLight(0xffffff, 0xb7bec4, 1.4));
     const key = new THREE.DirectionalLight(0xffffff, 3.6);
     key.position.set(4, 7, 5);
@@ -82,12 +131,9 @@ class PostCalculator3D extends HTMLElement {
     red.position.set(-3, 1.2, 2);
     this.scene.add(red);
 
-    this.floor = new THREE.Mesh(
-      new THREE.CircleGeometry(5.8, 64),
-      new THREE.MeshStandardMaterial({ color: 0xe9edef, roughness: .86, metalness: .04 })
-    );
+    this.floor = new THREE.Mesh(new THREE.CircleGeometry(5.8, 64), new THREE.MeshStandardMaterial({ color: 0xe9edef, roughness: .86, metalness: .04 }));
     this.floor.rotation.x = -Math.PI / 2;
-    this.floor.position.y = -.015;
+    this.floor.position.y = -.09;
     this.floor.receiveShadow = true;
     this.scene.add(this.floor);
 
@@ -95,9 +141,9 @@ class PostCalculator3D extends HTMLElement {
     this.controls.enableDamping = true;
     this.controls.enablePan = false;
     this.controls.minDistance = 3.2;
-    this.controls.maxDistance = 9;
+    this.controls.maxDistance = 10;
     this.controls.maxPolarAngle = Math.PI * .49;
-    this.controls.target.set(0, .55, 0);
+    this.controls.target.set(0, .5, 0);
     this.resizeObserver = new ResizeObserver(() => this.resize());
     this.resizeObserver.observe(this);
     this.rebuild();
@@ -105,108 +151,53 @@ class PostCalculator3D extends HTMLElement {
     this.animate();
   }
 
-  rebuild() {
-    if (this.model) {
-      this.scene.remove(this.model);
-      this.model.traverse(object => {
-        object.geometry?.dispose();
-        if (Array.isArray(object.material)) object.material.forEach(material => material.dispose());
-        else object.material?.dispose();
-      });
-    }
-
+  async rebuild() {
+    const request = ++this.loadRequest;
     const { segments, system } = this.pending;
-    const model = new THREE.Group();
-    this.model = model;
-    this.scene.add(model);
-    const steel = new THREE.MeshStandardMaterial({ color: 0xbec4c8, metalness: .92, roughness: .23 });
-    const darkSteel = new THREE.MeshStandardMaterial({ color: 0x586067, metalness: .82, roughness: .3 });
-    const glass = new THREE.MeshPhysicalMaterial({ color: 0xaedcec, transmission: .84, transparent: true, opacity: .34, roughness: .08, metalness: 0, side: THREE.DoubleSide, depthWrite: false });
-    const cable = new THREE.MeshStandardMaterial({ color: 0x242a2e, metalness: .86, roughness: .28 });
-    const accent = new THREE.MeshStandardMaterial({ color: 0xe3212c, metalness: .12, roughness: .48 });
-    const directions = [[1, 0], [0, -1], [-1, 0], [0, 1]];
-    const totalLength = segments.reduce((sum, segment) => sum + segment.length, 0);
-    const scale = Math.min(1, 5.25 / Math.max(4, totalLength));
-    let cursor = new THREE.Vector3(0, 0, 0);
-    let sequence = 0;
+    const config = systems[system];
+    this.setAttribute('data-loading', 'true');
+    try {
+      const source = await loadSource(config);
+      if (request !== this.loadRequest || !this.isConnected) return;
+      if (this.model) this.scene.remove(this.model);
 
-    const addAnimated = object => {
-      object.userData.delay = sequence++ * 20;
-      object.userData.targetScale = object.scale.clone();
-      if (!reduceMotion.matches) object.scale.multiplyScalar(.001);
-      model.add(object);
-    };
-    const addPost = (point, corner = false) => {
-      const geometry = system === 'solera' ? new THREE.BoxGeometry(.1, 1.02, .05) : new THREE.CylinderGeometry(.055, .055, 1.02, 22);
-      const post = new THREE.Mesh(geometry, steel);
-      post.position.set(point.x, .51, point.z);
-      post.castShadow = true;
-      addAnimated(post);
-      const base = new THREE.Mesh(new THREE.CylinderGeometry(.09, .1, .035, 24), steel);
-      base.position.set(point.x, .018, point.z);
-      base.castShadow = true;
-      addAnimated(base);
-      if (corner) {
-        const ring = new THREE.Mesh(new THREE.TorusGeometry(.13, .014, 10, 32), accent);
-        ring.rotation.x = Math.PI / 2;
-        ring.position.set(point.x, .04, point.z);
-        addAnimated(ring);
-      }
-    };
-
-    segments.forEach((segment, segmentIndex) => {
-      const direction = directions[segmentIndex % directions.length];
-      const start = cursor.clone();
-      const end = new THREE.Vector3(start.x + segment.length * scale * direction[0], 0, start.z + segment.length * scale * direction[1]);
-      const points = Array.from({ length: segment.spaces + 1 }, (_, index) => start.clone().lerp(end, index / segment.spaces));
-      points.forEach((point, index) => {
-        if (segmentIndex === 0 || index > 0) addPost(point, segmentIndex > 0 && index === 0);
-      });
-      if (segmentIndex > 0) {
-        const ring = new THREE.Mesh(new THREE.TorusGeometry(.13, .014, 10, 32), accent);
-        ring.rotation.x = Math.PI / 2;
-        ring.position.set(start.x, .04, start.z);
-        addAnimated(ring);
-      }
-
-      points.slice(0, -1).forEach((point, index) => {
-        const next = points[index + 1];
-        const angle = Math.atan2(next.z - point.z, next.x - point.x);
-        const length = point.distanceTo(next);
-        const midpoint = point.clone().add(next).multiplyScalar(.5);
-        const topRail = cylinderBetween(new THREE.Vector3(point.x, 1.08, point.z), new THREE.Vector3(next.x, 1.08, next.z), .045, steel);
-        topRail.castShadow = true;
-        addAnimated(topRail);
-
-        if (system === 'clips' || system === 'presion') {
-          const panel = new THREE.Mesh(new THREE.BoxGeometry(length - .09, .72, .018), glass);
-          panel.rotation.y = -angle;
-          panel.position.set(midpoint.x, .64, midpoint.z);
-          addAnimated(panel);
-          if (system === 'clips') {
-            [point, next].forEach(anchor => [.42, .78].forEach(height => {
-              const clip = new THREE.Mesh(new THREE.BoxGeometry(.075, .075, .075), darkSteel);
-              clip.position.set(anchor.x, height, anchor.z);
-              addAnimated(clip);
-            }));
-          }
-        } else {
-          const levels = system === 'tubo' ? [.35, .59, .83] : system === 'cable' ? [.28, .47, .66, .85] : [.33, .61, .87];
-          levels.forEach(height => {
-            const rail = cylinderBetween(new THREE.Vector3(point.x, height, point.z), new THREE.Vector3(next.x, height, next.z), system === 'cable' ? .009 : .018, system === 'cable' ? cable : steel);
-            rail.castShadow = system !== 'cable';
-            addAnimated(rail);
-          });
+      const model = new THREE.Group();
+      const directions = [[1, 0], [0, -1], [-1, 0], [0, 1]];
+      let cursor = new THREE.Vector3();
+      segments.forEach((segment, segmentIndex) => {
+        const [dx, dz] = directions[segmentIndex % directions.length];
+        const end = new THREE.Vector3(cursor.x + segment.length * dx, 0, cursor.z + segment.length * dz);
+        const angle = Math.atan2(dz, dx);
+        for (let index = 0; index < segment.spaces; index += 1) {
+          const startPoint = cursor.clone().lerp(end, index / segment.spaces);
+          const endPoint = cursor.clone().lerp(end, (index + 1) / segment.spaces);
+          const spacing = startPoint.distanceTo(endPoint);
+          const span = system === 'clips' ? clipSpan(source, spacing) : tubeSpan(source, spacing);
+          span.rotation.y = -angle;
+          span.position.copy(startPoint).add(endPoint).multiplyScalar(.5);
+          model.add(span);
         }
+        cursor.copy(end);
       });
-      cursor.copy(end);
-    });
 
-    const box = new THREE.Box3().setFromObject(model);
-    const center = box.getCenter(new THREE.Vector3());
-    model.position.x = -center.x;
-    model.position.z = -center.z;
-    this.enterStart = performance.now();
+      const totalLength = segments.reduce((sum, segment) => sum + segment.length, 0);
+      const displayScale = Math.min(1, 5.15 / Math.max(4, totalLength));
+      model.scale.setScalar(displayScale);
+      const center = new THREE.Box3().setFromObject(model).getCenter(new THREE.Vector3());
+      model.position.set(-center.x, 0, -center.z);
+      this.model = model;
+      this.scene.add(model);
+      this.targetScale = displayScale;
+      if (!reduceMotion.matches) model.scale.setScalar(.001);
+      this.enterStart = performance.now();
+      this.setAttribute('aria-label', `Modelo 3D real de ${config.name}, distribuido en ${segments.reduce((sum, segment) => sum + segment.spaces, 0)} espacios`);
+      this.removeAttribute('data-loading');
+      this.removeAttribute('data-error');
+    } catch (error) {
+      console.error(error);
+      this.removeAttribute('data-loading');
+      this.setAttribute('data-error', 'true');
+    }
   }
 
   resize() {
@@ -221,14 +212,10 @@ class PostCalculator3D extends HTMLElement {
   animate = time => {
     if (!this.isConnected) return;
     this.frame = requestAnimationFrame(this.animate);
-    if (this.model && !reduceMotion.matches) {
-      const elapsed = time - this.enterStart;
-      this.model.children.forEach(object => {
-        if (!object.userData.targetScale) return;
-        const progress = Math.min(1, Math.max(0, (elapsed - object.userData.delay) / 430));
-        const eased = 1 - Math.pow(1 - progress, 3);
-        object.scale.copy(object.userData.targetScale).multiplyScalar(Math.max(.001, eased));
-      });
+    if (this.model && !reduceMotion.matches && this.targetScale) {
+      const progress = Math.min(1, Math.max(0, (time - this.enterStart) / 620));
+      const eased = 1 - Math.pow(1 - progress, 3);
+      this.model.scale.setScalar(Math.max(.001, this.targetScale * eased));
     }
     this.controls?.update();
     this.renderer?.render(this.scene, this.camera);
@@ -279,6 +266,7 @@ if (form) {
     const totalMeters = lengths.reduce((sum, length) => sum + length, 0);
     const corners = Math.max(0, lengths.length - 1);
     const warnings = distributions.filter(item => !item.exact).length;
+    const system = systems[systemSelect.value] || systems.clips;
     postOutput.textContent = totalPosts;
     spacesOutput.textContent = totalSpaces;
     metersOutput.textContent = totalMeters.toFixed(2);
@@ -287,11 +275,11 @@ if (form) {
     status.classList.toggle('warning', warnings > 0);
     status.textContent = warnings
       ? `${warnings === 1 ? 'Un tramo requiere' : `${warnings} tramos requieren`} revisión: se respetó el máximo de 1.40 m, pero la separación quedó por debajo de 1.20 m.`
-      : `Todos los tramos quedan dentro del rango de separación de 1.20 a 1.40 m.`;
-    modelLabel.textContent = systemNames[systemSelect.value];
+      : 'Todos los tramos quedan dentro del rango de separación de 1.20 a 1.40 m.';
+    modelLabel.textContent = `${system.code} · modelo 3D real`;
     model.setLayout(distributions, systemSelect.value);
     const lines = distributions.map((item, index) => `Tramo ${index + 1}: ${item.length.toFixed(2)} m, ${item.spaces} espacios de ${item.spacing.toFixed(2)} m.`).join('\n');
-    const message = `Hola, quiero revisar esta estimación para ${systemNames[systemSelect.value]}:\n${lines}\nTotal: ${totalMeters.toFixed(2)} m, ${totalPosts} postes estimados${corners ? `, considerando ${corners} ${corners === 1 ? 'esquina compartida' : 'esquinas compartidas'}` : ''}.`;
+    const message = `Hola, quiero revisar esta estimación para ${system.name}:\n${lines}\nTotal: ${totalMeters.toFixed(2)} m, ${totalPosts} postes estimados${corners ? `, considerando ${corners} ${corners === 1 ? 'esquina compartida' : 'esquinas compartidas'}` : ''}.`;
     whatsapp.href = `https://wa.me/524772561695?text=${encodeURIComponent(message)}`;
   }
 

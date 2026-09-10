@@ -357,7 +357,9 @@ Antes de diseñarlo se necesita definir con Herraidea todas las rutas, preguntas
 
 La regla inicial recibida por Herraidea calcula la distribución de postes por tramo. La separación buscada es de **1.20 a 1.40 m**; se elige el número entero de espacios más cercano a 1.30 m y cada tramo recto necesita un poste más que espacios. Ejemplos confirmados: 4.80 m se distribuyen en 4 espacios de 1.20 m y requieren 5 postes; 5.30 m se distribuyen en 4 espacios de 1.325 m y requieren 5 postes.
 
-Cuando se agregan tramos conectados, el poste de cada esquina funciona como final del tramo anterior e inicio del siguiente, por lo que no se cuenta dos veces. La web ya permite agregar hasta ocho tramos, cambiar entre las soluciones iniciales y ver crecer una representación 3D procedural de postes, cristales, tubos o cables. El resultado puede enviarse por WhatsApp para revisión.
+Cuando se agregan tramos conectados, el poste de cada esquina funciona como final del tramo anterior e inicio del siguiente, por lo que no se cuenta dos veces. La web ya permite agregar hasta ocho tramos y ver crecer dos soluciones construidas con los modelos 3D reales ya recibidos: **Postes con clips + vidrio (HRD 1525)** y **Sistema de tubo de 1/2 pulgada (HRD 1518)**. Los herrajes mantienen su geometría original y únicamente los elementos continuos —vidrio, tubos y pasamanos— ajustan su longitud útil para representar cada espacio calculado. El resultado puede enviarse por WhatsApp para revisión.
+
+Quedan como **pendientes de activación en la calculadora** hasta recibir sus modelos 3D: Sistema de cable de acero, Sistema de vidrio a presión y Postes de solera. No deben mostrarse mediante geometrías aproximadas o conceptuales.
 
 Si ninguna división entera queda exactamente entre 1.20 y 1.40 m, la herramienta evita superar 1.40 m y muestra una advertencia para revisión técnica. La estimación no calcula estructura, anclajes, cargas, normativa, desperdicio, empaques ni precio. Esos datos y las reglas particulares de cada sistema deben validarse antes de ampliar el cálculo.
 
@@ -436,7 +438,7 @@ No se debe presentar esta funcionalidad como parte del alcance actual ni constru
 - Navegación reorganizada.
 - Sección “Lo que podemos fabricar”.
 - Canalizador de proyectos sin base de datos; primera versión implementada con tipo de proyecto, ubicación, base de montaje y necesidad, seguida de una sugerencia visual orientativa y revisión humana por WhatsApp. Incluye una entrada separada para piezas, estructuras e ideas fuera del catálogo.
-- Calculadora visual de postes implementada con tramos conectados, esquinas compartidas, separación objetivo de 1.20 a 1.40 m, representación 3D procedural y envío a WhatsApp para revisión.
+- Calculadora visual de postes implementada con tramos conectados, esquinas compartidas, separación objetivo de 1.20 a 1.40 m, modelos 3D reales del HRD 1525 y HRD 1518, y envío a WhatsApp para revisión.
 - Solicitud de proyecto mediante WhatsApp.
 - Reutilización cuidadosa de la experiencia visual actual.
 

@@ -413,12 +413,8 @@ body.project-open{overflow:hidden}
 @media(max-width:640px){.resources-section{padding:74px 0}.resources-heading{margin-bottom:34px}.resources-heading h2{font-size:clamp(48px,14vw,64px)}.resources-grid{width:calc(100% - 32px);gap:10px}.resource-card{min-height:420px;padding:28px 22px}.resource-card>div>span{margin-bottom:54px}.resource-card h3{font-size:44px}.resources-note{width:calc(100% - 32px)}}
 
 /* v1.20 · catálogo 2026 y mayor presencia de marca en el hero */
-.hero-brand{position:relative;width:clamp(300px,32vw,440px);margin:0 0 4px;animation:heroRise .8s .06s cubic-bezier(.2,.8,.2,1) both}
-.hero-brand img{width:100%;height:auto}
-.hero-brand i{position:absolute;left:61%;top:.7%;width:3.1%;height:20.8%;background:var(--brand-red);animation:dot 3.6s 1.2s infinite}
 .hero-copy{gap:18px}
-@media(max-width:900px){.hero-brand{width:min(72vw,330px);margin-bottom:0}.hero-copy{gap:14px}}
-@media(max-width:640px){.hero-brand{width:min(74vw,285px)}}
+@media(max-width:900px){.hero-copy{gap:14px}}
 
 /* v1.21 · pictogramas de familias y primera normalización visual de Postes */
 .catalog-shortcuts{align-items:stretch}
@@ -456,6 +452,7 @@ body.project-open{overflow:hidden}
 .calculator-field{display:block;margin-top:30px}
 .calculator-field>span,.calculator-segments-fieldset legend{display:block;margin-bottom:10px;color:#747c82;text-transform:uppercase;font:700 11px 'Archivo Narrow';letter-spacing:.13em}
 .calculator-field select{width:100%;height:52px;padding:0 42px 0 15px;border:1px solid #ccd2d6;border-radius:0;background:#fff;color:var(--ink);font:600 15px Archivo;appearance:none;background-image:linear-gradient(45deg,transparent 50%,#515a60 50%),linear-gradient(135deg,#515a60 50%,transparent 50%);background-position:calc(100% - 18px) 22px,calc(100% - 13px) 22px;background-size:5px 5px,5px 5px;background-repeat:no-repeat}
+.calculator-field small{display:block;margin-top:9px;color:#7b8389;font-size:10px;line-height:1.5}
 .calculator-segments-fieldset{min-width:0;margin:30px 0 0;padding:0;border:0}
 .calculator-segment{display:grid;grid-template-columns:1fr 36px;gap:8px;align-items:end;margin-bottom:9px}
 .calculator-segment:first-child:last-child{grid-template-columns:1fr}
