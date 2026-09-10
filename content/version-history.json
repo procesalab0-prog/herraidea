@@ -1,7 +1,8 @@
 {
-  "current": "1.23.1",
+  "current": "1.23.2",
   "studio": "ProcesaLab",
   "versions": [
+    {"version":"1.23.2","date":"2026-09-10","title":"Portada HRD 1616 renovada","summary":"La tarjeta usa la última fotografía aprobada mediante un recurso nuevo que evita mostrar una versión anterior almacenada en caché."},
     {"version":"1.23.1","date":"2026-09-10","title":"Portada completa del HRD 1616","summary":"La imagen previa del sistema de poste cuadrado y cable se presenta completa en el carrusel, sin recortar sus postes, cables ni pasamanos."},
     {"version":"1.23.0","date":"2026-09-10","title":"HRD 1616 y esquinas articuladas","summary":"El HRD 1616 se suma al carrusel y a la calculadora con acabado satinado; el HRD 1518 utiliza su esquina articulada real y el cristal del HRD 1525 termina en cada clip sin rebasarlo."},
     {"version":"1.22.2","date":"2026-09-10","title":"Ajustes técnicos de los modelos 3D","summary":"El cristal cubre completamente los clips del HRD 1525, los pines del HRD 1518 se mantienen como una sola pieza y la capacidad CNC se corrige a Haas VF-3SS."},

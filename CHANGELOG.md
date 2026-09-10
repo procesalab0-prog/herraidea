@@ -1,5 +1,10 @@
 # Historial de versiones — Herraidea
 
+## 1.23.2 — 2026-09-10
+
+- La tarjeta del HRD 1616 utiliza un recurso nuevo para impedir que Vercel o el navegador reutilicen la fotografía anterior almacenada en caché.
+- La imagen visible antes de abrir el visor corresponde ahora a la última portada aprobada y muestra completo el sistema de postes cuadrados con cable.
+
 ## 1.23.1 — 2026-09-10
 
 - La portada del HRD 1616 en el carrusel ahora se muestra completa, sin recortar los postes, cables ni pasamanos antes de abrir el visor 3D.
