@@ -3,11 +3,11 @@
 Especificación conceptual para evolucionar la sección 3D actual de piezas individuales hacia una experiencia centrada en soluciones, barandales y proyectos completos.
 
 Estado: **carrusel de soluciones en implementación**
-Fecha: 2026-09-08
+Actualizado: 2026-09-10
 
-La versión 1.15.0 presenta tres tarjetas grandes. El sistema de postes con clips, vidrio y pasamanos ocupa la primera posición y se identifica con HRD 1525; el poste HRD 1518 ocupa la segunda posición con su sistema de tres barras; el Futbolito queda en la tercera como proyecto especial. Las tres tarjetas abren un visor ampliado con giro, acercamiento táctil, vista de detalle y despiece reversible.
+La versión 1.23.0 presenta cuatro tarjetas grandes. El sistema de postes con clips, vidrio y pasamanos ocupa la primera posición y se identifica con HRD 1525; el poste HRD 1518 ocupa la segunda posición con su sistema de tres barras; el HRD 1616 ocupa la tercera con postes cuadrados, cable de acero y una esquina completa; el Futbolito queda en la cuarta como proyecto especial. Las cuatro tarjetas abren un visor ampliado con giro, acercamiento táctil, vista de detalle y despiece reversible.
 
-Las portadas del HRD 1518 y el Futbolito comparten un estudio gris claro, acero con reflejos controlados y un acento rojo ambiental. La portada final proporcionada para el HRD 1518 muestra los pines al exterior y las barras delgadas atravesándolos; se usa sin alteraciones. El modelo GLB se conserva como referencia geométrica principal.
+Las portadas del HRD 1518, HRD 1616 y el Futbolito comparten un estudio gris claro, acero con reflejos controlados y un acento rojo ambiental. La portada final proporcionada para el HRD 1518 muestra los pines al exterior y las barras delgadas atravesándolos; la del HRD 1616 muestra los cables entrando directamente al poste. Ambas se usan sin alteraciones. Los modelos GLB se conservan como referencia geométrica principal; el acabado negro del HRD 1616 se sustituye únicamente durante la visualización por acero satinado.
 
 El modelo del futbolito es una reconstrucción visual aproximada basada en fotografías. No representa todavía medidas verificadas, un modelo de fabricación ni una secuencia física de ensamble.
 

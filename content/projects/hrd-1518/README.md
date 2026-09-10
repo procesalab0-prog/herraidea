@@ -6,6 +6,7 @@ Fuente recibida: `content/source-documents/Herraidea-HRD-1518-3D.zip`.
 
 - Modelo principal: `assets/projects/hrd-1518/hrd-1518.glb`.
 - Variante lateral conservada: `assets/projects/hrd-1518/hrd-1518-lateral.glb`.
+- Esquina articulada: `assets/projects/hrd-1518/hrd-1518-esquina.glb`, recibida en `content/source-documents/Herraidea-Esquina-90-3D.zip`.
 - Portada de estudio validada y recibida: `assets/projects/hrd-1518/portada-estudio.png`.
 - Fotografía original de referencia: `content/source-documents/hrd-1518/foto-instalacion.JPG`.
 - El carrusel usa la variante principal con montaje al piso y la presenta después de Postes con clips.
@@ -15,6 +16,8 @@ Fuente recibida: `content/source-documents/Herraidea-HRD-1518-3D.zip`.
 
 El sistema representa un poste de 2 pulgadas por 95 cm con vela articulada, montaje al piso y tres pines intermedios. En la experiencia interactiva, cada cabeza se mantiene unida a su pin durante el despiece porque corresponde a una sola pieza, reduciendo el conteo visible de 23 a 20 componentes y conjuntos. Las barras y el pasamanos se muestran como contexto de instalación; su presencia en el modelo no define por sí sola el contenido comercial del kit.
 
+Cuando la calculadora contiene dos o más tramos, el encuentro utiliza la esquina articulada recibida: un solo poste compartido, pines independientes a 90 grados y unión superior articulada. Los tramos continuos se detienen en la unión para no atravesarla.
+
 La portada final fue proporcionada ya corregida: los pines quedan al exterior y las barras delgadas los atraviesan. Se conserva sin alteraciones visuales. El GLB sigue siendo la referencia principal para geometría e interacción.
 
 ## Integridad
@@ -22,4 +25,6 @@ La portada final fue proporcionada ya corregida: los pines quedan al exterior y 
 - ZIP fuente: `e912136eb216bdc63f5e92730c76478075dc583304156e1b15a0c67a27ce7403`
 - GLB principal: `4c7571c00c4b0b5ac25ef4a87648e01729891c1875546fbab8e488c4f88fc425`
 - GLB lateral: `7e7359046dcd72e6ba43fd51d0d7bd7a5d30a132a66e9c1a3790678e62e826ad`
+- ZIP de esquina: `81591d73d30a8bd0c546cf7283a1b15ff250de2ef361d034741e9860f5fec37d`
+- GLB de esquina: `86fdcee6418e4b9942d61c8cae5f01fa0862f7026d4d756e9426640b978d6fee`
 - Fotografía: `a15458048075f39fff0902cfbed4931918bd945ea093908aeab1407ebcbecee0`

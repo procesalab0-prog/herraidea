@@ -8,6 +8,7 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const profiles = {
   clips: { target: [0, .48, 0], camera: [1.3, 1, 2.1], min: .7, detailTarget: [-.413, .695, 0], detailCamera: [-.163, .845, .48] },
   hrd1518: { target: [0, .48, 0], camera: [1.3, 1, 2.1], min: .3, detailTarget: [0, .78, .05], detailCamera: [.23, .89, .39] },
+  hrd1616: { target: [.57, .52, .57], camera: [2.2, 1.55, 2.35], min: .45, detailTarget: [0, .53, 0], detailCamera: [.48, .82, .5] },
   futbolito: { target: [0, .5, 0], camera: [2.1, 1.65, 2.15], min: 1.3, detailTarget: [0, .5, .406], detailCamera: [.85, 1.1, 2.6] }
 };
 
@@ -29,9 +30,17 @@ const projects = {
     aria: 'Modelo tridimensional interactivo del poste HRD 1518 con pasamanos y tres barras',
     caveat: 'Las barras y el pasamanos muestran el sistema instalado y no indican por sí solos el contenido comercial del kit.'
   },
+  hrd1616: {
+    src: '/assets/projects/hrd-1616/hrd-1616-esquina.glb', profile: 'hrd1616', kicker: 'Solución interactiva 03',
+    title: 'HRD 1616 · Poste cuadrado + cable', number: '03 / HRD 1616 · Cable de acero',
+    heading: 'Una esquina completa, unión por unión.',
+    description: 'Recorre los dos tramos, acércate al poste compartido y controla el despiece del sistema completo.',
+    content: '103 piezas y conjuntos', detail: 'Ver esquina',
+    aria: 'Modelo tridimensional interactivo del sistema HRD 1616 con postes cuadrados y cable de acero', caveat: ''
+  },
   futbolito: {
-    src: '/assets/projects/futbolito/futbolito-herraidea.glb', profile: 'futbolito', kicker: 'Proyecto interactivo 03',
-    title: 'Futbolito Herraidea', number: '03 / Proyecto especial',
+    src: '/assets/projects/futbolito/futbolito-herraidea.glb', profile: 'futbolito', kicker: 'Proyecto interactivo 04',
+    title: 'Futbolito Herraidea', number: '04 / Proyecto especial',
     heading: 'Observa cómo cada parte forma el proyecto.',
     description: 'Gira el modelo, acércate a sus uniones y controla la separación de todos sus componentes.',
     content: '190 piezas y conjuntos', detail: 'Ver costado',
@@ -41,6 +50,27 @@ const projects = {
 };
 
 const prepareModel = (gltf, profileName) => {
+  if (profileName === 'hrd1616') {
+    let steel;
+    gltf.scene.traverse(object => {
+      if (!object.isMesh) return;
+      const materials = Array.isArray(object.material) ? object.material : [object.material];
+      steel ||= materials.find(material => material?.name === 'Acero inoxidable');
+    });
+    if (steel) {
+      const satin = steel.clone();
+      satin.name = 'Acero inoxidable satinado';
+      satin.color.setHex(0xd1d5d8);
+      satin.metalness = .82;
+      satin.roughness = .26;
+      satin.envMapIntensity = 1.55;
+      gltf.scene.traverse(object => {
+        if (!object.isMesh) return;
+        const replace = material => ['Negro', 'Acero inoxidable'].includes(material?.name) ? satin.clone() : material;
+        object.material = Array.isArray(object.material) ? object.material.map(replace) : replace(object.material);
+      });
+    }
+  }
   if (profileName === 'clips') {
     const glass = gltf.scene.getObjectByName('Cristal_central');
     if (glass) glass.scale.x *= (.96 - .0592) / .838;

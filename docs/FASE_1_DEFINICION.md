@@ -60,7 +60,7 @@ La landing se actualiza progresivamente con la información y los recursos ya co
 ### Activos existentes
 
 - Landing publicada con animaciones, modelos 3D, sonido y adaptación móvil.
-- Tres experiencias interactivas recibidas: sistema de postes con clips, vidrio y pasamanos; poste HRD 1518; y Futbolito Herraidea con modelo GLB final de 190 piezas y conjuntos. En el HRD 1525, el cristal cubre completamente la zona de los clips; en el HRD 1518, cada cabeza forma una sola pieza visual con su pin.
+- Cuatro experiencias interactivas recibidas: sistema de postes con clips, vidrio y pasamanos; poste HRD 1518; HRD 1616 de poste cuadrado con cable de acero; y Futbolito Herraidea con modelo GLB final de 190 piezas y conjuntos. En el HRD 1525, el cristal cubre la zona de los clips sin rebasarla; en el HRD 1518, cada cabeza forma una sola pieza visual con su pin y la calculadora utiliza su esquina articulada; el HRD 1616 se presenta en acero satinado.
 - Catálogo de 82 herrajes y configuraciones y respaldo público recuperado de Jimdo.
 - Catálogo Herraidea 2023 completo de 12 páginas, conservado como fuente documental y pendiente de conciliación con Jimdo.
 - Cuatro referencias visuales archivadas para definir tipografía editorial, interfaz modular y tratamiento elegante del acero inoxidable.
@@ -79,7 +79,7 @@ La landing se actualiza progresivamente con la información y los recursos ya co
 - Las fotografías y demás activos visuales se recibirán e integrarán progresivamente.
 - Herraidea cuenta con dos vendedores; esta cantidad es información interna y no se mostrará en la web.
 - La dirección visual conservará negro, blanco, grises metálicos y rojo Herraidea, con tipografía protagonista, composición editorial y fotografía macro de producto.
-- La sección 3D se presenta como un carrusel grande de soluciones. Comienza con el sistema de postes con clips y vidrio por representar el negocio principal, continúa con el poste HRD 1518 y conserva el Futbolito Herraidea como proyecto especial. Las tres experiencias se abren en un visor ampliado con despiece, armado, giro, zoom y vista de detalle.
+- La sección 3D se presenta como un carrusel grande de soluciones. Comienza con el sistema de postes con clips y vidrio por representar el negocio principal, continúa con el poste HRD 1518, incorpora el HRD 1616 de poste cuadrado y cable de acero, y conserva el Futbolito Herraidea como proyecto especial. Las cuatro experiencias se abren en un visor ampliado con despiece, armado, giro, zoom y vista de detalle.
 - La implementación visible comenzó con el reposicionamiento del hero y una sección editorial de soluciones y capacidades; las fotografías recibidas se integrarán progresivamente.
 
 ## 4. Información crítica que debe entregar Herraidea
@@ -124,8 +124,8 @@ La landing se actualiza progresivamente con la información y los recursos ya co
 
 ### E. Calculadora por múltiplos
 
-- [x] Soluciones activas con modelo 3D validado: postes con clips y vidrio (HRD 1525) y tubo de 1/2" (HRD 1518).
-- [ ] Modelos 3D por recibir para activar las demás soluciones: cable de acero, vidrio a presión y postes de solera.
+- [x] Soluciones activas con modelo 3D recibido: postes con clips y vidrio (HRD 1525), tubo de 1/2" (HRD 1518) y poste cuadrado con cable de acero (HRD 1616).
+- [ ] Modelos 3D por recibir para activar las demás soluciones: vidrio a presión y postes de solera.
 - [x] Fórmula inicial: separación entre postes de 1.20 a 1.40 m, buscando la distribución más cercana a 1.30 m; postes = espacios + 1 en un tramo recto.
 - [x] Tramos conectados: cada esquina comparte el poste que termina un tramo y comienza el siguiente.
 - [x] Regla de redondeo inicial: elegir un número entero de espacios dentro del rango; si no existe, no superar 1.40 m y señalar revisión técnica.

@@ -175,14 +175,19 @@
           <div class="project-card-copy"><span>02 · HRD 1518 · Sistema de tubo de 1/2"</span><h3>Poste<br>HRD 1518.</h3><p>Poste de acero inoxidable, pasamanos y tres barras unidos en una solución que puedes explorar pieza por pieza.</p></div>
           <button class="project-open" type="button" data-open-project="hrd1518" aria-haspopup="dialog"><span>Explorar pieza</span><b aria-hidden="true"><i></i></b></button>
         </article>
+        <article class="project-card project-card-hrd1616" data-project="hrd1616">
+          <figure class="project-card-photo"><img src="/assets/projects/hrd-1616/portada-estudio.png" alt="Sistema HRD 1616 con postes cuadrados y cable de acero" loading="lazy"></figure>
+          <div class="project-card-copy"><span>03 · HRD 1616 · Poste cuadrado + cable</span><h3>Cable de acero.<br>Esquina completa.</h3><p>Postes cuadrados, pasamanos y ocho líneas de cable en una solución satinada que puedes recorrer y desarmar.</p></div>
+          <button class="project-open" type="button" data-open-project="hrd1616" aria-haspopup="dialog"><span>Explorar solución</span><b aria-hidden="true"><i></i></b></button>
+        </article>
         <article class="project-card project-card-featured" data-project="futbolito">
           <figure class="project-card-photo"><img src="/assets/projects/futbolito/portada-estudio.png" alt="Futbolito Herraidea de cristal y acero inoxidable en estudio" loading="lazy"></figure>
-          <div class="project-card-copy"><span>03 · Proyecto especial</span><h3>Futbolito<br>Herraidea.</h3><p>190 piezas y conjuntos en una experiencia que puedes separar, girar y volver a armar.</p></div>
+          <div class="project-card-copy"><span>04 · Proyecto especial</span><h3>Futbolito<br>Herraidea.</h3><p>190 piezas y conjuntos en una experiencia que puedes separar, girar y volver a armar.</p></div>
           <button class="project-open" type="button" data-open-project="futbolito" aria-haspopup="dialog"><span>Abrir proyecto 3D</span><b aria-hidden="true"><i></i></b></button>
         </article>
       </div>
       <div class="section-inner projects-controls">
-        <div class="projects-pagination" aria-label="Elegir solución"><button class="active" type="button" data-project-slide="0" aria-label="Ver postes con clips"><i></i></button><button type="button" data-project-slide="1" aria-label="Ver poste HRD 1518"><i></i></button><button type="button" data-project-slide="2" aria-label="Ver Futbolito"><i></i></button></div>
+        <div class="projects-pagination" aria-label="Elegir solución"><button class="active" type="button" data-project-slide="0" aria-label="Ver postes con clips"><i></i></button><button type="button" data-project-slide="1" aria-label="Ver poste HRD 1518"><i></i></button><button type="button" data-project-slide="2" aria-label="Ver sistema HRD 1616"><i></i></button><button type="button" data-project-slide="3" aria-label="Ver Futbolito"><i></i></button></div>
         <button class="projects-next" type="button" aria-label="Ver siguiente solución"><i aria-hidden="true"></i></button>
       </div>
     </section>
@@ -195,7 +200,7 @@
       <div class="section-inner calculator-shell">
         <form class="calculator-controls" id="post-calculator">
           <div class="calculator-control-head"><span>Configura tu recorrido</span><strong id="calculator-step-count">01 tramo</strong></div>
-          <label class="calculator-field" for="calculator-system"><span>Solución con modelo 3D disponible</span><select id="calculator-system" name="solucion"><option value="clips">Postes con clips + vidrio · HRD 1525</option><option value="tubo">Sistema de tubo de 1/2&quot; · HRD 1518</option></select><small>La vista utiliza las piezas 3D reales ya validadas para estas dos soluciones.</small></label>
+          <label class="calculator-field" for="calculator-system"><span>Solución con modelo 3D disponible</span><select id="calculator-system" name="solucion"><option value="clips">Postes con clips + vidrio · HRD 1525</option><option value="tubo">Sistema de tubo de 1/2&quot; · HRD 1518</option><option value="cable">Poste cuadrado + cable de acero · HRD 1616</option></select><small>La vista utiliza las piezas 3D reales recibidas para estas tres soluciones.</small></label>
           <fieldset class="calculator-segments-fieldset"><legend>Medidas por tramo</legend><div id="calculator-segments"></div><button class="calculator-add" id="calculator-add-segment" type="button"><span>＋</span> Agregar tramo con esquina</button></fieldset>
           <p class="calculator-rule"><i aria-hidden="true"></i><span>Cada tramo nuevo comparte con el anterior el poste de la esquina. Máximo 8 tramos en esta vista.</span></p>
         </form>
@@ -293,12 +298,12 @@
 
   <dialog class="credits-dialog" id="credits-dialog" aria-labelledby="credits-title">
     <button class="credits-close" type="button" aria-label="Cerrar créditos">×</button>
-    <div class="credits-hero"><span class="credits-kicker">Seis toques desbloquearon</span><img class="procesalab-logo" src="/assets/brand/procesalab-horizontal.png" alt="Creado por ProcesaLab"><p>Diseño, desarrollo y evolución digital.</p><span class="current-version">Herraidea · v<span id="credits-version">1.22.1</span></span></div>
+    <div class="credits-hero"><span class="credits-kicker">Seis toques desbloquearon</span><img class="procesalab-logo" src="/assets/brand/procesalab-horizontal.png" alt="Creado por ProcesaLab"><p>Diseño, desarrollo y evolución digital.</p><span class="current-version">Herraidea · v<span id="credits-version">1.23.0</span></span></div>
     <div class="credits-content"><h2 id="credits-title">Construido versión a versión.</h2><p>Cada actualización queda documentada para que el proyecto conserve contexto, decisiones y continuidad.</p><div class="version-list" id="version-list"></div></div>
   </dialog>
 
   <footer><div class="section-inner"><a class="footer-brand" href="#inicio" aria-label="Herraidea, volver al inicio"><img src="/assets/logo-light-nodot.png" alt="Herraidea"><i aria-hidden="true"></i></a><nav><a href="#asesoria">Asesoría</a><a href="#catalogo">Catálogo</a><a href="#recursos">Recursos</a><a href="#nosotros">Nosotros</a><a href="#envios">Envíos</a><a href="#contacto">Contacto</a></nav><span>León, Gto. · Desde 2013</span></div></footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="/hrd-map.js?v=1-10"></script><script src="/sound.js?v=1-10"></script><script src="/hero.js?v=1-21-1"></script><script type="module" src="/project-3d-v2.js?v=1-22-2"></script><script type="module" src="/calculator-3d.js?v=1-22-2"></script>
+  <script src="/hrd-map.js?v=1-10"></script><script src="/sound.js?v=1-10"></script><script src="/hero.js?v=1-21-1"></script><script type="module" src="/project-3d-v2.js?v=1-23-0"></script><script type="module" src="/calculator-3d.js?v=1-23-0"></script>
 </body>
 </html>

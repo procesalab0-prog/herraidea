@@ -213,7 +213,7 @@ La primera colección ya identifica Pipetas, Postes, Conectores y Jaladeras tant
 
 ### Evolución del recorrido 3D — carrusel de soluciones en implementación
 
-La sección anterior de tres piezas aisladas se sustituye por un carrusel de **soluciones completas** con tarjetas grandes y ampliables. La primera solución es un barandal de postes con clips, vidrio y pasamanos, con 46 piezas y conjuntos, despiece reversible y acercamiento a una pinza. El cristal debe prolongarse hasta cubrir por completo la zona de sujeción de cada clip. El poste HRD 1518 ocupa la segunda posición con su sistema de pasamanos y tres barras; sus tres cabezas permanecen integradas a los pines durante el despiece, por lo que se presenta con 20 componentes y conjuntos. El Futbolito Herraidea queda como tercer elemento y demuestra la capacidad para proyectos especiales con 190 piezas y conjuntos.
+La sección anterior de tres piezas aisladas se sustituye por un carrusel de **soluciones completas** con tarjetas grandes y ampliables. La primera solución es un barandal de postes con clips, vidrio y pasamanos, con 46 piezas y conjuntos, despiece reversible y acercamiento a una pinza. El cristal termina exactamente en el borde exterior del clip para cubrir su zona de sujeción sin rebasarla. El poste HRD 1518 ocupa la segunda posición con su sistema de pasamanos y tres barras; sus tres cabezas permanecen integradas a los pines durante el despiece, por lo que se presenta con 20 componentes y conjuntos. El HRD 1616 ocupa la tercera posición como solución de poste cuadrado y cable de acero, con esquina completa, acabado satinado aplicado en la visualización y despiece de 103 piezas y conjuntos. El Futbolito Herraidea queda como cuarto elemento y demuestra la capacidad para proyectos especiales con 190 piezas y conjuntos.
 
 Los modelos existentes se conservarán dentro de recuadros técnicos como acercamientos a componentes del sistema. Durante el desplazamiento, las piezas podrán crecer dentro de esos recuadros, conectarse con su posición real y regresar al conjunto.
 
@@ -356,9 +356,9 @@ Antes de diseñarlo se necesita definir con Herraidea todas las rutas, preguntas
 
 La regla inicial recibida por Herraidea calcula la distribución de postes por tramo. La separación buscada es de **1.20 a 1.40 m**; se elige el número entero de espacios más cercano a 1.30 m y cada tramo recto necesita un poste más que espacios. Ejemplos confirmados: 4.80 m se distribuyen en 4 espacios de 1.20 m y requieren 5 postes; 5.30 m se distribuyen en 4 espacios de 1.325 m y requieren 5 postes.
 
-Cuando se agregan tramos conectados, el poste de cada esquina funciona como final del tramo anterior e inicio del siguiente, por lo que no se cuenta dos veces. La web ya permite agregar hasta ocho tramos y ver crecer dos soluciones construidas con los modelos 3D reales ya recibidos: **Postes con clips + vidrio (HRD 1525)** y **Sistema de tubo de 1/2 pulgada (HRD 1518)**. Los herrajes mantienen su geometría original y únicamente los elementos continuos —vidrio, tubos y pasamanos— ajustan su longitud útil para representar cada espacio calculado. El resultado puede enviarse por WhatsApp para revisión.
+Cuando se agregan tramos conectados, el poste de cada esquina funciona como final del tramo anterior e inicio del siguiente, por lo que no se cuenta dos veces. La web ya permite agregar hasta ocho tramos y ver crecer tres soluciones construidas con los modelos 3D reales ya recibidos: **Postes con clips + vidrio (HRD 1525)**, **Sistema de tubo de 1/2 pulgada (HRD 1518)** y **Poste cuadrado + cable de acero (HRD 1616)**. El HRD 1518 utiliza en cada cambio de dirección la esquina articulada recibida, con pines independientes a 90 grados y unión superior; el HRD 1616 conserva su poste compartido de esquina. En el sistema de clips, los paños llegan al borde de la pinza sin atravesarla. Los herrajes mantienen su geometría original y únicamente los elementos continuos ajustan su longitud útil para representar cada espacio calculado. El resultado puede enviarse por WhatsApp para revisión.
 
-Quedan como **pendientes de activación en la calculadora** hasta recibir sus modelos 3D: Sistema de cable de acero, Sistema de vidrio a presión y Postes de solera. No deben mostrarse mediante geometrías aproximadas o conceptuales.
+Quedan como **pendientes de activación en la calculadora** hasta recibir sus modelos 3D: Sistema de vidrio a presión y Postes de solera. No deben mostrarse mediante geometrías aproximadas o conceptuales.
 
 Si ninguna división entera queda exactamente entre 1.20 y 1.40 m, la herramienta evita superar 1.40 m y muestra una advertencia para revisión técnica. La estimación no calcula estructura, anclajes, cargas, normativa, desperdicio, empaques ni precio. Esos datos y las reglas particulares de cada sistema deben validarse antes de ampliar el cálculo.
 
@@ -437,7 +437,7 @@ No se debe presentar esta funcionalidad como parte del alcance actual ni constru
 - Navegación reorganizada.
 - Sección “Lo que podemos fabricar”.
 - Canalizador de proyectos sin base de datos; primera versión implementada con tipo de proyecto, ubicación, base de montaje y necesidad, seguida de una sugerencia visual orientativa y revisión humana por WhatsApp. Incluye una entrada separada para piezas, estructuras e ideas fuera del catálogo.
-- Calculadora visual de postes implementada con tramos conectados, esquinas compartidas, separación objetivo de 1.20 a 1.40 m, modelos 3D reales del HRD 1525 y HRD 1518, y envío a WhatsApp para revisión.
+- Calculadora visual de postes implementada con tramos conectados, esquinas compartidas, separación objetivo de 1.20 a 1.40 m, modelos 3D reales del HRD 1525, HRD 1518 y HRD 1616, y envío a WhatsApp para revisión.
 - Solicitud de proyecto mediante WhatsApp.
 - Reutilización cuidadosa de la experiencia visual actual.
 

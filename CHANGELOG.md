@@ -1,5 +1,15 @@
 # Historial de versiones — Herraidea
 
+## 1.23.0 — 2026-09-10
+
+- El carrusel incorpora el HRD 1616 como tercera solución interactiva: poste cuadrado, cable de acero, esquina completa y despiece de 103 piezas y conjuntos.
+- La última imagen proporcionada pasa a ser la portada oficial del HRD 1616, con cables entrando directamente a los postes y sin placas inferiores visibles.
+- El acabado negro del modelo HRD 1616 se sustituye en tiempo real por acero inoxidable satinado, sin modificar la geometría ni el archivo GLB fuente.
+- La calculadora visual activa el HRD 1616 y ajusta sus postes, cables y pasamanos a las medidas de cada tramo.
+- El sistema de tubo de 1/2 pulgada utiliza la nueva esquina articulada recibida en cada cambio de dirección, con un solo poste compartido y unión superior a 90 grados.
+- En postes con clips, cada cristal termina en el borde de la zona de sujeción y los herrajes del poste compartido se orientan por separado para cada tramo, sin que el paño rebase la pinza.
+- Los paquetes originales, GLB y portada quedan conservados como fuentes documentales con sus huellas de integridad.
+
 ## 1.22.2 — 2026-09-10
 
 - El cristal del sistema HRD 1525 se amplía hasta cubrir completamente la zona de sujeción de los clips, tanto en el visor de soluciones como en la calculadora.

@@ -14,7 +14,13 @@ const systems = {
   tubo: {
     name: 'Sistema de tubo de 1/2"', code: 'HRD 1518',
     src: '/assets/projects/hrd-1518/hrd-1518.glb', sourceSpacing: .84,
+    cornerSrc: '/assets/projects/hrd-1518/hrd-1518-esquina.glb',
     spanParts: new Set(['Pasamanos_contexto', 'Barra_contexto_1', 'Barra_contexto_2', 'Barra_contexto_3'])
+  },
+  cable: {
+    name: 'Poste cuadrado + cable de acero', code: 'HRD 1616',
+    src: '/assets/projects/hrd-1616/hrd-1616-esquina.glb', sourceSpacing: 1.15,
+    cornerSrc: '/assets/projects/hrd-1616/hrd-1616-esquina.glb', satin: true
   }
 };
 const loader = new GLTFLoader();
@@ -34,10 +40,33 @@ function bestDistribution(length) {
 function loadSource(config) {
   if (!sourceModels.has(config.src)) {
     sourceModels.set(config.src, new Promise((resolve, reject) => {
-      loader.load(config.src, ({ scene }) => resolve(scene), undefined, reject);
+      loader.load(config.src, ({ scene }) => {
+        if (config.satin) applySatinFinish(scene);
+        resolve(scene);
+      }, undefined, reject);
     }));
   }
   return sourceModels.get(config.src);
+}
+
+function applySatinFinish(scene) {
+  let steel;
+  scene.traverse(object => {
+    if (!object.isMesh) return;
+    const materials = Array.isArray(object.material) ? object.material : [object.material];
+    steel ||= materials.find(material => material?.name === 'Acero inoxidable');
+  });
+  const satin = steel?.clone() || new THREE.MeshStandardMaterial();
+  satin.name = 'Acero inoxidable satinado';
+  satin.color.setHex(0xd1d5d8);
+  satin.metalness = .82;
+  satin.roughness = .26;
+  satin.envMapIntensity = 1.55;
+  scene.traverse(object => {
+    if (!object.isMesh) return;
+    const replace = material => ['Negro', 'Acero inoxidable'].includes(material?.name) ? satin.clone() : material;
+    object.material = Array.isArray(object.material) ? object.material.map(replace) : replace(object.material);
+  });
 }
 
 function cloneMesh(source) {
@@ -50,10 +79,11 @@ function cloneMesh(source) {
   return copy;
 }
 
-function clipSpan(source, spacing) {
+function clipSpan(source, spacing, omitStart = false, omitEnd = false) {
   const span = new THREE.Group();
   const half = spacing / 2;
   source.children.forEach(part => {
+    if ((omitStart && part.name.startsWith('izquierdo_')) || (omitEnd && part.name.startsWith('derecho_'))) return;
     const copy = cloneMesh(part);
     if (part.name.startsWith('izquierdo_')) copy.position.x += -half + .48;
     else if (part.name.startsWith('derecho_')) copy.position.x += half - .48;
@@ -65,11 +95,12 @@ function clipSpan(source, spacing) {
   return span;
 }
 
-function tubeSpan(source, spacing) {
+function tubeSpan(source, spacing, omitStart = false, omitEnd = false) {
   const span = new THREE.Group();
   const config = systems.tubo;
   const postParts = source.children.filter(part => !config.spanParts.has(part.name));
-  [-spacing / 2, spacing / 2].forEach(position => {
+  [-spacing / 2, spacing / 2].forEach((position, index) => {
+    if ((index === 0 && omitStart) || (index === 1 && omitEnd)) return;
     postParts.forEach(part => {
       const copy = cloneMesh(part);
       copy.position.x += position;
@@ -82,6 +113,64 @@ function tubeSpan(source, spacing) {
     span.add(copy);
   });
   return span;
+}
+
+function cableSpan(source, spacing, omitStart = false, omitEnd = false) {
+  const span = new THREE.Group();
+  const config = systems.cable;
+  source.children.forEach(part => {
+    const isStart = part.name.startsWith('Esquina_') || /_A_Esquina_/.test(part.name);
+    const isEnd = part.name.startsWith('Extremo_A_') || /_A_Extremo_/.test(part.name);
+    const isContinuous = part.name.startsWith('Cable_A_') || part.name === 'Pasamanos_A';
+    if ((!isStart && !isEnd && !isContinuous) || (omitStart && isStart) || (omitEnd && isEnd)) return;
+    const copy = cloneMesh(part);
+    if (isEnd) copy.position.x += spacing - config.sourceSpacing;
+    if (isContinuous) {
+      const bounds = new THREE.Box3().setFromObject(part);
+      const sourceMin = bounds.min.x;
+      const sourceMax = bounds.max.x;
+      const desiredMin = part.name === 'Pasamanos_A' && omitStart ? 0 : sourceMin;
+      const desiredMax = part.name === 'Pasamanos_A' && omitEnd
+        ? spacing
+        : sourceMax + spacing - config.sourceSpacing;
+      const scale = (desiredMax - desiredMin) / (sourceMax - sourceMin);
+      copy.scale.x *= scale;
+      copy.position.x += desiredMin - sourceMin * scale;
+    }
+    span.add(copy);
+  });
+  span.children.forEach(part => { part.position.x -= spacing / 2; });
+  return span;
+}
+
+function centeredEndpoint(source, prefix, offset) {
+  const group = new THREE.Group();
+  source.children.filter(part => part.name.startsWith(prefix)).forEach(part => {
+    const copy = cloneMesh(part);
+    copy.position.x += offset;
+    group.add(copy);
+  });
+  return group;
+}
+
+function sharedCorner(system, source, cornerSource, position, junctionIndex, incomingAngle, outgoingAngle) {
+  const corner = new THREE.Group();
+  if (system === 'clips') {
+    const incoming = centeredEndpoint(source, 'derecho_', -.48);
+    incoming.rotation.y = -incomingAngle;
+    const outgoing = centeredEndpoint(source, 'izquierdo_', .48);
+    outgoing.rotation.y = -outgoingAngle;
+    corner.add(incoming, outgoing);
+  } else {
+    const matchesCorner = part => system === 'tubo'
+      ? part.name.startsWith('Esquina_') || part.name.startsWith('Union_90_')
+      : part.name.startsWith('Esquina_') || part.name.includes('_Esquina_');
+    cornerSource.children.filter(matchesCorner).forEach(part => corner.add(cloneMesh(part)));
+    corner.rotation.y = Math.PI + junctionIndex * Math.PI / 2;
+  }
+  corner.position.copy(position);
+  corner.name = `${systems[system].code}_Esquina_${junctionIndex + 1}`;
+  return corner;
 }
 
 class PostCalculator3D extends HTMLElement {
@@ -161,6 +250,9 @@ class PostCalculator3D extends HTMLElement {
     this.setAttribute('data-loading', 'true');
     try {
       const source = await loadSource(config);
+      const cornerSource = config.cornerSrc
+        ? await loadSource({ src: config.cornerSrc, satin: config.satin })
+        : source;
       if (request !== this.loadRequest || !this.isConnected) return;
       if (this.model) this.scene.remove(this.model);
 
@@ -175,12 +267,25 @@ class PostCalculator3D extends HTMLElement {
           const startPoint = cursor.clone().lerp(end, index / segment.spaces);
           const endPoint = cursor.clone().lerp(end, (index + 1) / segment.spaces);
           const spacing = startPoint.distanceTo(endPoint);
-          const span = system === 'clips' ? clipSpan(source, spacing) : tubeSpan(source, spacing);
+          const omitStart = segmentIndex > 0 && index === 0;
+          const omitEnd = segmentIndex < segments.length - 1 && index === segment.spaces - 1;
+          const span = system === 'clips'
+            ? clipSpan(source, spacing, omitStart, omitEnd)
+            : system === 'tubo'
+              ? tubeSpan(source, spacing, omitStart, omitEnd)
+              : cableSpan(source, spacing, omitStart, omitEnd);
           span.rotation.y = -angle;
           span.position.copy(startPoint).add(endPoint).multiplyScalar(.5);
           model.add(span);
         }
         cursor.copy(end);
+        if (segmentIndex < segments.length - 1) {
+          const [nextDx, nextDz] = directions[(segmentIndex + 1) % directions.length];
+          model.add(sharedCorner(
+            system, source, cornerSource, cursor, segmentIndex,
+            angle, Math.atan2(nextDz, nextDx)
+          ));
+        }
       });
 
       const totalLength = segments.reduce((sum, segment) => sum + segment.length, 0);
