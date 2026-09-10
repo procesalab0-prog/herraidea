@@ -239,7 +239,7 @@ def capabilities_page(c, page_num):
     eyebrow(c, "Diseño y fabricación", x, H - 76)
     title(c, ["Del plano", "a la pieza."], x, H - 122, 36, INK, 34)
     draw_paragraph(c, "Una medida especial, un dibujo, una muestra o una necesidad concreta pueden ser el inicio de una solución.", pstyle("cap", 11, 16, MID), x, H - 220, W * 0.5 - 68, 90)
-    items = ["4 tornos CNC Haas", "Centro de maquinado Haas VF-10", "Soldadura robotizada", "Corte láser", "Pulido de redondos y planos", "Acero inoxidable T-304 y T-316*"]
+    items = ["4 equipos CNC Haas VF-3SS", "Maquinado de precisión", "Soldadura robotizada", "Corte láser", "Pulido de redondos y planos", "Acero inoxidable T-304 y T-316*"]
     y = H - 330
     for item in items:
         c.setFillColor(RED)

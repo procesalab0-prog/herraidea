@@ -34,8 +34,7 @@ La prioridad comercial inicial será **barandales y fabricación a la medida**. 
 
 ### Capacidades generales de fabricación — confirmado
 
-- Cuatro tornos CNC Haas.
-- Centros de maquinado Haas VF-10; cantidad pendiente de confirmar.
+- Cuatro equipos CNC Haas VF-3SS.
 - Soldadura robotizada.
 - Corte láser.
 - Pulido de piezas redondas y planas.
@@ -214,7 +213,7 @@ La primera colección ya identifica Pipetas, Postes, Conectores y Jaladeras tant
 
 ### Evolución del recorrido 3D — carrusel de soluciones en implementación
 
-La sección anterior de tres piezas aisladas se sustituye por un carrusel de **soluciones completas** con tarjetas grandes y ampliables. La primera solución es un barandal de postes con clips, vidrio y pasamanos, con 46 piezas y conjuntos, despiece reversible y acercamiento a una pinza. El poste HRD 1518 ocupa la segunda posición con su sistema de pasamanos y tres barras; el Futbolito Herraidea queda como tercer elemento y demuestra la capacidad para proyectos especiales con 190 piezas y conjuntos.
+La sección anterior de tres piezas aisladas se sustituye por un carrusel de **soluciones completas** con tarjetas grandes y ampliables. La primera solución es un barandal de postes con clips, vidrio y pasamanos, con 46 piezas y conjuntos, despiece reversible y acercamiento a una pinza. El cristal debe prolongarse hasta cubrir por completo la zona de sujeción de cada clip. El poste HRD 1518 ocupa la segunda posición con su sistema de pasamanos y tres barras; sus tres cabezas permanecen integradas a los pines durante el despiece, por lo que se presenta con 20 componentes y conjuntos. El Futbolito Herraidea queda como tercer elemento y demuestra la capacidad para proyectos especiales con 190 piezas y conjuntos.
 
 Los modelos existentes se conservarán dentro de recuadros técnicos como acercamientos a componentes del sistema. Durante el desplazamiento, las piezas podrán crecer dentro de esos recuadros, conectarse con su posición real y regresar al conjunto.
 
@@ -477,7 +476,7 @@ El seguimiento de esta fase queda documentado en `docs/FASE_2_PROFESIONALIZACION
 
 Los datos técnicos de capacidad son complementarios y pueden incorporarse progresivamente; no condicionan el inicio del proyecto.
 
-- Inventario completo de máquinas y procesos; confirmar cantidad de centros de maquinado Haas VF-10.
+- Inventario complementario de máquinas, capacidades, recorridos y tolerancias de los cuatro equipos Haas VF-3SS.
 - Límites técnicos de materiales, dimensiones y tolerancias.
 - Tipos de piezas que pueden fabricar además del catálogo actual.
 - Escritura y uso comercial correctos de “zamak” y “Soleva”, además de la clasificación definitiva de las soluciones recibidas.

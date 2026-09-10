@@ -31,8 +31,7 @@ La landing se actualiza progresivamente con la información y los recursos ya co
 
 ### Capacidades generales
 
-- Cuatro tornos CNC Haas.
-- Centros de maquinado Haas VF-10; cantidad por confirmar.
+- Cuatro equipos CNC Haas VF-3SS.
 - Soldadura robotizada.
 - Corte láser.
 - Pulido de piezas redondas y planas.
@@ -61,7 +60,7 @@ La landing se actualiza progresivamente con la información y los recursos ya co
 ### Activos existentes
 
 - Landing publicada con animaciones, modelos 3D, sonido y adaptación móvil.
-- Tres experiencias interactivas recibidas: sistema de postes con clips, vidrio y pasamanos; poste HRD 1518; y Futbolito Herraidea con modelo GLB final de 190 piezas y conjuntos.
+- Tres experiencias interactivas recibidas: sistema de postes con clips, vidrio y pasamanos; poste HRD 1518; y Futbolito Herraidea con modelo GLB final de 190 piezas y conjuntos. En el HRD 1525, el cristal cubre completamente la zona de los clips; en el HRD 1518, cada cabeza forma una sola pieza visual con su pin.
 - Catálogo de 82 herrajes y configuraciones y respaldo público recuperado de Jimdo.
 - Catálogo Herraidea 2023 completo de 12 páginas, conservado como fuente documental y pendiente de conciliación con Jimdo.
 - Cuatro referencias visuales archivadas para definir tipografía editorial, interfaz modular y tratamiento elegante del acero inoxidable.

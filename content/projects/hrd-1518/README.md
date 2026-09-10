@@ -9,11 +9,11 @@ Fuente recibida: `content/source-documents/Herraidea-HRD-1518-3D.zip`.
 - Portada de estudio validada y recibida: `assets/projects/hrd-1518/portada-estudio.png`.
 - Fotografía original de referencia: `content/source-documents/hrd-1518/foto-instalacion.JPG`.
 - El carrusel usa la variante principal con montaje al piso y la presenta después de Postes con clips.
-- El modelo principal contiene 23 componentes o conjuntos y una animación de despiece.
+- El archivo fuente contiene 23 nodos animados; la experiencia los presenta como 20 componentes y conjuntos porque cada cabeza está integrada a su pin.
 
 ## Alcance técnico
 
-El sistema representa un poste de 2 pulgadas por 95 cm con vela articulada, montaje al piso y tres pines intermedios. Las barras y el pasamanos se muestran como contexto de instalación; su presencia en el modelo no define por sí sola el contenido comercial del kit.
+El sistema representa un poste de 2 pulgadas por 95 cm con vela articulada, montaje al piso y tres pines intermedios. En la experiencia interactiva, cada cabeza se mantiene unida a su pin durante el despiece porque corresponde a una sola pieza, reduciendo el conteo visible de 23 a 20 componentes y conjuntos. Las barras y el pasamanos se muestran como contexto de instalación; su presencia en el modelo no define por sí sola el contenido comercial del kit.
 
 La portada final fue proporcionada ya corregida: los pines quedan al exterior y las barras delgadas los atraviesan. Se conserva sin alteraciones visuales. El GLB sigue siendo la referencia principal para geometría e interacción.
 

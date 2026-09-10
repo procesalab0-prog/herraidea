@@ -12,6 +12,8 @@ Segunda experiencia 3D integrada en el carrusel de soluciones de Herraidea.
 
 El archivo contiene 46 nodos independientes y una animación `Despiece` de 0 a 3 segundos. Representa un tramo recto con dos postes, cuatro pinzas laterales, un paño de cristal, soportes superiores y pasamanos continuo.
 
+En la visualización publicada, el paño de cristal se prolonga hasta el borde exterior de los clips para cubrir completamente su zona de sujeción, conforme a la corrección recibida el 10 de septiembre de 2026.
+
 El visor permite girar, acercar, desarmar, volver a armar, controlar manualmente el avance y enfocar una pinza.
 
 ## Restricciones

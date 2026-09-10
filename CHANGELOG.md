@@ -1,5 +1,12 @@
 # Historial de versiones — Herraidea
 
+## 1.22.2 — 2026-09-10
+
+- El cristal del sistema HRD 1525 se amplía hasta cubrir completamente la zona de sujeción de los clips, tanto en el visor de soluciones como en la calculadora.
+- Las cabezas de los tres pines del HRD 1518 quedan integradas con su pin correspondiente durante el despiece y dejan de mostrarse como piezas independientes.
+- El conteo visible del HRD 1518 se ajusta de 23 a 20 componentes y conjuntos.
+- La capacidad de fabricación se corrige a cuatro equipos CNC Haas VF-3SS.
+
 ## 1.22.1 — 2026-09-10
 
 - La calculadora queda activa únicamente para Postes con clips + vidrio (HRD 1525) y Sistema de tubo de 1/2 pulgada (HRD 1518).
@@ -136,7 +143,7 @@
 - Inicio de la primera etapa de reposicionamiento hacia barandales, soluciones y fabricación a la medida.
 - Nuevo mensaje principal “Tu proyecto no termina en el catálogo” y llamada a conocer las capacidades.
 - Nueva sección editorial “Lo hacemos a tu medida” con fotografías de maquinado CNC, producción de postes y empaque.
-- Capacidades confirmadas presentadas de forma clara: tornos CNC Haas, centro de maquinado VF-10, soldadura robotizada, corte láser y pulido.
+- Capacidades confirmadas presentadas de forma clara: equipos CNC Haas VF-3SS, soldadura robotizada, corte láser y pulido.
 - Cobertura actual ampliada en la comunicación a México, Guatemala, Honduras y el sur de Estados Unidos.
 - Textos de contacto orientados a recibir medidas, fotografías, dibujos, muestras o ideas de proyecto.
 

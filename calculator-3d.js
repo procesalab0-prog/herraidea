@@ -8,6 +8,7 @@ const systems = {
   clips: {
     name: 'Postes con clips + vidrio', code: 'HRD 1525',
     src: '/assets/projects/clip-system/herraje-cristal.glb', sourceSpacing: .96,
+    sourceGlassWidth: .838, clipInset: .0592,
     spanParts: new Set(['Cristal_central', 'Pasamanos_continuo'])
   },
   tubo: {
@@ -56,7 +57,9 @@ function clipSpan(source, spacing) {
     const copy = cloneMesh(part);
     if (part.name.startsWith('izquierdo_')) copy.position.x += -half + .48;
     else if (part.name.startsWith('derecho_')) copy.position.x += half - .48;
-    else copy.scale.x *= spacing / systems.clips.sourceSpacing;
+    else if (part.name === 'Cristal_central') {
+      copy.scale.x *= (spacing - systems.clips.clipInset) / systems.clips.sourceGlassWidth;
+    } else copy.scale.x *= spacing / systems.clips.sourceSpacing;
     span.add(copy);
   });
   return span;

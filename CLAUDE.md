@@ -1,6 +1,6 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.22.1**
+Versión actual: **1.22.2**
 
 Sitio de producción: `https://herraidea-landing.vercel.app/`
 
@@ -16,8 +16,8 @@ Landing estática para Herraidea, enfocada en barandales, soluciones y fabricaci
 - `sound.js`: motor Web Audio, preferencia del usuario y señales sonoras.
 - `hrd-3d.js`: geometría, materiales, iluminación y animación Three.js.
 - `hrd-map.js`: mapa animado de cobertura nacional desde León.
-- `project-3d-v2.js`: carrusel, visor reutilizable para diferentes soluciones, interacción táctil y control de sus animaciones de despiece.
-- `calculator-3d.js`: cálculo de espacios y postes, manejo de tramos conectados y ensamblaje de la vista a partir de los modelos GLB reales del HRD 1525 y HRD 1518.
+- `project-3d-v2.js`: carrusel, visor reutilizable para diferentes soluciones, interacción táctil y control de sus animaciones de despiece; el cristal del HRD 1525 cubre completamente la zona de sujeción y las cabezas de los pines del HRD 1518 permanecen unidas a cada pin.
+- `calculator-3d.js`: cálculo de espacios y postes, manejo de tramos conectados y ensamblaje de la vista a partir de los modelos GLB reales del HRD 1525 y HRD 1518, con cristal ajustado hasta el borde exterior de los clips.
 - `assets/fabricacion/`: imágenes optimizadas de maquinaria, producción y empaque recibidas para la primera etapa.
 - `assets/hero-barandal-v2-day.png` y `assets/hero-barandal-v2-night.png`: escenas vigentes del hero, fieles al sistema de postes, clips y cristal.
 - `assets/brand/herraidea-social-v2.png`: tarjeta social vigente para WhatsApp y redes, alineada con el nuevo hero y el mensaje principal.

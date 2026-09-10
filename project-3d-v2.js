@@ -25,7 +25,7 @@ const projects = {
     title: 'Poste HRD 1518', number: '02 / HRD 1518',
     heading: 'Del poste completo a cada unión.',
     description: 'Gira el sistema, acércate a sus soportes y controla la separación de cada componente.',
-    content: '23 componentes y conjuntos', detail: 'Ver unión',
+    content: '20 componentes y conjuntos', detail: 'Ver unión',
     aria: 'Modelo tridimensional interactivo del poste HRD 1518 con pasamanos y tres barras',
     caveat: 'Las barras y el pasamanos muestran el sistema instalado y no indican por sí solos el contenido comercial del kit.'
   },
@@ -38,6 +38,26 @@ const projects = {
     aria: 'Modelo tridimensional interactivo del Futbolito Herraidea',
     caveat: 'Modelo conceptual reconstruido a partir de fotografías. Las medidas y la secuencia de fabricación están por confirmar.'
   }
+};
+
+const prepareModel = (gltf, profileName) => {
+  if (profileName === 'clips') {
+    const glass = gltf.scene.getObjectByName('Cristal_central');
+    if (glass) glass.scale.x *= (.96 - .0592) / .838;
+  }
+
+  if (profileName !== 'hrd1518') return gltf.animations;
+  gltf.scene.updateMatrixWorld(true);
+  [1, 2, 3].forEach((index) => {
+    const pin = gltf.scene.getObjectByName(`Pin_intermedio_${index}`);
+    const head = gltf.scene.getObjectByName(`Cabeza_pin_${index}`);
+    if (pin && head) pin.attach(head);
+  });
+  return gltf.animations.map((clip) => new THREE.AnimationClip(
+    clip.name,
+    clip.duration,
+    clip.tracks.filter((track) => !/^Cabeza_pin_[1-3]\./.test(track.name))
+  ));
 };
 
 class HerraideaProject3D extends HTMLElement {
@@ -126,9 +146,10 @@ class HerraideaProject3D extends HTMLElement {
   loadModel() {
     new GLTFLoader().load(this.getAttribute('src'), (gltf) => {
       this.model = gltf.scene;
+      const animations = prepareModel(gltf, this.getAttribute('profile'));
       this.scene.add(this.model);
       this.mixer = new THREE.AnimationMixer(this.model);
-      const clip = gltf.animations.find((item) => item.name === 'Despiece') || gltf.animations[0];
+      const clip = animations.find((item) => item.name === 'Despiece') || animations[0];
       if (clip) {
         this.duration = clip.duration;
         this.action = this.mixer.clipAction(clip);
