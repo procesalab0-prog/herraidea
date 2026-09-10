@@ -1,5 +1,10 @@
 # Historial de versiones — Herraidea
 
+## 1.23.1 — 2026-09-10
+
+- La portada del HRD 1616 en el carrusel ahora se muestra completa, sin recortar los postes, cables ni pasamanos antes de abrir el visor 3D.
+- Se conserva el tamaño, la composición editorial y el comportamiento del resto de las tarjetas.
+
 ## 1.23.0 — 2026-09-10
 
 - El carrusel incorpora el HRD 1616 como tercera solución interactiva: poste cuadrado, cable de acero, esquina completa y despiece de 103 piezas y conjuntos.
