@@ -12,7 +12,7 @@ Inicio: 2026-09-09
 - Acceso a las 82 fichas existentes con fotografías, planos y especificaciones disponibles.
 - Aviso claro sobre los recursos individuales que todavía requieren validación.
 - Primera base SEO: descripción, URL canónica, permiso de indexación y datos estructurados de la organización.
-- Primera colección de pictogramas publicada para Pipetas, Postes, Conectores y Jaladeras.
+- Primera colección de pictogramas publicada para Pipetas, Postes, Conectores y Jaladeras; los diseños iniciales ya fueron sustituidos por los originales entregados por Herraidea, recortados individualmente sin alterar su forma y presentados sin cuadros de fondo.
 - Primera normalización visual aplicada a la familia Postes mediante un tratamiento de estudio común que conserva intactas las imágenes técnicas disponibles.
 
 ## 2. Siguientes bloques que pueden avanzarse

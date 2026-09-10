@@ -132,10 +132,10 @@
   addEventListener('resize', updateScroll); updateScroll();
 
   const labels = {
-    pipetas: ['Pipetas', 'Conectores cilíndricos para vidrio-muro y vidrio-vidrio, en versiones chapetón, avellanado, allen y ajustable.', '/assets/catalog/pictograms/pipetas.svg'],
-    postes: ['Postes', 'Mini postes sólidos, huecos, rectangulares y de solera, con placa base barrenada y versiones con tope.', '/assets/catalog/pictograms/postes.svg'],
-    conectores: ['Conectores', 'Botones y conectores para vidrio-muro y vidrio-vidrio, fabricados para distintos espesores y configuraciones.', '/assets/catalog/pictograms/conectores.svg'],
-    jaladeras: ['Jaladeras', 'Jaladeras tubulares de acero inoxidable para puertas de cristal templado.', '/assets/catalog/pictograms/jaladeras.svg']
+    pipetas: ['Pipetas', 'Conectores cilíndricos para vidrio-muro y vidrio-vidrio, en versiones chapetón, avellanado, allen y ajustable.', '/assets/catalog/pictograms/pipetas.png?v=1211'],
+    postes: ['Postes', 'Mini postes sólidos, huecos, rectangulares y de solera, con placa base barrenada y versiones con tope.', '/assets/catalog/pictograms/postes.png?v=1211'],
+    conectores: ['Conectores', 'Botones y conectores para vidrio-muro y vidrio-vidrio, fabricados para distintos espesores y configuraciones.', '/assets/catalog/pictograms/conectores.png?v=1211'],
+    jaladeras: ['Jaladeras', 'Jaladeras tubulares de acero inoxidable para puertas de cristal templado.', '/assets/catalog/pictograms/jaladeras.png?v=1211']
   };
   const escapeHTML = value => String(value ?? '').replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
   const productDialog = document.querySelector('#product-dialog');

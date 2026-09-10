@@ -1,7 +1,8 @@
 {
-  "current": "1.21.0",
+  "current": "1.21.1",
   "studio": "ProcesaLab",
   "versions": [
+    {"version":"1.21.1","date":"2026-09-10","title":"Pictogramas oficiales recortados","summary":"Los cuatro diseños entregados por Herraidea sustituyen a los anteriores mediante recortes transparentes y una presentación sin cuadros de fondo."},
     {"version":"1.21.0","date":"2026-09-10","title":"Pictogramas y Postes normalizados","summary":"Las cuatro familias reciben pictogramas propios y Postes estrena una presentación de estudio uniforme sin alterar la geometría de las piezas."},
     {"version":"1.20.0","date":"2026-09-09","title":"Catálogo 2026 y recorrido más claro","summary":"El catálogo 2026 sustituye la descarga pública anterior con 27 páginas y más identidad roja; las soluciones 3D ahora aparecen antes de la asesoría."},
     {"version":"1.19.0","date":"2026-09-09","title":"Primeros recursos técnicos","summary":"Una nueva sección permite descargar el catálogo general y acceder a las 82 fichas disponibles; también comienza la base SEO de la página."},

@@ -1,5 +1,13 @@
 # Historial de versiones — Herraidea
 
+## 1.21.1 — 2026-09-10
+
+- Los pictogramas experimentales se sustituyeron por los cuatro diseños proporcionados directamente por Herraidea.
+- Se utilizó la fila de trazo negro del archivo original y cada figura se recortó por separado sobre fondo transparente, sin redibujarla ni alterar sus proporciones.
+- Los nuevos recortes aparecen tanto en los accesos rápidos como en los encabezados de las familias del catálogo.
+- En los encabezados, los pictogramas quedan directamente sobre el fondo del catálogo, sin cuadro blanco, borde ni sombra detrás.
+- La lámina original se conserva como referencia para futuras aplicaciones de la identidad visual.
+
 ## 1.21.0 — 2026-09-10
 
 - Las cuatro familias del catálogo estrenan pictogramas lineales propios para Pipetas, Postes, Conectores y Jaladeras.

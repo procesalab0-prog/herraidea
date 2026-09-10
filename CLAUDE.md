@@ -1,6 +1,6 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.21.0**
+Versión actual: **1.21.1**
 
 Sitio de producción: `https://herraidea-landing.vercel.app/`
 
@@ -26,7 +26,8 @@ Landing estática para Herraidea, enfocada en barandales, soluciones y fabricaci
 - `assets/projects/clip-system/`: modelo GLB y portada de estudio de la solución de postes con clips y vidrio.
 - `assets/projects/hrd-1518/`: modelos GLB principal y lateral, más la portada de estudio del poste HRD 1518.
 - `content/catalog/details.json`: 82 fichas de herrajes y configuraciones, incluidas 38 opciones de postes.
-- `assets/catalog/pictograms/`: pictogramas SVG compartidos para Pipetas, Postes, Conectores y Jaladeras.
+- `assets/catalog/pictograms/`: recortes PNG transparentes de los pictogramas proporcionados por Herraidea para Pipetas, Postes, Conectores y Jaladeras.
+- `content/design-references/pictogramas-familias-herraidea.png`: lámina original recibida con los cuatro pictogramas, conservada sin modificaciones como fuente.
 - `content/source-documents/catalogo-herraidea-2023.pdf`: catálogo original completo recibido como fuente documental.
 - `content/source-documents/Futbolito-Herraidea-3D.zip`: paquete original del primer proyecto interactivo.
 - `content/source-documents/Herraidea-Pinza-Despiece.zip`: paquete fuente del sistema de postes, pinzas, vidrio y pasamanos.
