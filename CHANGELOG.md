@@ -1,5 +1,15 @@
 # Historial de versiones — Herraidea
 
+## 1.20.0 — 2026-09-09
+
+- El catálogo descargable público se actualizó de la edición 2023 al adelanto Herraidea 2026 de 27 páginas, sin precios.
+- La nueva edición presenta primero soluciones completas, fabricación a la medida y después las 82 fichas disponibles.
+- El diseño editorial incorpora más acentos rojos, titulares de mayor escala y el punto rojo de la “i” en el logotipo.
+- Se retiraron las leyendas internas sobre fotografías y datos recuperados para presentar el documento como un adelanto comercial.
+- El logotipo adquiere mayor protagonismo dentro del hero de la página.
+- Las soluciones interactivas aparecen antes de la asesoría para que el visitante conozca primero los sistemas 3D y después aterrice su proyecto.
+- El generador del PDF utiliza las mismas imágenes y datos del catálogo web para que futuras actualizaciones visuales puedan reflejarse en ambos formatos.
+
 ## 1.19.0 — 2026-09-09
 
 - Comienza la fase de profesionalización con una sección de recursos técnicos.

@@ -325,6 +325,8 @@ Tanto Gemini como OpenAI ofrecen edición de imágenes a partir de fotografías.
 
 Como parte de la profesionalización visual, las imágenes incorporadas provisionalmente desde catálogos deberán regenerarse o retocarse en una fase posterior hasta igualar el estilo limpio de las primeras fichas: encuadre consistente, fondo de estudio, escala comparable, sombra suave y acero fiel. Cada resultado se aprobará contra la fotografía y el modelo real antes de sustituir el recorte temporal; no se publicarán alteraciones de geometría ni componentes inventados.
 
+El catálogo PDF 2026 y el catálogo de la web compartirán la misma fuente de datos e imágenes. Cada fotografía aprobada se sustituirá primero en `content/catalog/images/` o en la carpeta correspondiente de soluciones; después se regenerará el PDF. De esta forma, la actualización visual de la web y del catálogo descargable avanzará como un solo proceso y no como dos inventarios separados.
+
 ### Canalizador de proyectos — propuesta
 
 Crear una sección pública y amigable llamada provisionalmente **“Encuentra la solución para tu proyecto”**. Mediante una serie breve de preguntas, ayudará al cliente a identificar qué aplicación, familia de productos o tipo de asesoría se adapta mejor a su necesidad.

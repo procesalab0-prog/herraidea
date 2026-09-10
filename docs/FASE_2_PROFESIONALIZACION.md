@@ -8,13 +8,16 @@ Inicio: 2026-09-09
 ## 1. Primera entrega publicada
 
 - Centro de recursos técnicos integrado en la página principal.
-- Descarga directa del catálogo general Herraidea 2023 en PDF.
+- Descarga directa del adelanto del catálogo Herraidea 2026 en PDF; sustituye públicamente la edición 2023.
 - Acceso a las 82 fichas existentes con fotografías, planos y especificaciones disponibles.
 - Aviso claro sobre los recursos individuales que todavía requieren validación.
 - Primera base SEO: descripción, URL canónica, permiso de indexación y datos estructurados de la organización.
 
 ## 2. Siguientes bloques que pueden avanzarse
 
+- Adelanto editorial del catálogo 2026 creado y publicado: 27 páginas, tres soluciones completas y las 82 fichas disponibles, sin precios.
+- El PDF se genera con `content/catalog/details.json`, `content/catalog/images/` y las portadas de soluciones que también utiliza la web. Al aprobar una imagen nueva deberá sustituirse en esa fuente compartida y regenerarse el catálogo para mantener ambos formatos sincronizados.
+- Lista de información pendiente documentada en `docs/CATALOGO_2026_PENDIENTES.md`.
 - Estructura y plantilla de fichas técnicas descargables.
 - Revisión y normalización visual de fotografías de producto.
 - Páginas independientes por aplicación y familia.

@@ -1,12 +1,12 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.19.0**
+Versión actual: **1.20.0**
 
 Sitio de producción: `https://herraidea-landing.vercel.app/`
 
 ## Estado actual
 
-Landing estática para Herraidea, enfocada en barandales, soluciones y fabricación a la medida. Incluye hero de producto con transición de día a noche, presentación editorial de capacidades, canalizador visual de proyectos sin base de datos con sugerencias iniciales, captación de proyectos fuera de catálogo, carrusel de soluciones y proyectos con experiencias 3D ampliables, diseño sonoro opcional, catálogo desplegable de 82 herrajes y configuraciones, primera sección de recursos técnicos, cobertura animada, ventanas con planos y especificaciones, historia institucional animada, contacto por WhatsApp y PWA.
+Landing estática para Herraidea, enfocada en barandales, soluciones y fabricación a la medida. Incluye hero de producto con transición de día a noche y logotipo protagonista, presentación editorial de capacidades, carrusel de soluciones y proyectos con experiencias 3D ampliables, canalizador visual de proyectos sin base de datos con sugerencias iniciales, captación de proyectos fuera de catálogo, catálogo desplegable de 82 herrajes y configuraciones, catálogo 2026 descargable, diseño sonoro opcional, cobertura animada, ventanas con planos y especificaciones, historia institucional animada, contacto por WhatsApp y PWA.
 
 ## Archivos principales
 
@@ -20,6 +20,7 @@ Landing estática para Herraidea, enfocada en barandales, soluciones y fabricaci
 - `assets/fabricacion/`: imágenes optimizadas de maquinaria, producción y empaque recibidas para la primera etapa.
 - `assets/hero-barandal-v2-day.png` y `assets/hero-barandal-v2-night.png`: escenas vigentes del hero, fieles al sistema de postes, clips y cristal.
 - `assets/brand/herraidea-social-v2.png`: tarjeta social vigente para WhatsApp y redes, alineada con el nuevo hero y el mensaje principal.
+- `output/pdf/catalogo-herraidea-2026-adelanto.pdf`: catálogo descargable vigente; se genera desde las mismas imágenes y datos que utiliza la web.
 - `assets/hero-barandal.png` y `assets/hero-night.png`: pareja anterior del hero, reutilizada en la composición animada de “Nuestra evolución”.
 - `assets/projects/futbolito/`: modelo GLB y portada de estudio del Futbolito Herraidea.
 - `assets/projects/clip-system/`: modelo GLB y portada de estudio de la solución de postes con clips y vidrio.

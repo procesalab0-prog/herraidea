@@ -1,5 +1,8 @@
 (() => {
   const clamp = (n, min = 0, max = 1) => Math.max(min, Math.min(max, n));
+  const guideSection = document.querySelector('#asesoria');
+  const projectsSection = document.querySelector('#proyectos');
+  if (guideSection && projectsSection) projectsSection.insertAdjacentElement('afterend', guideSection);
   const menuButton = document.querySelector('.menu-toggle');
   const menu = document.querySelector('.main-nav');
   menuButton?.addEventListener('click', () => {

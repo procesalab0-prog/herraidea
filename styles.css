@@ -411,3 +411,11 @@ body.project-open{overflow:hidden}
 .resources-note{margin-top:24px;color:#777f86;font-size:12px;line-height:1.6}
 @media(max-width:900px){.resources-heading>div{grid-template-columns:1fr;gap:24px}.resources-heading h2{font-size:clamp(50px,12vw,76px)}.resources-grid{grid-template-columns:1fr}.resource-card{min-height:440px}}
 @media(max-width:640px){.resources-section{padding:74px 0}.resources-heading{margin-bottom:34px}.resources-heading h2{font-size:clamp(48px,14vw,64px)}.resources-grid{width:calc(100% - 32px);gap:10px}.resource-card{min-height:420px;padding:28px 22px}.resource-card>div>span{margin-bottom:54px}.resource-card h3{font-size:44px}.resources-note{width:calc(100% - 32px)}}
+
+/* v1.20 · catálogo 2026 y mayor presencia de marca en el hero */
+.hero-brand{position:relative;width:clamp(300px,32vw,440px);margin:0 0 4px;animation:heroRise .8s .06s cubic-bezier(.2,.8,.2,1) both}
+.hero-brand img{width:100%;height:auto}
+.hero-brand i{position:absolute;left:61%;top:.7%;width:3.1%;height:20.8%;background:var(--brand-red);animation:dot 3.6s 1.2s infinite}
+.hero-copy{gap:18px}
+@media(max-width:900px){.hero-brand{width:min(72vw,330px);margin-bottom:0}.hero-copy{gap:14px}}
+@media(max-width:640px){.hero-brand{width:min(74vw,285px)}}
