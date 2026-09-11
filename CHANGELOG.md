@@ -1,5 +1,11 @@
 # Historial de versiones — Herraidea
 
+## 1.24.1 — 2026-09-11
+
+- Se restauran las pinzas de ambos lados en los postes compartidos del HRD 1525 para que cada cristal vuelva a quedar sujeto.
+- El encuentro a 90 grados del pasamanos HRD 1616 queda centrado directamente sobre su poste de esquina.
+- Los cambios se limitan a la geometría de la calculadora; los modelos y controles aprobados de los tres sistemas se conservan.
+
 ## 1.24.0 — 2026-09-11
 
 - La portada del HRD 1616 se reemplaza por la última imagen entregada, conservada sin reinterpretaciones mediante una ruta nueva para evitar caché.

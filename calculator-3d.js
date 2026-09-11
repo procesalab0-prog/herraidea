@@ -124,8 +124,6 @@ function cableSpan(source, spacing, omitStart = false, omitEnd = false, side = '
     const isEnd = part.name.startsWith(`Extremo_${side}_`) || part.name.includes(`_${side}_Extremo_`);
     const isContinuous = part.name.startsWith(`Cable_${side}_`) || part.name === `Pasamanos_${side}`;
     if ((!isStart && !isEnd && !isContinuous) || (omitStart && isStart) || (omitEnd && isEnd)) return;
-    const copy = cloneMesh(part);
-    if (isEnd) copy.position[axis] += spacing - config.sourceSpacing;
     if (isContinuous) {
       const bounds = new THREE.Box3().setFromObject(part);
       const sourceMin = bounds.min[axis];
@@ -134,10 +132,17 @@ function cableSpan(source, spacing, omitStart = false, omitEnd = false, side = '
       const desiredMax = part.name === `Pasamanos_${side}` && omitEnd
         ? spacing
         : sourceMax + spacing - config.sourceSpacing;
-      const scale = (desiredMax - desiredMin) / (sourceMax - sourceMin);
-      copy.scale[axis] *= scale;
-      copy.position[axis] += desiredMin - sourceMin * scale;
+      const fitted = new THREE.Group();
+      const copy = cloneMesh(part);
+      copy.position[axis] -= sourceMin;
+      fitted.add(copy);
+      fitted.scale[axis] = (desiredMax - desiredMin) / (sourceMax - sourceMin);
+      fitted.position[axis] = desiredMin;
+      span.add(fitted);
+      return;
     }
+    const copy = cloneMesh(part);
+    if (isEnd) copy.position[axis] += spacing - config.sourceSpacing;
     span.add(copy);
   });
   span.children.forEach(part => { part.position[axis] -= spacing / 2; });
@@ -268,7 +273,7 @@ class PostCalculator3D extends HTMLElement {
           const startPoint = cursor.clone().lerp(end, index / segment.spaces);
           const endPoint = cursor.clone().lerp(end, (index + 1) / segment.spaces);
           const spacing = startPoint.distanceTo(endPoint);
-          const omitStart = index > 0 || (segmentIndex > 0 && index === 0);
+          const omitStart = segmentIndex > 0 && index === 0;
           const omitEnd = segmentIndex < segments.length - 1 && index === segment.spaces - 1;
           const cableSide = segmentIndex === 1 ? 'B' : 'A';
           const span = system === 'clips'

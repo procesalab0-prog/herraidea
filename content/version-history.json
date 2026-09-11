@@ -1,7 +1,8 @@
 {
-  "current": "1.24.0",
+  "current": "1.24.1",
   "studio": "ProcesaLab",
   "versions": [
+    {"version":"1.24.1","date":"2026-09-11","title":"Uniones 3D restauradas","summary":"El HRD 1525 recupera las pinzas en ambos lados de cada poste compartido y el encuentro del HRD 1616 queda centrado sobre su poste de esquina."},
     {"version":"1.24.0","date":"2026-09-11","title":"Visores simples y esquina HRD 1616 fiel","summary":"La nueva portada del HRD 1616 se publica sin alteraciones; su esquina conserva los lados A y B del modelo, y los visores estrenan controles tipo cápsula con mejor orden móvil."},
     {"version":"1.23.3","date":"2026-09-11","title":"Cambio correcto al HRD 1518","summary":"La calculadora carga la copia íntegra de la esquina articulada y sustituye visualmente el sistema con clips al elegir el tubo de 1/2 pulgada."},
     {"version":"1.23.2","date":"2026-09-10","title":"Portada HRD 1616 renovada","summary":"La tarjeta usa la última fotografía aprobada mediante un recurso nuevo que evita mostrar una versión anterior almacenada en caché."},
