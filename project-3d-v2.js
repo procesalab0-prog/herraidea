@@ -295,6 +295,14 @@ const status = document.querySelector('#project-status');
 let viewer = document.querySelector('#project-viewer');
 let activeSlide = 0;
 
+const setActiveControl = (active) => {
+  dialog?.querySelectorAll('.project-actions button').forEach((button) => {
+    const pressed = Boolean(active) && button.matches(active);
+    button.classList.toggle('active', pressed);
+    button.setAttribute('aria-pressed', String(pressed));
+  });
+};
+
 const setSlide = (index, behavior = 'smooth') => {
   if (!rail || !cards.length) return;
   activeSlide = (index + cards.length) % cards.length;
@@ -350,6 +358,7 @@ const openProject = (key) => {
   range.disabled = true;
   range.style.setProperty('--project-range', '0%');
   rangeValue.textContent = '0 %';
+  setActiveControl('[data-project-assemble]');
   status.textContent = 'Preparando el modelo 3D…';
   dialog.querySelectorAll('.project-actions button').forEach((button) => { button.disabled = true; });
 
@@ -384,11 +393,21 @@ dialog?.addEventListener('close', () => {
   document.body.classList.remove('project-open');
   viewer.visible = false;
 });
-dialog?.querySelector('[data-project-explode]')?.addEventListener('click', () => viewer.animateTo(1));
-dialog?.querySelector('[data-project-assemble]')?.addEventListener('click', () => viewer.animateTo(0));
-dialog?.querySelector('[data-project-corner]')?.addEventListener('click', () => viewer.showCorner());
+dialog?.querySelector('[data-project-explode]')?.addEventListener('click', () => {
+  setActiveControl('[data-project-explode]');
+  viewer.animateTo(1);
+});
+dialog?.querySelector('[data-project-assemble]')?.addEventListener('click', () => {
+  setActiveControl('[data-project-assemble]');
+  viewer.animateTo(0);
+});
+dialog?.querySelector('[data-project-corner]')?.addEventListener('click', () => {
+  setActiveControl('[data-project-corner]');
+  viewer.showCorner();
+});
 range?.addEventListener('input', () => {
   cancelAnimationFrame(viewer.tweenFrame);
+  setActiveControl(range.value === '0' ? '[data-project-assemble]' : range.value === '100' ? '[data-project-explode]' : '');
   viewer.setAmount(Number(range.value) / 100);
 });
 

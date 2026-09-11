@@ -1,5 +1,13 @@
 # Historial de versiones — Herraidea
 
+## 1.24.0 — 2026-09-11
+
+- La portada del HRD 1616 se reemplaza por la última imagen entregada, conservada sin reinterpretaciones mediante una ruta nueva para evitar caché.
+- La esquina de la calculadora utiliza el lado A del modelo para el tramo que llega y el lado B para el que sale, respetando el desfase real de sus ocho conexiones de cable.
+- Los postes compartidos entre espacios dejan de duplicarse internamente en las tres soluciones de la calculadora.
+- Los visores adoptan una composición más simple: controles compactos tipo cápsula a la izquierda en escritorio, modelo protagonista a la derecha y estado activo claramente señalado.
+- En teléfono, el visor coloca primero el modelo y luego sus controles; la calculadora muestra la escena 3D antes de la configuración y mantiene los resultados al final.
+
 ## 1.23.3 — 2026-09-11
 
 - La calculadora visual cambia correctamente de HRD 1525 a Sistema de tubo de 1/2 pulgada HRD 1518.

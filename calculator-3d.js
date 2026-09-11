@@ -115,31 +115,32 @@ function tubeSpan(source, spacing, omitStart = false, omitEnd = false) {
   return span;
 }
 
-function cableSpan(source, spacing, omitStart = false, omitEnd = false) {
+function cableSpan(source, spacing, omitStart = false, omitEnd = false, side = 'A') {
   const span = new THREE.Group();
   const config = systems.cable;
+  const axis = side === 'B' ? 'z' : 'x';
   source.children.forEach(part => {
-    const isStart = part.name.startsWith('Esquina_') || /_A_Esquina_/.test(part.name);
-    const isEnd = part.name.startsWith('Extremo_A_') || /_A_Extremo_/.test(part.name);
-    const isContinuous = part.name.startsWith('Cable_A_') || part.name === 'Pasamanos_A';
+    const isStart = part.name.startsWith('Esquina_') || part.name.includes(`_${side}_Esquina_`);
+    const isEnd = part.name.startsWith(`Extremo_${side}_`) || part.name.includes(`_${side}_Extremo_`);
+    const isContinuous = part.name.startsWith(`Cable_${side}_`) || part.name === `Pasamanos_${side}`;
     if ((!isStart && !isEnd && !isContinuous) || (omitStart && isStart) || (omitEnd && isEnd)) return;
     const copy = cloneMesh(part);
-    if (isEnd) copy.position.x += spacing - config.sourceSpacing;
+    if (isEnd) copy.position[axis] += spacing - config.sourceSpacing;
     if (isContinuous) {
       const bounds = new THREE.Box3().setFromObject(part);
-      const sourceMin = bounds.min.x;
-      const sourceMax = bounds.max.x;
-      const desiredMin = part.name === 'Pasamanos_A' && omitStart ? 0 : sourceMin;
-      const desiredMax = part.name === 'Pasamanos_A' && omitEnd
+      const sourceMin = bounds.min[axis];
+      const sourceMax = bounds.max[axis];
+      const desiredMin = part.name === `Pasamanos_${side}` && omitStart ? 0 : sourceMin;
+      const desiredMax = part.name === `Pasamanos_${side}` && omitEnd
         ? spacing
         : sourceMax + spacing - config.sourceSpacing;
       const scale = (desiredMax - desiredMin) / (sourceMax - sourceMin);
-      copy.scale.x *= scale;
-      copy.position.x += desiredMin - sourceMin * scale;
+      copy.scale[axis] *= scale;
+      copy.position[axis] += desiredMin - sourceMin * scale;
     }
     span.add(copy);
   });
-  span.children.forEach(part => { part.position.x -= spacing / 2; });
+  span.children.forEach(part => { part.position[axis] -= spacing / 2; });
   return span;
 }
 
@@ -267,14 +268,15 @@ class PostCalculator3D extends HTMLElement {
           const startPoint = cursor.clone().lerp(end, index / segment.spaces);
           const endPoint = cursor.clone().lerp(end, (index + 1) / segment.spaces);
           const spacing = startPoint.distanceTo(endPoint);
-          const omitStart = segmentIndex > 0 && index === 0;
+          const omitStart = index > 0 || (segmentIndex > 0 && index === 0);
           const omitEnd = segmentIndex < segments.length - 1 && index === segment.spaces - 1;
+          const cableSide = segmentIndex === 1 ? 'B' : 'A';
           const span = system === 'clips'
             ? clipSpan(source, spacing, omitStart, omitEnd)
             : system === 'tubo'
               ? tubeSpan(source, spacing, omitStart, omitEnd)
-              : cableSpan(source, spacing, omitStart, omitEnd);
-          span.rotation.y = -angle;
+              : cableSpan(source, spacing, omitStart, omitEnd, cableSide);
+          span.rotation.y = system === 'cable' && cableSide === 'B' ? Math.PI / 2 - angle : -angle;
           span.position.copy(startPoint).add(endPoint).multiplyScalar(.5);
           model.add(span);
         }

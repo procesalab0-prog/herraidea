@@ -2,8 +2,8 @@
 
 Especificación conceptual para evolucionar la sección 3D actual de piezas individuales hacia una experiencia centrada en soluciones, barandales y proyectos completos.
 
-Estado: **carrusel de soluciones en implementación**
-Actualizado: 2026-09-10
+Estado: **carrusel de soluciones con visor simplificado**
+Actualizado: 2026-09-11
 
 La versión 1.23.0 presenta cuatro tarjetas grandes. El sistema de postes con clips, vidrio y pasamanos ocupa la primera posición y se identifica con HRD 1525; el poste HRD 1518 ocupa la segunda posición con su sistema de tres barras; el HRD 1616 ocupa la tercera con postes cuadrados, cable de acero y una esquina completa; el Futbolito queda en la cuarta como proyecto especial. Las cuatro tarjetas abren un visor ampliado con giro, acercamiento táctil, vista de detalle y despiece reversible.
 
@@ -89,9 +89,9 @@ El crecimiento debe comunicar capacidad de adaptación. Para evitar una lectura 
 - Los textos y etiquetas cambiarán junto con la animación, sin tapar la pieza principal.
 - Las transiciones tendrán inercia suave, pero cada capítulo deberá llegar a una posición estable y legible.
 
-### Alternativa opcional de controles simples
+### Controles simples implementados
 
-Se conserva como referencia opcional el escaparate interactivo de Apple compartido el 9 de septiembre de 2026. El aspecto relevante es la simplicidad de los botones, no su composición completa:
+La versión 1.24.0 adopta la sencillez del escaparate interactivo de Apple compartido el 9 de septiembre de 2026, sin copiar su composición ni su producto:
 
 - Controles pequeños con forma de cápsula y esquinas completamente redondeadas.
 - Fondo gris claro o transparente, borde mínimo y contraste discreto.
@@ -99,9 +99,9 @@ Se conserva como referencia opcional el escaparate interactivo de Apple comparti
 - Un solo control activo a la vez, con su explicación desplegada cerca del botón.
 - El modelo 3D mantiene el protagonismo y los controles no invaden la escena.
 
-Esta navegación podría emplearse para **Armado**, **Despiece**, **Componentes**, **Fijación** y **Acabado**. Queda registrada únicamente como opción para comparar posteriormente con la navegación por desplazamiento y no constituye todavía una decisión de implementación.
+La primera aplicación usa **Armado**, **Desarmar** y la vista de detalle de cada solución. Componentes, fijación y acabado siguen como ampliaciones futuras.
 
-#### Diseño opcional del visor
+#### Diseño del visor
 
 - Abrir la experiencia en un panel amplio, limpio y cercano a pantalla completa.
 - Reservar aproximadamente un tercio del ancho para controles y texto, y dos tercios para el modelo 3D.
@@ -111,7 +111,7 @@ Esta navegación podría emplearse para **Armado**, **Despiece**, **Componentes*
 - Incluir un cierre sencillo en la esquina superior y evitar barras, marcos o decoración que resten espacio al producto.
 - En teléfono, colocar primero el modelo y después una fila desplazable o lista compacta de controles; la explicación activa aparece debajo sin tapar la interacción.
 
-Este diseño completo se guarda como **una opción**, no como reemplazo aprobado del visor actual.
+El patrón queda aprobado en la versión 1.24.0: controles a la izquierda y modelo a la derecha en escritorio; modelo primero y controles después en teléfono.
 
 ## 6. Escritorio y teléfono
 
