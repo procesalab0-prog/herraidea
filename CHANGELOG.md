@@ -1,5 +1,12 @@
 # Historial de versiones — Herraidea
 
+## 1.23.3 — 2026-09-11
+
+- La calculadora visual cambia correctamente de HRD 1525 a Sistema de tubo de 1/2 pulgada HRD 1518.
+- Se reemplaza la copia incompleta de la esquina articulada por el GLB íntegro de 3.55 MB recibido, evitando el error de lectura que dejaba visible el barandal anterior.
+- La ruta del modelo y la versión del módulo cambian para impedir que el navegador reutilice el archivo 3D dañado desde caché.
+- Los recorridos rectos cargan solamente el modelo principal; la esquina articulada se solicita al agregar un segundo tramo.
+
 ## 1.23.2 — 2026-09-10
 
 - La tarjeta del HRD 1616 utiliza un recurso nuevo para impedir que Vercel o el navegador reutilicen la fotografía anterior almacenada en caché.

@@ -14,7 +14,7 @@ const systems = {
   tubo: {
     name: 'Sistema de tubo de 1/2"', code: 'HRD 1518',
     src: '/assets/projects/hrd-1518/hrd-1518.glb', sourceSpacing: .84,
-    cornerSrc: '/assets/projects/hrd-1518/hrd-1518-esquina.glb',
+    cornerSrc: '/assets/projects/hrd-1518/hrd-1518-esquina-v1233.glb',
     spanParts: new Set(['Pasamanos_contexto', 'Barra_contexto_1', 'Barra_contexto_2', 'Barra_contexto_3'])
   },
   cable: {
@@ -250,7 +250,7 @@ class PostCalculator3D extends HTMLElement {
     this.setAttribute('data-loading', 'true');
     try {
       const source = await loadSource(config);
-      const cornerSource = config.cornerSrc
+      const cornerSource = config.cornerSrc && segments.length > 1
         ? await loadSource({ src: config.cornerSrc, satin: config.satin })
         : source;
       if (request !== this.loadRequest || !this.isConnected) return;

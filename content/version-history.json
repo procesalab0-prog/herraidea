@@ -1,7 +1,8 @@
 {
-  "current": "1.23.2",
+  "current": "1.23.3",
   "studio": "ProcesaLab",
   "versions": [
+    {"version":"1.23.3","date":"2026-09-11","title":"Cambio correcto al HRD 1518","summary":"La calculadora carga la copia íntegra de la esquina articulada y sustituye visualmente el sistema con clips al elegir el tubo de 1/2 pulgada."},
     {"version":"1.23.2","date":"2026-09-10","title":"Portada HRD 1616 renovada","summary":"La tarjeta usa la última fotografía aprobada mediante un recurso nuevo que evita mostrar una versión anterior almacenada en caché."},
     {"version":"1.23.1","date":"2026-09-10","title":"Portada completa del HRD 1616","summary":"La imagen previa del sistema de poste cuadrado y cable se presenta completa en el carrusel, sin recortar sus postes, cables ni pasamanos."},
     {"version":"1.23.0","date":"2026-09-10","title":"HRD 1616 y esquinas articuladas","summary":"El HRD 1616 se suma al carrusel y a la calculadora con acabado satinado; el HRD 1518 utiliza su esquina articulada real y el cristal del HRD 1525 termina en cada clip sin rebasarlo."},
