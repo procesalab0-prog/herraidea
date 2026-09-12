@@ -1,5 +1,11 @@
 # Historial de versiones — Herraidea
 
+## 1.24.2 — 2026-09-11
+
+- La portada HRD 1616 reproduce el video de estudio aprobado, sin sonido y con el sistema completo dentro del encuadre.
+- El clip carga al entrar en pantalla, se pausa fuera de vista o al abrir el visor y conserva la fotografía como alternativa accesible y de ahorro de datos.
+- Se mantienen intactos el visor interactivo, los modelos 3D y la calculadora.
+
 ## 1.24.1 — 2026-09-11
 
 - Se restauran las pinzas de ambos lados en los postes compartidos del HRD 1525 para que cada cristal vuelva a quedar sujeto.

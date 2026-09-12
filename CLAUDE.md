@@ -1,6 +1,8 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.24.1**
+Versión actual: **1.24.2**
+
+La tarjeta HRD 1616 incorpora el video promocional aprobado de Higgsfield (`project-cover.js`): reproducción breve, silenciosa y solo al estar visible; conserva la foto con movimiento reducido, ahorro de datos o error de carga. No modifica los modelos, la calculadora ni el despiece. Fuente: recurso Higgsfield `7a51a150-dbf4-4478-a256-10a7bc79b04a`.
 
 Sitio de producción: `https://herraidea-landing.vercel.app/`
 
