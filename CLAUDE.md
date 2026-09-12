@@ -1,6 +1,6 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.25.0**
+Versión actual: **1.26.0**
 
 El dominio oficial `www.herraidea.com` sirve la web desde Vercel y `herraidea.com` redirige de forma segura a esa dirección. Las referencias canónicas, la tarjeta social, los datos estructurados y el catálogo descargable usan el dominio oficial. Los registros de correo preexistentes se conservaron al migrar los servidores DNS desde Jimdo a Vercel.
 
@@ -8,7 +8,7 @@ Sitio de producción: `https://www.herraidea.com/`
 
 ## Estado actual
 
-Landing estática para Herraidea, enfocada en barandales, soluciones y fabricación a la medida. Incluye hero de producto con transición de día a noche y mensaje editorial despejado, presentación de capacidades, carrusel de cuatro soluciones y proyectos con experiencias 3D ampliables y controles tipo cápsula, calculadora visual de postes por tramos y esquinas compartidas para HRD 1525, HRD 1518 y HRD 1616, canalizador visual de proyectos sin base de datos con sugerencias iniciales, captación de proyectos fuera de catálogo, catálogo desplegable de 82 herrajes y configuraciones con pictogramas propios, catálogo 2026 descargable con logotipo protagonista, cobertura animada, ventanas con planos y especificaciones, historia institucional animada, contacto por WhatsApp y PWA.
+Landing estática para Herraidea, enfocada en barandales, soluciones y fabricación a la medida. Incluye hero de producto con transición de día a noche y mensaje editorial despejado, presentación de capacidades, carrusel de cuatro soluciones y proyectos con experiencias 3D ampliables y controles tipo cápsula, calculadora visual de postes por tramos y esquinas compartidas para HRD 1525, HRD 1518 y HRD 1616, canalizador visual de proyectos sin base de datos con sugerencias iniciales, captación de proyectos fuera de catálogo, catálogo desplegable de 82 herrajes y configuraciones con pictogramas propios, 13 configuraciones de postes ya normalizadas con imágenes de estudio aprobadas, catálogo 2026 descargable sincronizado con esas imágenes y logotipo protagonista, cobertura animada, ventanas con planos y especificaciones, historia institucional animada, contacto por WhatsApp y PWA.
 
 ## Archivos principales
 
@@ -23,13 +23,13 @@ Landing estática para Herraidea, enfocada en barandales, soluciones y fabricaci
 - `assets/hero-barandal-v2-day.png` y `assets/hero-barandal-v2-night.png`: escenas vigentes del hero, fieles al sistema de postes, clips y cristal.
 - `assets/brand/herraidea-social-v2.png`: tarjeta social vigente para WhatsApp y redes, alineada con el nuevo hero y el mensaje principal.
 - `output/pdf/catalogo-herraidea-2026-adelanto.pdf`: catálogo descargable vigente; se genera desde las mismas imágenes y datos que utiliza la web.
-- `.github/workflows/catalog-pdf.yml`: regenera y publica el PDF al cambiar su generador, manteniendo la descarga sincronizada.
+- `.github/workflows/catalog-pdf.yml`: regenera y publica el PDF al cambiar su generador, los datos del catálogo o sus imágenes, manteniendo la descarga sincronizada.
 - `assets/hero-barandal.png` y `assets/hero-night.png`: pareja anterior del hero, reutilizada en la composición animada de “Nuestra evolución”.
 - `assets/projects/futbolito/`: modelo GLB y portada de estudio del Futbolito Herraidea.
 - `assets/projects/clip-system/`: modelo GLB y portada de estudio de la solución de postes con clips y vidrio.
 - `assets/projects/hrd-1518/`: modelos GLB principal y lateral, más la portada de estudio del poste HRD 1518.
 - `assets/projects/hrd-1616/`: modelo GLB de esquina y portada oficial del sistema de poste cuadrado con cable de acero; `portada-final-v1240.png` conserva sin cambios la última imagen entregada por Herraidea.
-- `content/catalog/details.json`: 82 fichas de herrajes y configuraciones, incluidas 38 opciones de postes.
+- `content/catalog/details.json`: 82 fichas de herrajes y configuraciones, incluidas 38 opciones de postes; 13 de ellas ya utilizan las imágenes de estudio aprobadas en esta etapa.
 - `assets/catalog/pictograms/`: recortes PNG transparentes de los pictogramas proporcionados por Herraidea para Pipetas, Postes, Conectores y Jaladeras.
 - `content/design-references/pictogramas-familias-herraidea.png`: lámina original recibida con los cuatro pictogramas, conservada sin modificaciones como fuente.
 - `content/source-documents/catalogo-herraidea-2023.pdf`: catálogo original completo recibido como fuente documental.

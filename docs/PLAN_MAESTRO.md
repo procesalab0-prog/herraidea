@@ -2,7 +2,7 @@
 
 Documento vivo para consolidar el nuevo posicionamiento, la estructura futura del sitio y las decisiones aprobadas. Las ideas anotadas aquí no deben implementarse automáticamente: primero se convierten en alcance y se aprueban.
 
-Última actualización: 2026-09-09
+Última actualización: 2026-09-12
 
 ## 1. Objetivo principal
 
@@ -325,6 +325,8 @@ Una versión posterior con biblioteca de imágenes, proyectos guardados, version
 Tanto Gemini como OpenAI ofrecen edición de imágenes a partir de fotografías. Antes de elegir proveedor se propone probar las mismas piezas con ambos y comparar fidelidad geométrica, consistencia del acero, velocidad y costo. La documentación oficial consultada contempla [edición de imágenes con Gemini](https://ai.google.dev/gemini-api/docs/image-generation) y [generación y edición con GPT Image](https://developers.openai.com/api/docs/models/gpt-image-2).
 
 Como parte de la profesionalización visual, las imágenes incorporadas provisionalmente desde catálogos deberán regenerarse o retocarse en una fase posterior hasta igualar el estilo limpio de las primeras fichas: encuadre consistente, fondo de estudio, escala comparable, sombra suave y acero fiel. Cada resultado se aprobará contra la fotografía y el modelo real antes de sustituir el recorte temporal; no se publicarán alteraciones de geometría ni componentes inventados.
+
+Primera tanda publicada el 12 de septiembre de 2026: 13 configuraciones aprobadas, desde las variantes HRD 1518 de 3 y 4 pines hasta HRD 1520 intermedio. La normalización se detiene antes de HRD 1220; esa pieza y las restantes continúan pendientes de revisión y aprobación individual.
 
 El catálogo PDF 2026 y el catálogo de la web compartirán la misma fuente de datos e imágenes. Cada fotografía aprobada se sustituirá primero en `content/catalog/images/` o en la carpeta correspondiente de soluciones; después se regenerará el PDF. De esta forma, la actualización visual de la web y del catálogo descargable avanzará como un solo proceso y no como dos inventarios separados.
 

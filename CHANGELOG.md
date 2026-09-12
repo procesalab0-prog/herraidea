@@ -1,5 +1,13 @@
 # Historial de versiones — Herraidea
 
+## 1.26.0 — 2026-09-12
+
+- Se publican 13 imágenes de estudio aprobadas para la familia Postes, con fondo, escala, iluminación y acabado consistentes entre la web y el catálogo descargable.
+- Las variantes conservan sus diferencias técnicas visibles: 3 o 4 pines, configuración intermedia o lateral, montaje cacheteado, clips de acero inoxidable o Zamak y soportes superiores orientados según cada pieza.
+- Los clips intermedios quedan opuestos a 180 grados y las piezas de inicio/final mantienen un solo lado de sujeción.
+- El PDF Catálogo Herraidea 2026 se regenera con las mismas imágenes utilizadas por las fichas web, y su automatización queda enlazada también a futuros cambios en datos e imágenes del catálogo.
+- Las piezas restantes, a partir de HRD 1220, permanecen sin cambios y pendientes de una siguiente ronda de aprobación.
+
 ## 1.25.0 — 2026-09-12
 
 - La portada animada del HRD 1616 aumenta su escala para ocupar el mismo espacio visual que las otras soluciones en computadora y teléfono.

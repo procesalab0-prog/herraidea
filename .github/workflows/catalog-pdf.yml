@@ -5,6 +5,8 @@ on:
     branches: [main]
     paths:
       - scripts/generate_catalog_2026.py
+      - content/catalog/details.json
+      - content/catalog/images/**
 
 permissions:
   contents: write
