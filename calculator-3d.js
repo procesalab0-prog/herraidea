@@ -89,6 +89,20 @@ function clipSpan(source, spacing, omitStart = false, omitEnd = false) {
     else if (part.name.startsWith('derecho_')) copy.position.x += half - .48;
     else if (part.name === 'Cristal_central') {
       copy.scale.x *= (spacing - systems.clips.clipInset) / systems.clips.sourceGlassWidth;
+    } else if (part.name === 'Pasamanos_continuo') {
+      const bounds = new THREE.Box3().setFromObject(part);
+      const sourceMin = bounds.min.x;
+      const sourceMax = bounds.max.x;
+      const overhang = Math.max(0, (sourceMax - sourceMin - systems.clips.sourceSpacing) / 2);
+      const desiredMin = -half - (omitStart ? 0 : overhang);
+      const desiredMax = half + (omitEnd ? 0 : overhang);
+      const fitted = new THREE.Group();
+      copy.position.x -= sourceMin;
+      fitted.add(copy);
+      fitted.scale.x = (desiredMax - desiredMin) / (sourceMax - sourceMin);
+      fitted.position.x = desiredMin;
+      span.add(fitted);
+      return;
     } else copy.scale.x *= spacing / systems.clips.sourceSpacing;
     span.add(copy);
   });

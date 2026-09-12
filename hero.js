@@ -22,7 +22,7 @@
       document.querySelector('#credits-version').textContent = data.current;
       document.querySelector('#version-list').innerHTML = data.versions.map((item, index) => `<article class="${index === 0 ? 'current' : ''}"><b>v${item.version}</b><div><strong>${item.title}</strong><p>${item.summary}</p></div><time>${item.date}</time></article>`).join('');
     } catch {}
-    creditsDialog?.showModal(); document.body.classList.add('dialog-open'); window.herraideaSound?.play('easter');
+    creditsDialog?.showModal(); document.body.classList.add('dialog-open');
   };
   brand?.addEventListener('click', event => {
     event.preventDefault(); logoTaps += 1;
@@ -52,7 +52,6 @@
   const dots = [...document.querySelectorAll('.model-dots i')];
   const modelLink = document.querySelector('#model-link');
   const families = ['pipetas', 'conectores', 'postes'];
-  let heroNightSounded = false;
   const mobileModels = [
     { family: 'Familia 01 · Pipetas', name: 'Pipeta Chapetón', code: 'HRD 1101', labels: ['Vidrio 8–12 mm', 'Acero T-304', 'Salida 28 mm'], summary: 'Conector vidrio–muro para cristal templado. Acero inoxidable con acabado satín.' },
     { family: 'Familia 02 · Conectores', name: 'Conector 44 × 40 mm', code: 'HRD 1303', labels: ['Diámetro 44 mm', 'Cuerpo 40 mm', 'Tapa 10 mm'], summary: 'Botón vidrio–muro con empaque integrado y fijación Allen central. Para vidrio de 8–12 mm.' },
@@ -66,8 +65,6 @@
       const headerHeight = mobile ? 72 : 82;
       const max = heroTrack.offsetHeight - innerHeight + headerHeight;
       const p = clamp((headerHeight - heroTrack.getBoundingClientRect().top) / Math.max(max, 1));
-      if (p > .34 && !heroNightSounded) { window.herraideaSound?.play('night'); heroNightSounded = true; }
-      if (p < .1) heroNightSounded = false;
       heroCopy.style.opacity = String(clamp(1 - p * 2.4));
       heroCopy.style.transform = `translateY(${-p * (mobile ? 34 : 55)}px)`;
       heroImage.style.transform = `translateY(${-p * (mobile ? 22 : 0)}px) scale(${1 + p * (mobile ? .11 : .08)})`;
@@ -109,7 +106,6 @@
       const mobileSummary = document.querySelector('#mobile-tech-summary');
       if (mobileSummary) mobileSummary.style.opacity = String(clamp((p - .025) * 14));
       if (idx !== lastFamily) {
-        if (lastFamily >= 0) window.herraideaSound?.play('metal');
         panels.forEach((el, i) => el.classList.toggle('active', i === idx));
         dots.forEach((el, i) => el.classList.toggle('active', i === idx));
         if (modelLink) modelLink.href = `#${families[idx]}`;
@@ -187,11 +183,10 @@
     }).join('');
     const familyEls = [...host.querySelectorAll('.family')];
     let activeCatalogFamily = '';
-    const setHotFamily = (family, sound = true) => {
+    const setHotFamily = family => {
       if (!family || activeCatalogFamily === family.id) return;
       activeCatalogFamily = family.id;
       familyEls.forEach(el => el.classList.toggle('hot', el === family || el.classList.contains('open')));
-      if (sound) window.herraideaSound?.play('roulette');
     };
     const toggleFamily = (family, forceOpen = false) => {
       const shouldOpen = forceOpen || !family.classList.contains('open');
@@ -216,16 +211,8 @@
     document.querySelector('#catalog-families').innerHTML = `<p>${escapeHTML(err.message)}. Escríbenos por WhatsApp para recibirlo.</p>`;
   });
 
-  let lastShippingTone = 0;
   document.addEventListener('hrd-city', event => {
     const label = document.querySelector('#shipping-city'); if (label) label.textContent = `Cobertura · ${event.detail}`;
-    const section = document.querySelector('#envios');
-    if (!section || document.visibilityState !== 'visible') return;
-    const rect = section.getBoundingClientRect();
-    const visiblePixels = Math.max(0, Math.min(rect.bottom, innerHeight) - Math.max(rect.top, 0));
-    const visibleRatio = visiblePixels / Math.min(rect.height, innerHeight);
-    if (visibleRatio < .35) return;
-    const now = performance.now(); if (now - lastShippingTone > 520) { window.herraideaSound?.play('shipping'); lastShippingTone = now; }
   });
 
   document.querySelector('#contact-form')?.addEventListener('submit', event => {

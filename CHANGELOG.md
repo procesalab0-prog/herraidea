@@ -1,5 +1,12 @@
 # Historial de versiones — Herraidea
 
+## 1.25.0 — 2026-09-12
+
+- La portada animada del HRD 1616 aumenta su escala para ocupar el mismo espacio visual que las otras soluciones en computadora y teléfono.
+- La esquina del HRD 1525 conserva sus postes, cristales y pinzas; únicamente se recortan los extremos interiores del pasamanos para que los dos tubos terminen en el centro sin cruzarse ni sobresalir.
+- La calculadora adopta el lenguaje sencillo de las soluciones interactivas: contenedor redondeado, selector y acciones tipo cápsula, campos suaves y resultados agrupados.
+- Se retiran el control, el motor y las señales de sonido de la landing.
+
 ## 1.24.3 — 2026-09-11
 
 - `www.herraidea.com` se establece como dirección oficial del sitio en Vercel y `herraidea.com` redirige de forma segura hacia ella.
