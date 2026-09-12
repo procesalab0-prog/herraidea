@@ -394,7 +394,7 @@ def closing_page(c, page_num):
     c.setFont("Helvetica", 10)
     c.drawString(MARGIN, 118, "Oficina: +52 (477) 790 7594")
     c.drawString(MARGIN, 99, "WhatsApp: 477 256 1695")
-    c.drawRightString(W - MARGIN, 118, "herraidea-landing.vercel.app")
+    c.drawRightString(W - MARGIN, 118, "www.herraidea.com")
     c.drawRightString(W - MARGIN, 99, "México · Guatemala · Honduras · Sur de EE. UU.")
     footer(c, page_num, dark=True)
 

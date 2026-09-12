@@ -1,10 +1,10 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.24.2**
+Versión actual: **1.24.3**
 
-La tarjeta HRD 1616 incorpora el video promocional aprobado de Higgsfield (`project-cover.js`): reproducción breve, silenciosa y solo al estar visible; conserva la foto con movimiento reducido, ahorro de datos o error de carga. No modifica los modelos, la calculadora ni el despiece. Fuente: recurso Higgsfield `7a51a150-dbf4-4478-a256-10a7bc79b04a`.
+El dominio oficial `www.herraidea.com` sirve la web desde Vercel y `herraidea.com` redirige de forma segura a esa dirección. Las referencias canónicas, la tarjeta social, los datos estructurados y el catálogo descargable usan el dominio oficial. Los registros de correo preexistentes se conservaron al migrar los servidores DNS desde Jimdo a Vercel.
 
-Sitio de producción: `https://herraidea-landing.vercel.app/`
+Sitio de producción: `https://www.herraidea.com/`
 
 ## Estado actual
 
@@ -24,6 +24,7 @@ Landing estática para Herraidea, enfocada en barandales, soluciones y fabricaci
 - `assets/hero-barandal-v2-day.png` y `assets/hero-barandal-v2-night.png`: escenas vigentes del hero, fieles al sistema de postes, clips y cristal.
 - `assets/brand/herraidea-social-v2.png`: tarjeta social vigente para WhatsApp y redes, alineada con el nuevo hero y el mensaje principal.
 - `output/pdf/catalogo-herraidea-2026-adelanto.pdf`: catálogo descargable vigente; se genera desde las mismas imágenes y datos que utiliza la web.
+- `.github/workflows/catalog-pdf.yml`: regenera y publica el PDF al cambiar su generador, manteniendo la descarga sincronizada.
 - `assets/hero-barandal.png` y `assets/hero-night.png`: pareja anterior del hero, reutilizada en la composición animada de “Nuestra evolución”.
 - `assets/projects/futbolito/`: modelo GLB y portada de estudio del Futbolito Herraidea.
 - `assets/projects/clip-system/`: modelo GLB y portada de estudio de la solución de postes con clips y vidrio.

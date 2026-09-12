@@ -1,0 +1,33 @@
+name: Actualizar catalogo PDF
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - scripts/generate_catalog_2026.py
+
+permissions:
+  contents: write
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Instalar generador
+        run: python -m pip install --disable-pip-version-check pillow reportlab
+      - name: Generar catalogo
+        run: python scripts/generate_catalog_2026.py
+      - name: Guardar catalogo actualizado
+        run: |
+          if git diff --quiet -- output/pdf/catalogo-herraidea-2026-adelanto.pdf; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add output/pdf/catalogo-herraidea-2026-adelanto.pdf
+          git commit -m "Regenerate catalog PDF"
+          git push

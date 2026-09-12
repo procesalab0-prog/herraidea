@@ -1,5 +1,12 @@
 # Historial de versiones — Herraidea
 
+## 1.24.3 — 2026-09-11
+
+- `www.herraidea.com` se establece como dirección oficial del sitio en Vercel y `herraidea.com` redirige de forma segura hacia ella.
+- Se conservan los registros de correo existentes al trasladar los servidores DNS desde Jimdo a Vercel.
+- La URL canónica, la vista al compartir, los datos estructurados y el pie del catálogo 2026 sustituyen la dirección temporal de Vercel por el dominio oficial.
+- El catálogo PDF se regenera automáticamente al actualizar su generador para mantener sincronizada la descarga pública.
+
 ## 1.24.2 — 2026-09-11
 
 - La portada HRD 1616 reproduce el video de estudio aprobado, sin sonido y con el sistema completo dentro del encuadre.
