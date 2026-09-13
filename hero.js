@@ -32,6 +32,7 @@
     logoTimer = setTimeout(() => { if (logoTaps === 1) location.hash = 'inicio'; logoTaps = 0; }, 3000);
   });
   document.querySelector('.credits-close')?.addEventListener('click', () => { creditsDialog?.close(); document.body.classList.remove('dialog-open'); });
+  creditsDialog?.addEventListener('close', () => document.body.classList.remove('dialog-open'));
   creditsDialog?.addEventListener('click', event => { if (event.target === creditsDialog) { creditsDialog.close(); document.body.classList.remove('dialog-open'); } });
 
   const heroTrack = document.querySelector('.hero-track');
@@ -193,10 +194,42 @@
       familyEls.forEach(el => { const open = el === family && shouldOpen; el.classList.toggle('open', open); el.querySelector('.family-toggle').setAttribute('aria-expanded', String(open)); });
       setHotFamily(family);
     };
-    familyEls.forEach(family => family.querySelector('.family-toggle').addEventListener('click', () => toggleFamily(family)));
+    // Abrir una familia cierra las demás y cambia la altura del catálogo. Sin compensar,
+    // el encabezado recién tocado se va de la pantalla mientras dura la animación.
+    const mantenerEnPantalla = (referencia, destino, duracion = 900) => {
+      const limite = performance.now() + duracion;
+      let cancelado = false;
+      const cancelar = () => { cancelado = true; };
+      addEventListener('wheel', cancelar, {once:true, passive:true});
+      addEventListener('touchmove', cancelar, {once:true, passive:true});
+      addEventListener('keydown', cancelar, {once:true});
+      const paso = () => {
+        if (cancelado) return;
+        const desfase = referencia.getBoundingClientRect().top - destino;
+        if (Math.abs(desfase) > .5) scrollBy({top: desfase, behavior: 'instant'});
+        if (performance.now() < limite) requestAnimationFrame(paso);
+        else { removeEventListener('wheel', cancelar); removeEventListener('touchmove', cancelar); removeEventListener('keydown', cancelar); }
+      };
+      requestAnimationFrame(paso);
+    };
+    familyEls.forEach(family => {
+      const toggle = family.querySelector('.family-toggle');
+      toggle.addEventListener('click', () => {
+        // La posición se mide ANTES de tocar el DOM: es la que hay que conservar.
+        const destino = toggle.getBoundingClientRect().top;
+        toggleFamily(family);
+        mantenerEnPantalla(toggle, destino);
+      });
+    });
     document.querySelectorAll('[data-open-family]').forEach(button => button.addEventListener('click', () => {
       const family = document.querySelector(`#${button.dataset.openFamily}`); if (!family) return;
-      toggleFamily(family, true); family.scrollIntoView({behavior:'smooth',block:'start'});
+      // Sin la animación de altura el catálogo queda en su tamaño final antes de calcular
+      // el destino, así el scroll aterriza en la familia y no donde estaba el contenido.
+      host.classList.add('sin-animacion');
+      toggleFamily(family, true);
+      void host.offsetHeight;
+      family.scrollIntoView({behavior:'smooth', block:'start'});
+      requestAnimationFrame(() => requestAnimationFrame(() => host.classList.remove('sin-animacion')));
     }));
     const updateCatalogFocus = () => {
       let best = null, distance = Infinity;

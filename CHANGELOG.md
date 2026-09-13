@@ -1,5 +1,12 @@
 # Historial de versiones — Herraidea
 
+## 1.26.1 — 2026-09-13
+
+- Al abrir o cerrar una familia del catálogo, el encabezado que tocas se queda exactamente donde está; antes la página saltaba cerca de 900 px en computadora y 1,900 px en teléfono.
+- Los atajos de familia (Pipetas, Postes, Conectores, Jaladeras) ahora aterrizan en la familia elegida; antes dejaban el encabezado miles de píxeles fuera de la pantalla.
+- Las nueve secciones del menú se detienen debajo del encabezado fijo. Calculadora, Catálogo, Nosotros, Envíos y Contacto quedaban tapadas.
+- Cerrar el panel de créditos con la tecla Escape ya libera el desplazamiento de la página.
+
 ## 1.26.0 — 2026-09-12
 
 - Se publican 13 imágenes de estudio aprobadas para la familia Postes, con fondo, escala, iluminación y acabado consistentes entre la web y el catálogo descargable.
