@@ -6,7 +6,7 @@ Fecha de recepción: **8 de septiembre de 2026**
 
 El catálogo web contenía 66 fichas, de las cuales 22 pertenecían a la familia Postes. Las páginas recibidas repiten como base los códigos HRD 1517 y HRD 1518, pero los desglosan en configuraciones específicas, y añaden las series HRD 1220, 1221, 1223, 1519, 1520, 1525 y 1526.
 
-Para evitar duplicados ambiguos, los dos registros genéricos se sustituyeron por sus configuraciones precisas. Se añadieron 16 opciones adicionales. El resultado es un catálogo de **82 fichas**, con **38 configuraciones de Postes**.
+Para evitar duplicados ambiguos, los dos registros genéricos se sustituyeron por sus configuraciones precisas. Se añadieron 16 opciones adicionales. El resultado es un catálogo de **81 fichas**, con **38 configuraciones de Postes**.
 
 ## Configuraciones incorporadas
 

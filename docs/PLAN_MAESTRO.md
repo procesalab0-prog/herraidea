@@ -128,7 +128,7 @@ Antes de sustituir el texto actual se deberán comparar ambas versiones en compu
 - Mensaje de fabricación propia y torno CNC.
 - Carrusel grande de soluciones y proyectos con experiencias 3D ampliables.
 - Materiales de acero y cristal azul en los modelos 3D.
-- Catálogo desplegable con 82 herrajes y configuraciones en cuatro familias.
+- Catálogo desplegable con 81 herrajes y configuraciones en cuatro familias.
 - Catálogo Herraidea 2023 de 12 páginas conservado como fuente adicional; debe conciliarse con el respaldo de Jimdo antes de definir el inventario vigente.
 - Fichas con fotografías, planos y especificaciones disponibles.
 - Información institucional: historia, misión, visión y valores.
@@ -445,7 +445,7 @@ No se debe presentar esta funcionalidad como parte del alcance actual ni constru
 
 ### Fase 2 — Profesionalización
 
-- Recursos técnicos descargables; primera entrega publicada con el catálogo general 2023 y acceso a las 82 fichas disponibles.
+- Recursos técnicos descargables; primera entrega publicada con el catálogo general 2023 y acceso a las 81 fichas disponibles.
 - Fichas de producto ampliadas.
 - Flujo interno supervisado para crear fotografías de estudio a partir de fotos reales.
 - Páginas por aplicación.

@@ -725,42 +725,6 @@
   },
   {
     "category": "Postes",
-    "code": "HRD 1206 x 450",
-    "name": "MiniPoste Rectangular",
-    "image": "images/postes-hrd-1206-x-450.jpg",
-    "source": "https://www.herraidea.com/poste-hrd-1201/poste-hrd-1206x450/",
-    "sourcePage": "/content/jimdo-backup/pages/poste-hrd-1201-poste-hrd-1206x450.html",
-    "description": "Mini Poste Rectangular",
-    "specifications": [
-      "Para vidrio-muro",
-      "Vidrio templado 8-12mm",
-      "Acero inoxidable 304",
-      "Acabado Satín y negro mate",
-      "Acotaciones en mm",
-      "Verificar físicamente previo a instalación y perforación"
-    ],
-    "detailImages": [
-      "/content/jimdo-backup/assets/ad5a824800f5b028c8b8.png",
-      "/content/jimdo-backup/assets/d96f9eaaba2007b578c6.png",
-      "/content/jimdo-backup/assets/e30cb17e3dcec2c1babe.png"
-    ],
-    "originalText": [
-      "Postes > HRD 1206 x",
-      "450",
-      "Mini Poste Rectangular",
-      "25X50X450mm",
-      "Para vidrio-muro",
-      "> Vidrio templado 8-12mm",
-      "> Acero inoxidable 304",
-      "> Acabado Satín y negro mate",
-      "* Acotaciones en mm",
-      "* Verificar físicamente previo a instalación y perforación",
-      "Solicitar más información",
-      "Volver a Catálogo"
-    ]
-  },
-  {
-    "category": "Postes",
     "code": "HRD 1206 x 450 TOPE",
     "name": "MiniPoste Rectangular con tope.",
     "image": "images/postes-hrd-1206-x-450-tope.jpg",

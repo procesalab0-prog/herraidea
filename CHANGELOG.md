@@ -1,5 +1,13 @@
 # Historial de versiones — Herraidea
 
+## 1.27.0 — 2026-09-13
+
+- Three.js y sus complementos ahora se sirven desde el propio sitio: los cuatro visores 3D y la calculadora funcionan aunque un CDN externo falle o esté bloqueado. Antes, si `cdnjs` o `esm.sh` no respondían, los botones “Explorar solución” no hacían absolutamente nada, sin aviso.
+- Se retiró una copia de Three.js r128 que se descargaba en cada visita (655 KB) y que ningún archivo de la página utilizaba.
+- La biblioteca queda en una sola versión, 0.160.0; antes convivían dos versiones distintas traídas de dos CDN distintos.
+- “Agregar tramo con esquina” en la calculadora ya no arrastra la página: el foco pasa al tramo nuevo, no al primero, y el recorrido se ajusta solo lo indispensable para dejarlo a la vista.
+- Se retiró una ficha repetida de HRD 1206 x 450, idéntica a la existente; el catálogo pasa de 82 a 81 fichas y el conteo se actualizó en la web, el catálogo descargable y la documentación.
+
 ## 1.26.1 — 2026-09-13
 
 - Al abrir o cerrar una familia del catálogo, el encabezado que tocas se queda exactamente donde está; antes la página saltaba cerca de 900 px en computadora y 1,900 px en teléfono.

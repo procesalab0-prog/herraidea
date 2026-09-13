@@ -1,6 +1,6 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.26.1**
+Versión actual: **1.27.0**
 
 El dominio oficial `www.herraidea.com` sirve la web desde Vercel y `herraidea.com` redirige de forma segura a esa dirección. Las referencias canónicas, la tarjeta social, los datos estructurados y el catálogo descargable usan el dominio oficial. Los registros de correo preexistentes se conservaron al migrar los servidores DNS desde Jimdo a Vercel.
 
@@ -8,14 +8,16 @@ Sitio de producción: `https://www.herraidea.com/`
 
 ## Estado actual
 
-Landing estática para Herraidea, enfocada en barandales, soluciones y fabricación a la medida. Incluye hero de producto con transición de día a noche y mensaje editorial despejado, presentación de capacidades, carrusel de cuatro soluciones y proyectos con experiencias 3D ampliables y controles tipo cápsula, calculadora visual de postes por tramos y esquinas compartidas para HRD 1525, HRD 1518 y HRD 1616, canalizador visual de proyectos sin base de datos con sugerencias iniciales, captación de proyectos fuera de catálogo, catálogo desplegable de 82 herrajes y configuraciones con pictogramas propios, 13 configuraciones de postes ya normalizadas con imágenes de estudio aprobadas, catálogo 2026 descargable sincronizado con esas imágenes y logotipo protagonista, cobertura animada, ventanas con planos y especificaciones, historia institucional animada, contacto por WhatsApp y PWA.
+Landing estática para Herraidea, enfocada en barandales, soluciones y fabricación a la medida. Incluye hero de producto con transición de día a noche y mensaje editorial despejado, presentación de capacidades, carrusel de cuatro soluciones y proyectos con experiencias 3D ampliables y controles tipo cápsula, calculadora visual de postes por tramos y esquinas compartidas para HRD 1525, HRD 1518 y HRD 1616, canalizador visual de proyectos sin base de datos con sugerencias iniciales, captación de proyectos fuera de catálogo, catálogo desplegable de 81 herrajes y configuraciones con pictogramas propios, 13 configuraciones de postes ya normalizadas con imágenes de estudio aprobadas, catálogo 2026 descargable sincronizado con esas imágenes y logotipo protagonista, cobertura animada, ventanas con planos y especificaciones, historia institucional animada, contacto por WhatsApp y PWA.
 
 ## Archivos principales
 
 - `index.html`: estructura completa del sitio y diálogos.
 - `styles.css`: estilos, responsive y animaciones.
 - `hero.js`: scroll, catálogo, canalizador, ventanas, WhatsApp y easter egg.
-- `hrd-3d.js`: geometría, materiales, iluminación y animación Three.js.
+- `assets/vendor/three/`: Three.js 0.160.0 y sus complementos (GLTFLoader, OrbitControls, RoomEnvironment, BufferGeometryUtils) alojados en el propio sitio. Los visores 3D y la calculadora no dependen de ningún CDN externo. Al actualizar la biblioteca hay que reemplazar estos archivos, no cambiar los imports.
+- `hrd-3d.js`: versión anterior del recorrido 3D; **no se carga en la página** y requiere el `THREE` global que ya se retiró. Se conserva solo como referencia.
+- `project-3d.js`: versión anterior del visor de proyectos; **no se carga en la página**, la vigente es `project-3d-v2.js`.
 - `hrd-map.js`: mapa animado de cobertura nacional desde León.
 - `project-3d-v2.js`: carrusel, visor reutilizable para diferentes soluciones, interacción táctil y control de sus animaciones de despiece; el cristal del HRD 1525 cubre la zona de sujeción sin rebasarla, las cabezas del HRD 1518 permanecen unidas a cada pin y el HRD 1616 sustituye el negro por acero satinado durante la visualización.
 - `calculator-3d.js`: cálculo de espacios y postes, manejo de tramos conectados y ensamblaje de la vista a partir de los modelos GLB reales del HRD 1525, HRD 1518 y HRD 1616; conserva las pinzas en ambas caras del poste compartido HRD 1525 y recorta únicamente los extremos interiores del pasamanos para que se encuentren en el centro de la esquina, centra el encuentro del pasamanos HRD 1616 sobre su poste y mantiene íntegra la unión articulada del HRD 1518.
@@ -29,7 +31,7 @@ Landing estática para Herraidea, enfocada en barandales, soluciones y fabricaci
 - `assets/projects/clip-system/`: modelo GLB y portada de estudio de la solución de postes con clips y vidrio.
 - `assets/projects/hrd-1518/`: modelos GLB principal y lateral, más la portada de estudio del poste HRD 1518.
 - `assets/projects/hrd-1616/`: modelo GLB de esquina y portada oficial del sistema de poste cuadrado con cable de acero; `portada-final-v1240.png` conserva sin cambios la última imagen entregada por Herraidea.
-- `content/catalog/details.json`: 82 fichas de herrajes y configuraciones, incluidas 38 opciones de postes; 13 de ellas ya utilizan las imágenes de estudio aprobadas en esta etapa.
+- `content/catalog/details.json`: 81 fichas de herrajes y configuraciones, incluidas 38 opciones de postes; 13 de ellas ya utilizan las imágenes de estudio aprobadas en esta etapa.
 - `assets/catalog/pictograms/`: recortes PNG transparentes de los pictogramas proporcionados por Herraidea para Pipetas, Postes, Conectores y Jaladeras.
 - `content/design-references/pictogramas-familias-herraidea.png`: lámina original recibida con los cuatro pictogramas, conservada sin modificaciones como fuente.
 - `content/source-documents/catalogo-herraidea-2023.pdf`: catálogo original completo recibido como fuente documental.

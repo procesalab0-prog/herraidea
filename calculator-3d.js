@@ -1,7 +1,7 @@
-import * as THREE from 'https://esm.sh/three@0.160.0';
-import { GLTFLoader } from 'https://esm.sh/three@0.160.0/examples/jsm/loaders/GLTFLoader.js';
-import { OrbitControls } from 'https://esm.sh/three@0.160.0/examples/jsm/controls/OrbitControls.js';
-import { RoomEnvironment } from 'https://esm.sh/three@0.160.0/examples/jsm/environments/RoomEnvironment.js';
+import * as THREE from '/assets/vendor/three/three.module.js';
+import { GLTFLoader } from '/assets/vendor/three/addons/loaders/GLTFLoader.js';
+import { OrbitControls } from '/assets/vendor/three/addons/controls/OrbitControls.js';
+import { RoomEnvironment } from '/assets/vendor/three/addons/environments/RoomEnvironment.js';
 
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const systems = {
@@ -434,7 +434,11 @@ if (form) {
     lengths.push(3.9);
     renderInputs();
     update();
-    segmentsRoot.querySelector('[data-segment-index]:last-of-type')?.focus();
+    // `:last-of-type` devolvía el primer tramo, no el recién agregado, y el foco
+    // arrastraba la página hasta él. Ahora se enfoca el nuevo sin mover el scroll.
+    const nuevoTramo = segmentsRoot.querySelector(`[data-segment-index="${lengths.length - 1}"]`);
+    nuevoTramo?.focus({ preventScroll: true });
+    nuevoTramo?.scrollIntoView({ block: 'nearest' });
   });
   systemSelect.addEventListener('change', update);
   form.addEventListener('submit', event => event.preventDefault());

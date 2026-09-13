@@ -3,7 +3,7 @@
 Estado: **adelanto 2026 publicado; contenido técnico en actualización continua**
 Inicio: 2026-09-09
 
-El adelanto se construye con los sistemas, textos, fotografías y 82 fichas que ya existen en la web. No contiene precios y no sustituye la validación técnica de Herraidea. El PDF y la web comparten las mismas fuentes de datos e imágenes; cada actualización visual aprobada debe reflejarse en ambos al regenerar el catálogo.
+El adelanto se construye con los sistemas, textos, fotografías y 81 fichas que ya existen en la web. No contiene precios y no sustituye la validación técnica de Herraidea. El PDF y la web comparten las mismas fuentes de datos e imágenes; cada actualización visual aprobada debe reflejarse en ambos al regenerar el catálogo.
 
 ## Información necesaria para cerrar el catálogo
 

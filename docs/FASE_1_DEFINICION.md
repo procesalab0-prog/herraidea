@@ -61,7 +61,7 @@ La landing se actualiza progresivamente con la información y los recursos ya co
 
 - Landing publicada con animaciones, modelos 3D, sonido y adaptación móvil.
 - Cuatro experiencias interactivas recibidas: sistema de postes con clips, vidrio y pasamanos; poste HRD 1518; HRD 1616 de poste cuadrado con cable de acero; y Futbolito Herraidea con modelo GLB final de 190 piezas y conjuntos. En el HRD 1525, el cristal cubre la zona de los clips sin rebasarla; en el HRD 1518, cada cabeza forma una sola pieza visual con su pin y la calculadora utiliza su esquina articulada; el HRD 1616 se presenta en acero satinado.
-- Catálogo de 82 herrajes y configuraciones y respaldo público recuperado de Jimdo.
+- Catálogo de 81 herrajes y configuraciones y respaldo público recuperado de Jimdo.
 - Catálogo Herraidea 2023 completo de 12 páginas, conservado como fuente documental y pendiente de conciliación con Jimdo.
 - Cuatro referencias visuales archivadas para definir tipografía editorial, interfaz modular y tratamiento elegante del acero inoxidable.
 - Fotografías, planos y especificaciones parciales.
@@ -98,7 +98,7 @@ La landing se actualiza progresivamente con la información y los recursos ya co
 
 - [x] Catálogo Herraidea 2023 recibido y resguardado completo.
 - [ ] Conciliar productos, variantes y códigos del PDF de 2023 con el catálogo recuperado de Jimdo.
-- [ ] Confirmar cuáles de los 82 herrajes y configuraciones siguen vigentes.
+- [ ] Confirmar cuáles de los 81 herrajes y configuraciones siguen vigentes.
 - [ ] Lista definitiva de familias.
 - [ ] Códigos y nombres comerciales correctos.
 - [ ] Confirmar la escritura y significado comercial de “Soleva”.
