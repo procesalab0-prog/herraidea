@@ -1,6 +1,6 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.28.1**
+Versión actual: **1.28.2**
 
 El dominio oficial `www.herraidea.com` sirve la web desde Vercel y `herraidea.com` redirige de forma segura a esa dirección. Las referencias canónicas, la tarjeta social, los datos estructurados y el catálogo descargable usan el dominio oficial. Los registros de correo preexistentes se conservaron al migrar los servidores DNS desde Jimdo a Vercel.
 
@@ -33,7 +33,7 @@ Landing estática para Herraidea, enfocada en barandales, soluciones y fabricaci
 - `assets/projects/clip-system/`: modelo GLB y portada de estudio de la solución de postes con clips y vidrio.
 - `assets/projects/hrd-1518/`: modelos GLB principal y lateral, más la portada de estudio del poste HRD 1518.
 - `assets/projects/hrd-1616/`: modelo GLB de esquina y portada oficial del sistema de poste cuadrado con cable de acero; `portada-final-v1240.png` conserva sin cambios la última imagen entregada por Herraidea.
-- `content/catalog/details.json`: 81 fichas de herrajes y configuraciones, incluidas 38 opciones de postes; 13 de ellas ya utilizan las imágenes de estudio aprobadas en esta etapa.
+- `content/catalog/details.json`: 81 fichas de herrajes y configuraciones, incluidas 38 opciones de postes; 13 de ellas ya utilizan las imágenes de estudio aprobadas en esta etapa y se presentan con el mismo encuadre completo que las demás familias.
 - `assets/catalog/pictograms/`: recortes PNG transparentes de los pictogramas proporcionados por Herraidea para Pipetas, Postes, Conectores y Jaladeras.
 - `content/design-references/pictogramas-familias-herraidea.png`: lámina original recibida con los cuatro pictogramas, conservada sin modificaciones como fuente.
 - `content/source-documents/catalogo-herraidea-2023.pdf`: catálogo original completo recibido como fuente documental.

@@ -1,5 +1,10 @@
 # Historial de versiones — Herraidea
 
+## 1.28.2 — 2026-09-14
+
+- Las imágenes de la familia Postes adoptan el mismo encuadre completo y proporción visual de Pipetas, Conectores y Jaladeras.
+- Se retiran únicamente el fondo radial, la sombra artificial y la reducción especial aplicada a esas tarjetas; las imágenes aprobadas y los detalles de cada pieza permanecen intactos.
+
 ## 1.28.1 — 2026-09-14
 
 - El buscador y sus filtros dejan de ocupar espacio permanentemente y ahora se despliegan desde una acción compacta “Buscar una pieza”.

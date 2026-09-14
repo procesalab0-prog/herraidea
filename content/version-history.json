@@ -1,7 +1,8 @@
 {
-  "current": "1.28.1",
+  "current": "1.28.2",
   "studio": "ProcesaLab",
   "versions": [
+    {"version":"1.28.2","date":"2026-09-14","title":"Postes con encuadre unificado","summary":"Las imágenes de Postes se muestran completas con la misma presentación utilizada por las demás familias."},
     {"version":"1.28.1","date":"2026-09-14","title":"Buscador desplegable","summary":"La búsqueda y los filtros del catálogo permanecen compactos hasta que el visitante decide utilizarlos."},
     {"version":"1.28.0","date":"2026-09-14","title":"Catálogo encontrable por proyecto o código","summary":"La Fase 2 incorpora dos caminos de entrada, búsqueda HRD, filtros y relaciones entre piezas de sistemas validados sin cambiar las imágenes actuales."},
     {"version":"1.27.0","date":"2026-09-13","title":"3D sin dependencias externas","summary":"Three.js se sirve desde el propio sitio: los visores y la calculadora ya no dependen de un CDN, y se retiró una copia de 655 KB que nadie usaba."},
