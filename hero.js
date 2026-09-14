@@ -137,6 +137,33 @@
   const escapeHTML = value => String(value ?? '').replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
   const productDialog = document.querySelector('#product-dialog');
   let catalogDetails = [];
+  const normalizeCatalogText = value => String(value ?? '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  const productSystem = product => {
+    const code = normalizeCatalogText(product.code);
+    const text = normalizeCatalogText(`${product.code} ${product.name} ${product.description}`);
+    if (/hrd 1517|hrd 1518/.test(code)) return 'tubo';
+    if (/hrd 1519|hrd 1520|hrd 1525|hrd 1526/.test(code)) return 'clips';
+    if (/hrd 1616/.test(code)) return 'cable';
+    if (/hrd 1221|hrd 1223|hrd 1715|hrd 1716|hrd 1717/.test(code) || text.includes('solera')) return 'solera';
+    return '';
+  };
+  const productApplication = product => {
+    const category = normalizeCatalogText(product.category);
+    const text = normalizeCatalogText(`${product.name} ${product.description} ${(product.specifications || []).join(' ')}`);
+    if (text.includes('vidrio-muro') || text.includes('vidrio a muro')) return 'vidrio-muro';
+    if (text.includes('vidrio-vidrio') || text.includes('vidrio a vidrio')) return 'vidrio-vidrio';
+    if (category === 'jaladeras' || /jaladera|bisagra|pomo/.test(text)) return 'puerta';
+    if (category === 'postes' || /barandal|pasamanos/.test(text)) return 'barandal';
+    return '';
+  };
+  const systemLabels = {
+    clips: 'Postes con clips + vidrio',
+    tubo: 'Sistema de tubo de 1/2 pulgada',
+    cable: 'Poste cuadrado + cable de acero',
+    solera: 'Postes y brazos de solera'
+  };
+  const systemProjectIds = { clips: 'clips', tubo: 'hrd1518', cable: 'hrd1616' };
+  const productPdfFiles = { 'HRD 1101': '/output/pdf/fichas/hrd-1101.pdf' };
   const productSlug = code => String(code).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
   const openProduct = product => {
     if (!product || !productDialog) return;
@@ -146,11 +173,27 @@
     document.querySelector('#dialog-specs').innerHTML = product.specifications.map(spec => `<li>${escapeHTML(spec)}</li>`).join('');
     const images = product.detailImages.length ? product.detailImages : [`/content/catalog/${product.image}`];
     document.querySelector('#dialog-gallery').innerHTML = images.map((src, index) => `<figure class="${index === 0 ? 'primary' : ''}"><img src="${escapeHTML(src)}" alt="${escapeHTML(product.name)} ${index ? 'plano o detalle técnico' : ''}" loading="eager"></figure>`).join('');
+    const system = productSystem(product);
+    const systemSection = document.querySelector('#dialog-system');
+    if (system && systemSection) {
+      const related = catalogDetails.filter(item => item.code !== product.code && productSystem(item) === system).slice(0, 4);
+      document.querySelector('#dialog-system-title').textContent = systemLabels[system];
+      document.querySelector('#dialog-related-products').innerHTML = related.length ? related.map(item => `<button type="button" data-related-product="${escapeHTML(item.code)}"><b>${escapeHTML(item.code)}</b><span>${escapeHTML(item.name)}</span></button>`).join('') : '<p>Este modelo identifica el sistema completo.</p>';
+      const systemLink = document.querySelector('#dialog-system-link');
+      const projectId = systemProjectIds[system];
+      systemLink.hidden = !projectId;
+      systemLink.dataset.projectTarget = projectId || '';
+      systemSection.hidden = false;
+    } else if (systemSection) systemSection.hidden = true;
     const message = encodeURIComponent(`Hola Herraidea, me interesa cotizar ${product.code} — ${product.name}.`);
     document.querySelector('#dialog-whatsapp').href = `https://wa.me/524772561695?text=${message}`;
+    const pdfLink = document.querySelector('#dialog-pdf');
+    const pdfFile = productPdfFiles[product.code];
+    if (pdfLink) { pdfLink.hidden = !pdfFile; pdfLink.href = pdfFile || ''; }
     const url = new URL(location.href); url.searchParams.set('producto', productSlug(product.code));
     history.pushState({ product: product.code }, '', url);
-    productDialog.showModal(); document.body.classList.add('dialog-open');
+    if (!productDialog.open) productDialog.showModal();
+    document.body.classList.add('dialog-open');
   };
   const closeProduct = (updateUrl = true) => {
     if (!productDialog?.open) return;
@@ -163,6 +206,17 @@
   document.querySelector('#dialog-share')?.addEventListener('click', async event => {
     try { await navigator.clipboard.writeText(location.href); event.currentTarget.textContent = 'Enlace copiado'; }
     catch { event.currentTarget.textContent = 'Copia la URL del navegador'; }
+  });
+  document.querySelector('#dialog-related-products')?.addEventListener('click', event => {
+    const button = event.target.closest('[data-related-product]');
+    if (button) openProduct(catalogDetails.find(product => product.code === button.dataset.relatedProduct));
+  });
+  document.querySelector('#dialog-system-link')?.addEventListener('click', event => {
+    const projectId = event.currentTarget.dataset.projectTarget;
+    closeProduct();
+    if (!projectId) return;
+    const card = document.querySelector(`[data-project="${projectId}"]`);
+    requestAnimationFrame(() => card?.scrollIntoView({ behavior: 'smooth', block: 'center' }));
   });
   addEventListener('popstate', () => closeProduct(false));
 
@@ -179,7 +233,8 @@
       return `<section class="family" id="${key}"><button class="family-toggle" type="button" aria-expanded="false"><span class="family-bar"></span><span class="family-number">0${familyIndex + 1}</span><span class="family-pictogram" aria-hidden="true"><img src="${pictogram}" alt=""></span><span class="family-title"><h3>${title}</h3><small>${items.length} modelos</small></span><p>${description}</p><span class="family-mark" aria-hidden="true"></span></button><div class="family-products">${items.map((p, productIndex) => {
         const code = escapeHTML(p.code || p.model || '');
         const name = escapeHTML(p.name);
-        return `<button class="product-card" type="button" data-product="${escapeHTML(p.code)}" aria-label="Ver ficha de ${name} ${code}" style="animation-delay:${Math.min(productIndex,16)*.035}s"><figure><img src="/content/catalog/${escapeHTML(p.image)}" alt="${name} ${code}" loading="lazy"></figure><div class="product-info"><b>${code}</b><span>${name}</span><em>Ver ficha técnica →</em></div></button>`;
+        const searchable = escapeHTML(normalizeCatalogText(`${p.code} ${p.name} ${p.description} ${(p.specifications || []).join(' ')}`));
+        return `<button class="product-card" type="button" data-product="${escapeHTML(p.code)}" data-search="${searchable}" data-application="${productApplication(p)}" data-system="${productSystem(p)}" aria-label="Ver ficha de ${name} ${code}" style="animation-delay:${Math.min(productIndex,16)*.035}s"><figure><img src="/content/catalog/${escapeHTML(p.image)}" alt="${name} ${code}" loading="lazy"></figure><div class="product-info"><b>${code}</b><span>${name}</span><em>Ver ficha técnica →</em></div></button>`;
       }).join('')}</div></section>`;
     }).join('');
     const familyEls = [...host.querySelectorAll('.family')];
@@ -221,8 +276,46 @@
         mantenerEnPantalla(toggle, destino);
       });
     });
+    const searchInput = document.querySelector('#catalog-search');
+    const familyFilter = document.querySelector('#catalog-family-filter');
+    const applicationFilter = document.querySelector('#catalog-application-filter');
+    const systemFilter = document.querySelector('#catalog-system-filter');
+    const resultCount = document.querySelector('#catalog-result-count');
+    const emptyState = document.querySelector('#catalog-empty');
+    const clearSearch = document.querySelector('#catalog-search-clear');
+    const filterCatalog = () => {
+      const query = normalizeCatalogText(searchInput?.value).trim();
+      const selectedFamily = familyFilter?.value || 'all';
+      const selectedApplication = applicationFilter?.value || 'all';
+      const selectedSystem = systemFilter?.value || 'all';
+      let visibleCount = 0;
+      familyEls.forEach(family => {
+        let familyCount = 0;
+        family.querySelectorAll('.product-card').forEach(card => {
+          const visible = (!query || card.dataset.search.includes(query)) && (selectedFamily === 'all' || family.id === selectedFamily) && (selectedApplication === 'all' || card.dataset.application === selectedApplication) && (selectedSystem === 'all' || card.dataset.system === selectedSystem);
+          card.hidden = !visible;
+          if (visible) { visibleCount += 1; familyCount += 1; }
+        });
+        family.hidden = familyCount === 0;
+        if (query || selectedFamily !== 'all' || selectedApplication !== 'all' || selectedSystem !== 'all') {
+          family.classList.toggle('open', familyCount > 0);
+          family.querySelector('.family-toggle').setAttribute('aria-expanded', String(familyCount > 0));
+        }
+      });
+      if (resultCount) resultCount.textContent = String(visibleCount);
+      if (emptyState) emptyState.hidden = visibleCount !== 0;
+      if (clearSearch) clearSearch.hidden = !query;
+    };
+    [searchInput, familyFilter, applicationFilter, systemFilter].forEach(control => control?.addEventListener(control === searchInput ? 'input' : 'change', filterCatalog));
+    clearSearch?.addEventListener('click', () => { searchInput.value = ''; searchInput.focus(); filterCatalog(); });
+    document.querySelector('#catalog-known-product')?.addEventListener('click', () => {
+      document.querySelector('#catalog-tools')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      setTimeout(() => searchInput?.focus({ preventScroll: true }), 450);
+    });
     document.querySelectorAll('[data-open-family]').forEach(button => button.addEventListener('click', () => {
       const family = document.querySelector(`#${button.dataset.openFamily}`); if (!family) return;
+      if (familyFilter) familyFilter.value = button.dataset.openFamily;
+      filterCatalog();
       // Sin la animación de altura el catálogo queda en su tamaño final antes de calcular
       // el destino, así el scroll aterriza en la familia y no donde estaba el contenido.
       host.classList.add('sin-animacion');

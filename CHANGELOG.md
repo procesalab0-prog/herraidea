@@ -1,5 +1,15 @@
 # Historial de versiones — Herraidea
 
+## 1.28.0 — 2026-09-14
+
+- Comienza la siguiente entrega de la Fase 2 sin sustituir ninguna imagen pendiente de recibir.
+- El catálogo ofrece dos caminos claros: diseñar una solución con la asesoría existente o localizar directamente una pieza conocida.
+- Se incorpora búsqueda instantánea por nombre, descripción, especificación o código HRD, con contador, limpieza y estado sin resultados.
+- Las 81 fichas pueden filtrarse por familia, aplicación y sistema; los accesos con pictogramas funcionan también como filtros rápidos.
+- Las fichas de los sistemas ya identificados muestran otras piezas de la misma solución y enlazan con la experiencia 3D cuando está disponible.
+- HRD 1101 estrena la plantilla piloto de ficha PDF individual con fotografía, plano acotado, especificaciones vigentes y descarga desde su ficha web.
+- El plano visual recuperado se presenta dentro del PDF sin confundirlo con un archivo CAD editable; los futuros DWG/STEP e instructivos permanecen pendientes de autorización.
+
 ## 1.27.0 — 2026-09-13
 
 - Three.js y sus complementos ahora se sirven desde el propio sitio: los cuatro visores 3D y la calculadora funcionan aunque un CDN externo falle o esté bloqueado. Antes, si `cdnjs` o `esm.sh` no respondían, los botones “Explorar solución” no hacían absolutamente nada, sin aviso.

@@ -502,6 +502,47 @@ herraidea-post-calculator-3d canvas{display:block;width:100%;height:100%}
 @media(max-width:430px){.calculator-stage{height:390px}.calculator-result-main strong,.calculator-result-stat strong{font-size:38px}.calculator-result-main,.calculator-result-stat{padding:17px 12px}.calculator-result-main small{font-size:9px}.calculator-segment label{padding-left:11px}.calculator-input-wrap input{width:78px}}
 @media(prefers-reduced-motion:reduce){.calculator-add,.calculator-segment>button{transition:none}}
 
+/* v1.27 · primera entrega de profesionalización del catálogo */
+.catalog-section .section-head{margin-bottom:34px}
+.catalog-paths{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:22px}
+.catalog-paths>a,.catalog-paths>button{position:relative;min-height:132px;padding:26px 72px 26px 28px;border:1px solid #dfe3e6;border-radius:22px;background:#fff;color:var(--ink);display:flex;flex-direction:column;align-items:flex-start;justify-content:center;text-align:left;cursor:pointer;transition:border-color .25s,transform .25s,box-shadow .25s}
+.catalog-paths>a:hover,.catalog-paths>button:hover{border-color:var(--ink);transform:translateY(-2px);box-shadow:0 16px 42px #1720270d}
+.catalog-paths small{margin-bottom:8px;color:#7b8389;font:700 11px 'Archivo Narrow';letter-spacing:.13em;text-transform:uppercase}
+.catalog-paths strong{font-size:clamp(20px,2vw,28px);line-height:1.15}
+.catalog-paths>a>span,.catalog-paths>button>span{position:absolute;right:24px;top:50%;width:42px;height:42px;border-radius:50%;background:#f0f2f3;display:grid;place-items:center;transform:translateY(-50%);color:var(--red);font-size:20px}
+.catalog-paths>a:first-child{background:var(--ink);color:#fff;border-color:var(--ink)}
+.catalog-paths>a:first-child small{color:#ffffff8f}
+.catalog-paths>a:first-child>span{background:var(--red);color:#fff}
+.catalog-tools{display:grid;grid-template-columns:minmax(240px,1.6fr) repeat(3,minmax(150px,.75fr)) auto;gap:10px;align-items:end;padding:18px;border:1px solid #dfe3e6;border-radius:24px;background:#f6f7f8;margin-bottom:16px}
+.catalog-tools label{gap:7px}
+.catalog-tools label>span:first-child{color:#747c82;font:700 10px 'Archivo Narrow';letter-spacing:.13em;text-transform:uppercase}
+.catalog-tools input,.catalog-tools select{height:52px;border:1px solid #d7dcdf;border-radius:999px;background-color:#fff;font-size:16px}
+.catalog-tools input:focus,.catalog-tools select:focus{border-color:var(--red);box-shadow:0 0 0 4px #fa141810}
+.catalog-search-field{position:relative;display:block}
+.catalog-search-field input{padding-right:44px}
+.catalog-search-field button{position:absolute;right:7px;top:7px;width:38px;height:38px;border:0;border-radius:50%;background:#eceff1;color:#4f565c;font-size:23px;cursor:pointer}
+.catalog-tool-status{min-width:76px;height:52px;border-radius:18px;background:var(--ink);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.catalog-tool-status strong{color:var(--red);font-size:20px;line-height:1}
+.catalog-tool-status span{margin-top:3px;font:600 9px 'Archivo Narrow';letter-spacing:.1em;text-transform:uppercase}
+.catalog-shortcuts{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 34px}
+.catalog-empty{padding:54px 24px;text-align:center;border:1px solid var(--line);border-radius:22px;background:#fff}
+.catalog-empty strong{font-size:25px}.catalog-empty p{color:var(--muted);line-height:1.55}.catalog-empty .text-link{display:inline-block;margin-top:8px}
+.product-card[hidden],.family[hidden]{display:none!important}
+.dialog-section-label{width:100%;margin-top:18px;padding-bottom:9px;border-bottom:1px solid var(--line);color:#7a8288;font:700 10px 'Archivo Narrow';letter-spacing:.14em;text-transform:uppercase}
+.dialog-system{width:100%;margin:-4px 0 30px;padding:20px;border-radius:18px;background:#eceff1}
+.dialog-system>span{color:var(--red);font:700 10px 'Archivo Narrow';letter-spacing:.14em;text-transform:uppercase}
+.dialog-system h3{margin:7px 0 14px;font-size:21px;line-height:1.15}
+#dialog-related-products{display:grid;gap:6px}
+#dialog-related-products button{display:grid;grid-template-columns:minmax(110px,.7fr) 1fr;gap:10px;width:100%;padding:11px 12px;border:1px solid #d9dde0;border-radius:12px;background:#fff;color:var(--ink);text-align:left;cursor:pointer}
+#dialog-related-products button:hover{border-color:var(--red)}
+#dialog-related-products b{color:var(--red);font:700 11px 'Archivo Narrow';letter-spacing:.06em}
+#dialog-related-products span{font-size:11px;line-height:1.3}
+#dialog-related-products p{margin:0;color:var(--muted);font-size:13px}
+#dialog-system-link{display:inline-block;margin-top:15px;border-bottom:1px solid;font:700 11px 'Archivo Narrow';letter-spacing:.12em;text-transform:uppercase}
+@media(max-width:1100px){.catalog-tools{grid-template-columns:1.5fr 1fr 1fr}.catalog-tools label:nth-of-type(4){grid-column:1/3}.catalog-tool-status{grid-column:3}}
+@media(max-width:760px){.catalog-paths{grid-template-columns:1fr}.catalog-paths>a,.catalog-paths>button{min-height:112px;padding:22px 66px 22px 22px;border-radius:18px}.catalog-tools{grid-template-columns:1fr 1fr;padding:14px;border-radius:20px}.catalog-search{grid-column:1/-1}.catalog-tools label:nth-of-type(4){grid-column:auto}.catalog-tool-status{grid-column:auto}.catalog-shortcuts{display:grid;grid-template-columns:1fr 1fr}.catalog-shortcuts button{width:100%}}
+@media(max-width:470px){.catalog-tools{grid-template-columns:1fr}.catalog-tools label:nth-of-type(4),.catalog-tool-status{grid-column:auto}.catalog-tool-status{height:46px;flex-direction:row;gap:7px}.catalog-tool-status span{margin:0}.dialog-system{padding:17px}#dialog-related-products button{grid-template-columns:1fr} }
+
 /* v1.23.1 · Portada completa del HRD 1616 */
 .project-card-hrd1616 .project-card-photo img{object-fit:contain;object-position:center}
 .project-cover-video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center;transform:scale(1.1);pointer-events:none;opacity:0;transition:opacity .3s ease}

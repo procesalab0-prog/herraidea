@@ -2,7 +2,7 @@
 
 Documento vivo para consolidar el nuevo posicionamiento, la estructura futura del sitio y las decisiones aprobadas. Las ideas anotadas aquí no deben implementarse automáticamente: primero se convierten en alcance y se aprueban.
 
-Última actualización: 2026-09-12
+Última actualización: 2026-09-14
 
 ## 1. Objetivo principal
 
@@ -442,11 +442,18 @@ No se debe presentar esta funcionalidad como parte del alcance actual ni constru
 - Calculadora visual de postes implementada con tramos conectados, esquinas compartidas, separación objetivo de 1.20 a 1.40 m, modelos 3D reales del HRD 1525, HRD 1518 y HRD 1616, y envío a WhatsApp para revisión.
 - Solicitud de proyecto mediante WhatsApp.
 - Reutilización cuidadosa de la experiencia visual actual.
+- Definición de la estructura comercial de cada sistema: piezas que lo componen, compatibilidades, complementos necesarios y casos que requieren asesoría o fabricación especial.
+- Explicación más clara del acompañamiento de Herraidea: selección de solución, revisión de medidas, adaptación, fabricación a la medida y seguimiento del proyecto.
 
 ### Fase 2 — Profesionalización
 
 - Recursos técnicos descargables; primera entrega publicada con el catálogo general 2023 y acceso a las 81 fichas disponibles.
 - Fichas de producto ampliadas.
+- Buscador por nombre, código HRD, familia y aplicación; primera versión implementada sobre las 81 fichas vigentes.
+- Filtros por familia, aplicación y tipo de sistema; primera versión implementada con la clasificación ya disponible.
+- Ficha PDF individual para cada producto, condicionada a la validación de sus datos técnicos.
+- Navegación por sistemas completos: primera relación entre piezas implementada para los sistemas identificados; falta completar y validar el resto.
+- Bloques “Compatible con” y “También necesitas” con relaciones revisadas por Herraidea.
 - Flujo interno supervisado para crear fotografías de estudio a partir de fotos reales.
 - Páginas por aplicación.
 - Proyectos reales.
@@ -458,6 +465,9 @@ El seguimiento de esta fase queda documentado en `docs/FASE_2_PROFESIONALIZACION
 ### Fase 3 — Herramientas comerciales
 
 - Evolución del canalizador hacia un configurador técnico con reglas administrables.
+- Evolución de la calculadora visual hacia un configurador de sistemas que entregue un despiece de componentes y complementos requeridos.
+- Recorrido diferenciado con dos entradas: “Quiero diseñar una solución” y “Ya conozco mi pieza o código”.
+- Biblioteca profesional con fichas, planos, CAD/DWG, manuales, videos y evidencia técnica, conforme se valide cada recurso.
 - Cotización guiada o automática.
 - Portal B2B para distribuidores, condicionado a una futura base de datos, autenticación y reglas comerciales.
 - Inventario o comercio electrónico, únicamente si el modelo comercial lo requiere.
@@ -508,12 +518,43 @@ Los datos técnicos de capacidad son complementarios y pueden incorporarse progr
 - Proceso actual de Herraidea para clasificar, retrabajar, reciclar o desechar merma.
 - Posibilidad técnica y comercial de recuperar material sin comprometer calidad, seguridad ni trazabilidad.
 
-## 13. Referencias recibidas
+## 13. Referencias recibidas y aprendizajes competitivos
 
 - Conversación compartida de ChatGPT: `https://chatgpt.com/s/t_6a971a1ad5cc8191914447052658f0c2`
 - Sitios mencionados como referentes estratégicos en esa conversación: C.R. Laurence y dormakaba.
+- Kinetic: `https://kinetic.com.mx/es/`
+- C.R. Laurence: `https://www.crlaurence.com/`
 
 Estas referencias orientan la estructura y el nivel de información, pero Herraidea debe conservar una identidad propia basada en fabricación mexicana, flexibilidad y atención cercana.
+
+### Kinetic — organización comercial aplicable
+
+Se toma como referencia su facilidad para explorar un inventario técnico y relacionar productos. Las ideas aprobadas para conservar en el plan son:
+
+1. Buscador por nombre o código HRD.
+2. Filtros por familia, aplicación y tipo de sistema.
+3. Ficha PDF individual por producto.
+4. Mostrar qué piezas forman parte del mismo sistema.
+5. Bloque de **“Compatible con”** o **“También necesitas”**.
+6. Explicar mejor la asesoría técnica, la fabricación especial y el acompañamiento en proyectos.
+
+### C.R. Laurence — ecosistema técnico aplicable
+
+Se toma como referencia la profundidad de su documentación y la separación entre comprar una pieza conocida y especificar una solución. Herraidea aprueba conservar en el plan estas ideas:
+
+1. Dos caminos sencillos: **“Quiero diseñar una solución”** y **“Ya conozco mi pieza o código”**.
+2. Búsqueda directa por código HRD.
+3. Página técnica para cada pieza con medidas, acabados, instalación, modelo 3D, descargas y componentes compatibles.
+4. Páginas de sistemas completos que expliquen qué postes, clips, tubos y accesorios se necesitan.
+5. Convertir gradualmente la calculadora visual en un configurador que entregue despiece y solicitud de cotización.
+6. Una biblioteca técnica con catálogo general, fichas individuales, modelos CAD, instructivos y videos.
+7. Relacionar cada proyecto terminado con las soluciones y piezas utilizadas.
+
+### Criterio propio de Herraidea
+
+Kinetic aporta una referencia de **organización comercial local** y C.R. Laurence una referencia de **profundidad técnica y especificación**. Herraidea combinará esos aprendizajes con su diferenciador: una experiencia más sencilla, visual y cercana, apoyada por modelos 3D reales, calculadora guiada, fabricación mexicana y atención a proyectos especiales.
+
+No se copiará la densidad visual, la estructura de comercio electrónico ni la escala completa de esos sitios. Cada función se implementará solamente cuando existan datos y relaciones técnicas validadas por Herraidea.
 
 ## 14. Regla de trabajo
 

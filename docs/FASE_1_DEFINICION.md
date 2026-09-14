@@ -106,6 +106,8 @@ La landing se actualiza progresivamente con la información y los recursos ya co
 - [ ] Materiales, acabados, medidas y espesores.
 - [ ] Compatibilidad con vidrio templado y laminado.
 - [ ] Productos relacionados y componentes que se compran juntos.
+- [ ] Matriz por sistema: piezas principales, piezas compartidas, accesorios obligatorios y accesorios opcionales.
+- [ ] Relaciones validadas para los futuros bloques “Compatible con” y “También necesitas”.
 - [ ] Unidad de venta: pieza, juego, paquete o múltiplo.
 - [ ] Planos, PDF, CAD, DWG y manuales disponibles.
 
@@ -143,6 +145,7 @@ La landing se actualiza progresivamente con la información y los recursos ya co
 - [ ] Horarios de atención.
 - [ ] Regla de asignación de solicitudes.
 - [ ] Contacto alterno si el vendedor no responde.
+- [ ] Definir cómo se explicará el acompañamiento: selección, revisión de medidas, fabricación especial, cotización y seguimiento.
 
 ### G. Proyectos, exposiciones y confianza
 
@@ -193,3 +196,11 @@ La fase termina cuando Herraidea apruebe:
 - Lista documentada de pendientes que no bloquearán el diseño.
 
 Después de esa aprobación se puede iniciar la fase de estrategia, contenido y diseño.
+
+## 7. Referencias competitivas aplicadas a esta fase
+
+Los aprendizajes de Kinetic y C.R. Laurence se utilizan en esta fase para definir datos y relaciones, no para copiar sus interfaces.
+
+- De **Kinetic** se adopta como requisito organizar los productos por nombre o código HRD, familia, aplicación y sistema; también documentar compatibilidades, complementos y piezas que normalmente se compran juntas.
+- De **C.R. Laurence** se adoptan dos caminos con lenguaje sencillo: “Quiero diseñar una solución” y “Ya conozco mi pieza o código”. Esta fase debe definir la información necesaria para las páginas de piezas, sistemas completos, biblioteca técnica y proyectos relacionados.
+- La Fase 1 debe entregar la información validada que permitirá construir buscadores, filtros, fichas individuales y sistemas relacionados durante la Fase 2.

@@ -28,7 +28,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Archivo+Narrow:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=1-26-1">
+  <link rel="stylesheet" href="/styles.css?v=1-28-0">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -224,8 +224,21 @@
     </section>
 
     <section class="catalog-section" id="catalogo"><div class="section-inner">
-      <div class="section-head"><div><span class="eyebrow">Catálogo</span><h2>81 herrajes y configuraciones en cuatro familias.</h2><p>Elige una familia para desplegar sus modelos.</p></div><nav class="catalog-shortcuts"><button type="button" data-open-family="pipetas"><img src="/assets/catalog/pictograms/pipetas.png?v=1211" alt="">Pipetas</button><button type="button" data-open-family="postes"><img src="/assets/catalog/pictograms/postes.png?v=1211" alt="">Postes</button><button type="button" data-open-family="conectores"><img src="/assets/catalog/pictograms/conectores.png?v=1211" alt="">Conectores</button><button type="button" data-open-family="jaladeras"><img src="/assets/catalog/pictograms/jaladeras.png?v=1211" alt="">Jaladeras</button></nav></div>
+      <div class="section-head"><div><span class="eyebrow">Catálogo</span><h2>Encuentra una pieza o empieza por tu proyecto.</h2><p>Busca directamente un código HRD o explora las soluciones con ayuda de Herraidea.</p></div></div>
+      <div class="catalog-paths" aria-label="Elige cómo comenzar">
+        <a href="#asesoria"><small>No necesito conocer las piezas</small><strong>Quiero diseñar una solución</strong><span aria-hidden="true">→</span></a>
+        <button type="button" id="catalog-known-product"><small>Tengo un nombre o código HRD</small><strong>Ya conozco mi pieza o código</strong><span aria-hidden="true">↓</span></button>
+      </div>
+      <div class="catalog-tools" id="catalog-tools">
+        <label class="catalog-search" for="catalog-search"><span>Buscar en 81 fichas</span><span class="catalog-search-field"><input id="catalog-search" type="search" placeholder="Ej. HRD 1525, pipeta o poste" autocomplete="off"><button type="button" id="catalog-search-clear" aria-label="Limpiar búsqueda" hidden>×</button></span></label>
+        <label><span>Familia</span><select id="catalog-family-filter"><option value="all">Todas</option><option value="pipetas">Pipetas</option><option value="postes">Postes</option><option value="conectores">Conectores</option><option value="jaladeras">Jaladeras</option></select></label>
+        <label><span>Aplicación</span><select id="catalog-application-filter"><option value="all">Todas</option><option value="barandal">Barandales y pasamanos</option><option value="vidrio-muro">Vidrio a muro</option><option value="vidrio-vidrio">Vidrio a vidrio</option><option value="puerta">Puertas de vidrio</option></select></label>
+        <label><span>Sistema</span><select id="catalog-system-filter"><option value="all">Todos</option><option value="clips">Postes con clips + vidrio</option><option value="tubo">Tubo de 1/2 pulgada</option><option value="cable">Cable de acero HRD 1616</option><option value="solera">Postes y brazos de solera</option></select></label>
+        <div class="catalog-tool-status" aria-live="polite"><strong id="catalog-result-count">81</strong><span>resultados</span></div>
+      </div>
+      <nav class="catalog-shortcuts" aria-label="Accesos rápidos por familia"><button type="button" data-open-family="pipetas"><img src="/assets/catalog/pictograms/pipetas.png?v=1211" alt="">Pipetas</button><button type="button" data-open-family="postes"><img src="/assets/catalog/pictograms/postes.png?v=1211" alt="">Postes</button><button type="button" data-open-family="conectores"><img src="/assets/catalog/pictograms/conectores.png?v=1211" alt="">Conectores</button><button type="button" data-open-family="jaladeras"><img src="/assets/catalog/pictograms/jaladeras.png?v=1211" alt="">Jaladeras</button></nav>
       <div id="catalog-families" class="catalog-families"><p>Cargando catálogo…</p></div>
+      <div class="catalog-empty" id="catalog-empty" hidden><strong>No encontramos esa pieza.</strong><p>Prueba otro código o cuéntanos qué necesitas para ayudarte a identificarla.</p><a href="#contacto" class="text-link">Pedir ayuda <span>→</span></a></div>
     </div></section>
 
     <section class="resources-section" id="recursos">
@@ -243,7 +256,7 @@
           <a class="resource-action" href="#catalogo"><span>Explorar fichas</span><b aria-hidden="true">→</b></a>
         </article>
       </div>
-      <p class="section-inner resources-note">Las fichas descargables por producto, archivos CAD/DWG y manuales de instalación se incorporarán conforme Herraidea valide y autorice cada recurso.</p>
+      <p class="section-inner resources-note">Las fichas descargables se incorporarán progresivamente conforme Herraidea valide cada producto. Los archivos CAD/DWG y manuales de instalación se publicarán únicamente cuando estén autorizados.</p>
     </section>
 
     <section class="about-section" id="nosotros"><div class="section-inner about-grid">
@@ -271,7 +284,7 @@
 
   <dialog class="product-dialog" id="product-dialog" aria-labelledby="product-dialog-title">
     <button class="dialog-close" type="button" aria-label="Cerrar ficha">×</button>
-    <div class="dialog-body"><div class="dialog-gallery" id="dialog-gallery"></div><div class="dialog-copy"><span class="eyebrow" id="dialog-category"></span><h2 id="product-dialog-title"></h2><p class="dialog-description" id="dialog-description"></p><ul class="dialog-specs" id="dialog-specs"></ul><div class="dialog-actions"><a class="button" id="dialog-whatsapp" target="_blank" rel="noopener">Solicitar cotización <span>→</span></a><button class="text-button" id="dialog-share" type="button">Copiar enlace</button></div><small class="technical-note">Las acotaciones se expresan en milímetros. Verifica físicamente la pieza antes de instalar y perforar.</small></div></div>
+    <div class="dialog-body"><div class="dialog-gallery" id="dialog-gallery"></div><div class="dialog-copy"><span class="eyebrow" id="dialog-category"></span><h2 id="product-dialog-title"></h2><p class="dialog-description" id="dialog-description"></p><div class="dialog-section-label">Información técnica disponible</div><ul class="dialog-specs" id="dialog-specs"></ul><section class="dialog-system" id="dialog-system" hidden><span>Parte del sistema</span><h3 id="dialog-system-title"></h3><div id="dialog-related-products"></div><a id="dialog-system-link" href="#proyectos">Explorar solución 3D <span>→</span></a></section><div class="dialog-actions"><a class="button" id="dialog-whatsapp" target="_blank" rel="noopener">Solicitar cotización <span>→</span></a><a class="text-button" id="dialog-pdf" download hidden>Descargar ficha PDF</a><button class="text-button" id="dialog-share" type="button">Copiar enlace</button></div><small class="technical-note">Las acotaciones se expresan en milímetros. Verifica físicamente la pieza antes de instalar y perforar.</small></div></div>
   </dialog>
 
   <dialog class="project-dialog" id="project-dialog" aria-labelledby="project-dialog-title">
@@ -298,11 +311,11 @@
 
   <dialog class="credits-dialog" id="credits-dialog" aria-labelledby="credits-title">
     <button class="credits-close" type="button" aria-label="Cerrar créditos">×</button>
-    <div class="credits-hero"><span class="credits-kicker">Seis toques desbloquearon</span><img class="procesalab-logo" src="/assets/brand/procesalab-horizontal.png" alt="Creado por ProcesaLab"><p>Diseño, desarrollo y evolución digital.</p><span class="current-version">Herraidea · v<span id="credits-version">1.26.0</span></span></div>
+    <div class="credits-hero"><span class="credits-kicker">Seis toques desbloquearon</span><img class="procesalab-logo" src="/assets/brand/procesalab-horizontal.png" alt="Creado por ProcesaLab"><p>Diseño, desarrollo y evolución digital.</p><span class="current-version">Herraidea · v<span id="credits-version">1.28.0</span></span></div>
     <div class="credits-content"><h2 id="credits-title">Construido versión a versión.</h2><p>Cada actualización queda documentada para que el proyecto conserve contexto, decisiones y continuidad.</p><div class="version-list" id="version-list"></div></div>
   </dialog>
 
   <footer><div class="section-inner"><a class="footer-brand" href="#inicio" aria-label="Herraidea, volver al inicio"><img src="/assets/logo-light-nodot.png" alt="Herraidea"><i aria-hidden="true"></i></a><nav><a href="#asesoria">Asesoría</a><a href="#catalogo">Catálogo</a><a href="#recursos">Recursos</a><a href="#nosotros">Nosotros</a><a href="#envios">Envíos</a><a href="#contacto">Contacto</a></nav><span>León, Gto. · Desde 2013</span></div></footer>
-  <script src="/hrd-map.js?v=1-10"></script><script src="/hero.js?v=1-27-0"></script><script src="/project-cover.js?v=1-25-0"></script><script type="module" src="/project-3d-v2.js?v=1-27-0"></script><script type="module" src="/calculator-3d.js?v=1-27-0"></script>
+  <script src="/hrd-map.js?v=1-10"></script><script src="/hero.js?v=1-28-0"></script><script src="/project-cover.js?v=1-25-0"></script><script type="module" src="/project-3d-v2.js?v=1-27-0"></script><script type="module" src="/calculator-3d.js?v=1-27-0"></script>
 </body>
 </html>

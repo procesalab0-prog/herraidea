@@ -1,6 +1,6 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.27.0**
+Versión actual: **1.28.0**
 
 El dominio oficial `www.herraidea.com` sirve la web desde Vercel y `herraidea.com` redirige de forma segura a esa dirección. Las referencias canónicas, la tarjeta social, los datos estructurados y el catálogo descargable usan el dominio oficial. Los registros de correo preexistentes se conservaron al migrar los servidores DNS desde Jimdo a Vercel.
 
@@ -8,7 +8,7 @@ Sitio de producción: `https://www.herraidea.com/`
 
 ## Estado actual
 
-Landing estática para Herraidea, enfocada en barandales, soluciones y fabricación a la medida. Incluye hero de producto con transición de día a noche y mensaje editorial despejado, presentación de capacidades, carrusel de cuatro soluciones y proyectos con experiencias 3D ampliables y controles tipo cápsula, calculadora visual de postes por tramos y esquinas compartidas para HRD 1525, HRD 1518 y HRD 1616, canalizador visual de proyectos sin base de datos con sugerencias iniciales, captación de proyectos fuera de catálogo, catálogo desplegable de 81 herrajes y configuraciones con pictogramas propios, 13 configuraciones de postes ya normalizadas con imágenes de estudio aprobadas, catálogo 2026 descargable sincronizado con esas imágenes y logotipo protagonista, cobertura animada, ventanas con planos y especificaciones, historia institucional animada, contacto por WhatsApp y PWA.
+Landing estática para Herraidea, enfocada en barandales, soluciones y fabricación a la medida. Incluye hero de producto con transición de día a noche y mensaje editorial despejado, presentación de capacidades, carrusel de cuatro soluciones y proyectos con experiencias 3D ampliables y controles tipo cápsula, calculadora visual de postes por tramos y esquinas compartidas para HRD 1525, HRD 1518 y HRD 1616, canalizador visual de proyectos sin base de datos con sugerencias iniciales, captación de proyectos fuera de catálogo, catálogo desplegable de 81 herrajes y configuraciones con dos caminos de entrada, búsqueda por código o nombre, filtros por familia, aplicación y sistema, relaciones entre piezas de sistemas validados y pictogramas propios, 13 configuraciones de postes ya normalizadas con imágenes de estudio aprobadas, catálogo 2026 descargable sincronizado con esas imágenes y logotipo protagonista, cobertura animada, ventanas con planos y especificaciones, historia institucional animada, contacto por WhatsApp y PWA.
 
 ## Archivos principales
 
@@ -25,6 +25,8 @@ Landing estática para Herraidea, enfocada en barandales, soluciones y fabricaci
 - `assets/hero-barandal-v2-day.png` y `assets/hero-barandal-v2-night.png`: escenas vigentes del hero, fieles al sistema de postes, clips y cristal.
 - `assets/brand/herraidea-social-v2.png`: tarjeta social vigente para WhatsApp y redes, alineada con el nuevo hero y el mensaje principal.
 - `output/pdf/catalogo-herraidea-2026-adelanto.pdf`: catálogo descargable vigente; se genera desde las mismas imágenes y datos que utiliza la web.
+- `output/pdf/fichas/hrd-1101.pdf`: primera ficha PDF individual de la Fase 2, utilizada como plantilla visual antes de producir el resto.
+- `scripts/generate_product_sheet.py`: generador de fichas individuales a partir de `details.json`, la fotografía del producto y la vista o plano técnico disponible.
 - `.github/workflows/catalog-pdf.yml`: regenera y publica el PDF al cambiar su generador, los datos del catálogo o sus imágenes, manteniendo la descarga sincronizada.
 - `assets/hero-barandal.png` y `assets/hero-night.png`: pareja anterior del hero, reutilizada en la composición animada de “Nuestra evolución”.
 - `assets/projects/futbolito/`: modelo GLB y portada de estudio del Futbolito Herraidea.
