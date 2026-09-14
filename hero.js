@@ -309,6 +309,8 @@
     [searchInput, familyFilter, applicationFilter, systemFilter].forEach(control => control?.addEventListener(control === searchInput ? 'input' : 'change', filterCatalog));
     clearSearch?.addEventListener('click', () => { searchInput.value = ''; searchInput.focus(); filterCatalog(); });
     document.querySelector('#catalog-known-product')?.addEventListener('click', () => {
+      const disclosure = document.querySelector('#catalog-tools-disclosure');
+      if (disclosure) disclosure.open = true;
       document.querySelector('#catalog-tools')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
       setTimeout(() => searchInput?.focus({ preventScroll: true }), 450);
     });

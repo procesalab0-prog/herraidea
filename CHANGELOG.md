@@ -1,5 +1,11 @@
 # Historial de versiones — Herraidea
 
+## 1.28.1 — 2026-09-14
+
+- El buscador y sus filtros dejan de ocupar espacio permanentemente y ahora se despliegan desde una acción compacta “Buscar una pieza”.
+- El recorrido “Ya conozco mi pieza o código” abre automáticamente el panel y coloca el cursor en la búsqueda.
+- El control usa un indicador dibujado con CSS y conserva interacción accesible mediante teclado en computadora y teléfono.
+
 ## 1.28.0 — 2026-09-14
 
 - Comienza la siguiente entrega de la Fase 2 sin sustituir ninguna imagen pendiente de recibir.

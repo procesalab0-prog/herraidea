@@ -28,7 +28,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Archivo+Narrow:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=1-28-0">
+  <link rel="stylesheet" href="/styles.css?v=1-28-1">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -229,13 +229,16 @@
         <a href="#asesoria"><small>No necesito conocer las piezas</small><strong>Quiero diseñar una solución</strong><span aria-hidden="true">→</span></a>
         <button type="button" id="catalog-known-product"><small>Tengo un nombre o código HRD</small><strong>Ya conozco mi pieza o código</strong><span aria-hidden="true">↓</span></button>
       </div>
-      <div class="catalog-tools" id="catalog-tools">
-        <label class="catalog-search" for="catalog-search"><span>Buscar en 81 fichas</span><span class="catalog-search-field"><input id="catalog-search" type="search" placeholder="Ej. HRD 1525, pipeta o poste" autocomplete="off"><button type="button" id="catalog-search-clear" aria-label="Limpiar búsqueda" hidden>×</button></span></label>
-        <label><span>Familia</span><select id="catalog-family-filter"><option value="all">Todas</option><option value="pipetas">Pipetas</option><option value="postes">Postes</option><option value="conectores">Conectores</option><option value="jaladeras">Jaladeras</option></select></label>
-        <label><span>Aplicación</span><select id="catalog-application-filter"><option value="all">Todas</option><option value="barandal">Barandales y pasamanos</option><option value="vidrio-muro">Vidrio a muro</option><option value="vidrio-vidrio">Vidrio a vidrio</option><option value="puerta">Puertas de vidrio</option></select></label>
-        <label><span>Sistema</span><select id="catalog-system-filter"><option value="all">Todos</option><option value="clips">Postes con clips + vidrio</option><option value="tubo">Tubo de 1/2 pulgada</option><option value="cable">Cable de acero HRD 1616</option><option value="solera">Postes y brazos de solera</option></select></label>
-        <div class="catalog-tool-status" aria-live="polite"><strong id="catalog-result-count">81</strong><span>resultados</span></div>
-      </div>
+      <details class="catalog-tools-disclosure" id="catalog-tools-disclosure">
+        <summary><span><small>Buscador y filtros</small><strong>Buscar una pieza</strong></span><i aria-hidden="true"></i></summary>
+        <div class="catalog-tools" id="catalog-tools">
+          <label class="catalog-search" for="catalog-search"><span>Buscar en 81 fichas</span><span class="catalog-search-field"><input id="catalog-search" type="search" placeholder="Ej. HRD 1525, pipeta o poste" autocomplete="off"><button type="button" id="catalog-search-clear" aria-label="Limpiar búsqueda" hidden>×</button></span></label>
+          <label><span>Familia</span><select id="catalog-family-filter"><option value="all">Todas</option><option value="pipetas">Pipetas</option><option value="postes">Postes</option><option value="conectores">Conectores</option><option value="jaladeras">Jaladeras</option></select></label>
+          <label><span>Aplicación</span><select id="catalog-application-filter"><option value="all">Todas</option><option value="barandal">Barandales y pasamanos</option><option value="vidrio-muro">Vidrio a muro</option><option value="vidrio-vidrio">Vidrio a vidrio</option><option value="puerta">Puertas de vidrio</option></select></label>
+          <label><span>Sistema</span><select id="catalog-system-filter"><option value="all">Todos</option><option value="clips">Postes con clips + vidrio</option><option value="tubo">Tubo de 1/2 pulgada</option><option value="cable">Cable de acero HRD 1616</option><option value="solera">Postes y brazos de solera</option></select></label>
+          <div class="catalog-tool-status" aria-live="polite"><strong id="catalog-result-count">81</strong><span>resultados</span></div>
+        </div>
+      </details>
       <nav class="catalog-shortcuts" aria-label="Accesos rápidos por familia"><button type="button" data-open-family="pipetas"><img src="/assets/catalog/pictograms/pipetas.png?v=1211" alt="">Pipetas</button><button type="button" data-open-family="postes"><img src="/assets/catalog/pictograms/postes.png?v=1211" alt="">Postes</button><button type="button" data-open-family="conectores"><img src="/assets/catalog/pictograms/conectores.png?v=1211" alt="">Conectores</button><button type="button" data-open-family="jaladeras"><img src="/assets/catalog/pictograms/jaladeras.png?v=1211" alt="">Jaladeras</button></nav>
       <div id="catalog-families" class="catalog-families"><p>Cargando catálogo…</p></div>
       <div class="catalog-empty" id="catalog-empty" hidden><strong>No encontramos esa pieza.</strong><p>Prueba otro código o cuéntanos qué necesitas para ayudarte a identificarla.</p><a href="#contacto" class="text-link">Pedir ayuda <span>→</span></a></div>
@@ -311,11 +314,11 @@
 
   <dialog class="credits-dialog" id="credits-dialog" aria-labelledby="credits-title">
     <button class="credits-close" type="button" aria-label="Cerrar créditos">×</button>
-    <div class="credits-hero"><span class="credits-kicker">Seis toques desbloquearon</span><img class="procesalab-logo" src="/assets/brand/procesalab-horizontal.png" alt="Creado por ProcesaLab"><p>Diseño, desarrollo y evolución digital.</p><span class="current-version">Herraidea · v<span id="credits-version">1.28.0</span></span></div>
+    <div class="credits-hero"><span class="credits-kicker">Seis toques desbloquearon</span><img class="procesalab-logo" src="/assets/brand/procesalab-horizontal.png" alt="Creado por ProcesaLab"><p>Diseño, desarrollo y evolución digital.</p><span class="current-version">Herraidea · v<span id="credits-version">1.28.1</span></span></div>
     <div class="credits-content"><h2 id="credits-title">Construido versión a versión.</h2><p>Cada actualización queda documentada para que el proyecto conserve contexto, decisiones y continuidad.</p><div class="version-list" id="version-list"></div></div>
   </dialog>
 
   <footer><div class="section-inner"><a class="footer-brand" href="#inicio" aria-label="Herraidea, volver al inicio"><img src="/assets/logo-light-nodot.png" alt="Herraidea"><i aria-hidden="true"></i></a><nav><a href="#asesoria">Asesoría</a><a href="#catalogo">Catálogo</a><a href="#recursos">Recursos</a><a href="#nosotros">Nosotros</a><a href="#envios">Envíos</a><a href="#contacto">Contacto</a></nav><span>León, Gto. · Desde 2013</span></div></footer>
-  <script src="/hrd-map.js?v=1-10"></script><script src="/hero.js?v=1-28-0"></script><script src="/project-cover.js?v=1-25-0"></script><script type="module" src="/project-3d-v2.js?v=1-27-0"></script><script type="module" src="/calculator-3d.js?v=1-27-0"></script>
+  <script src="/hrd-map.js?v=1-10"></script><script src="/hero.js?v=1-28-1"></script><script src="/project-cover.js?v=1-25-0"></script><script type="module" src="/project-3d-v2.js?v=1-27-0"></script><script type="module" src="/calculator-3d.js?v=1-27-0"></script>
 </body>
 </html>
