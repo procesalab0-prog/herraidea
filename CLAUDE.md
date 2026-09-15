@@ -1,6 +1,6 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.28.2**
+Versión actual: **1.29.0**
 
 El dominio oficial `www.herraidea.com` sirve la web desde Vercel y `herraidea.com` redirige de forma segura a esa dirección. Las referencias canónicas, la tarjeta social, los datos estructurados y el catálogo descargable usan el dominio oficial. Los registros de correo preexistentes se conservaron al migrar los servidores DNS desde Jimdo a Vercel.
 
@@ -25,9 +25,9 @@ Landing estática para Herraidea, enfocada en barandales, soluciones y fabricaci
 - `assets/hero-barandal-v2-day.png` y `assets/hero-barandal-v2-night.png`: escenas vigentes del hero, fieles al sistema de postes, clips y cristal.
 - `assets/brand/herraidea-social-v2.png`: tarjeta social vigente para WhatsApp y redes, alineada con el nuevo hero y el mensaje principal.
 - `output/pdf/catalogo-herraidea-2026-adelanto.pdf`: catálogo descargable vigente; se genera desde las mismas imágenes y datos que utiliza la web.
-- `output/pdf/fichas/hrd-1101.pdf`: primera ficha PDF individual de la Fase 2, utilizada como plantilla visual antes de producir el resto.
-- `scripts/generate_product_sheet.py`: generador de fichas individuales a partir de `details.json`, la fotografía del producto y la vista o plano técnico disponible.
-- `.github/workflows/catalog-pdf.yml`: regenera y publica el PDF al cambiar su generador, los datos del catálogo o sus imágenes, manteniendo la descarga sincronizada.
+- `output/pdf/fichas/`: 81 fichas PDF individuales, una por modelo, generadas sin precios desde la fotografía y la vista o plano técnico disponible.
+- `scripts/generate_product_sheet.py`: generador individual o por lote de fichas a partir de `details.json`, la fotografía del producto y la vista o plano técnico disponible.
+- `.github/workflows/catalog-pdf.yml`: regenera y publica el catálogo general y las 81 fichas PDF al cambiar sus generadores, los datos o las imágenes, manteniendo todas las descargas sincronizadas.
 - `assets/hero-barandal.png` y `assets/hero-night.png`: pareja anterior del hero, reutilizada en la composición animada de “Nuestra evolución”.
 - `assets/projects/futbolito/`: modelo GLB y portada de estudio del Futbolito Herraidea.
 - `assets/projects/clip-system/`: modelo GLB y portada de estudio de la solución de postes con clips y vidrio.

@@ -21,3 +21,7 @@ Para evitar duplicados ambiguos, los dos registros genéricos se sustituyeron po
 ## Regla de publicación
 
 Las tres páginas originales se conservan en `content/source-documents/catalogo-postes-2026/` para trazabilidad interna y `.vercelignore` las excluye del despliegue. La web pública muestra código, nombre, descripción, configuración e imagen individual con el mismo formato del catálogo existente. **No se publican precios** ni se incorporan al archivo de datos consumido por la web.
+
+## Referencia aprobada para las imágenes pendientes
+
+Para producir las siguientes imágenes de los postes **HRD 1221 en adelante**, se utilizarán como referencia constructiva y de proporciones los postes **HRD 1716 en adelante**, sustituyendo el perfil cuadrado por **tubo circular**. Esta equivalencia guía únicamente la presentación visual: cada herraje, brazo, orientación y punto de unión deberá contrastarse con la pieza o modelo correspondiente antes de sustituir una imagen en la web y en el catálogo PDF.

@@ -5,8 +5,10 @@ on:
     branches: [main]
     paths:
       - scripts/generate_catalog_2026.py
+      - scripts/generate_product_sheet.py
       - content/catalog/details.json
       - content/catalog/images/**
+      - assets/logo-gray-nodot.png
 
 permissions:
   contents: write
@@ -22,14 +24,16 @@ jobs:
       - name: Instalar generador
         run: python -m pip install --disable-pip-version-check pillow reportlab
       - name: Generar catalogo
-        run: python scripts/generate_catalog_2026.py
+        run: |
+          python scripts/generate_catalog_2026.py
+          python scripts/generate_product_sheet.py --all
       - name: Guardar catalogo actualizado
         run: |
-          if git diff --quiet -- output/pdf/catalogo-herraidea-2026-adelanto.pdf; then
+          if git diff --quiet -- output/pdf/catalogo-herraidea-2026-adelanto.pdf output/pdf/fichas && [ -z "$(git ls-files --others --exclude-standard output/pdf/fichas)" ]; then
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add output/pdf/catalogo-herraidea-2026-adelanto.pdf
+          git add output/pdf/catalogo-herraidea-2026-adelanto.pdf output/pdf/fichas
           git commit -m "Regenerate catalog PDF"
           git push

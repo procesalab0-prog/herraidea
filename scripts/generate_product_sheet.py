@@ -3,9 +3,10 @@
 
 from __future__ import annotations
 
+import argparse
+import html
 import json
 import re
-import sys
 from io import BytesIO
 from pathlib import Path
 
@@ -75,12 +76,7 @@ def choose_technical_image(product: dict) -> Path | None:
     return (pngs or existing)[-1]
 
 
-def generate(code: str) -> Path:
-    products = json.loads(DATA.read_text(encoding="utf-8"))
-    product = next((item for item in products if item.get("code", "").lower() == code.lower()), None)
-    if not product:
-        raise SystemExit(f"Producto no encontrado: {code}")
-
+def generate(product: dict) -> Path:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     output = OUTPUT_DIR / f"{slug(product['code'])}.pdf"
     c = canvas.Canvas(str(output), pagesize=letter, pageCompression=1)
@@ -106,8 +102,9 @@ def generate(code: str) -> Path:
     c.setFillColor(RED)
     c.setFont("Helvetica-Bold", 11)
     c.drawString(38, H - 112, product["code"].upper())
-    title_style = ParagraphStyle("title", fontName="Helvetica-Bold", fontSize=31, leading=31, textColor=INK)
-    paragraph(c, product["name"], title_style, 38, H - 132, W - 76, 72)
+    title_size = 24 if len(product["name"]) > 32 else 31
+    title_style = ParagraphStyle("title", fontName="Helvetica-Bold", fontSize=title_size, leading=title_size + 1, textColor=INK)
+    paragraph(c, html.escape(product["name"]), title_style, 38, H - 132, W - 76, 58)
 
     image_y = 305
     image_h = 300
@@ -132,22 +129,30 @@ def generate(code: str) -> Path:
     c.roundRect(38, 92, W - 76, 190, 14, fill=1, stroke=0)
     c.setFillColor(RED)
     c.rect(38, 260, 72, 4, fill=1, stroke=0)
-    c.setFillColor(INK)
-    c.setFont("Helvetica-Bold", 15)
-    c.drawString(56, 234, product.get("description", "Información técnica"))
+    description = product.get("description", "Información técnica")
+    description_size = 13 if len(description) > 70 else 15
+    description_style = ParagraphStyle(
+        "description",
+        fontName="Helvetica-Bold",
+        fontSize=description_size,
+        leading=description_size + 2,
+        textColor=INK,
+    )
+    paragraph(c, html.escape(description), description_style, 56, 246, W - 112, 42)
 
     specs = []
     for item in product.get("specifications", []):
         if item not in specs and "verificar" not in item.lower() and "acotaciones" not in item.lower():
             specs.append(item)
-    y = 205
+    y = 190 if len(description) > 70 else 205
+    step = min(25, (y - 105) / max(1, len(specs) - 1))
     for item in specs:
         c.setFillColor(RED)
         c.circle(59, y + 3, 3, fill=1, stroke=0)
         c.setFillColor(INK)
         c.setFont("Helvetica", 10)
         c.drawString(72, y, item)
-        y -= 25
+        y -= step
 
     c.setStrokeColor(LINE)
     c.line(38, 68, W - 38, 68)
@@ -157,12 +162,30 @@ def generate(code: str) -> Path:
     c.setFont("Helvetica-Bold", 7)
     c.drawString(38, 31, "WWW.HERRAIDEA.COM")
     c.drawCentredString(W / 2, 31, "Creado por ProcesaLab")
-    c.drawRightString(W - 38, 31, "SIN PRECIOS")
     c.showPage()
     c.save()
     return output
 
 
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument("--all", action="store_true", help="Generar una ficha para cada producto")
+    group.add_argument("--code", help="Generar únicamente el código indicado")
+    args = parser.parse_args()
+
+    products = json.loads(DATA.read_text(encoding="utf-8"))
+    if args.all:
+        selected = products
+    else:
+        requested_code = args.code or "HRD 1101"
+        selected = [item for item in products if item.get("code", "").lower() == requested_code.lower()]
+        if not selected:
+            raise SystemExit(f"Producto no encontrado: {requested_code}")
+
+    outputs = [generate(product) for product in selected]
+    print(f"{len(outputs)} ficha(s) generada(s) en {OUTPUT_DIR}")
+
+
 if __name__ == "__main__":
-    requested_code = " ".join(sys.argv[1:]).strip() or "HRD 1101"
-    print(generate(requested_code))
+    main()

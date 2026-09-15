@@ -1,5 +1,13 @@
 # Historial de versiones — Herraidea
 
+## 1.29.0 — 2026-09-14
+
+- La ficha PDF aprobada deja de ser exclusiva del HRD 1101 y se genera para los 81 modelos del catálogo.
+- Cada ficha web ofrece ahora su descarga individual con fotografía, plano o vista técnica disponible y especificaciones, conservando el mismo diseño aprobado.
+- Se elimina la leyenda “SIN PRECIOS” del pie de las fichas sin incorporar importes en ninguna parte del documento.
+- La automatización mantiene sincronizadas las 81 fichas individuales cuando cambian los datos o las imágenes del catálogo.
+- Para las imágenes pendientes de HRD 1221 en adelante se documenta el uso de los HRD 1716 en adelante como referencia constructiva, sustituyendo el perfil cuadrado por tubo circular y validando cada herraje antes de publicar.
+
 ## 1.28.2 — 2026-09-14
 
 - Las imágenes de la familia Postes adoptan el mismo encuadre completo y proporción visual de Pipetas, Conectores y Jaladeras.

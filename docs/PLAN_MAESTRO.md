@@ -326,6 +326,8 @@ Tanto Gemini como OpenAI ofrecen edición de imágenes a partir de fotografías.
 
 Como parte de la profesionalización visual, las imágenes incorporadas provisionalmente desde catálogos deberán regenerarse o retocarse en una fase posterior hasta igualar el estilo limpio de las primeras fichas: encuadre consistente, fondo de estudio, escala comparable, sombra suave y acero fiel. Cada resultado se aprobará contra la fotografía y el modelo real antes de sustituir el recorte temporal; no se publicarán alteraciones de geometría ni componentes inventados.
 
+Para la siguiente serie de imágenes de Postes queda aprobada una referencia adicional: los HRD 1221 en adelante tomarán la construcción visual de los HRD 1716 en adelante, pero con tubo circular en lugar del perfil cuadrado. La referencia no autoriza a inventar herrajes; cada variante se revisará antes de publicarse y, al aprobarse, la misma imagen alimentará la web, el catálogo general y su ficha PDF individual.
+
 Primera tanda publicada el 12 de septiembre de 2026: 13 configuraciones aprobadas, desde las variantes HRD 1518 de 3 y 4 pines hasta HRD 1520 intermedio. La normalización se detiene antes de HRD 1220; esa pieza y las restantes continúan pendientes de revisión y aprobación individual.
 
 El catálogo PDF 2026 y el catálogo de la web compartirán la misma fuente de datos e imágenes. Cada fotografía aprobada se sustituirá primero en `content/catalog/images/` o en la carpeta correspondiente de soluciones; después se regenerará el PDF. De esta forma, la actualización visual de la web y del catálogo descargable avanzará como un solo proceso y no como dos inventarios separados.

@@ -163,7 +163,6 @@
     solera: 'Postes y brazos de solera'
   };
   const systemProjectIds = { clips: 'clips', tubo: 'hrd1518', cable: 'hrd1616' };
-  const productPdfFiles = { 'HRD 1101': '/output/pdf/fichas/hrd-1101.pdf' };
   const productSlug = code => String(code).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
   const openProduct = product => {
     if (!product || !productDialog) return;
@@ -188,8 +187,8 @@
     const message = encodeURIComponent(`Hola Herraidea, me interesa cotizar ${product.code} — ${product.name}.`);
     document.querySelector('#dialog-whatsapp').href = `https://wa.me/524772561695?text=${message}`;
     const pdfLink = document.querySelector('#dialog-pdf');
-    const pdfFile = productPdfFiles[product.code];
-    if (pdfLink) { pdfLink.hidden = !pdfFile; pdfLink.href = pdfFile || ''; }
+    const pdfFile = `/output/pdf/fichas/${productSlug(product.code)}.pdf`;
+    if (pdfLink) { pdfLink.hidden = false; pdfLink.href = pdfFile; }
     const url = new URL(location.href); url.searchParams.set('producto', productSlug(product.code));
     history.pushState({ product: product.code }, '', url);
     if (!productDialog.open) productDialog.showModal();

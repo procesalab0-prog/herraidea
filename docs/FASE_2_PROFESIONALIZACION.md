@@ -18,16 +18,15 @@ Inicio: 2026-09-09
 - Buscador instantáneo por nombre, código HRD, descripción y especificaciones disponible sobre las 81 fichas vigentes.
 - Filtros publicados por familia, aplicación y los sistemas que ya pueden identificarse con la información validada.
 - Primeras relaciones entre piezas del mismo sistema incorporadas a las fichas, con acceso a las soluciones 3D disponibles.
-- Plantilla piloto de ficha PDF individual publicada para HRD 1101 con fotografía, plano visual acotado y especificaciones disponibles.
+- Plantilla de ficha PDF individual aprobada y extendida a los 81 modelos con fotografía, plano o vista técnica disponible y especificaciones vigentes.
 
 ## 2. Siguientes bloques que pueden avanzarse
 
 - Adelanto editorial del catálogo 2026 creado y publicado: 27 páginas, tres soluciones completas y las 81 fichas disponibles, sin precios.
 - El PDF se genera con `content/catalog/details.json`, `content/catalog/images/` y las portadas de soluciones que también utiliza la web. Al aprobar una imagen nueva deberá sustituirse en esa fuente compartida y regenerarse el catálogo para mantener ambos formatos sincronizados.
 - Lista de información pendiente documentada en `docs/CATALOGO_2026_PENDIENTES.md`.
-- Estructura y plantilla de fichas técnicas descargables.
+- Fichas técnicas descargables generadas automáticamente para los 81 modelos, sin precios y enlazadas desde cada ficha web.
 - Ampliar el buscador y los filtros conforme se confirme la clasificación definitiva de todos los productos.
-- Aprobar la ficha PDF piloto HRD 1101 y producir el resto con la misma plantilla.
 - Completar la relación visual entre piezas de todos los sistemas.
 - Bloques “Compatible con” y “También necesitas”, publicados solamente con relaciones confirmadas.
 - Presentación más clara de la asesoría, la fabricación a la medida y el acompañamiento durante un proyecto.
