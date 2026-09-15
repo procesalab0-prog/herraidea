@@ -19,6 +19,7 @@ Inicio: 2026-09-09
 - Filtros publicados por familia, aplicación y los sistemas que ya pueden identificarse con la información validada.
 - Primeras relaciones entre piezas del mismo sistema incorporadas a las fichas, con acceso a las soluciones 3D disponibles.
 - Plantilla de ficha PDF individual aprobada y extendida a los 81 modelos con fotografía, plano o vista técnica disponible y especificaciones vigentes.
+- Página técnica estática publicada para cada uno de los 81 modelos, con URL propia, recursos disponibles, ficha PDF, cotización, metadatos y datos estructurados de producto.
 
 ## 2. Siguientes bloques que pueden avanzarse
 
@@ -31,7 +32,7 @@ Inicio: 2026-09-09
 - Bloques “Compatible con” y “También necesitas”, publicados solamente con relaciones confirmadas.
 - Presentación más clara de la asesoría, la fabricación a la medida y el acompañamiento durante un proyecto.
 - Dos recorridos de entrada al contenido técnico: “Quiero diseñar una solución” y “Ya conozco mi pieza o código”.
-- Página técnica por pieza con medidas, acabados, instalación, modelo 3D, descargas y componentes compatibles.
+- Completar progresivamente las páginas técnicas ya publicadas con instalación, modelos 3D y componentes compatibles conforme se autoricen esos recursos.
 - Páginas de sistemas completos que expliquen los postes, clips, tubos y accesorios necesarios.
 - Biblioteca progresiva con catálogo general, fichas individuales, modelos CAD, instructivos y videos autorizados.
 - Continuar la normalización visual con fotografías de mayor resolución, comenzando por las configuraciones de Postes y después el resto de las familias.

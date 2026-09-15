@@ -186,6 +186,8 @@
     } else if (systemSection) systemSection.hidden = true;
     const message = encodeURIComponent(`Hola Herraidea, me interesa cotizar ${product.code} — ${product.name}.`);
     document.querySelector('#dialog-whatsapp').href = `https://wa.me/524772561695?text=${message}`;
+    const pageLink = document.querySelector('#dialog-page');
+    if (pageLink) pageLink.href = `/productos/${productSlug(product.code)}`;
     const pdfLink = document.querySelector('#dialog-pdf');
     const pdfFile = `/output/pdf/fichas/${productSlug(product.code)}.pdf`;
     if (pdfLink) { pdfLink.hidden = false; pdfLink.href = pdfFile; }
@@ -203,7 +205,9 @@
   productDialog?.addEventListener('click', event => { if (event.target === productDialog) closeProduct(); });
   productDialog?.addEventListener('cancel', event => { event.preventDefault(); closeProduct(); });
   document.querySelector('#dialog-share')?.addEventListener('click', async event => {
-    try { await navigator.clipboard.writeText(location.href); event.currentTarget.textContent = 'Enlace copiado'; }
+    const product = catalogDetails.find(item => productSlug(item.code) === new URL(location.href).searchParams.get('producto'));
+    const shareUrl = product ? `${location.origin}/productos/${productSlug(product.code)}` : location.href;
+    try { await navigator.clipboard.writeText(shareUrl); event.currentTarget.textContent = 'Enlace copiado'; }
     catch { event.currentTarget.textContent = 'Copia la URL del navegador'; }
   });
   document.querySelector('#dialog-related-products')?.addEventListener('click', event => {
@@ -219,7 +223,7 @@
   });
   addEventListener('popstate', () => closeProduct(false));
 
-  fetch('/content/catalog/details.json?v=1-29-3').then(r => {
+  fetch('/content/catalog/details.json?v=1-30-0').then(r => {
     if (!r.ok) throw new Error('No se pudo cargar el catálogo');
     return r.json();
   }).then(products => {

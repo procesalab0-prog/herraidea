@@ -372,7 +372,7 @@ Herraidea confirmó cobertura actual en **México, Guatemala, Honduras y el sur 
 
 ### SEO
 
-Crear páginas independientes por aplicaciones, familias y productos cuando la arquitectura esté aprobada, con URLs descriptivas y contenido técnico útil.
+Las 81 páginas independientes de producto ya se generan desde el catálogo compartido, con URLs descriptivas, contenido técnico disponible, PDF, cotización y datos estructurados. Continúan pendientes las páginas independientes por aplicación y familia, así como la ampliación con instalación, CAD editable y compatibilidades confirmadas.
 
 ### Canal para distribuidores
 

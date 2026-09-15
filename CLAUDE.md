@@ -1,12 +1,14 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.29.3**
+Versión actual: **1.30.0**
 
 El dominio oficial `www.herraidea.com` sirve la web desde Vercel y `herraidea.com` redirige de forma segura a esa dirección. Las referencias canónicas, la tarjeta social, los datos estructurados y el catálogo descargable usan el dominio oficial. Los registros de correo preexistentes se conservaron al migrar los servidores DNS desde Jimdo a Vercel.
 
 Sitio de producción: `https://www.herraidea.com/`
 
 ## Estado actual
+
+Cada uno de los 81 modelos del catálogo cuenta con una página técnica estática y una URL descriptiva propia bajo `/productos/`. Las páginas reúnen fotografía principal, vistas técnicas disponibles, especificaciones, descarga de ficha PDF, cotización por WhatsApp, metadatos para buscadores y datos estructurados de producto. La ficha rápida del catálogo enlaza y comparte estas URLs. `sitemap.xml` incluye todas las piezas y `robots.txt` identifica el mapa del sitio.
 
 HRD 1221 intermedio muestra dos soleras continuas y planas con fijación central y base circular de tres agujeros, según el CAD y la corrección del usuario. Se retiran las vistas borrosas antiguas de HRD 1220, HRD 1221 y HRD 1223 de sus galerías; quedan la foto principal y el CAD HD.
 
@@ -35,6 +37,9 @@ Landing estática para Herraidea, enfocada en barandales, soluciones y fabricaci
 - `output/pdf/catalogo-herraidea-2026-adelanto.pdf`: catálogo descargable vigente; se genera desde las mismas imágenes y datos que utiliza la web.
 - `output/pdf/fichas/`: 81 fichas PDF individuales, una por modelo, generadas sin precios desde la fotografía y la vista o plano técnico disponible.
 - `scripts/generate_product_sheet.py`: generador individual o por lote de fichas a partir de `details.json`, la fotografía del producto y la vista o plano técnico disponible.
+- `scripts/generate_product_pages.py`: genera las 81 páginas técnicas estáticas y actualiza `sitemap.xml` desde la misma fuente del catálogo.
+- `product-page.css`: presentación adaptable de las páginas técnicas individuales.
+- `productos/`: páginas encontrables por código con fotografía, vistas técnicas, especificaciones, PDF y cotización.
 - `.github/workflows/catalog-pdf.yml`: regenera y publica el catálogo general y las 81 fichas PDF al cambiar sus generadores, los datos o las imágenes, manteniendo todas las descargas sincronizadas.
 - `assets/hero-barandal.png` y `assets/hero-night.png`: pareja anterior del hero, reutilizada en la composición animada de “Nuestra evolución”.
 - `assets/projects/futbolito/`: modelo GLB y portada de estudio del Futbolito Herraidea.

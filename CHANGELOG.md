@@ -1,5 +1,13 @@
 # Historial de versiones — Herraidea
 
+## 1.30.0 — 2026-09-15
+
+- Los 81 modelos del catálogo reciben una página técnica estática con URL descriptiva propia.
+- Cada página reúne fotografía principal, vistas técnicas disponibles, especificaciones, ficha PDF y cotización directa por WhatsApp.
+- Las fichas rápidas permiten abrir y copiar la nueva dirección permanente de cada producto.
+- Se incorporan metadatos sociales, datos estructurados de producto, `sitemap.xml` y `robots.txt` para facilitar el rastreo por buscadores.
+- La automatización del catálogo regenera también estas páginas cuando cambian sus datos o imágenes.
+
 ## 1.29.3 — 2026-09-15
 
 - HRD 1221 intermedio muestra dos soleras continuas y planas con fijación central y base circular de tres agujeros, según el CAD y la corrección del usuario. Se retiran las vistas borrosas antiguas de HRD 1220, HRD 1221 y HRD 1223 de sus galerías; quedan la foto principal y el CAD HD.
