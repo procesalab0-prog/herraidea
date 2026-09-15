@@ -11,7 +11,7 @@
     const query = normalize(search?.value).trim();
     let visible = 0;
     cards.forEach(card => {
-      const matchesGroup = activeGroup === 'all' || card.dataset.group === activeGroup;
+      const matchesGroup = activeGroup === 'all' || card.dataset.group.split(/\s+/).includes(activeGroup);
       const matchesSearch = !query || normalize(card.dataset.search).includes(query);
       card.hidden = !(matchesGroup && matchesSearch);
       if (!card.hidden) visible += 1;

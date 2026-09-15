@@ -45,7 +45,9 @@ def render(product: dict, family_items: list[dict]) -> str:
     primary = images[0]
     description = product.get("description", "")
     family_name = product.get("category", "")
-    family_crumb = f'<a href="/familias/postes"><b>{escape(family_name)}</b></a>' if family_name == "Postes" else f"<b>{escape(family_name)}</b>"
+    family_paths = {"Postes": "/familias/postes", "Pipetas": "/familias/pipetas"}
+    family_path = family_paths.get(family_name)
+    family_crumb = f'<a href="{family_path}"><b>{escape(family_name)}</b></a>' if family_path else f"<b>{escape(family_name)}</b>"
     meta_description = f"{code}: {description} Consulta imágenes, especificaciones y ficha PDF de Herraidea."
     whatsapp = quote(f"Hola Herraidea, me interesa cotizar {code} — {name}.")
     specs = "".join(f"<li>{escape(item)}</li>" for item in product.get("specifications", []))
@@ -153,7 +155,7 @@ def main() -> None:
         ]
         (OUTPUT / f"{slugify(product['code'])}.html").write_text(render(product, family), encoding="utf-8")
 
-    urls = [f"  <url><loc>{DOMAIN}/</loc></url>", f"  <url><loc>{DOMAIN}/familias/postes</loc></url>"]
+    urls = [f"  <url><loc>{DOMAIN}/</loc></url>", f"  <url><loc>{DOMAIN}/familias/pipetas</loc></url>", f"  <url><loc>{DOMAIN}/familias/postes</loc></url>"]
     urls.extend(f"  <url><loc>{DOMAIN}/productos/{slugify(product['code'])}</loc></url>" for product in products)
     (ROOT / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'

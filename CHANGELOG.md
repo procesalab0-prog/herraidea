@@ -1,5 +1,13 @@
 # Historial de versiones — Herraidea
 
+## 1.32.0 — 2026-09-15
+
+- La familia Pipetas estrena una página propia con sus 13 modelos y una URL descriptiva.
+- Cuatro accesos organizan la exploración por vidrio a muro, vidrio a vidrio, doble sujeción y opciones ajustables.
+- La búsqueda y los filtros permiten localizar pipetas por código, montaje, ajuste o tipo de cabeza.
+- El acceso rápido de Pipetas en el catálogo abre la nueva guía y sus fichas técnicas enlazan de regreso a la familia.
+- El sitemap y la automatización del catálogo incorporan la nueva página.
+
 ## 1.31.1 — 2026-09-15
 
 - El menú principal incorpora un acceso directo a la familia Postes, disponible también en la navegación móvil.
