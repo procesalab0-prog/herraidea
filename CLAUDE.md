@@ -1,12 +1,14 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.34.0**
+Versión actual: **1.35.0**
 
 El dominio oficial `www.herraidea.com` sirve la web desde Vercel y `herraidea.com` redirige de forma segura a esa dirección. Las referencias canónicas, la tarjeta social, los datos estructurados y el catálogo descargable usan el dominio oficial. Los registros de correo preexistentes se conservaron al migrar los servidores DNS desde Jimdo a Vercel.
 
 Sitio de producción: `https://www.herraidea.com/`
 
 ## Estado actual
+
+La página `/sistemas` reúne HRD 1525, HRD 1518 y HRD 1616 en una guía comparativa con acceso a sus experiencias 3D, la calculadora y las piezas disponibles. La línea de solera conduce al catálogo de Postes sin presentarse como un sistema completo validado. El menú principal y las cuatro páginas de familia enlazan esta nueva ruta.
 
 La familia Jaladeras cuenta con una página propia en `/familias/jaladeras`: compara sus dos modelos tipo H por diámetro, acabado y código, con búsqueda, fichas técnicas y cotización. El menú Familias y el acceso rápido del catálogo enlazan la nueva guía.
 
@@ -56,6 +58,7 @@ Landing estática para Herraidea, enfocada en barandales, soluciones y fabricaci
 - `familias/pipetas.html`: página de exploración de la familia Pipetas por montaje, ajuste, cabeza y código.
 - `familias/conectores.html`: página de exploración de la familia Conectores por aplicación, función y código.
 - `familias/jaladeras.html`: página comparativa de las jaladeras tipo H por diámetro y código.
+- `sistemas.html` y `systems-page.css`: guía central para comparar los sistemas HRD 1525, HRD 1518 y HRD 1616, y continuar a sus herramientas o productos.
 - `family-page.css` y `family-page.js`: presentación adaptable, búsqueda y filtros de la página de familia.
 - `scripts/generate_posts_family_page.py`, `scripts/generate_pipetas_family_page.py`, `scripts/generate_connectors_family_page.py` y `scripts/generate_handles_family_page.py`: generan las páginas públicas de las cuatro familias desde los datos vigentes del catálogo.
 - `.github/workflows/catalog-pdf.yml`: regenera y publica el catálogo general y las 81 fichas PDF al cambiar sus generadores, los datos o las imágenes, manteniendo todas las descargas sincronizadas.

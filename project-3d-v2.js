@@ -412,3 +412,15 @@ range?.addEventListener('input', () => {
 });
 
 bindViewer();
+
+const requestedProject = new URLSearchParams(location.search).get('proyecto');
+if (requestedProject && projects[requestedProject]) {
+  const requestedIndex = cards.findIndex(card => card.dataset.project === requestedProject);
+  if (requestedIndex >= 0) setSlide(requestedIndex, 'auto');
+  requestAnimationFrame(() => {
+    openProject(requestedProject);
+    const cleanUrl = new URL(location.href);
+    cleanUrl.searchParams.delete('proyecto');
+    history.replaceState({}, '', cleanUrl);
+  });
+}

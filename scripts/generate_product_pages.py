@@ -155,7 +155,7 @@ def main() -> None:
         ]
         (OUTPUT / f"{slugify(product['code'])}.html").write_text(render(product, family), encoding="utf-8")
 
-    urls = [f"  <url><loc>{DOMAIN}/</loc></url>", f"  <url><loc>{DOMAIN}/familias/pipetas</loc></url>", f"  <url><loc>{DOMAIN}/familias/postes</loc></url>", f"  <url><loc>{DOMAIN}/familias/conectores</loc></url>", f"  <url><loc>{DOMAIN}/familias/jaladeras</loc></url>"]
+    urls = [f"  <url><loc>{DOMAIN}/</loc></url>", f"  <url><loc>{DOMAIN}/sistemas</loc></url>", f"  <url><loc>{DOMAIN}/familias/pipetas</loc></url>", f"  <url><loc>{DOMAIN}/familias/postes</loc></url>", f"  <url><loc>{DOMAIN}/familias/conectores</loc></url>", f"  <url><loc>{DOMAIN}/familias/jaladeras</loc></url>"]
     urls.extend(f"  <url><loc>{DOMAIN}/productos/{slugify(product['code'])}</loc></url>" for product in products)
     (ROOT / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'

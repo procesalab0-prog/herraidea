@@ -1,5 +1,12 @@
 # Historial de versiones — Herraidea
 
+## 1.35.0 — 2026-09-15
+
+- Nueva página central en `/sistemas` para comparar HRD 1525, HRD 1518 y HRD 1616 desde una sola ruta.
+- Cada sistema conecta con su experiencia 3D, calculadora y piezas disponibles, indicando que la selección final requiere revisión del proyecto.
+- La línea de brazos de solera se mantiene como exploración de catálogo hasta validar una solución completa.
+- El menú principal, las páginas de familias y el sitemap incorporan el nuevo acceso a Sistemas.
+
 ## 1.34.0 — 2026-09-15
 
 - La familia Jaladeras estrena una página propia para comparar sus dos modelos tipo H.
