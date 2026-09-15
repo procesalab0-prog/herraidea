@@ -1,7 +1,8 @@
 {
-  "current": "1.31.0",
+  "current": "1.31.1",
   "studio": "ProcesaLab",
   "versions": [
+    {"version":"1.31.1","date":"2026-09-15","title":"Postes visible desde el menú","summary":"El menú principal enlaza directamente la familia Postes en computadora y teléfono; su página recupera el punto rojo de la i en los logotipos."},
     {"version":"1.31.0","date":"2026-09-15","title":"Familia Postes por sistema","summary":"Una página propia organiza 37 postes por clips, tubo y pines, cable, solera y otros tipos; incluye búsqueda, filtros y enlaces a fichas, soluciones 3D, calculadora y asesoría."},
     {"version":"1.30.0","date":"2026-09-15","title":"Páginas técnicas por producto","summary":"Los 81 modelos reciben una URL descriptiva con fotografía, vistas técnicas, especificaciones, PDF y cotización. Las fichas rápidas comparten esa dirección y el sitemap incorpora todo el catálogo."},
     {"version":"1.29.3","date":"2026-09-15","title":"Solera continua y vistas técnicas limpias","summary":"HRD 1221 intermedio muestra dos soleras continuas y planas con fijación central y base circular de tres agujeros, según el CAD y la corrección del usuario. Se retiran las vistas borrosas antiguas de HRD 1220, HRD 1221 y HRD 1223 de sus galerías; quedan la foto principal y el CAD HD."},

@@ -558,3 +558,6 @@ herraidea-post-calculator-3d canvas{display:block;width:100%;height:100%}
 .project-cover-video.is-ready{opacity:1}
 .project-card-hrd1616 .project-card-photo:after{z-index:1}
 @media(prefers-reduced-motion:reduce){.project-cover-video{display:none}}
+
+/* v1.31.1 · acceso directo a Postes en el menú principal */
+@media(min-width:901px) and (max-width:1180px){.main-nav{gap:14px;font-size:12px}.nav-contact{padding-inline:15px}}

@@ -1,5 +1,10 @@
 # Historial de versiones — Herraidea
 
+## 1.31.1 — 2026-09-15
+
+- El menú principal incorpora un acceso directo a la familia Postes, disponible también en la navegación móvil.
+- El logotipo de la página de Postes recupera el punto rojo de la letra i en el encabezado y el pie.
+
 ## 1.31.0 — 2026-09-15
 
 - La familia Postes estrena una página propia con 37 modelos y una URL descriptiva.

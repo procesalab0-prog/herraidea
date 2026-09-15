@@ -1,12 +1,14 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.31.0**
+Versión actual: **1.31.1**
 
 El dominio oficial `www.herraidea.com` sirve la web desde Vercel y `herraidea.com` redirige de forma segura a esa dirección. Las referencias canónicas, la tarjeta social, los datos estructurados y el catálogo descargable usan el dominio oficial. Los registros de correo preexistentes se conservaron al migrar los servidores DNS desde Jimdo a Vercel.
 
 Sitio de producción: `https://www.herraidea.com/`
 
 ## Estado actual
+
+El menú principal incluye un acceso directo a la familia Postes en computadora y teléfono. La página de Postes muestra el punto rojo de la letra i en los logotipos del encabezado y del pie.
 
 La familia Postes cuenta con una página propia en `/familias/postes`: presenta cuatro sistemas como puntos de partida, búsqueda por código o nombre, filtros por tipo y acceso a las 37 fichas técnicas. Enlaza las soluciones 3D, la calculadora y la asesoría sin declarar compatibilidades que aún no hayan sido confirmadas. El acceso rápido de Postes en el catálogo abre esta página y las fichas individuales permiten regresar a ella.
 
