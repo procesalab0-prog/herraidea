@@ -1,6 +1,6 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.32.0**
+Versión actual: **1.33.0**
 
 El dominio oficial `www.herraidea.com` sirve la web desde Vercel y `herraidea.com` redirige de forma segura a esa dirección. Las referencias canónicas, la tarjeta social, los datos estructurados y el catálogo descargable usan el dominio oficial. Los registros de correo preexistentes se conservaron al migrar los servidores DNS desde Jimdo a Vercel.
 
@@ -8,9 +8,13 @@ Sitio de producción: `https://www.herraidea.com/`
 
 ## Estado actual
 
+El menú principal agrupa Pipetas, Postes y Conectores dentro de “Familias” en computadora y teléfono, evitando saturar la barra superior.
+
+La familia Conectores cuenta con una página propia en `/familias/conectores`: reúne sus 29 modelos, cuatro puntos de partida por aplicación, búsqueda y filtros para vidrio, tubo, pasamanos y puertas. El acceso rápido de Conectores abre esta guía y sus fichas técnicas enlazan de regreso a ella.
+
 La familia Pipetas cuenta con una página propia en `/familias/pipetas`: reúne sus 13 modelos, cuatro puntos de partida por función, búsqueda y filtros por montaje, ajuste y tipo de cabeza. El acceso rápido de Pipetas en el catálogo abre esta guía y sus fichas técnicas enlazan de regreso a ella.
 
-El menú principal incluye un acceso directo a la familia Postes en computadora y teléfono. La página de Postes muestra el punto rojo de la letra i en los logotipos del encabezado y del pie.
+La página de Postes muestra el punto rojo de la letra i en los logotipos del encabezado y del pie.
 
 La familia Postes cuenta con una página propia en `/familias/postes`: presenta cuatro sistemas como puntos de partida, búsqueda por código o nombre, filtros por tipo y acceso a las 37 fichas técnicas. Enlaza las soluciones 3D, la calculadora y la asesoría sin declarar compatibilidades que aún no hayan sido confirmadas. El acceso rápido de Postes en el catálogo abre esta página y las fichas individuales permiten regresar a ella.
 
@@ -48,8 +52,9 @@ Landing estática para Herraidea, enfocada en barandales, soluciones y fabricaci
 - `productos/`: páginas encontrables por código con fotografía, vistas técnicas, especificaciones, PDF y cotización.
 - `familias/postes.html`: página de exploración de la familia Postes por sistema, función y código.
 - `familias/pipetas.html`: página de exploración de la familia Pipetas por montaje, ajuste, cabeza y código.
+- `familias/conectores.html`: página de exploración de la familia Conectores por aplicación, función y código.
 - `family-page.css` y `family-page.js`: presentación adaptable, búsqueda y filtros de la página de familia.
-- `scripts/generate_posts_family_page.py` y `scripts/generate_pipetas_family_page.py`: generan las páginas públicas de ambas familias desde los datos vigentes del catálogo.
+- `scripts/generate_posts_family_page.py`, `scripts/generate_pipetas_family_page.py` y `scripts/generate_connectors_family_page.py`: generan las páginas públicas de las tres familias desde los datos vigentes del catálogo.
 - `.github/workflows/catalog-pdf.yml`: regenera y publica el catálogo general y las 81 fichas PDF al cambiar sus generadores, los datos o las imágenes, manteniendo todas las descargas sincronizadas.
 - `assets/hero-barandal.png` y `assets/hero-night.png`: pareja anterior del hero, reutilizada en la composición animada de “Nuestra evolución”.
 - `assets/projects/futbolito/`: modelo GLB y portada de estudio del Futbolito Herraidea.

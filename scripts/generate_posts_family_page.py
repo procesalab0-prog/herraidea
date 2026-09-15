@@ -94,7 +94,7 @@ def main() -> None:
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Archivo+Narrow:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/family-page.css?v=1-32-0">
+  <link rel="stylesheet" href="/family-page.css?v=1-33-0">
   <script type="application/ld+json">{schema}</script>
 </head>
 <body>
@@ -135,7 +135,7 @@ def main() -> None:
     <section class="family-cta"><div><span class="eyebrow">Fabricación a la medida</span><h2>¿Tu proyecto necesita otra configuración?</h2><p>Comparte medidas, fotografías, dibujos o una muestra. Herraidea puede revisar contigo el sistema y desarrollar piezas especiales.</p></div><a class="primary-action" href="https://wa.me/524772561695?text={whatsapp}" target="_blank" rel="noopener">Hablar con un asesor <span>→</span></a></section>
   </main>
   <footer><a class="family-footer-brand" href="/"><img src="/assets/logo-light-nodot.png" alt="Herraidea"><i aria-hidden="true"></i></a><nav><a href="/#catalogo">Catálogo completo</a><a href="/#recursos">Recursos</a><a href="/#contacto">Contacto</a></nav><small>Creado por ProcesaLab</small></footer>
-  <script src="/family-page.js?v=1-32-0"></script>
+  <script src="/family-page.js?v=1-33-0"></script>
 </body>
 </html>
 """,

@@ -1,5 +1,13 @@
 # Historial de versiones — Herraidea
 
+## 1.33.0 — 2026-09-15
+
+- La familia Conectores estrena una página propia con sus 29 modelos y una URL descriptiva.
+- Cuatro accesos organizan la exploración por vidrio a muro, tubo de 2 pulgadas, pasamanos y puertas de vidrio.
+- La búsqueda y los filtros permiten localizar conectores por código, aplicación o función.
+- El menú principal agrupa Pipetas, Postes y Conectores dentro de “Familias” en computadora y teléfono.
+- Las fichas de Conectores enlazan de regreso a su familia y el sitemap incorpora la nueva página.
+
 ## 1.32.0 — 2026-09-15
 
 - La familia Pipetas estrena una página propia con sus 13 modelos y una URL descriptiva.
