@@ -1,5 +1,9 @@
 # Historial de versiones — Herraidea
 
+## 1.29.3 — 2026-09-15
+
+- HRD 1221 intermedio muestra dos soleras continuas y planas con fijación central y base circular de tres agujeros, según el CAD y la corrección del usuario. Se retiran las vistas borrosas antiguas de HRD 1220, HRD 1221 y HRD 1223 de sus galerías; quedan la foto principal y el CAD HD.
+
 ## 1.29.2 — 2026-09-15
 
 - HRD 1221 inicio/final usa dos brazos planos de solera en un lado y HRD 1221 intermedio usa cuatro brazos planos opuestos a 180 grados, según su CAD. Se conservan las vistas técnicas y HRD 1223 mantiene sus brazos ajustables.

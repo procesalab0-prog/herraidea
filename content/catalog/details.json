@@ -1168,7 +1168,6 @@
     ],
     "detailImages": [
       "/content/catalog/images/postes-hrd-1220-estudio-v1.jpg",
-      "/content/catalog/images/postes-hrd-1220.jpg",
       "/content/catalog/technical/hrd-1220-catalogo-hd.jpg"
     ],
     "originalText": [
@@ -1191,7 +1190,6 @@
     ],
     "detailImages": [
       "/content/catalog/images/postes-hrd-1221-dos-brazos-estudio-v1.jpg",
-      "/content/catalog/images/postes-hrd-1221-inicio-final.jpg",
       "/content/catalog/technical/hrd-1221-catalogo-hd.jpg"
     ],
     "originalText": [
@@ -1204,7 +1202,7 @@
     "category": "Postes",
     "code": "HRD 1221 INTERMEDIO",
     "name": "Poste con 4 brazos de solera",
-    "image": "images/postes-hrd-1221-cuatro-brazos-estudio-v1.jpg",
+    "image": "images/postes-hrd-1221-solera-continua-v2.jpg",
     "source": "Catálogo de postes recibido el 8 de septiembre de 2026",
     "sourcePage": "/content/source-documents/catalogo-postes-2026/pagina-03.jpeg",
     "description": "Poste de 2 pulgadas x 86.50 cm con 4 brazos de solera, vela y embellecedor.",
@@ -1213,8 +1211,7 @@
       "4 brazos de solera, vela y embellecedor"
     ],
     "detailImages": [
-      "/content/catalog/images/postes-hrd-1221-cuatro-brazos-estudio-v1.jpg",
-      "/content/catalog/images/postes-hrd-1221-intermedio.jpg",
+      "/content/catalog/images/postes-hrd-1221-solera-continua-v2.jpg",
       "/content/catalog/technical/hrd-1221-catalogo-hd.jpg"
     ],
     "originalText": [
@@ -1237,7 +1234,6 @@
     ],
     "detailImages": [
       "/content/catalog/images/postes-hrd-1221-1223-estudio-v6.jpg",
-      "/content/catalog/images/postes-hrd-1223-inicio.jpg",
       "/content/catalog/technical/hrd-1223-catalogo-hd.jpg"
     ],
     "originalText": [
