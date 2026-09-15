@@ -1,12 +1,14 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.30.0**
+Versión actual: **1.31.0**
 
 El dominio oficial `www.herraidea.com` sirve la web desde Vercel y `herraidea.com` redirige de forma segura a esa dirección. Las referencias canónicas, la tarjeta social, los datos estructurados y el catálogo descargable usan el dominio oficial. Los registros de correo preexistentes se conservaron al migrar los servidores DNS desde Jimdo a Vercel.
 
 Sitio de producción: `https://www.herraidea.com/`
 
 ## Estado actual
+
+La familia Postes cuenta con una página propia en `/familias/postes`: presenta cuatro sistemas como puntos de partida, búsqueda por código o nombre, filtros por tipo y acceso a las 37 fichas técnicas. Enlaza las soluciones 3D, la calculadora y la asesoría sin declarar compatibilidades que aún no hayan sido confirmadas. El acceso rápido de Postes en el catálogo abre esta página y las fichas individuales permiten regresar a ella.
 
 Cada uno de los 81 modelos del catálogo cuenta con una página técnica estática y una URL descriptiva propia bajo `/productos/`. Las páginas reúnen fotografía principal, vistas técnicas disponibles, especificaciones, descarga de ficha PDF, cotización por WhatsApp, metadatos para buscadores y datos estructurados de producto. La ficha rápida del catálogo enlaza y comparte estas URLs. `sitemap.xml` incluye todas las piezas y `robots.txt` identifica el mapa del sitio.
 
@@ -40,6 +42,8 @@ Landing estática para Herraidea, enfocada en barandales, soluciones y fabricaci
 - `scripts/generate_product_pages.py`: genera las 81 páginas técnicas estáticas y actualiza `sitemap.xml` desde la misma fuente del catálogo.
 - `product-page.css`: presentación adaptable de las páginas técnicas individuales.
 - `productos/`: páginas encontrables por código con fotografía, vistas técnicas, especificaciones, PDF y cotización.
+- `familias/postes.html`: página de exploración de la familia Postes por sistema, función y código.
+- `family-page.css` y `family-page.js`: presentación adaptable, búsqueda y filtros de la página de familia.
 - `.github/workflows/catalog-pdf.yml`: regenera y publica el catálogo general y las 81 fichas PDF al cambiar sus generadores, los datos o las imágenes, manteniendo todas las descargas sincronizadas.
 - `assets/hero-barandal.png` y `assets/hero-night.png`: pareja anterior del hero, reutilizada en la composición animada de “Nuestra evolución”.
 - `assets/projects/futbolito/`: modelo GLB y portada de estudio del Futbolito Herraidea.

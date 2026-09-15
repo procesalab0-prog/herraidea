@@ -372,7 +372,7 @@ Herraidea confirmó cobertura actual en **México, Guatemala, Honduras y el sur 
 
 ### SEO
 
-Las 81 páginas independientes de producto ya se generan desde el catálogo compartido, con URLs descriptivas, contenido técnico disponible, PDF, cotización y datos estructurados. Continúan pendientes las páginas independientes por aplicación y familia, así como la ampliación con instalación, CAD editable y compatibilidades confirmadas.
+Las 81 páginas independientes de producto ya se generan desde el catálogo compartido, con URLs descriptivas, contenido técnico disponible, PDF, cotización y datos estructurados. Postes estrena además una página de familia que organiza 37 modelos por sistema y función, con búsqueda, filtros y accesos a 3D y calculadora. Continúan pendientes las páginas de Pipetas, Conectores, Jaladeras y aplicaciones, así como la ampliación con instalación, CAD editable y compatibilidades confirmadas.
 
 ### Canal para distribuidores
 

@@ -7,11 +7,14 @@ on:
       - scripts/generate_catalog_2026.py
       - scripts/generate_product_sheet.py
       - scripts/generate_product_pages.py
+      - scripts/generate_posts_family_page.py
       - content/catalog/details.json
       - content/catalog/images/**
       - content/catalog/technical/**
       - assets/logo-gray-nodot.png
       - product-page.css
+      - family-page.css
+      - family-page.js
 
 permissions:
   contents: write
@@ -31,13 +34,14 @@ jobs:
           python scripts/generate_catalog_2026.py
           python scripts/generate_product_sheet.py --all
           python scripts/generate_product_pages.py
+          python scripts/generate_posts_family_page.py
       - name: Guardar catalogo actualizado
         run: |
-          if git diff --quiet -- output/pdf/catalogo-herraidea-2026-adelanto.pdf output/pdf/fichas productos sitemap.xml && [ -z "$(git ls-files --others --exclude-standard output/pdf/fichas productos sitemap.xml)" ]; then
+          if git diff --quiet -- output/pdf/catalogo-herraidea-2026-adelanto.pdf output/pdf/fichas productos familias sitemap.xml && [ -z "$(git ls-files --others --exclude-standard output/pdf/fichas productos familias sitemap.xml)" ]; then
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add output/pdf/catalogo-herraidea-2026-adelanto.pdf output/pdf/fichas productos sitemap.xml
+          git add output/pdf/catalogo-herraidea-2026-adelanto.pdf output/pdf/fichas productos familias sitemap.xml
           git commit -m "Regenerate catalog resources"
           git push

@@ -1,5 +1,13 @@
 # Historial de versiones — Herraidea
 
+## 1.31.0 — 2026-09-15
+
+- La familia Postes estrena una página propia con 37 modelos y una URL descriptiva.
+- Cuatro accesos visuales organizan la exploración por clips, tubo y pines, cable y brazos de solera.
+- Búsqueda por código o nombre y filtros por tipo permiten reducir el catálogo sin perder acceso a las fichas técnicas.
+- La página conecta con las soluciones 3D, la calculadora, la asesoría y la cotización por WhatsApp.
+- El acceso rápido de Postes en el catálogo abre la nueva guía y las fichas individuales enlazan de regreso a la familia.
+
 ## 1.30.0 — 2026-09-15
 
 - Los 81 modelos del catálogo reciben una página técnica estática con URL descriptiva propia.

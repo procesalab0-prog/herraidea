@@ -44,6 +44,8 @@ def render(product: dict, family_items: list[dict]) -> str:
     images = gallery_images(product)
     primary = images[0]
     description = product.get("description", "")
+    family_name = product.get("category", "")
+    family_crumb = f'<a href="/familias/postes"><b>{escape(family_name)}</b></a>' if family_name == "Postes" else f"<b>{escape(family_name)}</b>"
     meta_description = f"{code}: {description} Consulta imágenes, especificaciones y ficha PDF de Herraidea."
     whatsapp = quote(f"Hola Herraidea, me interesa cotizar {code} — {name}.")
     specs = "".join(f"<li>{escape(item)}</li>" for item in product.get("specifications", []))
@@ -108,7 +110,7 @@ def render(product: dict, family_items: list[dict]) -> str:
     <nav><a href="/#catalogo">Catálogo</a><a class="header-contact" href="https://wa.me/524772561695?text={whatsapp}" target="_blank" rel="noopener">Cotizar</a></nav>
   </header>
   <main>
-    <div class="product-breadcrumb"><a href="/">Inicio</a><span>→</span><a href="/#catalogo">Catálogo</a><span>→</span><b>{escape(product.get("category", ""))}</b></div>
+    <div class="product-breadcrumb"><a href="/">Inicio</a><span>→</span><a href="/#catalogo">Catálogo</a><span>→</span>{family_crumb}</div>
     <article class="product-sheet">
       <section class="product-gallery" aria-label="Imágenes de {escape(code)}">{gallery}</section>
       <section class="product-copy">
@@ -151,7 +153,7 @@ def main() -> None:
         ]
         (OUTPUT / f"{slugify(product['code'])}.html").write_text(render(product, family), encoding="utf-8")
 
-    urls = [f"  <url><loc>{DOMAIN}/</loc></url>"]
+    urls = [f"  <url><loc>{DOMAIN}/</loc></url>", f"  <url><loc>{DOMAIN}/familias/postes</loc></url>"]
     urls.extend(f"  <url><loc>{DOMAIN}/productos/{slugify(product['code'])}</loc></url>" for product in products)
     (ROOT / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
