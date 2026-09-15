@@ -10,6 +10,7 @@ on:
       - scripts/generate_posts_family_page.py
       - scripts/generate_pipetas_family_page.py
       - scripts/generate_connectors_family_page.py
+      - scripts/generate_handles_family_page.py
       - content/catalog/details.json
       - content/catalog/images/**
       - content/catalog/technical/**
@@ -39,6 +40,7 @@ jobs:
           python scripts/generate_posts_family_page.py
           python scripts/generate_pipetas_family_page.py
           python scripts/generate_connectors_family_page.py
+          python scripts/generate_handles_family_page.py
       - name: Guardar catalogo actualizado
         run: |
           if git diff --quiet -- output/pdf/catalogo-herraidea-2026-adelanto.pdf output/pdf/fichas productos familias sitemap.xml && [ -z "$(git ls-files --others --exclude-standard output/pdf/fichas productos familias sitemap.xml)" ]; then

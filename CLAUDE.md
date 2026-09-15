@@ -1,6 +1,6 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.33.0**
+Versión actual: **1.34.0**
 
 El dominio oficial `www.herraidea.com` sirve la web desde Vercel y `herraidea.com` redirige de forma segura a esa dirección. Las referencias canónicas, la tarjeta social, los datos estructurados y el catálogo descargable usan el dominio oficial. Los registros de correo preexistentes se conservaron al migrar los servidores DNS desde Jimdo a Vercel.
 
@@ -8,7 +8,9 @@ Sitio de producción: `https://www.herraidea.com/`
 
 ## Estado actual
 
-El menú principal agrupa Pipetas, Postes y Conectores dentro de “Familias” en computadora y teléfono, evitando saturar la barra superior.
+La familia Jaladeras cuenta con una página propia en `/familias/jaladeras`: compara sus dos modelos tipo H por diámetro, acabado y código, con búsqueda, fichas técnicas y cotización. El menú Familias y el acceso rápido del catálogo enlazan la nueva guía.
+
+El menú principal agrupa Pipetas, Postes, Conectores y Jaladeras dentro de “Familias” en computadora y teléfono, evitando saturar la barra superior.
 
 La familia Conectores cuenta con una página propia en `/familias/conectores`: reúne sus 29 modelos, cuatro puntos de partida por aplicación, búsqueda y filtros para vidrio, tubo, pasamanos y puertas. El acceso rápido de Conectores abre esta guía y sus fichas técnicas enlazan de regreso a ella.
 
@@ -53,8 +55,9 @@ Landing estática para Herraidea, enfocada en barandales, soluciones y fabricaci
 - `familias/postes.html`: página de exploración de la familia Postes por sistema, función y código.
 - `familias/pipetas.html`: página de exploración de la familia Pipetas por montaje, ajuste, cabeza y código.
 - `familias/conectores.html`: página de exploración de la familia Conectores por aplicación, función y código.
+- `familias/jaladeras.html`: página comparativa de las jaladeras tipo H por diámetro y código.
 - `family-page.css` y `family-page.js`: presentación adaptable, búsqueda y filtros de la página de familia.
-- `scripts/generate_posts_family_page.py`, `scripts/generate_pipetas_family_page.py` y `scripts/generate_connectors_family_page.py`: generan las páginas públicas de las tres familias desde los datos vigentes del catálogo.
+- `scripts/generate_posts_family_page.py`, `scripts/generate_pipetas_family_page.py`, `scripts/generate_connectors_family_page.py` y `scripts/generate_handles_family_page.py`: generan las páginas públicas de las cuatro familias desde los datos vigentes del catálogo.
 - `.github/workflows/catalog-pdf.yml`: regenera y publica el catálogo general y las 81 fichas PDF al cambiar sus generadores, los datos o las imágenes, manteniendo todas las descargas sincronizadas.
 - `assets/hero-barandal.png` y `assets/hero-night.png`: pareja anterior del hero, reutilizada en la composición animada de “Nuestra evolución”.
 - `assets/projects/futbolito/`: modelo GLB y portada de estudio del Futbolito Herraidea.

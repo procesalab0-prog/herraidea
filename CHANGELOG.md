@@ -1,5 +1,12 @@
 # Historial de versiones — Herraidea
 
+## 1.34.0 — 2026-09-15
+
+- La familia Jaladeras estrena una página propia para comparar sus dos modelos tipo H.
+- HRD JH25 y HRD JH32 se organizan por diámetro de tubo, acabado y código con acceso a sus fichas técnicas.
+- El menú Familias y el acceso rápido del catálogo incorporan Jaladeras, completando las cuatro familias principales.
+- Las fichas de Jaladeras enlazan de regreso a su familia y el sitemap incorpora la nueva página.
+
 ## 1.33.0 — 2026-09-15
 
 - La familia Conectores estrena una página propia con sus 29 modelos y una URL descriptiva.
