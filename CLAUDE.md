@@ -1,12 +1,16 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.29.0**
+Versión actual: **1.29.1**
 
 El dominio oficial `www.herraidea.com` sirve la web desde Vercel y `herraidea.com` redirige de forma segura a esa dirección. Las referencias canónicas, la tarjeta social, los datos estructurados y el catálogo descargable usan el dominio oficial. Los registros de correo preexistentes se conservaron al migrar los servidores DNS desde Jimdo a Vercel.
 
 Sitio de producción: `https://www.herraidea.com/`
 
 ## Estado actual
+
+Se publican las imágenes aprobadas de HRD 1220, HRD 1221 y HRD 1223 y las vistas técnicas HD del catálogo recibido para diez fichas. Se conservan las imágenes anteriores y se actualizan las fichas PDF con la lámina HD preferente.
+
+Imagen de estudio aprobada para HRD 1221 y HRD 1223: cuerpo y base circulares, brazos opuestos a 180 grados y vela articulada como HRD 1519. Las imágenes originales se conservan como vistas técnicas en la ficha web y el PDF.
 
 Landing estática para Herraidea, enfocada en barandales, soluciones y fabricación a la medida. Incluye hero de producto con transición de día a noche y mensaje editorial despejado, presentación de capacidades, carrusel de cuatro soluciones y proyectos con experiencias 3D ampliables y controles tipo cápsula, calculadora visual de postes por tramos y esquinas compartidas para HRD 1525, HRD 1518 y HRD 1616, canalizador visual de proyectos sin base de datos con sugerencias iniciales, captación de proyectos fuera de catálogo, catálogo desplegable de 81 herrajes y configuraciones con dos caminos de entrada, buscador desplegable por código o nombre, filtros por familia, aplicación y sistema, relaciones entre piezas de sistemas validados y pictogramas propios, 13 configuraciones de postes ya normalizadas con imágenes de estudio aprobadas, catálogo 2026 descargable sincronizado con esas imágenes y logotipo protagonista, cobertura animada, ventanas con planos y especificaciones, historia institucional animada, contacto por WhatsApp y PWA.
 

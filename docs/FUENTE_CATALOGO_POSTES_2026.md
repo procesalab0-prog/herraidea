@@ -25,3 +25,12 @@ Las tres páginas originales se conservan en `content/source-documents/catalogo-
 ## Referencia aprobada para las imágenes pendientes
 
 Para producir las siguientes imágenes de los postes **HRD 1221 en adelante**, se utilizarán como referencia constructiva y de proporciones los postes **HRD 1716 en adelante**, sustituyendo el perfil cuadrado por **tubo circular**. Esta equivalencia guía únicamente la presentación visual: cada herraje, brazo, orientación y punto de unión deberá contrastarse con la pieza o modelo correspondiente antes de sustituir una imagen en la web y en el catálogo PDF.
+
+
+## Imagen aprobada el 15 de septiembre de 2026
+
+Imagen de estudio aprobada para HRD 1221 y HRD 1223: cuerpo y base circulares, brazos opuestos a 180 grados y vela articulada como HRD 1519. Las imágenes originales se conservan como vistas técnicas en la ficha web y el PDF. La misma imagen se asigna a las tres fichas por indicación expresa del usuario. Se conservan sus especificaciones y recursos originales; la imagen generada no sustituye los planos de fabricación.
+
+## Láminas HD recibidas el 15 de septiembre
+
+IMG_6264, IMG_6265 e IMG_6266 se guardan completas en content/source-documents/catalogo-hd-2026-09-15/. Los recortes autorizados conservan las cotas sin regeneración y se publican en content/catalog/technical/. Se asignan a diez fichas existentes por código y configuración; HRD 1225 se conserva como recurso sin crear una ficha nueva. La fuente muestra brazos planos para HRD 1221 y ajustables para HRD 1223; la imagen compartida es la aprobada expresamente por el usuario. technicalImage selecciona la lámina HD para los PDF sin quitar las vistas originales de la galería.

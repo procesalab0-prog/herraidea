@@ -8,6 +8,7 @@ on:
       - scripts/generate_product_sheet.py
       - content/catalog/details.json
       - content/catalog/images/**
+      - content/catalog/technical/**
       - assets/logo-gray-nodot.png
 
 permissions:

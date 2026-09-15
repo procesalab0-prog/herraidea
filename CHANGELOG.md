@@ -1,5 +1,9 @@
 # Historial de versiones — Herraidea
 
+## 1.29.1 — 2026-09-15
+
+- Se publican las imágenes aprobadas de HRD 1220, HRD 1221 y HRD 1223 y las vistas técnicas HD del catálogo recibido para diez fichas. Se conservan las imágenes anteriores y se actualizan las fichas PDF con la lámina HD preferente.
+
 ## 1.29.0 — 2026-09-14
 
 - La ficha PDF aprobada deja de ser exclusiva del HRD 1101 y se genera para los 81 modelos del catálogo.

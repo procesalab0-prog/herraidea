@@ -68,6 +68,9 @@ def product_path(value: str) -> Path:
 
 
 def choose_technical_image(product: dict) -> Path | None:
+    preferred = product.get("technicalImage")
+    if preferred and product_path(preferred).is_file():
+        return product_path(preferred)
     paths = [product_path(item) for item in product.get("detailImages", [])]
     existing = [path for path in paths if path.exists()]
     if not existing:
