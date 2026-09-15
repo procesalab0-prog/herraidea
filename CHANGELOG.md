@@ -1,5 +1,9 @@
 # Historial de versiones — Herraidea
 
+## 1.29.2 — 2026-09-15
+
+- HRD 1221 inicio/final usa dos brazos planos de solera en un lado y HRD 1221 intermedio usa cuatro brazos planos opuestos a 180 grados, según su CAD. Se conservan las vistas técnicas y HRD 1223 mantiene sus brazos ajustables.
+
 ## 1.29.1 — 2026-09-15
 
 - Se publican las imágenes aprobadas de HRD 1220, HRD 1221 y HRD 1223 y las vistas técnicas HD del catálogo recibido para diez fichas. Se conservan las imágenes anteriores y se actualizan las fichas PDF con la lámina HD preferente.

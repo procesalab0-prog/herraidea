@@ -1,7 +1,8 @@
 {
-  "current": "1.29.1",
+  "current": "1.29.2",
   "studio": "ProcesaLab",
   "versions": [
+    {"version":"1.29.2","date":"2026-09-15","title":"HRD 1221: brazos de solera","summary":"HRD 1221 inicio/final usa dos brazos planos de solera en un lado y HRD 1221 intermedio usa cuatro brazos planos opuestos a 180 grados, según su CAD. Se conservan las vistas técnicas y HRD 1223 mantiene sus brazos ajustables."},
     {"version":"1.29.1","date":"2026-09-15","title":"Postes y vistas técnicas HD","summary":"Se publican las imágenes aprobadas de HRD 1220, HRD 1221 y HRD 1223 y las vistas técnicas HD del catálogo recibido para diez fichas. Se conservan las imágenes anteriores y se actualizan las fichas PDF con la lámina HD preferente."},
     {"version":"1.29.0","date":"2026-09-14","title":"81 fichas PDF individuales","summary":"Cada modelo del catálogo incorpora su ficha descargable con el diseño aprobado; se retira la leyenda de precios y se documenta la referencia para los próximos postes."},
     {"version":"1.28.2","date":"2026-09-14","title":"Postes con encuadre unificado","summary":"Las imágenes de Postes se muestran completas con la misma presentación utilizada por las demás familias."},

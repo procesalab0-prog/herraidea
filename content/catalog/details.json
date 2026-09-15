@@ -1181,7 +1181,7 @@
     "category": "Postes",
     "code": "HRD 1221 INICIO / FINAL",
     "name": "Poste con 2 brazos de solera",
-    "image": "images/postes-hrd-1221-1223-estudio-v6.jpg",
+    "image": "images/postes-hrd-1221-dos-brazos-estudio-v1.jpg",
     "source": "Catálogo de postes recibido el 8 de septiembre de 2026",
     "sourcePage": "/content/source-documents/catalogo-postes-2026/pagina-03.jpeg",
     "description": "Poste de 2 pulgadas x 86.50 cm con 2 brazos de solera, vela y embellecedor.",
@@ -1190,7 +1190,7 @@
       "2 brazos de solera, vela y embellecedor"
     ],
     "detailImages": [
-      "/content/catalog/images/postes-hrd-1221-1223-estudio-v6.jpg",
+      "/content/catalog/images/postes-hrd-1221-dos-brazos-estudio-v1.jpg",
       "/content/catalog/images/postes-hrd-1221-inicio-final.jpg",
       "/content/catalog/technical/hrd-1221-catalogo-hd.jpg"
     ],
@@ -1204,7 +1204,7 @@
     "category": "Postes",
     "code": "HRD 1221 INTERMEDIO",
     "name": "Poste con 4 brazos de solera",
-    "image": "images/postes-hrd-1221-1223-estudio-v6.jpg",
+    "image": "images/postes-hrd-1221-cuatro-brazos-estudio-v1.jpg",
     "source": "Catálogo de postes recibido el 8 de septiembre de 2026",
     "sourcePage": "/content/source-documents/catalogo-postes-2026/pagina-03.jpeg",
     "description": "Poste de 2 pulgadas x 86.50 cm con 4 brazos de solera, vela y embellecedor.",
@@ -1213,7 +1213,7 @@
       "4 brazos de solera, vela y embellecedor"
     ],
     "detailImages": [
-      "/content/catalog/images/postes-hrd-1221-1223-estudio-v6.jpg",
+      "/content/catalog/images/postes-hrd-1221-cuatro-brazos-estudio-v1.jpg",
       "/content/catalog/images/postes-hrd-1221-intermedio.jpg",
       "/content/catalog/technical/hrd-1221-catalogo-hd.jpg"
     ],
