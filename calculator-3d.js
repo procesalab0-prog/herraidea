@@ -27,8 +27,8 @@ const loader = new GLTFLoader();
 const sourceModels = new Map();
 
 function bestDistribution(length) {
-  const minSpaces = Math.max(1, Math.ceil(length / 1.4));
-  const maxSpaces = Math.max(1, Math.floor(length / 1.2));
+  const minSpaces = Math.max(1, Math.ceil(length / 1.4 - 1e-9));
+  const maxSpaces = Math.max(1, Math.floor(length / 1.2 + 1e-9));
   const exact = minSpaces <= maxSpaces;
   const candidates = exact ? Array.from({ length: maxSpaces - minSpaces + 1 }, (_, index) => minSpaces + index) : [minSpaces];
   const spaces = candidates.reduce((best, candidate) =>
@@ -376,16 +376,32 @@ if (form) {
   const status = document.querySelector('#calculator-status');
   const modelLabel = document.querySelector('#calculator-model-label');
   const whatsapp = document.querySelector('#calculator-whatsapp');
+  const shareButton = document.querySelector('#calculator-share');
   let lengths = [5.3];
-  const requestedSystem = new URLSearchParams(location.search).get('sistema');
+  const query = new URLSearchParams(location.search);
+  const requestedSystem = query.get('sistema');
   const systemAliases = { hrd1525: 'clips', hrd1518: 'tubo', hrd1616: 'cable' };
   const initialSystem = systems[requestedSystem] ? requestedSystem : systemAliases[requestedSystem];
-  if (initialSystem) {
-    systemSelect.value = initialSystem;
+  const requestedLengths = String(query.get('tramos') || '').split(',').slice(0, 8)
+    .map(value => Number(value)).filter(value => Number.isFinite(value) && value >= .2 && value <= 100);
+  if (initialSystem) systemSelect.value = initialSystem;
+  if (requestedLengths.length) lengths = requestedLengths;
+
+  function configurationUrl() {
     const url = new URL(location.href);
-    url.searchParams.set('sistema', initialSystem);
-    history.replaceState(history.state, '', url);
+    url.pathname = '/';
+    url.search = `sistema=${encodeURIComponent(systemSelect.value)}&tramos=${lengths.map(length => length.toFixed(2)).join(',')}`;
+    url.hash = 'calculadora';
+    return url;
   }
+
+  function syncConfigurationUrl() {
+    const url = configurationUrl();
+    history.replaceState(history.state, '', url);
+    return url.href;
+  }
+
+  if (initialSystem || requestedLengths.length) syncConfigurationUrl();
 
   function renderInputs() {
     segmentsRoot.innerHTML = lengths.map((length, index) => `
@@ -417,7 +433,7 @@ if (form) {
     modelLabel.textContent = `${system.code} · modelo 3D real`;
     model.setLayout(distributions, systemSelect.value);
     const lines = distributions.map((item, index) => `Tramo ${index + 1}: ${item.length.toFixed(2)} m, ${item.spaces} espacios de ${item.spacing.toFixed(2)} m.`).join('\n');
-    const message = `Hola, quiero revisar esta estimación para ${system.name}:\n${lines}\nTotal: ${totalMeters.toFixed(2)} m, ${totalPosts} postes estimados${corners ? `, considerando ${corners} ${corners === 1 ? 'esquina compartida' : 'esquinas compartidas'}` : ''}.`;
+    const message = `Hola, quiero revisar esta estimación para ${system.name}:\n${lines}\nTotal: ${totalMeters.toFixed(2)} m, ${totalPosts} postes estimados${corners ? `, considerando ${corners} ${corners === 1 ? 'esquina compartida' : 'esquinas compartidas'}` : ''}.\nConfiguración: ${configurationUrl().href}`;
     whatsapp.href = `https://wa.me/524772561695?text=${encodeURIComponent(message)}`;
   }
 
@@ -429,6 +445,7 @@ if (form) {
     if (Number.isFinite(value) && value >= .2) {
       lengths[index] = Math.min(100, value);
       update();
+      syncConfigurationUrl();
     }
   });
   segmentsRoot.addEventListener('click', event => {
@@ -437,12 +454,14 @@ if (form) {
     lengths.splice(Number(button.dataset.removeSegment), 1);
     renderInputs();
     update();
+    syncConfigurationUrl();
   });
   addButton.addEventListener('click', () => {
     if (lengths.length >= 8) return;
     lengths.push(3.9);
     renderInputs();
     update();
+    syncConfigurationUrl();
     // `:last-of-type` devolvía el primer tramo, no el recién agregado, y el foco
     // arrastraba la página hasta él. Ahora se enfoca el nuevo sin mover el scroll.
     const nuevoTramo = segmentsRoot.querySelector(`[data-segment-index="${lengths.length - 1}"]`);
@@ -450,10 +469,30 @@ if (form) {
     nuevoTramo?.scrollIntoView({ block: 'nearest' });
   });
   systemSelect.addEventListener('change', () => {
-    const url = new URL(location.href);
-    url.searchParams.set('sistema', systemSelect.value);
-    history.replaceState(history.state, '', url);
     update();
+    syncConfigurationUrl();
+  });
+  shareButton?.addEventListener('click', async () => {
+    const url = syncConfigurationUrl();
+    try {
+      await navigator.clipboard.writeText(url);
+    } catch {
+      const field = document.createElement('textarea');
+      field.value = url;
+      field.setAttribute('readonly', '');
+      field.style.position = 'fixed';
+      field.style.opacity = '0';
+      document.body.append(field);
+      field.select();
+      document.execCommand('copy');
+      field.remove();
+    }
+    shareButton.classList.add('copied');
+    shareButton.firstChild.textContent = 'Enlace copiado ';
+    setTimeout(() => {
+      shareButton.classList.remove('copied');
+      shareButton.firstChild.textContent = 'Copiar enlace de esta configuración ';
+    }, 2200);
   });
   form.addEventListener('submit', event => event.preventDefault());
   renderInputs();

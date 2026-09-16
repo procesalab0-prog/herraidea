@@ -1,5 +1,13 @@
 # Historial de versiones — Herraidea
 
+## 1.37.0 — 2026-09-15
+
+- La calculadora guarda el sistema y las medidas de hasta ocho tramos en una URL compartible.
+- Al abrir el enlace, se restauran la selección, las medidas, la distribución, el modelo 3D y el resumen calculado.
+- Un nuevo botón copia la configuración y el mensaje de WhatsApp incluye el mismo enlace para que Herraidea pueda abrirla.
+- Las medidas inválidas o fuera del rango permitido se descartan al restaurar una configuración.
+- Los tramos que coinciden exactamente con los límites de 1.20 m o 1.40 m conservan la distribución correcta sin errores de redondeo decimal.
+
 ## 1.36.0 — 2026-09-15
 
 - Cada solución de `/sistemas` incorpora un acceso directo para calcular ese sistema.

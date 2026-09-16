@@ -1,12 +1,14 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.36.0**
+Versión actual: **1.37.0**
 
 El dominio oficial `www.herraidea.com` sirve la web desde Vercel y `herraidea.com` redirige de forma segura a esa dirección. Las referencias canónicas, la tarjeta social, los datos estructurados y el catálogo descargable usan el dominio oficial. Los registros de correo preexistentes se conservaron al migrar los servidores DNS desde Jimdo a Vercel.
 
 Sitio de producción: `https://www.herraidea.com/`
 
 ## Estado actual
+
+La calculadora genera enlaces con `sistema` y `tramos`, restaura hasta ocho medidas válidas al abrirlos y permite copiar la configuración. El enlace también viaja en el mensaje de WhatsApp para que Herraidea pueda reconstruir el mismo recorrido, modelo 3D y estimación sin base de datos. Los límites exactos de separación de 1.20 m y 1.40 m se calculan sin desviaciones por redondeo decimal.
 
 La selección de `/sistemas` se integra con la calculadora mediante `?sistema=clips`, `?sistema=tubo` o `?sistema=cable`. Al llegar, la herramienta activa el sistema y su modelo 3D automáticamente; si el visitante cambia la selección, la URL permanece sincronizada y el resumen de WhatsApp conserva el sistema, tramos, espacios, postes y esquinas estimadas.
 
