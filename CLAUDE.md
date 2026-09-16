@@ -1,6 +1,6 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.39.1**
+Versión actual: **1.40.0**
 
 El dominio oficial `www.herraidea.com` sirve la web desde Vercel y `herraidea.com` redirige de forma segura a esa dirección. Las referencias canónicas, la tarjeta social, los datos estructurados y el catálogo descargable usan el dominio oficial. Los registros de correo preexistentes se conservaron al migrar los servidores DNS desde Jimdo a Vercel.
 
@@ -33,6 +33,8 @@ La página de Postes muestra el punto rojo de la letra i en los logotipos del en
 La familia Postes cuenta con una página propia en `/familias/postes`: presenta cuatro sistemas como puntos de partida, búsqueda por código o nombre, filtros por tipo y acceso a las 37 fichas técnicas. Enlaza las soluciones 3D, la calculadora y la asesoría sin declarar compatibilidades que aún no hayan sido confirmadas. El acceso rápido de Postes en el catálogo abre esta página y las fichas individuales permiten regresar a ella.
 
 Cada uno de los 81 modelos del catálogo cuenta con una página técnica estática y una URL descriptiva propia bajo `/productos/`. Las páginas reúnen fotografía principal, vistas técnicas disponibles, especificaciones, descarga de ficha PDF, cotización por WhatsApp, metadatos para buscadores y datos estructurados de producto. La ficha rápida del catálogo enlaza y comparte estas URLs. `sitemap.xml` incluye todas las piezas y `robots.txt` identifica el mapa del sitio.
+
+Las configuraciones recientes de Postes extraídas de las tres láminas del catálogo 2026 incluyen una segunda vista CAD en su ficha web y PDF. HRD 1221 inicio/final y HRD 1221 intermedio usan archivos técnicos distintos para evitar intercambiar sus configuraciones de dos y cuatro brazos.
 
 HRD 1221 intermedio muestra dos soleras continuas y planas con fijación central y base circular de tres agujeros, según el CAD y la corrección del usuario. Se retiran las vistas borrosas antiguas de HRD 1220, HRD 1221 y HRD 1223 de sus galerías; quedan la foto principal y el CAD HD.
 

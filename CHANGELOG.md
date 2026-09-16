@@ -1,5 +1,11 @@
 # Historial de versiones — Herraidea
 
+## 1.40.0 — 2026-09-15
+
+- Diez configuraciones recientes de postes incorporan su vista CAD correspondiente del catálogo: variantes de 3 y 4 pines, laterales, intermedias, cacheteadas y postes con clips.
+- HRD 1221 inicio/final deja de usar el plano del modelo intermedio y muestra su configuración correcta de dos brazos de solera en un solo lado.
+- Las fichas web identifican expresamente las imágenes técnicas del catálogo como “Plano CAD” y los PDF individuales quedan sincronizados.
+
 ## 1.39.1 — 2026-09-15
 
 - Las cinco rutas antiguas de “catálogo” reconocen la codificación del acento utilizada por los navegadores y resultados de Google.

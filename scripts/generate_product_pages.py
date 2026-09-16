@@ -52,11 +52,19 @@ def render(product: dict, family_items: list[dict]) -> str:
     whatsapp = quote(f"Hola Herraidea, me interesa cotizar {code} — {name}.")
     specs = "".join(f"<li>{escape(item)}</li>" for item in product.get("specifications", []))
     gallery_parts = []
+    technical_number = 0
     for index, src in enumerate(images):
         figure_class = " primary" if index == 0 else ""
-        alt_suffix = "" if index == 0 else " — vista técnica"
+        is_cad = "/technical/" in src
+        alt_suffix = "" if index == 0 else (" — plano CAD" if is_cad else " — vista técnica")
         loading = 'fetchpriority="high"' if index == 0 else 'loading="lazy"'
-        caption = "Fotografía principal" if index == 0 else f"Vista técnica {index}"
+        if index == 0:
+            caption = "Fotografía principal"
+        elif is_cad:
+            caption = "Plano CAD"
+        else:
+            technical_number += 1
+            caption = f"Vista técnica {technical_number}"
         gallery_parts.append(
             f'<figure class="product-page-image{figure_class}">'
             f'<img src="{escape(src)}" alt="{escape(name)} {escape(code)}{alt_suffix}" {loading}>'
