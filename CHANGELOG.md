@@ -1,5 +1,10 @@
 # Historial de versiones — Herraidea
 
+## 1.39.0 — 2026-09-15
+
+- Las URLs públicas del antiguo sitio Jimdo redirigen permanentemente hacia la portada, secciones, familias o fichas equivalentes de la web nueva.
+- Los resultados antiguos de Google dejan de conducir a páginas inexistentes y transmiten a los buscadores la ubicación vigente de cada contenido.
+
 ## 1.38.1 — 2026-09-15
 
 - El botón para copiar la configuración de la calculadora utiliza un icono SVG propio, evitando que iPhone presente la flecha como emoji.
