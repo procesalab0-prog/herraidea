@@ -428,7 +428,7 @@ body.project-open{overflow:hidden}
 .catalog-shortcuts button:hover img,.catalog-shortcuts>a:hover img{filter:brightness(0) invert(1);transform:scale(1.06)}
 .family-pictogram{flex:0 0 clamp(58px,6vw,76px);width:clamp(58px,6vw,76px);height:clamp(58px,6vw,76px);display:grid;place-items:center;background:transparent;border:0;box-shadow:none;transition:transform .4s cubic-bezier(.2,.8,.2,1)}
 .family-pictogram img{width:72%;height:72%;object-fit:contain}
-.family.hot .family-pictogram{transform:translateY(-3px)}
+.family-toggle:hover .family-pictogram,.family-toggle:focus-visible .family-pictogram{transform:translateY(-3px)}
 .family.open .family-pictogram{background:transparent}
 #postes .family-products{counter-reset:post-card}
 #postes .product-card{counter-increment:post-card;border-color:#dfe3e6;box-shadow:0 12px 35px #0b0d1008;position:relative;overflow:hidden}
@@ -577,3 +577,22 @@ herraidea-post-calculator-3d canvas{display:block;width:100%;height:100%}
 @media(min-width:901px) and (max-width:1500px){.main-nav{gap:clamp(12px,1.5vw,22px);font-size:12px}.nav-contact{padding-inline:18px}}
 @media(min-width:901px) and (max-width:1250px){.main-nav{display:none;position:absolute;left:0;right:0;top:82px;background:#fff;padding:12px 32px 24px;flex-direction:column;align-items:stretch;gap:0;border-bottom:1px solid var(--line);max-height:calc(100svh - 82px);overflow:auto}.main-nav.open{display:flex}.main-nav>a{padding:14px 4px;border-bottom:1px solid var(--line)}.nav-contact{text-align:center;margin-top:10px}.menu-toggle{display:flex;border:0;background:none;align-items:center;gap:4px;padding:12px 0;flex-direction:column}.menu-toggle span{display:block;width:24px;height:2px;background:var(--ink)}.menu-toggle b{position:absolute;width:1px;height:1px;overflow:hidden}.nav-families{border-bottom:1px solid var(--line)}.nav-families summary{padding:14px 4px}.nav-family-menu{position:static;min-width:0;padding:0 0 9px 14px;border:0;box-shadow:none;background:#f7f8f9}.nav-family-menu a{padding:12px 14px}.nav-family-menu a:last-child{border-bottom:0}}
 @media(max-width:900px){.nav-families{border-bottom:1px solid var(--line)}.nav-families summary{padding:16px 4px}.nav-family-menu{position:static;min-width:0;padding:0 0 9px 14px;border:0;box-shadow:none;background:#f7f8f9}.nav-family-menu a{padding:12px 14px}.nav-family-menu a:last-child{border-bottom:0}}
+
+/* v1.38 · contacto de ventas, acceso a Barandales e interacción deliberada */
+.scroll-hint{bottom:24px;z-index:6;min-width:214px;padding:12px 18px 10px;border:1px solid #0b0d1026;border-radius:999px;background:#fffffff0;box-shadow:0 12px 34px #0b0d1017;color:var(--ink);display:flex;align-items:center;justify-content:center;gap:12px;letter-spacing:.16em;transition:opacity .2s,background .2s,color .2s}
+.scroll-hint:hover,.scroll-hint:focus-visible{background:var(--ink);color:#fff;outline:none}
+.scroll-hint .scroll-hint-label{animation:none}
+.scroll-hint .scroll-hint-arrow{color:var(--red);font-size:18px;line-height:1;animation:hint 1.5s ease-in-out infinite}
+.catalog-paths{grid-template-columns:repeat(3,1fr)}
+.catalog-paths .catalog-barandal-path{border-color:#fa14184a;background:linear-gradient(135deg,#fff 35%,#fff2f2)}
+.catalog-paths .catalog-barandal-path>span{background:var(--red);color:#fff}
+.family-toggle:hover .family-number,.family-toggle:focus-visible .family-number,.family-toggle:hover .family-title h3,.family-toggle:focus-visible .family-title h3{color:var(--red)}
+.family-toggle:hover .family-title h3,.family-toggle:focus-visible .family-title h3{transform:scale(1.035)}
+.family-toggle:hover .family-bar,.family-toggle:focus-visible .family-bar{transform:scaleX(.32)}
+.family-toggle:hover .family-mark,.family-toggle:focus-visible .family-mark{border-color:var(--red);background:#fa14181a}
+.family-toggle:hover .family-mark::before,.family-toggle:hover .family-mark::after,.family-toggle:focus-visible .family-mark::before,.family-toggle:focus-visible .family-mark::after{background:var(--red)}
+.sales-contacts{display:grid;grid-template-columns:1fr 1fr;gap:18px;border-top:1px solid var(--line)}
+.contact-details .sales-contacts a{border-top:0;padding:18px 0}
+.contact-details .sales-contacts a:hover{color:var(--red)}
+@media(max-width:900px){.scroll-hint{display:flex;bottom:18px;min-width:198px;padding:10px 15px 9px;background:#fffffff2;font-size:10px}.hero-copy{padding-bottom:104px}.workshop-panel{padding-bottom:96px}.catalog-paths{grid-template-columns:1fr}.sales-contacts{grid-template-columns:1fr;gap:0}.contact-details .sales-contacts a+a{border-top:1px solid var(--line)}}
+@media(prefers-reduced-motion:reduce){.scroll-hint .scroll-hint-arrow{animation:none}}

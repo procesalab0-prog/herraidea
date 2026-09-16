@@ -241,16 +241,9 @@
       }).join('')}</div></section>`;
     }).join('');
     const familyEls = [...host.querySelectorAll('.family')];
-    let activeCatalogFamily = '';
-    const setHotFamily = family => {
-      if (!family || activeCatalogFamily === family.id) return;
-      activeCatalogFamily = family.id;
-      familyEls.forEach(el => el.classList.toggle('hot', el === family || el.classList.contains('open')));
-    };
     const toggleFamily = (family, forceOpen = false) => {
       const shouldOpen = forceOpen || !family.classList.contains('open');
       familyEls.forEach(el => { const open = el === family && shouldOpen; el.classList.toggle('open', open); el.querySelector('.family-toggle').setAttribute('aria-expanded', String(open)); });
-      setHotFamily(family);
     };
     // Abrir una familia cierra las demás y cambia la altura del catálogo. Sin compensar,
     // el encabezado recién tocado se va de la pantalla mientras dura la animación.
@@ -329,12 +322,6 @@
       family.scrollIntoView({behavior:'smooth', block:'start'});
       requestAnimationFrame(() => requestAnimationFrame(() => host.classList.remove('sin-animacion')));
     }));
-    const updateCatalogFocus = () => {
-      let best = null, distance = Infinity;
-      familyEls.forEach(family => { const rect = family.getBoundingClientRect(); if (rect.bottom < 82 || rect.top > innerHeight) return; const d = Math.abs(rect.top - innerHeight*.42); if (d < distance) { best = family; distance = d; } });
-      if (best) setHotFamily(best);
-    };
-    addEventListener('scroll', updateCatalogFocus, {passive:true}); updateCatalogFocus();
     host.querySelectorAll('[data-product]').forEach(card => card.addEventListener('click', () => openProduct(catalogDetails.find(p => p.code === card.dataset.product))));
     const requested = new URL(location.href).searchParams.get('producto');
     if (requested) openProduct(catalogDetails.find(p => productSlug(p.code) === requested));

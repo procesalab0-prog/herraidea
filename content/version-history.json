@@ -1,7 +1,8 @@
 {
-  "current": "1.37.0",
+  "current": "1.38.0",
   "studio": "ProcesaLab",
   "versions": [
+    {"version":"1.38.0","date":"2026-09-15","title":"Catálogo y contacto más claros","summary":"El catálogo agrega la ruta de Barandales y deja el rojo para la interacción directa; el Hero señala el scroll y Contacto muestra las dos líneas de Ventas."},
     {"version":"1.37.0","date":"2026-09-15","title":"Configuraciones compartibles","summary":"La calculadora guarda sistema y tramos en un enlace, restaura el mismo recorrido y lo incorpora al mensaje de WhatsApp; también respeta exactamente los límites de separación."},
     {"version":"1.36.0","date":"2026-09-15","title":"Sistemas conectados con la calculadora","summary":"Cada sistema abre la calculadora con su opción y modelo 3D ya seleccionados; la URL conserva la elección y el resumen de WhatsApp incluye el cálculo completo."},
     {"version":"1.35.0","date":"2026-09-15","title":"Sistemas completos en una sola guía","summary":"La nueva página compara HRD 1525, HRD 1518 y HRD 1616 y conecta cada ruta con su experiencia 3D, calculadora y piezas disponibles."},

@@ -1,5 +1,12 @@
 # Historial de versiones — Herraidea
 
+## 1.38.0 — 2026-09-15
+
+- Contacto muestra los dos números de Ventas con acceso directo a WhatsApp: +52 477 256 1695 y +52 477 274 0349.
+- El indicador del Hero se convierte en una llamada visible y accesible para continuar el recorrido, también en pantallas móviles.
+- Las familias del catálogo ya no cambian a rojo por la posición del scroll; la respuesta visual ocurre únicamente al pasar el cursor o enfocar con teclado.
+- El inicio del catálogo incorpora “Quiero diseñar un barandal” como acceso directo a la guía de sistemas completos.
+
 ## 1.37.0 — 2026-09-15
 
 - La calculadora guarda el sistema y las medidas de hasta ocho tramos en una URL compartible.

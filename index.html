@@ -28,7 +28,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Archivo+Narrow:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=1-33-0">
+  <link rel="stylesheet" href="/styles.css?v=1-38-0">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -68,7 +68,7 @@
           <p>Diseñamos y fabricamos barandales, herrajes y soluciones de acero inoxidable según las medidas y necesidades de cada proyecto.</p>
           <a class="button" href="#soluciones">Ver lo que podemos fabricar <span>→</span></a>
         </div>
-        <div class="scroll-hint">Desliza <span>↓</span></div>
+        <a class="scroll-hint" href="#soluciones" aria-label="Desliza para descubrir nuestras soluciones"><span class="scroll-hint-label">Desliza para descubrir</span><span class="scroll-hint-arrow" aria-hidden="true">↓</span></a>
         <div class="workshop-panel">
           <span class="eyebrow">Fabricación a la medida</span><h2>Si no existe, lo hacemos para ti.</h2>
           <div class="metrics"><div><b>4</b><span>Equipos de fabricación CNC</span></div><div><b>VF-3SS</b><span>Centro de maquinado Haas</span></div><div><b>A medida</b><span>Según tu proyecto</span></div></div>
@@ -228,6 +228,7 @@
       <div class="section-head"><div><span class="eyebrow">Catálogo</span><h2>Encuentra una pieza o empieza por tu proyecto.</h2><p>Busca directamente un código HRD o explora las soluciones con ayuda de Herraidea.</p></div></div>
       <div class="catalog-paths" aria-label="Elige cómo comenzar">
         <a href="#asesoria"><small>No necesito conocer las piezas</small><strong>Quiero diseñar una solución</strong><span aria-hidden="true">→</span></a>
+        <a class="catalog-barandal-path" href="/sistemas"><small>Busco un sistema completo</small><strong>Quiero diseñar un barandal</strong><span aria-hidden="true">→</span></a>
         <button type="button" id="catalog-known-product"><small>Tengo un nombre o código HRD</small><strong>Ya conozco mi pieza o código</strong><span aria-hidden="true">↓</span></button>
       </div>
       <details class="catalog-tools-disclosure" id="catalog-tools-disclosure">
@@ -281,7 +282,7 @@
     </div></section>
 
     <section class="contact-section" id="contacto"><div class="section-inner contact-grid">
-      <div><span class="eyebrow">Cuéntanos qué necesitas</span><h2>Hablemos de tu proyecto.</h2><p class="lead">Si ya tienes una medida, fotografía, dibujo, muestra o idea, compártela con nosotros. Te ayudaremos a definir la solución adecuada.</p><div class="contact-details"><a href="tel:+524777907594"><small>Oficina</small>+52 (477) 790 7594</a><a href="https://wa.me/524772561695" target="_blank" rel="noopener"><small>WhatsApp</small>477 256 1695</a><address><small>Planta</small>Murales 212-A, Industrial la Capilla<br>C.P. 37297 · León, Guanajuato</address></div></div>
+      <div><span class="eyebrow">Cuéntanos qué necesitas</span><h2>Hablemos de tu proyecto.</h2><p class="lead">Si ya tienes una medida, fotografía, dibujo, muestra o idea, compártela con nosotros. Te ayudaremos a definir la solución adecuada.</p><div class="contact-details"><a href="tel:+524777907594"><small>Oficina</small>+52 (477) 790 7594</a><div class="sales-contacts"><a href="https://wa.me/524772561695" target="_blank" rel="noopener"><small>Ventas · WhatsApp</small>+52 477 256 1695</a><a href="https://wa.me/524772740349" target="_blank" rel="noopener"><small>Ventas · WhatsApp</small>+52 477 274 0349</a></div><address><small>Planta</small>Murales 212-A, Industrial la Capilla<br>C.P. 37297 · León, Guanajuato</address></div></div>
       <form id="contact-form"><label>Nombre<input name="nombre" autocomplete="name" required></label><label>Correo<input name="email" type="email" autocomplete="email"></label><label>WhatsApp<input name="whatsapp" type="tel" autocomplete="tel"></label><label>Tipo de proyecto<select name="tipo"><option>Barandal</option><option>Cancel de baño</option><option>Fachada</option><option>Otro</option></select></label><label class="wide">Modelos de interés<input name="modelos" placeholder="Ej. HRD 1101, HRD 1303"></label><label class="wide">Mensaje<textarea name="mensaje" rows="4" required></textarea></label><button class="button wide" type="submit">Enviar por WhatsApp <span>→</span></button></form>
     </div></section>
   </main>
@@ -315,11 +316,11 @@
 
   <dialog class="credits-dialog" id="credits-dialog" aria-labelledby="credits-title">
     <button class="credits-close" type="button" aria-label="Cerrar créditos">×</button>
-    <div class="credits-hero"><span class="credits-kicker">Seis toques desbloquearon</span><img class="procesalab-logo" src="/assets/brand/procesalab-horizontal.png" alt="Creado por ProcesaLab"><p>Diseño, desarrollo y evolución digital.</p><span class="current-version">Herraidea · v<span id="credits-version">1.37.0</span></span></div>
+    <div class="credits-hero"><span class="credits-kicker">Seis toques desbloquearon</span><img class="procesalab-logo" src="/assets/brand/procesalab-horizontal.png" alt="Creado por ProcesaLab"><p>Diseño, desarrollo y evolución digital.</p><span class="current-version">Herraidea · v<span id="credits-version">1.38.0</span></span></div>
     <div class="credits-content"><h2 id="credits-title">Construido versión a versión.</h2><p>Cada actualización queda documentada para que el proyecto conserve contexto, decisiones y continuidad.</p><div class="version-list" id="version-list"></div></div>
   </dialog>
 
   <footer><div class="section-inner"><a class="footer-brand" href="#inicio" aria-label="Herraidea, volver al inicio"><img src="/assets/logo-light-nodot.png" alt="Herraidea"><i aria-hidden="true"></i></a><nav><a href="/sistemas">Sistemas</a><a href="#asesoria">Asesoría</a><a href="#catalogo">Catálogo</a><a href="#recursos">Recursos</a><a href="#nosotros">Nosotros</a><a href="#envios">Envíos</a><a href="#contacto">Contacto</a></nav><span>León, Gto. · Desde 2013</span></div></footer>
-  <script src="/hrd-map.js?v=1-10"></script><script src="/hero.js?v=1-30-0"></script><script src="/project-cover.js?v=1-25-0"></script><script type="module" src="/project-3d-v2.js?v=1-35-0"></script><script type="module" src="/calculator-3d.js?v=1-37-0"></script>
+  <script src="/hrd-map.js?v=1-10"></script><script src="/hero.js?v=1-38-0"></script><script src="/project-cover.js?v=1-25-0"></script><script type="module" src="/project-3d-v2.js?v=1-35-0"></script><script type="module" src="/calculator-3d.js?v=1-37-0"></script>
 </body>
 </html>
