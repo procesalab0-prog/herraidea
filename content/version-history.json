@@ -1,7 +1,8 @@
 {
-  "current": "1.38.0",
+  "current": "1.38.1",
   "studio": "ProcesaLab",
   "versions": [
+    {"version":"1.38.1","date":"2026-09-15","title":"Icono estable en iPhone","summary":"El botón para copiar la configuración reemplaza la flecha Unicode por un icono SVG propio que iOS no transforma en emoji."},
     {"version":"1.38.0","date":"2026-09-15","title":"Catálogo y contacto más claros","summary":"El catálogo agrega la ruta de Barandales y deja el rojo para la interacción directa; el Hero señala el scroll y Contacto muestra las dos líneas de Ventas."},
     {"version":"1.37.0","date":"2026-09-15","title":"Configuraciones compartibles","summary":"La calculadora guarda sistema y tramos en un enlace, restaura el mismo recorrido y lo incorpora al mensaje de WhatsApp; también respeta exactamente los límites de separación."},
     {"version":"1.36.0","date":"2026-09-15","title":"Sistemas conectados con la calculadora","summary":"Cada sistema abre la calculadora con su opción y modelo 3D ya seleccionados; la URL conserva la elección y el resumen de WhatsApp incluye el cálculo completo."},

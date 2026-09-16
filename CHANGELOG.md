@@ -1,5 +1,9 @@
 # Historial de versiones — Herraidea
 
+## 1.38.1 — 2026-09-15
+
+- El botón para copiar la configuración de la calculadora utiliza un icono SVG propio, evitando que iPhone presente la flecha como emoji.
+
 ## 1.38.0 — 2026-09-15
 
 - Contacto muestra los dos números de Ventas con acceso directo a WhatsApp: +52 477 256 1695 y +52 477 274 0349.
