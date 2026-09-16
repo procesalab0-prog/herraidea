@@ -1,5 +1,9 @@
 # Historial de versiones — Herraidea
 
+## 1.39.1 — 2026-09-15
+
+- Las cinco rutas antiguas de “catálogo” reconocen la codificación del acento utilizada por los navegadores y resultados de Google.
+
 ## 1.39.0 — 2026-09-15
 
 - Las URLs públicas del antiguo sitio Jimdo redirigen permanentemente hacia la portada, secciones, familias o fichas equivalentes de la web nueva.
