@@ -1,0 +1,68 @@
+/* Liquid Glass: scoped to calculator and product exploration controls. */
+:is(.calculator-controls,.project-panel){background:radial-gradient(ellipse at 0 0,#e1e9ee99,transparent 65%),radial-gradient(ellipse at 100% 100%,#efdadd50,transparent 65%),#f6f8fa}
+:is(.calculator-add,.calculator-share,.calculator-whatsapp,.calculator-segment>button,button.project-open,.projects-next,.project-close,.project-actions button){
+  --glass-x:50%;--glass-y:15%;
+  position:relative;isolation:isolate;overflow:hidden;
+  border:1px solid #ffffffcc;border-radius:999px;
+  color:#222b32;
+  background:radial-gradient(ellipse at var(--glass-x) var(--glass-y),#ffffffed,transparent 68%),linear-gradient(155deg,#ffffffa8,#e1e8ed87);
+  box-shadow:inset 0 1px 0 #fff,inset 0 -1px 1px #657a8f33,0 5px 14px #25384b12,0 0 0 1px #7d91a522;
+  -webkit-backdrop-filter:blur(16px) saturate(1.6);backdrop-filter:blur(16px) saturate(1.6);
+  transition:transform .48s cubic-bezier(.2,.85,.25,1.3),box-shadow .3s,color .25s,background-color .25s;
+  -webkit-tap-highlight-color:transparent;
+}
+button.project-open{position:absolute}
+:is(.calculator-add,.calculator-share,.calculator-whatsapp,.calculator-segment>button,button.project-open,.projects-next,.project-close,.project-actions button)::after{
+  content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;pointer-events:none;
+  background:radial-gradient(ellipse at var(--glass-x) var(--glass-y),#fff9,transparent 58%);
+  opacity:.3;transition:opacity .25s;
+}
+:is(.calculator-add,.calculator-share,.calculator-whatsapp,.calculator-segment>button,button.project-open,.projects-next,.project-close,.project-actions button):focus-visible,
+.calculator-field select:focus-visible,.project-range input:focus-visible{
+  outline:3px solid #b71b26;outline-offset:4px;
+}
+@media(hover:hover) and (pointer:fine){
+  :is(.calculator-add,.calculator-share,.calculator-whatsapp,.calculator-segment>button,button.project-open,.projects-next,.project-close,.project-actions button):not(:disabled):hover{
+    transform:translateY(-2px);color:#222b32;
+    box-shadow:inset 0 1px 0 #fff,inset 0 -1px 1px #657a8f33,0 9px 24px #25384b24,0 0 0 1px #7d91a533;
+  }
+  :is(.calculator-add,.calculator-share,.calculator-whatsapp,.calculator-segment>button,button.project-open,.projects-next,.project-close,.project-actions button):not(:disabled):hover::after{opacity:.8}
+}
+:is(.calculator-add,.calculator-share,.calculator-whatsapp,.calculator-segment>button,button.project-open,.projects-next,.project-close,.project-actions button):not(:disabled):active{
+  transform:translateY(1px) scale(.965);transition-duration:.1s;
+  box-shadow:inset 0 2px 6px #60708024,0 1px 4px #25384b15;
+}
+.calculator-whatsapp,.project-actions button.active,.project-actions button[aria-pressed="true"]{
+  background:radial-gradient(ellipse at var(--glass-x) var(--glass-y),#ffffffd9,transparent 68%),linear-gradient(140deg,#ffe9e9c7,#edb7bd77);
+  color:#9b1621;box-shadow:inset 0 1px 0 #fff,0 4px 14px #9b162118,0 0 0 1px #b32c3b40;
+}
+.calculator-share.copied{color:#9b1621}
+.project-actions{border:1px solid #fff9;background:#dce3e970;box-shadow:inset 0 1px 5px #53677914;border-radius:26px;padding:8px;gap:9px}
+.project-actions button{min-height:44px;font-size:12px}
+.project-actions button.active::before{background:#b51c2a;border-color:#b51c2a}
+.project-open b{border-radius:50%;background:linear-gradient(145deg,#ed525d,#bb1624);box-shadow:inset 0 1px 0 #fff7,0 2px 5px #7a17252b;color:#fff}
+.calculator-add,.calculator-share{font-size:12px;letter-spacing:.07em;padding:12px 18px}
+.calculator-add span{box-shadow:inset 0 1px 2px #fff,0 1px 5px #45576a1a;background:#fff9}
+.calculator-segment{grid-template-columns:1fr 44px}
+.calculator-segment>button{width:44px;height:44px}
+.calculator-field select,.calculator-segment label{
+  background-color:#ffffff9c;border-color:#fff;box-shadow:inset 0 1px 0 #fff,0 4px 14px #25384b0c,0 0 0 1px #7d91a530;
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+}
+.calculator-model-label{background:#f9fcffd9;color:#27333c;border:1px solid #fff;box-shadow:0 3px 12px #25384b19;-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px)}
+.project-range input{height:8px;border-radius:999px;box-shadow:inset 0 1px 3px #263b5026}
+.project-range input::-webkit-slider-thumb{width:30px;height:30px;border:1px solid #fff;background:radial-gradient(circle at 35% 25%,#fff,#f5d5d9 60%,#dd9ba5);box-shadow:inset 0 1px 1px #fff,0 3px 9px #53121e33,0 0 0 1px #b52a4244;transition:transform .25s}
+.project-range input::-moz-range-thumb{width:28px;height:28px;border:1px solid #fff;border-radius:50%;background:radial-gradient(circle at 35% 25%,#fff,#f5d5d9 60%,#dd9ba5);box-shadow:0 3px 9px #53121e33,0 0 0 1px #b52a4244}
+.project-range input:not(:disabled):active::-webkit-slider-thumb{transform:scale(1.15)}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  :is(.calculator-add,.calculator-share,.calculator-whatsapp,.calculator-segment>button,button.project-open,.projects-next,.project-close,.project-actions button){background-color:#edf1f5}
+}
+@media(prefers-reduced-motion:reduce){
+  :is(.calculator-add,.calculator-share,.calculator-whatsapp,.calculator-segment>button,button.project-open,.projects-next,.project-close,.project-actions button),
+  :is(.calculator-add,.calculator-share,.calculator-whatsapp,.calculator-segment>button,button.project-open,.projects-next,.project-close,.project-actions button)::after{transition:none!important;transform:none!important}
+  .project-range input:active::-webkit-slider-thumb{transform:none!important}
+}
+@media(forced-colors:active){
+  :is(.calculator-add,.calculator-share,.calculator-whatsapp,.calculator-segment>button,button.project-open,.projects-next,.project-close,.project-actions button){border:1px solid ButtonText}
+  .project-actions button.active{outline:2px solid Highlight}
+}

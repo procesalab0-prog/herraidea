@@ -1,5 +1,9 @@
 # Historial de versiones — Herraidea
 
+## 1.42.0 — 2026-09-16
+
+- La calculadora visual y los controles de exploración 3D incorporan cápsulas de vidrio translúcido, reflejos que siguen el cursor y respuesta suave al pulsar. Se conservan los materiales reales y se respeta el movimiento reducido.
+
 ## 1.41.0 — 2026-09-16
 
 - La portada unifica la identidad de Herraidea como sitio, organización y página principal para facilitar la consolidación del resultado de marca en Google.

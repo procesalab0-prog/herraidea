@@ -1,7 +1,13 @@
 {
-  "current": "1.41.0",
+  "current": "1.42.0",
   "studio": "ProcesaLab",
   "versions": [
+    {
+      "version": "1.42.0",
+      "date": "2026-09-16",
+      "title": "Liquid Glass en calculadora y controles 3D",
+      "summary": "La calculadora visual y los controles de exploración 3D incorporan cápsulas de vidrio translúcido, reflejos que siguen el cursor y respuesta suave al pulsar. Se conservan los materiales reales y se respeta el movimiento reducido."
+    },
     {
       "version": "1.41.0",
       "date": "2026-09-16",
