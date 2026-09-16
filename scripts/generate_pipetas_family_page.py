@@ -59,21 +59,35 @@ def main() -> None:
     schema = json.dumps(
         {
             "@context": "https://schema.org",
-            "@type": "CollectionPage",
-            "name": "Pipetas para vidrio | Herraidea",
-            "description": "Pipetas de acero inoxidable para conectar vidrio con muro o vidrio con vidrio en configuraciones fijas y ajustables.",
-            "url": f"{DOMAIN}/familias/pipetas",
-            "mainEntity": {
-                "@type": "ItemList",
-                "numberOfItems": len(products),
-                "itemListElement": [
-                    {"@type": "ListItem", "position": index, "url": f"{DOMAIN}/productos/{slugify(product['code'])}", "name": f"{product['code']} — {product['name']}"}
-                    for index, product in enumerate(products, 1)
-                ],
-            },
+            "@graph": [
+                {
+                    "@type": "CollectionPage",
+                    "@id": f"{DOMAIN}/familias/pipetas#collection",
+                    "name": "Pipetas para vidrio | Herraidea",
+                    "description": "Pipetas de acero inoxidable para conectar vidrio con muro o vidrio con vidrio en configuraciones fijas y ajustables.",
+                    "url": f"{DOMAIN}/familias/pipetas",
+                    "isPartOf": {"@id": f"{DOMAIN}/#website"},
+                    "mainEntity": {
+                        "@type": "ItemList",
+                        "numberOfItems": len(products),
+                        "itemListElement": [
+                            {"@type": "ListItem", "position": index, "url": f"{DOMAIN}/productos/{slugify(product['code'])}", "name": f"{product['code']} — {product['name']}"}
+                            for index, product in enumerate(products, 1)
+                        ],
+                    },
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "@id": f"{DOMAIN}/familias/pipetas#breadcrumb",
+                    "itemListElement": [
+                        {"@type": "ListItem", "position": 1, "name": "Inicio", "item": f"{DOMAIN}/"},
+                        {"@type": "ListItem", "position": 2, "name": "Pipetas", "item": f"{DOMAIN}/familias/pipetas"},
+                    ],
+                },
+            ],
         },
         ensure_ascii=False,
-    ).replace("</", "<\/")
+    ).replace("</", r"<\/")
     whatsapp = quote("Hola Herraidea, necesito ayuda para elegir pipetas para un proyecto con vidrio.")
     OUTPUT.parent.mkdir(exist_ok=True)
     OUTPUT.write_text(

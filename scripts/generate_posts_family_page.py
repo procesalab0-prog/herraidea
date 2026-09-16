@@ -54,21 +54,35 @@ def main() -> None:
     schema = json.dumps(
         {
             "@context": "https://schema.org",
-            "@type": "CollectionPage",
-            "name": "Postes para barandal | Herraidea",
-            "description": "Postes y minipostes de acero inoxidable para sistemas de barandal con clips, pines, cable y brazos de solera.",
-            "url": f"{DOMAIN}/familias/postes",
-            "mainEntity": {
-                "@type": "ItemList",
-                "numberOfItems": len(products),
-                "itemListElement": [
-                    {"@type": "ListItem", "position": index, "url": f"{DOMAIN}/productos/{slugify(product['code'])}", "name": f"{product['code']} — {product['name']}"}
-                    for index, product in enumerate(products, 1)
-                ],
-            },
+            "@graph": [
+                {
+                    "@type": "CollectionPage",
+                    "@id": f"{DOMAIN}/familias/postes#collection",
+                    "name": "Postes para barandal | Herraidea",
+                    "description": "Postes y minipostes de acero inoxidable para sistemas de barandal con clips, pines, cable y brazos de solera.",
+                    "url": f"{DOMAIN}/familias/postes",
+                    "isPartOf": {"@id": f"{DOMAIN}/#website"},
+                    "mainEntity": {
+                        "@type": "ItemList",
+                        "numberOfItems": len(products),
+                        "itemListElement": [
+                            {"@type": "ListItem", "position": index, "url": f"{DOMAIN}/productos/{slugify(product['code'])}", "name": f"{product['code']} — {product['name']}"}
+                            for index, product in enumerate(products, 1)
+                        ],
+                    },
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "@id": f"{DOMAIN}/familias/postes#breadcrumb",
+                    "itemListElement": [
+                        {"@type": "ListItem", "position": 1, "name": "Inicio", "item": f"{DOMAIN}/"},
+                        {"@type": "ListItem", "position": 2, "name": "Postes", "item": f"{DOMAIN}/familias/postes"},
+                    ],
+                },
+            ],
         },
         ensure_ascii=False,
-    ).replace("</", "<\/")
+    ).replace("</", r"<\/")
     whatsapp = quote("Hola Herraidea, necesito ayuda para elegir postes para un barandal.")
     OUTPUT.parent.mkdir(exist_ok=True)
     OUTPUT.write_text(

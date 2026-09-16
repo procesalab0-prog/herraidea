@@ -48,21 +48,35 @@ def main() -> None:
     schema = json.dumps(
         {
             "@context": "https://schema.org",
-            "@type": "CollectionPage",
-            "name": "Jaladeras para puertas de vidrio | Herraidea",
-            "description": "Jaladeras tipo H de acero inoxidable para puertas de vidrio templado en diámetros de 25 y 32 milímetros.",
-            "url": f"{DOMAIN}/familias/jaladeras",
-            "mainEntity": {
-                "@type": "ItemList",
-                "numberOfItems": len(products),
-                "itemListElement": [
-                    {"@type": "ListItem", "position": index, "url": f"{DOMAIN}/productos/{slugify(product['code'])}", "name": f"{product['code']} — {product['name']}"}
-                    for index, product in enumerate(products, 1)
-                ],
-            },
+            "@graph": [
+                {
+                    "@type": "CollectionPage",
+                    "@id": f"{DOMAIN}/familias/jaladeras#collection",
+                    "name": "Jaladeras para puertas de vidrio | Herraidea",
+                    "description": "Jaladeras tipo H de acero inoxidable para puertas de vidrio templado en diámetros de 25 y 32 milímetros.",
+                    "url": f"{DOMAIN}/familias/jaladeras",
+                    "isPartOf": {"@id": f"{DOMAIN}/#website"},
+                    "mainEntity": {
+                        "@type": "ItemList",
+                        "numberOfItems": len(products),
+                        "itemListElement": [
+                            {"@type": "ListItem", "position": index, "url": f"{DOMAIN}/productos/{slugify(product['code'])}", "name": f"{product['code']} — {product['name']}"}
+                            for index, product in enumerate(products, 1)
+                        ],
+                    },
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "@id": f"{DOMAIN}/familias/jaladeras#breadcrumb",
+                    "itemListElement": [
+                        {"@type": "ListItem", "position": 1, "name": "Inicio", "item": f"{DOMAIN}/"},
+                        {"@type": "ListItem", "position": 2, "name": "Jaladeras", "item": f"{DOMAIN}/familias/jaladeras"},
+                    ],
+                },
+            ],
         },
         ensure_ascii=False,
-    ).replace("</", "<\/")
+    ).replace("</", r"<\/")
     whatsapp = quote("Hola Herraidea, necesito ayuda para elegir una jaladera para puerta de vidrio.")
     OUTPUT.parent.mkdir(exist_ok=True)
     OUTPUT.write_text(

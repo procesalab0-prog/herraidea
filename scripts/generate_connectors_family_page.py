@@ -61,21 +61,35 @@ def main() -> None:
     schema = json.dumps(
         {
             "@context": "https://schema.org",
-            "@type": "CollectionPage",
-            "name": "Conectores para vidrio y barandal | Herraidea",
-            "description": "Conectores de acero inoxidable para vidrio, tubo, pasamanos y puertas en sistemas de barandal.",
-            "url": f"{DOMAIN}/familias/conectores",
-            "mainEntity": {
-                "@type": "ItemList",
-                "numberOfItems": len(products),
-                "itemListElement": [
-                    {"@type": "ListItem", "position": index, "url": f"{DOMAIN}/productos/{slugify(product['code'])}", "name": f"{product['code']} — {product['name']}"}
-                    for index, product in enumerate(products, 1)
-                ],
-            },
+            "@graph": [
+                {
+                    "@type": "CollectionPage",
+                    "@id": f"{DOMAIN}/familias/conectores#collection",
+                    "name": "Conectores para vidrio y barandal | Herraidea",
+                    "description": "Conectores de acero inoxidable para vidrio, tubo, pasamanos y puertas en sistemas de barandal.",
+                    "url": f"{DOMAIN}/familias/conectores",
+                    "isPartOf": {"@id": f"{DOMAIN}/#website"},
+                    "mainEntity": {
+                        "@type": "ItemList",
+                        "numberOfItems": len(products),
+                        "itemListElement": [
+                            {"@type": "ListItem", "position": index, "url": f"{DOMAIN}/productos/{slugify(product['code'])}", "name": f"{product['code']} — {product['name']}"}
+                            for index, product in enumerate(products, 1)
+                        ],
+                    },
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "@id": f"{DOMAIN}/familias/conectores#breadcrumb",
+                    "itemListElement": [
+                        {"@type": "ListItem", "position": 1, "name": "Inicio", "item": f"{DOMAIN}/"},
+                        {"@type": "ListItem", "position": 2, "name": "Conectores", "item": f"{DOMAIN}/familias/conectores"},
+                    ],
+                },
+            ],
         },
         ensure_ascii=False,
-    ).replace("</", "<\/")
+    ).replace("</", r"<\/")
     whatsapp = quote("Hola Herraidea, necesito ayuda para elegir conectores para un proyecto de vidrio o barandal.")
     OUTPUT.parent.mkdir(exist_ok=True)
     OUTPUT.write_text(

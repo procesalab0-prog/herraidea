@@ -75,20 +75,40 @@ def render(product: dict, family_items: list[dict]) -> str:
         f'<a href="/productos/{slugify(item["code"])}"><b>{escape(item["code"])}</b><span>{escape(item["name"])}</span></a>'
         for item in family_items[:4]
     )
+    breadcrumb_items = [
+        {"@type": "ListItem", "position": 1, "name": "Inicio", "item": f"{DOMAIN}/"},
+    ]
+    if family_path:
+        breadcrumb_items.append(
+            {"@type": "ListItem", "position": 2, "name": family_name, "item": f"{DOMAIN}{family_path}"}
+        )
+    breadcrumb_items.append(
+        {"@type": "ListItem", "position": len(breadcrumb_items) + 1, "name": f"{code} — {name}", "item": canonical}
+    )
     schema = json.dumps(
         {
             "@context": "https://schema.org",
-            "@type": "Product",
-            "name": f"{code} — {name}",
-            "description": description,
-            "sku": code,
-            "category": product.get("category", ""),
-            "image": [f"{DOMAIN}{src}" for src in images],
-            "brand": {"@type": "Brand", "name": "Herraidea"},
-            "url": canonical,
+            "@graph": [
+                {
+                    "@type": "Product",
+                    "@id": f"{canonical}#product",
+                    "name": f"{code} — {name}",
+                    "description": description,
+                    "sku": code,
+                    "category": family_name,
+                    "image": [f"{DOMAIN}{src}" for src in images],
+                    "brand": {"@type": "Brand", "name": "Herraidea"},
+                    "url": canonical,
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "@id": f"{canonical}#breadcrumb",
+                    "itemListElement": breadcrumb_items,
+                },
+            ],
         },
         ensure_ascii=False,
-    ).replace("</", "<\/")
+    ).replace("</", r"<\/")
     return f"""<!doctype html>
 <html lang="es">
 <head>

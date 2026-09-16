@@ -32,20 +32,53 @@
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Herraidea",
-      "url": "https://www.herraidea.com/",
-      "logo": "https://www.herraidea.com/assets/logo-gray-nodot.png",
-      "description": "Diseño y fabricación de barandales, herrajes y soluciones de acero inoxidable a la medida.",
-      "telephone": "+52 477 790 7594",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Murales 212-A, Industrial la Capilla",
-        "postalCode": "37297",
-        "addressLocality": "León",
-        "addressRegion": "Guanajuato",
-        "addressCountry": "MX"
-      }
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://www.herraidea.com/#website",
+          "url": "https://www.herraidea.com/",
+          "name": "Herraidea",
+          "alternateName": "Herraidea Herrajes"
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://www.herraidea.com/#organization",
+          "name": "Herraidea",
+          "url": "https://www.herraidea.com/",
+          "logo": "https://www.herraidea.com/assets/logo-gray-nodot.png",
+          "description": "Diseño y fabricación de barandales, herrajes y soluciones de acero inoxidable a la medida.",
+          "telephone": "+52 477 790 7594",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Murales 212-A, Industrial la Capilla",
+            "postalCode": "37297",
+            "addressLocality": "León",
+            "addressRegion": "Guanajuato",
+            "addressCountry": "MX"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.herraidea.com/#webpage",
+          "url": "https://www.herraidea.com/",
+          "name": "Herraidea | Barandales y fabricación a la medida",
+          "description": "Herraidea diseña y fabrica barandales, herrajes y soluciones de acero inoxidable a la medida desde León, Guanajuato.",
+          "isPartOf": {"@id": "https://www.herraidea.com/#website"},
+          "about": {"@id": "https://www.herraidea.com/#organization"},
+          "mainEntity": {
+            "@type": "ItemList",
+            "name": "Secciones principales de Herraidea",
+            "itemListElement": [
+              {"@type": "ListItem", "position": 1, "name": "Sistemas de barandal", "url": "https://www.herraidea.com/sistemas"},
+              {"@type": "ListItem", "position": 2, "name": "Pipetas", "url": "https://www.herraidea.com/familias/pipetas"},
+              {"@type": "ListItem", "position": 3, "name": "Postes", "url": "https://www.herraidea.com/familias/postes"},
+              {"@type": "ListItem", "position": 4, "name": "Conectores", "url": "https://www.herraidea.com/familias/conectores"},
+              {"@type": "ListItem", "position": 5, "name": "Jaladeras", "url": "https://www.herraidea.com/familias/jaladeras"},
+              {"@type": "ListItem", "position": 6, "name": "Contacto", "url": "https://www.herraidea.com/#contacto"}
+            ]
+          }
+        }
+      ]
     }
   </script>
 </head>
@@ -53,7 +86,7 @@
   <header class="site-header">
     <a class="brand" href="#inicio" aria-label="Herraidea, inicio"><img src="/assets/logo-gray-nodot.png" alt="Herraidea"><i></i></a>
     <div class="header-controls"><button class="menu-toggle" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span><b>Menú</b></button>
-      <nav id="main-nav" class="main-nav"><a href="/sistemas">Sistemas</a><a href="#proyectos">Proyectos</a><a href="#calculadora">Calculadora</a><a href="#asesoria">Asesoría</a><a href="#catalogo">Catálogo</a><details class="nav-families"><summary>Familias</summary><div class="nav-family-menu"><a href="/familias/pipetas">Pipetas</a><a href="/familias/postes">Postes</a><a href="/familias/conectores">Conectores</a><a href="/familias/jaladeras">Jaladeras</a></div></details><a href="#recursos">Recursos</a><a class="nav-contact" href="#contacto">Cuéntanos tu proyecto</a></nav>
+      <nav id="main-nav" class="main-nav" aria-label="Navegación principal"><a href="/sistemas">Sistemas</a><a href="#proyectos">Proyectos</a><a href="#calculadora">Calculadora</a><a href="#asesoria">Asesoría</a><a href="#catalogo">Catálogo</a><details class="nav-families"><summary>Familias</summary><div class="nav-family-menu"><a href="/familias/pipetas">Pipetas</a><a href="/familias/postes">Postes</a><a href="/familias/conectores">Conectores</a><a href="/familias/jaladeras">Jaladeras</a></div></details><a href="#recursos">Recursos</a><a class="nav-contact" href="#contacto">Cuéntanos tu proyecto</a></nav>
     </div>
   </header>
 
@@ -316,7 +349,7 @@
 
   <dialog class="credits-dialog" id="credits-dialog" aria-labelledby="credits-title">
     <button class="credits-close" type="button" aria-label="Cerrar créditos">×</button>
-    <div class="credits-hero"><span class="credits-kicker">Seis toques desbloquearon</span><img class="procesalab-logo" src="/assets/brand/procesalab-horizontal.png" alt="Creado por ProcesaLab"><p>Diseño, desarrollo y evolución digital.</p><span class="current-version">Herraidea · v<span id="credits-version">1.40.0</span></span></div>
+    <div class="credits-hero"><span class="credits-kicker">Seis toques desbloquearon</span><img class="procesalab-logo" src="/assets/brand/procesalab-horizontal.png" alt="Creado por ProcesaLab"><p>Diseño, desarrollo y evolución digital.</p><span class="current-version">Herraidea · v<span id="credits-version">1.41.0</span></span></div>
     <div class="credits-content"><h2 id="credits-title">Construido versión a versión.</h2><p>Cada actualización queda documentada para que el proyecto conserve contexto, decisiones y continuidad.</p><div class="version-list" id="version-list"></div></div>
   </dialog>
 

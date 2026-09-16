@@ -1,5 +1,11 @@
 # Historial de versiones — Herraidea
 
+## 1.41.0 — 2026-09-16
+
+- La portada unifica la identidad de Herraidea como sitio, organización y página principal para facilitar la consolidación del resultado de marca en Google.
+- Sistemas y las cuatro familias quedan señalados como destinos principales mediante enlaces rastreables y datos estructurados consistentes.
+- La guía de sistemas, las familias y las 81 fichas de producto incorporan migas de pan estructuradas que explican la jerarquía Inicio → Familia → Producto.
+
 ## 1.40.0 — 2026-09-15
 
 - Diez configuraciones recientes de postes incorporan su vista CAD correspondiente del catálogo: variantes de 3 y 4 pines, laterales, intermedias, cacheteadas y postes con clips.
