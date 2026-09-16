@@ -1,12 +1,14 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.35.0**
+Versión actual: **1.36.0**
 
 El dominio oficial `www.herraidea.com` sirve la web desde Vercel y `herraidea.com` redirige de forma segura a esa dirección. Las referencias canónicas, la tarjeta social, los datos estructurados y el catálogo descargable usan el dominio oficial. Los registros de correo preexistentes se conservaron al migrar los servidores DNS desde Jimdo a Vercel.
 
 Sitio de producción: `https://www.herraidea.com/`
 
 ## Estado actual
+
+La selección de `/sistemas` se integra con la calculadora mediante `?sistema=clips`, `?sistema=tubo` o `?sistema=cable`. Al llegar, la herramienta activa el sistema y su modelo 3D automáticamente; si el visitante cambia la selección, la URL permanece sincronizada y el resumen de WhatsApp conserva el sistema, tramos, espacios, postes y esquinas estimadas.
 
 La página `/sistemas` reúne HRD 1525, HRD 1518 y HRD 1616 en una guía comparativa con acceso a sus experiencias 3D, la calculadora y las piezas disponibles. La línea de solera conduce al catálogo de Postes sin presentarse como un sistema completo validado. El menú principal y las cuatro páginas de familia enlazan esta nueva ruta.
 

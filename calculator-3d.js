@@ -377,6 +377,15 @@ if (form) {
   const modelLabel = document.querySelector('#calculator-model-label');
   const whatsapp = document.querySelector('#calculator-whatsapp');
   let lengths = [5.3];
+  const requestedSystem = new URLSearchParams(location.search).get('sistema');
+  const systemAliases = { hrd1525: 'clips', hrd1518: 'tubo', hrd1616: 'cable' };
+  const initialSystem = systems[requestedSystem] ? requestedSystem : systemAliases[requestedSystem];
+  if (initialSystem) {
+    systemSelect.value = initialSystem;
+    const url = new URL(location.href);
+    url.searchParams.set('sistema', initialSystem);
+    history.replaceState(history.state, '', url);
+  }
 
   function renderInputs() {
     segmentsRoot.innerHTML = lengths.map((length, index) => `
@@ -440,7 +449,12 @@ if (form) {
     nuevoTramo?.focus({ preventScroll: true });
     nuevoTramo?.scrollIntoView({ block: 'nearest' });
   });
-  systemSelect.addEventListener('change', update);
+  systemSelect.addEventListener('change', () => {
+    const url = new URL(location.href);
+    url.searchParams.set('sistema', systemSelect.value);
+    history.replaceState(history.state, '', url);
+    update();
+  });
   form.addEventListener('submit', event => event.preventDefault());
   renderInputs();
   update();

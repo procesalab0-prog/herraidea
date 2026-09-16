@@ -1,5 +1,12 @@
 # Historial de versiones — Herraidea
 
+## 1.36.0 — 2026-09-15
+
+- Cada solución de `/sistemas` incorpora un acceso directo para calcular ese sistema.
+- La calculadora lee la selección desde la URL, activa el sistema correspondiente y carga su modelo 3D sin pedir una segunda elección.
+- El selector mantiene la URL sincronizada para conservar o compartir el sistema elegido.
+- El cierre de la guía permite iniciar la calculadora directamente con HRD 1525, HRD 1518 o HRD 1616.
+
 ## 1.35.0 — 2026-09-15
 
 - Nueva página central en `/sistemas` para comparar HRD 1525, HRD 1518 y HRD 1616 desde una sola ruta.
