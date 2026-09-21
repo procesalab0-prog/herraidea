@@ -1,5 +1,9 @@
 # Historial de versiones — Herraidea
 
+## 1.53.0 — 2026-09-21
+
+- En teléfonos, la tarjeta 07 de los HRD 1533, 1534 y 1535 muestra la portada completa con el poste y el cristal visibles, evitando el recorte centrado únicamente en el vidrio.
+
 ## 1.52.0 — 2026-09-21
 
 - La tarjeta interactiva compartida de los HRD 1533, 1534 y 1535 utiliza la portada de estudio aprobada en acero satinado, con postes de canal, vidrio y pasamanos.
