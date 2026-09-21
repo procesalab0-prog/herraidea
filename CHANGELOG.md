@@ -1,5 +1,10 @@
 # Historial de versiones — Herraidea
 
+## 1.52.0 — 2026-09-21
+
+- La tarjeta interactiva compartida de los HRD 1533, 1534 y 1535 utiliza la portada de estudio aprobada en acero satinado, con postes de canal, vidrio y pasamanos.
+- La nueva ruta evita conservar en caché la portada provisional y mantiene intactos el despiece y la calculadora visual de la familia.
+
 ## 1.51.0 — 2026-09-21
 
 - Se integra la familia HRD 1533 / 1534 / 1535 en acero satinado, con despiece y calculadora visual. Incluye vinil de empaque para vidrio de 10 mm de espesor, especificado también en el texto de cotización.
