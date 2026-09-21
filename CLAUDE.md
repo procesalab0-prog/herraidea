@@ -1,12 +1,14 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.49.0**
+Versión actual: **1.50.0**
 
 El dominio oficial `www.herraidea.com` sirve la web desde Vercel y `herraidea.com` redirige de forma segura a esa dirección. Las referencias canónicas, la tarjeta social, los datos estructurados y el catálogo descargable usan el dominio oficial. Los registros de correo preexistentes se conservaron al migrar los servidores DNS desde Jimdo a Vercel.
 
 Sitio de producción: `https://www.herraidea.com/`
 
 ## Estado actual
+
+La tarjeta de Soluciones interactivas del HRD 1220 usa su portada de estudio aprobada con pinzas bajas, dos cristales y unión circular superior. La nueva ruta evita conservar la portada provisional en caché y mantiene intactos el estudio y la calculadora.
 
 Se añade el HRD 1220: pinzas bajas según CAD, vidrio sin pasamanos y unión circular superior entre paneles. Su calculadora distingue dos pinzas por cristal y cuenta las uniones rectas, sin reutilizar el conteo de postes compartidos.
 

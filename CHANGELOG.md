@@ -1,5 +1,10 @@
 # Historial de versiones — Herraidea
 
+## 1.50.0 — 2026-09-21
+
+- La tarjeta interactiva del HRD 1220 utiliza la portada de estudio aprobada con pinzas bajas, dos cristales y la unión circular superior entre paneles.
+- La nueva ruta de imagen evita conservar en caché la portada provisional y mantiene intactos el estudio y la calculadora del sistema.
+
 ## 1.49.0 — 2026-09-21
 
 - Se añade el HRD 1220: pinzas bajas según CAD, vidrio sin pasamanos y unión circular superior entre paneles. Su calculadora distingue dos pinzas por cristal y cuenta las uniones rectas, sin reutilizar el conteo de postes compartidos.
