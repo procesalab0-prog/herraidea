@@ -626,3 +626,12 @@ herraidea-post-calculator-3d canvas{display:block;width:100%;height:100%}
     transform:none;
   }
 }
+
+
+/* v1.55.1 · foco móvil del HRD 1616 */
+@media(max-width:640px){
+  .project-card-hrd1616 .project-card-photo img,
+  .project-card-hrd1616 .project-cover-video{
+    object-position:25% 60%;
+  }
+}

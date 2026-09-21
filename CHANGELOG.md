@@ -1,5 +1,9 @@
 # Historial de versiones — Herraidea
 
+## 1.55.1 — 2026-09-21
+
+- En teléfonos, la tarjeta 03 del HRD 1616 enfoca uno de sus postes junto con los cables, siguiendo el formato visual de la tarjeta 01.
+
 ## 1.55.0 — 2026-09-21
 
 - La tarjeta 08 del conjunto HRD 1206 / HRD 1301-A / HRD 1302-B / HRD 1301-C utiliza la portada de estudio aprobada con postes bajos, dos cristales y sus conectores.
