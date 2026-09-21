@@ -1,5 +1,10 @@
 # Historial de versiones — Herraidea
 
+## 1.43.0 — 2026-09-21
+
+- Los destinos principales declarados para Google coinciden con la barra de navegación: Sistemas, Proyectos, Calculadora, Asesoría, Catálogo y Contacto.
+- Pipetas, Postes, Conectores y Jaladeras permanecen organizados dentro de Catálogo y sus páginas de familia conservan la indexación individual.
+
 ## 1.42.0 — 2026-09-16
 
 - La calculadora visual y los controles de exploración 3D incorporan cápsulas de vidrio translúcido, reflejos que siguen el cursor y respuesta suave al pulsar. Se conservan los materiales reales y se respeta el movimiento reducido.
