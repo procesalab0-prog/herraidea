@@ -1,7 +1,13 @@
 {
-  "current": "1.48.0",
+  "current": "1.49.0",
   "studio": "ProcesaLab",
   "versions": [
+    {
+      "version": "1.49.0",
+      "date": "2026-09-21",
+      "title": "HRD 1220 con unión superior de cristales",
+      "summary": "Se añade el HRD 1220: pinzas bajas según CAD, vidrio sin pasamanos y unión circular superior entre paneles. Su calculadora distingue dos pinzas por cristal y cuenta las uniones rectas, sin reutilizar el conteo de postes compartidos."
+    },
     {
       "version": "1.48.0",
       "date": "2026-09-21",

@@ -1,5 +1,9 @@
 # Historial de versiones — Herraidea
 
+## 1.49.0 — 2026-09-21
+
+- Se añade el HRD 1220: pinzas bajas según CAD, vidrio sin pasamanos y unión circular superior entre paneles. Su calculadora distingue dos pinzas por cristal y cuenta las uniones rectas, sin reutilizar el conteo de postes compartidos.
+
 ## 1.48.0 — 2026-09-21
 
 - La tarjeta interactiva del HRD 1221 utiliza la portada de estudio aprobada con postes tubulares, soleras planas, dos cristales y pasamanos.

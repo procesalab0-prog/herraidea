@@ -6,6 +6,7 @@ import { RoomEnvironment } from '/assets/vendor/three/addons/environments/RoomEn
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
 const profiles = {
+  hrd1220: { target: [0, .55, 0], camera: [1.5, 1.1, 3.8], min: .18, detailTarget: [-.33, .105, .007], detailCamera: [-.06, .25, .45] },
   hrd1221: { target: [0, .53, .03], camera: [1.45, 1.08, 2.15], min: .25, detailTarget: [0, .78, .03], detailCamera: [.28, .89, .48] },
   hrd1223: { target: [0, .53, .03], camera: [1.45, 1.08, 2.15], min: .25, detailTarget: [.08, .78, .07], detailCamera: [.37, .9, .46] },
   clips: { target: [0, .48, 0], camera: [1.3, 1, 2.1], min: .7, detailTarget: [-.413, .695, 0], detailCamera: [-.163, .845, .48] },
@@ -15,6 +16,15 @@ const profiles = {
 };
 
 const projects = {
+  hrd1220: {
+    src: '/assets/projects/hrd-1220/hrd-1220.glb?v=1-47-0', profile: 'hrd1220', kicker: 'Estudio interactivo · HRD 1220',
+    title: 'HRD 1220 · Vidrio sin pasamanos', number: 'HRD 1220 · Pinza baja',
+    heading: 'Sujeción abajo. Unión entre cristales arriba.',
+    description: 'Explora la pinza, sus empaques y la tapa de la base. Un conector circular enlaza la junta superior de los dos cristales.',
+    content: '43 piezas y elementos de contexto', detail: 'Ver pinza',
+    aria: 'Sistema HRD 1220 con cuatro pinzas bajas y unión circular superior entre dos paneles de vidrio',
+    caveat: 'Pinza reconstruida según CAD: 185 mm de altura, base de 101.6 × 101.6 mm y vidrio de 10–12 mm. Conector superior y distribución pendientes de confirmar.'
+  },
   hrd1221: {
     src: '/assets/projects/hrd-1221/hrd-1221.glb?v=1-46-0', profile: 'hrd1221', kicker: 'Estudio interactivo · HRD 1221',
     title: 'HRD 1221 · Soleras y tubo', number: 'HRD 1221 · Soleras planas',
@@ -59,8 +69,8 @@ const projects = {
     aria: 'Modelo tridimensional interactivo del sistema HRD 1616 con postes cuadrados y cable de acero', caveat: ''
   },
   futbolito: {
-    src: '/assets/projects/futbolito/futbolito-herraidea.glb', profile: 'futbolito', kicker: 'Proyecto interactivo 06',
-    title: 'Futbolito Herraidea', number: '06 / Proyecto especial',
+    src: '/assets/projects/futbolito/futbolito-herraidea.glb', profile: 'futbolito', kicker: 'Proyecto interactivo 07',
+    title: 'Futbolito Herraidea', number: '07 / Proyecto especial',
     heading: 'Observa cómo cada parte forma el proyecto.',
     description: 'Gira el modelo, acércate a sus uniones y controla la separación de todos sus componentes.',
     content: '190 piezas y conjuntos', detail: 'Ver costado',
