@@ -1,12 +1,14 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.56.0**
+Versión actual: **1.56.1**
 
 El dominio oficial `www.herraidea.com` sirve la web desde Vercel y `herraidea.com` redirige de forma segura a esa dirección. Las referencias canónicas, la tarjeta social, los datos estructurados y el catálogo descargable usan el dominio oficial. Los registros de correo preexistentes se conservaron al migrar los servidores DNS desde Jimdo a Vercel.
 
 Sitio de producción: `https://www.herraidea.com/`
 
 ## Estado actual
+
+Las portadas 04 y 05 usan las imágenes finales proporcionadas del HRD 1223 y HRD 1221, sin cristal. Ambas comparten un lienzo de 1536 × 1024 con el fondo extendido, conservando el producto completo y sin modificar los modelos 3D.
 
 Las portadas 04 y 05 se rehacen desde los modelos 3D reales. La 04 muestra un solo HRD 1223 intermedio con brazos tubulares; la 05 muestra un solo HRD 1221 intermedio con soleras planas. Los cristales están alineados con las mordazas y los modelos interactivos permanecen sin cambios.
 

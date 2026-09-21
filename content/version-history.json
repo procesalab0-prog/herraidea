@@ -1,7 +1,13 @@
 {
-  "current": "1.56.0",
+  "current": "1.56.1",
   "studio": "ProcesaLab",
   "versions": [
+    {
+      "version": "1.56.1",
+      "date": "2026-09-21",
+      "title": "Portadas finales sin cristal para HRD 1223 y HRD 1221",
+      "summary": "Las tarjetas 04 y 05 usan las imágenes proporcionadas, normalizadas a 1536 × 1024 sin alterar los postes ni los modelos 3D."
+    },
     {
       "version": "1.56.0",
       "date": "2026-09-21",

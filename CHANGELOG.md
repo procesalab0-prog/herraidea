@@ -1,3 +1,8 @@
+## 1.56.1 — 2026-09-21
+
+- Las portadas 04 y 05 usan las imágenes finales proporcionadas del HRD 1223 y HRD 1221, sin cristal y sin alterar la geometría de los postes.
+- Ambas imágenes se normalizan a 1536 × 1024 mediante extensión del fondo original para conservar completos los productos en computadora y teléfono.
+
 ## 1.56.0 — 2026-09-21
 
 - Las portadas 04 y 05 se rehacen a partir de sus modelos 3D reales: un solo poste intermedio HRD 1223 con brazos tubulares y un solo HRD 1221 con soleras planas.
