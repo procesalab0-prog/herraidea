@@ -1,12 +1,14 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.54.0**
+Versión actual: **1.55.0**
 
 El dominio oficial `www.herraidea.com` sirve la web desde Vercel y `herraidea.com` redirige de forma segura a esa dirección. Las referencias canónicas, la tarjeta social, los datos estructurados y el catálogo descargable usan el dominio oficial. Los registros de correo preexistentes se conservaron al migrar los servidores DNS desde Jimdo a Vercel.
 
 Sitio de producción: `https://www.herraidea.com/`
 
 ## Estado actual
+
+La tarjeta 08 del conjunto HRD 1206 / HRD 1301-A / HRD 1302-B / HRD 1301-C usa su portada de estudio aprobada. En teléfonos, todas las portadas de Soluciones interactivas comparten el acercamiento visual de la tarjeta 01; la tarjeta 07 enfoca uno de sus postes laterales para mantener visibles poste y cristal.
 
 Se añade el conjunto con postes HRD 1206 de 45 cm, conector HRD 1301-A vidrio a muro, alineador HRD 1302-B y conector HRD 1301-C de esquina vidrio-vidrio, en acero satinado; despiece y calculadora.
 

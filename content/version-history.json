@@ -1,7 +1,13 @@
 {
-  "current": "1.54.0",
+  "current": "1.55.0",
   "studio": "ProcesaLab",
   "versions": [
+    {
+      "version": "1.55.0",
+      "date": "2026-09-21",
+      "title": "Portada HRD 1301 y encuadre móvil uniforme",
+      "summary": "Se publica la portada aprobada del conjunto HRD 1206 y conectores HRD 1301/1302. Todas las tarjetas móviles adoptan el formato de acercamiento de la tarjeta 01."
+    },
     {
       "version": "1.54.0",
       "date": "2026-09-21",

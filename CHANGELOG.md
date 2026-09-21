@@ -1,5 +1,10 @@
 # Historial de versiones — Herraidea
 
+## 1.55.0 — 2026-09-21
+
+- La tarjeta 08 del conjunto HRD 1206 / HRD 1301-A / HRD 1302-B / HRD 1301-C utiliza la portada de estudio aprobada con postes bajos, dos cristales y sus conectores.
+- En teléfonos, todas las portadas de Soluciones interactivas usan el mismo formato de acercamiento de la tarjeta 01. Cada imagen conserva un poste y el cristal visibles; la tarjeta 07 utiliza un punto focal lateral para evitar mostrar solamente vidrio.
+
 ## 1.54.0 — 2026-09-21
 
 - Se añade el conjunto con postes HRD 1206 de 45 cm, conector HRD 1301-A vidrio a muro, alineador HRD 1302-B y conector HRD 1301-C de esquina vidrio-vidrio, en acero satinado; despiece y calculadora.
