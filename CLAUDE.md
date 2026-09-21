@@ -1,12 +1,14 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.45.2**
+Versión actual: **1.46.0**
 
 El dominio oficial `www.herraidea.com` sirve la web desde Vercel y `herraidea.com` redirige de forma segura a esa dirección. Las referencias canónicas, la tarjeta social, los datos estructurados y el catálogo descargable usan el dominio oficial. Los registros de correo preexistentes se conservaron al migrar los servidores DNS desde Jimdo a Vercel.
 
 Sitio de producción: `https://www.herraidea.com/`
 
 ## Estado actual
+
+Se añade el HRD 1221 con cuerpo tubular, dos soleras horizontales continuas con fijación central y base circular de tres agujeros. Cuenta con despiece y calculadora propios, conservando el HRD 1223 aprobado.
 
 El HRD 1223 tubular usa una sola placa circular con tres agujeros pasantes a 120 grados. Se retiran el segundo aro y las fijaciones que ocultaban los agujeros, en el despiece y la calculadora.
 

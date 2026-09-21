@@ -5,6 +5,10 @@ import { RoomEnvironment } from '/assets/vendor/three/addons/environments/RoomEn
 
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const systems = {
+  hrd1221: {
+    name: 'HRD 1221 de tubo con soleras planas + vidrio', code: 'HRD 1221',
+    src: '/assets/projects/hrd-1221/hrd-1221.glb?v=1-46-0', conceptual: true
+  },
   hrd1223: {
     name: 'HRD 1223 de tubo + vidrio', code: 'HRD 1223',
     src: '/assets/projects/hrd-1223/hrd-1223-tubo.glb?v=1-45-2', conceptual: true
@@ -168,37 +172,46 @@ function cableSpan(source, spacing, omitStart = false, omitEnd = false, side = '
 }
 
 // The source is one centered post. Keep hardware dimensions fixed; only fit glass/rail.
-function hrd1223Post(source, sides = ['left', 'right']) {
+function glassPost(source, sides = ['left', 'right'], system = 'hrd1223', includeBody = true) {
   const post = new THREE.Group();
   source.children.forEach(part => {
-    if (part.userData.role === 'post' || (part.userData.role === 'arm' && sides.includes(part.userData.side))) {
+    if (part.userData.role === 'crossbar' && sides.length) {
+      const strip = cloneMesh(part);
+      if (sides.length === 1) {
+        strip.scale.x *= .5;
+        strip.position.x += sides[0] === 'left' ? -.0575 : .0575;
+      }
+      post.add(strip);
+    } else if ((includeBody && part.userData.role === 'post') ||
+      (part.userData.role === 'barfix' && sides.length) ||
+      (part.userData.role === 'arm' && sides.includes(part.userData.side))) {
       post.add(cloneMesh(part));
     }
   });
-  post.name = 'HRD1223_Poste';
+  post.name = includeBody ? `${system.toUpperCase()}_Poste` : `${system.toUpperCase()}_Brazos`;
   return post;
 }
 
-function hrd1223Span(source, spacing, makeStart, makeEnd, terminalStart) {
+function glassSpan(source, spacing, makeStart, makeEnd, terminalStart, system) {
   const span = new THREE.Group();
   if (makeStart) {
-    const post = hrd1223Post(source, terminalStart ? ['right'] : ['left', 'right']);
+    const post = glassPost(source, terminalStart ? ['right'] : ['left', 'right'], system);
     post.position.x = -spacing / 2;
     span.add(post);
   }
   if (makeEnd) {
-    const post = hrd1223Post(source, ['left']);
+    const post = glassPost(source, ['left'], system);
     post.position.x = spacing / 2;
     span.add(post);
   }
   const glass = cloneMesh(source.getObjectByName('Contexto_vidrio_right'));
   glass.position.x = 0;
   glass.scale.x *= Math.max(.01, spacing - .05) / .605;
-  glass.name = 'HRD1223_Vidrio';
+  glass.name = `${system.toUpperCase()}_Vidrio`;
   span.add(glass);
   const rail = cloneMesh(source.getObjectByName('Contexto_pasamanos'));
   rail.scale.x *= spacing / 1.32;
-  rail.name = 'HRD1223_Pasamanos';
+  rail.name = `${system.toUpperCase()}_Pasamanos`;
   span.add(rail);
   return span;
 }
@@ -215,14 +228,12 @@ function centeredEndpoint(source, prefix, offset) {
 
 function sharedCorner(system, source, cornerSource, position, junctionIndex, incomingAngle, outgoingAngle) {
   const corner = new THREE.Group();
-  if (system === 'hrd1223') {
-    const body = hrd1223Post(source, []);
+  if (system === 'hrd1223' || system === 'hrd1221') {
+    const body = glassPost(source, [], system);
     body.rotation.y = -incomingAngle;
     corner.add(body);
     [['left', incomingAngle], ['right', outgoingAngle]].forEach(([side, angle]) => {
-      const arms = new THREE.Group();
-      source.children.filter(part => part.userData.role === 'arm' && part.userData.side === side)
-        .forEach(part => arms.add(cloneMesh(part)));
+      const arms = glassPost(source, [side], system, false);
       arms.rotation.y = -angle;
       corner.add(arms);
     });
@@ -341,10 +352,10 @@ class PostCalculator3D extends HTMLElement {
           const omitStart = segmentIndex > 0 && index === 0;
           const omitEnd = segmentIndex < segments.length - 1 && index === segment.spaces - 1;
           const cableSide = segmentIndex === 1 ? 'B' : 'A';
-          const span = system === 'hrd1223'
-            ? hrd1223Span(source, spacing, !omitStart,
+          const span = (system === 'hrd1223' || system === 'hrd1221')
+            ? glassSpan(source, spacing, !omitStart,
                 segmentIndex === segments.length - 1 && index === segment.spaces - 1,
-                segmentIndex === 0 && index === 0)
+                segmentIndex === 0 && index === 0, system)
             : system === 'clips'
             ? clipSpan(source, spacing, omitStart, omitEnd)
             : system === 'tubo'
@@ -488,7 +499,7 @@ if (form) {
     const modelNote = document.querySelector('#calculator-model-note');
     if (modelNote) {
       modelNote.textContent = system.conceptual
-        ? 'HRD 1223: reconstrucción tubular según CAD y fotografías. Medidas y solución de esquina por confirmar; el rango de separación es orientativo y requiere validación para este sistema.'
+        ? `${system.code}: reconstrucción según CAD y fotografías. Medidas y solución de esquina por confirmar; el rango de separación es orientativo y requiere validación para este sistema.`
         : 'La vista utiliza las piezas 3D recibidas para esta solución.';
     }
     modelLabel.textContent = `${system.code} · ${system.conceptual ? 'estudio de tubo' : 'modelo 3D real'}`;

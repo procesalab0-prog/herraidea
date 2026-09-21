@@ -226,14 +226,19 @@
           <div class="project-card-copy"><span>04 · HRD 1223 · Estudio de tubo</span><h3>Tubo circular.<br>Brazos ajustables.</h3><p>Cuerpo tubular, cuatro puntos de sujeción y vidrio. Una reconstrucción visual para explorar cada unión.</p></div>
           <button class="project-open" type="button" data-open-project="hrd1223" aria-haspopup="dialog"><span>Explorar poste</span><b aria-hidden="true"><i></i></b></button>
         </article>
+        <article class="project-card project-card-hrd1221" data-project="hrd1221">
+          <figure class="project-card-photo"><img src="/assets/projects/hrd-1221/portada.png" alt="HRD 1221 con cuerpo circular, soleras horizontales y discos para vidrio" loading="lazy"></figure>
+          <div class="project-card-copy"><span>05 · HRD 1221 · Soleras planas</span><h3>Soleras planas.<br>Cuerpo circular.</h3><p>Dos soleras continuas con fijación central y cuatro puntos de sujeción al vidrio.</p></div>
+          <button class="project-open" type="button" data-open-project="hrd1221" aria-haspopup="dialog"><span>Explorar poste</span><b aria-hidden="true"><i></i></b></button>
+        </article>
         <article class="project-card project-card-featured" data-project="futbolito">
           <figure class="project-card-photo"><img src="/assets/projects/futbolito/portada-estudio.png" alt="Futbolito Herraidea de cristal y acero inoxidable en estudio" loading="lazy"></figure>
-          <div class="project-card-copy"><span>05 · Proyecto especial</span><h3>Futbolito<br>Herraidea.</h3><p>190 piezas y conjuntos en una experiencia que puedes separar, girar y volver a armar.</p></div>
+          <div class="project-card-copy"><span>06 · Proyecto especial</span><h3>Futbolito<br>Herraidea.</h3><p>190 piezas y conjuntos en una experiencia que puedes separar, girar y volver a armar.</p></div>
           <button class="project-open" type="button" data-open-project="futbolito" aria-haspopup="dialog"><span>Abrir proyecto 3D</span><b aria-hidden="true"><i></i></b></button>
         </article>
       </div>
       <div class="section-inner projects-controls">
-        <div class="projects-pagination" aria-label="Elegir solución"><button class="active" type="button" data-project-slide="0" aria-label="Ver postes con clips"><i></i></button><button type="button" data-project-slide="1" aria-label="Ver poste HRD 1518"><i></i></button><button type="button" data-project-slide="2" aria-label="Ver sistema HRD 1616"><i></i></button><button type="button" data-project-slide="3" aria-label="Ver HRD 1223 de tubo"><i></i></button><button type="button" data-project-slide="4" aria-label="Ver Futbolito"><i></i></button></div>
+        <div class="projects-pagination" aria-label="Elegir solución"><button class="active" type="button" data-project-slide="0" aria-label="Ver postes con clips"><i></i></button><button type="button" data-project-slide="1" aria-label="Ver poste HRD 1518"><i></i></button><button type="button" data-project-slide="2" aria-label="Ver sistema HRD 1616"><i></i></button><button type="button" data-project-slide="3" aria-label="Ver HRD 1223 de tubo"><i></i></button><button type="button" data-project-slide="4" aria-label="Ver HRD 1221"><i></i></button><button type="button" data-project-slide="5" aria-label="Ver Futbolito"><i></i></button></div>
         <button class="projects-next" type="button" aria-label="Ver siguiente solución"><i aria-hidden="true"></i></button>
       </div>
     </section>
@@ -246,7 +251,7 @@
       <div class="section-inner calculator-shell">
         <form class="calculator-controls" id="post-calculator">
           <div class="calculator-control-head"><span>Configura tu recorrido</span><strong id="calculator-step-count">01 tramo</strong></div>
-          <label class="calculator-field" for="calculator-system"><span>Solución con modelo 3D disponible</span><select id="calculator-system" name="solucion"><option value="clips">Postes con clips + vidrio · HRD 1525</option><option value="tubo">Sistema de tubo de 1/2&quot; · HRD 1518</option><option value="cable">Poste cuadrado + cable de acero · HRD 1616</option><option value="hrd1223">Tubo + vidrio · HRD 1223 (estudio)</option></select><small id="calculator-model-note">La vista utiliza las piezas 3D recibidas para esta solución.</small></label>
+          <label class="calculator-field" for="calculator-system"><span>Solución con modelo 3D disponible</span><select id="calculator-system" name="solucion"><option value="clips">Postes con clips + vidrio · HRD 1525</option><option value="tubo">Sistema de tubo de 1/2&quot; · HRD 1518</option><option value="cable">Poste cuadrado + cable de acero · HRD 1616</option><option value="hrd1223">Tubo + vidrio · HRD 1223 (estudio)</option><option value="hrd1221">Tubo con soleras planas · HRD 1221 (estudio)</option></select><small id="calculator-model-note">La vista utiliza las piezas 3D recibidas para esta solución.</small></label>
           <fieldset class="calculator-segments-fieldset"><legend>Medidas por tramo</legend><div id="calculator-segments"></div><button class="calculator-add" id="calculator-add-segment" type="button"><span>＋</span> Agregar tramo con esquina</button></fieldset>
           <p class="calculator-rule"><i aria-hidden="true"></i><span>Cada tramo nuevo comparte con el anterior el poste de la esquina. Máximo 8 tramos en esta vista.</span></p>
         </form>
@@ -367,7 +372,7 @@
   </dialog>
 
   <footer><div class="section-inner"><a class="footer-brand" href="#inicio" aria-label="Herraidea, volver al inicio"><img src="/assets/logo-light-nodot.png" alt="Herraidea"><i aria-hidden="true"></i></a><nav><a href="/sistemas">Sistemas</a><a href="#asesoria">Asesoría</a><a href="#catalogo">Catálogo</a><a href="#recursos">Recursos</a><a href="#nosotros">Nosotros</a><a href="#envios">Envíos</a><a href="#contacto">Contacto</a></nav><span>León, Gto. · Desde 2013</span></div></footer>
-  <script src="/hrd-map.js?v=1-10"></script><script src="/hero.js?v=1-38-0"></script><script src="/project-cover.js?v=1-25-0"></script><script type="module" src="/project-3d-v2.js?v=1-45-2"></script><script type="module" src="/calculator-3d.js?v=1-45-2"></script>
+  <script src="/hrd-map.js?v=1-10"></script><script src="/hero.js?v=1-38-0"></script><script src="/project-cover.js?v=1-25-0"></script><script type="module" src="/project-3d-v2.js?v=1-46-0"></script><script type="module" src="/calculator-3d.js?v=1-46-0"></script>
   <script src="/liquid-glass.js?v=1-42-0" defer></script>
 </body>
 </html>

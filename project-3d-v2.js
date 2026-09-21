@@ -6,6 +6,7 @@ import { RoomEnvironment } from '/assets/vendor/three/addons/environments/RoomEn
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
 const profiles = {
+  hrd1221: { target: [0, .53, .03], camera: [1.45, 1.08, 2.15], min: .25, detailTarget: [0, .78, .03], detailCamera: [.28, .89, .48] },
   hrd1223: { target: [0, .53, .03], camera: [1.45, 1.08, 2.15], min: .25, detailTarget: [.08, .78, .07], detailCamera: [.37, .9, .46] },
   clips: { target: [0, .48, 0], camera: [1.3, 1, 2.1], min: .7, detailTarget: [-.413, .695, 0], detailCamera: [-.163, .845, .48] },
   hrd1518: { target: [0, .48, 0], camera: [1.3, 1, 2.1], min: .3, detailTarget: [0, .78, .05], detailCamera: [.23, .89, .39] },
@@ -14,6 +15,15 @@ const profiles = {
 };
 
 const projects = {
+  hrd1221: {
+    src: '/assets/projects/hrd-1221/hrd-1221.glb?v=1-46-0', profile: 'hrd1221', kicker: 'Estudio interactivo · HRD 1221',
+    title: 'HRD 1221 · Soleras y tubo', number: 'HRD 1221 · Soleras planas',
+    heading: 'Una solera continua. Dos puntos de sujeción.',
+    description: 'Explora el poste circular, las dos soleras horizontales y su fijación central. Acércate a los discos del vidrio o separa cada componente.',
+    content: '33 piezas y elementos de contexto', detail: 'Ver solera',
+    aria: 'HRD 1221 de cuerpo circular con dos soleras horizontales continuas y vidrio',
+    caveat: 'Reconstrucción visual según CAD. Espesores, anclaje y detalles internos por confirmar; vidrio y pasamanos como contexto de instalación.'
+  },
   hrd1223: {
     src: '/assets/projects/hrd-1223/hrd-1223-tubo.glb?v=1-45-2', profile: 'hrd1223', kicker: 'Estudio interactivo · HRD 1223',
     title: 'HRD 1223 · Tubo y vidrio', number: 'HRD 1223 · Cuerpo tubular',
@@ -49,8 +59,8 @@ const projects = {
     aria: 'Modelo tridimensional interactivo del sistema HRD 1616 con postes cuadrados y cable de acero', caveat: ''
   },
   futbolito: {
-    src: '/assets/projects/futbolito/futbolito-herraidea.glb', profile: 'futbolito', kicker: 'Proyecto interactivo 05',
-    title: 'Futbolito Herraidea', number: '05 / Proyecto especial',
+    src: '/assets/projects/futbolito/futbolito-herraidea.glb', profile: 'futbolito', kicker: 'Proyecto interactivo 06',
+    title: 'Futbolito Herraidea', number: '06 / Proyecto especial',
     heading: 'Observa cómo cada parte forma el proyecto.',
     description: 'Gira el modelo, acércate a sus uniones y controla la separación de todos sus componentes.',
     content: '190 piezas y conjuntos', detail: 'Ver costado',

@@ -1,5 +1,9 @@
 # Historial de versiones — Herraidea
 
+## 1.46.0 — 2026-09-21
+
+- Se añade el HRD 1221 con cuerpo tubular, dos soleras horizontales continuas con fijación central y base circular de tres agujeros. Cuenta con despiece y calculadora propios, conservando el HRD 1223 aprobado.
+
 ## 1.45.2 — 2026-09-21
 
 - El HRD 1223 tubular usa una sola placa circular con tres agujeros pasantes a 120 grados. Se retiran el segundo aro y las fijaciones que ocultaban los agujeros, en el despiece y la calculadora.
