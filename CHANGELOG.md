@@ -1,5 +1,10 @@
 # Historial de versiones — Herraidea
 
+## 1.47.0 — 2026-09-21
+
+- La tarjeta interactiva del HRD 1223 utiliza la portada de estudio aprobada con tres postes tubulares, brazos ajustables, dos cristales y pasamanos.
+- La imagen queda sincronizada con el modelo 3D publicado en la versión anterior y utiliza una ruta nueva para evitar la caché de la portada provisional.
+
 ## 1.46.0 — 2026-09-21
 
 - Se añade el HRD 1221 con cuerpo tubular, dos soleras horizontales continuas con fijación central y base circular de tres agujeros. Cuenta con despiece y calculadora propios, conservando el HRD 1223 aprobado.
