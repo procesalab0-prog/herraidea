@@ -5,6 +5,11 @@ import { RoomEnvironment } from '/assets/vendor/three/addons/environments/RoomEn
 
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const systems = {
+  hrd153x: {
+    name: 'HRD 1533 / 1534 / 1535 · Poste con canales para vidrio', code: 'HRD 1533 / 1534 / 1535',
+    src: '/assets/projects/hrd-153x/hrd-153x.glb?v=1-51-0',
+    cornerSrc: '/assets/projects/hrd-153x/hrd-153x-esquina.glb?v=1-51-0', conceptual: true, channel: true
+  },
   hrd1220: {
     name: 'HRD 1220 · Pinzas bajas y unión de cristales', code: 'HRD 1220',
     src: '/assets/projects/hrd-1220/hrd-1220.glb?v=1-47-0', conceptual: true, spigot: true
@@ -188,7 +193,7 @@ function glassPost(source, sides = ['left', 'right'], system = 'hrd1223', includ
       post.add(strip);
     } else if ((includeBody && part.userData.role === 'post') ||
       (part.userData.role === 'barfix' && sides.length) ||
-      (part.userData.role === 'arm' && sides.includes(part.userData.side))) {
+      (['arm', 'lining'].includes(part.userData.role) && sides.includes(part.userData.side))) {
       post.add(cloneMesh(part));
     }
   });
@@ -210,7 +215,7 @@ function glassSpan(source, spacing, makeStart, makeEnd, terminalStart, system) {
   }
   const glass = cloneMesh(source.getObjectByName('Contexto_vidrio_right'));
   glass.position.x = 0;
-  glass.scale.x *= Math.max(.01, spacing - .05) / .605;
+  glass.scale.x *= Math.max(.01, spacing - (system === 'hrd153x' ? .034 : .05)) / .605;
   glass.name = `${system.toUpperCase()}_Vidrio`;
   span.add(glass);
   const rail = cloneMesh(source.getObjectByName('Contexto_pasamanos'));
@@ -261,7 +266,11 @@ function centeredEndpoint(source, prefix, offset) {
 
 function sharedCorner(system, source, cornerSource, position, junctionIndex, incomingAngle, outgoingAngle) {
   const corner = new THREE.Group();
-  if (system === 'hrd1223' || system === 'hrd1221') {
+  if (system === 'hrd153x') {
+    const body = glassPost(cornerSource, ['left', 'right'], system);
+    body.rotation.y = -incomingAngle;
+    corner.add(body);
+  } else if (system === 'hrd1223' || system === 'hrd1221') {
     const body = glassPost(source, [], system);
     body.rotation.y = -incomingAngle;
     corner.add(body);
@@ -387,7 +396,7 @@ class PostCalculator3D extends HTMLElement {
           const cableSide = segmentIndex === 1 ? 'B' : 'A';
           const span = system === 'hrd1220'
             ? spigotSpan(source, spacing, index > 0)
-            : (system === 'hrd1223' || system === 'hrd1221')
+            : (system === 'hrd1223' || system === 'hrd1221' || system === 'hrd153x')
             ? glassSpan(source, spacing, !omitStart,
                 segmentIndex === segments.length - 1 && index === segment.spaces - 1,
                 segmentIndex === 0 && index === 0, system)
@@ -547,11 +556,12 @@ if (form) {
       status.textContent = 'Distribución visual: dos pinzas por cristal y una unión circular en cada junta recta. Anchos de cristal, anclajes y uniones de esquina por validar.';
       modelNote.textContent = 'Pinza de 185 mm, base 101.6 × 101.6 mm y vidrio de 10–12 mm según CAD. El conector circular superior es una reconstrucción visual.';
     }
-    modelLabel.textContent = `${system.code} · ${system.spigot ? 'pinzas y unión superior' : system.conceptual ? 'estudio de tubo' : 'modelo 3D real'}`;
+    if (system.channel) modelNote.textContent = 'Incluye vinil de empaque para vidrio de 10 mm de espesor. Modelo visual de la familia HRD 1533 / 1534 / 1535; medidas del perfil y distribución por validar.';
+    modelLabel.textContent = `${system.code} · ${system.spigot ? 'pinzas y unión superior' : system.channel ? 'vidrio de 10 mm + vinil' : system.conceptual ? 'estudio de tubo' : 'modelo 3D real'}`;
     model.setLayout(distributions, systemSelect.value);
     const lines = distributions.map((item, index) => `Tramo ${index + 1}: ${item.length.toFixed(2)} m, ${item.spaces} ${system.spigot ? 'cristales' : 'espacios'} de ${(system.spigot ? item.spacing - .01 : item.spacing).toFixed(2)} m.`).join('\n');
     const quantity = system.spigot ? `${totalPosts} pinzas estimadas y ${unions} uniones superiores en juntas rectas${corners ? ', esquinas pendientes de validar' : ''}` : `${totalPosts} postes estimados${corners ? `, considerando ${corners} ${corners === 1 ? 'esquina compartida' : 'esquinas compartidas'}` : ''}`;
-    const message = `Hola, quiero revisar esta estimación para ${system.name}${system.conceptual ? ' (estudio visual, medidas y esquinas pendientes de validar)' : ''}:\n${lines}\nTotal: ${totalMeters.toFixed(2)} m, ${quantity}.\nConfiguración: ${configurationUrl().href}`;
+    const message = `Hola, quiero revisar esta estimación para ${system.name}${system.conceptual ? ' (estudio visual, medidas y esquinas pendientes de validar)' : ''}:\n${lines}${system.channel ? '\nIncluye vinil de empaque para vidrio de 10 mm de espesor.' : ''}\nTotal: ${totalMeters.toFixed(2)} m, ${quantity}.\nConfiguración: ${configurationUrl().href}`;
     whatsapp.href = `https://wa.me/524772561695?text=${encodeURIComponent(message)}`;
   }
 

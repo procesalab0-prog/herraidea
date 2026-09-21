@@ -1,5 +1,9 @@
 # Historial de versiones — Herraidea
 
+## 1.51.0 — 2026-09-21
+
+- Se integra la familia HRD 1533 / 1534 / 1535 en acero satinado, con despiece y calculadora visual. Incluye vinil de empaque para vidrio de 10 mm de espesor, especificado también en el texto de cotización.
+
 ## 1.50.0 — 2026-09-21
 
 - La tarjeta interactiva del HRD 1220 utiliza la portada de estudio aprobada con pinzas bajas, dos cristales y la unión circular superior entre paneles.

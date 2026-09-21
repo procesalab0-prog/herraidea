@@ -6,6 +6,7 @@ import { RoomEnvironment } from '/assets/vendor/three/addons/environments/RoomEn
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
 const profiles = {
+  hrd153x: { target: [0, .52, 0], camera: [1.2, 1.1, 2.1], min: .15, detailTarget: [0, .88, 0], detailCamera: [.19, 1.13, .29] },
   hrd1220: { target: [0, .55, 0], camera: [1.5, 1.1, 3.8], min: .18, detailTarget: [-.33, .105, .007], detailCamera: [-.06, .25, .45] },
   hrd1221: { target: [0, .53, .03], camera: [1.45, 1.08, 2.15], min: .25, detailTarget: [0, .78, .03], detailCamera: [.28, .89, .48] },
   hrd1223: { target: [0, .53, .03], camera: [1.45, 1.08, 2.15], min: .25, detailTarget: [.08, .78, .07], detailCamera: [.37, .9, .46] },
@@ -16,6 +17,15 @@ const profiles = {
 };
 
 const projects = {
+  hrd153x: {
+    src: '/assets/projects/hrd-153x/hrd-153x.glb?v=1-51-0', profile: 'hrd153x', kicker: 'Estudio interactivo · HRD 1533 / 1534 / 1535',
+    title: 'HRD 1533 / 1534 / 1535 · Vidrio en canal', number: 'Postes con canales · Acero satinado',
+    heading: 'El cristal se integra en el poste.',
+    description: 'Incluye vinil de empaque para vidrio de 10 mm de espesor. Explora el perfil acanalado, la base de cuatro agujeros y el soporte articulado del pasamanos.',
+    content: '17 piezas y elementos de contexto', detail: 'Ver canal y soporte',
+    aria: 'Estudio de poste acanalado en acero satinado con vidrio y pasamanos',
+    caveat: 'Reconstrucción visual a partir de fotografías. Medidas del perfil y configuración de cada código pendientes de confirmar.'
+  },
   hrd1220: {
     src: '/assets/projects/hrd-1220/hrd-1220.glb?v=1-47-0', profile: 'hrd1220', kicker: 'Estudio interactivo · HRD 1220',
     title: 'HRD 1220 · Vidrio sin pasamanos', number: 'HRD 1220 · Pinza baja',
@@ -69,8 +79,8 @@ const projects = {
     aria: 'Modelo tridimensional interactivo del sistema HRD 1616 con postes cuadrados y cable de acero', caveat: ''
   },
   futbolito: {
-    src: '/assets/projects/futbolito/futbolito-herraidea.glb', profile: 'futbolito', kicker: 'Proyecto interactivo 07',
-    title: 'Futbolito Herraidea', number: '07 / Proyecto especial',
+    src: '/assets/projects/futbolito/futbolito-herraidea.glb', profile: 'futbolito', kicker: 'Proyecto interactivo 08',
+    title: 'Futbolito Herraidea', number: '08 / Proyecto especial',
     heading: 'Observa cómo cada parte forma el proyecto.',
     description: 'Gira el modelo, acércate a sus uniones y controla la separación de todos sus componentes.',
     content: '190 piezas y conjuntos', detail: 'Ver costado',

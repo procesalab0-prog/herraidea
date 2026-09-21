@@ -1,7 +1,13 @@
 {
-  "current": "1.50.0",
+  "current": "1.51.0",
   "studio": "ProcesaLab",
   "versions": [
+    {
+      "version": "1.51.0",
+      "date": "2026-09-21",
+      "title": "Postes con canal y vinil para vidrio de 10 mm",
+      "summary": "Se integra la familia HRD 1533 / 1534 / 1535 en acero satinado, con despiece y calculadora visual. Incluye vinil de empaque para vidrio de 10 mm de espesor, especificado también en el texto de cotización."
+    },
     {
       "version": "1.50.0",
       "date": "2026-09-21",
