@@ -1,7 +1,13 @@
 {
-  "current": "1.43.0",
+  "current": "1.44.0",
   "studio": "ProcesaLab",
   "versions": [
+    {
+      "version": "1.44.0",
+      "date": "2026-09-21",
+      "title": "Medición y rendimiento en producción",
+      "summary": "Las 87 páginas públicas incorporan Web Analytics y Speed Insights para medir tráfico y Core Web Vitals; los eventos personalizados quedan reservados para la entrega final y la evaluación de Pro."
+    },
     {
       "version": "1.43.0",
       "date": "2026-09-21",

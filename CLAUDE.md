@@ -1,12 +1,14 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.43.0**
+Versión actual: **1.44.0**
 
 El dominio oficial `www.herraidea.com` sirve la web desde Vercel y `herraidea.com` redirige de forma segura a esa dirección. Las referencias canónicas, la tarjeta social, los datos estructurados y el catálogo descargable usan el dominio oficial. Los registros de correo preexistentes se conservaron al migrar los servidores DNS desde Jimdo a Vercel.
 
 Sitio de producción: `https://www.herraidea.com/`
 
 ## Estado actual
+
+Vercel Web Analytics y Speed Insights están integrados en las 87 páginas públicas y en sus generadores. La fase actual mide tráfico, rutas, referencias, países, dispositivos y Core Web Vitals con las capacidades incluidas en Hobby y sin cookies. Los eventos personalizados de calculadora, WhatsApp, catálogo y descargas se reservan para la entrega final, cuando se evaluará el plan Pro.
 
 Los destinos principales declarados en la portada coinciden con la barra de navegación: Sistemas, Proyectos, Calculadora, Asesoría, Catálogo y Contacto. Las cuatro familias permanecen como rutas individuales dentro del catálogo, conservando sus fichas y jerarquía para búsquedas por producto.
 

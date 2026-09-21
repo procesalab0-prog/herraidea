@@ -104,6 +104,13 @@ def main() -> None:
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Archivo+Narrow:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/family-page.css?v=1-34-0">
   <script type="application/ld+json">{schema}</script>
+  <!-- Vercel Web Analytics and Speed Insights -->
+  <script>
+    window.va = window.va || function () {{ (window.vaq = window.vaq || []).push(arguments); }};
+    window.si = window.si || function () {{ (window.siq = window.siq || []).push(arguments); }};
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+  <script defer src="/_vercel/speed-insights/script.js"></script>
 </head>
 <body class="family-jaladeras">
   <header class="family-header">

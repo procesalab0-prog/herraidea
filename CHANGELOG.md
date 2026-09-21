@@ -1,5 +1,12 @@
 # Historial de versiones — Herraidea
 
+## 1.44.0 — 2026-09-21
+
+- Web Analytics queda habilitado en Vercel y se incorpora a las 87 páginas públicas para medir visitas, páginas, referencias, países y dispositivos sin cookies.
+- Speed Insights se incorpora en toda la web para recopilar Core Web Vitals y orientar la optimización con datos reales de escritorio y móvil.
+- Los cinco generadores de páginas conservan ambas integraciones en futuras regeneraciones.
+- Los eventos personalizados se reservan para la entrega final y la evaluación del plan Pro.
+
 ## 1.43.0 — 2026-09-21
 
 - Los destinos principales declarados para Google coinciden con la barra de navegación: Sistemas, Proyectos, Calculadora, Asesoría, Catálogo y Contacto.
