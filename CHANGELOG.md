@@ -1,5 +1,9 @@
 # Historial de versiones — Herraidea
 
+## 1.54.0 — 2026-09-21
+
+- Se añade el conjunto con postes HRD 1206 de 45 cm, conector HRD 1301-A vidrio a muro, alineador HRD 1302-B y conector HRD 1301-C de esquina vidrio-vidrio, en acero satinado; despiece y calculadora.
+
 ## 1.53.0 — 2026-09-21
 
 - En teléfonos, la tarjeta 07 de los HRD 1533, 1534 y 1535 muestra la portada completa con el poste y el cristal visibles, evitando el recorte centrado únicamente en el vidrio.

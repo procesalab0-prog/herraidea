@@ -5,6 +5,10 @@ import { RoomEnvironment } from '/assets/vendor/three/addons/environments/RoomEn
 
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const systems = {
+  hrd1206: {
+    name: 'Postes HRD 1206 de 45 cm + HRD 1301-A / 1302-B / 1301-C', code: 'HRD 1206 · 45 cm',
+    src: '/assets/projects/postes-cortos/postes-cortos.glb?v=1-54-0', conceptual: true, spigot: true, rectangular: true
+  },
   hrd153x: {
     name: 'HRD 1533 / 1534 / 1535 · Poste con canales para vidrio', code: 'HRD 1533 / 1534 / 1535',
     src: '/assets/projects/hrd-153x/hrd-153x.glb?v=1-51-0',
@@ -226,14 +230,14 @@ function glassSpan(source, spacing, makeStart, makeEnd, terminalStart, system) {
 }
 
 // HRD 1220 uses two independent floor clamps per pane; no full-height post or rail.
-function spigotSpan(source, spacing, joinPrevious) {
+function spigotSpan(source, spacing, joinPrevious, rectangular = false) {
   const span = new THREE.Group();
-  for (const x of [-spacing / 4, spacing / 4]) {
+  for (const x of rectangular ? [-spacing / 2 + .14, spacing / 2 - .14] : [-spacing / 4, spacing / 4]) {
     const support = new THREE.Group();
-    support.name = 'HRD1220_Pinza';
+    support.name = rectangular ? 'HRD1206_Poste' : 'HRD1220_Pinza';
     source.children.filter(part => part.userData.role === 'support' && part.userData.side === '1').forEach(part => {
       const copy = cloneMesh(part);
-      copy.position.x += .98;
+      copy.position.x += rectangular ? 1.17 : .98;
       support.add(copy);
     });
     support.position.x = x;
@@ -242,11 +246,11 @@ function spigotSpan(source, spacing, joinPrevious) {
   const glass = cloneMesh(source.getObjectByName('Cristal_right'));
   glass.position.x = 0;
   glass.scale.x *= Math.max(.01, spacing - .01) / 1.30;
-  glass.name = 'HRD1220_Cristal';
+  glass.name = rectangular ? 'CORTOS_Cristal' : 'HRD1220_Cristal';
   span.add(glass);
   if (joinPrevious) {
     const connector = new THREE.Group();
-    connector.name = 'HRD1220_Union_superior';
+    connector.name = rectangular ? 'CORTOS_Union_recta' : 'HRD1220_Union_superior';
     source.children.filter(part => part.userData.role === 'connector').forEach(part => connector.add(cloneMesh(part)));
     connector.position.x = -spacing / 2;
     span.add(connector);
@@ -266,7 +270,12 @@ function centeredEndpoint(source, prefix, offset) {
 
 function sharedCorner(system, source, cornerSource, position, junctionIndex, incomingAngle, outgoingAngle) {
   const corner = new THREE.Group();
-  if (system === 'hrd153x') {
+  if (system === 'hrd1206') {
+    source.children.filter(part => part.userData.role === 'corner').forEach(part => {
+      const copy = cloneMesh(part); copy.position.x -= 1.31; corner.add(copy);
+    });
+    corner.rotation.y = -incomingAngle;
+  } else if (system === 'hrd153x') {
     const body = glassPost(cornerSource, ['left', 'right'], system);
     body.rotation.y = -incomingAngle;
     corner.add(body);
@@ -394,8 +403,8 @@ class PostCalculator3D extends HTMLElement {
           const omitStart = segmentIndex > 0 && index === 0;
           const omitEnd = segmentIndex < segments.length - 1 && index === segment.spaces - 1;
           const cableSide = segmentIndex === 1 ? 'B' : 'A';
-          const span = system === 'hrd1220'
-            ? spigotSpan(source, spacing, index > 0)
+          const span = config.spigot
+            ? spigotSpan(source, spacing, index > 0, config.rectangular)
             : (system === 'hrd1223' || system === 'hrd1221' || system === 'hrd153x')
             ? glassSpan(source, spacing, !omitStart,
                 segmentIndex === segments.length - 1 && index === segment.spaces - 1,
@@ -556,11 +565,19 @@ if (form) {
       status.textContent = 'Distribución visual: dos pinzas por cristal y una unión circular en cada junta recta. Anchos de cristal, anclajes y uniones de esquina por validar.';
       modelNote.textContent = 'Pinza de 185 mm, base 101.6 × 101.6 mm y vidrio de 10–12 mm según CAD. El conector circular superior es una reconstrucción visual.';
     }
+    if (system.rectangular) {
+      modelNote.textContent = 'Postes HRD 1206 de 45 cm. HRD 1301-A: vidrio a muro; HRD 1302-B: alineador rectangular; HRD 1301-C: esquina vidrio-vidrio. Acabado acero satinado.';
+      document.querySelector('#calculator-count-label').textContent = 'Postes HRD 1206';
+      postNote.textContent = `${unions} alineadores HRD 1302-B y ${corners} esquinas HRD 1301-C`;
+      document.querySelector('#calculator-heading-copy').textContent = 'Configura los tramos para visualizar las uniones entre cristales. El conjunto utiliza postes HRD 1206 de 45 cm.';
+      document.querySelector('#calculator-rule-text').textContent = 'Se cuenta una unión por junta entre cristales. Las fijaciones a muro dependen del proyecto y no se suman automáticamente.';
+      status.textContent = 'Distribución visual con conectores cuadrados; medidas, espesor del vidrio y apoyos por validar.';
+    }
     if (system.channel) modelNote.textContent = 'Incluye vinil de empaque para vidrio de 10 mm de espesor. Modelo visual de la familia HRD 1533 / 1534 / 1535; medidas del perfil y distribución por validar.';
-    modelLabel.textContent = `${system.code} · ${system.spigot ? 'pinzas y unión superior' : system.channel ? 'vidrio de 10 mm + vinil' : system.conceptual ? 'estudio de tubo' : 'modelo 3D real'}`;
+    modelLabel.textContent = `${system.code} · ${system.rectangular ? 'conector cuadrado vidrio-vidrio' : system.spigot ? 'pinzas y unión superior' : system.channel ? 'vidrio de 10 mm + vinil' : system.conceptual ? 'estudio de tubo' : 'modelo 3D real'}`;
     model.setLayout(distributions, systemSelect.value);
     const lines = distributions.map((item, index) => `Tramo ${index + 1}: ${item.length.toFixed(2)} m, ${item.spaces} ${system.spigot ? 'cristales' : 'espacios'} de ${(system.spigot ? item.spacing - .01 : item.spacing).toFixed(2)} m.`).join('\n');
-    const quantity = system.spigot ? `${totalPosts} pinzas estimadas y ${unions} uniones superiores en juntas rectas${corners ? ', esquinas pendientes de validar' : ''}` : `${totalPosts} postes estimados${corners ? `, considerando ${corners} ${corners === 1 ? 'esquina compartida' : 'esquinas compartidas'}` : ''}`;
+    const quantity = system.rectangular ? `${unions} alineadores HRD 1302-B y ${corners} conectores de esquina HRD 1301-C; ${totalPosts} postes HRD 1206 de 45 cm, fijaciones HRD 1301-A a muro por definir` : system.spigot ? `${totalPosts} pinzas estimadas y ${unions} uniones superiores en juntas rectas${corners ? ', esquinas pendientes de validar' : ''}` : `${totalPosts} postes estimados${corners ? `, considerando ${corners} ${corners === 1 ? 'esquina compartida' : 'esquinas compartidas'}` : ''}`;
     const message = `Hola, quiero revisar esta estimación para ${system.name}${system.conceptual ? ' (estudio visual, medidas y esquinas pendientes de validar)' : ''}:\n${lines}${system.channel ? '\nIncluye vinil de empaque para vidrio de 10 mm de espesor.' : ''}\nTotal: ${totalMeters.toFixed(2)} m, ${quantity}.\nConfiguración: ${configurationUrl().href}`;
     whatsapp.href = `https://wa.me/524772561695?text=${encodeURIComponent(message)}`;
   }

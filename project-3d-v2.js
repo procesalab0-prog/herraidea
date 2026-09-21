@@ -6,6 +6,7 @@ import { RoomEnvironment } from '/assets/vendor/three/addons/environments/RoomEn
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
 const profiles = {
+  hrd1206: { target: [0, .55, 0], camera: [1.5, 1.1, 3.8], min: .12, detailTarget: [0, 1.055, .007], detailCamera: [.18, 1.15, .3] },
   hrd153x: { target: [0, .52, 0], camera: [1.2, 1.1, 2.1], min: .15, detailTarget: [0, .88, 0], detailCamera: [.19, 1.13, .29] },
   hrd1220: { target: [0, .55, 0], camera: [1.5, 1.1, 3.8], min: .18, detailTarget: [-.33, .105, .007], detailCamera: [-.06, .25, .45] },
   hrd1221: { target: [0, .53, .03], camera: [1.45, 1.08, 2.15], min: .25, detailTarget: [0, .78, .03], detailCamera: [.28, .89, .48] },
@@ -17,6 +18,15 @@ const profiles = {
 };
 
 const projects = {
+  hrd1206: {
+    src: '/assets/projects/postes-cortos/postes-cortos.glb?v=1-54-0', profile: 'hrd1206', kicker: 'Conector cuadrado vidrio-vidrio',
+    title: 'HRD 1301-A / 1302-B / 1301-C', number: 'Uniones de vidrio · Acero satinado',
+    heading: 'Cristal libre. Uniones discretas.',
+    description: 'HRD 1301-A: vidrio a muro. HRD 1302-B: alineador rectangular. HRD 1301-C: esquina vidrio-vidrio. Con postes HRD 1206 de 45 cm en acero satinado.',
+    content: '72 piezas y elementos de contexto', detail: 'Ver unión superior',
+    aria: 'Modelo de apoyos cortos en acero y unión rectangular superior entre cristales',
+    caveat: 'Estudio según fotografías. Postes HRD 1206 de 45 cm. Dimensiones de los conectores, vidrio y anclajes pendientes de confirmar.'
+  },
   hrd153x: {
     src: '/assets/projects/hrd-153x/hrd-153x.glb?v=1-51-0', profile: 'hrd153x', kicker: 'Estudio interactivo · HRD 1533 / 1534 / 1535',
     title: 'HRD 1533 / 1534 / 1535 · Vidrio en canal', number: 'Postes con canales · Acero satinado',
@@ -79,8 +89,8 @@ const projects = {
     aria: 'Modelo tridimensional interactivo del sistema HRD 1616 con postes cuadrados y cable de acero', caveat: ''
   },
   futbolito: {
-    src: '/assets/projects/futbolito/futbolito-herraidea.glb', profile: 'futbolito', kicker: 'Proyecto interactivo 08',
-    title: 'Futbolito Herraidea', number: '08 / Proyecto especial',
+    src: '/assets/projects/futbolito/futbolito-herraidea.glb', profile: 'futbolito', kicker: 'Proyecto interactivo 09',
+    title: 'Futbolito Herraidea', number: '09 / Proyecto especial',
     heading: 'Observa cómo cada parte forma el proyecto.',
     description: 'Gira el modelo, acércate a sus uniones y controla la separación de todos sus componentes.',
     content: '190 piezas y conjuntos', detail: 'Ver costado',
