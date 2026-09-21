@@ -5,6 +5,10 @@ import { RoomEnvironment } from '/assets/vendor/three/addons/environments/RoomEn
 
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const systems = {
+  hrd1223: {
+    name: 'HRD 1223 de tubo + vidrio', code: 'HRD 1223',
+    src: '/assets/projects/hrd-1223/hrd-1223-tubo.glb?v=1-45-2', conceptual: true
+  },
   clips: {
     name: 'Postes con clips + vidrio', code: 'HRD 1525',
     src: '/assets/projects/clip-system/herraje-cristal.glb', sourceSpacing: .96,
@@ -163,6 +167,42 @@ function cableSpan(source, spacing, omitStart = false, omitEnd = false, side = '
   return span;
 }
 
+// The source is one centered post. Keep hardware dimensions fixed; only fit glass/rail.
+function hrd1223Post(source, sides = ['left', 'right']) {
+  const post = new THREE.Group();
+  source.children.forEach(part => {
+    if (part.userData.role === 'post' || (part.userData.role === 'arm' && sides.includes(part.userData.side))) {
+      post.add(cloneMesh(part));
+    }
+  });
+  post.name = 'HRD1223_Poste';
+  return post;
+}
+
+function hrd1223Span(source, spacing, makeStart, makeEnd, terminalStart) {
+  const span = new THREE.Group();
+  if (makeStart) {
+    const post = hrd1223Post(source, terminalStart ? ['right'] : ['left', 'right']);
+    post.position.x = -spacing / 2;
+    span.add(post);
+  }
+  if (makeEnd) {
+    const post = hrd1223Post(source, ['left']);
+    post.position.x = spacing / 2;
+    span.add(post);
+  }
+  const glass = cloneMesh(source.getObjectByName('Contexto_vidrio_right'));
+  glass.position.x = 0;
+  glass.scale.x *= Math.max(.01, spacing - .05) / .605;
+  glass.name = 'HRD1223_Vidrio';
+  span.add(glass);
+  const rail = cloneMesh(source.getObjectByName('Contexto_pasamanos'));
+  rail.scale.x *= spacing / 1.32;
+  rail.name = 'HRD1223_Pasamanos';
+  span.add(rail);
+  return span;
+}
+
 function centeredEndpoint(source, prefix, offset) {
   const group = new THREE.Group();
   source.children.filter(part => part.name.startsWith(prefix)).forEach(part => {
@@ -175,7 +215,18 @@ function centeredEndpoint(source, prefix, offset) {
 
 function sharedCorner(system, source, cornerSource, position, junctionIndex, incomingAngle, outgoingAngle) {
   const corner = new THREE.Group();
-  if (system === 'clips') {
+  if (system === 'hrd1223') {
+    const body = hrd1223Post(source, []);
+    body.rotation.y = -incomingAngle;
+    corner.add(body);
+    [['left', incomingAngle], ['right', outgoingAngle]].forEach(([side, angle]) => {
+      const arms = new THREE.Group();
+      source.children.filter(part => part.userData.role === 'arm' && part.userData.side === side)
+        .forEach(part => arms.add(cloneMesh(part)));
+      arms.rotation.y = -angle;
+      corner.add(arms);
+    });
+  } else if (system === 'clips') {
     const incoming = centeredEndpoint(source, 'derecho_', -.48);
     incoming.rotation.y = -incomingAngle;
     const outgoing = centeredEndpoint(source, 'izquierdo_', .48);
@@ -290,7 +341,11 @@ class PostCalculator3D extends HTMLElement {
           const omitStart = segmentIndex > 0 && index === 0;
           const omitEnd = segmentIndex < segments.length - 1 && index === segment.spaces - 1;
           const cableSide = segmentIndex === 1 ? 'B' : 'A';
-          const span = system === 'clips'
+          const span = system === 'hrd1223'
+            ? hrd1223Span(source, spacing, !omitStart,
+                segmentIndex === segments.length - 1 && index === segment.spaces - 1,
+                segmentIndex === 0 && index === 0)
+            : system === 'clips'
             ? clipSpan(source, spacing, omitStart, omitEnd)
             : system === 'tubo'
               ? tubeSpan(source, spacing, omitStart, omitEnd)
@@ -319,7 +374,7 @@ class PostCalculator3D extends HTMLElement {
       this.targetScale = displayScale;
       if (!reduceMotion.matches) model.scale.setScalar(.001);
       this.enterStart = performance.now();
-      this.setAttribute('aria-label', `Modelo 3D real de ${config.name}, distribuido en ${segments.reduce((sum, segment) => sum + segment.spaces, 0)} espacios`);
+      this.setAttribute('aria-label', `${config.conceptual ? 'Reconstrucción visual' : 'Modelo 3D real'} de ${config.name}, distribuido en ${segments.reduce((sum, segment) => sum + segment.spaces, 0)} espacios`);
       this.removeAttribute('data-loading');
       this.removeAttribute('data-error');
     } catch (error) {
@@ -380,7 +435,7 @@ if (form) {
   let lengths = [5.3];
   const query = new URLSearchParams(location.search);
   const requestedSystem = query.get('sistema');
-  const systemAliases = { hrd1525: 'clips', hrd1518: 'tubo', hrd1616: 'cable' };
+  const systemAliases = { hrd1525: 'clips', hrd1518: 'tubo', hrd1616: 'cable', soleras: 'hrd1223' };
   const initialSystem = systems[requestedSystem] ? requestedSystem : systemAliases[requestedSystem];
   const requestedLengths = String(query.get('tramos') || '').split(',').slice(0, 8)
     .map(value => Number(value)).filter(value => Number.isFinite(value) && value >= .2 && value <= 100);
@@ -430,10 +485,16 @@ if (form) {
     status.textContent = warnings
       ? `${warnings === 1 ? 'Un tramo requiere' : `${warnings} tramos requieren`} revisión: se respetó el máximo de 1.40 m, pero la separación quedó por debajo de 1.20 m.`
       : 'Todos los tramos quedan dentro del rango de separación de 1.20 a 1.40 m.';
-    modelLabel.textContent = `${system.code} · modelo 3D real`;
+    const modelNote = document.querySelector('#calculator-model-note');
+    if (modelNote) {
+      modelNote.textContent = system.conceptual
+        ? 'HRD 1223: reconstrucción tubular según CAD y fotografías. Medidas y solución de esquina por confirmar; el rango de separación es orientativo y requiere validación para este sistema.'
+        : 'La vista utiliza las piezas 3D recibidas para esta solución.';
+    }
+    modelLabel.textContent = `${system.code} · ${system.conceptual ? 'estudio de tubo' : 'modelo 3D real'}`;
     model.setLayout(distributions, systemSelect.value);
     const lines = distributions.map((item, index) => `Tramo ${index + 1}: ${item.length.toFixed(2)} m, ${item.spaces} espacios de ${item.spacing.toFixed(2)} m.`).join('\n');
-    const message = `Hola, quiero revisar esta estimación para ${system.name}:\n${lines}\nTotal: ${totalMeters.toFixed(2)} m, ${totalPosts} postes estimados${corners ? `, considerando ${corners} ${corners === 1 ? 'esquina compartida' : 'esquinas compartidas'}` : ''}.\nConfiguración: ${configurationUrl().href}`;
+    const message = `Hola, quiero revisar esta estimación para ${system.name}${system.conceptual ? ' (estudio visual, medidas y esquinas pendientes de validar)' : ''}:\n${lines}\nTotal: ${totalMeters.toFixed(2)} m, ${totalPosts} postes estimados${corners ? `, considerando ${corners} ${corners === 1 ? 'esquina compartida' : 'esquinas compartidas'}` : ''}.\nConfiguración: ${configurationUrl().href}`;
     whatsapp.href = `https://wa.me/524772561695?text=${encodeURIComponent(message)}`;
   }
 

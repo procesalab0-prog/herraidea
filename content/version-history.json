@@ -1,7 +1,25 @@
 {
-  "current": "1.44.0",
+  "current": "1.45.2",
   "studio": "ProcesaLab",
   "versions": [
+    {
+      "version": "1.45.2",
+      "date": "2026-09-21",
+      "title": "Base circular con tres agujeros",
+      "summary": "El HRD 1223 tubular usa una sola placa circular con tres agujeros pasantes a 120 grados. Se retiran el segundo aro y las fijaciones que ocultaban los agujeros, en el despiece y la calculadora."
+    },
+    {
+      "version": "1.45.1",
+      "date": "2026-09-21",
+      "title": "HRD 1223 con cuerpo tubular",
+      "summary": "Se conserva el estudio de soleras y se añade una variante HRD 1223 con tubo circular hueco, base redonda y brazos ajustables. El visor y la calculadora presentan ahora la variante tubular; las dimensiones no indicadas en el CAD siguen siendo provisionales."
+    },
+    {
+      "version": "1.45.0",
+      "date": "2026-09-21",
+      "title": "Estudio HRD 1223 de soleras",
+      "summary": "Se incorpora un estudio 3D del HRD 1223 de soleras planas, según las fotografías y la variante elegida: 51 elementos, despiece reversible, detalle de brazo y distribución en la calculadora. Se identifican expresamente las medidas y esquinas pendientes de validación."
+    },
     {
       "version": "1.44.0",
       "date": "2026-09-21",

@@ -1,12 +1,18 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.44.0**
+Versión actual: **1.45.2**
 
 El dominio oficial `www.herraidea.com` sirve la web desde Vercel y `herraidea.com` redirige de forma segura a esa dirección. Las referencias canónicas, la tarjeta social, los datos estructurados y el catálogo descargable usan el dominio oficial. Los registros de correo preexistentes se conservaron al migrar los servidores DNS desde Jimdo a Vercel.
 
 Sitio de producción: `https://www.herraidea.com/`
 
 ## Estado actual
+
+El HRD 1223 tubular usa una sola placa circular con tres agujeros pasantes a 120 grados. Se retiran el segundo aro y las fijaciones que ocultaban los agujeros, en el despiece y la calculadora.
+
+Se conserva el estudio de soleras y se añade una variante HRD 1223 con tubo circular hueco, base redonda y brazos ajustables. El visor y la calculadora presentan ahora la variante tubular; las dimensiones no indicadas en el CAD siguen siendo provisionales.
+
+Se incorpora un estudio 3D del HRD 1223 de soleras planas, según las fotografías y la variante elegida: 51 elementos, despiece reversible, detalle de brazo y distribución en la calculadora. Se identifican expresamente las medidas y esquinas pendientes de validación.
 
 Vercel Web Analytics y Speed Insights están integrados en las 87 páginas públicas y en sus generadores. La fase actual mide tráfico, rutas, referencias, países, dispositivos y Core Web Vitals con las capacidades incluidas en Hobby y sin cookies. Los eventos personalizados de calculadora, WhatsApp, catálogo y descargas se reservan para la entrega final, cuando se evaluará el plan Pro.
 

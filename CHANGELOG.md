@@ -1,5 +1,17 @@
 # Historial de versiones — Herraidea
 
+## 1.45.2 — 2026-09-21
+
+- El HRD 1223 tubular usa una sola placa circular con tres agujeros pasantes a 120 grados. Se retiran el segundo aro y las fijaciones que ocultaban los agujeros, en el despiece y la calculadora.
+
+## 1.45.1 — 2026-09-21
+
+- Se conserva el estudio de soleras y se añade una variante HRD 1223 con tubo circular hueco, base redonda y brazos ajustables. El visor y la calculadora presentan ahora la variante tubular; las dimensiones no indicadas en el CAD siguen siendo provisionales.
+
+## 1.45.0 — 2026-09-21
+
+- Se incorpora un estudio 3D del HRD 1223 de soleras planas, según las fotografías y la variante elegida: 51 elementos, despiece reversible, detalle de brazo y distribución en la calculadora. Se identifican expresamente las medidas y esquinas pendientes de validación.
+
 ## 1.44.0 — 2026-09-21
 
 - Web Analytics queda habilitado en Vercel y se incorpora a las 87 páginas públicas para medir visitas, páginas, referencias, países y dispositivos sin cookies.
