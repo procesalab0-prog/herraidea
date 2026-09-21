@@ -1,3 +1,8 @@
+## 1.56.0 — 2026-09-21
+
+- Las portadas 04 y 05 se rehacen a partir de sus modelos 3D reales: un solo poste intermedio HRD 1223 con brazos tubulares y un solo HRD 1221 con soleras planas.
+- Los cristales quedan alineados con sus mordazas y se conservan intactos los modelos 3D interactivos.
+
 # Historial de versiones — Herraidea
 
 ## 1.55.1 — 2026-09-21
