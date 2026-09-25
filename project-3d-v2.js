@@ -8,7 +8,7 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const profiles = {
   hrd1206: { target: [0, .55, 0], camera: [1.5, 1.1, 3.8], min: .12, detailTarget: [0, 1.055, .007], detailCamera: [.18, 1.15, .3] },
   hrd153x: { target: [0, .52, 0], camera: [1.2, 1.1, 2.1], min: .15, detailTarget: [0, .88, 0], detailCamera: [.19, 1.13, .29] },
-  hrd1220: { target: [0, .55, 0], camera: [1.5, 1.1, 3.8], min: .18, detailTarget: [-.33, .105, .007], detailCamera: [-.06, .25, .45] },
+  hrd1220: { target: [0, .095, 0], camera: [.31, .23, .45], min: .06, detailTarget: [0, .09, .018], detailCamera: [.10, .14, .20] },
   hrd1221: { target: [0, .53, .03], camera: [1.45, 1.08, 2.15], min: .25, detailTarget: [0, .78, .03], detailCamera: [.28, .89, .48] },
   hrd1223: { target: [0, .53, .03], camera: [1.45, 1.08, 2.15], min: .25, detailTarget: [.08, .78, .07], detailCamera: [.37, .9, .46] },
   clips: { target: [0, .48, 0], camera: [1.3, 1, 2.1], min: .7, detailTarget: [-.413, .695, 0], detailCamera: [-.163, .845, .48] },
@@ -37,13 +37,13 @@ const projects = {
     caveat: 'Reconstrucción visual a partir de fotografías. Medidas del perfil y configuración de cada código pendientes de confirmar.'
   },
   hrd1220: {
-    src: '/assets/projects/hrd-1220/hrd-1220.glb?v=1-47-0', profile: 'hrd1220', kicker: 'Estudio interactivo · HRD 1220',
-    title: 'HRD 1220 · Vidrio sin pasamanos', number: 'HRD 1220 · Pinza baja',
-    heading: 'Sujeción abajo. Unión entre cristales arriba.',
-    description: 'Explora la pinza, sus empaques y la tapa de la base. Un conector circular enlaza la junta superior de los dos cristales.',
-    content: '43 piezas y elementos de contexto', detail: 'Ver pinza',
-    aria: 'Sistema HRD 1220 con cuatro pinzas bajas y unión circular superior entre dos paneles de vidrio',
-    caveat: 'Pinza reconstruida según CAD: 185 mm de altura, base de 101.6 × 101.6 mm y vidrio de 10–12 mm. Conector superior y distribución pendientes de confirmar.'
+    src: '/assets/projects/hrd-1220/hrd-1220-piloto.glb?v=1-57-0', profile: 'hrd1220', kicker: 'Estudio interactivo · HRD 1220',
+    title: 'HRD 1220 · Despiece por etapas', number: 'HRD 1220 · Pinza baja',
+    heading: 'Cada pieza, en su lugar.',
+    description: 'Explora el HRD 1220 en acero satinado. Controla su despiece por etapas o vuelve a armarlo: la tapa decorativa baja al final.',
+    content: '9 componentes · Armado por etapas', detail: 'Ver pinza',
+    aria: 'Pinza HRD 1220 en acero satinado con despiece por etapas',
+    caveat: 'Pinza reconstruida según CAD: 185 mm de altura, base de 101.6 × 101.6 mm y vidrio de 10–12 mm. Espesores internos y tornillería aproximados; animación ilustrativa.'
   },
   hrd1221: {
     src: '/assets/projects/hrd-1221/hrd-1221.glb?v=1-46-0', profile: 'hrd1221', kicker: 'Estudio interactivo · HRD 1221',
@@ -287,7 +287,7 @@ class HerraideaProject3D extends HTMLElement {
     const newScale = 1 + target * .7;
     const offset = this.camera.position.clone().sub(this.controls.target).multiplyScalar(newScale / oldScale);
     const raisedTarget = this.baseTarget.clone();
-    raisedTarget.y += .3 * target;
+    raisedTarget.y += (this.getAttribute('profile') === 'hrd1220' ? .06 : .3) * target;
     this.controls.target.copy(raisedTarget);
     this.camera.position.copy(this.controls.target).add(offset);
     this.amount = target;

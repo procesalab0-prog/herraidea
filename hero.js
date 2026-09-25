@@ -172,6 +172,7 @@
     document.querySelector('#dialog-specs').innerHTML = product.specifications.map(spec => `<li>${escapeHTML(spec)}</li>`).join('');
     const images = product.detailImages.length ? product.detailImages : [`/content/catalog/${product.image}`];
     document.querySelector('#dialog-gallery').innerHTML = images.map((src, index) => `<figure class="${index === 0 ? 'primary' : ''}"><img src="${escapeHTML(src)}" alt="${escapeHTML(product.name)} ${index ? 'plano o detalle técnico' : ''}" loading="eager"></figure>`).join('');
+    if (product.assemblyAnimation) document.querySelector('#dialog-gallery').insertAdjacentHTML('beforeend', `<figure class="primary"><details open><summary>Armado animado · mostrar / ocultar</summary><picture><source media="(prefers-reduced-motion: reduce)" srcset="${escapeHTML(product.assemblyPoster)}"><img src="${escapeHTML(product.assemblyAnimation)}" alt="Armado por etapas del ${escapeHTML(product.code)}, con la tapa al final" loading="lazy"></picture></details><figcaption>Armado por etapas · <a href="/?proyecto=hrd1220">Explorar despiece 3D</a></figcaption></figure>`);
     const system = productSystem(product);
     const systemSection = document.querySelector('#dialog-system');
     if (system && systemSection) {
@@ -223,7 +224,7 @@
   });
   addEventListener('popstate', () => closeProduct(false));
 
-  fetch('/content/catalog/details.json?v=1-30-0').then(r => {
+  fetch('/content/catalog/details.json?v=1-57-0').then(r => {
     if (!r.ok) throw new Error('No se pudo cargar el catálogo');
     return r.json();
   }).then(products => {

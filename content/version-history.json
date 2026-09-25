@@ -1,7 +1,13 @@
 {
-  "current": "1.56.1",
+  "current": "1.57.0",
   "studio": "ProcesaLab",
   "versions": [
+    {
+      "version": "1.57.0",
+      "date": "2026-09-25",
+      "title": "Piloto Blender HRD 1220",
+      "summary": "Piloto HRD 1220 exportado desde Blender con acero satinado, bordes suavizados y despiece por etapas; la tapa baja al final del armado. GIF incorporado a la ficha rápida y página del producto, con imagen fija para movimiento reducido."
+    },
     {
       "version": "1.56.1",
       "date": "2026-09-21",

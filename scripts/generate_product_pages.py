@@ -70,6 +70,8 @@ def render(product: dict, family_items: list[dict]) -> str:
             f'<img src="{escape(src)}" alt="{escape(name)} {escape(code)}{alt_suffix}" {loading}>'
             f'<figcaption>{caption}</figcaption></figure>'
         )
+    if product.get("assemblyAnimation"):
+        gallery_parts.append(f'<figure class="product-page-image"><details open><summary>Armado animado · mostrar / ocultar</summary><picture><source media="(prefers-reduced-motion: reduce)" srcset="{escape(product["assemblyPoster"])}"><img src="{escape(product["assemblyAnimation"])}" alt="Armado por etapas del {escape(code)}, con la tapa al final" loading="lazy"></picture></details><figcaption>Armado por etapas · <a href="/?proyecto=hrd1220">Explorar despiece 3D</a></figcaption></figure>')
     gallery = "".join(gallery_parts)
     related = "".join(
         f'<a href="/productos/{slugify(item["code"])}"><b>{escape(item["code"])}</b><span>{escape(item["name"])}</span></a>'

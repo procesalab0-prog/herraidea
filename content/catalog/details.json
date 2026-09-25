@@ -1194,7 +1194,9 @@
       "HRD 1220",
       "POSTE RECTANGULAR 18.50 CM"
     ],
-    "technicalImage": "/content/catalog/technical/hrd-1220-catalogo-hd.jpg"
+    "technicalImage": "/content/catalog/technical/hrd-1220-catalogo-hd.jpg",
+    "assemblyAnimation": "/assets/projects/hrd-1220/armado-blender.gif",
+    "assemblyPoster": "/assets/projects/hrd-1220/armado-blender.png"
   },
   {
     "category": "Postes",

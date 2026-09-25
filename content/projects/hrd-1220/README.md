@@ -38,3 +38,7 @@ No acotados: ancho de pinza 48 mm, espesores de placas, posiciones/diámetros de
 - `?sistema=hrd1220#calculadora`: calculadora.
 
 Versión 1.49.0 aprobada para publicación el 21 de septiembre de 2026. Conserva los modelos anteriores aprobados.
+
+
+## Piloto Blender — 1.57.0
+El visor de despiece usa hrd-1220-piloto.glb: pinza individual, acero satinado, biseles, tornillos con vástagos y seis movimientos sincronizados. El armado termina con la tapa. La calculadora conserva el GLB del sistema completo con sus pinzas y unión superior. GIF y póster en ficha rápida y página del producto, con alternativa de movimiento reducido.

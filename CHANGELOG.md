@@ -1,5 +1,9 @@
 ## 1.56.1 — 2026-09-21
 
+## 1.57.0 — 2026-09-25
+
+- Piloto HRD 1220 exportado desde Blender con acero satinado, bordes suavizados y despiece por etapas; la tapa baja al final del armado. GIF incorporado a la ficha rápida y página del producto, con imagen fija para movimiento reducido.
+
 - Las portadas 04 y 05 usan las imágenes finales proporcionadas del HRD 1223 y HRD 1221, sin cristal y sin alterar la geometría de los postes.
 - Ambas imágenes se normalizan a 1536 × 1024 mediante extensión del fondo original para conservar completos los productos en computadora y teléfono.
 
