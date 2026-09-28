@@ -1,12 +1,16 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.57.0**
+Versión actual: **1.58.0**
 
 El dominio oficial `www.herraidea.com` sirve la web desde Vercel y `herraidea.com` redirige de forma segura a esa dirección. Las referencias canónicas, la tarjeta social, los datos estructurados y el catálogo descargable usan el dominio oficial. Los registros de correo preexistentes se conservaron al migrar los servidores DNS desde Jimdo a Vercel.
 
 Sitio de producción: `https://www.herraidea.com/`
 
 ## Estado actual
+
+La página `/aplicaciones` reúne en una sola guía indexable cinco necesidades frecuentes —barandales, escaleras y desniveles, balcones y terrazas, canceles y divisiones, y proyectos especiales— para orientar búsquedas sin multiplicar rutas antes de completar los proyectos. El menú, las familias, las fichas y el mapa del sitio enlazan esta guía.
+
+La página `/privacidad` explica el uso de datos del formulario, WhatsApp y la medición vigente de Vercel. Está enlazada desde los pies de página y la antigua ruta de privacidad de Jimdo redirige hacia ella.
 
 Piloto HRD 1220 exportado desde Blender con acero satinado, bordes suavizados y despiece por etapas; la tapa baja al final del armado. GIF incorporado a la ficha rápida y página del producto, con imagen fija para movimiento reducido.
 
@@ -113,6 +117,9 @@ Landing estática para Herraidea, enfocada en barandales, soluciones y fabricaci
 - `familias/conectores.html`: página de exploración de la familia Conectores por aplicación, función y código.
 - `familias/jaladeras.html`: página comparativa de las jaladeras tipo H por diámetro y código.
 - `sistemas.html` y `systems-page.css`: guía central para comparar los sistemas HRD 1525, HRD 1518 y HRD 1616, y continuar a sus herramientas o productos.
+- `aplicaciones.html`: guía indexable que concentra cinco aplicaciones frecuentes sin crear rutas individuales antes de contar con proyectos suficientes.
+- `privacidad.html`: aviso vigente para datos de contacto, WhatsApp y medición técnica.
+- `content-page.css`: presentación adaptable compartida por Aplicaciones y Privacidad.
 - `family-page.css` y `family-page.js`: presentación adaptable, búsqueda y filtros de la página de familia.
 - `scripts/generate_posts_family_page.py`, `scripts/generate_pipetas_family_page.py`, `scripts/generate_connectors_family_page.py` y `scripts/generate_handles_family_page.py`: generan las páginas públicas de las cuatro familias desde los datos vigentes del catálogo.
 - `.github/workflows/catalog-pdf.yml`: regenera y publica el catálogo general y las 81 fichas PDF al cambiar sus generadores, los datos o las imágenes, manteniendo todas las descargas sincronizadas.

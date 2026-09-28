@@ -62,7 +62,7 @@
     { "source": "/soporte-1410/soporte-1216", "destination": "/productos/hrd-1216", "permanent": true },
     { "source": "/soporte-1410/soporte-1411", "destination": "/productos/hrd-1411", "permanent": true },
     { "source": "/soporte-1410/soporte-1418", "destination": "/productos/hrd-1418", "permanent": true },
-    { "source": "/j/privacy", "destination": "/", "permanent": true },
+    { "source": "/j/privacy", "destination": "/privacidad", "permanent": true },
     { "source": "/sitemap", "destination": "/sitemap.xml", "permanent": true }
   ],
   "headers": [

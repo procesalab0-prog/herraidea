@@ -128,7 +128,7 @@ def main() -> None:
 <body class="family-conectores">
   <header class="family-header">
     <a class="family-brand" href="/" aria-label="Herraidea, inicio"><img src="/assets/logo-gray-nodot.png" alt="Herraidea"><i aria-hidden="true"></i></a>
-    <nav><a href="/sistemas">Sistemas</a><a href="/#calculadora">Calculadora</a><a href="/#catalogo">Catálogo</a><a class="header-contact" href="https://wa.me/524772561695?text={whatsapp}" target="_blank" rel="noopener">Cotizar</a></nav>
+    <nav><a href="/sistemas">Sistemas</a><a href="/aplicaciones">Aplicaciones</a><a href="/#calculadora">Calculadora</a><a href="/#catalogo">Catálogo</a><a class="header-contact" href="https://wa.me/524772561695?text={whatsapp}" target="_blank" rel="noopener">Cotizar</a></nav>
   </header>
   <main>
     <section class="family-hero">
@@ -162,7 +162,7 @@ def main() -> None:
 
     <section class="family-cta"><div><span class="eyebrow">Fabricación a la medida</span><h2>¿Tu proyecto necesita otra configuración?</h2><p>Comparte medidas, fotografías, dibujos o una muestra. Herraidea puede revisar contigo el sistema y desarrollar piezas especiales.</p></div><a class="primary-action" href="https://wa.me/524772561695?text={whatsapp}" target="_blank" rel="noopener">Hablar con un asesor <span>→</span></a></section>
   </main>
-  <footer><a class="family-footer-brand" href="/"><img src="/assets/logo-light-nodot.png" alt="Herraidea"><i aria-hidden="true"></i></a><nav><a href="/#catalogo">Catálogo completo</a><a href="/#recursos">Recursos</a><a href="/#contacto">Contacto</a></nav><small>Creado por ProcesaLab</small></footer>
+  <footer><a class="family-footer-brand" href="/"><img src="/assets/logo-light-nodot.png" alt="Herraidea"><i aria-hidden="true"></i></a><nav><a href="/aplicaciones">Aplicaciones</a><a href="/#catalogo">Catálogo completo</a><a href="/#recursos">Recursos</a><a href="/#contacto">Contacto</a><a href="/privacidad">Privacidad</a></nav><small>Creado por ProcesaLab</small></footer>
   <script src="/family-page.js?v=1-34-0"></script>
 </body>
 </html>

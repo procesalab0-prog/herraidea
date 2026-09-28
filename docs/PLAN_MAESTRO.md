@@ -372,7 +372,7 @@ Herraidea confirmó cobertura actual en **México, Guatemala, Honduras y el sur 
 
 ### SEO
 
-Las 81 páginas independientes de producto ya se generan desde el catálogo compartido, con URLs descriptivas, contenido técnico disponible, PDF, cotización y datos estructurados. Postes estrena además una página de familia que organiza 37 modelos por sistema y función, con búsqueda, filtros y accesos a 3D y calculadora. Continúan pendientes las páginas de Pipetas, Conectores, Jaladeras y aplicaciones, así como la ampliación con instalación, CAD editable y compatibilidades confirmadas.
+Las 81 páginas independientes de producto ya se generan desde el catálogo compartido, con URLs descriptivas, contenido técnico disponible, PDF, cotización y datos estructurados. Postes estrena además una página de familia que organiza 37 modelos por sistema y función, con búsqueda, filtros y accesos a 3D y calculadora. Las páginas de Pipetas, Conectores y Jaladeras ya están publicadas. Aplicaciones cuenta con una primera guía única para cinco necesidades frecuentes; quedan pendientes su ampliación con proyectos reales, instalación, CAD editable y compatibilidades confirmadas.
 
 ### Canal para distribuidores
 
@@ -457,7 +457,7 @@ No se debe presentar esta funcionalidad como parte del alcance actual ni constru
 - Navegación por sistemas completos: primera relación entre piezas implementada para los sistemas identificados; falta completar y validar el resto.
 - Bloques “Compatible con” y “También necesitas” con relaciones revisadas por Herraidea.
 - Flujo interno supervisado para crear fotografías de estudio a partir de fotos reales.
-- Páginas por aplicación.
+- Primera guía única de aplicaciones implementada; su expansión en páginas individuales se hará cuando existan proyectos suficientes para evitar trabajo duplicado.
 - Proyectos reales.
 - Recorridos para arquitectos y distribuidores.
 - Base SEO estructurada; primera entrega publicada con URL canónica, indexación y datos básicos de la organización.

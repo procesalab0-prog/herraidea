@@ -146,7 +146,7 @@ def render(product: dict, family_items: list[dict]) -> str:
 <body>
   <header class="product-header">
     <a class="product-brand" href="/" aria-label="Herraidea, inicio"><img src="/assets/logo-gray-nodot.png" alt="Herraidea"></a>
-    <nav><a href="/#catalogo">Catálogo</a><a class="header-contact" href="https://wa.me/524772561695?text={whatsapp}" target="_blank" rel="noopener">Cotizar</a></nav>
+    <nav><a href="/aplicaciones">Aplicaciones</a><a href="/#catalogo">Catálogo</a><a class="header-contact" href="https://wa.me/524772561695?text={whatsapp}" target="_blank" rel="noopener">Cotizar</a></nav>
   </header>
   <main>
     <div class="product-breadcrumb"><a href="/">Inicio</a><span>→</span><a href="/#catalogo">Catálogo</a><span>→</span>{family_crumb}</div>
@@ -171,7 +171,7 @@ def render(product: dict, family_items: list[dict]) -> str:
       <a class="back-link" href="/#catalogo">Ver catálogo completo <span>→</span></a>
     </section>
   </main>
-  <footer><a href="/"><img src="/assets/logo-light-nodot.png" alt="Herraidea"></a><span>León, Guanajuato · Desde 2013</span><small>Creado por ProcesaLab</small></footer>
+  <footer><a href="/"><img src="/assets/logo-light-nodot.png" alt="Herraidea"></a><span><a href="/aplicaciones">Aplicaciones</a> · <a href="/privacidad">Privacidad</a> · León, Guanajuato</span><small>Creado por ProcesaLab</small></footer>
 </body>
 </html>
 """
@@ -192,7 +192,7 @@ def main() -> None:
         ]
         (OUTPUT / f"{slugify(product['code'])}.html").write_text(render(product, family), encoding="utf-8")
 
-    urls = [f"  <url><loc>{DOMAIN}/</loc></url>", f"  <url><loc>{DOMAIN}/sistemas</loc></url>", f"  <url><loc>{DOMAIN}/familias/pipetas</loc></url>", f"  <url><loc>{DOMAIN}/familias/postes</loc></url>", f"  <url><loc>{DOMAIN}/familias/conectores</loc></url>", f"  <url><loc>{DOMAIN}/familias/jaladeras</loc></url>"]
+    urls = [f"  <url><loc>{DOMAIN}/</loc></url>", f"  <url><loc>{DOMAIN}/sistemas</loc></url>", f"  <url><loc>{DOMAIN}/aplicaciones</loc></url>", f"  <url><loc>{DOMAIN}/familias/pipetas</loc></url>", f"  <url><loc>{DOMAIN}/familias/postes</loc></url>", f"  <url><loc>{DOMAIN}/familias/conectores</loc></url>", f"  <url><loc>{DOMAIN}/familias/jaladeras</loc></url>"]
     urls.extend(f"  <url><loc>{DOMAIN}/productos/{slugify(product['code'])}</loc></url>" for product in products)
     (ROOT / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'

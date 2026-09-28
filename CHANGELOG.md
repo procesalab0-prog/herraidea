@@ -1,8 +1,16 @@
-## 1.56.1 — 2026-09-21
+# Historial de versiones — Herraidea
+
+## 1.58.0 — 2026-09-27
+
+- Nueva guía única de Aplicaciones para barandales, escaleras y desniveles, balcones y terrazas, canceles y divisiones, y proyectos especiales.
+- Nuevo aviso de privacidad para los datos enviados por formulario y WhatsApp y para la medición de Vercel.
+- Aplicaciones y Privacidad se integran en la navegación correspondiente; el mapa del sitio incorpora la guía y la antigua ruta de privacidad de Jimdo redirige al aviso vigente.
 
 ## 1.57.0 — 2026-09-25
 
 - Piloto HRD 1220 exportado desde Blender con acero satinado, bordes suavizados y despiece por etapas; la tapa baja al final del armado. GIF incorporado a la ficha rápida y página del producto, con imagen fija para movimiento reducido.
+
+## 1.56.1 — 2026-09-21
 
 - Las portadas 04 y 05 usan las imágenes finales proporcionadas del HRD 1223 y HRD 1221, sin cristal y sin alterar la geometría de los postes.
 - Ambas imágenes se normalizan a 1536 × 1024 mediante extensión del fondo original para conservar completos los productos en computadora y teléfono.
@@ -11,8 +19,6 @@
 
 - Las portadas 04 y 05 se rehacen a partir de sus modelos 3D reales: un solo poste intermedio HRD 1223 con brazos tubulares y un solo HRD 1221 con soleras planas.
 - Los cristales quedan alineados con sus mordazas y se conservan intactos los modelos 3D interactivos.
-
-# Historial de versiones — Herraidea
 
 ## 1.55.1 — 2026-09-21
 
