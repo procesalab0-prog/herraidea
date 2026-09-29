@@ -11,6 +11,7 @@ Modelo 3D de un domo geodésico para glamping hecho a partir de dos imágenes de
 | `assets/projects/domo-geodesico/domo-geodesico.glb` | Modelo de 467 piezas con el clip `Despiece` (409 piezas animadas; la terraza y el mobiliario quedan fijos). Formato Y-arriba, metros. |
 | `assets/projects/domo-geodesico/portada-provisional.png` | Render exterior. **Es provisional:** hace falta una portada aprobada antes de publicar. |
 | `content/projects/domo-geodesico/visor-privado.html` | Visor independiente de un solo archivo, sin internet y con `noindex`. Tiene vistas Exterior, Interior, Frente y Planta, capas Lona y Terraza, Desarmar/Armado y la barra de Separación. |
+| `content/projects/domo-geodesico/domo-geodesico.blend` | Archivo de Blender editable, con la animación `Despiece` (abre en Blender 4.5 o posterior). |
 | `content/projects/domo-geodesico/comparacion-exterior.jpg`, `comparacion-interior.jpg` | Referencia junto al render del modelo. |
 | `content/projects/domo-geodesico/render-estructura.jpg`, `render-despiece.jpg` | Estructura sin lona y despiece completo. |
 | `content/source-documents/domo-geodesico/` | Imágenes de referencia recibidas: `referencia-exterior.webp` y `referencia-interior.jpg`. |
