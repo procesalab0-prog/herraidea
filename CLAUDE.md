@@ -1,12 +1,14 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.59.0**
+Versión actual: **1.60.0**
 
 El dominio oficial `www.herraidea.com` sirve la web desde Vercel y `herraidea.com` redirige de forma segura a esa dirección. Las referencias canónicas, la tarjeta social, los datos estructurados y el catálogo descargable usan el dominio oficial. Los registros de correo preexistentes se conservaron al migrar los servidores DNS desde Jimdo a Vercel.
 
 Sitio de producción: `https://www.herraidea.com/`
 
 ## Estado actual
+
+Domo geodésico incorporado al selector de Proyectos, sin portada. Conserva sus 467 piezas, despiece por etapas, vistas exterior/interior/frente/planta y controles para mostrar u ocultar lona y terraza.
 
 Nueva sección Proyectos con visor 3D directo para Riverack y Futbolito, selector sin portadas y controles existentes. Riverack conserva su acabado negro y despiece por etapas; proyecto probado en RAM 700.
 

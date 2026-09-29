@@ -1,5 +1,9 @@
 # Historial de versiones — Herraidea
 
+## 1.60.0 — 2026-09-29
+
+- Domo geodésico incorporado al selector de Proyectos, sin portada. Conserva sus 467 piezas, despiece por etapas, vistas exterior/interior/frente/planta y controles para mostrar u ocultar lona y terraza.
+
 ## 1.59.0 — 2026-09-29
 
 - Nueva sección Proyectos con visor 3D directo para Riverack y Futbolito, selector sin portadas y controles existentes. Riverack conserva su acabado negro y despiece por etapas; proyecto probado en RAM 700.

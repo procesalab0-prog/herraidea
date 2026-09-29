@@ -6,6 +6,7 @@ import { RoomEnvironment } from '/assets/vendor/three/addons/environments/RoomEn
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
 const profiles = {
+  domo: { target: [.4, 1.6, 0], camera: [-5.6, 2.6, 13], min: 2, max: 65, far: 160, detailTarget: [0, .5, -.1], detailCamera: [.2, 9.4, 7.6] },
   riverack: { target: [0, .3, 0], camera: [1.9, 1.25, 3.2], min: .5, detailTarget: [-.735, .63, .75], detailCamera: [-.25, .95, 1.55] },
   hrd1206: { target: [0, .55, 0], camera: [1.5, 1.1, 3.8], min: .12, detailTarget: [0, 1.055, .007], detailCamera: [.18, 1.15, .3] },
   hrd153x: { target: [0, .52, 0], camera: [1.2, 1.1, 2.1], min: .15, detailTarget: [0, .88, 0], detailCamera: [.19, 1.13, .29] },
@@ -19,6 +20,14 @@ const profiles = {
 };
 
 const projects = {
+  domo: {
+    src: '/assets/projects/domo-geodesico/domo-geodesico.glb?v=1-60-0', profile: 'domo',
+    title: 'Domo geodésico', number: 'Proyecto de glamping · Herraidea',
+    description: 'Explora la estructura, el ventanal y el interior del domo. Cambia de vista, descubre el espacio bajo la lona o sigue su despiece por etapas.',
+    content: '467 piezas y elementos de contexto', detail: 'Ver interior',
+    aria: 'Modelo interactivo de domo geodésico con terraza e interior amueblado',
+    caveat: 'Modelo ilustrativo basado en referencias. Medidas, uniones, mobiliario y terraza sujetos a definición del proyecto.'
+  },
   riverack: {
     src: '/assets/projects/riverack/riverack.glb?v=1-59-0', profile: 'riverack',
     title: 'Riverack', number: 'Rack de caja · Proyecto probado en RAM 700',
@@ -109,6 +118,14 @@ const projects = {
 };
 
 const prepareModel = (gltf, profileName) => {
+  if (profileName === 'domo') gltf.scene.traverse(object => {
+    if (!object.isMesh) return;
+    const materials = Array.isArray(object.material) ? object.material : [object.material];
+    materials.forEach(material => {
+      material.envMapIntensity = 1.2;
+      if (material.transparent) { material.depthWrite = false; object.renderOrder = 2; }
+    });
+  });
   if (profileName === 'hrd1616') {
     let steel;
     gltf.scene.traverse(object => {
@@ -214,12 +231,12 @@ class HerraideaProject3D extends HTMLElement {
       this.replaceChildren(this.renderer.domElement);
 
       this.scene = new THREE.Scene();
-      this.camera = new THREE.PerspectiveCamera(32, 1, .01, 30);
+      this.camera = new THREE.PerspectiveCamera(32, 1, .01, this.profile.far || 30);
       this.camera.position.fromArray(this.profile.camera);
       this.controls = new OrbitControls(this.camera, this.renderer.domElement);
       this.controls.target.fromArray(this.profile.target);
       this.controls.minDistance = this.profile.min;
-      this.controls.maxDistance = 9;
+      this.controls.maxDistance = this.profile.max || 9;
       this.controls.maxPolarAngle = Math.PI * .55;
       this.controls.enablePan = false;
       this.controls.enableDamping = true;
@@ -292,11 +309,11 @@ class HerraideaProject3D extends HTMLElement {
     if (!this.baseTarget || !this.camera || !this.controls) return;
     const aspect = Math.max(1, 1.55 / this.camera.aspect);
     const preview = this.preview ? 1.08 : 1;
-    const offset = this.baseCamera.clone().sub(this.baseTarget).multiplyScalar(aspect * preview);
+    const offset = this.baseCamera.clone().sub(this.baseTarget).multiplyScalar(aspect * preview * (this.getAttribute('profile') === 'domo' ? 1.42 : 1));
     this.controls.target.copy(this.baseTarget);
     this.camera.position.copy(this.baseTarget).add(offset);
     this.controls.minDistance = this.profile.min;
-    this.controls.maxDistance = 9;
+    this.controls.maxDistance = this.profile.max || 9;
     this.fittedCamera = this.camera.position.clone();
     this.controls.update();
   }
@@ -349,8 +366,38 @@ class HerraideaProject3D extends HTMLElement {
     this.controls.update();
   }
 
+  setDomeLayer(name, visible) {
+    if (!this.ready || this.getAttribute('profile') !== 'domo') return;
+    const prefixes = name === 'lona' ? ['lona_', 'ventanal_', 'ojo_de_buey', 'respiradero', 'chimenea_sombrero', 'chimenea_tapajuntas'] : ['terraza'];
+    this.model.traverse(object => {
+      if (object.isMesh && prefixes.some(prefix => object.name.startsWith(prefix))) object.visible = visible;
+    });
+    this.dispatchEvent(new CustomEvent('projectlayer', { bubbles: true, detail: { name, visible } }));
+  }
+
+  showDomeView(name) {
+    if (!this.ready || this.getAttribute('profile') !== 'domo') return;
+    const views = {
+      exterior: { camera: [-5.6, 2.6, 13], target: [.4, 1.6, 0], layers: true },
+      interior: { camera: [.2, 9.4, 7.6], target: [0, .5, -.1], layers: false },
+      frente: { camera: [0, 2.2, 15.5], target: [0, 1.8, 0] },
+      planta: { camera: [.01, 17, .6], target: [0, 0, 0] }
+    };
+    const view = views[name];
+    if (!view) return;
+    cancelAnimationFrame(this.tweenFrame);
+    this.setAmount(0);
+    this.corner = true;
+    this.controls.target.fromArray(view.target);
+    const offset = new THREE.Vector3().fromArray(view.camera).sub(this.controls.target);
+    this.camera.position.copy(this.controls.target).add(offset.multiplyScalar(Math.max(1, 1.55 / this.camera.aspect) * (name === 'exterior' || name === 'frente' ? 1.42 : 1)));
+    if (view.layers !== undefined) ['lona', 'terraza'].forEach(layer => this.setDomeLayer(layer, view.layers));
+    this.controls.update();
+  }
+
   showCorner() {
     if (!this.ready) return;
+    if (this.getAttribute('profile') === 'domo') return this.showDomeView('interior');
     cancelAnimationFrame(this.tweenFrame);
     this.setAmount(0);
     this.corner = true;
@@ -508,7 +555,13 @@ const bindSpecialViewer = () => {
   specialViewer.addEventListener('projectready', () => {
     specialRange.disabled = false;
     specialButtons.forEach(button => { button.disabled = false; });
+    specialSection.querySelectorAll('[data-dome-view], [data-dome-layer]').forEach(button => { button.disabled = false; });
     specialStatus.textContent = 'Modelo listo · gira, acerca y explora sus piezas.';
+  });
+  specialViewer.addEventListener('projectlayer', event => {
+    const button = specialSection.querySelector(`[data-dome-layer="${event.detail.name}"]`);
+    button.classList.toggle('active', event.detail.visible);
+    button.setAttribute('aria-pressed', String(event.detail.visible));
   });
   specialViewer.addEventListener('projecterror', event => { specialStatus.textContent = event.detail.message; });
   specialViewer.addEventListener('projectprogress', event => {
@@ -519,8 +572,15 @@ const bindSpecialViewer = () => {
   });
 };
 const selectSpecialProject = key => {
-  if (!specialSection || !['riverack', 'futbolito'].includes(key)) return;
+  if (!specialSection || !['riverack', 'futbolito', 'domo'].includes(key)) return;
   const project = projects[key];
+  specialSection.querySelector('.dome-options').hidden = key !== 'domo';
+  specialSection.querySelectorAll('[data-dome-layer]').forEach(button => {
+    button.disabled = true;
+    button.classList.add('active');
+    button.setAttribute('aria-pressed', 'true');
+  });
+  specialSection.querySelectorAll('[data-dome-view]').forEach(button => { button.disabled = true; });
   specialSection.querySelectorAll('[data-special]').forEach(element => { element.textContent = project[element.dataset.special]; });
   specialSection.querySelectorAll('[data-special-project]').forEach(button => {
     const active = button.dataset.specialProject === key;
@@ -556,7 +616,14 @@ if (specialViewer) {
     if (button.hasAttribute('data-project-corner')) specialViewer.showCorner();
     else specialViewer.animateTo(button.hasAttribute('data-project-explode') ? 1 : 0);
   }));
-  specialRange.addEventListener('input', () => {
+  specialSection.querySelectorAll('[data-dome-view]').forEach(button => button.addEventListener('click', () => {
+    specialViewer.showDomeView(button.dataset.domeView);
+    selectSpecialControl('[data-project-assemble]');
+  }));
+  specialSection.querySelectorAll('[data-dome-layer]').forEach(button => button.addEventListener('click', () => {
+    specialViewer.setDomeLayer(button.dataset.domeLayer, button.getAttribute('aria-pressed') !== 'true');
+  }));
+  specialRange.addEventListener('input' , () => {
     cancelAnimationFrame(specialViewer.tweenFrame);
     selectSpecialControl(specialRange.value === '0' ? '[data-project-assemble]' : specialRange.value === '100' ? '[data-project-explode]' : '');
     specialViewer.setAmount(Number(specialRange.value) / 100);
@@ -568,7 +635,7 @@ if (requestedProject && projects[requestedProject]) {
   const requestedIndex = cards.findIndex(card => card.dataset.project === requestedProject);
   if (requestedIndex >= 0) setSlide(requestedIndex, 'auto');
   requestAnimationFrame(() => {
-    if (['riverack', 'futbolito'].includes(requestedProject)) {
+    if (['riverack', 'futbolito', 'domo'].includes(requestedProject)) {
       selectSpecialProject(requestedProject);
       specialSection.scrollIntoView({ behavior: 'instant' });
     } else openProject(requestedProject);

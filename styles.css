@@ -661,3 +661,9 @@ herraidea-post-calculator-3d canvas{display:block;width:100%;height:100%}
 .special-project-experience .project-panel h3{font-size:42px}
 @media(max-width:900px){.special-project-experience{grid-template-columns:1fr}}
 @media(max-width:900px){.special-project-experience{grid-template-rows:auto auto}}
+
+.dome-options[hidden]{display:none}
+.dome-options .project-actions{flex-wrap:wrap;border-radius:22px}
+.dome-options button::before{display:none}
+.special-project-options{flex-wrap:wrap}
+@media(min-width:901px){.special-project-experience .project-viewer-shell{height:760px;max-height:760px;align-self:start}}
