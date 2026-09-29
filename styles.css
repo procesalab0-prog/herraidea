@@ -635,3 +635,29 @@ herraidea-post-calculator-3d canvas{display:block;width:100%;height:100%}
     object-position:25% 60%;
   }
 }
+
+/* Projects: a live viewer, independent of the systems carousel. */
+.special-projects{background:#f3f5f6;scroll-margin-top:90px}
+.special-project-options{width:fit-content;max-width:100%;margin-bottom:24px}
+.special-project-options button::before{display:none}
+.special-project-experience{min-height:560px;border:1px solid var(--line);border-radius:22px;overflow:hidden}
+.special-project-experience .project-viewer-shell{min-height:560px}
+.special-project-experience .project-panel{overflow:visible}
+@media(max-width:900px){
+  .special-project-experience{grid-template-columns:1fr;grid-template-areas:"viewer" "panel"}
+  .special-project-experience .project-viewer-shell{height:420px;min-height:0}
+  .special-project-experience .project-panel{border-right:0;border-top:1px solid var(--line)}
+}
+@media(max-width:600px){
+  .special-project-experience .project-viewer-shell{height:340px}
+  .special-project-experience .project-panel{padding:24px}
+  .special-project-options{width:100%}
+}
+.special-projects{color:var(--ink)}
+.special-projects .projects-heading h2{font-size:clamp(46px,5.2vw,76px)}
+.special-projects .projects-heading p{color:var(--muted)}
+.special-project-experience{grid-template-columns:minmax(340px,.65fr) minmax(0,1.35fr)}
+.special-project-experience .project-panel{padding:28px}
+.special-project-experience .project-panel h3{font-size:42px}
+@media(max-width:900px){.special-project-experience{grid-template-columns:1fr}}
+@media(max-width:900px){.special-project-experience{grid-template-rows:auto auto}}
