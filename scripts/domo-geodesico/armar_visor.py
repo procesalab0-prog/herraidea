@@ -1,16 +1,16 @@
-"""Arma content/projects/riverack/visor-privado.html: un solo archivo con Three.js + el GLB incrustado (sin internet).
-Uso: python3 scripts/riverack/armar_visor.py  (requiere Node; usa `npx esbuild`)."""
+"""Arma content/projects/domo-geodesico/visor-privado.html: un solo archivo con Three.js + el GLB incrustado (sin internet).
+Uso: python3 scripts/domo-geodesico/armar_visor.py  (requiere Node; usa `npx esbuild`)."""
 import base64, subprocess, pathlib
 V = pathlib.Path(__file__).resolve().parent
 RAIZ = V.parent.parent
 js = subprocess.run(['npx', '--yes', 'esbuild@0.28', str(V / 'visor.js'), '--bundle', '--minify', '--format=iife', '--log-level=warning'],
                     check=True, capture_output=True, text=True).stdout
-b64 = base64.b64encode((RAIZ / 'assets/projects/riverack/riverack.glb').read_bytes()).decode()
+b64 = base64.b64encode((RAIZ / 'assets/projects/domo-geodesico/domo-geodesico.glb').read_bytes()).decode()
 html = f'''<!doctype html>
 <html lang="es"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow">
-<title>Riverack · rack de caja (modelo 3D preliminar)</title>
+<title>Domo geodésico · glamping (modelo 3D preliminar)</title>
 <style>
 :root{{--ink:#0b0d10;--red:#fa1418;--line:#dfe3e8}}
 *{{box-sizing:border-box;margin:0}}
@@ -39,19 +39,20 @@ nav button:disabled{{opacity:.35;cursor:wait}}
 .despiece label{{flex:1;display:flex;align-items:center;gap:8px;font:700 11px/1 inherit;letter-spacing:.1em;text-transform:uppercase;color:#59616a;min-width:0}}
 .despiece input{{flex:1;min-width:60px;accent-color:var(--red)}}
 .despiece output{{width:48px;text-align:right;color:var(--ink);white-space:nowrap}}
-@media(max-width:720px){{.nota{{display:none}}.despiece{{bottom:calc(max(18px,env(safe-area-inset-bottom)) + 106px);flex-wrap:wrap;border-radius:22px;justify-content:center}}.despiece label{{flex-basis:100%;padding:0 10px 6px}}}}
+@media(max-width:720px){{.nota{{display:none}}nav{{gap:6px}}nav i{{display:none}}nav button{{padding:11px 12px;font-size:11px}}.despiece{{bottom:calc(max(18px,env(safe-area-inset-bottom)) + 104px);flex-wrap:wrap;border-radius:22px;justify-content:center}}.despiece label{{flex-basis:100%;padding:0 10px 6px}}}}
 </style></head><body>
 <canvas id="c"></canvas>
-<header><div><h1>Riverack<em>.</em> rack de caja</h1><div class="sub">Modelo 3D preliminar · despiece · <span id="stats"></span></div></div><div class="priv">Privado · no publicar</div></header>
+<header><div><h1>Domo geodésico<em>.</em></h1><div class="sub">Glamping 3V 5/8 · 7 m · despiece · <span id="stats"></span></div></div><div class="priv">Privado · no publicar</div></header>
 <div id="carga">Cargando modelo…</div>
-<div class="nota">Proporciones medidas sobre la foto de estudio; no son medidas de fabricación. Arrastra para girar, pellizca o usa la rueda para acercar.</div>
+<div class="nota">Domo 3V 5/8 de 7 m estimado a partir de imágenes de referencia; no son medidas de fabricación. Arrastra para girar, pellizca o usa la rueda para acercar.</div>
 <div class="despiece" role="group" aria-label="Despiece del rack"><button id="desarmar" data-d type="button" disabled>Desarmar</button><button id="armar" data-d class="on" type="button" disabled>Armado</button><label for="rango">Separación <input id="rango" type="range" min="0" max="100" value="0" disabled><output id="rango-valor">0 %</output></label></div>
 <nav>
-<button data-v="tres">3/4</button><button data-v="trasera">Trasera</button><button data-v="lateral">Lateral</button><button data-v="planta">Planta</button><button data-v="detalle">Detalle</button>
-<i></i><button id="rot" class="on">Girar</button><button id="foto">Captura</button>
+<button data-v="exterior">Exterior</button><button data-v="interior">Interior</button><button data-v="frente">Frente</button><button data-v="planta">Planta</button>
+<i></i><button id="capa-lona" class="on" aria-pressed="true">Lona</button><button id="capa-terraza" class="on" aria-pressed="true">Terraza</button>
+<i></i><button id="rot">Girar</button><button id="foto">Captura</button>
 </nav>
 <script>window.__GLB__="{b64}";</script>
 <script>{js}</script>
 </body></html>'''
-(RAIZ / 'content/projects/riverack/visor-privado.html').write_text(html)
+(RAIZ / 'content/projects/domo-geodesico/visor-privado.html').write_text(html)
 print('visor:', round(len(html) / 1024), 'KB')
