@@ -1,7 +1,13 @@
 {
-  "current": "1.61.3",
+  "current": "1.61.4",
   "studio": "ProcesaLab",
   "versions": [
+    {
+      "version": "1.61.4",
+      "date": "2026-09-30",
+      "title": "Hero fijo otra vez en iPhone",
+      "summary": "Corrige el hero y el encabezado en iPhone (sobre todo en la app instalada): se desplazaban junto con la página y dejaban un tramo en blanco. La pantalla de entrada ponía overflow:hidden en la raíz para bloquear el scroll, lo que en iOS rompe los elementos sticky. Ahora el scroll se bloquea solo sobre la propia entrada y la raíz de la página no se modifica."
+    },
     {
       "version": "1.61.3",
       "date": "2026-09-30",

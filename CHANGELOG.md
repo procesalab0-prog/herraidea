@@ -1,5 +1,9 @@
 # Historial de versiones — Herraidea
 
+## 1.61.4 — 2026-09-30
+
+- Corrige el hero y el encabezado en iPhone (sobre todo en la app instalada): se desplazaban junto con la página y dejaban un tramo en blanco. La pantalla de entrada ponía overflow:hidden en la raíz para bloquear el scroll, lo que en iOS rompe los elementos sticky. Ahora el scroll se bloquea solo sobre la propia entrada y la raíz de la página no se modifica.
+
 ## 1.61.3 — 2026-09-30
 
 - La app instalada (PWA) y la portada ya no muestran pantalla en blanco al abrir: el arranque de la PWA usa fondo oscuro, los estilos de la pantalla de entrada van dentro de la página para pintarla desde el primer instante (≈0.1 s) y las hojas de estilo cargan sin bloquear mientras la entrada cubre la pantalla. La salida con el barrido rojo espera a que el estilo y la foto de día estén listos (máximo 7 s, el punto de la i late mientras tanto) y la animación arranca hasta que el logo cargó.
