@@ -1,5 +1,9 @@
 # Historial de versiones — Herraidea
 
+## 1.61.5 — 2026-09-30
+
+- Se corrige a siete el número de líneas de cable descrito para el HRD 1616 en la portada y en Sistemas.
+
 ## 1.61.4 — 2026-09-30
 
 - Corrige el hero y el encabezado en iPhone (sobre todo en la app instalada): se desplazaban junto con la página y dejaban un tramo en blanco. La pantalla de entrada ponía overflow:hidden en la raíz para bloquear el scroll, lo que en iOS rompe los elementos sticky. Ahora el scroll se bloquea solo sobre la propia entrada y la raíz de la página no se modifica.
