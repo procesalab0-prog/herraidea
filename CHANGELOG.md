@@ -1,5 +1,9 @@
 # Historial de versiones — Herraidea
 
+## 1.61.3 — 2026-09-30
+
+- La app instalada (PWA) y la portada ya no muestran pantalla en blanco al abrir: el arranque de la PWA usa fondo oscuro, los estilos de la pantalla de entrada van dentro de la página para pintarla desde el primer instante (≈0.1 s) y las hojas de estilo cargan sin bloquear mientras la entrada cubre la pantalla. La salida con el barrido rojo espera a que el estilo y la foto de día estén listos (máximo 7 s, el punto de la i late mientras tanto) y la animación arranca hasta que el logo cargó.
+
 ## 1.61.2 — 2026-09-30
 
 - Las fotografías del hero (día y noche) y de «Nuestra evolución» se sirven en WebP: la pareja del hero pasa de 6.0 MB a 258 KB sin pérdida visible. En una conexión móvil lenta, la foto de noche queda lista en unos 3 s en lugar de casi 40, así que el paso de día a noche ya no muestra la pantalla en blanco. Los PNG originales se conservan para el catálogo PDF y las tarjetas sociales.

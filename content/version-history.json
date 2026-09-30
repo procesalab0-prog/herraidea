@@ -1,7 +1,13 @@
 {
-  "current": "1.61.2",
+  "current": "1.61.3",
   "studio": "ProcesaLab",
   "versions": [
+    {
+      "version": "1.61.3",
+      "date": "2026-09-30",
+      "title": "Sin pantalla blanca al abrir",
+      "summary": "La app instalada (PWA) y la portada ya no muestran pantalla en blanco al abrir: el arranque de la PWA usa fondo oscuro, los estilos de la pantalla de entrada van dentro de la página para pintarla desde el primer instante (≈0.1 s) y las hojas de estilo cargan sin bloquear mientras la entrada cubre la pantalla. La salida con el barrido rojo espera a que el estilo y la foto de día estén listos (máximo 7 s, el punto de la i late mientras tanto) y la animación arranca hasta que el logo cargó."
+    },
     {
       "version": "1.61.2",
       "date": "2026-09-30",
