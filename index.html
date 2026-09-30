@@ -28,7 +28,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Archivo+Narrow:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=1-60-0">
+  <script>
+    // Pantalla de entrada: una vez por sesión y nunca con movimiento reducido.
+    (function () {
+      var d = document.documentElement;
+      try {
+        if (matchMedia('(prefers-reduced-motion: reduce)').matches || sessionStorage.getItem('herraidea-intro')) throw 0;
+        sessionStorage.setItem('herraidea-intro', '1');
+        d.classList.add('intro-activa', 'intro-pausa');
+      } catch (e) { d.classList.add('sin-intro'); }
+    })();
+  </script>
+  <link rel="preload" as="image" href="/assets/brand/logo-intro.png">
+  <link rel="stylesheet" href="/styles.css?v=1-61-0">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -92,6 +104,24 @@
   <script defer src="/_vercel/speed-insights/script.js"></script>
 </head>
 <body>
+  <div class="intro" id="intro" aria-hidden="true">
+    <div class="intro-fondo"><div class="intro-logo"><img class="intro-chev" src="/assets/brand/logo-intro.png" alt=""><img class="intro-palabra" src="/assets/brand/logo-intro.png" alt=""><i class="intro-punto"></i></div></div>
+    <div class="intro-barrido"></div>
+  </div>
+  <script>
+    (function () {
+      var d = document.documentElement, intro = document.getElementById('intro');
+      if (!d.classList.contains('intro-activa')) { intro.remove(); return; }
+      // 2.32 s: el barrido rojo cubre la pantalla y la página queda lista debajo; 2.8 s: termina de salir.
+      var revelar = function () { d.classList.remove('intro-pausa'); };
+      var cerrar = function () { revelar(); d.classList.remove('intro-activa'); intro.remove(); };
+      var t1 = setTimeout(revelar, 2320), t2 = setTimeout(cerrar, 2800);
+      intro.addEventListener('click', function () {
+        clearTimeout(t1); clearTimeout(t2); revelar(); intro.classList.add('intro-salta');
+        setTimeout(cerrar, 280);
+      });
+    })();
+  </script>
   <header class="site-header">
     <a class="brand" href="#inicio" aria-label="Herraidea, inicio"><img src="/assets/logo-gray-nodot.png" alt="Herraidea"><i></i></a>
     <div class="header-controls"><button class="menu-toggle" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span><b>Menú</b></button>

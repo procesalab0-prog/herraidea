@@ -1,7 +1,13 @@
 {
-  "current": "1.60.0",
+  "current": "1.61.0",
   "studio": "ProcesaLab",
   "versions": [
+    {
+      "version": "1.61.0",
+      "date": "2026-09-30",
+      "title": "Pantalla de entrada animada",
+      "summary": "Pantalla de entrada tomada del inicio del video promocional: el chevrón entra, la palabra Herraidea se revela, el punto rojo de la i cae con rebote y un barrido rojo en forma de chevrón descubre la portada en unos 2.8 s. Sin barra de carga ni texto adicional. Se muestra una vez por sesión, se omite con movimiento reducido y se puede saltar con un toque; las animaciones del hero esperan a que termine."
+    },
     {
       "version": "1.60.0",
       "date": "2026-09-29",
