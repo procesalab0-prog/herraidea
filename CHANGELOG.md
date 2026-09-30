@@ -1,5 +1,9 @@
 # Historial de versiones — Herraidea
 
+## 1.61.1 — 2026-09-30
+
+- El logotipo de ProcesaLab en el easter egg de créditos ya no aparece dentro de un recuadro blanco: se usa una versión clara sin fondo (texto blanco y engrane rojo) que se integra directamente sobre el panel oscuro.
+
 ## 1.61.0 — 2026-09-30
 
 - Pantalla de entrada tomada del inicio del video promocional: el chevrón entra, la palabra Herraidea se revela, el punto rojo de la i cae con rebote y un barrido rojo en forma de chevrón descubre la portada en unos 2.8 s. Sin barra de carga ni texto adicional. Se muestra una vez por sesión, se omite con movimiento reducido y se puede saltar con un toque; las animaciones del hero esperan a que termine.
