@@ -1,6 +1,6 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.61.0**
+Versión actual: **1.61.1**
 
 El dominio oficial `www.herraidea.com` sirve la web desde Vercel y `herraidea.com` redirige de forma segura a esa dirección. Las referencias canónicas, la tarjeta social, los datos estructurados y el catálogo descargable usan el dominio oficial. Los registros de correo preexistentes se conservaron al migrar los servidores DNS desde Jimdo a Vercel.
 
@@ -102,6 +102,7 @@ Landing estática para Herraidea, enfocada en barandales, soluciones y fabricaci
 
 - `index.html`: estructura completa del sitio y diálogos.
 - `styles.css`: estilos, responsive y animaciones.
+- `assets/brand/procesalab-horizontal-claro.png`: logotipo de ProcesaLab en blanco y rojo sin fondo para el easter egg de créditos.
 - `assets/brand/logo-intro.png`: logotipo en blanco con chevrón rojo para la pantalla de entrada de la portada.
 - `hero.js`: scroll, catálogo, canalizador, ventanas, WhatsApp y easter egg.
 - `assets/vendor/three/`: Three.js 0.160.0 y sus complementos (GLTFLoader, OrbitControls, RoomEnvironment, BufferGeometryUtils) alojados en el propio sitio. Los visores 3D y la calculadora no dependen de ningún CDN externo. Al actualizar la biblioteca hay que reemplazar estos archivos, no cambiar los imports.
