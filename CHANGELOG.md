@@ -1,5 +1,9 @@
 # Historial de versiones — Herraidea
 
+## 1.62.0 — 2026-09-30
+
+- Galería de Proyectos aprobada: fondo grafito, visor a todo el ancho, título blanco con remate rojo y controles al pie. El recorrido prioriza sistemas, calculadora y catálogo; después muestra Proyectos, Asesoría y recursos. Opciones del domo en Vistas y capas.
+
 ## 1.61.5 — 2026-09-30
 
 - Se corrige a siete el número de líneas de cable descrito para el HRD 1616 en la portada y en Sistemas.

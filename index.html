@@ -86,9 +86,9 @@
     @keyframes introSalta{to{opacity:0}}
   </style>
   <link rel="preload" as="image" href="/assets/brand/logo-intro.png" fetchpriority="high">
-  <link rel="preload" as="style" href="/styles.css?v=1-61-3" onload="this.onload=null;this.rel='stylesheet';herraideaCss()">
+  <link rel="preload" as="style" href="/styles.css?v=1-62-0" onload="this.onload=null;this.rel='stylesheet';herraideaCss()">
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&amp;family=Archivo+Narrow:wght@500;600;700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="/styles.css?v=1-61-3"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&amp;family=Archivo+Narrow:wght@500;600;700&amp;display=swap"><link rel="stylesheet" href="/liquid-glass.css?v=1-42-0"></noscript>
+  <noscript><link rel="stylesheet" href="/styles.css?v=1-62-0"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&amp;family=Archivo+Narrow:wght@500;600;700&amp;display=swap"><link rel="stylesheet" href="/liquid-glass.css?v=1-42-0"></noscript>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -238,76 +238,9 @@
       <div class="section-inner capabilities" aria-label="Capacidades de fabricación"><span>4 equipos CNC Haas VF-3SS</span><span>Maquinado de precisión</span><span>Soldadura robotizada</span><span>Corte láser y pulido</span></div>
     </section>
 
-    <section class="guide-section" id="asesoria">
-      <div class="section-inner guide-heading">
-        <span class="eyebrow">Encuentra la solución para tu proyecto</span>
-        <div><h2>Cuéntanos dónde<br><em>va a comenzar.</em></h2><p>Responde cuatro preguntas sencillas. Al terminar te mostraremos un punto de partida para que un asesor de Herraidea revise tu proyecto contigo.</p></div>
-      </div>
-      <div class="section-inner guide-shell">
-        <aside class="guide-context">
-          <span>Asesoría inicial</span>
-          <strong id="guide-progress-label">01 / 04</strong>
-          <div class="guide-progress" aria-hidden="true"><i id="guide-progress-bar"></i></div>
-          <p>No necesitas conocer códigos ni nombres de piezas. Esta guía no sustituye la revisión técnica.</p>
-        </aside>
-        <form class="project-guide" id="project-guide">
-          <fieldset class="guide-step active" data-guide-step="0">
-            <legend><small>Primero</small>¿Qué tipo de proyecto tienes?</legend>
-            <div class="guide-options">
-              <label><input type="radio" name="proyecto" value="Residencial"><span><b>Residencial</b><small>Casa, departamento o área privada</small></span></label>
-              <label><input type="radio" name="proyecto" value="Turístico"><span><b>Turístico</b><small>Hotel, Airbnb o desarrollo turístico</small></span></label>
-              <label><input type="radio" name="proyecto" value="Comercial"><span><b>Comercial</b><small>Local, desarrollo o espacio de atención</small></span></label>
-            </div>
-          </fieldset>
-          <fieldset class="guide-step" data-guide-step="1" hidden>
-            <legend><small>Ubicación</small>¿El proyecto está en interior o exterior?</legend>
-            <div class="guide-options guide-options-two">
-              <label><input type="radio" name="ubicacion" value="Interior"><span><b>Interior</b><small>Dentro de una construcción</small></span></label>
-              <label><input type="radio" name="ubicacion" value="Exterior"><span><b>Exterior</b><small>Expuesto al ambiente</small></span></label>
-            </div>
-          </fieldset>
-          <fieldset class="guide-step" data-guide-step="2" hidden>
-            <legend><small>Montaje</small>¿Sobre qué base se instalará?</legend>
-            <div class="guide-options">
-              <label><input type="radio" name="base" value="Concreto"><span><b>Concreto</b><small>Losa, escalón o pretil</small></span></label>
-              <label><input type="radio" name="base" value="Aluminio"><span><b>Aluminio</b><small>Perfil o estructura de aluminio</small></span></label>
-              <label><input type="radio" name="base" value="Herrería"><span><b>Herrería</b><small>Estructura o bastidor metálico</small></span></label>
-            </div>
-          </fieldset>
-          <fieldset class="guide-step" data-guide-step="3" hidden>
-            <legend><small>Aplicación</small>¿Qué necesitas resolver?</legend>
-            <div class="guide-options guide-options-applications">
-              <label><input type="radio" name="aplicacion" value="Barandal"><span><b>Barandal</b><small>Protección para un borde o desnivel</small></span></label>
-              <label><input type="radio" name="aplicacion" value="Escalera"><span><b>Escalera</b><small>Pasamanos y protección en recorrido</small></span></label>
-              <label><input type="radio" name="aplicacion" value="Balcón o terraza"><span><b>Balcón o terraza</b><small>Solución para un espacio abierto</small></span></label>
-              <label><input type="radio" name="aplicacion" value="Cancel o división"><span><b>Cancel o división</b><small>Unión y soporte para paneles de vidrio</small></span></label>
-              <label><input type="radio" name="aplicacion" value="Pieza o proyecto especial"><span><b>Proyecto especial</b><small>Algo que necesita fabricarse a la medida</small></span></label>
-              <label><input type="radio" name="aplicacion" value="No estoy seguro"><span><b>No estoy seguro</b><small>Quiero revisarlo con un asesor</small></span></label>
-            </div>
-          </fieldset>
-          <section class="guide-result" id="guide-result" hidden aria-live="polite">
-            <span class="eyebrow">Listo para revisar</span>
-            <h3>Ya tenemos un buen punto de partida.</h3>
-            <p>Un asesor puede ayudarte a definir el sistema, las medidas y las piezas adecuadas.</p>
-            <dl><div><dt>Proyecto</dt><dd id="guide-project"></dd></div><div><dt>Ubicación</dt><dd id="guide-location"></dd></div><div><dt>Base</dt><dd id="guide-base"></dd></div><div><dt>Necesidad</dt><dd id="guide-application"></dd></div></dl>
-            <article class="guide-suggestion">
-              <figure><img id="guide-solution-image" src="/assets/projects/clip-system/portada-estudio.jpg" alt="Sistema de barandal con postes, clips y vidrio"></figure>
-              <div><span id="guide-solution-kicker">Punto de partida · HRD 1525</span><h4 id="guide-solution-title">Postes con clips + vidrio</h4><p id="guide-solution-description">Un sistema completo que reúne postes, pinzas, cristal y pasamanos.</p><ul id="guide-solution-parts"><li>Postes</li><li>Clips o pinzas</li><li>Pasamanos y fijaciones</li></ul><a class="text-link" id="guide-solution-link" href="#soluciones" data-guide-project="clips">Explorar solución 3D <span>→</span></a></div>
-            </article>
-            <small class="guide-disclaimer">Esta es una sugerencia inicial. La selección final depende de medidas, tipo de vidrio y condiciones de instalación.</small>
-            <a class="button" id="guide-whatsapp" href="https://wa.me/524772561695" target="_blank" rel="noopener">Continuar por WhatsApp <span>→</span></a>
-            <button class="guide-restart" id="guide-restart" type="button">Empezar de nuevo</button>
-          </section>
-          <div class="guide-actions" id="guide-actions"><button id="guide-back" type="button" disabled>Anterior</button><button id="guide-next" type="button" disabled>Siguiente <span>→</span></button></div>
-        </form>
-      </div>
-      <div class="section-inner guide-new-project">
-        <div><span class="eyebrow">Fabricación a la medida</span><h3>¿Tienes otro proyecto en mente?</h3><p>Puede ser una pieza, estructura, muestra o idea que todavía no existe en el catálogo. Cuéntanos qué quieres desarrollar y lo revisamos contigo.</p></div>
-        <form id="new-project-form"><label for="new-project-message">Describe brevemente tu idea</label><textarea id="new-project-message" name="proyecto-nuevo" rows="4" placeholder="Ej. Tengo una fotografía, una medida especial o necesito fabricar una estructura…" required></textarea><button class="button" type="submit">Cuéntanos tu idea <span>→</span></button></form>
-      </div>
-    </section>
+    
 
-    <section class="projects-section" id="soluciones">
+    <section class="projects-section" id="sistemas-interactivos">
       <div class="section-inner projects-heading">
         <span class="eyebrow">Soluciones interactivas</span>
         <div><h2>Del sistema completo<br><em>a cada pieza.</em></h2><p>Explora nuestros sistemas de herrajes. Gíralos, acércate a sus uniones y observa cómo se separan y vuelven a integrarse.</p></div>
@@ -360,51 +293,7 @@
       </div>
     </section>
 
-    <section class="projects-section special-projects" id="proyectos" aria-labelledby="special-projects-title">
-      <div class="section-inner projects-heading">
-        <span class="eyebrow">Proyectos · Fabricación Herraidea</span>
-        <div><h2 id="special-projects-title">Ideas que toman<br><em>forma.</em></h2><p>Explora nuestros proyectos, gira cada modelo y descubre cómo se unen sus piezas.</p></div>
-      </div>
-      <div class="section-inner">
-        <div class="project-actions special-project-options" role="group" aria-label="Elegir proyecto">
-          <button type="button" data-special-project="riverack" class="active" aria-pressed="true" aria-controls="special-project-experience">Riverack</button>
-          <button type="button" data-special-project="futbolito" aria-pressed="false" aria-controls="special-project-experience">Futbolito Herraidea</button>
-          <button type="button" data-special-project="domo" aria-pressed="false" aria-controls="special-project-experience">Domo geodésico</button>
-        </div>
-        <div class="project-experience-body special-project-experience" id="special-project-experience">
-          <div class="project-viewer-shell">
-            <hrd-project-3d id="special-project-viewer" autostart src="/assets/projects/riverack/riverack.glb?v=1-59-0" profile="riverack" role="img" aria-label="Modelo interactivo del rack Riverack para caja de pickup"></hrd-project-3d>
-            <div class="project-viewer-hint"><span>Arrastra para girar</span><span>Pellizca para acercar</span></div>
-          </div>
-          <aside class="project-panel">
-            <span class="project-number" data-special="number">Rack de caja · Proyecto probado en RAM 700</span>
-            <h3 data-special="title">Riverack</h3>
-            <p data-special="description">Rack de caja fabricado por Herraidea. Explora sus postes, travesaños telescópicos y bases de sujeción, con despiece por etapas. Este proyecto se probó en una RAM 700.</p>
-            <dl><div><dt>Contenido</dt><dd data-special="content">100 piezas · 56 tornillos</dd></div><div><dt>Experiencia</dt><dd>Despiece interactivo</dd></div></dl>
-            <div class="project-actions special-project-controls" aria-label="Vistas del proyecto">
-              <button type="button" data-project-explode aria-pressed="false" disabled>Desarmar</button>
-              <button type="button" data-project-assemble class="active" aria-pressed="true" disabled>Armado</button>
-              <button type="button" data-project-corner aria-pressed="false" disabled data-special="detail">Ver unión</button>
-            </div>
-            <div class="dome-options" hidden>
-              <div class="project-actions" role="group" aria-label="Vistas del domo">
-                <button type="button" data-dome-view="exterior" disabled>Exterior</button>
-                <button type="button" data-dome-view="interior" disabled>Interior</button>
-                <button type="button" data-dome-view="frente" disabled>Frente</button>
-                <button type="button" data-dome-view="planta" disabled>Planta</button>
-              </div>
-              <div class="project-actions" role="group" aria-label="Capas visibles del domo">
-                <button type="button" data-dome-layer="lona" class="active" aria-pressed="true" disabled>Lona</button>
-                <button type="button" data-dome-layer="terraza" class="active" aria-pressed="true" disabled>Terraza</button>
-              </div>
-            </div>
-            <label class="project-range">Separación <output id="special-project-range-value">0 %</output><input id="special-project-range" type="range" min="0" max="100" value="0" disabled></label>
-            <small class="project-status" id="special-project-status" role="status">Preparando modelo 3D…</small>
-            <small class="project-caveat" data-special="caveat">Modelo ilustrativo. Consulta las medidas y la adaptación a tu vehículo con Herraidea.</small>
-          </aside>
-        </div>
-      </div>
-    </section>
+    
 
     <section class="calculator-section" id="calculadora">
       <div class="section-inner calculator-heading">
@@ -460,6 +349,122 @@
       <div class="catalog-empty" id="catalog-empty" hidden><strong>No encontramos esa pieza.</strong><p>Prueba otro código o cuéntanos qué necesitas para ayudarte a identificarla.</p><a href="#contacto" class="text-link">Pedir ayuda <span>→</span></a></div>
     </div></section>
 
+    <section class="projects-section special-projects" id="proyectos" aria-labelledby="special-projects-title">
+      <div class="section-inner projects-heading">
+        <span class="eyebrow">Proyectos interactivos</span>
+        <div><h2 id="special-projects-title">De la idea<br>al proyecto.<br><em>Pieza por pieza.</em></h2><p>Explora nuestros proyectos. Gíralos, acércate a sus uniones y descubre cómo cada pieza da forma a una idea.</p></div>
+      </div>
+      <div class="section-inner">
+        <div class="project-actions special-project-options" role="group" aria-label="Elegir proyecto">
+          <button type="button" data-special-project="riverack" class="active" aria-pressed="true" aria-controls="special-project-experience">Riverack</button>
+          <button type="button" data-special-project="futbolito" aria-pressed="false" aria-controls="special-project-experience">Futbolito Herraidea</button>
+          <button type="button" data-special-project="domo" aria-pressed="false" aria-controls="special-project-experience">Domo geodésico</button>
+        </div>
+        <div class="project-experience-body special-project-experience" id="special-project-experience">
+          <div class="project-viewer-shell">
+            <div class="gallery-identity">            <span class="project-number" data-special="number">Rack de caja · RAM 700</span>
+            <h3 data-special="title">Riverack</h3>
+            <p data-special="description">Diseñado para la aventura. Probado en RAM 700.</p>
+            </div>
+            <hrd-project-3d id="special-project-viewer" autostart src="/assets/projects/riverack/riverack.glb?v=1-59-0" profile="riverack" role="img" aria-label="Modelo interactivo del rack Riverack para caja de pickup"></hrd-project-3d>
+            <div class="project-viewer-hint"><span>Arrastra para girar</span><span>Pellizca para acercar</span></div>
+          </div>
+          <aside class="project-panel gallery-controls">
+            <div class="project-actions special-project-controls" aria-label="Vistas del proyecto">
+              <button type="button" data-project-explode aria-pressed="false" disabled>Desarmar</button>
+              <button type="button" data-project-assemble class="active" aria-pressed="true" disabled>Armado</button>
+              <button type="button" data-project-corner aria-pressed="false" disabled data-special="detail">Ver unión</button>
+            </div>
+            <details class="dome-options" hidden><summary>Vistas y capas <span aria-hidden="true">＋</span></summary><div class="gallery-layer-popover">
+              <div class="project-actions" role="group" aria-label="Vistas del domo">
+                <button type="button" data-dome-view="exterior" disabled>Exterior</button>
+                <button type="button" data-dome-view="interior" disabled>Interior</button>
+                <button type="button" data-dome-view="frente" disabled>Frente</button>
+                <button type="button" data-dome-view="planta" disabled>Planta</button>
+              </div>
+              <div class="project-actions" role="group" aria-label="Capas visibles del domo">
+                <button type="button" data-dome-layer="lona" class="active" aria-pressed="true" disabled>Lona</button>
+                <button type="button" data-dome-layer="terraza" class="active" aria-pressed="true" disabled>Terraza</button>
+              </div>
+            </div></details>
+            <label class="project-range">Separación <output id="special-project-range-value">0 %</output><input id="special-project-range" type="range" min="0" max="100" value="0" disabled></label>
+            <small class="project-status" id="special-project-status" role="status">Preparando modelo 3D…</small>
+            <small class="project-caveat" data-special="caveat">Modelo ilustrativo. Consulta las medidas y la adaptación a tu vehículo con Herraidea.</small>
+          </aside>
+        </div>
+        <div class="gallery-contact"><div><span>De la idea a la fabricación</span><h3>¿Tienes un proyecto en mente?</h3></div><a class="button" href="#contacto">Cuéntanos tu proyecto <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </section>
+
+    <section class="guide-section" id="asesoria">
+      <div class="section-inner guide-heading">
+        <span class="eyebrow">Encuentra la solución para tu proyecto</span>
+        <div><h2>Cuéntanos dónde<br><em>va a comenzar.</em></h2><p>Responde cuatro preguntas sencillas. Al terminar te mostraremos un punto de partida para que un asesor de Herraidea revise tu proyecto contigo.</p></div>
+      </div>
+      <div class="section-inner guide-shell">
+        <aside class="guide-context">
+          <span>Asesoría inicial</span>
+          <strong id="guide-progress-label">01 / 04</strong>
+          <div class="guide-progress" aria-hidden="true"><i id="guide-progress-bar"></i></div>
+          <p>No necesitas conocer códigos ni nombres de piezas. Esta guía no sustituye la revisión técnica.</p>
+        </aside>
+        <form class="project-guide" id="project-guide">
+          <fieldset class="guide-step active" data-guide-step="0">
+            <legend><small>Primero</small>¿Qué tipo de proyecto tienes?</legend>
+            <div class="guide-options">
+              <label><input type="radio" name="proyecto" value="Residencial"><span><b>Residencial</b><small>Casa, departamento o área privada</small></span></label>
+              <label><input type="radio" name="proyecto" value="Turístico"><span><b>Turístico</b><small>Hotel, Airbnb o desarrollo turístico</small></span></label>
+              <label><input type="radio" name="proyecto" value="Comercial"><span><b>Comercial</b><small>Local, desarrollo o espacio de atención</small></span></label>
+            </div>
+          </fieldset>
+          <fieldset class="guide-step" data-guide-step="1" hidden>
+            <legend><small>Ubicación</small>¿El proyecto está en interior o exterior?</legend>
+            <div class="guide-options guide-options-two">
+              <label><input type="radio" name="ubicacion" value="Interior"><span><b>Interior</b><small>Dentro de una construcción</small></span></label>
+              <label><input type="radio" name="ubicacion" value="Exterior"><span><b>Exterior</b><small>Expuesto al ambiente</small></span></label>
+            </div>
+          </fieldset>
+          <fieldset class="guide-step" data-guide-step="2" hidden>
+            <legend><small>Montaje</small>¿Sobre qué base se instalará?</legend>
+            <div class="guide-options">
+              <label><input type="radio" name="base" value="Concreto"><span><b>Concreto</b><small>Losa, escalón o pretil</small></span></label>
+              <label><input type="radio" name="base" value="Aluminio"><span><b>Aluminio</b><small>Perfil o estructura de aluminio</small></span></label>
+              <label><input type="radio" name="base" value="Herrería"><span><b>Herrería</b><small>Estructura o bastidor metálico</small></span></label>
+            </div>
+          </fieldset>
+          <fieldset class="guide-step" data-guide-step="3" hidden>
+            <legend><small>Aplicación</small>¿Qué necesitas resolver?</legend>
+            <div class="guide-options guide-options-applications">
+              <label><input type="radio" name="aplicacion" value="Barandal"><span><b>Barandal</b><small>Protección para un borde o desnivel</small></span></label>
+              <label><input type="radio" name="aplicacion" value="Escalera"><span><b>Escalera</b><small>Pasamanos y protección en recorrido</small></span></label>
+              <label><input type="radio" name="aplicacion" value="Balcón o terraza"><span><b>Balcón o terraza</b><small>Solución para un espacio abierto</small></span></label>
+              <label><input type="radio" name="aplicacion" value="Cancel o división"><span><b>Cancel o división</b><small>Unión y soporte para paneles de vidrio</small></span></label>
+              <label><input type="radio" name="aplicacion" value="Pieza o proyecto especial"><span><b>Proyecto especial</b><small>Algo que necesita fabricarse a la medida</small></span></label>
+              <label><input type="radio" name="aplicacion" value="No estoy seguro"><span><b>No estoy seguro</b><small>Quiero revisarlo con un asesor</small></span></label>
+            </div>
+          </fieldset>
+          <section class="guide-result" id="guide-result" hidden aria-live="polite">
+            <span class="eyebrow">Listo para revisar</span>
+            <h3>Ya tenemos un buen punto de partida.</h3>
+            <p>Un asesor puede ayudarte a definir el sistema, las medidas y las piezas adecuadas.</p>
+            <dl><div><dt>Proyecto</dt><dd id="guide-project"></dd></div><div><dt>Ubicación</dt><dd id="guide-location"></dd></div><div><dt>Base</dt><dd id="guide-base"></dd></div><div><dt>Necesidad</dt><dd id="guide-application"></dd></div></dl>
+            <article class="guide-suggestion">
+              <figure><img id="guide-solution-image" src="/assets/projects/clip-system/portada-estudio.jpg" alt="Sistema de barandal con postes, clips y vidrio"></figure>
+              <div><span id="guide-solution-kicker">Punto de partida · HRD 1525</span><h4 id="guide-solution-title">Postes con clips + vidrio</h4><p id="guide-solution-description">Un sistema completo que reúne postes, pinzas, cristal y pasamanos.</p><ul id="guide-solution-parts"><li>Postes</li><li>Clips o pinzas</li><li>Pasamanos y fijaciones</li></ul><a class="text-link" id="guide-solution-link" href="#sistemas-interactivos" data-guide-project="clips">Explorar solución 3D <span>→</span></a></div>
+            </article>
+            <small class="guide-disclaimer">Esta es una sugerencia inicial. La selección final depende de medidas, tipo de vidrio y condiciones de instalación.</small>
+            <a class="button" id="guide-whatsapp" href="https://wa.me/524772561695" target="_blank" rel="noopener">Continuar por WhatsApp <span>→</span></a>
+            <button class="guide-restart" id="guide-restart" type="button">Empezar de nuevo</button>
+          </section>
+          <div class="guide-actions" id="guide-actions"><button id="guide-back" type="button" disabled>Anterior</button><button id="guide-next" type="button" disabled>Siguiente <span>→</span></button></div>
+        </form>
+      </div>
+      <div class="section-inner guide-new-project">
+        <div><span class="eyebrow">Fabricación a la medida</span><h3>¿Tienes otro proyecto en mente?</h3><p>Puede ser una pieza, estructura, muestra o idea que todavía no existe en el catálogo. Cuéntanos qué quieres desarrollar y lo revisamos contigo.</p></div>
+        <form id="new-project-form"><label for="new-project-message">Describe brevemente tu idea</label><textarea id="new-project-message" name="proyecto-nuevo" rows="4" placeholder="Ej. Tengo una fotografía, una medida especial o necesito fabricar una estructura…" required></textarea><button class="button" type="submit">Cuéntanos tu idea <span>→</span></button></form>
+      </div>
+    </section>
+
     <section class="resources-section" id="recursos">
       <div class="section-inner resources-heading">
         <span class="eyebrow">Recursos técnicos</span>
@@ -503,7 +508,7 @@
 
   <dialog class="product-dialog" id="product-dialog" aria-labelledby="product-dialog-title">
     <button class="dialog-close" type="button" aria-label="Cerrar ficha">×</button>
-    <div class="dialog-body"><div class="dialog-gallery" id="dialog-gallery"></div><div class="dialog-copy"><span class="eyebrow" id="dialog-category"></span><h2 id="product-dialog-title"></h2><p class="dialog-description" id="dialog-description"></p><div class="dialog-section-label">Información técnica disponible</div><ul class="dialog-specs" id="dialog-specs"></ul><section class="dialog-system" id="dialog-system" hidden><span>Parte del sistema</span><h3 id="dialog-system-title"></h3><div id="dialog-related-products"></div><a id="dialog-system-link" href="#soluciones">Explorar solución 3D <span>→</span></a></section><div class="dialog-actions"><a class="button" id="dialog-whatsapp" target="_blank" rel="noopener">Solicitar cotización <span>→</span></a><a class="text-button" id="dialog-page">Abrir página técnica</a><a class="text-button" id="dialog-pdf" download hidden>Descargar ficha PDF</a><button class="text-button" id="dialog-share" type="button">Copiar enlace</button></div><small class="technical-note">Las acotaciones se expresan en milímetros. Verifica físicamente la pieza antes de instalar y perforar.</small></div></div>
+    <div class="dialog-body"><div class="dialog-gallery" id="dialog-gallery"></div><div class="dialog-copy"><span class="eyebrow" id="dialog-category"></span><h2 id="product-dialog-title"></h2><p class="dialog-description" id="dialog-description"></p><div class="dialog-section-label">Información técnica disponible</div><ul class="dialog-specs" id="dialog-specs"></ul><section class="dialog-system" id="dialog-system" hidden><span>Parte del sistema</span><h3 id="dialog-system-title"></h3><div id="dialog-related-products"></div><a id="dialog-system-link" href="#sistemas-interactivos">Explorar solución 3D <span>→</span></a></section><div class="dialog-actions"><a class="button" id="dialog-whatsapp" target="_blank" rel="noopener">Solicitar cotización <span>→</span></a><a class="text-button" id="dialog-page">Abrir página técnica</a><a class="text-button" id="dialog-pdf" download hidden>Descargar ficha PDF</a><button class="text-button" id="dialog-share" type="button">Copiar enlace</button></div><small class="technical-note">Las acotaciones se expresan en milímetros. Verifica físicamente la pieza antes de instalar y perforar.</small></div></div>
   </dialog>
 
   <dialog class="project-dialog" id="project-dialog" aria-labelledby="project-dialog-title">
@@ -535,7 +540,7 @@
   </dialog>
 
   <footer><div class="section-inner"><a class="footer-brand" href="#inicio" aria-label="Herraidea, volver al inicio"><img src="/assets/logo-light-nodot.png" alt="Herraidea"><i aria-hidden="true"></i></a><nav><a href="/sistemas">Sistemas</a><a href="/aplicaciones">Aplicaciones</a><a href="#asesoria">Asesoría</a><a href="#catalogo">Catálogo</a><a href="#recursos">Recursos</a><a href="#nosotros">Nosotros</a><a href="#envios">Envíos</a><a href="#contacto">Contacto</a><a href="/privacidad">Privacidad</a></nav><span>León, Gto. · Desde 2013</span></div></footer>
-  <script src="/hrd-map.js?v=1-10"></script><script src="/hero.js?v=1-59-0"></script><script src="/project-cover.js?v=1-25-0"></script><script type="module" src="/project-3d-v2.js?v=1-60-0"></script><script type="module" src="/calculator-3d.js?v=1-54-0"></script>
+  <script src="/hrd-map.js?v=1-10"></script><script src="/hero.js?v=1-62-0"></script><script src="/project-cover.js?v=1-25-0"></script><script type="module" src="/project-3d-v2.js?v=1-62-0"></script><script type="module" src="/calculator-3d.js?v=1-54-0"></script>
   <script src="/liquid-glass.js?v=1-42-0" defer></script>
 </body>
 </html>

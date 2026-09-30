@@ -1,12 +1,14 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.61.5**
+Versión actual: **1.62.0**
 
 El dominio oficial `www.herraidea.com` sirve la web desde Vercel y `herraidea.com` redirige de forma segura a esa dirección. Las referencias canónicas, la tarjeta social, los datos estructurados y el catálogo descargable usan el dominio oficial. Los registros de correo preexistentes se conservaron al migrar los servidores DNS desde Jimdo a Vercel.
 
 Sitio de producción: `https://www.herraidea.com/`
 
 ## Estado actual
+
+Galería de Proyectos aprobada: fondo grafito, visor a todo el ancho, título blanco con remate rojo y controles al pie. El recorrido prioriza sistemas, calculadora y catálogo; después muestra Proyectos, Asesoría y recursos. Opciones del domo en Vistas y capas.
 
 La presentación del HRD 1616 indica siete líneas de cable en la portada y en la guía de Sistemas, de acuerdo con el producto mostrado.
 
