@@ -1,5 +1,9 @@
 # Historial de versiones — Herraidea
 
+## 1.61.0 — 2026-09-30
+
+- Pantalla de entrada tomada del inicio del video promocional: el chevrón entra, la palabra Herraidea se revela, el punto rojo de la i cae con rebote y un barrido rojo en forma de chevrón descubre la portada en unos 2.8 s. Sin barra de carga ni texto adicional. Se muestra una vez por sesión, se omite con movimiento reducido y se puede saltar con un toque; las animaciones del hero esperan a que termine.
+
 ## 1.60.0 — 2026-09-29
 
 - Domo geodésico incorporado al selector de Proyectos, sin portada. Conserva sus 467 piezas, despiece por etapas, vistas exterior/interior/frente/planta y controles para mostrar u ocultar lona y terraza.

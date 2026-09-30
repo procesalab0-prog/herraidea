@@ -1,12 +1,14 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.60.0**
+Versión actual: **1.61.0**
 
 El dominio oficial `www.herraidea.com` sirve la web desde Vercel y `herraidea.com` redirige de forma segura a esa dirección. Las referencias canónicas, la tarjeta social, los datos estructurados y el catálogo descargable usan el dominio oficial. Los registros de correo preexistentes se conservaron al migrar los servidores DNS desde Jimdo a Vercel.
 
 Sitio de producción: `https://www.herraidea.com/`
 
 ## Estado actual
+
+Pantalla de entrada tomada del inicio del video promocional: el chevrón entra, la palabra Herraidea se revela, el punto rojo de la i cae con rebote y un barrido rojo en forma de chevrón descubre la portada en unos 2.8 s. Sin barra de carga ni texto adicional. Se muestra una vez por sesión, se omite con movimiento reducido y se puede saltar con un toque; las animaciones del hero esperan a que termine.
 
 Domo geodésico incorporado al selector de Proyectos, sin portada. Conserva sus 467 piezas, despiece por etapas, vistas exterior/interior/frente/planta y controles para mostrar u ocultar lona y terraza.
 
@@ -100,6 +102,7 @@ Landing estática para Herraidea, enfocada en barandales, soluciones y fabricaci
 
 - `index.html`: estructura completa del sitio y diálogos.
 - `styles.css`: estilos, responsive y animaciones.
+- `assets/brand/logo-intro.png`: logotipo en blanco con chevrón rojo para la pantalla de entrada de la portada.
 - `hero.js`: scroll, catálogo, canalizador, ventanas, WhatsApp y easter egg.
 - `assets/vendor/three/`: Three.js 0.160.0 y sus complementos (GLTFLoader, OrbitControls, RoomEnvironment, BufferGeometryUtils) alojados en el propio sitio. Los visores 3D y la calculadora no dependen de ningún CDN externo. Al actualizar la biblioteca hay que reemplazar estos archivos, no cambiar los imports.
 - `hrd-3d.js`: versión anterior del recorrido 3D; **no se carga en la página** y requiere el `THREE` global que ya se retiró. Se conserva solo como referencia.
