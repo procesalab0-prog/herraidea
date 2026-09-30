@@ -1,6 +1,6 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.61.1**
+Versión actual: **1.61.2**
 
 El dominio oficial `www.herraidea.com` sirve la web desde Vercel y `herraidea.com` redirige de forma segura a esa dirección. Las referencias canónicas, la tarjeta social, los datos estructurados y el catálogo descargable usan el dominio oficial. Los registros de correo preexistentes se conservaron al migrar los servidores DNS desde Jimdo a Vercel.
 
@@ -112,7 +112,7 @@ Landing estática para Herraidea, enfocada en barandales, soluciones y fabricaci
 - `project-3d-v2.js`: carrusel, visor reutilizable para diferentes soluciones, interacción táctil y control de sus animaciones de despiece; el cristal del HRD 1525 cubre la zona de sujeción sin rebasarla, las cabezas del HRD 1518 permanecen unidas a cada pin y el HRD 1616 sustituye el negro por acero satinado durante la visualización.
 - `calculator-3d.js`: cálculo de espacios y postes, manejo de tramos conectados y ensamblaje de la vista a partir de los modelos GLB reales del HRD 1525, HRD 1518 y HRD 1616; conserva las pinzas en ambas caras del poste compartido HRD 1525 y recorta únicamente los extremos interiores del pasamanos para que se encuentren en el centro de la esquina, centra el encuentro del pasamanos HRD 1616 sobre su poste y mantiene íntegra la unión articulada del HRD 1518.
 - `assets/fabricacion/`: imágenes optimizadas de maquinaria, producción y empaque recibidas para la primera etapa.
-- `assets/hero-barandal-v2-day.png` y `assets/hero-barandal-v2-night.png`: escenas vigentes del hero, fieles al sistema de postes, clips y cristal.
+- `assets/hero-barandal-v2-day.png` y `assets/hero-barandal-v2-night.png`: escenas vigentes del hero, fieles al sistema de postes, clips y cristal. La página carga sus versiones `.webp` (139 KB y 119 KB); los PNG se conservan como originales para el catálogo PDF y las tarjetas sociales.
 - `assets/brand/herraidea-social-v2.png`: tarjeta social vigente para WhatsApp y redes, alineada con el nuevo hero y el mensaje principal.
 - `output/pdf/catalogo-herraidea-2026-adelanto.pdf`: catálogo descargable vigente; se genera desde las mismas imágenes y datos que utiliza la web.
 - `output/pdf/fichas/`: 81 fichas PDF individuales, una por modelo, generadas sin precios desde la fotografía y la vista o plano técnico disponible.

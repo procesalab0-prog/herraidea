@@ -1,5 +1,9 @@
 # Historial de versiones — Herraidea
 
+## 1.61.2 — 2026-09-30
+
+- Las fotografías del hero (día y noche) y de «Nuestra evolución» se sirven en WebP: la pareja del hero pasa de 6.0 MB a 258 KB sin pérdida visible. En una conexión móvil lenta, la foto de noche queda lista en unos 3 s en lugar de casi 40, así que el paso de día a noche ya no muestra la pantalla en blanco. Los PNG originales se conservan para el catálogo PDF y las tarjetas sociales.
+
 ## 1.61.1 — 2026-09-30
 
 - El logotipo de ProcesaLab en el easter egg de créditos ya no aparece dentro de un recuadro blanco: se usa una versión clara sin fondo (texto blanco y engrane rojo) que se integra directamente sobre el panel oscuro.
