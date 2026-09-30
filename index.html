@@ -49,8 +49,7 @@
     html.css-pendiente body{visibility:hidden}
     html.intro-activa{background:#0b0d10}
     .intro{display:none}
-    html.intro-activa .intro{display:block;position:fixed;inset:0;z-index:1000;overflow:hidden;cursor:pointer;-webkit-tap-highlight-color:transparent}
-    html.intro-pausa{overflow:hidden}
+    html.intro-activa .intro{display:block;position:fixed;inset:0;z-index:1000;overflow:hidden;touch-action:none;overscroll-behavior:contain;cursor:pointer;-webkit-tap-highlight-color:transparent}
     html.intro-pausa .hero-image img,html.intro-pausa .hero-copy>*,html.intro-pausa .hero-copy h1 em::after,html.intro-pausa .main-nav a{animation-play-state:paused}
     .intro-fondo{position:absolute;inset:0;display:grid;place-items:center;background:radial-gradient(120vmax 90vmax at 20% 110%,rgba(250,20,24,.22),transparent 60%),#0b0d10}
     .intro-logo{position:relative;width:min(560px,76vw);aspect-ratio:1400/195;animation:introEmpuje .9s 1.5s cubic-bezier(.65,0,.35,1) both}
@@ -180,6 +179,8 @@
         if ((d.classList.contains('css-lista') && foto) || t > 7000) salir();
         else intro.classList.add('intro-espera');
       };
+      // Bloquea el scroll solo sobre la entrada; cambiar overflow en <html> rompe los elementos sticky en iOS.
+      ['touchmove', 'wheel'].forEach(function (tipo) { intro.addEventListener(tipo, function (e) { e.preventDefault(); }, { passive: false }); });
       window.herraideaIntroCss = intentar;
       // La animación arranca cuando el logo ya cargó (máximo 1.2 s de espera), para que no aparezca a medio camino.
       var arrancar = function () {

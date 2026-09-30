@@ -1,6 +1,6 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.61.3**
+Versión actual: **1.61.4**
 
 El dominio oficial `www.herraidea.com` sirve la web desde Vercel y `herraidea.com` redirige de forma segura a esa dirección. Las referencias canónicas, la tarjeta social, los datos estructurados y el catálogo descargable usan el dominio oficial. Los registros de correo preexistentes se conservaron al migrar los servidores DNS desde Jimdo a Vercel.
 
@@ -8,7 +8,7 @@ Sitio de producción: `https://www.herraidea.com/`
 
 ## Estado actual
 
-Pantalla de entrada tomada del inicio del video promocional: el chevrón entra, la palabra Herraidea se revela, el punto rojo de la i cae con rebote y un barrido rojo en forma de chevrón descubre la portada en unos 2.8 s. Sin barra de carga ni texto adicional. Sus estilos van en línea dentro de `index.html` para pintar de inmediato; `styles.css`, `liquid-glass.css` y las fuentes cargan sin bloquear, y la salida espera a que el estilo y la foto de día del hero estén listos (máximo 7 s). El manifiesto de la PWA arranca con fondo oscuro para que no haya destello blanco. Se muestra una vez por sesión, se omite con movimiento reducido y se puede saltar con un toque; las animaciones del hero esperan a que termine.
+Pantalla de entrada tomada del inicio del video promocional: el chevrón entra, la palabra Herraidea se revela, el punto rojo de la i cae con rebote y un barrido rojo en forma de chevrón descubre la portada en unos 2.8 s. Sin barra de carga ni texto adicional. Sus estilos van en línea dentro de `index.html` para pintar de inmediato; `styles.css`, `liquid-glass.css` y las fuentes cargan sin bloquear, y la salida espera a que el estilo y la foto de día del hero estén listos (máximo 7 s). El manifiesto de la PWA arranca con fondo oscuro para que no haya destello blanco. Durante la entrada el scroll se bloquea solo sobre la propia capa (touchmove/wheel), nunca con overflow en `<html>`: en iOS eso rompe el encabezado y el hero sticky. Se muestra una vez por sesión, se omite con movimiento reducido y se puede saltar con un toque; las animaciones del hero esperan a que termine.
 
 Domo geodésico incorporado al selector de Proyectos, sin portada. Conserva sus 467 piezas, despiece por etapas, vistas exterior/interior/frente/planta y controles para mostrar u ocultar lona y terraza.
 
