@@ -99,11 +99,11 @@ const projects = {
     caveat: 'Las barras y el pasamanos muestran el sistema instalado y no indican por sí solos el contenido comercial del kit.'
   },
   hrd1616: {
-    src: '/assets/projects/hrd-1616/hrd-1616-esquina.glb', profile: 'hrd1616', kicker: 'Solución interactiva 03',
+    src: '/assets/projects/hrd-1616/hrd-1616-esquina-7-cables.glb?v=1-63-0', profile: 'hrd1616', kicker: 'Solución interactiva 03',
     title: 'HRD 1616 · Poste cuadrado + cable', number: '03 / HRD 1616 · Cable de acero',
     heading: 'Una esquina completa, unión por unión.',
     description: 'Recorre los dos tramos, acércate al poste compartido y controla el despiece del sistema completo.',
-    content: '103 piezas y conjuntos', detail: 'Ver esquina',
+    content: '93 piezas y conjuntos', detail: 'Ver esquina',
     aria: 'Modelo tridimensional interactivo del sistema HRD 1616 con postes cuadrados y cable de acero', caveat: ''
   },
   futbolito: {

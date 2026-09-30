@@ -1,5 +1,11 @@
 # Historial de versiones — Herraidea
 
+## 1.63.0 — 2026-09-30
+
+- HRD 1616 corregido a siete cables por lado en el visor y la calculadora, con sus terminales y separación uniforme; despiece de 93 componentes.
+- Sistemas incorpora los HRD 1223, 1221, 1220, 1533/1534/1535 y el conjunto HRD 1206 con conectores HRD 1301/1302, con acceso a 3D, calculadora y piezas.
+- El catálogo PDF pasa a 33 páginas e incluye las ocho soluciones de barandal, portadas completas y enlaces a las experiencias 3D.
+
 ## 1.62.0 — 2026-09-30
 
 - Galería de Proyectos aprobada: fondo grafito, visor a todo el ancho, título blanco con remate rojo y controles al pie. El recorrido prioriza sistemas, calculadora y catálogo; después muestra Proyectos, Asesoría y recursos. Opciones del domo en Vistas y capas.
