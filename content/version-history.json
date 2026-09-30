@@ -1,7 +1,19 @@
 {
-  "current": "1.58.0",
+  "current": "1.60.0",
   "studio": "ProcesaLab",
   "versions": [
+    {
+      "version": "1.60.0",
+      "date": "2026-09-29",
+      "title": "Domo geodésico en Proyectos",
+      "summary": "Domo geodésico incorporado al selector de Proyectos, sin portada. Conserva sus 467 piezas, despiece por etapas, vistas exterior/interior/frente/planta y controles para mostrar u ocultar lona y terraza."
+    },
+    {
+      "version": "1.59.0",
+      "date": "2026-09-29",
+      "title": "Proyectos: Riverack y Futbolito",
+      "summary": "Nueva sección Proyectos con visor 3D directo para Riverack y Futbolito, selector sin portadas y controles existentes. Riverack conserva su acabado negro y despiece por etapas; proyecto probado en RAM 700."
+    },
     {
       "version": "1.58.0",
       "date": "2026-09-27",

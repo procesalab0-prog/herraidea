@@ -403,7 +403,7 @@
         parts: ['Postes', 'Clips o pinzas', 'Pasamanos y fijaciones'],
         image: '/assets/projects/clip-system/portada-estudio.jpg',
         alt: 'Sistema de barandal con postes, clips y vidrio',
-        href: '#proyectos', label: 'Explorar solución 3D', project: 'clips'
+        href: '#soluciones', label: 'Explorar solución 3D', project: 'clips'
       } : values.aplicacion === 'Cancel o división' ? {
         kicker: 'Punto de partida · Familia de producto',
         title: 'Conectores para vidrio',

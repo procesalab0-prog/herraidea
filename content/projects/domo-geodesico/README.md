@@ -1,6 +1,8 @@
 # Domo geodésico — glamping
 
-> **Estado: privado, pendiente de visto bueno.** Nada de esta carpeta está enlazado desde el sitio. No se debe integrar a la página ni cambiar `VERSION` hasta que Herraidea lo apruebe.
+> **Estado: aprobado para publicación en Proyectos (1.60.0).** Autorizado por Herraidea el 29 de septiembre de 2026. Visor directo sin portada, junto a Riverack y Futbolito.
+
+Se integran solo el GLB aprobado y esta documentación. El visor privado, los archivos Blender, generadores y referencias de la tabla siguiente se conservan en `claude/codex-landing-review-t46rsq` y no se copian a producción.
 
 Modelo 3D de un domo geodésico para glamping hecho a partir de dos imágenes de referencia: una exterior con terraza y otra interior en corte. Tiene despiece por etapas con el mismo mecanismo que los demás visores de Soluciones interactivas.
 
@@ -54,17 +56,16 @@ SPP=40 DOMO_BLEND=domo-geodesico.blend python3 scripts/domo-geodesico/render.py 
 2. Tipo de nodo o unión que se fabricará (disco, tubo aplastado, conector).
 3. Posición real de la puerta y del ventanal. Falta decidir si la chimenea se queda.
 4. Si el mobiliario y la terraza forman parte de lo que se va a mostrar o si solo se presenta la estructura.
-5. Portada aprobada para la tarjeta.
+5. No se necesita portada: la sección Proyectos utiliza visor directo.
 
-## Integración sugerida (solo con visto bueno)
+## Integración aprobada
 
-1. En `project-3d-v2.js`, agregar un perfil y un proyecto. Valores iniciales para verificar en el navegador:
-   `domo: { target: [.4, 1.6, 0], camera: [-5.6, 2.6, 13], min: 2, detailTarget: [0, .5, -.1], detailCamera: [.2, 9.4, 7.6] }`
-   con `src: '/assets/projects/domo-geodesico/domo-geodesico.glb?v=<versión>'`. El vidrio usa `alphaMode: BLEND`; conviene `depthWrite = false`, como hace `scripts/domo-geodesico/visor.js`.
-2. **Peso:** el GLB pesa unos 5 MB. Antes de publicarlo conviene comprimirlo con meshopt o Draco (el visor del sitio necesitaría el decodificador correspondiente en `assets/vendor/three`) o simplificar el mobiliario.
-3. Añadir la tarjeta en Soluciones interactivas de `index.html` con la portada aprobada.
-4. Seguir las reglas de `CLAUDE.md`: subir `VERSION`, la versión en `CLAUDE.md`, `CHANGELOG.md` y `content/version-history.json`, y probar en escritorio y teléfono.
-5. Decidir si `visor-privado.html` se conserva: al publicarse en `main` quedaría accesible por URL aunque tenga `noindex`.
+- Selector en la sección Proyectos, sin portada ni entrada en Sistemas o Calculadora.
+- Vistas Exterior, Interior, Frente y Planta; capas Lona y Terraza; despiece y separación con los controles existentes.
+- Vidrios transparentes con `depthWrite = false`. Cámara con alcance adaptado al tamaño del domo.
+- Modelo cargado únicamente al seleccionarlo y acercarse al visor; no añade peso a la entrada inicial de Riverack. GLB original conservado para respetar la geometría aprobada.
+- Enlace directo `?proyecto=domo`.
+- Prueba de escritorio y móvil, capas, vistas, armado/despiece y cambio entre proyectos.
 
 ## Integridad (SHA-256)
 

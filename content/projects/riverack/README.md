@@ -1,6 +1,8 @@
 # Riverack — rack de caja para pickup
 
-> **Estado: privado, pendiente de visto bueno.** Nada de esta carpeta está enlazado desde el sitio. No se debe integrar a la página ni cambiar `VERSION` hasta que Herraidea lo apruebe.
+> **Estado: aprobado e integrado en Proyectos (1.59.0).** Autorizado por Herraidea el 29 de septiembre de 2026. Visor directo sin portada, junto al Futbolito; proyecto probado en una RAM 700. Se conserva el modelo negro aprobado sin modificar su geometría.
+
+Solo el GLB y esta documentación se incorporan a producción. El visor privado, Blender, generadores, fotos y comparaciones de la tabla siguiente permanecen en `claude/codex-landing-review-t46rsq`; no se copian a `main`.
 
 Modelo 3D de un rack de caja (solo el rack, sin la camioneta ni el rack de techo) que Herraidea fabrica con la marca **Riverack**. Tiene despiece por etapas con el mismo mecanismo que los demás visores de Soluciones interactivas.
 
@@ -45,16 +47,15 @@ Las proporciones se calcularon resolviendo la cámara de la foto de estudio (PnP
 
 1. Medidas reales: ancho del poste, altura total, separación entre postes y ancho entre bases.
 2. **Orientación de las bases.** En la foto, las cuatro miran al mismo lado (placa atornillada hacia −Y y soporte hacia +Y) y así se modeló. Si en la pieza real van en espejo, se cambia en `modelo.py`, sección «base».
-3. Portada aprobada para la tarjeta.
+3. No se requiere portada: Herraidea solicitó expresamente visor directo sin imagen.
 
-## Integración sugerida (solo con visto bueno)
+## Integración aprobada
 
-1. En `project-3d-v2.js`, agregar un perfil y un proyecto. Valores iniciales para verificar en el navegador:
-   `riverack: { target: [0, .3, 0], camera: [1.9, 1.25, 3.2], min: .5, detailTarget: [-.735, .63, .75], detailCamera: [-.25, .95, 1.55] }`
-   con `src: '/assets/projects/riverack/riverack.glb?v=<versión>'`. El material es pintura en polvo negra, así que **no** debe pasar por el reemplazo a acero satinado de `prepareModel`.
-2. Añadir la tarjeta en Soluciones interactivas de `index.html` con la portada aprobada.
-3. Seguir las reglas de `CLAUDE.md`: subir `VERSION`, la versión en `CLAUDE.md`, `CHANGELOG.md` y `content/version-history.json`, y probar en escritorio y teléfono.
-4. Decidir si `content/projects/riverack/visor-privado.html` se conserva: al publicarse en `main` quedaría accesible por URL aunque tenga `noindex`.
+- Sección nueva `#proyectos`, independiente de Soluciones interactivas (`#soluciones`). Riverack se muestra al llegar y se puede alternar con el Futbolito sin abrir un diálogo.
+- Se reutilizan el motor `hrd-project-3d`, los botones Liquid Glass, despiece por etapas y controles de separación y detalle.
+- El acabado negro no pasa por reemplazo de material a acero. No se añade a Sistemas ni a la calculadora.
+- Los enlaces `?proyecto=riverack` y `?proyecto=futbolito` seleccionan el modelo en la sección nueva.
+- Se informa de la prueba en RAM 700; no se declara compatibilidad universal ni medidas de fabricación.
 
 ## Integridad (SHA-256)
 
