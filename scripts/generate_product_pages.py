@@ -116,6 +116,7 @@ def render(product: dict, family_items: list[dict]) -> str:
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="author" content="ProcesaLab">
   <meta name="description" content="{escape(meta_description)}">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="theme-color" content="#ffffff">
@@ -171,7 +172,7 @@ def render(product: dict, family_items: list[dict]) -> str:
       <a class="back-link" href="/#catalogo">Ver catálogo completo <span>→</span></a>
     </section>
   </main>
-  <footer><a href="/"><img src="/assets/logo-light-nodot.png" alt="Herraidea"></a><span><a href="/aplicaciones">Aplicaciones</a> · <a href="/privacidad">Privacidad</a> · León, Guanajuato</span><small>Creado por ProcesaLab</small></footer>
+  <footer><a href="/"><img src="/assets/logo-light-nodot.png" alt="Herraidea"></a><span><a href="/aplicaciones">Aplicaciones</a> · <a href="/privacidad">Privacidad</a> · León, Guanajuato</span><small><a href="https://procesa-lab-web.vercel.app" target="_blank" rel="noopener">Diseño y desarrollo: ProcesaLab</a></small></footer>
 </body>
 </html>
 """

@@ -1,12 +1,14 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.63.0**
+Versión actual: **1.64.0**
 
 El dominio oficial `www.herraidea.com` sirve la web desde Vercel y `herraidea.com` redirige de forma segura a esa dirección. Las referencias canónicas, la tarjeta social, los datos estructurados y el catálogo descargable usan el dominio oficial. Los registros de correo preexistentes se conservaron al migrar los servidores DNS desde Jimdo a Vercel.
 
 Sitio de producción: `https://www.herraidea.com/`
 
 ## Estado actual
+
+Crédito de ProcesaLab con liga a https://procesa-lab-web.vercel.app: en la parte baja de la pantalla de carga aparece «Diseño y desarrollo:» con el logotipo de ProcesaLab en blanco y su engrane girando suavemente; tocarlo abre su web sin interrumpir la entrada. El pie de la portada y de las 88 páginas restantes (81 fichas, 4 familias, Sistemas, Aplicaciones y Privacidad) dice «Diseño y desarrollo: ProcesaLab» con la misma liga, el easter egg suma el botón «Visitar ProcesaLab», todas las páginas declaran a ProcesaLab como autor y la consola del navegador muestra el crédito.
 
 Sistemas reúne las ocho soluciones interactivas de barandal, incluidos HRD 1223, 1221, 1220, 1533/1534/1535 y el conjunto HRD 1206 con conectores HRD 1301/1302. El PDF público contiene 33 páginas y las ocho soluciones, con portadas completas y enlaces al visor.
 
@@ -110,6 +112,7 @@ Landing estática para Herraidea, enfocada en barandales, soluciones y fabricaci
 
 - `index.html`: estructura completa del sitio y diálogos.
 - `styles.css`: estilos, responsive y animaciones.
+- `assets/brand/procesalab-palabra-blanco.png` y `assets/brand/procesalab-engrane-blanco.png`: logotipo de ProcesaLab en blanco, separado para que el engrane gire en la pantalla de carga.
 - `assets/brand/procesalab-horizontal-claro.png`: logotipo de ProcesaLab en blanco y rojo sin fondo para el easter egg de créditos.
 - `assets/brand/logo-intro.png`: logotipo en blanco con chevrón rojo para la pantalla de entrada de la portada.
 - `hero.js`: scroll, catálogo, canalizador, ventanas, WhatsApp y easter egg.
@@ -181,7 +184,7 @@ En cada cambio visible o funcional:
 2. Actualizar la versión indicada en este archivo.
 3. Agregar la nueva entrada al principio de `CHANGELOG.md`.
 4. Agregar la misma versión a `content/version-history.json`.
-5. Mantener el crédito “Creado por ProcesaLab”.
+5. Mantener el crédito “Diseño y desarrollo: ProcesaLab” con liga a https://procesa-lab-web.vercel.app en la pantalla de carga y en el pie de todas las páginas (y en los generadores de fichas y familias).
 6. Probar en escritorio y en teléfono antes de desplegar.
 
 No modificar ni borrar el respaldo de `content/jimdo-backup/`. No editar el sitio original de Jimdo.

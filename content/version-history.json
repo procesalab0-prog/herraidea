@@ -1,7 +1,13 @@
 {
-  "current": "1.63.0",
+  "current": "1.64.0",
   "studio": "ProcesaLab",
   "versions": [
+    {
+      "version": "1.64.0",
+      "date": "2026-10-05",
+      "title": "Crédito de ProcesaLab",
+      "summary": "Crédito de ProcesaLab con liga a https://procesa-lab-web.vercel.app: en la parte baja de la pantalla de carga aparece «Diseño y desarrollo:» con el logotipo de ProcesaLab en blanco y su engrane girando suavemente; tocarlo abre su web sin interrumpir la entrada. El pie de la portada y de las 88 páginas restantes (81 fichas, 4 familias, Sistemas, Aplicaciones y Privacidad) dice «Diseño y desarrollo: ProcesaLab» con la misma liga, el easter egg suma el botón «Visitar ProcesaLab», todas las páginas declaran a ProcesaLab como autor y la consola del navegador muestra el crédito."
+    },
     {
       "version": "1.63.0",
       "date": "2026-09-30",
