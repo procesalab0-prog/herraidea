@@ -1,5 +1,9 @@
 # Historial de versiones — Herraidea
 
+## 1.64.1 — 2026-10-05
+
+- En el pie de todas las páginas el nombre de ProcesaLab se muestra ahora con su logotipo pequeño en blanco y el engrane girando suavemente, junto a «Diseño y desarrollo:» y con la misma liga a https://procesa-lab-web.vercel.app. La pantalla de carga se conserva igual.
+
 ## 1.64.0 — 2026-10-05
 
 - Crédito de ProcesaLab con liga a https://procesa-lab-web.vercel.app: en la parte baja de la pantalla de carga aparece «Diseño y desarrollo:» con el logotipo de ProcesaLab en blanco y su engrane girando suavemente; tocarlo abre su web sin interrumpir la entrada. El pie de la portada y de las 88 páginas restantes (81 fichas, 4 familias, Sistemas, Aplicaciones y Privacidad) dice «Diseño y desarrollo: ProcesaLab» con la misma liga, el easter egg suma el botón «Visitar ProcesaLab», todas las páginas declaran a ProcesaLab como autor y la consola del navegador muestra el crédito.
