@@ -1,8 +1,5 @@
 (() => {
   const clamp = (n, min = 0, max = 1) => Math.max(min, Math.min(max, n));
-  const guideSection = document.querySelector('#asesoria');
-  const projectsSection = document.querySelector('#proyectos');
-  if (guideSection && projectsSection) projectsSection.insertAdjacentElement('afterend', guideSection);
   const menuButton = document.querySelector('.menu-toggle');
   const menu = document.querySelector('.main-nav');
   menuButton?.addEventListener('click', () => {
@@ -403,7 +400,7 @@
         parts: ['Postes', 'Clips o pinzas', 'Pasamanos y fijaciones'],
         image: '/assets/projects/clip-system/portada-estudio.jpg',
         alt: 'Sistema de barandal con postes, clips y vidrio',
-        href: '#soluciones', label: 'Explorar solución 3D', project: 'clips'
+        href: '#sistemas-interactivos', label: 'Explorar solución 3D', project: 'clips'
       } : values.aplicacion === 'Cancel o división' ? {
         kicker: 'Punto de partida · Familia de producto',
         title: 'Conectores para vidrio',

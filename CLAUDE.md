@@ -1,12 +1,20 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.61.4**
+Versión actual: **1.63.0**
 
 El dominio oficial `www.herraidea.com` sirve la web desde Vercel y `herraidea.com` redirige de forma segura a esa dirección. Las referencias canónicas, la tarjeta social, los datos estructurados y el catálogo descargable usan el dominio oficial. Los registros de correo preexistentes se conservaron al migrar los servidores DNS desde Jimdo a Vercel.
 
 Sitio de producción: `https://www.herraidea.com/`
 
 ## Estado actual
+
+Sistemas reúne las ocho soluciones interactivas de barandal, incluidos HRD 1223, 1221, 1220, 1533/1534/1535 y el conjunto HRD 1206 con conectores HRD 1301/1302. El PDF público contiene 33 páginas y las ocho soluciones, con portadas completas y enlaces al visor.
+
+El visor y la calculadora HRD 1616 usan una copia corregida del GLB con siete cables por lado, terminales correspondientes y separación uniforme. Conserva el despiece y presenta 93 componentes; el GLB recibido permanece como referencia.
+
+Galería de Proyectos aprobada: fondo grafito, visor a todo el ancho, título blanco con remate rojo y controles al pie. El recorrido prioriza sistemas, calculadora y catálogo; después muestra Proyectos, Asesoría y recursos. Opciones del domo en Vistas y capas.
+
+La presentación del HRD 1616 indica siete líneas de cable en la portada y en la guía de Sistemas, de acuerdo con el producto mostrado.
 
 Pantalla de entrada tomada del inicio del video promocional: el chevrón entra, la palabra Herraidea se revela, el punto rojo de la i cae con rebote y un barrido rojo en forma de chevrón descubre la portada en unos 2.8 s. Sin barra de carga ni texto adicional. Sus estilos van en línea dentro de `index.html` para pintar de inmediato; `styles.css`, `liquid-glass.css` y las fuentes cargan sin bloquear, y la salida espera a que el estilo y la foto de día del hero estén listos (máximo 7 s). El manifiesto de la PWA arranca con fondo oscuro para que no haya destello blanco. Durante la entrada el scroll se bloquea solo sobre la propia capa (touchmove/wheel), nunca con overflow en `<html>`: en iOS eso rompe el encabezado y el hero sticky. Se muestra una vez por sesión, se omite con movimiento reducido y se puede saltar con un toque; las animaciones del hero esperan a que termine.
 

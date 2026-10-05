@@ -636,34 +636,84 @@ herraidea-post-calculator-3d canvas{display:block;width:100%;height:100%}
   }
 }
 
-/* Projects: a live viewer, independent of the systems carousel. */
-.special-projects{background:#f3f5f6;scroll-margin-top:90px}
-.special-project-options{width:fit-content;max-width:100%;margin-bottom:24px}
+
+/* Preview: full-width interactive project gallery. */
+.special-projects{background:#111519;color:#f4f5f6;padding:80px 0 48px;scroll-margin-top:80px}
+.special-projects>.section-inner{max-width:1400px;width:calc(100% - 96px)}
+.special-projects .projects-heading{margin-bottom:26px}
+.special-projects .projects-heading>div{display:flex;justify-content:space-between;align-items:end;gap:24px}
+.special-projects .projects-heading h2{font-size:clamp(38px,4.4vw,64px);line-height:1.04;letter-spacing:-.05em}
+.special-projects .projects-heading h2 em{font-style:normal;color:#f4f5f6}
+.special-projects .projects-heading p{color:#aab2bb;font-size:16px;margin:0}
+.special-projects .eyebrow{color:#ef606a;font-size:10px;letter-spacing:.23em;margin-bottom:20px}
+.special-project-options{width:fit-content;max-width:100%;margin-bottom:22px;flex-wrap:wrap}
 .special-project-options button::before{display:none}
-.special-project-experience{min-height:560px;border:1px solid var(--line);border-radius:22px;overflow:hidden}
-.special-project-experience .project-viewer-shell{min-height:560px}
-.special-project-experience .project-panel{overflow:visible}
+.special-project-experience{display:flex;flex-direction:column;min-height:0;border:1px solid #ffffff18;border-radius:24px;overflow:hidden;background:#1e242b}
+.special-project-experience .project-viewer-shell{position:relative;min-height:0;height:560px;background:radial-gradient(ellipse at 53% 63%,#5b6774 0,#363f49 38%,#212830 72%,#1a2027 100%)}
+.special-project-experience hrd-project-3d{height:100%;width:100%;display:block}
+.gallery-identity{position:absolute;top:28px;left:32px;right:32px;z-index:1;pointer-events:none}
+.gallery-identity .project-number{display:block;font-size:9px;letter-spacing:.18em;color:#ed8189;margin:0 0 10px}
+.gallery-identity h3{font-size:clamp(28px,3vw,42px);line-height:1.05;letter-spacing:-.04em;margin:0 0 10px;color:#fff}
+.gallery-identity p{font-size:13px;color:#cbd2da;margin:0;line-height:1.5;max-width:420px}
+.special-project-experience .project-viewer-hint{color:#c1cad4;bottom:18px;font-size:9px;letter-spacing:.12em}
+.special-project-experience .gallery-controls{display:grid;grid-template-columns:auto minmax(180px,1fr) auto;grid-template-areas:"buttons range views" "status status status" "note note note";gap:12px 28px;padding:20px 28px 18px;background:#e9eef2;color:#141b22;border:0;overflow:visible;align-items:center}
+.gallery-controls .special-project-controls{grid-area:buttons;margin:0;flex-wrap:nowrap}
+.gallery-controls .project-range{grid-area:range;margin:0;font-size:11px;min-width:0}
+.gallery-controls .project-status{grid-area:status;margin:0;font-size:10px;color:#5a6671}
+.gallery-controls .project-caveat{grid-area:note;margin:0;padding-top:10px;font-size:9px;color:#63707b;border-color:#bac3cc66}
+.dome-options{grid-area:views;position:relative}
+.dome-options[hidden]{display:none}
+.dome-options summary{cursor:pointer;list-style:none;padding:14px 18px;border:1px solid #fff;border-radius:999px;background:linear-gradient(145deg,#fff,#dce5ec);font:700 11px 'Archivo Narrow';letter-spacing:.07em;text-transform:uppercase;box-shadow:0 4px 12px #23364912;color:#29343e;white-space:nowrap}
+.dome-options summary::-webkit-details-marker{display:none}
+.dome-options summary span{margin-left:12px}
+.dome-options summary:focus-visible{outline:3px solid #b71b26;outline-offset:3px}
+.gallery-layer-popover{position:absolute;bottom:calc(100% + 16px);right:0;z-index:4;width:310px;max-width:80vw;padding:14px;background:#e9eef2f5;border:1px solid #fff9;border-radius:20px;box-shadow:0 14px 40px #0005;backdrop-filter:blur(18px)}
+.dome-options .project-actions{margin:0 0 10px;flex-wrap:wrap}
+.dome-options .project-actions:last-child{margin-bottom:0}
+.dome-options button::before{display:none}
+.gallery-contact{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:34px 0 0}
+.gallery-contact>div>span{display:block;color:#9da7b1;font:600 10px 'Archivo Narrow';letter-spacing:.15em;text-transform:uppercase;margin-bottom:10px}
+.gallery-contact h3{font-size:clamp(23px,2.4vw,32px);margin:0;letter-spacing:-.035em}
+.gallery-contact .button{background:#e82838;color:#fff;border-radius:999px;font-size:11px}
 @media(max-width:900px){
-  .special-project-experience{grid-template-columns:1fr;grid-template-areas:"viewer" "panel"}
-  .special-project-experience .project-viewer-shell{height:420px;min-height:0}
-  .special-project-experience .project-panel{border-right:0;border-top:1px solid var(--line)}
+ .special-projects>.section-inner{width:calc(100% - 40px)}
+ .special-projects .projects-heading>div{display:block}
+ .special-projects .projects-heading p{margin-top:14px}
+ .special-project-experience .project-viewer-shell{height:480px}
+ .gallery-controls .special-project-controls{flex-wrap:wrap}
+ .special-project-experience .gallery-controls{grid-template-columns:1fr auto;grid-template-areas:"buttons buttons" "range views" "status status" "note note";gap:18px;padding:20px}
 }
 @media(max-width:600px){
-  .special-project-experience .project-viewer-shell{height:340px}
-  .special-project-experience .project-panel{padding:24px}
-  .special-project-options{width:100%}
+ .special-projects{padding:44px 0 32px;scroll-margin-top:72px}
+ .special-projects>.section-inner{width:calc(100% - 32px)}
+ .special-projects .projects-heading h2{font-size:38px}
+ .special-projects .projects-heading p{font-size:14px}
+ .special-project-options{width:100%;gap:6px;padding:6px;margin-bottom:16px}
+ .special-project-options button{font-size:10px;padding:0 10px}
+ .special-project-experience{border-radius:20px}
+ .special-project-experience .project-viewer-shell{height:400px}
+ .gallery-identity{top:22px;left:20px;right:20px}
+ .gallery-identity h3{font-size:30px}
+ .gallery-identity p{font-size:12px;max-width:280px}
+ .special-project-experience .project-viewer-hint{left:18px;right:18px;font-size:8px;letter-spacing:.04em}
+ .special-project-experience .gallery-controls{padding:16px;gap:16px 12px;grid-template-columns:minmax(0,1fr);grid-template-areas:"buttons" "range" "views" "status" "note"}
+ .gallery-controls .special-project-controls{flex-wrap:wrap}
+ .gallery-controls .project-actions button{font-size:10px;padding:0 10px}
+ .dome-options summary{display:flex;justify-content:space-between}
+ .gallery-layer-popover{position:static;width:auto;max-width:none;margin-top:12px;box-shadow:none}
+ .gallery-contact{align-items:start;flex-direction:column;gap:20px;padding-top:28px}
 }
-.special-projects{color:var(--ink)}
-.special-projects .projects-heading h2{font-size:clamp(46px,5.2vw,76px)}
-.special-projects .projects-heading p{color:var(--muted)}
-.special-project-experience{grid-template-columns:minmax(340px,.65fr) minmax(0,1.35fr)}
-.special-project-experience .project-panel{padding:28px}
-.special-project-experience .project-panel h3{font-size:42px}
-@media(max-width:900px){.special-project-experience{grid-template-columns:1fr}}
-@media(max-width:900px){.special-project-experience{grid-template-rows:auto auto}}
 
-.dome-options[hidden]{display:none}
-.dome-options .project-actions{flex-wrap:wrap;border-radius:22px}
-.dome-options button::before{display:none}
-.special-project-options{flex-wrap:wrap}
-@media(min-width:901px){.special-project-experience .project-viewer-shell{height:760px;max-height:760px;align-self:start}}
+/* Heading aligned with the approved interactive-solutions typography. */
+.special-projects .projects-heading{margin-bottom:38px}
+.special-projects .projects-heading>div{display:block}
+.special-projects .projects-heading h2{max-width:none;font-size:clamp(64px,7.4vw,110px);line-height:.91;letter-spacing:-.06em;margin:0 0 32px;font-weight:800}
+.special-projects .projects-heading h2 em{color:var(--red);font-style:normal}
+.special-projects .projects-heading p{max-width:1000px;margin:0;color:#9da2a7;font-size:clamp(17px,1.8vw,25px);line-height:1.7}
+.special-projects .eyebrow{color:var(--red);font-size:14px;letter-spacing:.3em;margin-bottom:34px}
+@media(max-width:600px){
+ .special-projects .projects-heading h2{font-size:clamp(43px,11.3vw,66px);line-height:.96;letter-spacing:-.055em;margin-bottom:24px}
+ .special-projects .eyebrow{font-size:10px;letter-spacing:.24em;margin-bottom:26px}
+ .special-projects .projects-heading p{font-size:15px;line-height:1.7}
+ .special-projects .projects-heading{margin-bottom:28px}
+}

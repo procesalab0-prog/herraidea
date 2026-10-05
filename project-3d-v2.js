@@ -23,15 +23,15 @@ const projects = {
   domo: {
     src: '/assets/projects/domo-geodesico/domo-geodesico.glb?v=1-60-0', profile: 'domo',
     title: 'Domo geodésico', number: 'Proyecto de glamping · Herraidea',
-    description: 'Explora la estructura, el ventanal y el interior del domo. Cambia de vista, descubre el espacio bajo la lona o sigue su despiece por etapas.',
+    description: 'Un espacio para conectar con el exterior.',
     content: '467 piezas y elementos de contexto', detail: 'Ver interior',
     aria: 'Modelo interactivo de domo geodésico con terraza e interior amueblado',
     caveat: 'Modelo ilustrativo basado en referencias. Medidas, uniones, mobiliario y terraza sujetos a definición del proyecto.'
   },
   riverack: {
     src: '/assets/projects/riverack/riverack.glb?v=1-59-0', profile: 'riverack',
-    title: 'Riverack', number: 'Rack de caja · Proyecto probado en RAM 700',
-    description: 'Rack de caja fabricado por Herraidea. Explora sus postes, travesaños telescópicos y bases de sujeción, con despiece por etapas. Este proyecto se probó en una RAM 700.',
+    title: 'Riverack', number: 'Rack de caja · RAM 700',
+    description: 'Diseñado para la aventura. Probado en RAM 700.',
     content: '100 piezas · 56 tornillos', detail: 'Ver unión',
     aria: 'Modelo interactivo del rack Riverack para caja de pickup',
     caveat: 'Modelo ilustrativo. Consulta las medidas y la adaptación a tu vehículo con Herraidea.'
@@ -99,18 +99,18 @@ const projects = {
     caveat: 'Las barras y el pasamanos muestran el sistema instalado y no indican por sí solos el contenido comercial del kit.'
   },
   hrd1616: {
-    src: '/assets/projects/hrd-1616/hrd-1616-esquina.glb', profile: 'hrd1616', kicker: 'Solución interactiva 03',
+    src: '/assets/projects/hrd-1616/hrd-1616-esquina-7-cables.glb?v=1-63-0', profile: 'hrd1616', kicker: 'Solución interactiva 03',
     title: 'HRD 1616 · Poste cuadrado + cable', number: '03 / HRD 1616 · Cable de acero',
     heading: 'Una esquina completa, unión por unión.',
     description: 'Recorre los dos tramos, acércate al poste compartido y controla el despiece del sistema completo.',
-    content: '103 piezas y conjuntos', detail: 'Ver esquina',
+    content: '93 piezas y conjuntos', detail: 'Ver esquina',
     aria: 'Modelo tridimensional interactivo del sistema HRD 1616 con postes cuadrados y cable de acero', caveat: ''
   },
   futbolito: {
     src: '/assets/projects/futbolito/futbolito-herraidea.glb', profile: 'futbolito', kicker: 'Proyecto interactivo 09',
     title: 'Futbolito Herraidea', number: 'Proyecto especial · Fabricación Herraidea',
     heading: 'Observa cómo cada parte forma el proyecto.',
-    description: 'Gira el modelo, acércate a sus uniones y controla la separación de todos sus componentes.',
+    description: 'Cristal y acero. El juego visto desde otra perspectiva.',
     content: '190 piezas y conjuntos', detail: 'Ver costado',
     aria: 'Modelo tridimensional interactivo del Futbolito Herraidea',
     caveat: 'Modelo conceptual reconstruido a partir de fotografías. Las medidas y la secuencia de fabricación están por confirmar.'
@@ -256,6 +256,12 @@ class HerraideaProject3D extends HTMLElement {
       const rim = new THREE.DirectionalLight(0xc9e7ff, 1.25);
       rim.position.set(-3, 2, -3);
       this.scene.add(rim);
+      if (this.id === 'special-project-viewer') {
+        this.renderer.toneMappingExposure = 1.18;
+        const fill = new THREE.DirectionalLight(0xe4edff, 2);
+        fill.position.set(0, 3, 6);
+        this.scene.add(fill);
+      }
 
       this.resizeObserver = new ResizeObserver(() => this.resize());
       this.resizeObserver.observe(this);
@@ -575,6 +581,7 @@ const selectSpecialProject = key => {
   if (!specialSection || !['riverack', 'futbolito', 'domo'].includes(key)) return;
   const project = projects[key];
   specialSection.querySelector('.dome-options').hidden = key !== 'domo';
+  specialSection.querySelector('.dome-options').open = false;
   specialSection.querySelectorAll('[data-dome-layer]').forEach(button => {
     button.disabled = true;
     button.classList.add('active');

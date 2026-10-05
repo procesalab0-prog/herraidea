@@ -202,7 +202,7 @@ def contents_page(c, page_num, counts):
     )
     sections = [
         ("01", "Diseño y fabricación", "Capacidades y fabricación a la medida"),
-        ("02", "Sistemas completos", "HRD 1525, HRD 1518 y Futbolito Herraidea"),
+        ("02", "Sistemas y proyectos", "8 barandales y Futbolito Herraidea"),
         ("03", "Familias de producto", "Pipetas, postes, conectores y jaladeras"),
         ("04", "Contacto y cobertura", "León, Guanajuato · atención a proyectos"),
     ]
@@ -259,19 +259,25 @@ def solution_page(c, page_num, solution):
     c.rect(0, 0, W, H, fill=1, stroke=0)
     red_edge(c, 7)
     image_h = H * 0.61
-    draw_image_cover(c, ROOT / solution["image"], 0, H - image_h, W, image_h, align_x=solution.get("align_x", 0.5), align_y=solution.get("align_y", 0.5))
+    if solution.get("contain"):
+        draw_image_contain(c, ROOT / solution["image"], 0, H - image_h, W, image_h, pad=0)
+    else:
+        draw_image_cover(c, ROOT / solution["image"], 0, H - image_h, W, image_h, align_x=solution.get("align_x", 0.5), align_y=solution.get("align_y", 0.5))
     c.setFillColor(Color(0, 0, 0, alpha=0.14))
     c.rect(0, H - image_h, W, image_h, fill=1, stroke=0)
     c.setFillColor(RED)
     c.rect(MARGIN, H - image_h - 5, 86, 5, fill=1, stroke=0)
     eyebrow(c, solution["kicker"], MARGIN, H - image_h - 46)
-    title(c, solution["title"], MARGIN, H - image_h - 82, 35, INK, 32)
+    title_size = min(35, 270 / max(stringWidth(line, "Helvetica-Bold", 1) for line in solution["title"]))
+    title(c, solution["title"], MARGIN, H - image_h - 82, title_size, INK, 32)
     draw_paragraph(c, solution["description"], BODY, W * 0.55, H - image_h - 47, W * 0.36, 100)
     c.setStrokeColor(LINE)
     c.line(MARGIN, 70, W - MARGIN, 70)
     c.setFillColor(MID)
     c.setFont("Helvetica-Bold", 7.2)
-    c.drawString(MARGIN, 52, "SOLUCIÓN COMPLETA · EXPLORACIÓN 3D DISPONIBLE EN LA WEB")
+    c.drawString(MARGIN, 52, "SISTEMAS Y PROYECTOS · EXPLORACIÓN 3D EN LA WEB")
+    project = solution.get("project", "clips" if solution["number"] == "01" else "hrd1518")
+    c.linkURL(f"https://www.herraidea.com/?proyecto={project}", (MARGIN, 42, W - MARGIN, 64), relative=0)
     c.setFillColor(Color(0.98, 0.08, 0.09, alpha=0.08))
     c.setFont("Helvetica-Bold", 92)
     c.drawRightString(W - MARGIN, 88, solution["number"])
@@ -437,13 +443,13 @@ def build():
             "description": "Poste de acero inoxidable, pasamanos y tres barras reunidos en una solución que puede revisarse y explorarse pieza por pieza.",
             "image": "assets/projects/hrd-1518/portada-estudio.png",
         },
-        {
-            "number": "03",
-            "kicker": "03 · Proyecto especial",
-            "title": ["Futbolito", "Herraidea."],
-            "description": "Un proyecto especial de cristal y acero inoxidable que demuestra la capacidad para desarrollar soluciones fuera del catálogo tradicional. El modelo interactivo contiene 190 piezas y conjuntos.",
-            "image": "assets/projects/futbolito/portada-estudio.png",
-        },
+        {'number': '03', 'kicker': '03 · HRD 1616 · Cable de acero', 'title': ['Siete líneas', 'de cable.'], 'description': 'Postes cuadrados, pasamanos y siete líneas de cable de acero por tramo. La esquina comparte un poste y conserva el despiece interactivo de sus componentes.', 'image': 'assets/projects/hrd-1616/portada-final-v1240.png', 'project': 'hrd1616', 'contain': True},
+        {'number': '04', 'kicker': '04 · HRD 1223', 'title': ['Tubo circular.', 'Brazos ajustables.'], 'description': 'Poste tubular con cuatro puntos de sujeción al vidrio, brazos ajustables y base circular. Explora el detalle de cada unión y la distribución por tramos. Medidas y configuración sujetas a revisión con Herraidea.', 'image': 'assets/projects/hrd-1223/portada-estudio.jpg', 'project': 'hrd1223', 'contain': True},
+        {'number': '05', 'kicker': '05 · HRD 1221', 'title': ['Soleras planas.', 'Cuerpo circular.'], 'description': 'Dos soleras horizontales continuas con fijación central y cuatro discos de sujeción al vidrio. El estudio permite revisar el poste, sus uniones y el pasamanos. Medidas y configuración sujetas a revisión con Herraidea.', 'image': 'assets/projects/hrd-1221/portada-estudio.jpg', 'project': 'hrd1221', 'contain': True},
+        {'number': '06', 'kicker': '06 · HRD 1220', 'title': ['Pinzas bajas.', 'Vista libre.'], 'description': 'Pinzas al piso y una unión circular superior entre cristales. Una solución sin pasamanos que permite explorar el armado de la pinza y estimar apoyos por cristal. Medidas y configuración sujetas a revisión con Herraidea.', 'image': 'assets/projects/hrd-1220/portada-estudio.jpg', 'project': 'hrd1220', 'contain': True},
+        {'number': '07', 'kicker': '07 · HRD 1533 / 1534 / 1535', 'title': ['Vidrio en canal.', 'Acero satinado.'], 'description': 'Postes de canales verticales con base cuadrada y soporte articulado para pasamanos. El estudio incluye vinil de empaque para vidrio de 10 mm de espesor. Medidas y configuración sujetas a revisión con Herraidea.', 'image': 'assets/projects/hrd-153x/portada-estudio.jpg', 'project': 'hrd153x', 'contain': True},
+        {'number': '08', 'kicker': '08 · HRD 1206 + HRD 1301 / 1302', 'title': ['Apoyos cortos.', 'Uniones discretas.'], 'description': 'Postes HRD 1206 de 45 cm, conector HRD 1301-A vidrio a muro, alineador rectangular HRD 1302-B y conector HRD 1301-C de esquina vidrio-vidrio. Medidas y configuración sujetas a revisión con Herraidea.', 'image': 'assets/projects/postes-cortos/portada-estudio.jpg', 'project': 'hrd1206', 'contain': True},
+        {'number': '09', 'kicker': '09 · Proyecto especial', 'title': ['Futbolito', 'Herraidea.'], 'description': 'Un proyecto especial de cristal y acero inoxidable que demuestra la capacidad para desarrollar soluciones fuera del catálogo tradicional. El modelo interactivo contiene 190 piezas y conjuntos.', 'image': 'assets/projects/futbolito/portada-estudio.png', 'project': 'futbolito'},
     ]
     for solution in solutions:
         solution_page(c, page, solution)

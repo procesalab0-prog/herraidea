@@ -1,7 +1,25 @@
 {
-  "current": "1.61.4",
+  "current": "1.63.0",
   "studio": "ProcesaLab",
   "versions": [
+    {
+      "version": "1.63.0",
+      "date": "2026-09-30",
+      "title": "Sistemas y catálogo completos, HRD 1616 con siete cables",
+      "summary": "Se corrige el HRD 1616 a siete cables por lado en el visor y la calculadora; Sistemas y el catálogo PDF de 33 páginas reúnen las ocho soluciones interactivas de barandal."
+    },
+    {
+      "version": "1.62.0",
+      "date": "2026-09-30",
+      "title": "Galería de Proyectos y recorrido comercial",
+      "summary": "Galería de Proyectos aprobada: fondo grafito, visor a todo el ancho, título blanco con remate rojo y controles al pie. El recorrido prioriza sistemas, calculadora y catálogo; después muestra Proyectos, Asesoría y recursos. Opciones del domo en Vistas y capas."
+    },
+    {
+      "version": "1.61.5",
+      "date": "2026-09-30",
+      "title": "Siete líneas de cable en HRD 1616",
+      "summary": "La portada y la guía de Sistemas describen correctamente siete líneas de cable para el HRD 1616."
+    },
     {
       "version": "1.61.4",
       "date": "2026-09-30",

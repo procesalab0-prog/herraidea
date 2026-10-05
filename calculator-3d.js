@@ -40,8 +40,8 @@ const systems = {
   },
   cable: {
     name: 'Poste cuadrado + cable de acero', code: 'HRD 1616',
-    src: '/assets/projects/hrd-1616/hrd-1616-esquina.glb', sourceSpacing: 1.15,
-    cornerSrc: '/assets/projects/hrd-1616/hrd-1616-esquina.glb', satin: true
+    src: '/assets/projects/hrd-1616/hrd-1616-esquina-7-cables.glb?v=1-63-0', sourceSpacing: 1.15,
+    cornerSrc: '/assets/projects/hrd-1616/hrd-1616-esquina-7-cables.glb?v=1-63-0', satin: true
   }
 };
 const loader = new GLTFLoader();
