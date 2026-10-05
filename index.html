@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="description" content="Herraidea diseña y fabrica barandales, herrajes y soluciones de acero inoxidable a la medida desde León, Guanajuato.">
+  <meta name="author" content="ProcesaLab">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="theme-color" content="#ffffff">
   <link rel="canonical" href="https://www.herraidea.com/">
@@ -64,6 +65,16 @@
     .intro.intro-sale .intro-barrido{animation:introBarrido .84s both}
     .intro.intro-sale .intro-fondo{animation:introOculta 0s .42s forwards}
     .intro.intro-salta{animation:introSalta .28s ease-out forwards}
+    .intro-credito{position:absolute;left:50%;bottom:max(30px,calc(env(safe-area-inset-bottom) + 20px));width:max-content;transform:translateX(-50%);display:flex;align-items:center;gap:12px;
+      color:rgba(255,255,255,.6);text-decoration:none;font:600 11px/1 'Archivo Narrow','Arial Narrow',Arial,sans-serif;letter-spacing:.22em;text-transform:uppercase;white-space:nowrap;
+      transition:color .2s;animation:introCredito .7s .5s ease-out both}
+    .intro-credito:hover{color:#fff}
+    .intro-pl{display:flex;align-items:center;gap:.46em;font-size:15px;opacity:.92}
+    .intro-pl img{display:block;flex:none;width:auto;max-width:none;height:1em}
+    @media(max-width:480px){.intro-credito{flex-direction:column;gap:10px}.intro-pl{font-size:16px}}
+    .intro-pl .intro-pl-engrane{height:1.43em;animation:introEngrane 9s linear infinite}
+    @keyframes introCredito{from{opacity:0;transform:translate(-50%,8px)}}
+    @keyframes introEngrane{to{transform:rotate(360deg)}}
     @keyframes introOculta{to{visibility:hidden}}
     @keyframes introEmpuje{to{transform:scale(1.05)}}
     @keyframes introChevron{from{opacity:0;transform:translateX(-19.5%)}}
@@ -86,9 +97,9 @@
     @keyframes introSalta{to{opacity:0}}
   </style>
   <link rel="preload" as="image" href="/assets/brand/logo-intro.png" fetchpriority="high">
-  <link rel="preload" as="style" href="/styles.css?v=1-62-0" onload="this.onload=null;this.rel='stylesheet';herraideaCss()">
+  <link rel="preload" as="style" href="/styles.css?v=1-64-0" onload="this.onload=null;this.rel='stylesheet';herraideaCss()">
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&amp;family=Archivo+Narrow:wght@500;600;700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="/styles.css?v=1-62-0"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&amp;family=Archivo+Narrow:wght@500;600;700&amp;display=swap"><link rel="stylesheet" href="/liquid-glass.css?v=1-42-0"></noscript>
+  <noscript><link rel="stylesheet" href="/styles.css?v=1-64-0"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&amp;family=Archivo+Narrow:wght@500;600;700&amp;display=swap"><link rel="stylesheet" href="/liquid-glass.css?v=1-42-0"></noscript>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -98,7 +109,8 @@
           "@id": "https://www.herraidea.com/#website",
           "url": "https://www.herraidea.com/",
           "name": "Herraidea",
-          "alternateName": "Herraidea Herrajes"
+          "alternateName": "Herraidea Herrajes",
+          "creator": {"@type": "Organization", "name": "ProcesaLab", "url": "https://procesa-lab-web.vercel.app"}
         },
         {
           "@type": "Organization",
@@ -153,7 +165,7 @@
 </head>
 <body>
   <div class="intro" id="intro" aria-hidden="true">
-    <div class="intro-fondo"><div class="intro-logo"><img class="intro-chev" src="/assets/brand/logo-intro.png" alt="" onload="window.herraideaLogo&&herraideaLogo()"><img class="intro-palabra" src="/assets/brand/logo-intro.png" alt=""><i class="intro-punto"></i></div></div>
+    <div class="intro-fondo"><div class="intro-logo"><img class="intro-chev" src="/assets/brand/logo-intro.png" alt="" onload="window.herraideaLogo&&herraideaLogo()"><img class="intro-palabra" src="/assets/brand/logo-intro.png" alt=""><i class="intro-punto"></i></div><a class="intro-credito" href="https://procesa-lab-web.vercel.app" target="_blank" rel="noopener" tabindex="-1"><span>Diseño y desarrollo:</span><span class="intro-pl"><img src="/assets/brand/procesalab-palabra-blanco.png" alt="ProcesaLab"><img class="intro-pl-engrane" src="/assets/brand/procesalab-engrane-blanco.png" alt=""></span></a></div>
     <div class="intro-barrido"></div>
   </div>
   <script>
@@ -191,8 +203,8 @@
       window.herraideaLogo = arrancar;
       var logo = intro.querySelector('.intro-chev');
       if (logo.complete && logo.naturalWidth) arrancar(); else setTimeout(arrancar, 1200);
-      intro.addEventListener('click', function () {
-        if (!d.classList.contains('css-lista')) return;
+      intro.addEventListener('click', function (e) {
+        if (e.target.closest('a') || !d.classList.contains('css-lista')) return;
         salio = true; clearTimeout(espera); clearInterval(sondeo); revelar(); intro.classList.add('intro-salta');
         setTimeout(cerrar, 280);
       });
@@ -535,12 +547,12 @@
 
   <dialog class="credits-dialog" id="credits-dialog" aria-labelledby="credits-title">
     <button class="credits-close" type="button" aria-label="Cerrar créditos">×</button>
-    <div class="credits-hero"><span class="credits-kicker">Seis toques desbloquearon</span><img class="procesalab-logo" src="/assets/brand/procesalab-horizontal-claro.png" alt="Creado por ProcesaLab"><p>Diseño, desarrollo y evolución digital.</p><span class="current-version">Herraidea · v<span id="credits-version">1.58.0</span></span></div>
+    <div class="credits-hero"><span class="credits-kicker">Seis toques desbloquearon</span><img class="procesalab-logo" src="/assets/brand/procesalab-horizontal-claro.png" alt="Diseño y desarrollo: ProcesaLab"><p>Diseño, desarrollo y evolución digital.</p><div class="credits-actions"><span class="current-version">Herraidea · v<span id="credits-version">1.58.0</span></span><a class="credits-visit" href="https://procesa-lab-web.vercel.app" target="_blank" rel="noopener">Visitar ProcesaLab<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div>
     <div class="credits-content"><h2 id="credits-title">Construido versión a versión.</h2><p>Cada actualización queda documentada para que el proyecto conserve contexto, decisiones y continuidad.</p><div class="version-list" id="version-list"></div></div>
   </dialog>
 
-  <footer><div class="section-inner"><a class="footer-brand" href="#inicio" aria-label="Herraidea, volver al inicio"><img src="/assets/logo-light-nodot.png" alt="Herraidea"><i aria-hidden="true"></i></a><nav><a href="/sistemas">Sistemas</a><a href="/aplicaciones">Aplicaciones</a><a href="#asesoria">Asesoría</a><a href="#catalogo">Catálogo</a><a href="#recursos">Recursos</a><a href="#nosotros">Nosotros</a><a href="#envios">Envíos</a><a href="#contacto">Contacto</a><a href="/privacidad">Privacidad</a></nav><span>León, Gto. · Desde 2013</span></div></footer>
-  <script src="/hrd-map.js?v=1-10"></script><script src="/hero.js?v=1-62-0"></script><script src="/project-cover.js?v=1-25-0"></script><script type="module" src="/project-3d-v2.js?v=1-63-0"></script><script type="module" src="/calculator-3d.js?v=1-63-0"></script>
+  <footer><div class="section-inner"><a class="footer-brand" href="#inicio" aria-label="Herraidea, volver al inicio"><img src="/assets/logo-light-nodot.png" alt="Herraidea"><i aria-hidden="true"></i></a><nav><a href="/sistemas">Sistemas</a><a href="/aplicaciones">Aplicaciones</a><a href="#asesoria">Asesoría</a><a href="#catalogo">Catálogo</a><a href="#recursos">Recursos</a><a href="#nosotros">Nosotros</a><a href="#envios">Envíos</a><a href="#contacto">Contacto</a><a href="/privacidad">Privacidad</a></nav><span>León, Gto. · Desde 2013</span><small class="footer-credito"><a href="https://procesa-lab-web.vercel.app" target="_blank" rel="noopener">Diseño y desarrollo: ProcesaLab</a></small></div></footer>
+  <script src="/hrd-map.js?v=1-10"></script><script src="/hero.js?v=1-64-0"></script><script src="/project-cover.js?v=1-25-0"></script><script type="module" src="/project-3d-v2.js?v=1-63-0"></script><script type="module" src="/calculator-3d.js?v=1-63-0"></script>
   <script src="/liquid-glass.js?v=1-42-0" defer></script>
 </body>
 </html>

@@ -1,4 +1,6 @@
 (() => {
+  console.log('%cHerraidea%c  Diseño y desarrollo: ProcesaLab  https://procesa-lab-web.vercel.app',
+    'background:#fa1418;color:#fff;font-weight:700;padding:3px 8px', 'color:inherit;font-weight:600');
   const clamp = (n, min = 0, max = 1) => Math.max(min, Math.min(max, n));
   const menuButton = document.querySelector('.menu-toggle');
   const menu = document.querySelector('.main-nav');
