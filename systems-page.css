@@ -8,3 +8,6 @@
 .next-step{grid-template-columns:1fr}.next-actions{align-items:stretch}.calculator-paths{width:100%;grid-template-columns:repeat(4,minmax(0,1fr))}.next-actions>.secondary-action{align-self:flex-start}
 @media(max-width:980px){.calculator-paths{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.calculator-paths{grid-template-columns:1fr}}
+
+/* Crédito de ProcesaLab en el pie: logotipo pequeño con el engrane girando */
+.pl-credito a{display:inline-flex;align-items:center;flex-wrap:wrap;gap:8px}.pl-logo{display:inline-flex;align-items:center;gap:.46em;font-size:11px;opacity:.78;transition:opacity .2s}.pl-credito a:hover .pl-logo{opacity:1}footer .pl-logo img{display:block;flex:none;width:auto;max-width:none;height:1em}footer .pl-logo .pl-engrane{height:1.43em;animation:plEngrane 9s linear infinite}@keyframes plEngrane{to{transform:rotate(360deg)}}@media(prefers-reduced-motion:reduce){footer .pl-logo .pl-engrane{animation:none}}

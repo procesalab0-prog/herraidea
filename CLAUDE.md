@@ -1,12 +1,14 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.64.0**
+Versión actual: **1.64.1**
 
 El dominio oficial `www.herraidea.com` sirve la web desde Vercel y `herraidea.com` redirige de forma segura a esa dirección. Las referencias canónicas, la tarjeta social, los datos estructurados y el catálogo descargable usan el dominio oficial. Los registros de correo preexistentes se conservaron al migrar los servidores DNS desde Jimdo a Vercel.
 
 Sitio de producción: `https://www.herraidea.com/`
 
 ## Estado actual
+
+En el pie de todas las páginas el nombre de ProcesaLab se muestra ahora con su logotipo pequeño en blanco y el engrane girando suavemente, junto a «Diseño y desarrollo:» y con la misma liga a https://procesa-lab-web.vercel.app. La pantalla de carga se conserva igual.
 
 Crédito de ProcesaLab con liga a https://procesa-lab-web.vercel.app: en la parte baja de la pantalla de carga aparece «Diseño y desarrollo:» con el logotipo de ProcesaLab en blanco y su engrane girando suavemente; tocarlo abre su web sin interrumpir la entrada. El pie de la portada y de las 88 páginas restantes (81 fichas, 4 familias, Sistemas, Aplicaciones y Privacidad) dice «Diseño y desarrollo: ProcesaLab» con la misma liga, el easter egg suma el botón «Visitar ProcesaLab», todas las páginas declaran a ProcesaLab como autor y la consola del navegador muestra el crédito.
 
@@ -112,7 +114,7 @@ Landing estática para Herraidea, enfocada en barandales, soluciones y fabricaci
 
 - `index.html`: estructura completa del sitio y diálogos.
 - `styles.css`: estilos, responsive y animaciones.
-- `assets/brand/procesalab-palabra-blanco.png` y `assets/brand/procesalab-engrane-blanco.png`: logotipo de ProcesaLab en blanco, separado para que el engrane gire en la pantalla de carga.
+- `assets/brand/procesalab-palabra-blanco.png` y `assets/brand/procesalab-engrane-blanco.png`: logotipo de ProcesaLab en blanco, separado para que el engrane gire en la pantalla de carga y en el crédito del pie de todas las páginas.
 - `assets/brand/procesalab-horizontal-claro.png`: logotipo de ProcesaLab en blanco y rojo sin fondo para el easter egg de créditos.
 - `assets/brand/logo-intro.png`: logotipo en blanco con chevrón rojo para la pantalla de entrada de la portada.
 - `hero.js`: scroll, catálogo, canalizador, ventanas, WhatsApp y easter egg.
