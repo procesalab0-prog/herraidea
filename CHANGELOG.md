@@ -1,5 +1,9 @@
 # Historial de versiones — Herraidea
 
+## 1.64.2 — 2026-10-06
+
+- La flecha del botón «Cuéntanos tu proyecto» se dibuja en SVG: el carácter ↗ aparecía como emoji en iPhone. Se revisó todo el sitio y no quedan otros caracteres que los teléfonos conviertan en emoji.
+
 ## 1.64.1 — 2026-10-05
 
 - En el pie de todas las páginas el nombre de ProcesaLab se muestra ahora con su logotipo pequeño en blanco y el engrane girando suavemente, junto a «Diseño y desarrollo:» y con la misma liga a https://procesa-lab-web.vercel.app. La pantalla de carga se conserva igual.
