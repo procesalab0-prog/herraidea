@@ -725,3 +725,6 @@ footer .section-inner{flex-wrap:wrap}footer .footer-brand{flex:none}footer .sect
 
 /* Crédito de ProcesaLab en el pie: logotipo pequeño con el engrane girando */
 .pl-credito a{display:inline-flex;align-items:center;flex-wrap:wrap;gap:8px}.pl-logo{display:inline-flex;align-items:center;gap:.46em;font-size:11px;opacity:.78;transition:opacity .2s}.pl-credito a:hover .pl-logo{opacity:1}footer .pl-logo img{display:block;flex:none;width:auto;max-width:none;height:1em}footer .pl-logo .pl-engrane{height:1.43em;animation:plEngrane 9s linear infinite}@keyframes plEngrane{to{transform:rotate(360deg)}}@media(prefers-reduced-motion:reduce){footer .pl-logo .pl-engrane{animation:none}}
+
+/* Flecha del botón en SVG: el carácter ↗ se convierte en emoji en iOS */
+.button .button-arrow{width:16px;height:16px;flex:none}

@@ -1,6 +1,6 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.64.1**
+Versión actual: **1.64.2**
 
 El dominio oficial `www.herraidea.com` sirve la web desde Vercel y `herraidea.com` redirige de forma segura a esa dirección. Las referencias canónicas, la tarjeta social, los datos estructurados y el catálogo descargable usan el dominio oficial. Los registros de correo preexistentes se conservaron al migrar los servidores DNS desde Jimdo a Vercel.
 
@@ -74,7 +74,7 @@ La portada declara una sola identidad de sitio y organización, y destaca Sistem
 
 Las 70 rutas públicas conocidas del sitio anterior de Jimdo cuentan con redirecciones permanentes hacia sus páginas equivalentes en la web vigente. Las rutas de “catálogo” contemplan la codificación URL del acento. Esto evita que los resultados antiguos de Google terminen en páginas inexistentes y ayuda a consolidar gradualmente el índice en las URLs nuevas.
 
-El botón para copiar el enlace de la calculadora usa un icono SVG de línea en lugar del carácter Unicode `↗`, para impedir que iOS lo convierta en emoji.
+El botón para copiar el enlace de la calculadora y el botón «Cuéntanos tu proyecto» usan un icono SVG de línea en lugar del carácter Unicode `↗`, para impedir que iOS lo convierta en emoji; no deben usarse flechas ni símbolos Unicode con versión emoji (↗, ➡, ▶, ✔, ©, ®…) en botones o textos.
 
 El contacto presenta dos líneas directas de Ventas por WhatsApp: +52 477 256 1695 y +52 477 274 0349. El Hero muestra una indicación más visible para continuar desplazándose, disponible también en celular. En el catálogo, las familias reaccionan en rojo solo al pasar el cursor o enfocarlas con teclado; el scroll ya no activa esa apariencia. Un nuevo acceso “Quiero diseñar un barandal” conduce desde el catálogo a la guía de sistemas completos.
 
