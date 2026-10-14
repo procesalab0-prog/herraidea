@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<title>Cotización · Herraidea</title>
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/brand/favicon-32.png">
+<link rel="stylesheet" href="fuentes/fuentes.css">
+<style>
+  /* Plantilla de cotización para imprimir en tamaño carta (la misma servirá dentro del panel). */
+  @page{size:letter;margin:15mm 15mm 18mm;
+    @bottom-left{content:"Herraidea · Murales 212-A, Industrial la Capilla, León, Gto. · www.herraidea.com";font:500 7.5pt Archivo,sans-serif;color:#8a9199}
+    @bottom-right{content:var(--folio) "  ·  Página " counter(page) " de " counter(pages);font:600 7.5pt 'Archivo Narrow',sans-serif;letter-spacing:.06em;color:#8a9199}}
+  :root{--tinta:#0b0d10;--rojo:#fa1418;--marca:#f10001;--gris:#4b5158;--suave:#8a9199;--linea:#e3e6e9;--papel:#f5f6f7}
+  *{box-sizing:border-box}
+  html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{margin:0;font:400 9pt/1.45 Archivo,sans-serif;color:var(--tinta)}
+  .hoja{width:185.9mm;margin:0 auto}
+  @media screen{body{background:#dfe3e6;padding:24px 0}.hoja{background:#fff;padding:15mm;width:215.9mm;box-shadow:0 20px 60px rgba(11,13,16,.18)}}
+  .narrow{font-family:'Archivo Narrow',sans-serif}
+  .etiqueta{font:700 6.8pt 'Archivo Narrow',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--suave)}
+
+  /* marca de agua del ejemplo */
+  .agua{position:fixed;inset:0;display:grid;place-items:center;pointer-events:none;z-index:0}
+  .agua span{font:900 88pt/1 Archivo,sans-serif;letter-spacing:.08em;color:rgba(11,13,16,.035);transform:rotate(-28deg)}
+
+  /* membrete */
+  .membrete{position:relative;display:grid;grid-template-columns:1fr auto;align-items:end;gap:10mm;padding-bottom:5mm;border-bottom:2px solid var(--tinta)}
+  .membrete::before{content:"";position:absolute;left:-15mm;top:-15mm;width:6mm;height:24mm;background:var(--rojo)}
+  .logo{position:relative;width:62mm}
+  .logo img{display:block;width:100%}
+  .logo i{position:absolute;left:61%;top:.7%;width:3.1%;height:20.8%;background:var(--marca)}
+  .lema{margin:3mm 0 0;font:600 7pt 'Archivo Narrow',sans-serif;letter-spacing:.16em;white-space:nowrap;text-transform:uppercase;color:var(--gris)}
+  .titulo{text-align:right}
+  .titulo h1{margin:0;font:900 25pt/1 Archivo,sans-serif;letter-spacing:-.04em}
+  .titulo h1 em{font-style:normal;color:var(--rojo)}
+  .folio{display:grid;grid-template-columns:auto auto;gap:1mm 5mm;justify-content:end;margin-top:3mm;text-align:right}
+  .folio dt{font:700 6.8pt 'Archivo Narrow';letter-spacing:.18em;text-transform:uppercase;color:var(--suave);align-self:center}
+  .folio dd{margin:0;font:700 9pt Archivo}
+  .ejemplo{display:inline-block;margin-top:2.5mm;padding:1mm 2.5mm;border:1px solid var(--rojo);color:var(--rojo);font:700 6.5pt 'Archivo Narrow';letter-spacing:.16em;text-transform:uppercase}
+
+  /* datos */
+  .datos{display:grid;grid-template-columns:1.1fr 1.25fr .9fr;gap:6mm;margin:6mm 0 5mm}
+  .datos section{border-top:1px solid var(--linea);padding-top:2.5mm}
+  .datos h2{margin:0 0 1.5mm;font:700 7pt 'Archivo Narrow';letter-spacing:.2em;text-transform:uppercase;color:var(--rojo)}
+  .datos p{margin:0}
+  .datos strong{display:block;font:700 10pt/1.25 Archivo;margin-bottom:.8mm}
+  .datos span{display:block;color:var(--gris)}
+
+  /* franja del proyecto */
+  .proyecto{background:var(--papel);border-left:1.2mm solid var(--rojo);margin-bottom:6mm;break-inside:avoid}
+  .especificaciones{display:grid;grid-template-columns:repeat(3,1fr);gap:3.5mm 5mm;padding:4.5mm 6mm}
+  .especificaciones b{display:block;font:800 11pt/1.15 Archivo;letter-spacing:-.01em}
+  .especificaciones small{display:block;font:700 6.5pt 'Archivo Narrow';letter-spacing:.16em;text-transform:uppercase;color:var(--suave);margin-bottom:.6mm}
+
+  /* partidas */
+  table{width:100%;border-collapse:collapse}
+  thead{display:table-header-group}
+  thead th{padding:2mm 1.5mm;background:var(--tinta);color:#fff;font:700 6.8pt 'Archivo Narrow';letter-spacing:.14em;text-transform:uppercase;text-align:left}
+  thead th.num{text-align:right}
+  tbody tr{break-inside:avoid}
+  tbody.grupo{break-inside:avoid}  /* el título de cada sección no queda solo al pie de página */
+  td{padding:2mm 1.5mm;border-bottom:1px solid var(--linea);vertical-align:middle}
+  td.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+  td.partida{width:8mm;color:var(--suave);font:600 8pt 'Archivo Narrow'}
+  .descripcion b{display:block;font:700 8.8pt/1.25 Archivo}
+  .descripcion code{font:700 7pt 'Archivo Narrow';letter-spacing:.08em;color:var(--rojo)}
+  .descripcion span{display:block;font-size:7.6pt;color:var(--gris)}
+  tr.seccion td{padding:3.2mm 1.5mm 1.4mm;border-bottom:1.5px solid var(--tinta);font:700 7.2pt 'Archivo Narrow';letter-spacing:.18em;text-transform:uppercase}
+  tr.seccion td::before{content:"";display:inline-block;width:2.2mm;height:2.2mm;margin-right:2mm;background:var(--rojo);vertical-align:.1mm}
+  tr.seccion td.num{font:700 8.5pt Archivo;letter-spacing:0;text-transform:none}
+  tr.seccion td.num::before{display:none}
+
+  /* totales */
+  .cierre{display:grid;grid-template-columns:1fr 78mm;gap:8mm;margin-top:6mm;break-inside:avoid}
+  .letra{align-self:end;padding:3mm 4mm;border-left:3px solid var(--rojo);background:var(--papel)}
+  .letra p{margin:1mm 0 0;font:700 8.4pt/1.35 Archivo;text-transform:uppercase}
+  .totales{width:100%}
+  .totales div{display:flex;justify-content:space-between;padding:1.6mm 0;border-bottom:1px solid var(--linea);font-variant-numeric:tabular-nums}
+  .totales div span{color:var(--gris)}
+  .totales div.descuento b{color:var(--rojo)}
+  .totales div.total{margin-top:2mm;padding:3mm 4mm;border:0;background:var(--tinta);color:#fff}
+  .totales div.total span{color:#fff;font:700 7.5pt 'Archivo Narrow';letter-spacing:.2em;text-transform:uppercase;align-self:center}
+  .totales div.total b{font:900 15pt/1 Archivo;letter-spacing:-.02em}
+
+  /* condiciones, pago y firmas */
+  .condiciones{display:grid;grid-template-columns:1.35fr 1fr;gap:8mm;margin-top:7mm;break-inside:avoid}
+  .condiciones h2{margin:0 0 2mm;font:700 7pt 'Archivo Narrow';letter-spacing:.2em;text-transform:uppercase;color:var(--rojo)}
+  .condiciones ul{margin:0;padding:0;list-style:none}
+  .condiciones li{position:relative;padding:1mm 0 1mm 4mm;color:var(--gris);font-size:8pt}
+  .condiciones li::before{content:"";position:absolute;left:0;top:2.6mm;width:1.6mm;height:1.6mm;background:var(--tinta)}
+  .condiciones li b{color:var(--tinta)}
+  .pago dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:1.2mm 4mm;font-size:8pt}
+  .pago dt{color:var(--suave);font:700 6.8pt 'Archivo Narrow';letter-spacing:.14em;text-transform:uppercase;align-self:center}
+  .pago dd{margin:0;font-weight:600}
+  .nota{margin-top:3mm;font-size:7.4pt;color:var(--suave)}
+  .firmas{display:grid;grid-template-columns:1fr 1fr;gap:16mm;margin-top:16mm;break-inside:avoid}
+  .firmas div{border-top:1px solid var(--tinta);padding-top:2mm;text-align:center}
+  .firmas b{display:block;font:700 9pt Archivo}
+  .firmas span{font:600 7pt 'Archivo Narrow';letter-spacing:.14em;text-transform:uppercase;color:var(--suave)}
+  .contacto{display:flex;justify-content:space-between;gap:6mm;margin-top:9mm;padding:3.5mm 4mm;background:var(--tinta);color:#fff;font-size:8pt;break-inside:avoid}
+  .contacto b{display:block;font:700 6.6pt 'Archivo Narrow';letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:.8mm}
+</style>
+</head>
+<body>
+<div class="agua" aria-hidden="true"><span>EJEMPLO</span></div>
+<main class="hoja" id="hoja"></main>
+
+<script>
+/* ===== Datos de la cotización. En el panel real llegarán del formulario; aquí son de ejemplo, con precios ficticios. ===== */
+const COTIZACION = {
+  folio: 'COT-2026-0142',
+  fecha: '2026-10-14',
+  vigenciaDias: 15,
+  ejemplo: true,
+  cliente: { nombre: 'Arq. Mariana López', empresa: 'Estudio Norte Arquitectura', telefono: '477 000 0000', correo: 'mariana@ejemplo.com', ciudad: 'León, Guanajuato' },
+  proyecto: {
+    nombre: 'Barandal de cristal para terraza', ubicacion: 'Jardines del Moral, León, Gto.',
+    especificaciones: [['Sistema', 'HRD 1525 · Clips'], ['Longitud', '12.40 m'], ['Tramos', '2 con esquina'],
+                       ['Altura', '1.00 m'], ['Vidrio', 'Templado 10 mm'], ['Acabado', 'Inox 304 satín']]
+  },
+  asesor: { nombre: 'Ventas Herraidea', whatsapp: '477 256 1695', correo: 'ventas@herraidea.com' },
+  secciones: [
+    { titulo: 'Herrajes · Sistema HRD 1525', partidas: [
+      { codigo: 'HRD 1525', nombre: 'Poste con 2 clips inox · inicio / final', detalle: 'Poste de 2" × 86.5 cm con vela articulada y embellecedor', cantidad: 4, unidad: 'pza', precio: 1850 },
+      { codigo: 'HRD 1526', nombre: 'Poste con 4 clips inox · intermedio', detalle: 'Poste de 2" × 86.5 cm con vela articulada y embellecedor', cantidad: 8, unidad: 'pza', precio: 2240 },
+      { codigo: 'HRD 1401', nombre: 'Soporte de pasamanos', detalle: 'Conector vidrio-pasamanos de tubo · acero inoxidable 304', cantidad: 12, unidad: 'pza', precio: 310 },
+      { codigo: 'HRD 1402', nombre: 'Tapón 2"', detalle: 'Remate para pasamanos · acero inoxidable 304, satín', cantidad: 4, unidad: 'pza', precio: 145 }
+    ]},
+    { titulo: 'Vidrio y pasamanos', partidas: [
+      { nombre: 'Vidrio templado claro 10 mm', detalle: 'Cantos pulidos, cortado a medida según levantamiento', cantidad: 12.4, unidad: 'm²', precio: 1980 },
+      { nombre: 'Pasamanos de tubo inox 2"', detalle: 'Acero inoxidable 304, acabado satín, uniones a 90°', cantidad: 12.4, unidad: 'm', precio: 890 }
+    ]},
+    { titulo: 'Servicios', partidas: [
+      { nombre: 'Instalación en sitio', detalle: 'Trazo, fijación de postes, montaje de vidrio y pasamanos', cantidad: 12.4, unidad: 'm', precio: 650 },
+      { nombre: 'Flete y maniobras', detalle: 'Entrega en León, Gto.', cantidad: 1, unidad: 'serv.', precio: 1200 }
+    ]}
+  ],
+  descuentoPorcentaje: 5,
+  ivaPorcentaje: 16,
+  condiciones: [
+    ['Vigencia', '15 días naturales a partir de la fecha de emisión.'],
+    ['Entrega', '10 a 15 días hábiles después del anticipo y de confirmar medidas en sitio.'],
+    ['Pago', '60 % de anticipo y 40 % contra entrega.'],
+    ['Medidas', 'Sujetas a verificación en obra; cambios pueden modificar el importe.'],
+    ['Precios', 'En pesos mexicanos, con IVA desglosado.']
+  ],
+  pago: [['Banco', 'Por definir'], ['Titular', 'Por definir'], ['CLABE', 'Por definir'], ['Referencia', 'COT-2026-0142']]
+};
+
+/* ===== Utilidades ===== */
+const pesos = n => new Intl.NumberFormat('es-MX', { style: 'currency', currency: 'MXN' }).format(n);
+const numero = n => new Intl.NumberFormat('es-MX', { maximumFractionDigits: 2 }).format(n);
+const redondear = n => Math.round(n * 100) / 100;
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+function fechaLarga(iso, masDias = 0) {
+  const d = new Date(iso + 'T12:00:00'); d.setDate(d.getDate() + masDias);
+  return d.toLocaleDateString('es-MX', { day: 'numeric', month: 'long', year: 'numeric' });
+}
+// Importe con letra, como se usa en México: «OCHENTA Y DOS MIL SESENTA Y TRES PESOS 74/100 M.N.»
+function conLetra(total) {
+  const U = ['', 'UN', 'DOS', 'TRES', 'CUATRO', 'CINCO', 'SEIS', 'SIETE', 'OCHO', 'NUEVE', 'DIEZ', 'ONCE', 'DOCE', 'TRECE', 'CATORCE', 'QUINCE',
+             'DIECISÉIS', 'DIECISIETE', 'DIECIOCHO', 'DIECINUEVE', 'VEINTE', 'VEINTIÚN', 'VEINTIDÓS', 'VEINTITRÉS', 'VEINTICUATRO', 'VEINTICINCO',
+             'VEINTISÉIS', 'VEINTISIETE', 'VEINTIOCHO', 'VEINTINUEVE'];
+  const D = ['', '', '', 'TREINTA', 'CUARENTA', 'CINCUENTA', 'SESENTA', 'SETENTA', 'OCHENTA', 'NOVENTA'];
+  const C = ['', 'CIENTO', 'DOSCIENTOS', 'TRESCIENTOS', 'CUATROCIENTOS', 'QUINIENTOS', 'SEISCIENTOS', 'SETECIENTOS', 'OCHOCIENTOS', 'NOVECIENTOS'];
+  const decenas = n => n < 30 ? U[n] : D[Math.floor(n / 10)] + (n % 10 ? ' Y ' + U[n % 10] : '');
+  const centenas = n => n === 100 ? 'CIEN' : (C[Math.floor(n / 100)] + ' ' + decenas(n % 100)).trim();
+  const miles = n => {
+    const m = Math.floor(n / 1000), r = n % 1000;
+    const pm = m === 0 ? '' : m === 1 ? 'MIL' : centenas(m) + ' MIL';
+    return (pm + ' ' + centenas(r)).trim();
+  };
+  const millones = n => {
+    const m = Math.floor(n / 1e6), r = n % 1e6;
+    const pm = m === 0 ? '' : m === 1 ? 'UN MILLÓN' : miles(m) + ' MILLONES';
+    return (pm + ' ' + miles(r)).trim();
+  };
+  const enteros = Math.floor(total), cent = Math.round((total - enteros) * 100);
+  const palabras = enteros === 0 ? 'CERO' : millones(enteros);
+  const de = enteros >= 1e6 && enteros % 1e6 === 0 ? ' DE' : '';
+  return `${palabras}${de} ${enteros === 1 ? 'PESO' : 'PESOS'} ${String(cent).padStart(2, '0')}/100 M.N.`;
+}
+
+/* ===== Cálculo y armado ===== */
+function armar(c) {
+  let n = 0, subtotal = 0;
+  const filas = c.secciones.map(s => {
+    const importeSeccion = redondear(s.partidas.reduce((t, p) => t + p.cantidad * p.precio, 0));
+    subtotal += importeSeccion;
+    return `<tbody class="grupo"><tr class="seccion"><td colspan="5">${esc(s.titulo)}</td><td class="num">${pesos(importeSeccion)}</td></tr>` +
+      s.partidas.map(p => {
+        n += 1; const importe = redondear(p.cantidad * p.precio);
+        return `<tr><td class="partida">${String(n).padStart(2, '0')}</td>
+          <td class="descripcion">${p.codigo ? `<code>${esc(p.codigo)}</code>` : ''}<b>${esc(p.nombre)}</b><span>${esc(p.detalle)}</span></td>
+          <td class="num">${numero(p.cantidad)}</td><td>${esc(p.unidad)}</td><td class="num">${pesos(p.precio)}</td><td class="num"><b>${pesos(importe)}</b></td></tr>`;
+      }).join('') + '</tbody>';
+  }).join('');
+  subtotal = redondear(subtotal);
+  const descuento = redondear(subtotal * c.descuentoPorcentaje / 100);
+  const base = redondear(subtotal - descuento);
+  const iva = redondear(base * c.ivaPorcentaje / 100);
+  const total = redondear(base + iva);
+  document.documentElement.style.setProperty('--folio', JSON.stringify(c.folio));
+  document.title = `Cotización ${c.folio} · Herraidea`;
+
+  document.getElementById('hoja').innerHTML = `
+  <header class="membrete">
+    <div><div class="logo"><img src="../assets/logo-gray-nodot.png" alt="Herraidea"><i></i></div>
+      <p class="lema">Herrajes y barandales de acero inoxidable · Fabricación a la medida</p></div>
+    <div class="titulo"><h1>Cotización<em>.</em></h1>
+      <dl class="folio"><dt>Folio</dt><dd>${esc(c.folio)}</dd><dt>Fecha</dt><dd>${fechaLarga(c.fecha)}</dd><dt>Válida hasta</dt><dd>${fechaLarga(c.fecha, c.vigenciaDias)}</dd></dl>
+      ${c.ejemplo ? '<span class="ejemplo">Documento de ejemplo · precios ficticios</span>' : ''}</div>
+  </header>
+
+  <div class="datos">
+    <section><h2>Cliente</h2><p><strong>${esc(c.cliente.nombre)}</strong><span>${esc(c.cliente.empresa)}</span><span>${esc(c.cliente.telefono)} · ${esc(c.cliente.correo)}</span><span>${esc(c.cliente.ciudad)}</span></p></section>
+    <section><h2>Proyecto</h2><p><strong>${esc(c.proyecto.nombre)}</strong><span>${esc(c.proyecto.ubicacion)}</span></p></section>
+    <section><h2>Asesor</h2><p><strong>${esc(c.asesor.nombre)}</strong><span>WhatsApp ${esc(c.asesor.whatsapp)}</span><span>${esc(c.asesor.correo)}</span></p></section>
+  </div>
+
+  <section class="proyecto">
+    <div class="especificaciones">${c.proyecto.especificaciones.map(([k, v]) => `<div><small>${esc(k)}</small><b>${esc(v)}</b></div>`).join('')}</div>
+  </section>
+
+  <table>
+    <thead><tr><th>#</th><th>Descripción</th><th class="num">Cant.</th><th>Unidad</th><th class="num">P. unitario</th><th class="num">Importe</th></tr></thead>
+    ${filas}
+  </table>
+
+  <div class="cierre">
+    <div class="letra"><span class="etiqueta">Importe total con letra</span><p>${conLetra(total)}</p></div>
+    <div class="totales">
+      <div><span>Subtotal</span><b>${pesos(subtotal)}</b></div>
+      ${descuento ? `<div class="descuento"><span>Descuento comercial ${numero(c.descuentoPorcentaje)} %</span><b>− ${pesos(descuento)}</b></div><div><span>Subtotal con descuento</span><b>${pesos(base)}</b></div>` : ''}
+      <div><span>IVA ${numero(c.ivaPorcentaje)} %</span><b>${pesos(iva)}</b></div>
+      <div class="total"><span>Total</span><b>${pesos(total)}</b></div>
+    </div>
+  </div>
+
+  <div class="condiciones">
+    <section><h2>Condiciones</h2><ul>${c.condiciones.map(([k, v]) => `<li><b>${esc(k)}:</b> ${esc(v)}</li>`).join('')}</ul>
+      ${c.ejemplo ? '<p class="nota">Condiciones de ejemplo: Herraidea definirá las definitivas.</p>' : ''}</section>
+    <section class="pago"><h2>Datos para pago</h2><dl>${c.pago.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('')}</dl></section>
+  </div>
+
+  <div class="firmas">
+    <div><b>${esc(c.asesor.nombre)}</b><span>Elaboró</span></div>
+    <div><b>${esc(c.cliente.nombre)}</b><span>Acepto la cotización · nombre, firma y fecha</span></div>
+  </div>
+
+  <footer class="contacto">
+    <div><b>Ventas por WhatsApp</b>477 256 1695 · 477 274 0349</div>
+    <div><b>Planta</b>Murales 212-A, Industrial la Capilla, León, Gto. C.P. 37297</div>
+    <div><b>Web</b>www.herraidea.com</div>
+  </footer>`;
+  window.__TOTALES__ = { subtotal, descuento, base, iva, total, letra: conLetra(total) };
+  return Promise.all([...document.images].map(i => i.complete ? 0 : new Promise(r => { i.onload = i.onerror = r; })));
+}
+window.__LISTA__ = armar(COTIZACION).then(() => document.fonts.ready).then(() => true);
+</script>
+</body>
+</html>
