@@ -1,0 +1,11 @@
+import {mkdirSync,rmSync,cpSync,writeFileSync} from 'node:fs';
+import {fileURLToPath} from 'node:url';
+import {join} from 'node:path';
+const root=fileURLToPath(new URL('./',import.meta.url)),out=join(root,'.vercel/output'),fn=join(out,'functions/admin.func');
+rmSync(out,{recursive:true,force:true});mkdirSync(join(fn,'app'),{recursive:true});
+const files=['server.mjs','auth.mjs','engine.mjs','app.mjs','index.html','style.css','login.html','login.css','login.mjs','pwa.mjs','sw.js','manifest.webmanifest','share.png','icon-180.png','icon-192.png','icon-512.png','pdf-export.mjs','pdf-lib.mjs','amount-words.mjs','loading.css','document-reference.css','procesalab-palabra-blanco.png','procesalab-engrane-blanco.png','branding','fuentes','lib','server-data'];
+for(const f of files)cpSync(join(root,f),join(fn,'app',f),{recursive:true});
+writeFileSync(join(fn,'serve.mjs'),"import {createAdminHandler} from './app/server.mjs';export default createAdminHandler();\n");
+writeFileSync(join(fn,'.vc-config.json'),JSON.stringify({runtime:'nodejs22.x',handler:'serve.mjs',launcherType:'Nodejs',maxDuration:15,shouldAddHelpers:false}));
+writeFileSync(join(out,'config.json'),JSON.stringify({version:3,routes:[{src:'/(.*)',dest:'/admin'}]}));
+console.log('Panel empaquetado como función privada. Sin archivos estáticos ni credenciales en la salida.');

@@ -1,5 +1,14 @@
 # Historial de versiones — Herraidea
 
+## 1.86.0 — 2026-10-14
+
+- Panel privado independiente para cotizaciones especiales, sin DB ni Shopify.
+- Acceso compartido, PDF directo con logo grande y archivo editable JSON.
+- Imagen social e iconos PWA; sin caché de clientes o cotizaciones.
+- Paquete Vercel con control de acceso a todos los archivos internos; secretos fuera de Git.
+- Landing pública conservada y carpeta admin excluida de su despliegue.
+
+
 ## 1.64.2 — 2026-10-06
 
 - La flecha del botón «Cuéntanos tu proyecto» se dibuja en SVG: el carácter ↗ aparecía como emoji en iPhone. Se revisó todo el sitio y no quedan otros caracteres que los teléfonos conviertan en emoji.

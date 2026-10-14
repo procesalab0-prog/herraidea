@@ -1,0 +1,87 @@
+  /* membrete */
+  .sheet .membrete{position:relative;display:grid;grid-template-columns:1fr auto;align-items:end;gap:10mm;padding-bottom:5mm;border-bottom:2px solid var(--tinta)}
+  .sheet .membrete::before{content:"";position:absolute;left:-15mm;top:-15mm;width:6mm;height:24mm;background:var(--rojo)}
+  .sheet .logo{position:relative;width:62mm}
+  .sheet .logo img{display:block;width:100%}
+  .sheet .logo i{position:absolute;left:61%;top:.7%;width:3.1%;height:20.8%;background:var(--marca)}
+  .sheet .lema{margin:3mm 0 0;font:600 7pt 'Archivo Narrow',sans-serif;letter-spacing:.16em;white-space:nowrap;text-transform:uppercase;color:var(--gris)}
+  .sheet .titulo{text-align:right}
+  .sheet .titulo h1{margin:0;font:900 25pt/1 Archivo,sans-serif;letter-spacing:-.04em}
+  .sheet .titulo h1 em{font-style:normal;color:var(--rojo)}
+  .sheet .folio{display:grid;grid-template-columns:auto auto;gap:1mm 5mm;justify-content:end;margin-top:3mm;text-align:right}
+  .sheet .folio dt{font:700 6.8pt 'Archivo Narrow';letter-spacing:.18em;text-transform:uppercase;color:var(--suave);align-self:center}
+  .sheet .folio dd{margin:0;font:700 9pt Archivo}
+  .sheet .ejemplo{display:inline-block;margin-top:2.5mm;padding:1mm 2.5mm;border:1px solid var(--rojo);color:var(--rojo);font:700 6.5pt 'Archivo Narrow';letter-spacing:.16em;text-transform:uppercase}
+
+  /* datos */
+  .sheet .datos{display:grid;grid-template-columns:1.1fr 1.25fr .9fr;gap:6mm;margin:6mm 0 5mm}
+  .sheet .datos section{border-top:1px solid var(--linea);padding-top:2.5mm}
+  .sheet .datos h2{margin:0 0 1.5mm;font:700 7pt 'Archivo Narrow';letter-spacing:.2em;text-transform:uppercase;color:var(--rojo)}
+  .sheet .datos p{margin:0}
+  .sheet .datos strong{display:block;font:700 10pt/1.25 Archivo;margin-bottom:.8mm}
+  .sheet .datos span{display:block;color:var(--gris)}
+
+  /* franja del proyecto */
+  .sheet .proyecto{background:var(--papel);border-left:1.2mm solid var(--rojo);margin-bottom:6mm;break-inside:avoid}
+  .sheet .especificaciones{display:grid;grid-template-columns:repeat(3,1fr);gap:3.5mm 5mm;padding:4.5mm 6mm}
+  .sheet .especificaciones b{display:block;font:800 11pt/1.15 Archivo;letter-spacing:-.01em}
+  .sheet .especificaciones small{display:block;font:700 6.5pt 'Archivo Narrow';letter-spacing:.16em;text-transform:uppercase;color:var(--suave);margin-bottom:.6mm}
+
+  /* partidas */
+  .sheet table{width:100%;border-collapse:collapse}
+  .sheet thead{display:table-header-group}
+  .sheet thead th{padding:2mm 1.5mm;background:var(--tinta);color:#fff;font:700 6.8pt 'Archivo Narrow';letter-spacing:.14em;text-transform:uppercase;text-align:left}
+  .sheet thead th.num{text-align:right}
+  .sheet tbody tr{break-inside:avoid}
+  .sheet tbody.grupo{break-inside:avoid}  /* el título de cada sección no queda solo al pie de página */
+  .sheet td{padding:2mm 1.5mm;border-bottom:1px solid var(--linea);vertical-align:middle}
+  .sheet td.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+  .sheet td.partida{width:8mm;color:var(--suave);font:600 8pt 'Archivo Narrow'}
+  .sheet .descripcion b{display:block;font:700 8.8pt/1.25 Archivo}
+  .sheet .descripcion code{font:700 7pt 'Archivo Narrow';letter-spacing:.08em;color:var(--rojo)}
+  .sheet .descripcion span{display:block;font-size:7.6pt;color:var(--gris)}
+  .sheet tr.seccion td{padding:3.2mm 1.5mm 1.4mm;border-bottom:1.5px solid var(--tinta);font:700 7.2pt 'Archivo Narrow';letter-spacing:.18em;text-transform:uppercase}
+  .sheet tr.seccion td::before{content:"";display:inline-block;width:2.2mm;height:2.2mm;margin-right:2mm;background:var(--rojo);vertical-align:.1mm}
+  .sheet tr.seccion td.num{font:700 8.5pt Archivo;letter-spacing:0;text-transform:none}
+  .sheet tr.seccion td.num::before{display:none}
+
+  /* totales */
+  .sheet .cierre{display:grid;grid-template-columns:1fr 78mm;gap:8mm;margin-top:6mm;break-inside:avoid}
+  .sheet .letra{align-self:end;padding:3mm 4mm;border-left:3px solid var(--rojo);background:var(--papel)}
+  .sheet .letra p{margin:1mm 0 0;font:700 8.4pt/1.35 Archivo;text-transform:uppercase}
+  .sheet .totales{width:100%}
+  .sheet .totales div{display:flex;justify-content:space-between;padding:1.6mm 0;border-bottom:1px solid var(--linea);font-variant-numeric:tabular-nums}
+  .sheet .totales div span{color:var(--gris)}
+  .sheet .totales div.descuento b{color:var(--rojo)}
+  .sheet .totales div.total{margin-top:2mm;padding:3mm 4mm;border:0;background:var(--tinta);color:#fff}
+  .sheet .totales div.total span{color:#fff;font:700 7.5pt 'Archivo Narrow';letter-spacing:.2em;text-transform:uppercase;align-self:center}
+  .sheet .totales div.total b{font:900 15pt/1 Archivo;letter-spacing:-.02em}
+
+  /* condiciones, pago y firmas */
+  .sheet .condiciones{display:grid;grid-template-columns:1.35fr 1fr;gap:8mm;margin-top:7mm;break-inside:avoid}
+  .sheet .condiciones h2{margin:0 0 2mm;font:700 7pt 'Archivo Narrow';letter-spacing:.2em;text-transform:uppercase;color:var(--rojo)}
+  .sheet .condiciones ul{margin:0;padding:0;list-style:none}
+  .sheet .condiciones li{position:relative;padding:1mm 0 1mm 4mm;color:var(--gris);font-size:8pt}
+  .sheet .condiciones li::before{content:"";position:absolute;left:0;top:2.6mm;width:1.6mm;height:1.6mm;background:var(--tinta)}
+  .sheet .condiciones li b{color:var(--tinta)}
+  .sheet .pago dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:1.2mm 4mm;font-size:8pt}
+  .sheet .pago dt{color:var(--suave);font:700 6.8pt 'Archivo Narrow';letter-spacing:.14em;text-transform:uppercase;align-self:center}
+  .sheet .pago dd{margin:0;font-weight:600}
+  .sheet .nota{margin-top:3mm;font-size:7.4pt;color:var(--suave)}
+  .sheet .firmas{display:grid;grid-template-columns:1fr 1fr;gap:16mm;margin-top:16mm;break-inside:avoid}
+  .sheet .firmas div{border-top:1px solid var(--tinta);padding-top:2mm;text-align:center}
+  .sheet .firmas b{display:block;font:700 9pt Archivo}
+  .sheet .firmas span{font:600 7pt 'Archivo Narrow';letter-spacing:.14em;text-transform:uppercase;color:var(--suave)}
+  .sheet .contacto{display:flex;justify-content:space-between;gap:6mm;margin-top:9mm;padding:3.5mm 4mm;background:var(--tinta);color:#fff;font-size:8pt;break-inside:avoid}
+  .sheet .contacto b{display:block;font:700 6.6pt 'Archivo Narrow';letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:.8mm}
+@media print {
+ html,body{background:#fff!important;min-height:0!important;height:auto!important}
+ .sheet thead th{background:#0b0d10!important;color:#fff!important;print-color-adjust:exact}
+ .sheet th,.sheet td{padding:6px 8px}
+ .sheet .datos{margin:12px 0}
+ .sheet .cierre{margin-top:12px}
+ .sheet .quote-notes{margin-top:12px}
+ .sheet .quote-notes p{margin:6px 0}
+ .sheet .firmas{margin-top:18px}
+ .sheet .contacto{margin:14px 0 0;padding:9px;font-size:8pt}
+}

@@ -1,0 +1,1503 @@
+{
+  "schemaVersion": 1,
+  "rulesVersion": "preview-1",
+  "pilot": "cable",
+  "systems": {
+    "clips": {
+      "name": "HRD 1525",
+      "kind": "posts",
+      "approved": false,
+      "items": [
+        {
+          "id": "clips.final",
+          "role": "final",
+          "label": "HRD 1525 · final",
+          "sku": null,
+          "unit": "pieza",
+          "price": null,
+          "priceApproved": false,
+          "stock": null,
+          "shopifyVariantId": null,
+          "approved": false,
+          "includedParts": null,
+          "sourceCandidates": [
+            {
+              "code": "HRD 1525 INICIO / FINAL",
+              "name": "Poste con 2 clips inox",
+              "image": "/content/catalog/images/postes-hrd-1525-inicio-final-v2.jpg",
+              "source": "content/catalog/details.json"
+            }
+          ],
+          "pending": [
+            "SKU y variante por confirmar",
+            "Contenido incluido y unidad comercial por validar",
+            "Precio e inventario pendientes"
+          ]
+        },
+        {
+          "id": "clips.central",
+          "role": "central",
+          "label": "HRD 1525 · central",
+          "sku": null,
+          "unit": "pieza",
+          "price": null,
+          "priceApproved": false,
+          "stock": null,
+          "shopifyVariantId": null,
+          "approved": false,
+          "includedParts": null,
+          "sourceCandidates": [
+            {
+              "code": "HRD 1526 INTERMEDIO",
+              "name": "Poste con 4 clips inox",
+              "image": "/content/catalog/images/postes-hrd-1526-intermedio-v2.jpg",
+              "source": "content/catalog/details.json"
+            }
+          ],
+          "pending": [
+            "SKU y variante por confirmar",
+            "Contenido incluido y unidad comercial por validar",
+            "Precio e inventario pendientes"
+          ]
+        },
+        {
+          "id": "clips.esquina",
+          "role": "esquina",
+          "label": "HRD 1525 · esquina",
+          "sku": null,
+          "unit": "pieza",
+          "price": null,
+          "priceApproved": false,
+          "stock": null,
+          "shopifyVariantId": null,
+          "approved": false,
+          "includedParts": null,
+          "sourceCandidates": [
+            {
+              "code": "HRD 1525 INICIO / FINAL",
+              "name": "Poste con 2 clips inox",
+              "image": "/content/catalog/images/postes-hrd-1525-inicio-final-v2.jpg",
+              "source": "content/catalog/details.json"
+            }
+          ],
+          "pending": [
+            "SKU y variante por confirmar",
+            "Contenido incluido y unidad comercial por validar",
+            "Precio e inventario pendientes"
+          ]
+        },
+        {
+          "id": "clips.pasamanos",
+          "role": "pasamanos",
+          "label": "HRD 1525 · pasamanos",
+          "sku": null,
+          "unit": null,
+          "price": null,
+          "priceApproved": false,
+          "stock": null,
+          "shopifyVariantId": null,
+          "approved": false,
+          "includedParts": null,
+          "sourceCandidates": [
+            {
+              "code": "HRD 1525 INICIO / FINAL",
+              "name": "Poste con 2 clips inox",
+              "image": "/content/catalog/images/postes-hrd-1525-inicio-final-v2.jpg",
+              "source": "content/catalog/details.json"
+            }
+          ],
+          "pending": [
+            "SKU y variante por confirmar",
+            "Contenido incluido y unidad comercial por validar",
+            "Precio e inventario pendientes"
+          ]
+        },
+        {
+          "id": "clips.accesorios",
+          "role": "accesorios",
+          "label": "HRD 1525 · accesorios",
+          "sku": null,
+          "unit": null,
+          "price": null,
+          "priceApproved": false,
+          "stock": null,
+          "shopifyVariantId": null,
+          "approved": false,
+          "includedParts": null,
+          "sourceCandidates": [
+            {
+              "code": "HRD 1525 INICIO / FINAL",
+              "name": "Poste con 2 clips inox",
+              "image": "/content/catalog/images/postes-hrd-1525-inicio-final-v2.jpg",
+              "source": "content/catalog/details.json"
+            }
+          ],
+          "pending": [
+            "SKU y variante por confirmar",
+            "Contenido incluido y unidad comercial por validar",
+            "Precio e inventario pendientes"
+          ]
+        }
+      ]
+    },
+    "tubo": {
+      "name": "HRD 1518",
+      "kind": "posts",
+      "approved": false,
+      "items": [
+        {
+          "id": "tubo.final",
+          "role": "final",
+          "label": "HRD 1518 · final",
+          "sku": null,
+          "unit": "pieza",
+          "price": null,
+          "priceApproved": false,
+          "stock": null,
+          "shopifyVariantId": null,
+          "approved": false,
+          "includedParts": null,
+          "sourceCandidates": [
+            {
+              "code": "HRD 1518 INTERMEDIO 3 PINES",
+              "name": "Poste intermedio con 3 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-intermedio-3-pines-v2.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1518 IZQ / DER 3 PINES",
+              "name": "Poste lateral con 3 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-lateral-3-pines-v2.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1518 INTERMEDIO 4 PINES",
+              "name": "Poste intermedio con 4 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-intermedio-4-pines-v2.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1518 IZQ / DER 4 PINES",
+              "name": "Poste lateral con 4 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-lateral-4-pines-v2.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1518 INTERMEDIO 3 PINES CACHETEADO",
+              "name": "Poste cacheteado intermedio con 3 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-intermedio-3-pines-cacheteado-v2.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1518 IZQ / DER 3 PINES CACHETEADO",
+              "name": "Poste cacheteado lateral con 3 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-lateral-3-pines-cacheteado-v2.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1518 INTERMEDIO 4 PINES CACHETEADO",
+              "name": "Poste cacheteado intermedio con 4 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-intermedio-4-pines-cacheteado-v2.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1518 IZQ / DER 4 PINES CACHETEADO",
+              "name": "Poste cacheteado lateral con 4 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-lateral-4-pines-cacheteado-v2.jpg",
+              "source": "content/catalog/details.json"
+            }
+          ],
+          "pending": [
+            "SKU y variante por confirmar",
+            "Contenido incluido y unidad comercial por validar",
+            "Precio e inventario pendientes"
+          ]
+        },
+        {
+          "id": "tubo.central",
+          "role": "central",
+          "label": "HRD 1518 · central",
+          "sku": null,
+          "unit": "pieza",
+          "price": null,
+          "priceApproved": false,
+          "stock": null,
+          "shopifyVariantId": null,
+          "approved": false,
+          "includedParts": null,
+          "sourceCandidates": [
+            {
+              "code": "HRD 1518 INTERMEDIO 3 PINES",
+              "name": "Poste intermedio con 3 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-intermedio-3-pines-v2.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1518 IZQ / DER 3 PINES",
+              "name": "Poste lateral con 3 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-lateral-3-pines-v2.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1518 INTERMEDIO 4 PINES",
+              "name": "Poste intermedio con 4 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-intermedio-4-pines-v2.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1518 IZQ / DER 4 PINES",
+              "name": "Poste lateral con 4 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-lateral-4-pines-v2.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1518 INTERMEDIO 3 PINES CACHETEADO",
+              "name": "Poste cacheteado intermedio con 3 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-intermedio-3-pines-cacheteado-v2.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1518 IZQ / DER 3 PINES CACHETEADO",
+              "name": "Poste cacheteado lateral con 3 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-lateral-3-pines-cacheteado-v2.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1518 INTERMEDIO 4 PINES CACHETEADO",
+              "name": "Poste cacheteado intermedio con 4 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-intermedio-4-pines-cacheteado-v2.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1518 IZQ / DER 4 PINES CACHETEADO",
+              "name": "Poste cacheteado lateral con 4 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-lateral-4-pines-cacheteado-v2.jpg",
+              "source": "content/catalog/details.json"
+            }
+          ],
+          "pending": [
+            "SKU y variante por confirmar",
+            "Contenido incluido y unidad comercial por validar",
+            "Precio e inventario pendientes"
+          ]
+        },
+        {
+          "id": "tubo.esquina",
+          "role": "esquina",
+          "label": "HRD 1518 · esquina",
+          "sku": null,
+          "unit": "pieza",
+          "price": null,
+          "priceApproved": false,
+          "stock": null,
+          "shopifyVariantId": null,
+          "approved": false,
+          "includedParts": null,
+          "sourceCandidates": [
+            {
+              "code": "HRD 1518 INTERMEDIO 3 PINES",
+              "name": "Poste intermedio con 3 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-intermedio-3-pines-v2.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1518 IZQ / DER 3 PINES",
+              "name": "Poste lateral con 3 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-lateral-3-pines-v2.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1518 INTERMEDIO 4 PINES",
+              "name": "Poste intermedio con 4 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-intermedio-4-pines-v2.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1518 IZQ / DER 4 PINES",
+              "name": "Poste lateral con 4 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-lateral-4-pines-v2.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1518 INTERMEDIO 3 PINES CACHETEADO",
+              "name": "Poste cacheteado intermedio con 3 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-intermedio-3-pines-cacheteado-v2.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1518 IZQ / DER 3 PINES CACHETEADO",
+              "name": "Poste cacheteado lateral con 3 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-lateral-3-pines-cacheteado-v2.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1518 INTERMEDIO 4 PINES CACHETEADO",
+              "name": "Poste cacheteado intermedio con 4 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-intermedio-4-pines-cacheteado-v2.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1518 IZQ / DER 4 PINES CACHETEADO",
+              "name": "Poste cacheteado lateral con 4 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-lateral-4-pines-cacheteado-v2.jpg",
+              "source": "content/catalog/details.json"
+            }
+          ],
+          "pending": [
+            "SKU y variante por confirmar",
+            "Contenido incluido y unidad comercial por validar",
+            "Precio e inventario pendientes"
+          ]
+        },
+        {
+          "id": "tubo.pasamanos",
+          "role": "pasamanos",
+          "label": "HRD 1518 · pasamanos",
+          "sku": null,
+          "unit": null,
+          "price": null,
+          "priceApproved": false,
+          "stock": null,
+          "shopifyVariantId": null,
+          "approved": false,
+          "includedParts": null,
+          "sourceCandidates": [
+            {
+              "code": "HRD 1518 INTERMEDIO 3 PINES",
+              "name": "Poste intermedio con 3 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-intermedio-3-pines-v2.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1518 IZQ / DER 3 PINES",
+              "name": "Poste lateral con 3 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-lateral-3-pines-v2.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1518 INTERMEDIO 4 PINES",
+              "name": "Poste intermedio con 4 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-intermedio-4-pines-v2.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1518 IZQ / DER 4 PINES",
+              "name": "Poste lateral con 4 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-lateral-4-pines-v2.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1518 INTERMEDIO 3 PINES CACHETEADO",
+              "name": "Poste cacheteado intermedio con 3 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-intermedio-3-pines-cacheteado-v2.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1518 IZQ / DER 3 PINES CACHETEADO",
+              "name": "Poste cacheteado lateral con 3 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-lateral-3-pines-cacheteado-v2.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1518 INTERMEDIO 4 PINES CACHETEADO",
+              "name": "Poste cacheteado intermedio con 4 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-intermedio-4-pines-cacheteado-v2.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1518 IZQ / DER 4 PINES CACHETEADO",
+              "name": "Poste cacheteado lateral con 4 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-lateral-4-pines-cacheteado-v2.jpg",
+              "source": "content/catalog/details.json"
+            }
+          ],
+          "pending": [
+            "SKU y variante por confirmar",
+            "Contenido incluido y unidad comercial por validar",
+            "Precio e inventario pendientes"
+          ]
+        },
+        {
+          "id": "tubo.accesorios",
+          "role": "accesorios",
+          "label": "HRD 1518 · accesorios",
+          "sku": null,
+          "unit": null,
+          "price": null,
+          "priceApproved": false,
+          "stock": null,
+          "shopifyVariantId": null,
+          "approved": false,
+          "includedParts": null,
+          "sourceCandidates": [
+            {
+              "code": "HRD 1518 INTERMEDIO 3 PINES",
+              "name": "Poste intermedio con 3 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-intermedio-3-pines-v2.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1518 IZQ / DER 3 PINES",
+              "name": "Poste lateral con 3 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-lateral-3-pines-v2.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1518 INTERMEDIO 4 PINES",
+              "name": "Poste intermedio con 4 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-intermedio-4-pines-v2.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1518 IZQ / DER 4 PINES",
+              "name": "Poste lateral con 4 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-lateral-4-pines-v2.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1518 INTERMEDIO 3 PINES CACHETEADO",
+              "name": "Poste cacheteado intermedio con 3 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-intermedio-3-pines-cacheteado-v2.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1518 IZQ / DER 3 PINES CACHETEADO",
+              "name": "Poste cacheteado lateral con 3 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-lateral-3-pines-cacheteado-v2.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1518 INTERMEDIO 4 PINES CACHETEADO",
+              "name": "Poste cacheteado intermedio con 4 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-intermedio-4-pines-cacheteado-v2.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1518 IZQ / DER 4 PINES CACHETEADO",
+              "name": "Poste cacheteado lateral con 4 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-lateral-4-pines-cacheteado-v2.jpg",
+              "source": "content/catalog/details.json"
+            }
+          ],
+          "pending": [
+            "SKU y variante por confirmar",
+            "Contenido incluido y unidad comercial por validar",
+            "Precio e inventario pendientes"
+          ]
+        },
+        {
+          "id": "tubo.barra_horizontal",
+          "role": "barra_horizontal",
+          "label": "HRD 1518 · barra horizontal",
+          "sku": null,
+          "unit": null,
+          "price": null,
+          "priceApproved": false,
+          "stock": null,
+          "shopifyVariantId": null,
+          "approved": false,
+          "includedParts": null,
+          "sourceCandidates": [
+            {
+              "code": "HRD 1518 INTERMEDIO 3 PINES",
+              "name": "Poste intermedio con 3 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-intermedio-3-pines-v2.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1518 IZQ / DER 3 PINES",
+              "name": "Poste lateral con 3 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-lateral-3-pines-v2.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1518 INTERMEDIO 4 PINES",
+              "name": "Poste intermedio con 4 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-intermedio-4-pines-v2.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1518 IZQ / DER 4 PINES",
+              "name": "Poste lateral con 4 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-lateral-4-pines-v2.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1518 INTERMEDIO 3 PINES CACHETEADO",
+              "name": "Poste cacheteado intermedio con 3 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-intermedio-3-pines-cacheteado-v2.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1518 IZQ / DER 3 PINES CACHETEADO",
+              "name": "Poste cacheteado lateral con 3 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-lateral-3-pines-cacheteado-v2.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1518 INTERMEDIO 4 PINES CACHETEADO",
+              "name": "Poste cacheteado intermedio con 4 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-intermedio-4-pines-cacheteado-v2.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1518 IZQ / DER 4 PINES CACHETEADO",
+              "name": "Poste cacheteado lateral con 4 pines",
+              "image": "/content/catalog/images/postes-hrd-1518-lateral-4-pines-cacheteado-v2.jpg",
+              "source": "content/catalog/details.json"
+            }
+          ],
+          "pending": [
+            "SKU y variante por confirmar",
+            "Contenido incluido y unidad comercial por validar",
+            "Precio e inventario pendientes"
+          ]
+        }
+      ]
+    },
+    "cable": {
+      "name": "HRD 1616",
+      "kind": "posts",
+      "approved": false,
+      "items": [
+        {
+          "id": "cable.final",
+          "role": "final",
+          "label": "HRD 1616 · final",
+          "sku": null,
+          "unit": "pieza",
+          "price": null,
+          "priceApproved": false,
+          "stock": null,
+          "shopifyVariantId": null,
+          "approved": false,
+          "includedParts": null,
+          "sourceCandidates": [
+            {
+              "code": "HRD 1616",
+              "name": "Poste Rectangular",
+              "image": "/content/catalog/images/postes-hrd-1616.jpg",
+              "source": "content/catalog/details.json"
+            }
+          ],
+          "pending": [
+            "Cantidades internas de accesorios por posición por confirmar",
+            "Variante de esquina por confirmar",
+            "Precio del sistema y entrega pendientes"
+          ],
+          "commercialName": "HRD 1616 Inicio / Final"
+        },
+        {
+          "id": "cable.central",
+          "role": "central",
+          "label": "HRD 1616 · central",
+          "sku": null,
+          "unit": "pieza",
+          "price": null,
+          "priceApproved": false,
+          "stock": null,
+          "shopifyVariantId": null,
+          "approved": false,
+          "includedParts": null,
+          "sourceCandidates": [
+            {
+              "code": "HRD 1616",
+              "name": "Poste Rectangular",
+              "image": "/content/catalog/images/postes-hrd-1616.jpg",
+              "source": "content/catalog/details.json"
+            }
+          ],
+          "pending": [
+            "Cantidades internas de accesorios por posición por confirmar",
+            "Variante de esquina por confirmar",
+            "Precio del sistema y entrega pendientes"
+          ],
+          "commercialName": "HRD 1616 Intermedio"
+        },
+        {
+          "id": "cable.esquina",
+          "role": "esquina",
+          "label": "HRD 1616 · esquina",
+          "sku": null,
+          "unit": "pieza",
+          "price": null,
+          "priceApproved": false,
+          "stock": null,
+          "shopifyVariantId": null,
+          "approved": false,
+          "includedParts": null,
+          "sourceCandidates": [
+            {
+              "code": "HRD 1616",
+              "name": "Poste Rectangular",
+              "image": "/content/catalog/images/postes-hrd-1616.jpg",
+              "source": "content/catalog/details.json"
+            }
+          ],
+          "pending": [
+            "Cantidades internas de accesorios por posición por confirmar",
+            "Variante de esquina por confirmar",
+            "Precio del sistema y entrega pendientes"
+          ],
+          "commercialName": null
+        },
+        {
+          "id": "cable.pasamanos",
+          "role": "pasamanos",
+          "label": "HRD 1616 · pasamanos",
+          "sku": null,
+          "unit": null,
+          "price": null,
+          "priceApproved": false,
+          "stock": null,
+          "shopifyVariantId": null,
+          "approved": false,
+          "includedParts": null,
+          "sourceCandidates": [],
+          "pending": [
+            "Confirmar venta por tramo de 6.10 m o cortes; grado de acero y acabado",
+            "Reglas de corte, uniones y tapas por validar",
+            "Incluido en sistema completo; cantidades, corte y entrega por confirmar"
+          ],
+          "technicalSpecification": {
+            "profile": "rectangular",
+            "sectionInches": [
+              1,
+              2
+            ],
+            "stockLengthMeters": 6.1,
+            "gauge": 18,
+            "material": "Acero inoxidable; grado por confirmar",
+            "saleUnit": null
+          },
+          "soldSeparatelyInThisFlow": false
+        },
+        {
+          "id": "cable.accesorios",
+          "role": "accesorios",
+          "label": "HRD 1616 · accesorios",
+          "sku": null,
+          "unit": null,
+          "price": null,
+          "priceApproved": false,
+          "stock": null,
+          "shopifyVariantId": null,
+          "approved": false,
+          "includedParts": null,
+          "sourceCandidates": [
+            {
+              "code": "HRD 1616",
+              "name": "Poste Rectangular",
+              "image": "/content/catalog/images/postes-hrd-1616.jpg",
+              "source": "content/catalog/details.json"
+            }
+          ],
+          "pending": [
+            "Contenido incluido y unidad comercial por validar",
+            "Incluido en sistema completo; cantidades, corte y entrega por confirmar"
+          ],
+          "soldSeparatelyInThisFlow": false
+        },
+        {
+          "id": "cable.cable",
+          "role": "cable",
+          "label": "HRD 1616 · cable",
+          "sku": null,
+          "unit": null,
+          "price": null,
+          "priceApproved": false,
+          "stock": null,
+          "shopifyVariantId": null,
+          "approved": false,
+          "includedParts": null,
+          "sourceCandidates": [],
+          "pending": [
+            "Confirmar venta por metro o rollo y longitud del rollo",
+            "Continuidad en esquinas, margen de tensión y cortes por validar",
+            "Incluido en sistema completo; cantidades, corte y entrega por confirmar"
+          ],
+          "technicalSpecification": {
+            "type": "trenzado",
+            "diameterInches": "3/16",
+            "diameterMmApprox": 4.7,
+            "material": "Acero inoxidable 316",
+            "lines": 7,
+            "saleUnit": null
+          },
+          "soldSeparatelyInThisFlow": false
+        },
+        {
+          "id": "cable.terminales",
+          "role": "terminales",
+          "label": "HRD 1616 · terminales",
+          "sku": null,
+          "unit": null,
+          "price": null,
+          "priceApproved": false,
+          "stock": null,
+          "shopifyVariantId": null,
+          "approved": false,
+          "includedParts": null,
+          "sourceCandidates": [
+            {
+              "code": "HRD 1616",
+              "name": "Poste Rectangular",
+              "image": "/content/catalog/images/postes-hrd-1616.jpg",
+              "source": "content/catalog/details.json"
+            }
+          ],
+          "pending": [
+            "Contenido incluido y unidad comercial por validar",
+            "Incluido en sistema completo; cantidades, corte y entrega por confirmar"
+          ],
+          "soldSeparatelyInThisFlow": false
+        }
+      ],
+      "technicalEvidence": {
+        "reviewedOn": "2026-10-05",
+        "source": "cable_acero.pdf + aclaración del usuario",
+        "code": "HRD 1616",
+        "post": {
+          "sectionInches": [
+            2,
+            2
+          ],
+          "heightCm": 86.5,
+          "material": "Acero inoxidable 304",
+          "gauge": 16
+        },
+        "cable": {
+          "type": "trenzado",
+          "diameterInches": "3/16",
+          "diameterMmApprox": 4.7,
+          "material": "Acero inoxidable 316",
+          "lines": 7,
+          "saleUnit": "metro; entrega continua en rollo"
+        },
+        "handrail": {
+          "profile": "rectangular",
+          "sectionInches": [
+            1,
+            2
+          ],
+          "stockLengthMeters": 6.1,
+          "gauge": 18,
+          "material": "Acero inoxidable; grado por confirmar",
+          "saleUnit": null
+        },
+        "generalIncludedParts": [
+          {
+            "name": "Conectores",
+            "quantity": null
+          },
+          {
+            "name": "Bujes para 7 niveles de cable",
+            "quantity": null,
+            "levels": 7
+          },
+          {
+            "name": "Embellecedores",
+            "quantity": null
+          },
+          {
+            "name": "Vela articulada",
+            "quantity": null
+          }
+        ],
+        "notIncluded": [
+          "Pinza (tipo por confirmar)"
+        ],
+        "inclusionAppliesTo": "Accesorios incluidos en el sistema completo; cantidades internas por posición pendientes",
+        "coverChangeDeferred": true
+      },
+      "completeSystem": {
+        "confirmedOn": "2026-10-07",
+        "source": "Respuestas directas del usuario en este chat",
+        "contentsConfirmed": true,
+        "included": [
+          "Postes según configuración",
+          "Pasamanos",
+          "Cable",
+          "Terminales",
+          "Tensores",
+          "Uniones",
+          "Tapas",
+          "Tornillos",
+          "Anclajes al piso"
+        ],
+        "postNames": {
+          "inicio": "HRD 1616 Inicio",
+          "central": "HRD 1616 Intermedio",
+          "final": "HRD 1616 Final",
+          "esquina": "HRD 1616 Esquina"
+        },
+        "startEndSame": false,
+        "maxSpacingMeters": 1.4,
+        "pricingMethod": "postes por posición y acabado con IVA y pasamanos incluidos + cable por metro",
+        "deliveryRule": "Sistema completo para armar; cable por metros en rollo continuo, el cliente corta y fija con conectores",
+        "inclinedAvailable": false,
+        "cornerCableRule": "Cada tramo termina en la esquina y comienza otro independiente",
+        "cableAllowance": {
+          "rate": 0.1,
+          "status": "provisional",
+          "approvedForSale": false,
+          "rounding": "Hacia arriba a 0.01 m por conjunto, después multiplicar conjuntos"
+        },
+        "handrailIncludedInPostPrice": true,
+        "postPricesIncludeTax": true
+      }
+    },
+    "hrd1223": {
+      "name": "HRD 1223",
+      "kind": "posts",
+      "approved": false,
+      "items": [
+        {
+          "id": "hrd1223.final",
+          "role": "final",
+          "label": "HRD 1223 · final",
+          "sku": null,
+          "unit": "pieza",
+          "price": null,
+          "priceApproved": false,
+          "stock": null,
+          "shopifyVariantId": null,
+          "approved": false,
+          "includedParts": null,
+          "sourceCandidates": [
+            {
+              "code": "HRD 1223 INICIO",
+              "name": "Poste con 2 brazos ajustables",
+              "image": "/content/catalog/images/postes-hrd-1221-1223-estudio-v6.jpg",
+              "source": "content/catalog/details.json"
+            }
+          ],
+          "pending": [
+            "SKU y variante por confirmar",
+            "Contenido incluido y unidad comercial por validar",
+            "Precio e inventario pendientes"
+          ]
+        },
+        {
+          "id": "hrd1223.central",
+          "role": "central",
+          "label": "HRD 1223 · central",
+          "sku": null,
+          "unit": "pieza",
+          "price": null,
+          "priceApproved": false,
+          "stock": null,
+          "shopifyVariantId": null,
+          "approved": false,
+          "includedParts": null,
+          "sourceCandidates": [
+            {
+              "code": "HRD 1223 INICIO",
+              "name": "Poste con 2 brazos ajustables",
+              "image": "/content/catalog/images/postes-hrd-1221-1223-estudio-v6.jpg",
+              "source": "content/catalog/details.json"
+            }
+          ],
+          "pending": [
+            "SKU y variante por confirmar",
+            "Contenido incluido y unidad comercial por validar",
+            "Precio e inventario pendientes"
+          ]
+        },
+        {
+          "id": "hrd1223.esquina",
+          "role": "esquina",
+          "label": "HRD 1223 · esquina",
+          "sku": null,
+          "unit": "pieza",
+          "price": null,
+          "priceApproved": false,
+          "stock": null,
+          "shopifyVariantId": null,
+          "approved": false,
+          "includedParts": null,
+          "sourceCandidates": [
+            {
+              "code": "HRD 1223 INICIO",
+              "name": "Poste con 2 brazos ajustables",
+              "image": "/content/catalog/images/postes-hrd-1221-1223-estudio-v6.jpg",
+              "source": "content/catalog/details.json"
+            }
+          ],
+          "pending": [
+            "SKU y variante por confirmar",
+            "Contenido incluido y unidad comercial por validar",
+            "Precio e inventario pendientes"
+          ]
+        },
+        {
+          "id": "hrd1223.pasamanos",
+          "role": "pasamanos",
+          "label": "HRD 1223 · pasamanos",
+          "sku": null,
+          "unit": null,
+          "price": null,
+          "priceApproved": false,
+          "stock": null,
+          "shopifyVariantId": null,
+          "approved": false,
+          "includedParts": null,
+          "sourceCandidates": [
+            {
+              "code": "HRD 1223 INICIO",
+              "name": "Poste con 2 brazos ajustables",
+              "image": "/content/catalog/images/postes-hrd-1221-1223-estudio-v6.jpg",
+              "source": "content/catalog/details.json"
+            }
+          ],
+          "pending": [
+            "SKU y variante por confirmar",
+            "Contenido incluido y unidad comercial por validar",
+            "Precio e inventario pendientes"
+          ]
+        },
+        {
+          "id": "hrd1223.accesorios",
+          "role": "accesorios",
+          "label": "HRD 1223 · accesorios",
+          "sku": null,
+          "unit": null,
+          "price": null,
+          "priceApproved": false,
+          "stock": null,
+          "shopifyVariantId": null,
+          "approved": false,
+          "includedParts": null,
+          "sourceCandidates": [
+            {
+              "code": "HRD 1223 INICIO",
+              "name": "Poste con 2 brazos ajustables",
+              "image": "/content/catalog/images/postes-hrd-1221-1223-estudio-v6.jpg",
+              "source": "content/catalog/details.json"
+            }
+          ],
+          "pending": [
+            "SKU y variante por confirmar",
+            "Contenido incluido y unidad comercial por validar",
+            "Precio e inventario pendientes"
+          ]
+        }
+      ]
+    },
+    "hrd1221": {
+      "name": "HRD 1221",
+      "kind": "posts",
+      "approved": false,
+      "items": [
+        {
+          "id": "hrd1221.final",
+          "role": "final",
+          "label": "HRD 1221 · final",
+          "sku": null,
+          "unit": "pieza",
+          "price": null,
+          "priceApproved": false,
+          "stock": null,
+          "shopifyVariantId": null,
+          "approved": false,
+          "includedParts": null,
+          "sourceCandidates": [
+            {
+              "code": "HRD 1221 INICIO / FINAL",
+              "name": "Poste con 2 brazos de solera",
+              "image": "/content/catalog/images/postes-hrd-1221-dos-brazos-estudio-v1.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1221 INTERMEDIO",
+              "name": "Poste con 4 brazos de solera",
+              "image": "/content/catalog/images/postes-hrd-1221-solera-continua-v2.jpg",
+              "source": "content/catalog/details.json"
+            }
+          ],
+          "pending": [
+            "SKU y variante por confirmar",
+            "Contenido incluido y unidad comercial por validar",
+            "Precio e inventario pendientes"
+          ]
+        },
+        {
+          "id": "hrd1221.central",
+          "role": "central",
+          "label": "HRD 1221 · central",
+          "sku": null,
+          "unit": "pieza",
+          "price": null,
+          "priceApproved": false,
+          "stock": null,
+          "shopifyVariantId": null,
+          "approved": false,
+          "includedParts": null,
+          "sourceCandidates": [
+            {
+              "code": "HRD 1221 INICIO / FINAL",
+              "name": "Poste con 2 brazos de solera",
+              "image": "/content/catalog/images/postes-hrd-1221-dos-brazos-estudio-v1.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1221 INTERMEDIO",
+              "name": "Poste con 4 brazos de solera",
+              "image": "/content/catalog/images/postes-hrd-1221-solera-continua-v2.jpg",
+              "source": "content/catalog/details.json"
+            }
+          ],
+          "pending": [
+            "SKU y variante por confirmar",
+            "Contenido incluido y unidad comercial por validar",
+            "Precio e inventario pendientes"
+          ]
+        },
+        {
+          "id": "hrd1221.esquina",
+          "role": "esquina",
+          "label": "HRD 1221 · esquina",
+          "sku": null,
+          "unit": "pieza",
+          "price": null,
+          "priceApproved": false,
+          "stock": null,
+          "shopifyVariantId": null,
+          "approved": false,
+          "includedParts": null,
+          "sourceCandidates": [
+            {
+              "code": "HRD 1221 INICIO / FINAL",
+              "name": "Poste con 2 brazos de solera",
+              "image": "/content/catalog/images/postes-hrd-1221-dos-brazos-estudio-v1.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1221 INTERMEDIO",
+              "name": "Poste con 4 brazos de solera",
+              "image": "/content/catalog/images/postes-hrd-1221-solera-continua-v2.jpg",
+              "source": "content/catalog/details.json"
+            }
+          ],
+          "pending": [
+            "SKU y variante por confirmar",
+            "Contenido incluido y unidad comercial por validar",
+            "Precio e inventario pendientes"
+          ]
+        },
+        {
+          "id": "hrd1221.pasamanos",
+          "role": "pasamanos",
+          "label": "HRD 1221 · pasamanos",
+          "sku": null,
+          "unit": null,
+          "price": null,
+          "priceApproved": false,
+          "stock": null,
+          "shopifyVariantId": null,
+          "approved": false,
+          "includedParts": null,
+          "sourceCandidates": [
+            {
+              "code": "HRD 1221 INICIO / FINAL",
+              "name": "Poste con 2 brazos de solera",
+              "image": "/content/catalog/images/postes-hrd-1221-dos-brazos-estudio-v1.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1221 INTERMEDIO",
+              "name": "Poste con 4 brazos de solera",
+              "image": "/content/catalog/images/postes-hrd-1221-solera-continua-v2.jpg",
+              "source": "content/catalog/details.json"
+            }
+          ],
+          "pending": [
+            "SKU y variante por confirmar",
+            "Contenido incluido y unidad comercial por validar",
+            "Precio e inventario pendientes"
+          ]
+        },
+        {
+          "id": "hrd1221.accesorios",
+          "role": "accesorios",
+          "label": "HRD 1221 · accesorios",
+          "sku": null,
+          "unit": null,
+          "price": null,
+          "priceApproved": false,
+          "stock": null,
+          "shopifyVariantId": null,
+          "approved": false,
+          "includedParts": null,
+          "sourceCandidates": [
+            {
+              "code": "HRD 1221 INICIO / FINAL",
+              "name": "Poste con 2 brazos de solera",
+              "image": "/content/catalog/images/postes-hrd-1221-dos-brazos-estudio-v1.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1221 INTERMEDIO",
+              "name": "Poste con 4 brazos de solera",
+              "image": "/content/catalog/images/postes-hrd-1221-solera-continua-v2.jpg",
+              "source": "content/catalog/details.json"
+            }
+          ],
+          "pending": [
+            "SKU y variante por confirmar",
+            "Contenido incluido y unidad comercial por validar",
+            "Precio e inventario pendientes"
+          ]
+        }
+      ]
+    },
+    "hrd1220": {
+      "name": "HRD 1220",
+      "kind": "clamps",
+      "approved": false,
+      "items": [
+        {
+          "id": "hrd1220.apoyo",
+          "role": "apoyo",
+          "label": "HRD 1220 · apoyo",
+          "sku": null,
+          "unit": "pieza",
+          "price": null,
+          "priceApproved": false,
+          "stock": null,
+          "shopifyVariantId": null,
+          "approved": false,
+          "includedParts": null,
+          "sourceCandidates": [
+            {
+              "code": "HRD 1220",
+              "name": "Poste rectangular 18.50 cm",
+              "image": "/content/catalog/images/postes-hrd-1220-estudio-v1.jpg",
+              "source": "content/catalog/details.json"
+            }
+          ],
+          "pending": [
+            "SKU y variante por confirmar",
+            "Contenido incluido y unidad comercial por validar",
+            "Precio e inventario pendientes"
+          ]
+        },
+        {
+          "id": "hrd1220.union_recta",
+          "role": "union_recta",
+          "label": "HRD 1220 · union recta",
+          "sku": null,
+          "unit": "pieza",
+          "price": null,
+          "priceApproved": false,
+          "stock": null,
+          "shopifyVariantId": null,
+          "approved": false,
+          "includedParts": null,
+          "sourceCandidates": [
+            {
+              "code": "HRD 1220",
+              "name": "Poste rectangular 18.50 cm",
+              "image": "/content/catalog/images/postes-hrd-1220-estudio-v1.jpg",
+              "source": "content/catalog/details.json"
+            }
+          ],
+          "pending": [
+            "SKU y variante por confirmar",
+            "Contenido incluido y unidad comercial por validar",
+            "Precio e inventario pendientes"
+          ]
+        },
+        {
+          "id": "hrd1220.union_esquina",
+          "role": "union_esquina",
+          "label": "HRD 1220 · union esquina",
+          "sku": null,
+          "unit": "pieza",
+          "price": null,
+          "priceApproved": false,
+          "stock": null,
+          "shopifyVariantId": null,
+          "approved": false,
+          "includedParts": null,
+          "sourceCandidates": [
+            {
+              "code": "HRD 1220",
+              "name": "Poste rectangular 18.50 cm",
+              "image": "/content/catalog/images/postes-hrd-1220-estudio-v1.jpg",
+              "source": "content/catalog/details.json"
+            }
+          ],
+          "pending": [
+            "SKU y variante por confirmar",
+            "Contenido incluido y unidad comercial por validar",
+            "Precio e inventario pendientes"
+          ]
+        },
+        {
+          "id": "hrd1220.muro",
+          "role": "muro",
+          "label": "HRD 1220 · muro",
+          "sku": null,
+          "unit": "pieza",
+          "price": null,
+          "priceApproved": false,
+          "stock": null,
+          "shopifyVariantId": null,
+          "approved": false,
+          "includedParts": null,
+          "sourceCandidates": [
+            {
+              "code": "HRD 1220",
+              "name": "Poste rectangular 18.50 cm",
+              "image": "/content/catalog/images/postes-hrd-1220-estudio-v1.jpg",
+              "source": "content/catalog/details.json"
+            }
+          ],
+          "pending": [
+            "SKU y variante por confirmar",
+            "Contenido incluido y unidad comercial por validar",
+            "Precio e inventario pendientes"
+          ]
+        }
+      ]
+    },
+    "hrd153x": {
+      "name": "HRD 1533 / 1534 / 1535",
+      "kind": "posts",
+      "approved": false,
+      "items": [
+        {
+          "id": "hrd153x.final",
+          "role": "final",
+          "label": "HRD 1533 / 1534 / 1535 · final",
+          "sku": null,
+          "unit": "pieza",
+          "price": null,
+          "priceApproved": false,
+          "stock": null,
+          "shopifyVariantId": null,
+          "approved": false,
+          "includedParts": null,
+          "sourceCandidates": [],
+          "pending": [
+            "SKU y variante por confirmar",
+            "Contenido incluido y unidad comercial por validar",
+            "Precio e inventario pendientes"
+          ]
+        },
+        {
+          "id": "hrd153x.central",
+          "role": "central",
+          "label": "HRD 1533 / 1534 / 1535 · central",
+          "sku": null,
+          "unit": "pieza",
+          "price": null,
+          "priceApproved": false,
+          "stock": null,
+          "shopifyVariantId": null,
+          "approved": false,
+          "includedParts": null,
+          "sourceCandidates": [],
+          "pending": [
+            "SKU y variante por confirmar",
+            "Contenido incluido y unidad comercial por validar",
+            "Precio e inventario pendientes"
+          ]
+        },
+        {
+          "id": "hrd153x.esquina",
+          "role": "esquina",
+          "label": "HRD 1533 / 1534 / 1535 · esquina",
+          "sku": null,
+          "unit": "pieza",
+          "price": null,
+          "priceApproved": false,
+          "stock": null,
+          "shopifyVariantId": null,
+          "approved": false,
+          "includedParts": null,
+          "sourceCandidates": [],
+          "pending": [
+            "SKU y variante por confirmar",
+            "Contenido incluido y unidad comercial por validar",
+            "Precio e inventario pendientes"
+          ]
+        },
+        {
+          "id": "hrd153x.pasamanos",
+          "role": "pasamanos",
+          "label": "HRD 1533 / 1534 / 1535 · pasamanos",
+          "sku": null,
+          "unit": null,
+          "price": null,
+          "priceApproved": false,
+          "stock": null,
+          "shopifyVariantId": null,
+          "approved": false,
+          "includedParts": null,
+          "sourceCandidates": [],
+          "pending": [
+            "SKU y variante por confirmar",
+            "Contenido incluido y unidad comercial por validar",
+            "Precio e inventario pendientes"
+          ]
+        },
+        {
+          "id": "hrd153x.accesorios",
+          "role": "accesorios",
+          "label": "HRD 1533 / 1534 / 1535 · accesorios",
+          "sku": null,
+          "unit": null,
+          "price": null,
+          "priceApproved": false,
+          "stock": null,
+          "shopifyVariantId": null,
+          "approved": false,
+          "includedParts": null,
+          "sourceCandidates": [],
+          "pending": [
+            "SKU y variante por confirmar",
+            "Contenido incluido y unidad comercial por validar",
+            "Precio e inventario pendientes"
+          ]
+        }
+      ]
+    },
+    "hrd1206": {
+      "name": "HRD 1206",
+      "kind": "clamps",
+      "approved": false,
+      "items": [
+        {
+          "id": "hrd1206.apoyo",
+          "role": "apoyo",
+          "label": "HRD 1206 · apoyo",
+          "sku": null,
+          "unit": "pieza",
+          "price": null,
+          "priceApproved": false,
+          "stock": null,
+          "shopifyVariantId": null,
+          "approved": false,
+          "includedParts": null,
+          "sourceCandidates": [
+            {
+              "code": "HRD 1206 x 450",
+              "name": "MiniPoste Rectangular",
+              "image": "/content/catalog/images/postes-hrd-1206-x-450.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1206 x 450 TOPE",
+              "name": "MiniPoste Rectangular con tope.",
+              "image": "/content/catalog/images/postes-hrd-1206-x-450-tope.jpg",
+              "source": "content/catalog/details.json"
+            }
+          ],
+          "pending": [
+            "SKU y variante por confirmar",
+            "Contenido incluido y unidad comercial por validar",
+            "Precio e inventario pendientes"
+          ]
+        },
+        {
+          "id": "hrd1206.union_recta",
+          "role": "union_recta",
+          "label": "HRD 1206 · union recta",
+          "sku": null,
+          "unit": "pieza",
+          "price": null,
+          "priceApproved": false,
+          "stock": null,
+          "shopifyVariantId": null,
+          "approved": false,
+          "includedParts": null,
+          "sourceCandidates": [
+            {
+              "code": "HRD 1206 x 450",
+              "name": "MiniPoste Rectangular",
+              "image": "/content/catalog/images/postes-hrd-1206-x-450.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1206 x 450 TOPE",
+              "name": "MiniPoste Rectangular con tope.",
+              "image": "/content/catalog/images/postes-hrd-1206-x-450-tope.jpg",
+              "source": "content/catalog/details.json"
+            }
+          ],
+          "pending": [
+            "SKU y variante por confirmar",
+            "Contenido incluido y unidad comercial por validar",
+            "Precio e inventario pendientes"
+          ]
+        },
+        {
+          "id": "hrd1206.union_esquina",
+          "role": "union_esquina",
+          "label": "HRD 1206 · union esquina",
+          "sku": null,
+          "unit": "pieza",
+          "price": null,
+          "priceApproved": false,
+          "stock": null,
+          "shopifyVariantId": null,
+          "approved": false,
+          "includedParts": null,
+          "sourceCandidates": [
+            {
+              "code": "HRD 1206 x 450",
+              "name": "MiniPoste Rectangular",
+              "image": "/content/catalog/images/postes-hrd-1206-x-450.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1206 x 450 TOPE",
+              "name": "MiniPoste Rectangular con tope.",
+              "image": "/content/catalog/images/postes-hrd-1206-x-450-tope.jpg",
+              "source": "content/catalog/details.json"
+            }
+          ],
+          "pending": [
+            "SKU y variante por confirmar",
+            "Contenido incluido y unidad comercial por validar",
+            "Precio e inventario pendientes"
+          ]
+        },
+        {
+          "id": "hrd1206.muro",
+          "role": "muro",
+          "label": "HRD 1206 · muro",
+          "sku": null,
+          "unit": "pieza",
+          "price": null,
+          "priceApproved": false,
+          "stock": null,
+          "shopifyVariantId": null,
+          "approved": false,
+          "includedParts": null,
+          "sourceCandidates": [
+            {
+              "code": "HRD 1206 x 450",
+              "name": "MiniPoste Rectangular",
+              "image": "/content/catalog/images/postes-hrd-1206-x-450.jpg",
+              "source": "content/catalog/details.json"
+            },
+            {
+              "code": "HRD 1206 x 450 TOPE",
+              "name": "MiniPoste Rectangular con tope.",
+              "image": "/content/catalog/images/postes-hrd-1206-x-450-tope.jpg",
+              "source": "content/catalog/details.json"
+            }
+          ],
+          "pending": [
+            "SKU y variante por confirmar",
+            "Contenido incluido y unidad comercial por validar",
+            "Precio e inventario pendientes"
+          ]
+        }
+      ]
+    }
+  }
+}

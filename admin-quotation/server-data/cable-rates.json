@@ -1,0 +1,30 @@
+{
+  "currency": "MXN",
+  "taxRate": 0.16,
+  "taxRateStatus": "referencia de la tabla recibida; validar antes de venta",
+  "pricesExcludeTax": false,
+  "receivedOn": "2026-10-07",
+  "source": "WhatsApp Image 2026-10-06 at 19.11.22.jpeg y aclaración directa del usuario",
+  "postCents": {
+    "satin": {
+      "inicio": 119016,
+      "central": 119016,
+      "final": 127716,
+      "esquina": 145116
+    },
+    "negro": {
+      "inicio": 146508,
+      "central": 146508,
+      "final": 155208,
+      "esquina": 172608
+    }
+  },
+  "cableCentsPerMeter": 14732,
+  "handrailPrice": 0,
+  "checkoutEnabled": false,
+  "postPricesIncludeTax": true,
+  "handrailIncludedInPostPrice": true,
+  "cablePriceStatus": "Confirmado por el usuario: 147.32 por metro con IVA incluido",
+  "handrailPriceStatus": "Incluido en precio de poste, no sumar de nuevo",
+  "cablePricesIncludeTax": true
+}

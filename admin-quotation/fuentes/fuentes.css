@@ -1,0 +1,10 @@
+/* Archivo y Archivo Narrow alojadas localmente (SIL Open Font License, ver OFL-*.txt). */
+@font-face{font-family:Archivo;font-weight:400;font-display:swap;src:url(archivo-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:Archivo;font-weight:500;font-display:swap;src:url(archivo-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:Archivo;font-weight:600;font-display:swap;src:url(archivo-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:Archivo;font-weight:700;font-display:swap;src:url(archivo-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:Archivo;font-weight:800;font-display:swap;src:url(archivo-latin-800-normal.woff2) format('woff2')}
+@font-face{font-family:Archivo;font-weight:900;font-display:swap;src:url(archivo-latin-900-normal.woff2) format('woff2')}
+@font-face{font-family:'Archivo Narrow';font-weight:500;font-display:swap;src:url(archivo-narrow-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'Archivo Narrow';font-weight:600;font-display:swap;src:url(archivo-narrow-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:'Archivo Narrow';font-weight:700;font-display:swap;src:url(archivo-narrow-latin-700-normal.woff2) format('woff2')}
