@@ -1,12 +1,15 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.86.0**
+Versión actual: **1.87.0**
 
 El dominio oficial `www.herraidea.com` sirve la web desde Vercel y `herraidea.com` redirige de forma segura a esa dirección. Las referencias canónicas, la tarjeta social, los datos estructurados y el catálogo descargable usan el dominio oficial. Los registros de correo preexistentes se conservaron al migrar los servidores DNS desde Jimdo a Vercel.
 
 Sitio de producción: `https://www.herraidea.com/`
 
 ## Estado actual
+
+2026-10-14: dominio propio admin.herraidea.com vinculado al proyecto herraidea-admin. Origen de login actualizado; usuario/huella y clave de sesión existentes se conservan. Los enlaces antiguos redirigen al nuevo dominio. La zona DNS existente ya resuelve correctamente; no se modificaron registros de correo ni la landing.
+
 
 2026-10-14: panel admin-quotation independiente sin DB ni Shopify; usuario compartido con hash scrypt, cookie firmada, PDF descargable y editable JSON. Logo ampliado y sin ProcesaLab en PDF por petición del usuario; crédito en panel conservado. Proyecto Vercel herraidea-admin separado. Carpeta excluida del despliegue de la landing. Empaquetado sólo como función protegida, sin archivos privados estáticos ni secretos en Git. Acceso configurado únicamente mediante secretos de producción; validación de despliegue registrada en docs/ADMIN-COTIZACIONES.md. Ecommerce continúa en pausa.
 

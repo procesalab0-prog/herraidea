@@ -1,5 +1,12 @@
 # Historial de versiones — Herraidea
 
+## 1.87.0 — 2026-10-14
+
+- Dominio admin.herraidea.com para el panel privado.
+- Origen de autenticación actualizado sin cambiar credenciales.
+- Enlaces anteriores redirigidos al dominio propio.
+
+
 ## 1.86.0 — 2026-10-14
 
 - Panel privado independiente para cotizaciones especiales, sin DB ni Shopify.

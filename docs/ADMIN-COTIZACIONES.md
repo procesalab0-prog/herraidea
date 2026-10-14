@@ -48,7 +48,7 @@ PDF directo mediante pdf-lib vendorizado (MIT, licencia adjunta), generado sólo
 
 ## Publicación verificada · 2026-10-14
 
-- Enlace: https://herraidea-admin.vercel.app/
+- Enlace principal: https://admin.herraidea.com/
 - Proyecto: herraidea-admin (`prj_Kf3Ayv8vsYMaBeZqxU1o2lJuGg2L`), equipo ProcesaLab.
 - Despliegue listo: `dpl_3Z8jqxoqJBWrLPGWTcsgoD9GTnh4`.
 - Código subido a main: `07d273b8b640992bc22d9360f6a21f4a820eb362`.
@@ -58,3 +58,10 @@ PDF directo mediante pdf-lib vendorizado (MIT, licencia adjunta), generado sólo
 - PWA e imagen social accesibles; no se guardan cotizaciones/clientes en caché.
 - Publicación inicial realizada mediante API desde la carpeta revisada. No se configuró todavía despliegue automático por Git. Para próximas publicaciones ejecutar el mismo build protegido; nunca servir admin-quotation como contenido estático.
 - La landing excluye admin-quotation y Shopify permanece en pausa.
+
+
+## Dominio propio · 1.87.0
+
+admin.herraidea.com pertenece al proyecto independiente herraidea-admin. Verificación Vercel válida y DNS sin conflictos mediante la zona existente. ADMIN_ORIGIN se actualizó sólo en producción a https://admin.herraidea.com; las credenciales no cambiaron. El enlace compartido herraidea-admin.vercel.app redirige al nuevo dominio con HTTP 307. No se alteraron los registros de correo ni el dominio público de la landing.
+
+Despliegue del dominio: dpl_6sQZk3qso5Q3nraMdsuRzRuNwvTx. HTTPS y recorrido real escritorio/móvil verificados: acceso, cálculo HRD1616 por $22,142.08, descarga PDF y ausencia de desbordamiento/errores. El alias interno generado del equipo no es el enlace para compartir.
