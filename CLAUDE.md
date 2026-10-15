@@ -1,12 +1,15 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.87.0**
+Versión actual: **1.88.0**
 
 El dominio oficial `www.herraidea.com` sirve la web desde Vercel y `herraidea.com` redirige de forma segura a esa dirección. Las referencias canónicas, la tarjeta social, los datos estructurados y el catálogo descargable usan el dominio oficial. Los registros de correo preexistentes se conservaron al migrar los servidores DNS desde Jimdo a Vercel.
 
 Sitio de producción: `https://www.herraidea.com/`
 
 ## Estado actual
+
+2026-10-14: primer módulo de fabricación en admin: piezas de sólido/tubo redondo, placa/lámina rectangular y placa con área/perímetro capturados. Materia prima por mm/m, mm²/m², kg conocido o pieza; procesos por pieza, minuto, contorno o superficie real; accesorios y merma sólo de material. Tarifa ausente deja precio pendiente. Recargo sobre costo explícito (no margen de venta), fabricación sin IVA y traspaso según base de la cotización. Datos del armado incluidos en JSON editable. Ejemplo ficticio etiquetado también en PDF, no tarifas Herraidea. Listas reales, reglas/factores CNC y un caso validado pendientes. Shopify/landing sin cambios.
+
 
 2026-10-14: dominio propio admin.herraidea.com vinculado al proyecto herraidea-admin. Origen de login actualizado; usuario/huella y clave de sesión existentes se conservan. Los enlaces antiguos redirigen al nuevo dominio. La zona DNS existente ya resuelve correctamente; no se modificaron registros de correo ni la landing.
 

@@ -65,3 +65,18 @@ PDF directo mediante pdf-lib vendorizado (MIT, licencia adjunta), generado sólo
 admin.herraidea.com pertenece al proyecto independiente herraidea-admin. Verificación Vercel válida y DNS sin conflictos mediante la zona existente. ADMIN_ORIGIN se actualizó sólo en producción a https://admin.herraidea.com; las credenciales no cambiaron. El enlace compartido herraidea-admin.vercel.app redirige al nuevo dominio con HTTP 307. No se alteraron los registros de correo ni el dominio público de la landing.
 
 Despliegue del dominio: dpl_6sQZk3qso5Q3nraMdsuRzRuNwvTx. HTTPS y recorrido real escritorio/móvil verificados: acceso, cálculo HRD1616 por $22,142.08, descarga PDF y ausencia de desbordamiento/errores. El alias interno generado del equipo no es el enlace para compartir.
+
+
+## Fabricación por componentes · 1.88.0
+
+Primer bloque funcional en «Fabricar un herraje»: capturar piezas y accesorios por herraje, procesos y consumo; ajustar recargo sobre costo y llevar un concepto por herraje terminado a la cotización. Las tarifas de este módulo siempre se capturan SIN IVA. El traspaso respeta la base de IVA elegida en el presupuesto.
+
+Sólido/tubo redondo: diámetro exterior, longitud y pared; placa/lámina rectangular: largo, ancho y espesor; forma especial: área real y perímetro por separado. Tarifas por mm, metro, mm², m², peso conocido en kg o pieza. El volumen es informativo; no se presume densidad para cobrar por peso. Merma sólo de materia prima, nunca de procesos o accesorios. Los procesos pueden cobrarse por pieza, minuto, mm de contorno o mm² de superficie real de trabajo (no se asume igual a área de material). Se conserva precisión de tarifas hasta redondear el total de cada componente.
+
+No se inventan factores CNC, listas, precios ni tiempos. La captura inicial está vacía y un dato/tarifa faltante deja el precio pendiente. Cada pieza nueva propone una fila CNC sin tarifa ni minutos, que el administrador puede ajustar o retirar si no aplica. La selección automática desde listas reales no está implementada: sigue pendiente recibirlas y definir criterios y vigencia.
+
+«Cargar ejemplo ficticio» arma dos separadores, una placa con corte/pulido y accesorios; todos sus importes son sintéticos. Se advierte en pantalla y en la descripción del concepto/PDF. Ejemplo: costo $462.00, recargo 25%, precio sin IVA $577.50, total con IVA de referencia 16% $669.90. Estas cantidades NO son una cotización comercial ni tarifas Herraidea.
+
+El JSON guarda el armado actual. Al importarlo restaura las entradas y recalcula; no confía en totales serializados. Tras cambiar un armado, el concepto previamente agregado NO cambia automáticamente: revisar o quitar el concepto previo para evitar duplicación. El archivo conserva el último armado de fabricación, no una biblioteca de armados históricos por concepto. No hay almacenamiento compartido ni base de datos.
+
+Verificación: cálculo de geometría, cantidades, CNC, merma, precisión, unidades, pendientes, límites y conservación de entradas; flujo navegador escritorio/móvil con ejemplo, edición, guardado/importación y PDF. Pendiente validar un herraje real con Herraidea antes de aprobar reglas comerciales.

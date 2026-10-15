@@ -1,5 +1,14 @@
 # Historial de versiones — Herraidea
 
+## 1.88.0 — 2026-10-14
+
+- Primer armado de herrajes por piezas, materia prima, procesos y accesorios.
+- Área y contorno separados, unidades de compra y merma de material; sin densidad o tarifas supuestas.
+- Tarifa pendiente impide agregar un precio final; recargo explícito y traspaso a cotización sin duplicar IVA.
+- Ejemplo ficticio identificado, guardado/importación de armado y PDF del herraje terminado.
+- 62 pruebas y flujo escritorio/móvil aprobados; listas y factores reales pendientes.
+
+
 ## 1.87.0 — 2026-10-14
 
 - Dominio admin.herraidea.com para el panel privado.
