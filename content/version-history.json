@@ -1,7 +1,25 @@
 {
-  "current": "1.64.2",
+  "current": "1.88.0",
   "studio": "ProcesaLab",
   "versions": [
+    {
+      "version": "1.88.0",
+      "date": "2026-10-14",
+      "title": "Armado de herrajes por fabricación",
+      "summary": "Primer flujo de piezas, procesos y accesorios con ejemplo ficticio; cálculo, archivo editable y PDF. Tarifas reales pendientes."
+    },
+    {
+      "version": "1.87.0",
+      "date": "2026-10-14",
+      "title": "Dominio propio para Herraidea Admin",
+      "summary": "Panel privado en admin.herraidea.com, con el mismo acceso y redirección desde los enlaces anteriores."
+    },
+    {
+      "version": "1.86.0",
+      "date": "2026-10-14",
+      "title": "Cotizador privado Herraidea Admin",
+      "summary": "Panel independiente con acceso compartido, PDF y PWA. La landing y Shopify mantienen su alcance anterior."
+    },
     {
       "version": "1.64.2",
       "date": "2026-10-06",

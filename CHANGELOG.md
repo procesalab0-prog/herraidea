@@ -1,5 +1,30 @@
 # Historial de versiones — Herraidea
 
+## 1.88.0 — 2026-10-14
+
+- Primer armado de herrajes por piezas, materia prima, procesos y accesorios.
+- Área y contorno separados, unidades de compra y merma de material; sin densidad o tarifas supuestas.
+- Tarifa pendiente impide agregar un precio final; recargo explícito y traspaso a cotización sin duplicar IVA.
+- Ejemplo ficticio identificado, guardado/importación de armado y PDF del herraje terminado.
+- 62 pruebas y flujo escritorio/móvil aprobados; listas y factores reales pendientes.
+
+
+## 1.87.0 — 2026-10-14
+
+- Dominio admin.herraidea.com para el panel privado.
+- Origen de autenticación actualizado sin cambiar credenciales.
+- Enlaces anteriores redirigidos al dominio propio.
+
+
+## 1.86.0 — 2026-10-14
+
+- Panel privado independiente para cotizaciones especiales, sin DB ni Shopify.
+- Acceso compartido, PDF directo con logo grande y archivo editable JSON.
+- Imagen social e iconos PWA; sin caché de clientes o cotizaciones.
+- Paquete Vercel con control de acceso a todos los archivos internos; secretos fuera de Git.
+- Landing pública conservada y carpeta admin excluida de su despliegue.
+
+
 ## 1.64.2 — 2026-10-06
 
 - La flecha del botón «Cuéntanos tu proyecto» se dibuja en SVG: el carácter ↗ aparecía como emoji en iPhone. Se revisó todo el sitio y no quedan otros caracteres que los teléfonos conviertan en emoji.
