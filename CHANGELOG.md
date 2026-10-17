@@ -1,5 +1,14 @@
 # Historial de versiones — Herraidea
 
+## 1.89.0 — 2026-10-17
+
+- Realidad aumentada del HRD 1616 en iPhone y iPad: «Ver en tu espacio» abre la esquina con siete cables por lado en AR Quick Look de Safari, a escala real (1.28 × 1.28 m, 1.06 m de alto).
+- USDZ armado y sin animación, con el mismo acero satinado del visor; 93 piezas, 413 KB, validado con el verificador de ARKit.
+- El botón «Cotizar por WhatsApp» dentro de Quick Look abre la conversación de Ventas con el mensaje del sistema.
+- El botón aparece solo en equipos compatibles y sobre el visor 3D; en computadora y Android no se muestra.
+- `scripts/ar/exportar_usdz.py` convierte cualquier GLB de los visores; cada solución activa su AR con el campo `ar` en `project-3d-v2.js`.
+
+
 ## 1.88.0 — 2026-10-14
 
 - Primer armado de herrajes por piezas, materia prima, procesos y accesorios.

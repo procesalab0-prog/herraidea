@@ -1,7 +1,13 @@
 {
-  "current": "1.88.0",
+  "current": "1.89.0",
   "studio": "ProcesaLab",
   "versions": [
+    {
+      "version": "1.89.0",
+      "date": "2026-10-17",
+      "title": "HRD 1616 en realidad aumentada",
+      "summary": "«Ver en tu espacio» coloca la esquina HRD 1616 a escala real con AR Quick Look en iPhone y iPad, con acceso directo a cotizar por WhatsApp."
+    },
     {
       "version": "1.88.0",
       "date": "2026-10-14",

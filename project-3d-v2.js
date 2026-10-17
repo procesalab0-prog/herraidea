@@ -104,7 +104,12 @@ const projects = {
     heading: 'Una esquina completa, unión por unión.',
     description: 'Recorre los dos tramos, acércate al poste compartido y controla el despiece del sistema completo.',
     content: '93 piezas y conjuntos', detail: 'Ver esquina',
-    aria: 'Modelo tridimensional interactivo del sistema HRD 1616 con postes cuadrados y cable de acero', caveat: ''
+    aria: 'Modelo tridimensional interactivo del sistema HRD 1616 con postes cuadrados y cable de acero', caveat: '',
+    ar: {
+      src: '/assets/projects/hrd-1616/ar/hrd-1616-esquina.usdz?v=1-89-0',
+      title: 'HRD 1616 · Poste cuadrado + cable', subtitle: 'Esquina con siete cables por lado · escala real',
+      whatsapp: 'Hola, vi el sistema HRD 1616 de poste cuadrado con cable en realidad aumentada y quiero cotizar un barandal.'
+    }
   },
   futbolito: {
     src: '/assets/projects/futbolito/futbolito-herraidea.glb', profile: 'futbolito', kicker: 'Proyecto interactivo 09',
@@ -473,6 +478,29 @@ const bindViewer = () => {
   });
 };
 
+// Realidad aumentada en iPhone y iPad (AR Quick Look): las soluciones con `ar` abren su USDZ a escala real.
+// El enlace oculto con rel="ar" e <img> es lo que Safari exige; el botón de Quick Look abre WhatsApp.
+const arButton = document.querySelector('#project-ar');
+const arLink = document.createElement('a');
+const supportsQuickLook = Boolean(arLink.relList?.supports?.('ar'));
+let arProject = null;
+arLink.rel = 'ar';
+arLink.hidden = true;
+arLink.appendChild(document.createElement('img'));
+arLink.addEventListener('message', (event) => {
+  if (event.data !== '_apple_ar_quicklook_button_tapped' || !arProject) return;
+  window.location.href = `https://wa.me/524772561695?text=${encodeURIComponent(arProject.whatsapp)}`;
+});
+arButton?.addEventListener('click', () => {
+  if (!arProject) return;
+  const options = new URLSearchParams({
+    allowsContentScaling: '0', checkoutTitle: arProject.title, checkoutSubtitle: arProject.subtitle, callToAction: 'Cotizar por WhatsApp'
+  });
+  arLink.href = `${arProject.src}#${options.toString().replace(/\+/g, '%20')}`;
+  if (!arLink.isConnected) document.body.append(arLink);
+  arLink.click();
+});
+
 const openProject = (key) => {
   const project = projects[key];
   if (!dialog || !project || dialog.open) return;
@@ -486,6 +514,8 @@ const openProject = (key) => {
   const caveat = document.querySelector('#project-caveat');
   caveat.textContent = project.caveat;
   caveat.hidden = !project.caveat;
+  arProject = project.ar || null;
+  if (arButton) arButton.hidden = !(supportsQuickLook && arProject);
   range.value = 0;
   range.disabled = true;
   range.style.setProperty('--project-range', '0%');
