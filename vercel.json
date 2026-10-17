@@ -331,6 +331,19 @@
           "value": "nosniff"
         }
       ]
+    },
+    {
+      "source": "/assets/projects/hrd-1616/ar/(.*).usdz",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "model/vnd.usdz+zip"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        }
+      ]
     }
   ]
 }

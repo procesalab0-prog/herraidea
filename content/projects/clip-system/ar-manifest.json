@@ -29,7 +29,7 @@
   "glassOpacity": 0.14,
   "sourceGeometryUnchanged": true,
   "byteLength": 1891528,
-  "nativeIPhoneTest": "pending",
+  "nativeIPhoneTest": "user_confirmed",
   "note": "Modelo conceptual de referencia. No corresponde a las medidas de la calculadora ni a una especificación de instalación.",
   "sourceSha256": "9e41075272385ef1446c48431061d114449e73ffc1ecac93d15648a5b4164ec8",
   "assetSha256": "f0e070b0365e60d8fbdb195d53cff365bc068684412e945e8226c67f5b239f71",
@@ -37,5 +37,9 @@
     "errors": [],
     "failedChecks": [],
     "warnings": []
+  },
+  "nativeDeviceConfirmation": {
+    "date": "2026-10-17",
+    "evidence": "El usuario confirmó que probó el HRD 1525 y funciona perfecto. Dispositivo y versión de sistema no especificados."
   }
 }

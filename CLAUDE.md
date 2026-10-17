@@ -1,10 +1,14 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.89.0**
+Versión actual: **1.90.0**
 
 El dominio oficial `www.herraidea.com` sirve la web desde Vercel y `herraidea.com` redirige de forma segura a esa dirección. Las referencias canónicas, la tarjeta social, los datos estructurados y el catálogo descargable usan el dominio oficial. Los registros de correo preexistentes se conservaron al migrar los servidores DNS desde Jimdo a Vercel.
 
 Sitio de producción: `https://www.herraidea.com/`
+
+## AR 1.90.0
+
+Integrado HRD 1616 desde 2f2481d de Claude, USDZ original conservado. Botón rojo compartido sobre el visor para 1525 y 1616, página/QR y acción Cotizar por WhatsApp en Quick Look. HRD 1525 probado físicamente por el usuario el 2026-10-17: funciona perfecto; dispositivo y SO no especificados. Cámara/Quick Look físico del HRD 1616 pendiente de prueba. Sin cambios de ecommerce ni admin.
 
 ## Estado actual
 

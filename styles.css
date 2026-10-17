@@ -730,3 +730,9 @@ footer .section-inner{flex-wrap:wrap}footer .footer-brand{flex:none}footer .sect
 .button .button-arrow{width:16px;height:16px;flex:none}
 
 .project-ar{margin:20px 0}.project-ar-link{display:block;border-radius:999px;max-width:440px;box-shadow:0 8px 20px #d8172522}.project-ar-link img{display:block;width:100%;height:auto}.project-ar small{display:block;font-size:11px;color:#66717b;line-height:1.6;margin-top:10px}.project-ar[hidden]{display:none!important}
+
+/* One shared red Quick Look entry, reachable above the model on iPad. */
+.project-ar-floating{position:absolute;top:16px;right:16px;z-index:3;width:min(300px,calc(100% - 32px));margin:0;padding:0;border:0;background:transparent}
+.project-ar-floating small{display:none}
+.project-ar-floating .project-ar-link{width:100%}
+@media(max-width:560px){.project-ar-floating{top:12px;right:12px;width:min(230px,calc(100% - 24px))}}

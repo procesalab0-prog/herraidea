@@ -1,0 +1,35 @@
+{
+  "code": "HRD 1616",
+  "source": "assets/projects/hrd-1616/hrd-1616-esquina-7-cables.glb",
+  "asset": "assets/projects/hrd-1616/ar/hrd-1616-esquina.usdz",
+  "sourceSha256": "887d6772952ff595b7c4bd04251b25f9db4ec12463ed3dd13e4cc0dbcd642840",
+  "assetSha256": "c03860ae414f0da1484f46aafe6f67327aeba0c7356838d60135c0199ef053de",
+  "exportedMeshes": 93,
+  "metersPerUnit": 1.0,
+  "upAxis": "Y",
+  "boundsMeters": {
+    "min": [
+      -0.642500028014183,
+      -1.3267165726605772e-16,
+      -0.642500028014183
+    ],
+    "max": [
+      0.6424999833106995,
+      1.0609999895095827,
+      0.6424999833106997
+    ],
+    "size": [
+      1.2850000113248825,
+      1.060999989509583,
+      1.2850000113248827
+    ]
+  },
+  "arkitCompliance": {
+    "errors": [],
+    "failedChecks": [],
+    "warnings": []
+  },
+  "nativeIPhoneTest": "pending",
+  "provenance": "Claude commit 2f2481d; USDZ integrated unchanged",
+  "cablesPerSide": 7
+}

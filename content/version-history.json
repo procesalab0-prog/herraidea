@@ -1,7 +1,13 @@
 {
-  "current": "1.89.0",
+  "current": "1.90.0",
   "studio": "ProcesaLab",
   "versions": [
+    {
+      "version": "1.90.0",
+      "date": "2026-10-17",
+      "title": "AR HRD 1616 con botones unificados",
+      "summary": "Esquina de siete cables por lado con botón rojo sobre el visor, página y QR, cotización por WhatsApp. HRD 1525 confirmado funcionando por el usuario; HRD 1616 pendiente de prueba física."
+    },
     {
       "version": "1.89.0",
       "date": "2026-10-17",

@@ -1,5 +1,12 @@
 # Historial de versiones — Herraidea
 
+## 1.90.0 — 2026-10-17
+
+- Integrado modelo AR HRD 1616 de Claude: esquina con siete cables por lado.
+- Mismo botón rojo para HRD 1525 y 1616, flotante sobre el visor y accesible en iPad.
+- Página compartible, QR y acción Cotizar por WhatsApp; escala bloqueada.
+- HRD 1525 confirmado funcionando en dispositivo por el usuario. HRD 1616 pendiente de prueba física.
+
 ## 1.89.0 — 2026-10-17
 
 - Piloto de realidad aumentada HRD1525 en la primera solución de la web.

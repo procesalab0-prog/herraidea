@@ -21,8 +21,27 @@ class HRD1525AR(unittest.TestCase):
   self.assertEqual(data['exportedMeshes'],46)
   self.assertEqual(data['metersPerUnit'],1)
   self.assertEqual(data['upAxis'],'Y')
-  self.assertEqual(data['nativeIPhoneTest'],'pending')
+  self.assertEqual(data['nativeIPhoneTest'],'user_confirmed')
   self.assertAlmostEqual(data['boundsMeters']['size'][0],1.11,places=3)
   self.assertAlmostEqual(data['boundsMeters']['min'][1],0,places=6)
   self.assertEqual(data['arkitCompliance']['failedChecks'],[])
+class HRD1616AR(unittest.TestCase):
+ def test_reference_and_integrity(self):
+  data=json.loads((ROOT/'content/projects/hrd-1616/ar-manifest.json').read_text())
+  for key,sha in [('source','sourceSha256'),('asset','assetSha256')]:
+   self.assertEqual(hashlib.sha256((ROOT/data[key]).read_bytes()).hexdigest(),data[sha])
+  self.assertEqual(data['exportedMeshes'],93)
+  self.assertEqual(data['cablesPerSide'],7)
+  self.assertEqual(data['metersPerUnit'],1)
+  self.assertEqual(data['upAxis'],'Y')
+  self.assertAlmostEqual(data['boundsMeters']['min'][1],0,places=6)
+  self.assertAlmostEqual(data['boundsMeters']['size'][0],1.285,places=3)
+  self.assertEqual(data['arkitCompliance']['errors'],[])
+  self.assertEqual(data['arkitCompliance']['failedChecks'],[])
+  asset=ROOT/data['asset']
+  with zipfile.ZipFile(asset) as z, asset.open('rb') as f:
+   for entry in z.infolist():
+    self.assertEqual(entry.compress_type,zipfile.ZIP_STORED)
+    f.seek(entry.header_offset+26);n,e=struct.unpack('<HH',f.read(4))
+    self.assertEqual((entry.header_offset+30+n+e)%64,0)
 if __name__=='__main__':unittest.main()
