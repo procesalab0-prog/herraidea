@@ -1,3 +1,4 @@
+import {configureProjectAR} from '/ar/launch.js';
 import * as THREE from '/assets/vendor/three/three.module.js';
 import { GLTFLoader } from '/assets/vendor/three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from '/assets/vendor/three/addons/controls/OrbitControls.js';
@@ -483,6 +484,8 @@ const openProject = (key) => {
   document.querySelector('#project-description').textContent = project.description;
   document.querySelector('#project-content').textContent = project.content;
   document.querySelector('#project-detail-label').textContent = project.detail;
+  const arEntry = document.querySelector('#project-ar');
+  if (arEntry) { arEntry.hidden = key !== 'clips'; if (key === 'clips') configureProjectAR(arEntry); }
   const caveat = document.querySelector('#project-caveat');
   caveat.textContent = project.caveat;
   caveat.hidden = !project.caveat;

@@ -19,3 +19,14 @@ El visor permite girar, acercar, desarmar, volver a armar, controlar manualmente
 ## Restricciones
 
 Es una reconstrucción conceptual basada en fotografías. No debe presentarse como plano, instructivo o especificación aprobada hasta confirmar con Herraidea el modelo/SKU, dimensiones, vidrio compatible, empaques, anclajes, cargas y aprietes.
+
+
+## Piloto AR · HRD 1525 (1.89.0)
+
+Página compartible: `/ar/hrd-1525`. El botón en la solución 01 abre Apple Quick Look en navegadores que anuncian soporte `rel=ar`; en escritorio lleva a la página con QR/enlace para teléfono. El archivo USDZ se sirve con `model/vnd.usdz+zip` y el enlace contiene un único hijo `img`, con `allowsContentScaling=0` y página canónica de esta experiencia.
+
+Archivo estático `assets/projects/clip-system/hrd-1525-ar.usdz`, generado mediante `scripts/ar/export-hrd1525.py` con Blender. Se conservan 46 mallas, postura armada, ajuste de ancho de cristal idéntico al visor, eje Y arriba y unidades en metros. Se centra horizontalmente y apoya en el piso. Adaptación del vidrio a opacidad de Preview Surface para Quick Look, sin modificar el GLB de origen. Tamaño del modelo de referencia: 1.11 m ancho, 1.012 m alto y 0.10 m profundidad.
+
+Es el tramo ilustrativo del modelo; no corresponde a los largos de la calculadora ni es plano de fabricación. Exportación de la configuración completa quedará para otra fase. El póster de la página AR es un render del propio USDZ; la portada original de la solución se conserva.
+
+Validación ARKit/UsdUtils sin errores, comprobación de ZIP sin compresión y alineación de 64 bytes, 46 mallas y escala; ver `ar-manifest.json`. Pruebas navegador de botón/fallback y visibilidad exclusiva en HRD1525; la emulación de capacidad sólo valida el enlace, no ejecuta Quick Look ni la cámara. **Prueba física en Safari de iPhone/iPad pendiente.**

@@ -728,3 +728,5 @@ footer .section-inner{flex-wrap:wrap}footer .footer-brand{flex:none}footer .sect
 
 /* Flecha del botón en SVG: el carácter ↗ se convierte en emoji en iOS */
 .button .button-arrow{width:16px;height:16px;flex:none}
+
+.project-ar{margin:20px 0}.project-ar-link{display:block;border-radius:999px;max-width:440px;box-shadow:0 8px 20px #d8172522}.project-ar-link img{display:block;width:100%;height:auto}.project-ar small{display:block;font-size:11px;color:#66717b;line-height:1.6;margin-top:10px}.project-ar[hidden]{display:none!important}

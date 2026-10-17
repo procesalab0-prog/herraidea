@@ -1,5 +1,14 @@
 # Historial de versiones — Herraidea
 
+## 1.89.0 — 2026-10-17
+
+- Piloto de realidad aumentada HRD1525 en la primera solución de la web.
+- Archivo USDZ de referencia, 46 mallas, vidrio transparente, unidad metro y base al piso.
+- Botón Quick Look para Safari, página compartible e instrucciones/QR para teléfono.
+- Modelo original intacto; no corresponde a medidas de la calculadora.
+- Validación ARKit sin errores; prueba de cámara física iPhone pendiente.
+
+
 ## 1.88.0 — 2026-10-14
 
 - Primer armado de herrajes por piezas, materia prima, procesos y accesorios.

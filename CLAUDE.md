@@ -1,12 +1,15 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.88.0**
+Versión actual: **1.89.0**
 
 El dominio oficial `www.herraidea.com` sirve la web desde Vercel y `herraidea.com` redirige de forma segura a esa dirección. Las referencias canónicas, la tarjeta social, los datos estructurados y el catálogo descargable usan el dominio oficial. Los registros de correo preexistentes se conservaron al migrar los servidores DNS desde Jimdo a Vercel.
 
 Sitio de producción: `https://www.herraidea.com/`
 
 ## Estado actual
+
+2026-10-17: piloto AR HRD1525 en primera solución y /ar/hrd-1525. USDZ estático exportado desde el GLB original con el ajuste de cristal del visor; 46 mallas, armado, eje Y arriba y unidad metro. Modelo de referencia de 1.11 × 1.012 × 0.10 m; no replica tramos de la calculadora. Vidrio adaptado a opacidad USD Preview Surface; archivo fuente intacto. Validación ARKit sin errores. Link nativo Quick Look con un único img y escala bloqueada; fallback a página de instrucciones/QR. Prueba en cámara física de iPhone pendiente. No cambios en admin, ecommerce ni cálculos.
+
 
 2026-10-14: primer módulo de fabricación en admin: piezas de sólido/tubo redondo, placa/lámina rectangular y placa con área/perímetro capturados. Materia prima por mm/m, mm²/m², kg conocido o pieza; procesos por pieza, minuto, contorno o superficie real; accesorios y merma sólo de material. Tarifa ausente deja precio pendiente. Recargo sobre costo explícito (no margen de venta), fabricación sin IVA y traspaso según base de la cotización. Datos del armado incluidos en JSON editable. Ejemplo ficticio etiquetado también en PDF, no tarifas Herraidea. Listas reales, reglas/factores CNC y un caso validado pendientes. Shopify/landing sin cambios.
 

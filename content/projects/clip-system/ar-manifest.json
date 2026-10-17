@@ -1,0 +1,41 @@
+{
+  "source": "assets/projects/clip-system/herraje-cristal.glb",
+  "asset": "assets/projects/clip-system/hrd-1525-ar.usdz",
+  "profile": "clips",
+  "code": "HRD 1525",
+  "kind": "assembled_reference",
+  "sourceMeshes": 46,
+  "exportedMeshes": 46,
+  "metersPerUnit": 1.0,
+  "upAxis": "Y",
+  "boundsMeters": {
+    "min": [
+      -0.5550000071525574,
+      -1.1102230411687688e-17,
+      -0.05000000074505806
+    ],
+    "max": [
+      0.5550000071525574,
+      1.0124444607645273,
+      0.05000000074505824
+    ],
+    "size": [
+      1.1100000143051147,
+      1.0124444607645273,
+      0.1000000014901163
+    ]
+  },
+  "glassCorrection": 1.0749403341288783,
+  "glassOpacity": 0.14,
+  "sourceGeometryUnchanged": true,
+  "byteLength": 1891528,
+  "nativeIPhoneTest": "pending",
+  "note": "Modelo conceptual de referencia. No corresponde a las medidas de la calculadora ni a una especificación de instalación.",
+  "sourceSha256": "9e41075272385ef1446c48431061d114449e73ffc1ecac93d15648a5b4164ec8",
+  "assetSha256": "f0e070b0365e60d8fbdb195d53cff365bc068684412e945e8226c67f5b239f71",
+  "arkitCompliance": {
+    "errors": [],
+    "failedChecks": [],
+    "warnings": []
+  }
+}
