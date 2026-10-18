@@ -1,10 +1,14 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.90.0**
+Versión actual: **1.91.0**
 
 El dominio oficial `www.herraidea.com` sirve la web desde Vercel y `herraidea.com` redirige de forma segura a esa dirección. Las referencias canónicas, la tarjeta social, los datos estructurados y el catálogo descargable usan el dominio oficial. Los registros de correo preexistentes se conservaron al migrar los servidores DNS desde Jimdo a Vercel.
 
 Sitio de producción: `https://www.herraidea.com/`
+
+## AR 1.91.0 — 2026-10-18
+
+AR disponible para los ocho sistemas de barandal del visor. Se conservan los archivos probados de 1525 y 1616 y se exportan seis modelos adicionales desde sus GLB originales, con transparencia compatible con Quick Look. Dos botones rojos por barandal: sobre visor y bajo los controles. Páginas/QR y WhatsApp por sistema. Validación ARKit y revisión web escritorio/iPhone/iPad; prueba de cámara física de los seis nuevos pendiente. No se incluyen domo, rack ni futbolito.
 
 ## AR 1.90.0
 

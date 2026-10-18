@@ -1,0 +1,41 @@
+{
+  "code": "HRD 1221 · Soleras y tubo",
+  "profile": "hrd1221",
+  "source": "assets/projects/hrd-1221/hrd-1221.glb",
+  "asset": "assets/projects/hrd-1221/ar/hrd-1221.usdz",
+  "sourceSha256": "7120befb99adca310bbfaf74158e88572db53ed02d3d6f85e3dcc4a49f8190e5",
+  "assetSha256": "43a93101690e514d9c7ad0d22048ea094b4d6ebb7c021a33e24cb9fbebc6c782",
+  "sourceMeshes": 33,
+  "exportedMeshes": 33,
+  "metersPerUnit": 1.0,
+  "upAxis": "Y",
+  "boundsMeters": {
+    "min": [
+      -0.6600000262260437,
+      -8.673617379884035e-18,
+      -0.06224999949336052
+    ],
+    "max": [
+      0.6600000262260437,
+      1.056400017812848,
+      0.06225000228732842
+    ],
+    "size": [
+      1.3200000524520874,
+      1.056400017812848,
+      0.12450000178068893
+    ]
+  },
+  "glassMaterials": [
+    "Vidrio referencia"
+  ],
+  "byteLength": 279079,
+  "nativeIPhoneTest": "pending",
+  "arkitCompliance": {
+    "errors": [],
+    "failedChecks": [],
+    "warnings": []
+  },
+  "kind": "assembled_reference",
+  "note": "Modelo del visor, no configuración calculada ni especificación de instalación."
+}

@@ -1,0 +1,41 @@
+{
+  "code": "HRD 1533 / 1534 / 1535 · Vidrio en canal",
+  "profile": "hrd153x",
+  "source": "assets/projects/hrd-153x/hrd-153x.glb",
+  "asset": "assets/projects/hrd-153x/ar/hrd-1533-1534-1535.usdz",
+  "sourceSha256": "56b395952e6ac20b527dbdef399d9a51171bd3be3206b15544afb47d10d85261",
+  "assetSha256": "4ee3562aaed991445a3a0eec764781dc31320bb2e1a51515dd5862b9c7a75ed6",
+  "sourceMeshes": 17,
+  "exportedMeshes": 17,
+  "metersPerUnit": 1.0,
+  "upAxis": "Y",
+  "boundsMeters": {
+    "min": [
+      -0.6600000262260437,
+      -1.1275702593849246e-17,
+      -0.05249999836087227
+    ],
+    "max": [
+      0.6600000262260437,
+      1.0487999487668276,
+      0.05249999836087227
+    ],
+    "size": [
+      1.3200000524520874,
+      1.0487999487668276,
+      0.10499999672174454
+    ]
+  },
+  "glassMaterials": [
+    "Vidrio referencia"
+  ],
+  "byteLength": 195592,
+  "nativeIPhoneTest": "pending",
+  "arkitCompliance": {
+    "errors": [],
+    "failedChecks": [],
+    "warnings": []
+  },
+  "kind": "assembled_reference",
+  "note": "Modelo del visor, no configuración calculada ni especificación de instalación."
+}

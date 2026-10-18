@@ -1,4 +1,4 @@
-import {configureProjectAR} from '/ar/launch.js?v=1-90-0';
+import {configureProjectAR, hasProjectAR} from '/ar/launch.js?v=1-91-0';
 import * as THREE from '/assets/vendor/three/three.module.js';
 import { GLTFLoader } from '/assets/vendor/three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from '/assets/vendor/three/addons/controls/OrbitControls.js';
@@ -484,11 +484,10 @@ const openProject = (key) => {
   document.querySelector('#project-description').textContent = project.description;
   document.querySelector('#project-content').textContent = project.content;
   document.querySelector('#project-detail-label').textContent = project.detail;
-  const arEntry = document.querySelector('#project-ar');
-  if (arEntry) {
-    arEntry.hidden = !['clips', 'hrd1616'].includes(key);
+  document.querySelectorAll('[data-project-ar]').forEach(arEntry => {
+    arEntry.hidden = !hasProjectAR(key);
     if (!arEntry.hidden) configureProjectAR(arEntry, key);
-  }
+  });
   range.value = 0;
   range.disabled = true;
   range.style.setProperty('--project-range', '0%');

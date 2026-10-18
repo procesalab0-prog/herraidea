@@ -1,8 +1,6 @@
 // Keep a native rel=ar anchor with exactly one image child for Safari Quick Look.
-const systems = {
-  clips: {slug:'hrd-1525', asset:'/assets/projects/clip-system/hrd-1525-ar.usdz', title:'HRD 1525 · Barandal con clips', subtitle:'Tramo de referencia · escala real', message:'Hola, vi el sistema HRD 1525 con clips en realidad aumentada y quiero cotizar un barandal.'},
-  hrd1616: {slug:'hrd-1616', asset:'/assets/projects/hrd-1616/ar/hrd-1616-esquina.usdz', title:'HRD 1616 · Poste cuadrado + cable', subtitle:'Esquina con siete cables por lado · escala real', message:'Hola, vi el sistema HRD 1616 de poste cuadrado con cable en realidad aumentada y quiero cotizar un barandal.'}
-};
+import {systems} from '/ar/systems.js?v=1-91-0';
+export const hasProjectAR = key => Object.prototype.hasOwnProperty.call(systems, key);
 export function configureProjectAR(container, key = container?.dataset.arSystem || 'clips') {
   const system = systems[key];
   if (!container || !system) return;

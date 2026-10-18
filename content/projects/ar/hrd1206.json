@@ -1,0 +1,41 @@
+{
+  "code": "HRD 1301 / 1302 · Postes HRD 1206",
+  "profile": "hrd1206",
+  "source": "assets/projects/postes-cortos/postes-cortos.glb",
+  "asset": "assets/projects/postes-cortos/ar/hrd-1301-1206.usdz",
+  "sourceSha256": "9b4b4b5b71094b4d514fcb281a174ad5c3af1420c8d0821a9a068971945ae79a",
+  "assetSha256": "bacbe962faba03dc1151a21644b8b5318508ab0d2211e0866636468984939c52",
+  "sourceMeshes": 72,
+  "exportedMeshes": 72,
+  "metersPerUnit": 1.0,
+  "upAxis": "Y",
+  "boundsMeters": {
+    "min": [
+      -1.3418999700807035,
+      -1.5048726154098802e-16,
+      -0.677899956703186
+    ],
+    "max": [
+      1.3419000282995865,
+      1.0999999642372131,
+      0.6778999902307987
+    ],
+    "size": [
+      2.68379999838029,
+      1.0999999642372134,
+      1.3557999469339848
+    ]
+  },
+  "glassMaterials": [
+    "Vidrio referencia"
+  ],
+  "byteLength": 296101,
+  "nativeIPhoneTest": "pending",
+  "arkitCompliance": {
+    "errors": [],
+    "failedChecks": [],
+    "warnings": []
+  },
+  "kind": "assembled_reference",
+  "note": "Modelo del visor, no configuración calculada ni especificación de instalación."
+}

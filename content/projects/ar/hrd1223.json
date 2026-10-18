@@ -1,0 +1,41 @@
+{
+  "code": "HRD 1223 · Tubo y vidrio",
+  "profile": "hrd1223",
+  "source": "assets/projects/hrd-1223/hrd-1223-tubo.glb",
+  "asset": "assets/projects/hrd-1223/ar/hrd-1223.usdz",
+  "sourceSha256": "9a42d70114d6f477aa6238ff798e8adbec6392b9aa485e5ea1951f77e473795d",
+  "assetSha256": "b26539cb6a6146f853da0c6cfb558bbb3f516859daa5be374041beb2394147af",
+  "sourceMeshes": 45,
+  "exportedMeshes": 45,
+  "metersPerUnit": 1.0,
+  "upAxis": "Y",
+  "boundsMeters": {
+    "min": [
+      -0.6600000262260437,
+      -1.734723475976807e-18,
+      -0.09650000184774399
+    ],
+    "max": [
+      0.6600000262260437,
+      1.056400017812848,
+      0.09649999439716356
+    ],
+    "size": [
+      1.3200000524520874,
+      1.056400017812848,
+      0.19299999624490755
+    ]
+  },
+  "glassMaterials": [
+    "Vidrio referencia"
+  ],
+  "byteLength": 337801,
+  "nativeIPhoneTest": "pending",
+  "arkitCompliance": {
+    "errors": [],
+    "failedChecks": [],
+    "warnings": []
+  },
+  "kind": "assembled_reference",
+  "note": "Modelo del visor, no configuración calculada ni especificación de instalación."
+}

@@ -320,20 +320,7 @@
       ]
     },
     {
-      "source": "/assets/projects/clip-system/hrd-1525-ar.usdz",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "model/vnd.usdz+zip"
-        },
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        }
-      ]
-    },
-    {
-      "source": "/assets/projects/hrd-1616/ar/(.*).usdz",
+      "source": "/assets/projects/(.*).usdz",
       "headers": [
         {
           "key": "Content-Type",

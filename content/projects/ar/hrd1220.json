@@ -1,0 +1,39 @@
+{
+  "code": "HRD 1220 · Pinza baja",
+  "profile": "hrd1220",
+  "source": "assets/projects/hrd-1220/hrd-1220-piloto.glb",
+  "asset": "assets/projects/hrd-1220/ar/hrd-1220.usdz",
+  "sourceSha256": "21f4c589731c76fd31b4efaf6b85a48acdba1dbe8bd0385f231dae61950dbc68",
+  "assetSha256": "4a38c468514c8bfaa06e222924028b0879262ec53273e3884bcf497a2673bd34",
+  "sourceMeshes": 9,
+  "exportedMeshes": 9,
+  "metersPerUnit": 1.0,
+  "upAxis": "Y",
+  "boundsMeters": {
+    "min": [
+      -0.050800009146332314,
+      -1.1275702593849246e-17,
+      -0.05079999938607216
+    ],
+    "max": [
+      0.050800008699297905,
+      0.186527781188488,
+      0.05079999938607216
+    ],
+    "size": [
+      0.10160001784563022,
+      0.186527781188488,
+      0.10159999877214432
+    ]
+  },
+  "glassMaterials": [],
+  "byteLength": 243359,
+  "nativeIPhoneTest": "pending",
+  "arkitCompliance": {
+    "errors": [],
+    "failedChecks": [],
+    "warnings": []
+  },
+  "kind": "assembled_reference",
+  "note": "Modelo del visor, no configuración calculada ni especificación de instalación."
+}

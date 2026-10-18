@@ -1,5 +1,12 @@
 # Historial de versiones — Herraidea
 
+## 1.91.0 — 2026-10-18
+
+- AR para los seis barandales restantes: 1518, 1223, 1221, 1220, 1533/1534/1535 y conectores 1301/1302 con postes 1206.
+- Botón rojo conservado sobre el modelo y agregado también debajo de los controles en los ocho sistemas.
+- Páginas compartibles, QR y acción de cotización propios de cada sistema; unidades reales, modelos armados y escala bloqueada.
+- Modelos GLB y USDZ ya existentes de 1525/1616 conservados. Prueba física de los nuevos modelos pendiente.
+
 ## 1.90.0 — 2026-10-17
 
 - Integrado modelo AR HRD 1616 de Claude: esquina con siete cables por lado.

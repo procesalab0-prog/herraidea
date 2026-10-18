@@ -44,4 +44,30 @@ class HRD1616AR(unittest.TestCase):
     self.assertEqual(entry.compress_type,zipfile.ZIP_STORED)
     f.seek(entry.header_offset+26);n,e=struct.unpack('<HH',f.read(4))
     self.assertEqual((entry.header_offset+30+n+e)%64,0)
+class RemainingRailingAR(unittest.TestCase):
+ def test_all_sources_packages_and_units(self):
+  registry=json.loads((ROOT/'ar/systems.json').read_text())
+  self.assertEqual(len(registry),8)
+  module=(ROOT/'ar/systems.js').read_text().removeprefix('export const systems = ').strip().removesuffix(';')
+  self.assertEqual(json.loads(module),registry)
+  for key in registry.keys()-{'clips','hrd1616'}:
+   with self.subTest(system=key):
+    data=json.loads((ROOT/f'content/projects/ar/{key}.json').read_text())
+    asset=ROOT/data['asset'];source=ROOT/data['source']
+    self.assertEqual(hashlib.sha256(source.read_bytes()).hexdigest(),data['sourceSha256'])
+    self.assertEqual(hashlib.sha256(asset.read_bytes()).hexdigest(),data['assetSha256'])
+    self.assertEqual(data['sourceMeshes'],data['exportedMeshes'])
+    self.assertGreater(data['exportedMeshes'],0)
+    self.assertEqual(data['metersPerUnit'],1)
+    self.assertEqual(data['upAxis'],'Y')
+    self.assertAlmostEqual(data['boundsMeters']['min'][1],0,places=6)
+    self.assertEqual(data['arkitCompliance']['errors'],[])
+    self.assertEqual(data['arkitCompliance']['failedChecks'],[])
+    self.assertTrue((ROOT/'ar'/registry[key]['slug']/'index.html').exists())
+    with zipfile.ZipFile(asset) as z,asset.open('rb') as f:
+     self.assertTrue(z.namelist()[0].endswith(('.usdc','.usda')))
+     for e in z.infolist():
+      self.assertEqual(e.compress_type,zipfile.ZIP_STORED)
+      f.seek(e.header_offset+26);n,x=struct.unpack('<HH',f.read(4))
+      self.assertEqual((e.header_offset+30+n+x)%64,0)
 if __name__=='__main__':unittest.main()
