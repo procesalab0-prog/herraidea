@@ -1,10 +1,14 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.91.0**
+Versión actual: **1.92.0**
 
 El dominio oficial `www.herraidea.com` sirve la web desde Vercel y `herraidea.com` redirige de forma segura a esa dirección. Las referencias canónicas, la tarjeta social, los datos estructurados y el catálogo descargable usan el dominio oficial. Los registros de correo preexistentes se conservaron al migrar los servidores DNS desde Jimdo a Vercel.
 
 Sitio de producción: `https://www.herraidea.com/`
+
+## AR 1.92.0 — 2026-10-18
+
+Corregido AR del HRD 1220 usando el GLB de sistema completo ya existente: dos cristales, cuatro pinzas bajas y conector circular superior de referencia. USDZ y vista previa con URL nueva; la fuente GLB y el piloto individual del visor de despiece se conservan. Ambos botones AR llevan al conjunto completo. No se asume que el conector forme parte del kit comercial.
 
 ## AR 1.91.0 — 2026-10-18
 

@@ -1,5 +1,5 @@
 // Keep a native rel=ar anchor with exactly one image child for Safari Quick Look.
-import {systems} from '/ar/systems.js?v=1-91-0';
+import {systems} from '/ar/systems.js?v=1-92-0';
 export const hasProjectAR = key => Object.prototype.hasOwnProperty.call(systems, key);
 export function configureProjectAR(container, key = container?.dataset.arSystem || 'clips') {
   const system = systems[key];

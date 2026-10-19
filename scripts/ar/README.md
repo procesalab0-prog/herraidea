@@ -1,4 +1,4 @@
-# Barandales en Safari AR — 1.91.0
+# Barandales en Safari AR — 1.92.0
 
 Los ocho sistemas del visor tienen una referencia USDZ armada, página para compartir, QR y acción Cotizar por WhatsApp. En cada visor se conserva el botón rojo flotante y se agrega otro debajo de los controles. Ambos apuntan al mismo sistema; Quick Look recibe un enlace `rel=ar` con una única imagen hija y escala bloqueada.
 
@@ -15,7 +15,7 @@ Los ocho sistemas del visor tienen una referencia USDZ armada, página para comp
 | HRD 1533 / 1534 / 1535 | /ar/hrd-1533-1534-1535 |
 | Conectores HRD 1301 / 1302, postes HRD 1206 | /ar/hrd-1301-1206 |
 
-Se conserva el modelo actual de cada visor: HRD 1220 es la pinza individual, no un sistema de cristal agregado. No se altera ninguna fuente GLB, no se exporta el despiece animado y no se toman medidas de la calculadora. El cristal de referencia se conserva donde existe en el modelo y usa opacidad USD Preview Surface.
+HRD 1220 usa el conjunto completo existente (`hrd-1220.glb`): cuatro pinzas, dos cristales y conector circular superior. El visor de despiece conserva la pinza individual. El conector es contexto de instalación, sin confirmar que se incluya en el kit comercial. No se altera ninguna fuente GLB, no se exporta el despiece animado y no se toman medidas de la calculadora. El cristal de referencia se conserva donde existe en el modelo y usa opacidad USD Preview Surface.
 
 Regeneración de los seis nuevos modelos (Blender 5.2):
 

@@ -1,4 +1,4 @@
-import {configureProjectAR, hasProjectAR} from '/ar/launch.js?v=1-91-0';
+import {configureProjectAR, hasProjectAR} from '/ar/launch.js?v=1-92-0';
 import * as THREE from '/assets/vendor/three/three.module.js';
 import { GLTFLoader } from '/assets/vendor/three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from '/assets/vendor/three/addons/controls/OrbitControls.js';

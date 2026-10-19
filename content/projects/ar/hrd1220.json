@@ -1,33 +1,35 @@
 {
-  "code": "HRD 1220 · Pinza baja",
+  "code": "HRD 1220 · Pinzas bajas con cristal",
   "profile": "hrd1220",
-  "source": "assets/projects/hrd-1220/hrd-1220-piloto.glb",
-  "asset": "assets/projects/hrd-1220/ar/hrd-1220.usdz",
-  "sourceSha256": "21f4c589731c76fd31b4efaf6b85a48acdba1dbe8bd0385f231dae61950dbc68",
-  "assetSha256": "4a38c468514c8bfaa06e222924028b0879262ec53273e3884bcf497a2673bd34",
-  "sourceMeshes": 9,
-  "exportedMeshes": 9,
+  "source": "assets/projects/hrd-1220/hrd-1220.glb",
+  "asset": "assets/projects/hrd-1220/ar/hrd-1220-sistema.usdz",
+  "sourceSha256": "f5c0f64586654f50bbe8450782d87b9040d8af9139064e2d440343e0815d5ae6",
+  "assetSha256": "a4eac6392a23c03765a27608b432e7a2bf3ffbb94bb7f659b954c40fc623819f",
+  "sourceMeshes": 43,
+  "exportedMeshes": 43,
   "metersPerUnit": 1.0,
   "upAxis": "Y",
   "boundsMeters": {
     "min": [
-      -0.050800009146332314,
+      -1.3049999475479126,
       -1.1275702593849246e-17,
       -0.05079999938607216
     ],
     "max": [
-      0.050800008699297905,
-      0.186527781188488,
+      1.3049999475479126,
+      1.0999999642372131,
       0.05079999938607216
     ],
     "size": [
-      0.10160001784563022,
-      0.186527781188488,
+      2.609999895095825,
+      1.0999999642372131,
       0.10159999877214432
     ]
   },
-  "glassMaterials": [],
-  "byteLength": 243359,
+  "glassMaterials": [
+    "Vidrio referencia"
+  ],
+  "byteLength": 246008,
   "nativeIPhoneTest": "pending",
   "arkitCompliance": {
     "errors": [],
@@ -35,5 +37,16 @@
     "warnings": []
   },
   "kind": "assembled_reference",
-  "note": "Modelo del visor, no configuración calculada ni especificación de instalación."
+  "note": "Modelo del visor, no configuración calculada ni especificación de instalación.",
+  "glassMeshNames": [
+    "Cristal_left",
+    "Cristal_right"
+  ],
+  "upperConnectorMeshNames": [
+    "Union_superior_Disco_posterior",
+    "Union_superior_Junta_posterior",
+    "Union_superior_Junta_frontal",
+    "Union_superior_Disco_frontal",
+    "Union_superior_tornillo"
+  ]
 }

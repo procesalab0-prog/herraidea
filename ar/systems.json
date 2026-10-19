@@ -51,13 +51,13 @@
   },
   "hrd1220": {
     "slug": "hrd-1220",
-    "source": "hrd-1220/hrd-1220-piloto.glb",
-    "title": "HRD 1220 · Pinza baja",
-    "asset": "/assets/projects/hrd-1220/ar/hrd-1220.usdz",
-    "preview": "/assets/projects/hrd-1220/ar/preview.jpg",
+    "source": "hrd-1220/hrd-1220.glb",
+    "title": "HRD 1220 · Pinzas bajas con cristal",
+    "asset": "/assets/projects/hrd-1220/ar/hrd-1220-sistema.usdz",
+    "preview": "/assets/projects/hrd-1220/ar/preview-sistema.jpg",
     "qr": "/assets/projects/hrd-1220/ar/qr.png",
-    "subtitle": "Modelo de referencia armado · escala real",
-    "message": "Hola, vi el sistema HRD 1220 · Pinza baja en realidad aumentada y quiero cotizar un barandal."
+    "subtitle": "Dos cristales y unión circular superior · escala real",
+    "message": "Hola, vi el sistema HRD 1220 con pinzas bajas, cristales y unión superior en realidad aumentada y quiero cotizar un barandal."
   },
   "hrd153x": {
     "slug": "hrd-1533-1534-1535",

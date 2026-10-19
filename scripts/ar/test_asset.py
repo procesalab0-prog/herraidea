@@ -58,6 +58,11 @@ class RemainingRailingAR(unittest.TestCase):
     self.assertEqual(hashlib.sha256(asset.read_bytes()).hexdigest(),data['assetSha256'])
     self.assertEqual(data['sourceMeshes'],data['exportedMeshes'])
     self.assertGreater(data['exportedMeshes'],0)
+    if key=='hrd1220':
+     self.assertEqual(data['source'],'assets/projects/hrd-1220/hrd-1220.glb')
+     self.assertEqual(data['exportedMeshes'],43)
+     self.assertEqual(set(data['glassMeshNames']),{'Cristal_left','Cristal_right'})
+     self.assertEqual(len(data['upperConnectorMeshNames']),5)
     self.assertEqual(data['metersPerUnit'],1)
     self.assertEqual(data['upAxis'],'Y')
     self.assertAlmostEqual(data['boundsMeters']['min'][1],0,places=6)

@@ -1,13 +1,15 @@
 """Blender --background --python scripts/ar/export-systems.py
 Export the remaining six railing references; keep the already tested 1525/1616 assets untouched.
 """
-import bpy,json,hashlib
+import bpy,json,hashlib,sys
 from pathlib import Path
 from mathutils import Vector,Matrix
 from pxr import Usd,UsdGeom,UsdUtils
 ROOT=Path(__file__).resolve().parents[2]
 systems=json.loads((ROOT/'ar/systems.json').read_text())
+only=set(sys.argv[sys.argv.index('--')+1:]) if '--' in sys.argv else set()
 for key,config in systems.items():
+ if only and key not in only:continue
  if key in ('clips','hrd1616'):continue
  source=ROOT/'assets/projects'/config['source'];out=ROOT/config['asset'].lstrip('/');out.parent.mkdir(parents=True,exist_ok=True)
  bpy.ops.wm.read_factory_settings(use_empty=True)
@@ -37,6 +39,10 @@ for key,config in systems.items():
  stage=Usd.Stage.Open(str(out));cache=UsdGeom.BBoxCache(Usd.TimeCode.Default(),[UsdGeom.Tokens.default_,UsdGeom.Tokens.render]);box=cache.ComputeWorldBound(stage.GetPseudoRoot()).ComputeAlignedRange();exported=[p for p in stage.Traverse() if p.IsA(UsdGeom.Mesh)]
  checker=UsdUtils.ComplianceChecker(arkit=True);checker.CheckCompliance(str(out))
  data=dict(code=config['title'],profile=key,source=str(source.relative_to(ROOT)),asset=str(out.relative_to(ROOT)),sourceSha256=hashlib.sha256(source.read_bytes()).hexdigest(),assetSha256=hashlib.sha256(out.read_bytes()).hexdigest(),sourceMeshes=len(meshes),exportedMeshes=len(exported),metersPerUnit=UsdGeom.GetStageMetersPerUnit(stage),upAxis=str(UsdGeom.GetStageUpAxis(stage)),boundsMeters=dict(min=list(box.GetMin()),max=list(box.GetMax()),size=list(box.GetSize())),glassMaterials=glass,byteLength=out.stat().st_size,nativeIPhoneTest='pending',arkitCompliance=dict(errors=checker.GetErrors(),failedChecks=checker.GetFailedChecks(),warnings=checker.GetWarnings()),kind='assembled_reference',note='Modelo del visor, no configuración calculada ni especificación de instalación.')
+ if key=='hrd1220':
+  data['glassMeshNames']=[o.name for o in meshes if o.name.startswith('Cristal_')]
+  data['upperConnectorMeshNames']=[o.name for o in meshes if o.name.startswith('Union_superior_')]
+  assert len(data['glassMeshNames'])==2 and len(data['upperConnectorMeshNames'])==5
  report=ROOT/'content/projects/ar'/f'{key}.json';report.parent.mkdir(parents=True,exist_ok=True);report.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
  assert len(meshes)==len(exported);assert not checker.GetErrors() and not checker.GetFailedChecks(),data
  assert abs(box.GetMin()[1])<1e-5;assert data['metersPerUnit']==1 and data['upAxis']=='Y'

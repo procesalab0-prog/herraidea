@@ -1,5 +1,11 @@
 # Historial de versiones — Herraidea
 
+## 1.92.0 — 2026-10-18
+
+- HRD 1220 en AR ahora incluye dos cristales, cuatro pinzas bajas y el clip circular superior que une los cristales.
+- Se usa el GLB del sistema completo existente; visor de despiece y demás sistemas conservados.
+- Nuevo USDZ y vista previa para evitar reutilizar en caché la pinza individual.
+
 ## 1.91.0 — 2026-10-18
 
 - AR para los seis barandales restantes: 1518, 1223, 1221, 1220, 1533/1534/1535 y conectores 1301/1302 con postes 1206.
