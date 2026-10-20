@@ -58,17 +58,16 @@ def zinc():
 
 # ---------------------------------------------------------------- tornillos detallados (mismas medidas del GLB)
 def malla_tornillo(nombre, escala, mat):
-    """Tornillo M8 de cabeza hexagonal con brida y tuerca: brida Ø17 × 1.5, hexágono 13 mm × 4,
-    vástago Ø8 de 18 mm con rosca y tuerca hexagonal de 6.5 mm, como la malla del GLB."""
+    """Tornillo M8 de cabeza hexagonal con brida: brida Ø17 × 1.5, hexágono 13 mm × 4 y vástago Ø8 de 18 mm
+    con rosca, como la malla del GLB. La tuerca se omite: queda dentro del tubo y, si viajara con el
+    tornillo, se vería flotando sobre el vástago mientras entra."""
     brida = P.revolucion('brida', [(0, 0), (.0085, 0), (.0085, .0011), (.0081, .0015), (0, .0015)], pasos=96)
     cabeza = P.tuerca('cabeza', entre_caras=.013, alto=.004, rosca_r=.0001)
     cabeza.location.z = .0015
     tapa = P.revolucion('tapa', [(0, .0015), (.0045, .0015), (.0045, .0055), (0, .0055)], pasos=48)   # rellena el centro
     vastago = P.rosca('vastago', .004, .00125, .018)
     vastago.location.z = -.018
-    tuerca = P.tuerca('tuerca', entre_caras=.013, alto=.0065, rosca_r=.004)
-    tuerca.location.z = -.01525
-    o = P.unir(nombre, [brida, cabeza, tapa, vastago, tuerca])
+    o = P.unir(nombre, [brida, cabeza, tapa, vastago])
     o.data.transform(Matrix.Scale(escala, 4))
     P.asignar(o, mat)
     malla = o.data; malla.name = nombre
@@ -88,7 +87,67 @@ def cargar(M):
             o.data = m12 if o.data.name.startswith('tornillo_M12') else m8
         else:
             o.data.materials.clear(); o.data.materials.append(polvo)
-    return {o.name: o for o in rack}
+    piezas = {o.name: o for o in rack}
+    sc.frame_set(0); bpy.context.view_layer.update()
+    acomodar_tornillos(piezas)
+    taladrar(piezas)
+    return piezas
+
+
+def mover_animado(o, d):
+    """Desplaza una pieza animada sin alterar su despiece: suma d a su posición y a todas sus claves."""
+    from bpy_extras import anim_utils
+    ad = o.animation_data
+    if ad and ad.action:
+        cb = anim_utils.action_get_channelbag_for_slot(ad.action, ad.action_slot)
+        for fc in cb.fcurves:
+            if fc.data_path == 'location':
+                for k in fc.keyframe_points:
+                    for p in (k.co, k.handle_left, k.handle_right):
+                        p.y += d[fc.array_index]
+                fc.update()
+    o.location += d
+
+
+def acomodar_tornillos(piezas):
+    """En el GLB, los tornillos superiores de cada funda quedan junto a los barrenos y no sobre ellos
+    (|y| = 0.400 y 0.447 contra barrenos en 0.420 y 0.475). Se pasan al barreno más cercano."""
+    for o in piezas.values():
+        if not o.name.startswith('tornillo'):
+            continue
+        p = o.matrix_world.translation
+        if p.z > .65 and eje(o).z > .9 and .38 < abs(p.y) < .46:
+            destino = .420 if abs(p.y) < .42 else .475
+            mover_animado(o, Vector((0, math.copysign(destino, p.y) - p.y, 0)))
+    bpy.context.view_layer.update()
+
+
+def taladrar(piezas):
+    """Barreno pasante donde cada tornillo atraviesa una pieza que no lo tiene en el modelo
+    (placas de la cabeza, alas de los postes, coples). Donde ya hay barreno, no cambia nada visible."""
+    brocas = {}
+    tornillos = [o for o in piezas.values() if o.name.startswith('tornillo')]
+    otras = [o for o in piezas.values() if not o.name.startswith('tornillo')]
+    for t in tornillos:
+        grande = t.data.name.startswith('tornillo_M12')
+        r, largo = (.0066, .03) if grande else (.0046, .022)
+        d = eje(t); p = t.matrix_world.translation
+        a, b = p + d * .001, p - d * largo
+        for o in otras:
+            caja = [o.matrix_world @ Vector(c) for c in o.bound_box]
+            mn = Vector([min(v[i] for v in caja) for i in range(3)]); mx = Vector([max(v[i] for v in caja) for i in range(3)])
+            if all(min(a[i], b[i]) - r < mx[i] and max(a[i], b[i]) + r > mn[i] for i in range(3)):
+                brocas.setdefault(o.name, []).append((a, b, r))
+    for nombre, lista in brocas.items():
+        cilindros = []
+        for a, b, r in lista:
+            c = P.cilindro('broca', r, (b - a).length, 32)
+            c.data.transform(Matrix.Translation((0, 0, -(b - a).length / 2)))
+            c.location = (a + b) / 2 + (a - b) / 2
+            c.rotation_mode = 'QUATERNION'; c.rotation_quaternion = Vector((0, 0, 1)).rotation_difference((a - b).normalized())
+            cilindros.append(c)
+        broca = P.unir('broca_' + nombre, cilindros) if len(cilindros) > 1 else cilindros[0]
+        P.restar(piezas[nombre], broca)
 
 
 def girar_estudio(luces):
@@ -237,8 +296,8 @@ def toma_3(R):
     for nombre, c0 in (('tornillo_053', 36), ('tornillo_054', 41)):
         atornillar(R[nombre], c0, c0 + 14, .035, 3)
     cam, mira = H.camara('Camara', 70, 3.5)
-    H.mover(mira, (.735, .43, .645), (.735, .41, .64), 1, TOMAS[3])
-    H.mover(cam, (1.0, .2, .78), (.96, .23, .75), 1, TOMAS[3])
+    H.mover(mira, (.735, .46, .645), (.735, .445, .64), 1, TOMAS[3])
+    H.mover(cam, (1.0, .23, .78), (.96, .26, .75), 1, TOMAS[3])
 
 
 def toma_4(R):
