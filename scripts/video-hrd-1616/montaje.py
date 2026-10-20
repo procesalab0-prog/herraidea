@@ -1,6 +1,6 @@
-"""Monta el video HRD 1616: escala los cuadros a 1080 × 1920, añade el cierre con el logotipo y une el audio.
+"""Monta los videos promocionales: escala los cuadros a 1080 × 1920, añade el cierre con el logotipo y une el audio.
 
-Uso:  python3 scripts/video-hrd-1616/montaje.py CUADROS/ AUDIO.wav SALIDA.mp4
+Uso:  python3 scripts/video-hrd-1616/montaje.py CUADROS/ AUDIO.wav SALIDA.mp4 [hrd1616|riverack]
 """
 import glob
 import io
@@ -16,6 +16,13 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from audio import FPS, TOMAS  # noqa: E402
+
+PROYECTOS = {
+    # tomas, toma del cierre, cuadro local en que entra el logotipo, título, subtítulo, leyenda previa (texto, desde, hasta)
+    'hrd1616': dict(tomas=TOMAS, final=6, logo=14, titulo='HRD 1616', sub='POSTE CUADRADO + CABLE DE ACERO', leyenda=None),
+    'riverack': dict(tomas={1: 60, 2: 62, 3: 58, 4: 56, 5: 78, 6: 96}, final=6, logo=58, titulo='RIVERACK',
+                     sub='RACK PARA CAJA DE PICKUP', leyenda=('SE AJUSTA A CUALQUIER CAMIONETA', 8, 54)),
+}
 
 RAIZ = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 ANCHO, ALTO = 1080, 1920
@@ -46,7 +53,8 @@ def texto_espaciado(dibujo, centro_x, y, texto, letra, espacio, color):
 class Cierre:
     """Logotipo de Herraidea con el punto rojo de la i que cae y rebota, como en la pantalla de entrada."""
 
-    def __init__(self):
+    def __init__(self, titulo, sub, logo=14, leyenda=None):
+        self.textos, self.c0, self.leyenda = (titulo, sub), logo - 14, leyenda
         logo = Image.open(os.path.join(RAIZ, 'assets', 'brand', 'logo-intro.png')).convert('RGBA')
         ancho = 640
         self.logo = logo.resize((ancho, round(logo.height * ancho / logo.width)), Image.LANCZOS)
@@ -55,14 +63,24 @@ class Cierre:
         self.titulo = fuente('archivo-latin-800-normal.woff2', 66)
         self.sub = fuente('archivo-narrow-latin-600-normal.woff2', 29)
         self.web = fuente('archivo-narrow-latin-600-normal.woff2', 27)
+        self.ley = fuente('archivo-latin-800-normal.woff2', 38)
 
     def aplicar(self, cuadro, c):
-        """c = cuadro local de la toma 6 (1 en adelante)."""
+        """c = cuadro local de la toma final (1 en adelante)."""
         capa = Image.new('RGBA', (ANCHO, ALTO), (0, 0, 0, 0))
         d = ImageDraw.Draw(capa)
+        if self.leyenda:
+            texto, c1, c2 = self.leyenda
+            v = min(suave((c - c1) / 10), 1 - suave((c - c2 + 8) / 8))
+            if v > 0:
+                texto_espaciado(d, ANCHO / 2, 1640 + round(12 * (1 - v)), texto, self.ley, 5, (255, 255, 255, int(240 * v)))
+        c = c - self.c0
         a = suave((c - 14) / 12)
         if a <= 0:
-            return cuadro
+            return Image.alpha_composite(cuadro.convert('RGBA'), capa).convert('RGB')
+        sombra = np.zeros((ALTO, ANCHO, 4), np.uint8)                # oscurece suavemente la zona del logotipo
+        sombra[..., 3] = (np.clip(1 - np.arange(ALTO) / 760, 0, 1) ** 1.6 * 150 * a).astype(np.uint8)[:, None]
+        capa.alpha_composite(Image.fromarray(sombra, 'RGBA'))
         w, h = self.logo.size
         x0, y0 = (ANCHO - w) // 2, 250 + round(22 * (1 - a))
         logo = self.logo.copy(); logo.putalpha(logo.getchannel('A').point(lambda v: int(v * a)))
@@ -83,23 +101,24 @@ class Cierre:
             d.rectangle((x0 + px, y, x0 + px + pw, y + ph), fill=ROJO + (255,))
         b = suave((c - 28) / 12)
         if b > 0:
-            texto_espaciado(d, ANCHO / 2, 392 + round(14 * (1 - b)), 'HRD 1616', self.titulo, 4, (255, 255, 255, int(255 * b)))
-            texto_espaciado(d, ANCHO / 2, 486 + round(14 * (1 - b)), 'POSTE CUADRADO + CABLE DE ACERO', self.sub, 7, (255, 255, 255, int(190 * b)))
+            texto_espaciado(d, ANCHO / 2, 392 + round(14 * (1 - b)), self.textos[0], self.titulo, 4, (255, 255, 255, int(255 * b)))
+            texto_espaciado(d, ANCHO / 2, 486 + round(14 * (1 - b)), self.textos[1], self.sub, 7, (255, 255, 255, int(190 * b)))
         e = suave((c - 34) / 12)
         if e > 0:
             texto_espaciado(d, ANCHO / 2, 1790, 'HERRAIDEA.COM', self.web, 9, (255, 255, 255, int(200 * e)))
         return Image.alpha_composite(cuadro.convert('RGBA'), capa).convert('RGB')
 
 
-def principal(carpeta, audio, salida):
-    cierre = Cierre()
+def principal(carpeta, audio, salida, proyecto='hrd1616'):
+    cfg = PROYECTOS[proyecto]
+    cierre = Cierre(cfg['titulo'], cfg['sub'], cfg['logo'], cfg['leyenda'])
     ff = imageio_ffmpeg.get_ffmpeg_exe()
     proc = subprocess.Popen([ff, '-y', '-loglevel', 'error', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{ANCHO}x{ALTO}', '-r', str(FPS), '-i', '-',
                              '-i', audio, '-c:v', 'libx264', '-preset', 'slow', '-crf', '16', '-pix_fmt', 'yuv420p', '-profile:v', 'high',
                              '-c:a', 'aac', '-b:a', '192k', '-shortest', '-movflags', '+faststart', salida], stdin=subprocess.PIPE)
     rng = np.random.default_rng(7)
     total = 0
-    for toma, n in TOMAS.items():
+    for toma, n in cfg['tomas'].items():
         cuadros = sorted(glob.glob(os.path.join(carpeta, f'toma{toma}_*.png')))
         if len(cuadros) < n:
             print(f'toma {toma}: {len(cuadros)}/{n} cuadros; se rellena con el último disponible' if cuadros else f'toma {toma}: sin cuadros, se omite')
@@ -109,7 +128,7 @@ def principal(carpeta, audio, salida):
             im = Image.open(cuadros[min(c, len(cuadros)) - 1]).convert('RGB')
             if im.size != (ANCHO, ALTO):
                 im = im.resize((ANCHO, ALTO), Image.LANCZOS).filter(ImageFilter.UnsharpMask(1.2, 40, 2))
-            if toma == 6:
+            if toma == cfg['final']:
                 im = cierre.aplicar(im, c)
             px = np.asarray(im, dtype=np.float32)
             px += rng.normal(0, 1.6, px.shape[:2])[..., None]          # grano fino: evita bandas en el degradado rojo
@@ -120,4 +139,4 @@ def principal(carpeta, audio, salida):
 
 
 if __name__ == '__main__':
-    principal(*sys.argv[1:4])
+    principal(*sys.argv[1:5])
