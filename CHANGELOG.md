@@ -1,5 +1,10 @@
 # Historial de versiones — Herraidea
 
+## 1.90.0 — 2026-10-20
+
+- Riverack: la sección Proyectos lo presenta como «Rack de caja · Ajustable», con ajuste a lo ancho y en altura, probado en muchas camionetas según Herraidea; se retira la mención única a la RAM 700.
+
+
 ## 1.89.0 — 2026-10-17
 
 - Realidad aumentada del HRD 1616 en iPhone y iPad: «Ver en tu espacio» abre la esquina con siete cables por lado en AR Quick Look de Safari, a escala real (1.28 × 1.28 m, 1.06 m de alto).

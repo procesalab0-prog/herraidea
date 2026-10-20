@@ -30,8 +30,8 @@ const projects = {
   },
   riverack: {
     src: '/assets/projects/riverack/riverack.glb?v=1-59-0', profile: 'riverack',
-    title: 'Riverack', number: 'Rack de caja · RAM 700',
-    description: 'Diseñado para la aventura. Probado en RAM 700.',
+    title: 'Riverack', number: 'Rack de caja · Ajustable',
+    description: 'Diseñado para la aventura. Se ajusta a lo ancho y en altura; probado en muchas camionetas.',
     content: '100 piezas · 56 tornillos', detail: 'Ver unión',
     aria: 'Modelo interactivo del rack Riverack para caja de pickup',
     caveat: 'Modelo ilustrativo. Consulta las medidas y la adaptación a tu vehículo con Herraidea.'

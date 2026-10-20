@@ -1,6 +1,6 @@
 # Riverack — rack de caja para pickup
 
-> **Estado: aprobado e integrado en Proyectos (1.59.0).** Autorizado por Herraidea el 29 de septiembre de 2026. Visor directo sin portada, junto al Futbolito; proyecto probado en una RAM 700. Se conserva el modelo negro aprobado sin modificar su geometría.
+> **Estado: aprobado e integrado en Proyectos (1.59.0).** Autorizado por Herraidea el 29 de septiembre de 2026. Visor directo sin portada, junto al Futbolito; probado en muchas camionetas (primero en una RAM 700). Se conserva el modelo negro aprobado sin modificar su geometría.
 
 Solo el GLB y esta documentación se incorporan a producción. El visor privado, Blender, generadores, fotos y comparaciones de la tabla siguiente permanecen en `claude/codex-landing-review-t46rsq`; no se copian a `main`.
 
@@ -55,7 +55,7 @@ Las proporciones se calcularon resolviendo la cámara de la foto de estudio (PnP
 - Se reutilizan el motor `hrd-project-3d`, los botones Liquid Glass, despiece por etapas y controles de separación y detalle.
 - El acabado negro no pasa por reemplazo de material a acero. No se añade a Sistemas ni a la calculadora.
 - Los enlaces `?proyecto=riverack` y `?proyecto=futbolito` seleccionan el modelo en la sección nueva.
-- Se informa de la prueba en RAM 700; no se declara compatibilidad universal ni medidas de fabricación.
+- Herraidea confirmó el 20 de octubre de 2026 que el rack está probado en muchas camionetas; la web lo presenta como ajustable a lo ancho y en altura (travesaños y piezas superiores telescópicos del modelo). No se publican medidas de fabricación.
 
 ## Integridad (SHA-256)
 
