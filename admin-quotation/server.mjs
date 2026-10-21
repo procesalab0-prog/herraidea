@@ -39,7 +39,7 @@ export function createAdminHandler(options={}){
  if(req.method==='GET'&&path==='/api/systems'){const m=read('server-data/matrix.json');return send(200,{systems:Object.entries(m.systems).map(([key,s])=>({key,name:s.name}))});}
  if(req.method==='POST'&&['/api/configure','/api/calculate','/api/fabrication'].includes(path)){const input=await body();return send(200,path==='/api/fabrication'?calculateFabrication(input):path==='/api/configure'?configureSystem(input,read('server-data/matrix.json'),read('server-data/cable-rates.json')):calculateQuote(input));}
  const file=publicFiles[path]||privateFiles[path];if(req.method!=='GET'||!file){res.writeHead(404);return res.end('No disponible');}res.writeHead(200,{'Content-Type':file[1]});res.end(readFileSync(new URL(file[0],root)));
- }catch(error){return send(error.status||400,{error:error.status?error.message:'Revisa los datos enviados.'});}
+ }catch(error){if(path==='/api/costbook'&&!error.status){console.error('Costbook failure',error.constructor?.name,error.code||'',String(error.stack||'').split('\n').slice(1,5).join('\n'));return send(503,{error:'No se pudo cargar la lista compartida. Intenta de nuevo.'});}return send(error.status||400,{error:error.status?error.message:'Revisa los datos enviados.'});}
  };
 }
 export function createAdminServer(options={}){return createServer(createAdminHandler(options));}

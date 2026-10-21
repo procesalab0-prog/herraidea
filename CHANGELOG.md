@@ -1,5 +1,11 @@
 # Historial de versiones — Herraidea
 
+## 1.93.1 — 2026-10-21
+
+- Corregida la dependencia de almacenamiento que impedía cargar el catálogo en producción.
+- SDK incluido en el paquete de servidor; diagnóstico técnico sin exponer credenciales.
+- Lectura, búsqueda y formulario verificados con sesión real; precios pendientes conservados.
+
 ## 1.93.0 — 2026-10-21
 
 - Materia prima editable y compartida en almacenamiento privado, sin base de datos ni conexión a Shopify.
