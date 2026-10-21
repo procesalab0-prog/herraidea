@@ -1,0 +1,6 @@
+**/node_modules/
+**/.vercel/
+admin-quotation/.admin-access.json
+admin-quotation/.env*
+admin-quotation/.verify*.mjs
+output/costing-import/

@@ -1,7 +1,13 @@
 {
-  "current": "1.92.0",
+  "current": "1.93.0",
   "studio": "ProcesaLab",
   "versions": [
+    {
+      "version": "1.93.0",
+      "date": "2026-10-21",
+      "title": "Materia prima compartida en panel privado",
+      "summary": "Costos editables con historial, respaldo y guardado privado entre equipos. Importación de Excel pendiente de revisión y tarifas capturadas por armado."
+    },
     {
       "version": "1.92.0",
       "date": "2026-10-18",

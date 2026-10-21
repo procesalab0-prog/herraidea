@@ -1,10 +1,14 @@
 # Herraidea — contexto del proyecto
 
-Versión actual: **1.92.0**
+Versión actual: **1.93.0**
 
 El dominio oficial `www.herraidea.com` sirve la web desde Vercel y `herraidea.com` redirige de forma segura a esa dirección. Las referencias canónicas, la tarjeta social, los datos estructurados y el catálogo descargable usan el dominio oficial. Los registros de correo preexistentes se conservaron al migrar los servidores DNS desde Jimdo a Vercel.
 
 Sitio de producción: `https://www.herraidea.com/`
+
+## Cotizador 1.93.0 — 2026-10-21
+
+Panel privado: catálogo de materia prima compartido en Vercel Blob privado herraidea-admin-costos, protegido por el acceso existente. Datos de dos Excel importados privadamente: 95 materiales pendientes de revisión y 71 armados históricos de referencia. No se incluyen libros ni costos de proveedor en Git. Actualización por registro con historial y ETag para evitar sobrescrituras concurrentes; lectura consistente. Armados capturan tarifa y versión; las cotizaciones antiguas conservan importes. Costos con IVA se convierten a neto una sola vez antes de fabricación. Confirmar precio, cantidad/unidad de compra, fecha y tratamiento IVA antes de activar. Los armados históricos no se calculan automáticamente.
 
 ## AR 1.92.0 — 2026-10-18
 

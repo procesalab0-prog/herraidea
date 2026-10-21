@@ -1,3 +1,4 @@
+import {mountCostbook} from '/costbook.mjs';
 import {mountFabrication} from '/fabrication.mjs';
 import {downloadPDF} from '/pdf-export.mjs';
 import {conLetra} from '/amount-words.mjs';
@@ -40,3 +41,5 @@ dismissLoading();
 
 for(const id of ['pdf','pdf-end','pdf-preview'])$(id).addEventListener('click',async()=>{if(!result)return;try{await downloadPDF(result);status('PDF descargado. Puedes compartirlo por WhatsApp.');}catch(e){status('No se pudo descargar el PDF: '+e.message);}});
 $('logout').addEventListener('click',async()=>{if(lines.length&&!confirm('¿Cerrar sesión? Guarda tu cotización si deseas conservarla.'))return;await api('/auth/logout',{});location.replace('/login');});
+
+mountCostbook({root:$('costbook-root'),api,onApply:selection=>fabrication.addMaterial(selection)});

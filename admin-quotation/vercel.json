@@ -1,1 +1,6 @@
-{"$schema":"https://openapi.vercel.sh/vercel.json","buildCommand":"node build.mjs","installCommand":"echo No external dependencies","framework":null}
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "node build.mjs",
+  "installCommand": "pnpm install --frozen-lockfile --ignore-scripts",
+  "framework": null
+}

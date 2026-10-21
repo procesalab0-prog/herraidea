@@ -1,5 +1,13 @@
 # Historial de versiones — Herraidea
 
+## 1.93.0 — 2026-10-21
+
+- Materia prima editable y compartida en almacenamiento privado, sin base de datos ni conexión a Shopify.
+- Importación privada de 95 materiales pendientes y 71 armados históricos para revisión desde los Excel entregados.
+- Historial por cambio, respaldo descargable y protección contra sobrescrituras simultáneas.
+- Aplicar material o accesorio a fabricación conserva la tarifa y versión capturadas en el archivo de cotización.
+- Confirmación explícita de fecha e IVA antes de activar datos importados.
+
 ## 1.92.0 — 2026-10-18
 
 - HRD 1220 en AR ahora incluye dos cristales, cuatro pinzas bajas y el clip circular superior que une los cristales.
