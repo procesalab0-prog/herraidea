@@ -1,5 +1,11 @@
 # Historial de versiones — Herraidea
 
+## 1.93.2 — 2026-10-22
+
+- Ficha de costos desplegada dentro de cada material al pulsar Editar, sin buscarla al final de la lista.
+- Botón Cerrar ficha y controles adaptados a teléfono.
+- Guardado privado compartido e historial conservados; precios reales sin cambios.
+
 ## 1.93.1 — 2026-10-21
 
 - Corregida la dependencia de almacenamiento que impedía cargar el catálogo en producción.
