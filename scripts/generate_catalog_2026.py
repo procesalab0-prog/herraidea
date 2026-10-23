@@ -16,6 +16,9 @@ from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.utils import ImageReader
 from reportlab.pdfbase.pdfmetrics import stringWidth
 from reportlab.pdfgen import canvas
+from reportlab.graphics import renderPDF
+from reportlab.graphics.shapes import Drawing
+from reportlab.graphics.barcode.qr import QrCodeWidget
 from reportlab.platypus import Paragraph
 
 
@@ -166,6 +169,19 @@ def title(c, lines, x, y, size=42, color=INK, leading=None):
     return current
 
 
+def website_qr(c, x, y, size):
+    """QR vectorial con zona blanca de seguridad y enlace a la portada web."""
+    url = "https://www.herraidea.com/"
+    qr = QrCodeWidget(url, barLevel="M", barBorder=4)
+    left, bottom, right, top = qr.getBounds()
+    drawing = Drawing(size, size, transform=[size / (right-left), 0, 0, size / (top-bottom), 0, 0])
+    drawing.add(qr)
+    c.setFillColor(white)
+    c.rect(x, y, size, size, fill=1, stroke=0)
+    renderPDF.draw(drawing, c, x, y)
+    c.linkURL(url, (x, y, x+size, y+size), relative=0, thickness=0)
+
+
 def cover(c):
     image = ROOT / "assets/hero-barandal-v2-night.png"
     draw_image_cover(c, image, 0, 0, W, H, align_x=0.52)
@@ -182,6 +198,10 @@ def cover(c):
     c.drawString(MARGIN, H * 0.245, "Sistemas completos · Fabricación a la medida · Herrajes")
     c.setFont("Helvetica-Bold", 10)
     c.drawString(MARGIN, 54, "ADELANTO DE CATÁLOGO · 2026")
+    website_qr(c, W - MARGIN - 82, 54, 82)
+    c.setFillColor(white)
+    c.setFont("Helvetica-Bold", 8)
+    c.drawRightString(W - MARGIN, 145, "Visita nuestra web")
 
 
 def contents_page(c, page_num, counts):
@@ -392,6 +412,12 @@ def closing_page(c, page_num):
     eyebrow(c, "Cuéntanos qué necesitas", MARGIN, H - 190, RED)
     title(c, ["¿Tienes una medida,", "una muestra o", "un proyecto especial?"], MARGIN, H - 240, 41, white, 38)
     draw_paragraph(c, "Diseñamos y fabricamos barandales, herrajes y soluciones de acero inoxidable según las necesidades de cada proyecto.", pstyle("close", 11, 16, Color(1, 1, 1, alpha=0.68)), MARGIN, H - 370, 340, 100)
+    website_qr(c, W - MARGIN - 104, 238, 104)
+    c.setFillColor(white)
+    c.setFont("Helvetica-Bold", 9)
+    c.drawRightString(W - MARGIN, 221, "Escanea y explora la web")
+    c.setFont("Helvetica", 8)
+    c.drawRightString(W - MARGIN, 206, "www.herraidea.com")
     c.setFillColor(RED)
     c.rect(MARGIN, 178, CONTENT_W, 2, fill=1, stroke=0)
     c.setFillColor(white)

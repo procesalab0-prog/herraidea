@@ -1,5 +1,10 @@
 # Historial de versiones — Herraidea
 
+## 1.93.3 — 2026-10-22
+
+- QR vectorial y clicable a la página principal en portada y contraportada del catálogo PDF.
+- Enlace de descarga de inicio actualizado para servir la edición nueva.
+
 ## 1.93.2 — 2026-10-22
 
 - Ficha de costos desplegada dentro de cada material al pulsar Editar, sin buscarla al final de la lista.
